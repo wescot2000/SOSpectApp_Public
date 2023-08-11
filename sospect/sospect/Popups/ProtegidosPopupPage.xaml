@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<popup:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:helpers="clr-namespace:sospect.Helpers"
+    xmlns:popup="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+    xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+    xmlns:material="clr-namespace:Sharpnado.MaterialFrame;assembly=Sharpnado.MaterialFrame"
+    x:Class="sospect.Popups.ProtegidosPopupPage"
+    CloseWhenBackgroundIsClicked="False"
+    BackgroundColor="Transparent">
+
+    <Grid>
+        <BoxView Color="#66000000" AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All" />
+
+        <material:MaterialFrame Padding="10" BackgroundColor="White" HasShadow="True" CornerRadius="10" HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="300"
+            Elevation="8">
+
+            <StackLayout Spacing="10">
+                <Label Text="{helpers:TranslateExtension Text='LblOpcionesProtegidos'}" FontSize="Large" TextColor="Gray" FontAttributes="Bold" HorizontalOptions="Center" />
+                <Label Text="{helpers:TranslateExtension Text='LblExplicacionProtegidos'}" FontSize="Small" TextColor="Gray" HorizontalOptions="Center" />
+
+
+                <Frame Padding="5" BorderColor="Black" BackgroundColor="LightGray" Margin="0,20,0,0"  HeightRequest="45" WidthRequest="280" HorizontalOptions="Center" CornerRadius="10">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding AgregarProtegidoCommand}" NumberOfTapsRequired="1" />
+                </Frame.GestureRecognizers>
+                <Label Text="{helpers:TranslateExtension Text='OptIniciarTramite'}" 
+                       TextColor="Black"
+                       LineBreakMode="WordWrap"
+                       HorizontalOptions="CenterAndExpand"
+                       VerticalOptions="CenterAndExpand"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center" />
+                </Frame>
+
+                <Frame Padding="5" BorderColor="Black" BackgroundColor="LightGray" Margin="0,5,0,0"  HeightRequest="45" WidthRequest="280" HorizontalOptions="Center" CornerRadius="10">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding AprobarSolicitudCommand}" NumberOfTapsRequired="1" />
+                </Frame.GestureRecognizers>
+                <Label Text="{helpers:TranslateExtension Text='OptAprobarSolicitud'}" 
+                       TextColor="Black"
+                       LineBreakMode="WordWrap"
+                       HorizontalOptions="CenterAndExpand"
+                       VerticalOptions="CenterAndExpand"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center" />
+                </Frame>
+
+                <Frame Padding="5" BorderColor="Black" BackgroundColor="LightGray" Margin="0,5,0,0"  HeightRequest="45" WidthRequest="280"  HorizontalOptions="Center" CornerRadius="10">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding CompletarSubscrProtegidoCommand}" NumberOfTapsRequired="1" />
+                </Frame.GestureRecognizers>
+                <Label Text="{helpers:TranslateExtension Text='OptCompletarTramite'}" 
+                       TextColor="Black"
+                       LineBreakMode="WordWrap"
+                       HorizontalOptions="CenterAndExpand"
+                       VerticalOptions="CenterAndExpand"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center" />
+                </Frame>
+
+                <Frame Padding="5" BorderColor="Black" BackgroundColor="LightGray" Margin="0,5,0,0"  HeightRequest="45" WidthRequest="280"  HorizontalOptions="Center" CornerRadius="10">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding ListarProtegidosCommand}" NumberOfTapsRequired="1" />
+                </Frame.GestureRecognizers>
+                <Label Text="{helpers:TranslateExtension Text='OptListarProtegidos'}" 
+                       TextColor="Black"
+                       LineBreakMode="WordWrap"
+                       HorizontalOptions="CenterAndExpand"
+                       VerticalOptions="CenterAndExpand"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center" />
+                </Frame>
+
+                <Frame Padding="5" BorderColor="Black" BackgroundColor="LightGray" Margin="0,5,0,0"  HeightRequest="45" WidthRequest="280"  HorizontalOptions="Center" CornerRadius="10">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding ListarProtectoresCommand}" NumberOfTapsRequired="1" />
+                </Frame.GestureRecognizers>
+                <Label Text="{helpers:TranslateExtension Text='OptListarProtectores'}" 
+                       TextColor="Black"
+                       LineBreakMode="WordWrap"
+                       HorizontalOptions="CenterAndExpand"
+                       VerticalOptions="CenterAndExpand"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center" />
+                </Frame>
+                
+                <Frame Padding="5" BorderColor="Black" BackgroundColor="LightGray" Margin="0,20,0,0" HorizontalOptions="Center" WidthRequest="200" HeightRequest="50" CornerRadius="10">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding CloseCommand}" NumberOfTapsRequired="1" />
+                </Frame.GestureRecognizers>
+                <Label Text="{helpers:TranslateExtension Text='OptVolver'}" 
+                       TextColor="Black"
+                       LineBreakMode="WordWrap"
+                       HorizontalOptions="CenterAndExpand"
+                       VerticalOptions="CenterAndExpand"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center" />
+                </Frame>
+
+            </StackLayout>
+
+        </material:MaterialFrame>
+    </Grid>
+</popup:PopupPage>

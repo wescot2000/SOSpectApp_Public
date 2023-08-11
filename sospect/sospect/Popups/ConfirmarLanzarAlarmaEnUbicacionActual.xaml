@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<rg:PopupPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:rg="http://rotorgames.com"
+    xmlns:helpers="clr-namespace:sospect.Helpers"
+    HasSystemPadding="False"
+    CloseWhenBackgroundIsClicked="False"
+    x:Class="sospect.Popups.ConfirmarLanzarAlarmaEnUbicacionActual">
+    <rg:PopupPage.Animation>
+        <rg:ScaleAnimation
+            DurationIn="400"
+            DurationOut="300"
+            EasingIn="SinOut"
+            EasingOut="SinIn"
+            HasBackgroundAnimation="True"
+            PositionIn="Center"
+            PositionOut="Center"
+            ScaleIn="1.2"
+            ScaleOut="0.8" />
+    </rg:PopupPage.Animation>
+    <Frame CornerRadius="10"
+           VerticalOptions="Center"
+           HorizontalOptions="Center"
+           WidthRequest="400"
+           Margin="10">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <Label Grid.Column="0"
+                   Grid.Row="0"
+                   Grid.ColumnSpan="2"
+                   Text="{helpers:TranslateExtension Text='LabelAlerta'}"
+                   FontAttributes="Bold"
+                   FontSize="Medium"
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="Center"/>
+            <Label Grid.Column="0"
+                   Grid.Row="1"
+                   Grid.ColumnSpan="2"
+                   Text="{helpers:TranslateExtension Text='CrearEnUbicacionActual'}"
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="Center"/>
+            <Label Grid.Column="0"
+                   Grid.Row="2"
+                   Margin="0,30,0,0"
+                   Grid.ColumnSpan="2"
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="Center"
+                   Text="{helpers:TranslateExtension Text='LabelTipoAlarma'}"></Label>
+            <Picker Grid.Column="0"
+                    Grid.Row="3"
+                    Grid.ColumnSpan="2"
+                    ItemsSource="{Binding TiposAlarma}"
+                    ItemDisplayBinding="{Binding DescripcionTraducida}"
+                    SelectedItem="{Binding TipoAlarmaSeleccionado}"></Picker>
+
+            <Button Grid.Column="0"
+                    Grid.Row="4"
+                    Margin="0,30,0,0"
+                    Text="{helpers:TranslateExtension Text='LabelOK'}"
+                    HeightRequest="50"
+                    CornerRadius="25"
+                    BackgroundColor="#1465bb"
+                    VerticalOptions="Center"
+                    Command="{Binding RegistrarAlarmaCommand}"
+                    TextColor="White"/>
+            <Button Grid.Column="1"
+                    Margin="0,30,0,0"
+                    Grid.Row="4"
+                    Text="{helpers:TranslateExtension Text='LabelCancelar'}"
+                    HeightRequest="50"
+                    CornerRadius="25"
+                    Clicked="Cancelar_Alarma"
+                    VerticalOptions="Center"
+                    BackgroundColor="#1465bb"
+                    TextColor="White"/>
+        </Grid>
+    </Frame>
+</rg:PopupPage>
+

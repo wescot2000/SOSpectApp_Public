@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:helpers="clr-namespace:sospect.Helpers"
+             xmlns:converters="clr-namespace:sospect.Converters"
+             BackgroundColor="White"
+             x:Class="sospect.Views.SubscriptionsPage"
+             Title="{helpers:TranslateExtension Text='LblMisSubscripciones'}">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:BoolToColorConverter x:Key="BoolToColorConverter" />
+            <converters:BoolToButtonVisibilityRenewConverter x:Key="BoolToButtonVisibilityRenewConverter" />
+            <converters:BoolToButtonVisibilityCancelConverter x:Key="BoolToButtonVisibilityCancelConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <Grid>
+            <Grid Margin="0,20,0,0">
+                <ListView x:Name="SubscriptionsListView" BackgroundColor="White" ItemsSource="{Binding Subscriptions}" HasUnevenRows="True" SelectionMode="None">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Frame BackgroundColor="White" Padding="5" Margin="5" CornerRadius="10" HasShadow="True">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="Auto" />
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto" />
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+
+                                        <Label Text="{helpers:TranslateExtension Text='LblidUsuario'}" FontSize="Small" FontAttributes="Bold" Grid.Row="0" Grid.Column="0" TextColor="{Binding flag_subscr_vencida, Converter={StaticResource BoolToColorConverter}}"/>
+                                        <Label Text="{Binding user_id_thirdparty}" Grid.Row="0"  FontSize="Small" Grid.Column="1" TextColor="{Binding flag_subscr_vencida, Converter={StaticResource BoolToColorConverter}}"/>
+
+                                        <Label Text="{helpers:TranslateExtension Text='LblTipo'}"  FontSize="Small" FontAttributes="Bold" Grid.Row="1" Grid.Column="0" TextColor="{Binding flag_subscr_vencida, Converter={StaticResource BoolToColorConverter}}"/>
+                                        <Label Text="{Binding descripcion_tipo}" Grid.Row="1"  FontSize="Small" Grid.Column="1" TextColor="{Binding flag_subscr_vencida, Converter={StaticResource BoolToColorConverter}}"/>
+
+                                        <Label Text="{helpers:TranslateExtension Text='LblDescripcionPuntos'}"  FontSize="Small" FontAttributes="Bold" Grid.Row="2" Grid.Column="0" TextColor="{Binding flag_subscr_vencida, Converter={StaticResource BoolToColorConverter}}"/>
+                                        <Label Text="{Binding descripcion}" Grid.Row="2"  FontSize="Small" Grid.Column="1" TextColor="{Binding flag_subscr_vencida, Converter={StaticResource BoolToColorConverter}}"/>
+
+                                        <Label Text="{helpers:TranslateExtension Text='LblFechaFinPuntos'}"  FontSize="Small" FontAttributes="Bold" Grid.Row="3" Grid.Column="0" TextColor="{Binding flag_subscr_vencida, Converter={StaticResource BoolToColorConverter}}"/>
+                                        <Label Text="{Binding fecha_finalizacion}" Grid.Row="3"  FontSize="Small" Grid.Column="1" TextColor="{Binding flag_subscr_vencida, Converter={StaticResource BoolToColorConverter}}"/>
+
+                                        <Label Text="{helpers:TranslateExtension Text='LblPoderesPuntos'}"  FontSize="Small" FontAttributes="Bold" Grid.Row="4" Grid.Column="0" TextColor="{Binding flag_subscr_vencida, Converter={StaticResource BoolToColorConverter}}"/>
+                                        <Label Text="{Binding poderes_renovacion}" Grid.Row="4"  FontSize="Small" Grid.Column="1" TextColor="{Binding flag_subscr_vencida, Converter={StaticResource BoolToColorConverter}}"/>
+
+                                        <Label Text="{helpers:TranslateExtension Text='LblEsRenovable'}"  FontSize="Small" FontAttributes="Bold" Grid.Row="5" Grid.Column="0" TextColor="{Binding flag_subscr_vencida, Converter={StaticResource BoolToColorConverter}}"/>
+                                        <Label LineBreakMode="WordWrap" Text="{Binding texto_renovable}"  FontSize="Small" Grid.Row="5" Grid.Column="1" TextColor="{Binding flag_subscr_vencida, Converter={StaticResource BoolToColorConverter}}"/>
+
+                                        <Label Text="{helpers:TranslateExtension Text='LblObsSubs'}"  FontSize="Small" FontAttributes="Bold" Grid.Row="6" Grid.Column="0" TextColor="{Binding flag_subscr_vencida, Converter={StaticResource BoolToColorConverter}}"/>
+                                        <Label LineBreakMode="WordWrap" Text="{Binding observ_subscripcion}"  FontSize="Small" Grid.Row="6" Grid.Column="1" TextColor="{Binding flag_subscr_vencida, Converter={StaticResource BoolToColorConverter}}"/>
+
+                                        <StackLayout Orientation="Horizontal" Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2">
+
+                                            <Frame Grid.Row="2" Grid.ColumnSpan="2" Padding="5" BorderColor="Black" BackgroundColor="LightGray" Margin="0,20,0,0" HorizontalOptions="Center" HeightRequest="35" WidthRequest="350" CornerRadius="10" IsVisible="{Binding CombinedFlags, Converter={StaticResource BoolToButtonVisibilityRenewConverter}}" >
+                                            <Frame.GestureRecognizers>
+                                                <TapGestureRecognizer Command="{Binding Source={x:Reference SubscriptionsListView}, Path=BindingContext.RenewSubscriptionCommand}" CommandParameter="{Binding .}" NumberOfTapsRequired="1" />
+                                            </Frame.GestureRecognizers>
+                                            <Label Text="{helpers:TranslateExtension Text='LblRenovar'}" 
+                                                   TextColor="Black"
+                                                   LineBreakMode="WordWrap"
+                                                   HorizontalOptions="CenterAndExpand"
+                                                   VerticalOptions="CenterAndExpand"
+                                                   HorizontalTextAlignment="Center"
+                                                   VerticalTextAlignment="Center" />
+                                            </Frame>
+
+                                            <Frame Grid.Row="2" Grid.ColumnSpan="2" Padding="5" BorderColor="Black" BackgroundColor="LightGray" Margin="0,20,0,0" HorizontalOptions="Center" HeightRequest="35" WidthRequest="350" CornerRadius="10" IsVisible="{Binding CombinedFlags, Converter={StaticResource BoolToButtonVisibilityCancelConverter}}" >
+                                            <Frame.GestureRecognizers>
+                                                <TapGestureRecognizer Command="{Binding Source={x:Reference SubscriptionsListView}, Path=BindingContext.CancelSubscriptionCommand}" CommandParameter="{Binding .}" NumberOfTapsRequired="1" />
+                                            </Frame.GestureRecognizers>
+                                            <Label Text="{helpers:TranslateExtension Text='LblCancelarSubscripcion'}" 
+                                                   TextColor="Black"
+                                                   LineBreakMode="WordWrap"
+                                                   HorizontalOptions="CenterAndExpand"
+                                                   VerticalOptions="CenterAndExpand"
+                                                   HorizontalTextAlignment="Center"
+                                                   VerticalTextAlignment="Center" />
+                                            </Frame>
+
+                                        </StackLayout>
+                                    </Grid>
+                                </Frame>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <Label
+                x:Name="EmptyListLabel"
+                Text="{helpers:TranslateExtension Text='LblNoHayRegistros'}"
+                FontSize="18"
+                TextColor="Gray"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                IsVisible="{Binding IsListEmpty}" />
+            </Grid>
+            <Grid BackgroundColor="Black"
+                  Opacity="0.5"
+                  HorizontalOptions="FillAndExpand"
+                  VerticalOptions="FillAndExpand"
+                  IsVisible="{Binding IsRunning}">
+                <ActivityIndicator VerticalOptions="Center"
+                                   HorizontalOptions="Center"
+                                   HeightRequest="50"
+                                   WidthRequest="50"
+                                   Color="DarkBlue"
+                                   IsRunning="{Binding IsRunning}">
+                </ActivityIndicator>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

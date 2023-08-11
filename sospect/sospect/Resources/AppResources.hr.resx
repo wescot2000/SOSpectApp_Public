@@ -1,0 +1,1090 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Bienvenido" xml:space="preserve">
+    <value>Dobrodošli u SOSpect</value>
+  </data>
+  <data name="InicieSesion" xml:space="preserve">
+    <value>Prijavite se za nastavak</value>
+  </data>
+  <data name="InicieSesionCon" xml:space="preserve">
+    <value>ili se prijavite pomoću</value>
+  </data>
+  <data name="SesionFacebook" xml:space="preserve">
+    <value>PRIJAVITE SE PUTEM FACEBOOKA</value>
+  </data>
+  <data name="SesionGoogle" xml:space="preserve">
+    <value>PRIJAVA PUTEM GOOGLEA</value>
+  </data>
+  <data name="LabelAlerta" xml:space="preserve">
+    <value>Upozorenje</value>
+  </data>
+  <data name="LabelCrimen" xml:space="preserve">
+    <value>Zločin</value>
+  </data>
+  <data name="LabelOK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="LabelCancelar" xml:space="preserve">
+    <value>Otkazati</value>
+  </data>
+  <data name="ReportarCrimen" xml:space="preserve">
+    <value>Prijavi zločin</value>
+  </data>
+  <data name="LabelMapa" xml:space="preserve">
+    <value>Karta</value>
+  </data>
+  <data name="LabelDescribir" xml:space="preserve">
+    <value>Opisati</value>
+  </data>
+  <data name="DescripcionAlarma" xml:space="preserve">
+    <value>Opis alarma</value>
+  </data>
+  <data name="DescripcionSospechoso" xml:space="preserve">
+    <value>Opis osumnjičenog</value>
+  </data>
+  <data name="DescripcionVehiculo" xml:space="preserve">
+    <value>Opis vozila</value>
+  </data>
+  <data name="DescripcionArma" xml:space="preserve">
+    <value>Opis oružja</value>
+  </data>
+  <data name="PuntuacionDescripcion" xml:space="preserve">
+    <value>Opis bodovanja</value>
+  </data>
+  <data name="LabelEditar" xml:space="preserve">
+    <value>Urediti</value>
+  </data>
+  <data name="DescripcionesParaAlarma" xml:space="preserve">
+    <value>Opisi napravljeni za ovaj alarm</value>
+  </data>
+  <data name="EspacioPublicidad" xml:space="preserve">
+    <value>Prostor za oglašavanje</value>
+  </data>
+  <data name="AlarmasRecientes" xml:space="preserve">
+    <value>Nedavni alarmi za dodavanje opisa</value>
+  </data>
+  <data name="ConfirmarAlarma" xml:space="preserve">
+    <value>Potvrda alarma</value>
+  </data>
+  <data name="LabelInformacion" xml:space="preserve">
+    <value>Informacija</value>
+  </data>
+  <data name="LabelError" xml:space="preserve">
+    <value>Greška</value>
+  </data>
+  <data name="LabelCancelado" xml:space="preserve">
+    <value>Otkazan</value>
+  </data>
+  <data name="LabelLoginCancelado" xml:space="preserve">
+    <value>Prijava je otkazana</value>
+  </data>
+  <data name="LabelFallo" xml:space="preserve">
+    <value>Neuspjeh</value>
+  </data>
+  <data name="RecibeAlarma" xml:space="preserve">
+    <value>Primili ste alarm blizu mjesta gdje se nalazite, je li stvaran?</value>
+  </data>
+  <data name="LabelConfirmo" xml:space="preserve">
+    <value>Potvrditi</value>
+  </data>
+  <data name="LabelNoSeguro" xml:space="preserve">
+    <value>Nisam siguran</value>
+  </data>
+  <data name="LabelEsFalsa" xml:space="preserve">
+    <value>To je lažno</value>
+  </data>
+  <data name="LabelConfirmar" xml:space="preserve">
+    <value>Potvrditi</value>
+  </data>
+  <data name="AdvertenciaCalificacion" xml:space="preserve">
+    <value>Ovu ocjenu nije moguće kasnije promijeniti. To bi moglo utjecati na vaš budući kredibilitet ako je konsenzus o rejtingu protiv vašeg glasa. Jesi siguran?</value>
+  </data>
+  <data name="LabelSi" xml:space="preserve">
+    <value>Da</value>
+  </data>
+  <data name="LabelNo" xml:space="preserve">
+    <value>Ne</value>
+  </data>
+  <data name="AlarmaEnviada" xml:space="preserve">
+    <value>Alarm poslan!</value>
+  </data>
+  <data name="MsgTrasAlarmaEnviada" xml:space="preserve">
+    <value>Ako ste sigurni, opišite alarm, ako ne, sakrijte telefon i izađite iz opasnosti.</value>
+  </data>
+  <data name="notificacionurgente" xml:space="preserve">
+    <value>Hitna obavijest bit će poslana na najbliže telefone na:</value>
+  </data>
+  <data name="LabelAlarma" xml:space="preserve">
+    <value>Alarm</value>
+  </data>
+  <data name="LabelMetros" xml:space="preserve">
+    <value>metar</value>
+  </data>
+  <data name="LabelTuUbicacion" xml:space="preserve">
+    <value>Vaša lokacija</value>
+  </data>
+  <data name="LabelUsuario" xml:space="preserve">
+    <value>Korisnik</value>
+  </data>
+  <data name="LabelTipoAlarma" xml:space="preserve">
+    <value>Vrsta alarma</value>
+  </data>
+  <data name="DireccionEscape" xml:space="preserve">
+    <value>Molim vas, navedite adresu za bijeg osumnjičenog.</value>
+  </data>
+  <data name="DescripcionAlerta" xml:space="preserve">
+    <value>Opis upozorenja</value>
+  </data>
+  <data name="DescripcionImplicado" xml:space="preserve">
+    <value>Opis osobe uključene u upozorenje</value>
+  </data>
+  <data name="DescripcionVehiculoImp" xml:space="preserve">
+    <value>Uključeno vozilo (ako je primjenjivo)</value>
+  </data>
+  <data name="ArmaImplicada" xml:space="preserve">
+    <value>Uključeno oružje (ako je primjenjivo)</value>
+  </data>
+  <data name="LabelRutaEscape" xml:space="preserve">
+    <value>Sumnjiva ruta za bijeg</value>
+  </data>
+  <data name="ObjetivoSospect" xml:space="preserve">
+    <value>SOSpect ima za cilj omogućiti zajednici da upozori i primi upozorenja o opasnostima na lokaciji korisnika, kako bi se izbjegli rizici za njih i njihove najmilije. Lokacija korisnika se ne dijeli niti prati, osiguravajući njihovu privatnost. Korisnici mogu postavljati upozorenja o opasnostima kako bi pomogli drugima da izbjegnu postati žrtve rizičnih situacija.</value>
+  </data>
+  <data name="UbicacionImportante" xml:space="preserve">
+    <value>Važno je znati lokaciju korisnika kako biste ga mogli upozoriti ako netko postavi upozorenje o opasnosti u blizini njihove lokacije. Međutim, lokacija korisnika je privatna i dijele se samo točke na karti na koje se postavljaju upozorenja.</value>
+  </data>
+  <data name="GenteUnida" xml:space="preserve">
+    <value>Uz SOSpect, zajednica se može okupiti kako bi smanjila kriminal i izbjegla da postane žrtva rizičnih situacija, upozoravajući i druge da ostanu sigurni.</value>
+  </data>
+  <data name="contactenos" xml:space="preserve">
+    <value>Obratite nam se</value>
+  </data>
+  <data name="visitenos" xml:space="preserve">
+    <value>Posjetite nas na</value>
+  </data>
+  <data name="ZonaVigilancia" xml:space="preserve">
+    <value>Pretplata na zonu nadzora</value>
+  </data>
+  <data name="SeleccioneUbicacionVigilar" xml:space="preserve">
+    <value>Odaberite mjesto za gledanje</value>
+  </data>
+  <data name="SeleccionEnMapa" xml:space="preserve">
+    <value>Odaberi na karti</value>
+  </data>
+  <data name="ExplicaZonaVigilancia" xml:space="preserve">
+    <value>Svi alarmi koji su postavljeni na mjestu koje ćete odabrati bit će obaviješteni bez obzira na to tko ih postavi. Na taj način možete biti svjesni opasnosti koje se pojavljuju u tom trenutku. Ovo je idealno za svjesnost opasnosti na mjestima kao što su škole ili sveučilišta vaše djece ili područja u kojima rade vaša rodbina ili voljeni.</value>
+  </data>
+  <data name="CrearZonaV" xml:space="preserve">
+    <value>Stvori zonu nadzora s ovom lokacijom</value>
+  </data>
+  <data name="LabelLatitud" xml:space="preserve">
+    <value>Širina</value>
+  </data>
+  <data name="LabelLongitud" xml:space="preserve">
+    <value>Geografska duž</value>
+  </data>
+  <data name="LabelIntroduccion" xml:space="preserve">
+    <value>Uvod</value>
+  </data>
+  <data name="AmpliacionRadio" xml:space="preserve">
+    <value>Proširenje radijusa alarma</value>
+  </data>
+  <data name="TuRadioActual" xml:space="preserve">
+    <value>Vaš trenutni radijus je:</value>
+  </data>
+  <data name="CrearNuevoRadio" xml:space="preserve">
+    <value>Stvori moju pretplatu za ovaj novi radio</value>
+  </data>
+  <data name="ExplicacionVigencias" xml:space="preserve">
+    <value>Sve pretplate imaju valjanost, provjerite cijene pretplata u prvoj opciji glavnog izbornika</value>
+  </data>
+  <data name="VasARequerir" xml:space="preserve">
+    <value>Trebat će vam</value>
+  </data>
+  <data name="xPoderesParaSubs" xml:space="preserve">
+    <value>Ovlasti za dodavanje ovog radija na trenutni radio</value>
+  </data>
+  <data name="Exito" xml:space="preserve">
+    <value>Uspjeh</value>
+  </data>
+  <data name="SubscripcionCreada" xml:space="preserve">
+    <value>Pretplata je uspješno stvorena.</value>
+  </data>
+  <data name="MensajeError" xml:space="preserve">
+    <value>Došlo je do pogreške pri povezivanju s poslužiteljem. Pokušajte ponovo.</value>
+  </data>
+  <data name="SeleccionaRuta" xml:space="preserve">
+    <value>Morate odabrati put bijega osumnjičenog.</value>
+  </data>
+  <data name="AprobarSolicitudes" xml:space="preserve">
+    <value>Odobravanje zahtjeva</value>
+  </data>
+  <data name="LabelAprobar" xml:space="preserve">
+    <value>Odobriti</value>
+  </data>
+  <data name="LabelRechazar" xml:space="preserve">
+    <value>Odbiti</value>
+  </data>
+  <data name="CompletarSubscripcion" xml:space="preserve">
+    <value>Potpuna zaštićena pretplata</value>
+  </data>
+  <data name="CompletarSubsc" xml:space="preserve">
+    <value>Potpuna pretplata</value>
+  </data>
+  <data name="LblMensajes" xml:space="preserve">
+    <value>Poruke</value>
+  </data>
+  <data name="LblFechaMensaje" xml:space="preserve">
+    <value>Datum poruke</value>
+  </data>
+  <data name="LblMenu" xml:space="preserve">
+    <value>KONFIGURACIJA</value>
+  </data>
+  <data name="OptCompraPoderes" xml:space="preserve">
+    <value>Kupnja ovlasti za otključavanje značajki</value>
+  </data>
+  <data name="OptGestionarProtegidos" xml:space="preserve">
+    <value>Upravljanje zaštićenim zaštitnicima</value>
+  </data>
+  <data name="OptCrearZonas" xml:space="preserve">
+    <value>Stvaranje zona nadzora</value>
+  </data>
+  <data name="OptAumentarRadio" xml:space="preserve">
+    <value>Povećaj radijus prijema upozorenja</value>
+  </data>
+  <data name="OptAcercaDe" xml:space="preserve">
+    <value>O aplikaciji SOSpect</value>
+  </data>
+  <data name="OptCerrarSesion" xml:space="preserve">
+    <value>Odjava</value>
+  </data>
+  <data name="LblProtectores" xml:space="preserve">
+    <value>Moji zaštitnici</value>
+  </data>
+  <data name="LblSuspender" xml:space="preserve">
+    <value>Privremena obustava</value>
+  </data>
+  <data name="LblEliminarProtegido" xml:space="preserve">
+    <value>Ukloni zaštićeno</value>
+  </data>
+  <data name="LblSubscrProtegido" xml:space="preserve">
+    <value>Zaštićena pretplata</value>
+  </data>
+  <data name="LblIDUsuarioAProteger" xml:space="preserve">
+    <value>Unesite korisnički ID koji želite zaštititi. (Ta se vrijednost nalazi na vrhu SOSpect konfiguracijskog izbornika korisnika kojeg želite povezati)</value>
+  </data>
+  <data name="LblRelacionProtegido" xml:space="preserve">
+    <value>Moj odnos s ovim štićenikom je:</value>
+  </data>
+  <data name="LblSolicitarPermiso" xml:space="preserve">
+    <value>Zahtjev za dozvolom od korisnika</value>
+  </data>
+  <data name="LblCompleteCampos" xml:space="preserve">
+    <value>Ispunite sva polja.</value>
+  </data>
+  <data name="LblProcesarSolicitud" xml:space="preserve">
+    <value>Došlo je do pogreške prilikom obrade zahtjeva. Pokušajte ponovo.</value>
+  </data>
+  <data name="LblProtegidos" xml:space="preserve">
+    <value>Moji štićenici</value>
+  </data>
+  <data name="LblUsuarioProtegido" xml:space="preserve">
+    <value>ID zaštićenog korisnika</value>
+  </data>
+  <data name="LblFechaActivacion" xml:space="preserve">
+    <value>Datum aktivacije</value>
+  </data>
+  <data name="LblFechaFinalizacion" xml:space="preserve">
+    <value>Datum završetka</value>
+  </data>
+  <data name="LblAccion" xml:space="preserve">
+    <value>Akcija</value>
+  </data>
+  <data name="LblCantidadPoderes" xml:space="preserve">
+    <value>Broj ovlasti</value>
+  </data>
+  <data name="LblPrecio" xml:space="preserve">
+    <value>Cijena</value>
+  </data>
+  <data name="LblComprar" xml:space="preserve">
+    <value>Kupiti</value>
+  </data>
+  <data name="LblValoresSubsc" xml:space="preserve">
+    <value>Vrijednosti pretplate</value>
+  </data>
+  <data name="LblTerminos" xml:space="preserve">
+    <value>Uvjeti pružanja usluge za SOSpect APP</value>
+  </data>
+  <data name="LblAcepto" xml:space="preserve">
+    <value>Prihvaćam ugovor</value>
+  </data>
+  <data name="LblNoAcepto" xml:space="preserve">
+    <value>Ne prihvaćam</value>
+  </data>
+  <data name="LblOpcionesProtegidos" xml:space="preserve">
+    <value>Zaštićeno i zaštićeno SOSpect aplikacijom</value>
+  </data>
+  <data name="LblExplicacionProtegidos" xml:space="preserve">
+    <value>Možete primati upozorenja od članova vašeg društvenog kruga čak i ako su daleko od vas. Ovdje možete upravljati ovom značajkom</value>
+  </data>
+  <data name="OptIniciarTramite" xml:space="preserve">
+    <value>Započnite postupak dodavanja zaštićenog</value>
+  </data>
+  <data name="OptAprobarSolicitud" xml:space="preserve">
+    <value>Odobravanje zahtjeva zaštitnika</value>
+  </data>
+  <data name="OptListarProtegidos" xml:space="preserve">
+    <value>Pogledajte popis mojih štićenika</value>
+  </data>
+  <data name="OptListarProtectores" xml:space="preserve">
+    <value>Pogledajte popis mojih zaštitnika</value>
+  </data>
+  <data name="OptVolver" xml:space="preserve">
+    <value>Povratak</value>
+  </data>
+  <data name="LblPoderesSospect" xml:space="preserve">
+    <value>Ovlasti aplikacije SOSpect</value>
+  </data>
+  <data name="LblOpcionesPoderes" xml:space="preserve">
+    <value>Dobro došli u opciju upravljanja napajanjem, što želite učiniti?</value>
+  </data>
+  <data name="LblSubscripcionesCosto" xml:space="preserve">
+    <value>Želim znati koje pretplate mogu kupiti i njihovu cijenu</value>
+  </data>
+  <data name="LblQuieroComprar" xml:space="preserve">
+    <value>Želim kupiti super moći za stjecanje pretplata</value>
+  </data>
+  <data name="ExplicacionRadio" xml:space="preserve">
+    <value>Zadani radijus za sve korisnike aplikacije je oko 100 metara. Taj radijus možete proširiti pomoću moći aplikacije. Zatim odaberite radijus koji želite za sebe:</value>
+  </data>
+  <data name="LblAsunto" xml:space="preserve">
+    <value>Kratki opis</value>
+  </data>
+  <data name="LblCompraPoderes" xml:space="preserve">
+    <value>Kupnja ovlasti</value>
+  </data>
+  <data name="OptCompletarTramite" xml:space="preserve">
+    <value>Dovršite postupak dodavanja zaštićenog</value>
+  </data>
+  <data name="LabelHecho" xml:space="preserve">
+    <value>Završen</value>
+  </data>
+  <data name="LabelEscapoEnEstaDireccion" xml:space="preserve">
+    <value>Pobjegao je u ovom smjeru</value>
+  </data>
+  <data name="OptMisSubs" xml:space="preserve">
+    <value>Moje pretplate</value>
+  </data>
+  <data name="LblMisSubscripciones" xml:space="preserve">
+    <value>Moje pretplate</value>
+  </data>
+  <data name="LblidUsuario" xml:space="preserve">
+    <value>ID korisnika:</value>
+  </data>
+  <data name="LblTipo" xml:space="preserve">
+    <value>Vrsta pretplate:</value>
+  </data>
+  <data name="LblDescripcionPuntos" xml:space="preserve">
+    <value>Opis:</value>
+  </data>
+  <data name="LblFechaFinPuntos" xml:space="preserve">
+    <value>Datum završetka:</value>
+  </data>
+  <data name="LblPoderesPuntos" xml:space="preserve">
+    <value>Ovlasti obnove:</value>
+  </data>
+  <data name="LblRenovar" xml:space="preserve">
+    <value>Obnoviti</value>
+  </data>
+  <data name="LblCancelarSubscripcion" xml:space="preserve">
+    <value>Otkaži pretplatu</value>
+  </data>
+  <data name="LblSeguroDeCancelar" xml:space="preserve">
+    <value>Jeste li sigurni da želite otkazati pretplatu? Neće biti povratka potrošenih ovlasti.</value>
+  </data>
+  <data name="LblAceptar" xml:space="preserve">
+    <value>Prihvatiti</value>
+  </data>
+  <data name="Alarm_1" xml:space="preserve">
+    <value>Upozorenje ili opasnost</value>
+  </data>
+  <data name="Alarm_2" xml:space="preserve">
+    <value>Počinjeno kazneno djelo ili zločin</value>
+  </data>
+  <data name="Alarm_3" xml:space="preserve">
+    <value>Ulična tučnjava</value>
+  </data>
+  <data name="Alarm_4" xml:space="preserve">
+    <value>Izgubljeni ljubimac</value>
+  </data>
+  <data name="Alarm_5" xml:space="preserve">
+    <value>Izgubljena osoba</value>
+  </data>
+  <data name="Alarm_6" xml:space="preserve">
+    <value>Neredi ili prosvjedi</value>
+  </data>
+  <data name="Alarm_7" xml:space="preserve">
+    <value>Zatražite vizualnu pratnju izlazom na ulicu</value>
+  </data>
+  <data name="Alarm_8" xml:space="preserve">
+    <value>Nasilje u obitelji</value>
+  </data>
+  <data name="Alarm_9" xml:space="preserve">
+    <value>Osumnjičeni bježi na vašu lokaciju</value>
+  </data>
+  <data name="LblCostoPoderes" xml:space="preserve">
+    <value>Trošak paketa</value>
+  </data>
+  <data name="LblSuscripcionesDisponibles" xml:space="preserve">
+    <value>Pretplate su trenutno dostupne</value>
+  </data>
+  <data name="LblFamilia" xml:space="preserve">
+    <value>Obitelj</value>
+  </data>
+  <data name="LblAmigo" xml:space="preserve">
+    <value>Prijatelj</value>
+  </data>
+  <data name="LblCompanero" xml:space="preserve">
+    <value>Družica</value>
+  </data>
+  <data name="LblOtroSinDefinir" xml:space="preserve">
+    <value>Ostalo nedefinirano</value>
+  </data>
+  <data name="LabelExito" xml:space="preserve">
+    <value>Uspjeh</value>
+  </data>
+  <data name="LblSolicitudAprobada" xml:space="preserve">
+    <value>Zahtjev je uspješno odobren.</value>
+  </data>
+  <data name="MensajeErrorAprobando" xml:space="preserve">
+    <value>Pogreška pri odobravanju zahtjeva</value>
+  </data>
+  <data name="MensajeErrorRechazando" xml:space="preserve">
+    <value>Odbijanje zahtjeva nije uspjelo.</value>
+  </data>
+  <data name="LblSolicitudRechazada" xml:space="preserve">
+    <value>Aplikacija je uspješno odbijena.</value>
+  </data>
+  <data name="LblUsuarioSolicitante" xml:space="preserve">
+    <value>Traženje korisnika</value>
+  </data>
+  <data name="LblFechaSolicitud" xml:space="preserve">
+    <value>Datum prijave</value>
+  </data>
+  <data name="LblAccionRealizar" xml:space="preserve">
+    <value>Mjere koje treba poduzeti</value>
+  </data>
+  <data name="LblSubscripcionCompletada" xml:space="preserve">
+    <value>Pretplata je dovršena</value>
+  </data>
+  <data name="LblSubscripcionFallida" xml:space="preserve">
+    <value>Pretplata nije uspjela</value>
+  </data>
+  <data name="LblUsuarioAprobador" xml:space="preserve">
+    <value>Korisnik odobravatelja</value>
+  </data>
+  <data name="LblFechaAprobacion" xml:space="preserve">
+    <value>Datum odobrenja</value>
+  </data>
+  <data name="LblSubscrEliminada" xml:space="preserve">
+    <value>Odjavljeni</value>
+  </data>
+  <data name="LblSubsEliminadaExitosamente" xml:space="preserve">
+    <value>Pretplata je uspješno uklonjena</value>
+  </data>
+  <data name="LblEliminarProtector" xml:space="preserve">
+    <value>Ukloni zaštitnik</value>
+  </data>
+  <data name="LblRenovacionAplicada" xml:space="preserve">
+    <value>Uspješno provedena obnova</value>
+  </data>
+  <data name="LblErrorRenovando" xml:space="preserve">
+    <value>Pogreška pri obnavljanju, ponovnom pokušaju ili izvješćivanju o podršci, kontaktu dostupnom u opciji "izbornik"&gt;"O programu"</value>
+  </data>
+  <data name="LblCancelacionAplicada" xml:space="preserve">
+    <value>Otkazivanje je uspješno izvršeno</value>
+  </data>
+  <data name="LblErrorCancelando" xml:space="preserve">
+    <value>Pogreška pri otkazivanju, ponovnom pokušaju ili izvješćivanju o podršci, kontakt dostupan u opciji "izbornik"&gt;"O"</value>
+  </data>
+  <data name="LblZonaCreada" xml:space="preserve">
+    <value>Pretplata tražene zone nadzora uspješno je provedena</value>
+  </data>
+  <data name="LblErrorZonaVigil" xml:space="preserve">
+    <value>Pogreška pri pretplati na novu traženu zonu, ponovni pokušaj ili izvješće podršci, kontakt dostupan u opciji "izbornik"&gt;"O programu"</value>
+  </data>
+  <data name="LblSeleccionaNuevoRadio" xml:space="preserve">
+    <value>Odaberite novi radijus u metrima</value>
+  </data>
+  <data name="LblUsuarioProtector" xml:space="preserve">
+    <value>Zaštitni korisnik</value>
+  </data>
+  <data name="LblSeguroEliminarProtegido" xml:space="preserve">
+    <value>Jeste li sigurni da ćete ukloniti svog štićenika? Ovlasti korištene u ovoj pretplati neće biti vraćene.</value>
+  </data>
+  <data name="LblSuspenderProtectores" xml:space="preserve">
+    <value>Jeste li sigurni da obustavite obavijesti svojim zaštitnicima na 6 sati? Svi vaši zaštitnici bit će obustavljeni alarmi, a vrijeme završetka pretplate iz tog se razloga neće produljiti. Zaštitnik neće biti obaviješten o ovoj akciji.</value>
+  </data>
+  <data name="LblSuspensionRealizada" xml:space="preserve">
+    <value>Suspenzija alarma svim vašim zaštitnicima na 6 sati bila je uspješna.</value>
+  </data>
+  <data name="LabelSeguroEliminarProtector" xml:space="preserve">
+    <value>Jeste li sigurni da ćete ukloniti zaštitnika? Ovlasti korištene u ovoj pretplati neće biti vraćene i zaštitnik će biti obaviješten o ovoj radnji.</value>
+  </data>
+  <data name="LabelProtectorEliminado" xml:space="preserve">
+    <value>Odabrani zaštitnik je izbrisan. Moći neće biti vraćene zaštitniku. Zaštitnik će biti obaviješten o ovoj akciji</value>
+  </data>
+  <data name="LblConfirmacionRequerida" xml:space="preserve">
+    <value>Važan! Potrebna je potvrda!</value>
+  </data>
+  <data name="LblNoHayRegistros" xml:space="preserve">
+    <value>Trenutno nema zapisnika za prikaz</value>
+  </data>
+  <data name="LblMiLogin" xml:space="preserve">
+    <value>Moja prijava je:</value>
+  </data>
+  <data name="LblSaldoPoderesEs" xml:space="preserve">
+    <value>Moja ravnoteža snage je:</value>
+  </data>
+  <data name="LblUsuarioID" xml:space="preserve">
+    <value>Moj korisnički ID je</value>
+  </data>
+  <data name="LblNoHayRegistrosAqui" xml:space="preserve">
+    <value>Nitko još ništa nije napisao!</value>
+  </data>
+  <data name="LblAlertaReportadaPorMi" xml:space="preserve">
+    <value>Upozorenje koje sam prijavio</value>
+  </data>
+  <data name="LblPara" xml:space="preserve">
+    <value>Primatelj poruke:</value>
+  </data>
+  <data name="LblDe" xml:space="preserve">
+    <value>Pošiljatelj poruke:</value>
+  </data>
+  <data name="ConfiguraciondeSOSpect" xml:space="preserve">
+    <value>SOSpect konfiguracija</value>
+  </data>
+  <data name="LblExitoEnAceptacion" xml:space="preserve">
+    <value>Vaše prihvaćanje ugovora je pohranjeno!</value>
+  </data>
+  <data name="LblFalloEnAceptacion" xml:space="preserve">
+    <value>Registracija nije uspjela. Pokušajte ponovno!</value>
+  </data>
+  <data name="LblDeclinacionAceptacion" xml:space="preserve">
+    <value>Bez prihvaćanja ugovora ne možete nastaviti!</value>
+  </data>
+  <data name="LblParaIniciar" xml:space="preserve">
+    <value>POČNIMO SA SOSpektom!! Da biste ažurirali upozorenja u blizini, dodirnite plavi gumb za osvježavanje</value>
+  </data>
+  <data name="LblAlarmaNoGrave" xml:space="preserve">
+    <value>Koristite žuti gumb za postavljanje upozorenja niskog stupnja opasnosti i upozoravanje zajednice ili zaštitnika. Možete odabrati vrstu upozorenja i označiti je kao počinjeno kazneno djelo. Ovaj gumb pokreće upozorenje na vašem točnom mjestu, što je korisno kada vam je potrebna pomoć. Također možete odabrati točku na karti kako biste pronašli upozorenje bez ugrožavanja svoje lokacije.</value>
+  </data>
+  <data name="LblCrimenCometido" xml:space="preserve">
+    <value>Crveni gumb pokreće kategoriju: alarm počinjen zločinom. SOSpect ne zahtijeva da uključite kategoriju zbog važnosti vremena u tim slučajevima. Alarm se automatski postavlja na vašu točnu lokaciju. Također možete odabrati točku na karti za postavljanje upozorenja, a zatim promijeniti kategoriju u počinjeni zločin.</value>
+  </data>
+  <data name="LblDescripcionAlarmas" xml:space="preserve">
+    <value>U opciji "Opiši" u donjoj traci pronaći ćete popis alarma koje ste postavili vi ili drugi. Ako ste stvorili alarm, možete dodati opis. Ako je alarm stvorio netko drugi, možete ocijeniti njegovu istinitost i nadopuniti njegov opis. Pazi! Ako navedete lažne ili netočne ocjene, vaš račun može biti obustavljen. Pažljivo pregledajte uvjete i odredbe kako biste to izbjegli.</value>
+  </data>
+  <data name="LblDescripcionMensajes" xml:space="preserve">
+    <value>U zvonu u gornjem desnom kutu možete pročitati svoje poruke koje uključuju obavijesti o pretplati i nedavne alarme. Ovaj se popis razlikuje od opcije opisa, gdje možete izravno pronaći nedavne alarme.</value>
+  </data>
+  <data name="LblDescripcionMenu" xml:space="preserve">
+    <value>U zupčaniku u gornjem lijevom kutu pronaći ćete opcije konfiguracije SOSpect. Možete kupiti ovlasti za kupnju pretplata i zaštititi svoju obitelj ili proširiti radijus prijema alarma. PAMTITI! Na početku vam dajemo 80 ovlasti kako biste od početka mogli kupiti dvije pretplate.</value>
+  </data>
+  <data name="LblRecomendaciones" xml:space="preserve">
+    <value>ZAJEDNO SMO NEPOBJEDIVI! Osnovne funkcije upozoravanja i primanja upozorenja u radijusu od 100 metara su besplatne, a kada počnete dajemo vam 2 pretplate. Pozovite svoju zajednicu i obitelj da koriste ovu besplatnu uslugu za borbu protiv rastućeg kriminala. Možete spasiti živote ili biti spašeni primanjem upozorenja na vrijeme. Upozorenja o izgubljenim osobama ili kućnim ljubimcima imaju domet od 10 kilometara, a nasilne demonstracije imaju domet od 1 kilometar</value>
+  </data>
+  <data name="LblPromocion" xml:space="preserve">
+    <value>Konačno, zapamtite da ćete zaraditi punomoć za svaku istinitu ocjenu koju pružite u SOSpectu, kada se glasovanje alarma zatvori nakon 90 minuta od njihovog postavljanja. Većina ljudi je iskrena i zajedno ćemo štititi jedni druge i naše obitelji. DOBRODOŠLI U SOSPECT!</value>
+  </data>
+  <data name="LblDescripcionMapa" xml:space="preserve">
+    <value>U bilo kojem trenutku možete odabrati opciju "MAP" s lijeve strane donje trake, koja je početna točka SOSpecta. Odatle možete vidjeti obližnje alarme. Vaša će se lokacija pojaviti u središtu karte, a krug predstavlja polumjer koji bi mogao utjecati na vas. Prema zadanim postavkama, ovaj radijus je 100 metara, ali ga možete izmijeniti u izborniku postavki.</value>
+  </data>
+  <data name="LblRecomendacionImportante" xml:space="preserve">
+    <value>Važno je da povremeno otvarate SOSpect, prije nego što napustite dom ili kada stignete na neko mjesto, kako biste ažurirali svoju lokaciju. Na taj vas način možemo obavijestiti postoji li rizik u vašem području. Imajte na umu da kada je aplikacija zatvorena, ne možemo dobiti vašu lokaciju zbog ograničenja koja nameću operativni sustavi uređaja. Prijavite uvjete i odredbe vezane uz vašu lokaciju.</value>
+  </data>
+  <data name="LblUsuarioBloqueado" xml:space="preserve">
+    <value>Korisnik suspendiran zbog negativnih ocjena</value>
+  </data>
+  <data name="LblMarcasNegativas" xml:space="preserve">
+    <value>Moj broj negativnih ocjena je</value>
+  </data>
+  <data name="LblCuentaSuspendida" xml:space="preserve">
+    <value>Račun privremeno obustavljen zbog negativnih ocjena drugih korisnika</value>
+  </data>
+  <data name="LblTitleCuentaSuspendida" xml:space="preserve">
+    <value>Račun privremeno obustavljen</value>
+  </data>
+  <data name="LblFechaFinSuspension" xml:space="preserve">
+    <value>Datum završetka suspenzije je</value>
+  </data>
+  <data name="LblTocaAqui" xml:space="preserve">
+    <value>Dodirnite ovdje da biste otišli</value>
+  </data>
+  <data name="LblNoTienesConexion" xml:space="preserve">
+    <value>Nema internetske veze</value>
+  </data>
+  <data name="LblExplicacionSinConexion" xml:space="preserve">
+    <value>Vaša izjava potrebna je za prijavu na SOSpect. Bez interneta ne možemo znati je li aktivan.</value>
+  </data>
+  <data name="LblSinConexionDescripcion" xml:space="preserve">
+    <value>Za dohvaćanje statusa SOSpect računa potreban je aktivni internet.</value>
+  </data>
+  <data name="LblSinConexionQueHacer" xml:space="preserve">
+    <value>Aktivirajte svoj internet i ponovno pokrenite SOSpect</value>
+  </data>
+  <data name="SefinalizalasubscripcionporsolicituddelusuarioPROTEGIDOatravésdelaAPIdesdelaAPP" xml:space="preserve">
+    <value>Pretplata se prekida zahtjevom ZAŠTIĆENOG korisnika putem API-ja iz APP-a</value>
+  </data>
+  <data name="Nopuederenovarsedebidoaquefuecancelada,requieresubscripciónnueva" xml:space="preserve">
+    <value>Nije moguće obnoviti jer je otkazan, zahtijeva novu pretplatu</value>
+  </data>
+  <data name="Alarmasgeneradaspormicirculosocial" xml:space="preserve">
+    <value>Alarmi koje generira moj društveni krug</value>
+  </data>
+  <data name="Incrementomidiametrodevigilancia" xml:space="preserve">
+    <value>Povećavam promjer nadzora</value>
+  </data>
+  <data name="Zonadevigilanciaadicional" xml:space="preserve">
+    <value>Dodatna zona nadzora</value>
+  </data>
+  <data name="Renovable" xml:space="preserve">
+    <value>Obnovljive</value>
+  </data>
+  <data name="SefinalizalasubscripcionporsolicituddelusuarioPROTECTORatravésdelaAPIdesdelaAPP" xml:space="preserve">
+    <value>Pretplata se prekida na zahtjev korisnika PROTECTOR-a putem API-ja iz APP-a</value>
+  </data>
+  <data name="LblEsRenovable" xml:space="preserve">
+    <value>Može li se obnoviti?</value>
+  </data>
+  <data name="LblObsSubs" xml:space="preserve">
+    <value>Napomena pretplate:</value>
+  </data>
+  <data name="NingunaObservacion" xml:space="preserve">
+    <value>Bez komentara</value>
+  </data>
+  <data name="Subscripcionvigente" xml:space="preserve">
+    <value>Trenutna pretplata</value>
+  </data>
+  <data name="Actualmenteactivoenotrasuscripcion" xml:space="preserve">
+    <value>Trenutno aktivno na drugoj pretplati</value>
+  </data>
+  <data name="LblRadioActual" xml:space="preserve">
+    <value>Moj trenutni radijus primanja alarma je:</value>
+  </data>
+  <data name="LblPoderesRequeridosZV" xml:space="preserve">
+    <value>Ovlasti potrebne za odabrano proširenje</value>
+  </data>
+  <data name="OptTerminosCondiciones" xml:space="preserve">
+    <value>SOSpect uvjeti i odredbe</value>
+  </data>
+  <data name="DebesAbrirLaApp" xml:space="preserve">
+    <value>SOSpect ne može znati promjene lokacije korisnika kada je zatvoren, to se događa politikama očuvanja baterija operativnih sustava mobitela, pa je važno da korisnik često otvara aplikaciju kako bi provjerio alarme u području na koje se preselio i na vrijeme primio alarme u blizini.</value>
+  </data>
+  <data name="InvitaMasPersonas" xml:space="preserve">
+    <value>Da bi se poboljšala sigurnost korisnika, važno je da oni oko njega, obitelj i susjedi preuzmu besplatnu aplikaciju. Ako nema korisnika u blizini, korisnik možda neće biti upozoren na vrijeme ili se njegova upozorenja možda neće čuti, održavajući stanje rizika kakvo je bilo prije preuzimanja aplikacije. Važno je pozvati više ljudi da pomognu jedni drugima!</value>
+  </data>
+  <data name="Insertiondone" xml:space="preserve">
+    <value>Umetanje je izvršeno.</value>
+  </data>
+  <data name="AnerroroccurredwhilequalifyingthealarmCode1" xml:space="preserve">
+    <value>Došlo je do pogreške tijekom ocjenjivanja alarma kodom 1</value>
+  </data>
+  <data name="AnerroroccurredwhilequalifyingthealarmCode2" xml:space="preserve">
+    <value>Došlo je do pogreške tijekom ocjenjivanja alarma kodom 2</value>
+  </data>
+  <data name="AnerroroccurredwiththealarmqualificationmodelCode3" xml:space="preserve">
+    <value>Došlo je do pogreške tijekom alarma za ocjenjivanje s kodom 3</value>
+  </data>
+  <data name="Userregistrationsuccessful" xml:space="preserve">
+    <value>Vaš korisnik je registriran!</value>
+  </data>
+  <data name="Anerroroccurredwhileregisteringtheusercode1" xml:space="preserve">
+    <value>Došlo je do pogreške pri registraciji koda 1 vašeg korisnika</value>
+  </data>
+  <data name="Anerroroccurredwhileregisteringtheusercode2" xml:space="preserve">
+    <value>Došlo je do pogreške prilikom registracije koda 2 vašeg korisnika</value>
+  </data>
+  <data name="Anerroroccurredwiththepeoplemodelforuserregistrationcode3" xml:space="preserve">
+    <value>Došlo je do pogreške pri registraciji koda 3 vašeg korisnika</value>
+  </data>
+  <data name="Permisosolicitadoconexito" xml:space="preserve">
+    <value>Dozvola je uspješno zatražena</value>
+  </data>
+  <data name="OcurriounerrorenelprocesodesolicitarpermisoalprotegidoCodigo1" xml:space="preserve">
+    <value>Došlo je do pogreške s kodom 1 u postupku traženja dozvole od zaštićenog</value>
+  </data>
+  <data name="Nofueposiblerealizarenviarlasolicituddepermisoalprotegidoporqueelmodelonoesvalido" xml:space="preserve">
+    <value>Nije bilo moguće poslati zahtjev za dozvolu zaštićenom, model nije valjan</value>
+  </data>
+  <data name="AlertaEnUbicacion" xml:space="preserve">
+    <value>Želite li stvoriti SOSpect upozorenje na ovom mjestu?</value>
+  </data>
+  <data name="CrearEnUbicacionActual" xml:space="preserve">
+    <value>Želite stvoriti SOSpect upozorenje na svojoj trenutnoj lokaciji?</value>
+  </data>
+  <data name="SeguroCerrarSesion" xml:space="preserve">
+    <value>Jeste li sigurni da ćete se odjaviti?</value>
+  </data>
+  <data name="Tu" xml:space="preserve">
+    <value>Ti</value>
+  </data>
+  <data name="Anonimo" xml:space="preserve">
+    <value>Anoniman</value>
+  </data>
+  <data name="AlarmaCerrada" xml:space="preserve">
+    <value>Alarm zatvoren</value>
+  </data>
+  <data name="LblSaldoPoderesInsuficiente" xml:space="preserve">
+    <value>Vaša ravnoteža snage je nedovoljna</value>
+  </data>
+  <data name="LblComprarPoderes" xml:space="preserve">
+    <value>Kupite punomoći</value>
+  </data>
+  <data name="LblSeguroRenovar" xml:space="preserve">
+    <value>Jeste li sigurni u obnovu ove pretplate?</value>
+  </data>
+  <data name="OptReportes" xml:space="preserve">
+    <value>Izvješćima</value>
+  </data>
+  <data name="LblReportesTitulo" xml:space="preserve">
+    <value>SOSpect izvješća</value>
+  </data>
+  <data name="LblReportesDescripcion" xml:space="preserve">
+    <value>Izvješća vam pružaju priliku da shvatite kako ste pomogli drugim korisnicima izbjegavajući štetne situacije. Osim toga, omogućuju vam da identificirate opasna područja na karti vašeg grada i promatrate evoluciju kriminala tijekom vremena. Također, analizom uzoraka moguće je generirati rana upozorenja prije nego što se dogode negativni događaji. Važno je napomenuti da je osnovno izvješće besplatno, dok druga izvješća mogu imati trošak zbog računalne potrošnje potrebne za njihovu proizvodnju.</value>
+  </data>
+  <data name="OptReporteDeCalorEnZona" xml:space="preserve">
+    <value>Izvješće s toplinskim kartama</value>
+  </data>
+  <data name="OptReporteEvolucionEnElTiempo" xml:space="preserve">
+    <value>Upozori izvješće o evoluciji prema vremenu</value>
+  </data>
+  <data name="OptReportesPredictivos" xml:space="preserve">
+    <value>Prediktivno izvješćivanje</value>
+  </data>
+  <data name="OptReporteAnaliticoDeDescripcionesAlarmas" xml:space="preserve">
+    <value>Analitička izvješća o alarmnim chatovima</value>
+  </data>
+  <data name="LblReporteCalorSospect" xml:space="preserve">
+    <value>SOSpect toplinske karte</value>
+  </data>
+  <data name="LblReporteEnConstruccion" xml:space="preserve">
+    <value>Uskoro!! Ova funkcionalnost je u izgradnji!</value>
+  </data>
+  <data name="LblDescripcionMapaDeCalor" xml:space="preserve">
+    <value>U ovom izvješću imat ćete pristup toplinskoj karti vašeg područja, gdje možete odabrati različite mjesece od početka rada SOSpekta. Ova funkcionalnost omogućit će vam promatranje i razumijevanje evolucije svakog područja karte koje vas zanima.</value>
+  </data>
+  <data name="LblCostoReporte" xml:space="preserve">
+    <value>Imajte na umu da korištenje ove funkcionalnosti nosi računalni trošak i zahtijeva ovlasti, iako to neće biti visoka vrijednost. Međutim, možete ga steći bez ikakvih problema koristeći ovlasti koje vam dajemo pri prvoj upotrebi aplikacije.</value>
+  </data>
+  <data name="LblReporteEvolucionAlarmas" xml:space="preserve">
+    <value>Evolucija alarma postavljenih u SOSpect</value>
+  </data>
+  <data name="LblDescripcionEvolucionAlarmas" xml:space="preserve">
+    <value>U ovom izvješću moći ćete znati trendove svake vrste alarma tijekom vremena u vašem području. Moći ćete promatrati i analizirati trendove opasnosti, kao i identificirati moguća smanjenja kriminala.</value>
+  </data>
+  <data name="LblReportePredictivo" xml:space="preserve">
+    <value>SOSpect prediktivna izvješća</value>
+  </data>
+  <data name="LblDescripcionReportesPredictivos" xml:space="preserve">
+    <value>Kako SOSpect zajednica generira dovoljno podataka, mogu se napraviti predviđanja događaja temeljena na vjerojatnosti i analitički alati. Ta će vam izvješća omogućiti da znate kada se približavaju valovi upozorenja ili povećanja kriminalnih aktivnosti, pružajući vam priliku da poduzmete potrebne mjere opreza kako biste izbjegli bilo kakav rizik za vas, vašu obitelj i vašu zajednicu.</value>
+  </data>
+  <data name="LblReporteAnalisisDeTextos" xml:space="preserve">
+    <value>SOSpect izvješće o analizi alarmnog chata</value>
+  </data>
+  <data name="LblDescripcionAnalisisTextos" xml:space="preserve">
+    <value>Zahvaljujući činjenici da korisnici opisuju alarme i ažuriraju svoju evoluciju putem internog chata SOSpecta, ovo izvješće omogućit će vizualizaciju tipologija koje najviše utječu na zajednicu. To pruža priliku za poduzimanje mjera za poboljšanje percepcije sigurnosti u vašem području.</value>
+  </data>
+  <data name="LblRangoReporte" xml:space="preserve">
+    <value>Ovo izvješće obuhvaća posljednjih 30 dana</value>
+  </data>
+  <data name="AcercadeSOSpect" xml:space="preserve">
+    <value>O SOSpectu</value>
+  </data>
+  <data name="Porcentajedealarmasciertasfrenteafalsasenunradiodeunkilometroymedio" xml:space="preserve">
+    <value>Postotak istinitih naspram lažnih uzbuna u radijusu od jednog i pol kilometra</value>
+  </data>
+  <data name="Promediodetiempoenminutosentrelanzamientodealarmaenmizonaylaprimeracalificacionodescripcion" xml:space="preserve">
+    <value>Prosječno vrijeme u minutama između pokretanja alarma u mom području i prve ocjene ili opisa</value>
+  </data>
+  <data name="Cantidadrealdepersonasenunradiodeunkilometroymedio" xml:space="preserve">
+    <value>Stvarni broj ljudi u radijusu od kilometra i pol</value>
+  </data>
+  <data name="Cantidadrealdepersonasenmiradioactual" xml:space="preserve">
+    <value>Stvarni broj ljudi u mom trenutnom radijusu</value>
+  </data>
+  <data name="Miradioactualderecepcionyenviodealarmasenmetros" xml:space="preserve">
+    <value>Moj trenutni radijus primanja i slanja alarma u metrima</value>
+  </data>
+  <data name="Cantidadrealdepersonasquerecibieronmisalarmas" xml:space="preserve">
+    <value>Stvarni broj ljudi koji su primili moje alarme</value>
+  </data>
+  <data name="Cantidaddenotificacionesdealarmaenviadasdemiparte" xml:space="preserve">
+    <value>Broj obavijesti o alarmu poslane od mene</value>
+  </data>
+  <data name="Personasquereportaronmiayudacomonegativaofalsa" xml:space="preserve">
+    <value>Ljudi koji su prijavili moju pomoć kao negativnu ili lažnu</value>
+  </data>
+  <data name="Personasqueagradecieronmiayuda" xml:space="preserve">
+    <value>Ljudi koji su cijenili moju pomoć</value>
+  </data>
+  <data name="Poderesganadosporregalos" xml:space="preserve">
+    <value>Moći stečene darovima</value>
+  </data>
+  <data name="LblParticipacionTpAlarma" xml:space="preserve">
+    <value>Sudjelovanje prema vrsti alarma</value>
+  </data>
+  <data name="LblMetricBasics" xml:space="preserve">
+    <value>Osnovni mjerni podaci</value>
+  </data>
+  <data name="LblEfectiAlarmas" xml:space="preserve">
+    <value>Učinkovitost alarma</value>
+  </data>
+  <data name="LblTotalAlarmas" xml:space="preserve">
+    <value>Ukupni alarmi</value>
+  </data>
+  <data name="LblAlarmasVerdaderas" xml:space="preserve">
+    <value>Pravi alarmi</value>
+  </data>
+  <data name="LblAlarmasFalsas" xml:space="preserve">
+    <value>Lažne uzbune</value>
+  </data>
+  <data name="LblAlarmasEfectivas" xml:space="preserve">
+    <value>Postotak učinkovitih alarma</value>
+  </data>
+  <data name="LblMarcarLeidos" xml:space="preserve">
+    <value>Označi sve kao pročitano</value>
+  </data>
+  <data name="LblSeMarcaronComoLeidos" xml:space="preserve">
+    <value>Sve su poruke označene kao pročitane</value>
+  </data>
+  <data name="LabelNuevaVersion" xml:space="preserve">
+    <value>Postoji nova verzija SOSpecta i potrebno je nastaviti</value>
+  </data>
+  <data name="OptReporteBasico" xml:space="preserve">
+    <value>Osnovna izvješća - BESPLATNO!</value>
+  </data>
+  <data name="LblReporteBasicoSospect" xml:space="preserve">
+    <value>SOSpect osnovna izvješća</value>
+  </data>
+  <data name="LblReporteBasicoDescripcion" xml:space="preserve">
+    <value>Osnovna izvješća SOSpecta pružaju vam vrijedne informacije o utjecaju koji su vaša izvješća o alarmu imala na vašu zajednicu. Osim toga, pokazuju vam broj ovlasti stečenih pomaganjem vašoj zajednici preciznim bodovanjem alarma i iskrenosti u tim ocjenama. Kroz ta izvješća možete procijeniti i cjelokupno ponašanje vašeg područja u posljednjih mjesec dana, uključujući broj korisnika koji su sudjelovali u procesu i broj korisnika koji su dobili negativne ocjene zbog netočnih angažmana.</value>
+  </data>
+  <data name="LblReporteBasicoDescripcionCorta" xml:space="preserve">
+    <value>Osnovna izvješća SOSpecta pružaju vam vrijedne informacije o ... Pogledajte više...</value>
+  </data>
+  <data name="LblDescripcionRepTipoAlarma" xml:space="preserve">
+    <value>Ovo izvješće daje vam informacije o najčešćim alarmima u radijusu od jednog i pol kilometra od vaše trenutne lokacije.</value>
+  </data>
+  <data name="LblDescripcionRepEfectAlarmas" xml:space="preserve">
+    <value>Ovo izvješće pruža vam informacije o odnosu učinkovitosti između stvarnih i lažnih alarma u radijusu od jednog i pol kilometra od vaše trenutne lokacije.</value>
+  </data>
+  <data name="LblDescripcionRepMetricasBasicas" xml:space="preserve">
+    <value>Ovo izvješće pruža vam podatke o broju korisnika u radijusu od kilometra i pol od vaše trenutačne lokacije, kao i o broju korisnika u trenutnom radijusu alarma aplikacije. Osim toga, uključuje nekoliko dodatnih informacija o vašem interesu.</value>
+  </data>
+  <data name="OptVolumenAlarmas" xml:space="preserve">
+    <value>Glasnoća prema vrsti alarma u blizini</value>
+  </data>
+  <data name="OptEfectividadAlarmas" xml:space="preserve">
+    <value>Učinkovitost alarma u blizini</value>
+  </data>
+  <data name="OptMetricasBasicas" xml:space="preserve">
+    <value>Osnovni mjerni podaci alarma u blizini</value>
+  </data>
+  <data name="LblCredibilidadActual" xml:space="preserve">
+    <value>Vjerodostojnost mojih alarma je:</value>
+  </data>
+  <data name="OptManualUsuarioSospect" xml:space="preserve">
+    <value>SOSpect korisnički priručnik</value>
+  </data>
+  <data name="LblDescManualUsuario" xml:space="preserve">
+    <value>Upoznajte SOSpect, besplatnu aplikaciju dizajniranu da zaštiti vas i vaše najmilije. Stvorili smo sažet i detaljan mrežni priručnik koji će vam pomoći da ga pravilno koristite. Pomoću ovog priručnika možete maksimalno iskoristiti SOSpect i iskoristiti sve njegove sigurnosne značajke.</value>
+  </data>
+  <data name="SesionApple" xml:space="preserve">
+    <value>PRIJAVA POMOĆU APPLEA</value>
+  </data>
+  <data name="LblCredibilidadAlarmaActual" xml:space="preserve">
+    <value>Vjerodostojnost alarma:</value>
+  </data>
+  <data name="LblAccedeAlManual" xml:space="preserve">
+    <value>Priručniku možete pristupiti na:</value>
+  </data>
+  <data name="LblRefrescarLista" xml:space="preserve">
+    <value>Osvježi popis alarma</value>
+  </data>
+  <data name="LblErrorCorreoDispositivo" xml:space="preserve">
+    <value>Nije moguće poslati e-poštu na ovaj uređaj</value>
+  </data>
+  <data name="LblErrorCorreo" xml:space="preserve">
+    <value>Pogreška pri slanju e-pošte:</value>
+  </data>
+  <data name="LblSeleccioneTipoAlarma" xml:space="preserve">
+    <value>Odaberite vrstu alarma</value>
+  </data>
+  <data name="LblCompraFallida" xml:space="preserve">
+    <value>Kupnja nije izvršena. Provjerite pristup internetu i pokušajte ponovno</value>
+  </data>
+  <data name="LblSeleccionePuntoMapa" xml:space="preserve">
+    <value>Morate odabrati zonu nadzora na karti</value>
+  </data>
+  <data name="Cantidaddealarmascolocadasenlaszonasdevigilanciasuscritas" xml:space="preserve">
+    <value>Broj alarma postavljenih u pretplaćenim područjima nadzora</value>
+  </data>
+  <data name="Cantidaddealarmascolocadaspormisprotegidos" xml:space="preserve">
+    <value>Broj alarma koje su postavili moji štićenici</value>
+  </data>
+  <data name="Credibilidadactualdelasalarmasqueenvioamicomunidad" xml:space="preserve">
+    <value>Trenutna vjerodostojnost alarma koje šaljem svojoj zajednici</value>
+  </data>
+  <data name="LblCompraExitosa" xml:space="preserve">
+    <value>Čestitam! Kupili ste ovlasti za kupnju pretplata. U zvonu ćete pronaći poruku s objašnjenjima!</value>
+  </data>
+  <data name="LblDebesHabilitarNotif" xml:space="preserve">
+    <value>Morate omogućiti slanje obavijesti kako bi SOSpect funkcionirao</value>
+  </data>
+  <data name="LblHabilitarNotifSettings" xml:space="preserve">
+    <value>Ova aplikacija može podržavati obavijesti, ali to morate omogućiti u postavkama.</value>
+  </data>
+  <data name="LblErrorHabilitandoUsoNotif" xml:space="preserve">
+    <value>Došlo je do pogreške koja je spriječila korištenje push obavijesti</value>
+  </data>
+  <data name="LblMostrarDireccionEscape" xml:space="preserve">
+    <value>Put bijega Marka bjegunca</value>
+  </data>
+  <data name="LblProximamenteSOSpect" xml:space="preserve">
+    <value>Uskoro u SOSpect!</value>
+  </data>
+  <data name="LblReportesProximos" xml:space="preserve">
+    <value>Analitička i prediktivna izvješća sa znanošću o podacima!</value>
+  </data>
+  <data name="LblHolaBienvenido" xml:space="preserve">
+    <value>Pozdrav! Dobrodošli u SOSpect. 
+
+SOSpect je besplatan alat dizajniran za zaštitu vas i vaših najmilijih pružanjem pravovremenih upozorenja o rizicima u blizini! U početku možda nećete dobiti mnogo alarma, jer u vašoj blizini još nema mnogo ljudi koji su instalirali SOSpekt. Molimo vas da nas isprobate i ne deinstalirate aplikaciju. SOSpect vam u nekom trenutku može spasiti život, kao i život nekoga u vašoj obitelji ili zajednici.
+
+U odjeljku "Osnovno izvješće" izbornika "Izvješća" koji se nalazi u postavkama možete vidjeti u odjeljku "Osnovni mjerni podaci" broj obližnjih korisnika unutar vašeg područja pokrivenosti, gdje ćete primiti alarme. Pomozite nam povećati taj broj, besplatan je i omogućit će vam sigurniji život!
+
+Pozivamo vas da pažljivo pročitate ovaj kratki uvodni priručnik, koji će vam dati predodžbu o tome kako SOSpect radi. Imajte na umu da će se prikazati samo jednom nakon instalacije aplikacije.
+
+Hvala vam što koristite SOSpect i što ste doprinijeli sigurnosti svih!
+
+Dodirnite zaslon da biste nastavili...</value>
+  </data>
+</root>

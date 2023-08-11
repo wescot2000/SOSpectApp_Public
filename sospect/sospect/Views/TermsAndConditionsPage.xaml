@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="sospect.Views.TermsAndConditionsPage"
+             xmlns:fonts="clr-namespace:sospect.Resources.Fonts;assembly=sospect"
+             xmlns:helpers="clr-namespace:sospect.Helpers"
+             BackgroundColor="White"
+             Title="{helpers:TranslateExtension Text='LblTerminos'}">
+    <Grid>
+        <ScrollView>
+            <StackLayout Padding="10">
+                <Label Text="{Binding TermsAndConditionsText}" FontSize="Small" TextColor="Black"/>
+
+                <Frame Grid.Row="2" Grid.ColumnSpan="2" Padding="5" BorderColor="Black" BackgroundColor="LightGray" Margin="0,20,0,0" HorizontalOptions="Center" HeightRequest="35" WidthRequest="350" CornerRadius="10" IsVisible="{Binding FlagUsuarioDebeFirmar}" >
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding AcceptTermsCommand}" NumberOfTapsRequired="1" />
+                </Frame.GestureRecognizers>
+                <Label Text="{helpers:TranslateExtension Text='LblAcepto'}" 
+                        TextColor="Black"
+                        LineBreakMode="WordWrap"
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="CenterAndExpand"
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Center" />
+                </Frame>
+
+                <Frame Grid.Row="2" Grid.ColumnSpan="2" Padding="5" BorderColor="Black" BackgroundColor="LightGray" HorizontalOptions="Center" HeightRequest="35" WidthRequest="350" CornerRadius="10" IsVisible="{Binding FlagUsuarioDebeFirmar}" >
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding DeclineTermsCommand}" NumberOfTapsRequired="1" />
+                    </Frame.GestureRecognizers>
+                    <Label Text="{helpers:TranslateExtension Text='LblNoAcepto'}" 
+                            TextColor="Black"
+                            LineBreakMode="WordWrap"
+                            HorizontalOptions="CenterAndExpand"
+                            VerticalOptions="CenterAndExpand"
+                            HorizontalTextAlignment="Center"
+                            VerticalTextAlignment="Center" />
+                    </Frame>
+            </StackLayout>
+        </ScrollView>
+        <Grid BackgroundColor="Black"
+                  Opacity="0.5"
+                  HorizontalOptions="FillAndExpand"
+                  VerticalOptions="FillAndExpand"
+                  IsVisible="{Binding IsRunning}">
+            <ActivityIndicator VerticalOptions="Center"
+                                   HorizontalOptions="Center"
+                                   HeightRequest="50"
+                                   WidthRequest="50"
+                                   Color="DarkBlue"
+                                   IsRunning="{Binding IsRunning}">
+            </ActivityIndicator>
+        </Grid>
+    </Grid>
+</ContentPage>

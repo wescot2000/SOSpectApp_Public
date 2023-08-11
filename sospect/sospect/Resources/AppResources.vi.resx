@@ -1,0 +1,1090 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Bienvenido" xml:space="preserve">
+    <value>Chào mừng bạn đến với SOSpect</value>
+  </data>
+  <data name="InicieSesion" xml:space="preserve">
+    <value>Đăng nhập để tiếp tục</value>
+  </data>
+  <data name="InicieSesionCon" xml:space="preserve">
+    <value>hoặc đăng nhập bằng</value>
+  </data>
+  <data name="SesionFacebook" xml:space="preserve">
+    <value>ĐĂNG NHẬP BẰNG FACEBOOK</value>
+  </data>
+  <data name="SesionGoogle" xml:space="preserve">
+    <value>ĐĂNG NHẬP BẰNG GOOGLE</value>
+  </data>
+  <data name="LabelAlerta" xml:space="preserve">
+    <value>Cảnh báo</value>
+  </data>
+  <data name="LabelCrimen" xml:space="preserve">
+    <value>Tội ác</value>
+  </data>
+  <data name="LabelOK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="LabelCancelar" xml:space="preserve">
+    <value>Hủy</value>
+  </data>
+  <data name="ReportarCrimen" xml:space="preserve">
+    <value>Báo cáo tội phạm</value>
+  </data>
+  <data name="LabelMapa" xml:space="preserve">
+    <value>Bản đồ</value>
+  </data>
+  <data name="LabelDescribir" xml:space="preserve">
+    <value>Mô tả</value>
+  </data>
+  <data name="DescripcionAlarma" xml:space="preserve">
+    <value>Mô tả báo động</value>
+  </data>
+  <data name="DescripcionSospechoso" xml:space="preserve">
+    <value>Mô tả về nghi phạm</value>
+  </data>
+  <data name="DescripcionVehiculo" xml:space="preserve">
+    <value>Mô tả xe</value>
+  </data>
+  <data name="DescripcionArma" xml:space="preserve">
+    <value>Mô tả vũ khí</value>
+  </data>
+  <data name="PuntuacionDescripcion" xml:space="preserve">
+    <value>Mô tả điểm số</value>
+  </data>
+  <data name="LabelEditar" xml:space="preserve">
+    <value>Biên tập</value>
+  </data>
+  <data name="DescripcionesParaAlarma" xml:space="preserve">
+    <value>Mô tả được thực hiện cho báo động này</value>
+  </data>
+  <data name="EspacioPublicidad" xml:space="preserve">
+    <value>Không gian quảng cáo</value>
+  </data>
+  <data name="AlarmasRecientes" xml:space="preserve">
+    <value>Báo thức gần đây để thêm mô tả</value>
+  </data>
+  <data name="ConfirmarAlarma" xml:space="preserve">
+    <value>Xác nhận báo động</value>
+  </data>
+  <data name="LabelInformacion" xml:space="preserve">
+    <value>Thông tin</value>
+  </data>
+  <data name="LabelError" xml:space="preserve">
+    <value>Lỗi</value>
+  </data>
+  <data name="LabelCancelado" xml:space="preserve">
+    <value>Bị hủy bỏ</value>
+  </data>
+  <data name="LabelLoginCancelado" xml:space="preserve">
+    <value>Đăng nhập bị hủy</value>
+  </data>
+  <data name="LabelFallo" xml:space="preserve">
+    <value>Thất bại</value>
+  </data>
+  <data name="RecibeAlarma" xml:space="preserve">
+    <value>Bạn nhận được một báo động gần nơi bạn đang ở, nó có thật không?</value>
+  </data>
+  <data name="LabelConfirmo" xml:space="preserve">
+    <value>Xác nhận</value>
+  </data>
+  <data name="LabelNoSeguro" xml:space="preserve">
+    <value>Tôi không chắc</value>
+  </data>
+  <data name="LabelEsFalsa" xml:space="preserve">
+    <value>Nó sai</value>
+  </data>
+  <data name="LabelConfirmar" xml:space="preserve">
+    <value>Xác nhận</value>
+  </data>
+  <data name="AdvertenciaCalificacion" xml:space="preserve">
+    <value>Đánh giá này không thể thay đổi sau này. Nó có thể ảnh hưởng đến uy tín trong tương lai của bạn nếu sự đồng thuận xếp hạng chống lại phiếu bầu của bạn. Bạn có chắc không?</value>
+  </data>
+  <data name="LabelSi" xml:space="preserve">
+    <value>Có</value>
+  </data>
+  <data name="LabelNo" xml:space="preserve">
+    <value>Không</value>
+  </data>
+  <data name="AlarmaEnviada" xml:space="preserve">
+    <value>Báo động đã gửi!</value>
+  </data>
+  <data name="MsgTrasAlarmaEnviada" xml:space="preserve">
+    <value>Nếu bạn an toàn, vui lòng mô tả báo động, nếu không, hãy giấu điện thoại của bạn và thoát khỏi nguy hiểm.</value>
+  </data>
+  <data name="notificacionurgente" xml:space="preserve">
+    <value>Thông báo khẩn cấp sẽ được gửi đến các điện thoại gần nhất tại:</value>
+  </data>
+  <data name="LabelAlarma" xml:space="preserve">
+    <value>Sự báo động</value>
+  </data>
+  <data name="LabelMetros" xml:space="preserve">
+    <value>mét</value>
+  </data>
+  <data name="LabelTuUbicacion" xml:space="preserve">
+    <value>Vị trí của bạn</value>
+  </data>
+  <data name="LabelUsuario" xml:space="preserve">
+    <value>Người dùng</value>
+  </data>
+  <data name="LabelTipoAlarma" xml:space="preserve">
+    <value>Loại báo động</value>
+  </data>
+  <data name="DireccionEscape" xml:space="preserve">
+    <value>Vui lòng cho biết địa chỉ trốn thoát của nghi phạm.</value>
+  </data>
+  <data name="DescripcionAlerta" xml:space="preserve">
+    <value>Mô tả cảnh báo</value>
+  </data>
+  <data name="DescripcionImplicado" xml:space="preserve">
+    <value>Mô tả về người liên quan đến cảnh báo</value>
+  </data>
+  <data name="DescripcionVehiculoImp" xml:space="preserve">
+    <value>Phương tiện liên quan (Nếu có)</value>
+  </data>
+  <data name="ArmaImplicada" xml:space="preserve">
+    <value>Vũ khí liên quan (Nếu có)</value>
+  </data>
+  <data name="LabelRutaEscape" xml:space="preserve">
+    <value>Lối thoát hiểm đáng ngờ</value>
+  </data>
+  <data name="ObjetivoSospect" xml:space="preserve">
+    <value>SOSpect nhằm mục đích cho phép cộng đồng cảnh báo và nhận cảnh báo về nguy hiểm tại vị trí của người dùng, để tránh rủi ro cho họ và những người thân yêu của họ. Vị trí của người dùng không được chia sẻ hay theo dõi, đảm bảo quyền riêng tư của họ. Người dùng có thể đặt cảnh báo nguy hiểm để giúp người khác tránh trở thành nạn nhân của các tình huống rủi ro.</value>
+  </data>
+  <data name="UbicacionImportante" xml:space="preserve">
+    <value>Điều quan trọng là phải biết vị trí của người dùng để bạn có thể cảnh báo họ nếu ai đó đặt cảnh báo nguy hiểm gần vị trí của họ. Tuy nhiên, vị trí của người dùng là riêng tư và chỉ những điểm trên bản đồ nơi đặt cảnh báo mới được chia sẻ.</value>
+  </data>
+  <data name="GenteUnida" xml:space="preserve">
+    <value>Với SOSpect, cộng đồng có thể cùng nhau giảm tội phạm và tránh trở thành nạn nhân của các tình huống rủi ro, cảnh báo những người khác cũng giữ an toàn.</value>
+  </data>
+  <data name="contactenos" xml:space="preserve">
+    <value>Liên hệ với chúng tôi</value>
+  </data>
+  <data name="visitenos" xml:space="preserve">
+    <value>Ghé thăm chúng tôi tại</value>
+  </data>
+  <data name="ZonaVigilancia" xml:space="preserve">
+    <value>Đăng ký khu vực giám sát</value>
+  </data>
+  <data name="SeleccioneUbicacionVigilar" xml:space="preserve">
+    <value>Chọn địa điểm để xem</value>
+  </data>
+  <data name="SeleccionEnMapa" xml:space="preserve">
+    <value>Chọn trên bản đồ</value>
+  </data>
+  <data name="ExplicaZonaVigilancia" xml:space="preserve">
+    <value>Tất cả các báo thức được đặt tại điểm bạn sẽ chọn sẽ được thông báo bất kể ai đặt chúng. Bằng cách đó, bạn có thể nhận thức được những nguy hiểm đang chạy tại thời điểm đó. Điều này là lý tưởng để nhận thức được các mối nguy hiểm ở những nơi như trường học hoặc trường đại học của con bạn hoặc các khu vực nơi người thân hoặc người thân của bạn làm việc.</value>
+  </data>
+  <data name="CrearZonaV" xml:space="preserve">
+    <value>Tạo vùng giám sát với vị trí này</value>
+  </data>
+  <data name="LabelLatitud" xml:space="preserve">
+    <value>Vĩ độ</value>
+  </data>
+  <data name="LabelLongitud" xml:space="preserve">
+    <value>Kinh độ</value>
+  </data>
+  <data name="LabelIntroduccion" xml:space="preserve">
+    <value>Giới thiệu</value>
+  </data>
+  <data name="AmpliacionRadio" xml:space="preserve">
+    <value>Mở rộng bán kính báo động</value>
+  </data>
+  <data name="TuRadioActual" xml:space="preserve">
+    <value>Bán kính hiện tại của bạn là:</value>
+  </data>
+  <data name="CrearNuevoRadio" xml:space="preserve">
+    <value>Tạo đăng ký của tôi cho đài phát thanh mới này</value>
+  </data>
+  <data name="ExplicacionVigencias" xml:space="preserve">
+    <value>Tất cả các đăng ký đều có hiệu lực, vui lòng kiểm tra giá đăng ký trong tùy chọn đầu tiên của menu chính</value>
+  </data>
+  <data name="VasARequerir" xml:space="preserve">
+    <value>Bạn sẽ yêu cầu</value>
+  </data>
+  <data name="xPoderesParaSubs" xml:space="preserve">
+    <value>Quyền hạn để thêm đài này vào đài phát thanh hiện tại của bạn</value>
+  </data>
+  <data name="Exito" xml:space="preserve">
+    <value>Sự thành công</value>
+  </data>
+  <data name="SubscripcionCreada" xml:space="preserve">
+    <value>Đăng ký đã được tạo thành công.</value>
+  </data>
+  <data name="MensajeError" xml:space="preserve">
+    <value>Đã xảy ra lỗi khi kết nối với máy chủ. Vui lòng thử lại.</value>
+  </data>
+  <data name="SeleccionaRuta" xml:space="preserve">
+    <value>Bạn phải chọn lối thoát của nghi phạm.</value>
+  </data>
+  <data name="AprobarSolicitudes" xml:space="preserve">
+    <value>Phê duyệt yêu cầu</value>
+  </data>
+  <data name="LabelAprobar" xml:space="preserve">
+    <value>Chấp nhận</value>
+  </data>
+  <data name="LabelRechazar" xml:space="preserve">
+    <value>Bác bỏ</value>
+  </data>
+  <data name="CompletarSubscripcion" xml:space="preserve">
+    <value>Hoàn tất đăng ký được bảo vệ</value>
+  </data>
+  <data name="CompletarSubsc" xml:space="preserve">
+    <value>Hoàn tất đăng ký</value>
+  </data>
+  <data name="LblMensajes" xml:space="preserve">
+    <value>Thư</value>
+  </data>
+  <data name="LblFechaMensaje" xml:space="preserve">
+    <value>Ngày tin nhắn</value>
+  </data>
+  <data name="LblMenu" xml:space="preserve">
+    <value>CẤU HÌNH</value>
+  </data>
+  <data name="OptCompraPoderes" xml:space="preserve">
+    <value>Mua sức mạnh để mở khóa các tính năng</value>
+  </data>
+  <data name="OptGestionarProtegidos" xml:space="preserve">
+    <value>Quản lý các thiết bị bảo vệ được bảo vệ của tôi</value>
+  </data>
+  <data name="OptCrearZonas" xml:space="preserve">
+    <value>Tạo vùng giám sát</value>
+  </data>
+  <data name="OptAumentarRadio" xml:space="preserve">
+    <value>Tăng bán kính tiếp nhận cảnh báo của tôi</value>
+  </data>
+  <data name="OptAcercaDe" xml:space="preserve">
+    <value>Giới thiệu về ứng dụng SOSpect</value>
+  </data>
+  <data name="OptCerrarSesion" xml:space="preserve">
+    <value>Đăng xuất</value>
+  </data>
+  <data name="LblProtectores" xml:space="preserve">
+    <value>Người bảo vệ tôi</value>
+  </data>
+  <data name="LblSuspender" xml:space="preserve">
+    <value>Tạm ngưng</value>
+  </data>
+  <data name="LblEliminarProtegido" xml:space="preserve">
+    <value>Xóa được bảo vệ</value>
+  </data>
+  <data name="LblSubscrProtegido" xml:space="preserve">
+    <value>Đăng ký được bảo vệ</value>
+  </data>
+  <data name="LblIDUsuarioAProteger" xml:space="preserve">
+    <value>Nhập ID người dùng cần bảo vệ. (Giá trị đó nằm ở đầu menu cấu hình SOSpect của người dùng bạn muốn liên kết)</value>
+  </data>
+  <data name="LblRelacionProtegido" xml:space="preserve">
+    <value>Mối quan hệ của tôi với người bảo trợ này là:</value>
+  </data>
+  <data name="LblSolicitarPermiso" xml:space="preserve">
+    <value>Yêu cầu sự cho phép từ người dùng</value>
+  </data>
+  <data name="LblCompleteCampos" xml:space="preserve">
+    <value>Vui lòng điền vào tất cả các trường.</value>
+  </data>
+  <data name="LblProcesarSolicitud" xml:space="preserve">
+    <value>Đã xảy ra lỗi khi xử lý yêu cầu. Vui lòng thử lại.</value>
+  </data>
+  <data name="LblProtegidos" xml:space="preserve">
+    <value>Những người được bảo trợ của tôi</value>
+  </data>
+  <data name="LblUsuarioProtegido" xml:space="preserve">
+    <value>ID người dùng được bảo vệ</value>
+  </data>
+  <data name="LblFechaActivacion" xml:space="preserve">
+    <value>Ngày kích hoạt</value>
+  </data>
+  <data name="LblFechaFinalizacion" xml:space="preserve">
+    <value>Ngày kết thúc</value>
+  </data>
+  <data name="LblAccion" xml:space="preserve">
+    <value>Hành động</value>
+  </data>
+  <data name="LblCantidadPoderes" xml:space="preserve">
+    <value>Số lượng quyền hạn</value>
+  </data>
+  <data name="LblPrecio" xml:space="preserve">
+    <value>Giá</value>
+  </data>
+  <data name="LblComprar" xml:space="preserve">
+    <value>Mua</value>
+  </data>
+  <data name="LblValoresSubsc" xml:space="preserve">
+    <value>Giá trị đăng ký</value>
+  </data>
+  <data name="LblTerminos" xml:space="preserve">
+    <value>Điều khoản dịch vụ cho SOSpect APP</value>
+  </data>
+  <data name="LblAcepto" xml:space="preserve">
+    <value>Tôi chấp nhận hợp đồng</value>
+  </data>
+  <data name="LblNoAcepto" xml:space="preserve">
+    <value>Tôi không chấp nhận</value>
+  </data>
+  <data name="LblOpcionesProtegidos" xml:space="preserve">
+    <value>Được bảo vệ và bảo vệ bởi Ứng dụng SOSpect</value>
+  </data>
+  <data name="LblExplicacionProtegidos" xml:space="preserve">
+    <value>Bạn có thể nhận được thông báo từ các thành viên trong vòng kết nối xã hội của mình ngay cả khi họ ở xa bạn. Tại đây bạn có thể quản lý tính năng này</value>
+  </data>
+  <data name="OptIniciarTramite" xml:space="preserve">
+    <value>Bắt đầu quá trình thêm được bảo vệ</value>
+  </data>
+  <data name="OptAprobarSolicitud" xml:space="preserve">
+    <value>Phê duyệt yêu cầu từ người bảo vệ</value>
+  </data>
+  <data name="OptListarProtegidos" xml:space="preserve">
+    <value>Xem danh sách những người được bảo trợ của tôi</value>
+  </data>
+  <data name="OptListarProtectores" xml:space="preserve">
+    <value>Xem danh sách những người bảo vệ tôi</value>
+  </data>
+  <data name="OptVolver" xml:space="preserve">
+    <value>Về</value>
+  </data>
+  <data name="LblPoderesSospect" xml:space="preserve">
+    <value>Quyền hạn của Ứng dụng SOSpect</value>
+  </data>
+  <data name="LblOpcionesPoderes" xml:space="preserve">
+    <value>Chào mừng bạn đến với tùy chọn quản lý năng lượng, bạn muốn làm gì?</value>
+  </data>
+  <data name="LblSubscripcionesCosto" xml:space="preserve">
+    <value>Tôi muốn biết tôi có thể mua đăng ký nào và chi phí của chúng</value>
+  </data>
+  <data name="LblQuieroComprar" xml:space="preserve">
+    <value>Tôi muốn mua siêu năng lực để có được đăng ký</value>
+  </data>
+  <data name="ExplicacionRadio" xml:space="preserve">
+    <value>Bán kính mặc định cho tất cả người dùng của ứng dụng là 100 mét xung quanh. Bạn có thể mở rộng bán kính đó bằng cách sử dụng sức mạnh của ứng dụng. Sau đó chọn bán kính bạn muốn cho mình:</value>
+  </data>
+  <data name="LblAsunto" xml:space="preserve">
+    <value>Mô tả ngắn gọn</value>
+  </data>
+  <data name="LblCompraPoderes" xml:space="preserve">
+    <value>Mua quyền hạn</value>
+  </data>
+  <data name="OptCompletarTramite" xml:space="preserve">
+    <value>Hoàn tất quy trình để thêm được bảo vệ</value>
+  </data>
+  <data name="LabelHecho" xml:space="preserve">
+    <value>Hoàn thành</value>
+  </data>
+  <data name="LabelEscapoEnEstaDireccion" xml:space="preserve">
+    <value>Anh ta trốn thoát theo hướng này</value>
+  </data>
+  <data name="OptMisSubs" xml:space="preserve">
+    <value>Đăng ký của tôi</value>
+  </data>
+  <data name="LblMisSubscripciones" xml:space="preserve">
+    <value>Đăng ký của tôi</value>
+  </data>
+  <data name="LblidUsuario" xml:space="preserve">
+    <value>ID người dùng:</value>
+  </data>
+  <data name="LblTipo" xml:space="preserve">
+    <value>Loại đăng ký:</value>
+  </data>
+  <data name="LblDescripcionPuntos" xml:space="preserve">
+    <value>Mô tả:__________:</value>
+  </data>
+  <data name="LblFechaFinPuntos" xml:space="preserve">
+    <value>Ngày kết thúc:</value>
+  </data>
+  <data name="LblPoderesPuntos" xml:space="preserve">
+    <value>Quyền hạn gia hạn:</value>
+  </data>
+  <data name="LblRenovar" xml:space="preserve">
+    <value>Renew</value>
+  </data>
+  <data name="LblCancelarSubscripcion" xml:space="preserve">
+    <value>Hủy đăng ký</value>
+  </data>
+  <data name="LblSeguroDeCancelar" xml:space="preserve">
+    <value>Bạn có chắc chắn muốn hủy đăng ký không? Không có sự trở lại của sức mạnh tiêu thụ sẽ được thực hiện.</value>
+  </data>
+  <data name="LblAceptar" xml:space="preserve">
+    <value>Chấp nhận</value>
+  </data>
+  <data name="Alarm_1" xml:space="preserve">
+    <value>Cảnh báo hoặc nguy hiểm</value>
+  </data>
+  <data name="Alarm_2" xml:space="preserve">
+    <value>Tội phạm hoặc tội phạm đã thực hiện</value>
+  </data>
+  <data name="Alarm_3" xml:space="preserve">
+    <value>Cuộc ẩu đả trên đường phố</value>
+  </data>
+  <data name="Alarm_4" xml:space="preserve">
+    <value>Thú cưng bị lạc</value>
+  </data>
+  <data name="Alarm_5" xml:space="preserve">
+    <value>Người thất lạc</value>
+  </data>
+  <data name="Alarm_6" xml:space="preserve">
+    <value>Bạo loạn hoặc biểu tình</value>
+  </data>
+  <data name="Alarm_7" xml:space="preserve">
+    <value>Yêu cầu nhạc đệm trực quan bằng lối ra đường</value>
+  </data>
+  <data name="Alarm_8" xml:space="preserve">
+    <value>Bạo lực gia đình</value>
+  </data>
+  <data name="Alarm_9" xml:space="preserve">
+    <value>Nghi phạm bỏ trốn đến khu vực vị trí của bạn</value>
+  </data>
+  <data name="LblCostoPoderes" xml:space="preserve">
+    <value>Chi phí trọn gói</value>
+  </data>
+  <data name="LblSuscripcionesDisponibles" xml:space="preserve">
+    <value>Đăng ký hiện có sẵn</value>
+  </data>
+  <data name="LblFamilia" xml:space="preserve">
+    <value>Gia đình</value>
+  </data>
+  <data name="LblAmigo" xml:space="preserve">
+    <value>Bạn</value>
+  </data>
+  <data name="LblCompanero" xml:space="preserve">
+    <value>Bạn</value>
+  </data>
+  <data name="LblOtroSinDefinir" xml:space="preserve">
+    <value>Không xác định khác</value>
+  </data>
+  <data name="LabelExito" xml:space="preserve">
+    <value>Sự thành công</value>
+  </data>
+  <data name="LblSolicitudAprobada" xml:space="preserve">
+    <value>Đơn đăng ký được phê duyệt thành công.</value>
+  </data>
+  <data name="MensajeErrorAprobando" xml:space="preserve">
+    <value>Lỗi phê duyệt yêu cầu</value>
+  </data>
+  <data name="MensajeErrorRechazando" xml:space="preserve">
+    <value>Không thể từ chối yêu cầu.</value>
+  </data>
+  <data name="LblSolicitudRechazada" xml:space="preserve">
+    <value>Đơn đăng ký bị từ chối thành công.</value>
+  </data>
+  <data name="LblUsuarioSolicitante" xml:space="preserve">
+    <value>Yêu cầu người dùng</value>
+  </data>
+  <data name="LblFechaSolicitud" xml:space="preserve">
+    <value>Ngày nộp hồ sơ</value>
+  </data>
+  <data name="LblAccionRealizar" xml:space="preserve">
+    <value>Hành động cần thực hiện</value>
+  </data>
+  <data name="LblSubscripcionCompletada" xml:space="preserve">
+    <value>Đăng ký đã hoàn tất</value>
+  </data>
+  <data name="LblSubscripcionFallida" xml:space="preserve">
+    <value>Đăng ký không thành công</value>
+  </data>
+  <data name="LblUsuarioAprobador" xml:space="preserve">
+    <value>Người dùng phê duyệt</value>
+  </data>
+  <data name="LblFechaAprobacion" xml:space="preserve">
+    <value>Ngày phê duyệt</value>
+  </data>
+  <data name="LblSubscrEliminada" xml:space="preserve">
+    <value>Hủy đăng ký</value>
+  </data>
+  <data name="LblSubsEliminadaExitosamente" xml:space="preserve">
+    <value>Đã xóa đăng ký thành công</value>
+  </data>
+  <data name="LblEliminarProtector" xml:space="preserve">
+    <value>Tháo tấm bảo vệ</value>
+  </data>
+  <data name="LblRenovacionAplicada" xml:space="preserve">
+    <value>Thực hiện thành công cải tạo</value>
+  </data>
+  <data name="LblErrorRenovando" xml:space="preserve">
+    <value>Lỗi gia hạn, thử lại hoặc báo cáo để hỗ trợ, liên hệ có sẵn trong tùy chọn "menu"&gt;"Giới thiệu"</value>
+  </data>
+  <data name="LblCancelacionAplicada" xml:space="preserve">
+    <value>Hủy bỏ đã được thực hiện thành công</value>
+  </data>
+  <data name="LblErrorCancelando" xml:space="preserve">
+    <value>Lỗi hủy, thử lại hoặc báo cáo cho bộ phận hỗ trợ, liên hệ có sẵn trong tùy chọn "menu"&gt;"Giới thiệu"</value>
+  </data>
+  <data name="LblZonaCreada" xml:space="preserve">
+    <value>Việc đăng ký khu vực giám sát được yêu cầu đã được thực hiện thành công</value>
+  </data>
+  <data name="LblErrorZonaVigil" xml:space="preserve">
+    <value>Lỗi đăng ký vùng được yêu cầu mới, thử lại hoặc báo cáo để hỗ trợ, liên hệ có sẵn trong tùy chọn "menu"&gt;"Giới thiệu"</value>
+  </data>
+  <data name="LblSeleccionaNuevoRadio" xml:space="preserve">
+    <value>Chọn bán kính mới tính bằng mét</value>
+  </data>
+  <data name="LblUsuarioProtector" xml:space="preserve">
+    <value>Người dùng bảo vệ</value>
+  </data>
+  <data name="LblSeguroEliminarProtegido" xml:space="preserve">
+    <value>Bạn có chắc chắn để loại bỏ người bảo trợ của bạn? Quyền hạn được sử dụng trong đăng ký này sẽ không được trả lại.</value>
+  </data>
+  <data name="LblSuspenderProtectores" xml:space="preserve">
+    <value>Bạn có chắc chắn tạm ngưng thông báo cho người bảo vệ của mình trong 6 giờ không? Tất cả các thiết bị bảo vệ của bạn sẽ bị treo báo động và thời gian kết thúc đăng ký sẽ không được gia hạn vì lý do này. Người bảo vệ sẽ không được thông báo về hành động này.</value>
+  </data>
+  <data name="LblSuspensionRealizada" xml:space="preserve">
+    <value>Việc đình chỉ báo động cho tất cả các thiết bị bảo vệ của bạn trong 6 giờ đã thành công.</value>
+  </data>
+  <data name="LabelSeguroEliminarProtector" xml:space="preserve">
+    <value>Bạn có chắc chắn để loại bỏ bảo vệ của bạn? Quyền hạn được sử dụng trong đăng ký này sẽ không được trả lại và người bảo vệ sẽ được thông báo về hành động này.</value>
+  </data>
+  <data name="LabelProtectorEliminado" xml:space="preserve">
+    <value>Bộ bảo vệ đã chọn đã bị xóa. Quyền hạn sẽ không được trả lại cho người bảo vệ. Người bảo vệ sẽ được thông báo về hành động này</value>
+  </data>
+  <data name="LblConfirmacionRequerida" xml:space="preserve">
+    <value>Quan trọng! Yêu cầu xác nhận!</value>
+  </data>
+  <data name="LblNoHayRegistros" xml:space="preserve">
+    <value>Không có nhật ký để hiển thị tại thời điểm này</value>
+  </data>
+  <data name="LblMiLogin" xml:space="preserve">
+    <value>Thông tin đăng nhập của tôi là:</value>
+  </data>
+  <data name="LblSaldoPoderesEs" xml:space="preserve">
+    <value>Cân bằng quyền lực của tôi là:</value>
+  </data>
+  <data name="LblUsuarioID" xml:space="preserve">
+    <value>ID người dùng của tôi là</value>
+  </data>
+  <data name="LblNoHayRegistrosAqui" xml:space="preserve">
+    <value>Chưa ai viết gì cả!</value>
+  </data>
+  <data name="LblAlertaReportadaPorMi" xml:space="preserve">
+    <value>Cảnh báo do tôi báo cáo</value>
+  </data>
+  <data name="LblPara" xml:space="preserve">
+    <value>Người nhận thư:</value>
+  </data>
+  <data name="LblDe" xml:space="preserve">
+    <value>Người gửi tin nhắn:</value>
+  </data>
+  <data name="ConfiguraciondeSOSpect" xml:space="preserve">
+    <value>Cấu hình SOSpect</value>
+  </data>
+  <data name="LblExitoEnAceptacion" xml:space="preserve">
+    <value>Chấp nhận hợp đồng của bạn được lưu trữ!</value>
+  </data>
+  <data name="LblFalloEnAceptacion" xml:space="preserve">
+    <value>Đăng ký không thành công. Vui lòng thử lại!</value>
+  </data>
+  <data name="LblDeclinacionAceptacion" xml:space="preserve">
+    <value>Nếu không chấp nhận hợp đồng, bạn không thể tiếp tục!</value>
+  </data>
+  <data name="LblParaIniciar" xml:space="preserve">
+    <value>HÃY BẮT ĐẦU TRONG SOSpect !! Để cập nhật cảnh báo lân cận, hãy nhấn vào nút làm mới màu xanh lam</value>
+  </data>
+  <data name="LblAlarmaNoGrave" xml:space="preserve">
+    <value>Sử dụng nút màu vàng để đặt cảnh báo nguy hiểm thấp và cảnh báo cho cộng đồng hoặc người bảo vệ của bạn. Bạn có thể chọn loại cảnh báo và đánh dấu nó là tội phạm đã thực hiện. Nút này khởi chạy cảnh báo ở vị trí chính xác của bạn, hữu ích khi bạn cần trợ giúp. Bạn cũng có thể chọn một điểm trên bản đồ để xác định vị trí cảnh báo mà không ảnh hưởng đến vị trí của bạn.</value>
+  </data>
+  <data name="LblCrimenCometido" xml:space="preserve">
+    <value>Nút màu đỏ kích hoạt một danh mục: báo động tội phạm. SOSpect không yêu cầu bạn bao gồm một danh mục do tầm quan trọng của thời gian trong những trường hợp này. Báo thức được tự động đặt tại vị trí chính xác của bạn. Bạn cũng có thể chọn một điểm trên bản đồ để đặt cảnh báo và sau đó thay đổi danh mục thành tội phạm đã thực hiện.</value>
+  </data>
+  <data name="LblDescripcionAlarmas" xml:space="preserve">
+    <value>Trong tùy chọn 'Mô tả' ở thanh dưới cùng, bạn sẽ tìm thấy danh sách các báo thức do bạn hoặc người khác đặt. Nếu đã tạo báo thức, bạn có thể thêm mô tả. Nếu báo thức được tạo bởi người khác, bạn có thể đánh giá tính xác thực của nó và bổ sung cho mô tả của nó. Cẩn thận! Nếu bạn cung cấp thông tin sai lệch hoặc xếp hạng không chính xác, tài khoản của bạn có thể bị tạm ngưng. Xem xét cẩn thận các điều khoản và điều kiện để tránh điều này.</value>
+  </data>
+  <data name="LblDescripcionMensajes" xml:space="preserve">
+    <value>Trong chuông ở góc trên cùng bên phải, bạn có thể đọc tin nhắn của mình, bao gồm thông báo đăng ký và báo thức gần đây. Danh sách này khác với tùy chọn mô tả, nơi bạn có thể tìm trực tiếp các báo thức gần đây.</value>
+  </data>
+  <data name="LblDescripcionMenu" xml:space="preserve">
+    <value>Trong bánh răng ở góc trên bên trái, bạn sẽ tìm thấy các tùy chọn cấu hình SOSpect. Bạn có thể mua quyền hạn để mua đăng ký và bảo vệ gia đình hoặc mở rộng bán kính nhận báo thức. NHỚ! Khi bắt đầu, chúng tôi cung cấp cho bạn 80 quyền hạn để bạn có thể mua hai đăng ký ngay từ đầu.</value>
+  </data>
+  <data name="LblRecomendaciones" xml:space="preserve">
+    <value>CÙNG NHAU CHÚNG TA LÀ BẤT KHẢ CHIẾN BẠI! Các chức năng cơ bản của cảnh báo và nhận cảnh báo trong bán kính 100 mét là miễn phí và khi bạn bắt đầu, chúng tôi cung cấp cho bạn 2 đăng ký. Mời cộng đồng và gia đình của bạn sử dụng dịch vụ miễn phí này để chống lại tội phạm gia tăng. Bạn có thể cứu sống hoặc được cứu bằng cách nhận được cảnh báo kịp thời. Cảnh báo về người hoặc vật nuôi bị mất có phạm vi 10 km và các cuộc biểu tình bạo lực có phạm vi 1 km</value>
+  </data>
+  <data name="LblPromocion" xml:space="preserve">
+    <value>Cuối cùng, hãy nhớ rằng bạn sẽ kiếm được giấy ủy quyền cho mỗi xếp hạng trung thực mà bạn cung cấp trong SOSpect, khi việc bỏ phiếu báo động đóng sau 90 phút kể từ khi đặt chúng. Hầu hết mọi người đều trung thực và cùng nhau chúng tôi sẽ bảo vệ lẫn nhau và gia đình của chúng tôi. CHÀO MỪNG BẠN ĐẾN VỚI SOSPECT!</value>
+  </data>
+  <data name="LblDescripcionMapa" xml:space="preserve">
+    <value>Bất cứ lúc nào, bạn có thể chọn tùy chọn "MAP" ở bên trái thanh dưới cùng, đây là điểm bắt đầu của SOSpect. Từ đó, bạn có thể xem các báo thức gần đó. Vị trí của bạn sẽ xuất hiện ở giữa bản đồ và vòng tròn thể hiện bán kính có thể ảnh hưởng đến bạn. Theo mặc định, bán kính này là 100 mét, nhưng bạn có thể sửa đổi nó trong menu cài đặt.</value>
+  </data>
+  <data name="LblRecomendacionImportante" xml:space="preserve">
+    <value>Điều quan trọng là bạn phải mở SOSpect định kỳ, trước khi rời khỏi nhà hoặc khi bạn đến một địa điểm, để cập nhật vị trí của bạn. Bằng cách này, chúng tôi có thể cho bạn biết nếu có bất kỳ rủi ro nào trong khu vực của bạn. Xin lưu ý rằng khi ứng dụng bị đóng, chúng tôi không thể lấy vị trí của bạn do các hạn chế do hệ điều hành thiết bị áp đặt. Kiểm tra các điều khoản và điều kiện liên quan đến vị trí của bạn.</value>
+  </data>
+  <data name="LblUsuarioBloqueado" xml:space="preserve">
+    <value>Người dùng bị đình chỉ vì đánh dấu tiêu cực</value>
+  </data>
+  <data name="LblMarcasNegativas" xml:space="preserve">
+    <value>Số điểm tiêu cực của tôi là</value>
+  </data>
+  <data name="LblCuentaSuspendida" xml:space="preserve">
+    <value>Tài khoản tạm thời bị tạm ngưng do đánh dấu tiêu cực từ người dùng khác</value>
+  </data>
+  <data name="LblTitleCuentaSuspendida" xml:space="preserve">
+    <value>Tài khoản tạm ngưng</value>
+  </data>
+  <data name="LblFechaFinSuspension" xml:space="preserve">
+    <value>Ngày kết thúc tạm ngưng là</value>
+  </data>
+  <data name="LblTocaAqui" xml:space="preserve">
+    <value>Nhấn vào đây để bắt đầu</value>
+  </data>
+  <data name="LblNoTienesConexion" xml:space="preserve">
+    <value>Không có kết nối internet</value>
+  </data>
+  <data name="LblExplicacionSinConexion" xml:space="preserve">
+    <value>Sao kê của bạn là bắt buộc để đăng nhập vào SOSpect. Không có internet, chúng ta không thể biết liệu nó có hoạt động hay không.</value>
+  </data>
+  <data name="LblSinConexionDescripcion" xml:space="preserve">
+    <value>Cần có internet đang hoạt động để truy xuất trạng thái tài khoản SOSpect của bạn.</value>
+  </data>
+  <data name="LblSinConexionQueHacer" xml:space="preserve">
+    <value>Vui lòng kích hoạt internet của bạn và khởi động lại SOSpect</value>
+  </data>
+  <data name="SefinalizalasubscripcionporsolicituddelusuarioPROTEGIDOatravésdelaAPIdesdelaAPP" xml:space="preserve">
+    <value>Đăng ký bị chấm dứt theo yêu cầu của người dùng ĐƯỢC BẢO VỆ thông qua API từ APP</value>
+  </data>
+  <data name="Nopuederenovarsedebidoaquefuecancelada,requieresubscripciónnueva" xml:space="preserve">
+    <value>Không thể gia hạn vì nó đã bị hủy, yêu cầu đăng ký mới</value>
+  </data>
+  <data name="Alarmasgeneradaspormicirculosocial" xml:space="preserve">
+    <value>Báo động được tạo bởi vòng kết nối xã hội của tôi</value>
+  </data>
+  <data name="Incrementomidiametrodevigilancia" xml:space="preserve">
+    <value>Tôi tăng đường kính giám sát của mình</value>
+  </data>
+  <data name="Zonadevigilanciaadicional" xml:space="preserve">
+    <value>Khu vực giám sát bổ sung</value>
+  </data>
+  <data name="Renovable" xml:space="preserve">
+    <value>Tái tạo</value>
+  </data>
+  <data name="SefinalizalasubscripcionporsolicituddelusuarioPROTECTORatravésdelaAPIdesdelaAPP" xml:space="preserve">
+    <value>Đăng ký bị chấm dứt theo yêu cầu của người dùng PROTECTOR thông qua API từ APP</value>
+  </data>
+  <data name="LblEsRenovable" xml:space="preserve">
+    <value>Nó có thể tái tạo không?</value>
+  </data>
+  <data name="LblObsSubs" xml:space="preserve">
+    <value>Ghi chú đăng ký:</value>
+  </data>
+  <data name="NingunaObservacion" xml:space="preserve">
+    <value>Miễn bình luận</value>
+  </data>
+  <data name="Subscripcionvigente" xml:space="preserve">
+    <value>Đăng ký hiện tại</value>
+  </data>
+  <data name="Actualmenteactivoenotrasuscripcion" xml:space="preserve">
+    <value>Hiện đang hoạt động trên một đăng ký khác</value>
+  </data>
+  <data name="LblRadioActual" xml:space="preserve">
+    <value>Bán kính hiện tại của tôi để nhận báo động là:</value>
+  </data>
+  <data name="LblPoderesRequeridosZV" xml:space="preserve">
+    <value>Quyền hạn cần thiết cho việc mở rộng đã chọn</value>
+  </data>
+  <data name="OptTerminosCondiciones" xml:space="preserve">
+    <value>Điều khoản và điều kiện của SOSpect</value>
+  </data>
+  <data name="DebesAbrirLaApp" xml:space="preserve">
+    <value>SOSpect không thể biết được sự thay đổi vị trí của người dùng khi nó bị đóng, điều này xảy ra bởi các chính sách bảo tồn pin của hệ điều hành của điện thoại di động, vì vậy điều quan trọng là người dùng phải thường xuyên mở ứng dụng để kiểm tra báo động trong khu vực mà nó đã di chuyển và nhận báo động gần đó kịp thời.</value>
+  </data>
+  <data name="InvitaMasPersonas" xml:space="preserve">
+    <value>Để cải thiện sự an toàn của người dùng, điều quan trọng là những người xung quanh, gia đình và hàng xóm phải tải xuống ứng dụng miễn phí. Nếu không có người dùng gần đó, người dùng có thể không được cảnh báo kịp thời hoặc cảnh báo của họ có thể không được nghe thấy, duy trì trạng thái rủi ro như trước khi tải xuống ứng dụng. Điều quan trọng là mời nhiều người hơn để giúp đỡ lẫn nhau!</value>
+  </data>
+  <data name="Insertiondone" xml:space="preserve">
+    <value>Chèn thực hiện.</value>
+  </data>
+  <data name="AnerroroccurredwhilequalifyingthealarmCode1" xml:space="preserve">
+    <value>Đã xảy ra lỗi khi xếp hạng báo động bằng mã 1</value>
+  </data>
+  <data name="AnerroroccurredwhilequalifyingthealarmCode2" xml:space="preserve">
+    <value>Đã xảy ra lỗi khi xếp hạng báo động bằng mã 2</value>
+  </data>
+  <data name="AnerroroccurredwiththealarmqualificationmodelCode3" xml:space="preserve">
+    <value>Đã xảy ra lỗi khi xếp hạng báo động với mã 3</value>
+  </data>
+  <data name="Userregistrationsuccessful" xml:space="preserve">
+    <value>Người dùng của bạn đã được đăng ký!</value>
+  </data>
+  <data name="Anerroroccurredwhileregisteringtheusercode1" xml:space="preserve">
+    <value>Đã xảy ra lỗi với mã 1 đăng ký người dùng của bạn</value>
+  </data>
+  <data name="Anerroroccurredwhileregisteringtheusercode2" xml:space="preserve">
+    <value>Đã xảy ra lỗi với mã 2 đăng ký người dùng của bạn</value>
+  </data>
+  <data name="Anerroroccurredwiththepeoplemodelforuserregistrationcode3" xml:space="preserve">
+    <value>Đã xảy ra lỗi với mã 3 đăng ký người dùng của bạn</value>
+  </data>
+  <data name="Permisosolicitadoconexito" xml:space="preserve">
+    <value>Yêu cầu quyền thành công</value>
+  </data>
+  <data name="OcurriounerrorenelprocesodesolicitarpermisoalprotegidoCodigo1" xml:space="preserve">
+    <value>Đã xảy ra lỗi với mã 1 trong quá trình yêu cầu sự cho phép từ người được bảo vệ</value>
+  </data>
+  <data name="Nofueposiblerealizarenviarlasolicituddepermisoalprotegidoporqueelmodelonoesvalido" xml:space="preserve">
+    <value>Không thể gửi yêu cầu cấp phép đến người được bảo vệ, mô hình không hợp lệ</value>
+  </data>
+  <data name="AlertaEnUbicacion" xml:space="preserve">
+    <value>Bạn muốn tạo cảnh báo SOSpect ở vị trí này?</value>
+  </data>
+  <data name="CrearEnUbicacionActual" xml:space="preserve">
+    <value>Bạn muốn tạo cảnh báo SOSpect tại vị trí hiện tại của mình?</value>
+  </data>
+  <data name="SeguroCerrarSesion" xml:space="preserve">
+    <value>Bạn có chắc chắn để đăng xuất?</value>
+  </data>
+  <data name="Tu" xml:space="preserve">
+    <value>Mày</value>
+  </data>
+  <data name="Anonimo" xml:space="preserve">
+    <value>Vô danh</value>
+  </data>
+  <data name="AlarmaCerrada" xml:space="preserve">
+    <value>Báo thức đã đóng</value>
+  </data>
+  <data name="LblSaldoPoderesInsuficiente" xml:space="preserve">
+    <value>Cân bằng sức mạnh của bạn là không đủ</value>
+  </data>
+  <data name="LblComprarPoderes" xml:space="preserve">
+    <value>Mua giấy ủy quyền</value>
+  </data>
+  <data name="LblSeguroRenovar" xml:space="preserve">
+    <value>Bạn có chắc chắn về việc gia hạn đăng ký này không?</value>
+  </data>
+  <data name="OptReportes" xml:space="preserve">
+    <value>Báo cáo</value>
+  </data>
+  <data name="LblReportesTitulo" xml:space="preserve">
+    <value>Báo cáo SOSpect</value>
+  </data>
+  <data name="LblReportesDescripcion" xml:space="preserve">
+    <value>Báo cáo cung cấp cho bạn cơ hội để hiểu cách bạn đã giúp đỡ người dùng khác bằng cách tránh các tình huống bất lợi. Ngoài ra, chúng cho phép bạn xác định các khu vực nguy hiểm trên bản đồ thành phố của bạn và quan sát sự phát triển của tội phạm theo thời gian. Ngoài ra, thông qua phân tích mẫu, có thể tạo ra cảnh báo sớm trước khi các sự kiện tiêu cực xảy ra. Điều quan trọng cần lưu ý là báo cáo cơ bản là miễn phí, trong khi các báo cáo khác có thể có chi phí do mức tiêu thụ tính toán cần thiết cho việc tạo ra chúng.</value>
+  </data>
+  <data name="OptReporteDeCalorEnZona" xml:space="preserve">
+    <value>Báo cáo bằng bản đồ nhiệt</value>
+  </data>
+  <data name="OptReporteEvolucionEnElTiempo" xml:space="preserve">
+    <value>Báo cáo tiến hóa cảnh báo theo thời gian</value>
+  </data>
+  <data name="OptReportesPredictivos" xml:space="preserve">
+    <value>Báo cáo dự đoán</value>
+  </data>
+  <data name="OptReporteAnaliticoDeDescripcionesAlarmas" xml:space="preserve">
+    <value>Báo cáo phân tích các cuộc trò chuyện báo thức</value>
+  </data>
+  <data name="LblReporteCalorSospect" xml:space="preserve">
+    <value>Bản đồ nhiệt SOSpect</value>
+  </data>
+  <data name="LblReporteEnConstruccion" xml:space="preserve">
+    <value>Sớm!! Chức năng này đang được xây dựng!</value>
+  </data>
+  <data name="LblDescripcionMapaDeCalor" xml:space="preserve">
+    <value>Trong báo cáo này, bạn sẽ có quyền truy cập vào bản đồ nhiệt của khu vực của mình, nơi bạn có thể chọn các tháng khác nhau kể từ khi SOSpect bắt đầu hoạt động. Chức năng này sẽ cho phép bạn quan sát và hiểu sự phát triển của từng khu vực trên bản đồ mà bạn quan tâm.</value>
+  </data>
+  <data name="LblCostoReporte" xml:space="preserve">
+    <value>Hãy nhớ rằng việc sử dụng chức năng này mang lại chi phí tính toán và đòi hỏi sức mạnh mặc dù nó sẽ không phải là một giá trị cao. Tuy nhiên, bạn có thể có được nó mà không gặp bất kỳ vấn đề gì khi sử dụng các quyền hạn mà chúng tôi cung cấp cho bạn trong lần sử dụng ứng dụng đầu tiên.</value>
+  </data>
+  <data name="LblReporteEvolucionAlarmas" xml:space="preserve">
+    <value>Sự phát triển của các báo động được đặt trong SOSpect</value>
+  </data>
+  <data name="LblDescripcionEvolucionAlarmas" xml:space="preserve">
+    <value>Trong báo cáo này, bạn sẽ có thể biết xu hướng của từng loại báo động theo thời gian trong khu vực của bạn. Bạn sẽ có thể quan sát và phân tích xu hướng nguy hiểm, cũng như xác định khả năng giảm tội phạm.</value>
+  </data>
+  <data name="LblReportePredictivo" xml:space="preserve">
+    <value>Báo cáo dự đoán SOSpect</value>
+  </data>
+  <data name="LblDescripcionReportesPredictivos" xml:space="preserve">
+    <value>Khi cộng đồng SOSpect tạo ra đủ dữ liệu, các dự đoán sự kiện dựa trên xác suất và các công cụ phân tích có thể được thực hiện. Những báo cáo này sẽ cho phép bạn biết khi nào làn sóng cảnh báo hoặc gia tăng hoạt động tội phạm đang đến gần, cho bạn cơ hội thực hiện các biện pháp phòng ngừa cần thiết để tránh mọi rủi ro cho bạn, gia đình và cộng đồng của bạn.</value>
+  </data>
+  <data name="LblReporteAnalisisDeTextos" xml:space="preserve">
+    <value>Báo cáo phân tích trò chuyện báo động SOSpect</value>
+  </data>
+  <data name="LblDescripcionAnalisisTextos" xml:space="preserve">
+    <value>Nhờ thực tế là người dùng mô tả các báo động và cập nhật sự phát triển của họ thông qua trò chuyện nội bộ của SOSpect, báo cáo này sẽ cho phép hình dung các loại hình ảnh hưởng nhiều nhất đến cộng đồng. Điều này cung cấp một cơ hội để hành động để cải thiện nhận thức về an toàn trong khu vực của bạn.</value>
+  </data>
+  <data name="LblRangoReporte" xml:space="preserve">
+    <value>Báo cáo này bao gồm 30 ngày qua</value>
+  </data>
+  <data name="AcercadeSOSpect" xml:space="preserve">
+    <value>Về SOSpect</value>
+  </data>
+  <data name="Porcentajedealarmasciertasfrenteafalsasenunradiodeunkilometroymedio" xml:space="preserve">
+    <value>Tỷ lệ phần trăm báo động đúng so với báo động giả trong bán kính một km rưỡi</value>
+  </data>
+  <data name="Promediodetiempoenminutosentrelanzamientodealarmaenmizonaylaprimeracalificacionodescripcion" xml:space="preserve">
+    <value>Thời gian trung bình tính bằng phút giữa lần khởi chạy báo thức trong khu vực của tôi và xếp hạng hoặc mô tả đầu tiên</value>
+  </data>
+  <data name="Cantidadrealdepersonasenunradiodeunkilometroymedio" xml:space="preserve">
+    <value>Số người thực tế trong bán kính một km rưỡi</value>
+  </data>
+  <data name="Cantidadrealdepersonasenmiradioactual" xml:space="preserve">
+    <value>Số người thực tế trong bán kính hiện tại của tôi</value>
+  </data>
+  <data name="Miradioactualderecepcionyenviodealarmasenmetros" xml:space="preserve">
+    <value>Bán kính nhận và gửi báo động hiện tại của tôi tính bằng mét</value>
+  </data>
+  <data name="Cantidadrealdepersonasquerecibieronmisalarmas" xml:space="preserve">
+    <value>Số người thực tế đã nhận được báo động của tôi</value>
+  </data>
+  <data name="Cantidaddenotificacionesdealarmaenviadasdemiparte" xml:space="preserve">
+    <value>Số lượng thông báo cảnh báo được gửi từ tôi</value>
+  </data>
+  <data name="Personasquereportaronmiayudacomonegativaofalsa" xml:space="preserve">
+    <value>Những người báo cáo sự giúp đỡ của tôi là tiêu cực hoặc sai</value>
+  </data>
+  <data name="Personasqueagradecieronmiayuda" xml:space="preserve">
+    <value>Những người đánh giá cao sự giúp đỡ của tôi</value>
+  </data>
+  <data name="Poderesganadosporregalos" xml:space="preserve">
+    <value>Sức mạnh có được bằng quà tặng</value>
+  </data>
+  <data name="LblParticipacionTpAlarma" xml:space="preserve">
+    <value>Tham gia theo loại báo động</value>
+  </data>
+  <data name="LblMetricBasics" xml:space="preserve">
+    <value>Các chỉ số cơ bản</value>
+  </data>
+  <data name="LblEfectiAlarmas" xml:space="preserve">
+    <value>Hiệu quả của báo động</value>
+  </data>
+  <data name="LblTotalAlarmas" xml:space="preserve">
+    <value>Tổng số báo động</value>
+  </data>
+  <data name="LblAlarmasVerdaderas" xml:space="preserve">
+    <value>Báo động thực sự</value>
+  </data>
+  <data name="LblAlarmasFalsas" xml:space="preserve">
+    <value>Báo động sai</value>
+  </data>
+  <data name="LblAlarmasEfectivas" xml:space="preserve">
+    <value>Tỷ lệ phần trăm báo động hiệu quả</value>
+  </data>
+  <data name="LblMarcarLeidos" xml:space="preserve">
+    <value>Đánh dấu tất cả là đã đọc</value>
+  </data>
+  <data name="LblSeMarcaronComoLeidos" xml:space="preserve">
+    <value>Tất cả các thư được đánh dấu là đã đọc</value>
+  </data>
+  <data name="LabelNuevaVersion" xml:space="preserve">
+    <value>Có một phiên bản mới của SOSpect và nó được yêu cầu để tiếp tục</value>
+  </data>
+  <data name="OptReporteBasico" xml:space="preserve">
+    <value>Báo cáo cơ bản - MIỄN PHÍ!</value>
+  </data>
+  <data name="LblReporteBasicoSospect" xml:space="preserve">
+    <value>Báo cáo cơ bản của SOSpect</value>
+  </data>
+  <data name="LblReporteBasicoDescripcion" xml:space="preserve">
+    <value>Các báo cáo cơ bản của SOSpect cung cấp cho bạn thông tin có giá trị về tác động của các báo cáo báo động đối với cộng đồng của bạn. Ngoài ra, chúng cho bạn thấy số lượng quyền hạn đạt được bằng cách giúp đỡ cộng đồng của bạn bằng cách ghi điểm chính xác các báo động và tính trung thực trong các xếp hạng đó. Thông qua các báo cáo này, bạn cũng có thể đánh giá hành vi tổng thể của khu vực của mình trong tháng qua, bao gồm số lượng người dùng đã tham gia vào quá trình này và số lượng người dùng nhận được điểm tiêu cực do tương tác không chính xác.</value>
+  </data>
+  <data name="LblReporteBasicoDescripcionCorta" xml:space="preserve">
+    <value>Các báo cáo cơ bản của SOSpect cung cấp cho bạn thông tin có giá trị về... Xem thêm...</value>
+  </data>
+  <data name="LblDescripcionRepTipoAlarma" xml:space="preserve">
+    <value>Báo cáo này cung cấp cho bạn thông tin về các báo động thường xuyên nhất trong bán kính một km rưỡi từ vị trí hiện tại của bạn.</value>
+  </data>
+  <data name="LblDescripcionRepEfectAlarmas" xml:space="preserve">
+    <value>Báo cáo này cung cấp cho bạn thông tin về mối quan hệ hiệu quả giữa báo động thực và báo động giả trong bán kính một km rưỡi từ vị trí hiện tại của bạn.</value>
+  </data>
+  <data name="LblDescripcionRepMetricasBasicas" xml:space="preserve">
+    <value>Báo cáo này cung cấp cho bạn dữ liệu về số lượng người dùng trong bán kính một km rưỡi từ vị trí hiện tại của bạn, cũng như số lượng người dùng trong bán kính cảnh báo ứng dụng hiện tại của bạn. Ngoài ra, nó bao gồm một số thông tin bổ sung mà bạn quan tâm.</value>
+  </data>
+  <data name="OptVolumenAlarmas" xml:space="preserve">
+    <value>Âm lượng theo loại báo thức gần đó</value>
+  </data>
+  <data name="OptEfectividadAlarmas" xml:space="preserve">
+    <value>Hiệu quả của báo động gần đó</value>
+  </data>
+  <data name="OptMetricasBasicas" xml:space="preserve">
+    <value>Các chỉ số cơ bản của báo động lân cận</value>
+  </data>
+  <data name="LblCredibilidadActual" xml:space="preserve">
+    <value>Độ tin cậy của báo thức của tôi là:</value>
+  </data>
+  <data name="OptManualUsuarioSospect" xml:space="preserve">
+    <value>Hướng dẫn sử dụng SOSpect</value>
+  </data>
+  <data name="LblDescManualUsuario" xml:space="preserve">
+    <value>Gặp gỡ SOSpect, một ứng dụng miễn phí được thiết kế để bảo vệ bạn và những người thân yêu của bạn. Chúng tôi đã tạo ra một hướng dẫn trực tuyến ngắn gọn và chi tiết sẽ giúp bạn sử dụng nó đúng cách. Với hướng dẫn này, bạn có thể tận dụng tối đa SOSpect và tận dụng tất cả các tính năng bảo mật của nó.</value>
+  </data>
+  <data name="SesionApple" xml:space="preserve">
+    <value>ĐĂNG NHẬP BẰNG APPLE</value>
+  </data>
+  <data name="LblCredibilidadAlarmaActual" xml:space="preserve">
+    <value>Độ tin cậy của báo động:</value>
+  </data>
+  <data name="LblAccedeAlManual" xml:space="preserve">
+    <value>Bạn có thể truy cập hướng dẫn sử dụng tại:</value>
+  </data>
+  <data name="LblRefrescarLista" xml:space="preserve">
+    <value>Làm mới danh sách báo thức</value>
+  </data>
+  <data name="LblErrorCorreoDispositivo" xml:space="preserve">
+    <value>Không thể gửi email trên thiết bị này</value>
+  </data>
+  <data name="LblErrorCorreo" xml:space="preserve">
+    <value>Lỗi gửi email:</value>
+  </data>
+  <data name="LblSeleccioneTipoAlarma" xml:space="preserve">
+    <value>Vui lòng chọn loại báo động</value>
+  </data>
+  <data name="LblCompraFallida" xml:space="preserve">
+    <value>Việc mua hàng đã không được thực hiện. Vui lòng kiểm tra truy cập internet và thử lại</value>
+  </data>
+  <data name="LblSeleccionePuntoMapa" xml:space="preserve">
+    <value>Bạn phải chọn một khu vực giám sát trên bản đồ</value>
+  </data>
+  <data name="Cantidaddealarmascolocadasenlaszonasdevigilanciasuscritas" xml:space="preserve">
+    <value>Số lượng báo động được đặt trong các khu vực giám sát đã đăng ký</value>
+  </data>
+  <data name="Cantidaddealarmascolocadaspormisprotegidos" xml:space="preserve">
+    <value>Số lượng báo động được đặt bởi những người bảo trợ của tôi</value>
+  </data>
+  <data name="Credibilidadactualdelasalarmasqueenvioamicomunidad" xml:space="preserve">
+    <value>Độ tin cậy hiện tại của các báo động tôi gửi cho cộng đồng của mình</value>
+  </data>
+  <data name="LblCompraExitosa" xml:space="preserve">
+    <value>Chúc mừng! Bạn đã mua quyền mua đăng ký. Bạn sẽ tìm thấy một thông điệp giải thích trong chuông!</value>
+  </data>
+  <data name="LblDebesHabilitarNotif" xml:space="preserve">
+    <value>Bạn phải bật gửi thông báo để SOSpect hoạt động</value>
+  </data>
+  <data name="LblHabilitarNotifSettings" xml:space="preserve">
+    <value>Ứng dụng này có thể hỗ trợ thông báo, nhưng bạn cần bật tính năng này trong cài đặt của mình.</value>
+  </data>
+  <data name="LblErrorHabilitandoUsoNotif" xml:space="preserve">
+    <value>Đã xảy ra lỗi ngăn cản việc sử dụng thông báo đẩy</value>
+  </data>
+  <data name="LblMostrarDireccionEscape" xml:space="preserve">
+    <value>Con đường trốn thoát của Mark Fugitive</value>
+  </data>
+  <data name="LblProximamenteSOSpect" xml:space="preserve">
+    <value>Sắp ra mắt tại SOSpect!</value>
+  </data>
+  <data name="LblReportesProximos" xml:space="preserve">
+    <value>Báo cáo phân tích và dự đoán với khoa học dữ liệu!</value>
+  </data>
+  <data name="LblHolaBienvenido" xml:space="preserve">
+    <value>Xin chào! Chào mừng bạn đến với SOSpect. 
+
+SOSpect là một công cụ miễn phí được thiết kế để bảo vệ bạn và những người thân yêu của bạn bằng cách cung cấp các cảnh báo kịp thời về các rủi ro gần đó! Bạn có thể không nhận được nhiều báo động lúc đầu, vì chưa có nhiều người ở gần bạn đã cài đặt SOSpect. Chúng tôi yêu cầu bạn dùng thử và không gỡ cài đặt ứng dụng. SOSpect có thể cứu mạng bạn tại một số điểm, cũng như của ai đó trong gia đình hoặc cộng đồng của bạn.
+
+Trong phần "Báo cáo cơ bản" của menu "Báo cáo" được tìm thấy trong cài đặt, bạn có thể thấy trong phần "Số liệu cơ bản" số lượng người dùng gần đó trong vùng phủ sóng của bạn, nơi bạn sẽ nhận được cảnh báo. Hãy giúp chúng tôi tăng con số đó, hoàn toàn miễn phí và sẽ cho phép bạn sống an toàn hơn!
+
+Chúng tôi mời bạn đọc kỹ hướng dẫn giới thiệu ngắn này, sẽ cung cấp cho bạn ý tưởng về cách SOSpect hoạt động. Xin lưu ý rằng nó sẽ chỉ được hiển thị một lần sau khi ứng dụng được cài đặt.
+
+Cảm ơn bạn đã sử dụng SOSpect và đóng góp cho sự an toàn của mọi người!
+
+Nhấn vào màn hình để tiếp tục...</value>
+  </data>
+</root>

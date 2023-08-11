@@ -1,0 +1,1090 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Bienvenido" xml:space="preserve">
+    <value>Velkomin(n) í SOSpect</value>
+  </data>
+  <data name="InicieSesion" xml:space="preserve">
+    <value>Skráðu þig inn til að halda áfram</value>
+  </data>
+  <data name="InicieSesionCon" xml:space="preserve">
+    <value>eða skráðu þig inn með</value>
+  </data>
+  <data name="SesionFacebook" xml:space="preserve">
+    <value>SKRÁÐU ÞIG INN MEÐ FACEBOOK</value>
+  </data>
+  <data name="SesionGoogle" xml:space="preserve">
+    <value>SKRÁÐU ÞIG INN MEÐ GOOGLE</value>
+  </data>
+  <data name="LabelAlerta" xml:space="preserve">
+    <value>Viðvörun</value>
+  </data>
+  <data name="LabelCrimen" xml:space="preserve">
+    <value>Glæpur</value>
+  </data>
+  <data name="LabelOK" xml:space="preserve">
+    <value>ÓKEI</value>
+  </data>
+  <data name="LabelCancelar" xml:space="preserve">
+    <value>Afturkalla</value>
+  </data>
+  <data name="ReportarCrimen" xml:space="preserve">
+    <value>Tilkynna glæp</value>
+  </data>
+  <data name="LabelMapa" xml:space="preserve">
+    <value>Landakort</value>
+  </data>
+  <data name="LabelDescribir" xml:space="preserve">
+    <value>Lýsa</value>
+  </data>
+  <data name="DescripcionAlarma" xml:space="preserve">
+    <value>Lýsing á viðvörunarbúnaði</value>
+  </data>
+  <data name="DescripcionSospechoso" xml:space="preserve">
+    <value>Lýsing á grunsamlegum manni</value>
+  </data>
+  <data name="DescripcionVehiculo" xml:space="preserve">
+    <value>Lýsing ökutækis</value>
+  </data>
+  <data name="DescripcionArma" xml:space="preserve">
+    <value>Lýsing á vopninu</value>
+  </data>
+  <data name="PuntuacionDescripcion" xml:space="preserve">
+    <value>Lýsing á stigagjöf</value>
+  </data>
+  <data name="LabelEditar" xml:space="preserve">
+    <value>Klippa</value>
+  </data>
+  <data name="DescripcionesParaAlarma" xml:space="preserve">
+    <value>Lýsingar gerðar á þessari viðvörun</value>
+  </data>
+  <data name="EspacioPublicidad" xml:space="preserve">
+    <value>Rými fyrir auglýsingar</value>
+  </data>
+  <data name="AlarmasRecientes" xml:space="preserve">
+    <value>Nýlegar áminningar til að bæta við lýsingu</value>
+  </data>
+  <data name="ConfirmarAlarma" xml:space="preserve">
+    <value>Staðfesta viðvörun</value>
+  </data>
+  <data name="LabelInformacion" xml:space="preserve">
+    <value>Upplýsingar</value>
+  </data>
+  <data name="LabelError" xml:space="preserve">
+    <value>Villa</value>
+  </data>
+  <data name="LabelCancelado" xml:space="preserve">
+    <value>Hætt</value>
+  </data>
+  <data name="LabelLoginCancelado" xml:space="preserve">
+    <value>Innskráningu aflýst</value>
+  </data>
+  <data name="LabelFallo" xml:space="preserve">
+    <value>Bilun</value>
+  </data>
+  <data name="RecibeAlarma" xml:space="preserve">
+    <value>Þú fékkst vekjaraklukku nálægt þér, er hún raunveruleg?</value>
+  </data>
+  <data name="LabelConfirmo" xml:space="preserve">
+    <value>Staðfesta</value>
+  </data>
+  <data name="LabelNoSeguro" xml:space="preserve">
+    <value>Ég er ekki viss</value>
+  </data>
+  <data name="LabelEsFalsa" xml:space="preserve">
+    <value>Það er ósatt.</value>
+  </data>
+  <data name="LabelConfirmar" xml:space="preserve">
+    <value>Staðfesta</value>
+  </data>
+  <data name="AdvertenciaCalificacion" xml:space="preserve">
+    <value>Ekki er hægt að breyta þessari einkunn síðar. Það gæti haft áhrif á trúverðugleika þinn í framtíðinni ef samstaða einkunna er gegn atkvæði þínu. Ertu viss?</value>
+  </data>
+  <data name="LabelSi" xml:space="preserve">
+    <value>Já</value>
+  </data>
+  <data name="LabelNo" xml:space="preserve">
+    <value>Nei</value>
+  </data>
+  <data name="AlarmaEnviada" xml:space="preserve">
+    <value>Vekjaraklukkan send!</value>
+  </data>
+  <data name="MsgTrasAlarmaEnviada" xml:space="preserve">
+    <value>Ef þú ert öruggur skaltu lýsa vekjaraklukkunni, ef ekki, fela símann þinn og komast úr hættu.</value>
+  </data>
+  <data name="notificacionurgente" xml:space="preserve">
+    <value>Áríðandi tilkynning verður send í næstu síma á:</value>
+  </data>
+  <data name="LabelAlarma" xml:space="preserve">
+    <value>Viðvörun</value>
+  </data>
+  <data name="LabelMetros" xml:space="preserve">
+    <value>metri</value>
+  </data>
+  <data name="LabelTuUbicacion" xml:space="preserve">
+    <value>Staðsetningin þín</value>
+  </data>
+  <data name="LabelUsuario" xml:space="preserve">
+    <value>Notandi</value>
+  </data>
+  <data name="LabelTipoAlarma" xml:space="preserve">
+    <value>Gerð viðvörunarbúnaðar</value>
+  </data>
+  <data name="DireccionEscape" xml:space="preserve">
+    <value>Vinsamlega tilgreinið flóttastað hins grunaða.</value>
+  </data>
+  <data name="DescripcionAlerta" xml:space="preserve">
+    <value>Lýsing á viðvöruninni</value>
+  </data>
+  <data name="DescripcionImplicado" xml:space="preserve">
+    <value>Lýsing á einstaklingnum sem á þátt í skráningunni</value>
+  </data>
+  <data name="DescripcionVehiculoImp" xml:space="preserve">
+    <value>Viðeigandi ökutæki (ef við á)</value>
+  </data>
+  <data name="ArmaImplicada" xml:space="preserve">
+    <value>Vopn sem tengist (ef við á)</value>
+  </data>
+  <data name="LabelRutaEscape" xml:space="preserve">
+    <value>Grunsamleg flóttaleið</value>
+  </data>
+  <data name="ObjetivoSospect" xml:space="preserve">
+    <value>SOSpect miðar að því að leyfa samfélaginu að gera viðvart og taka á móti viðvörunum um hættur á stað notanda, til að forðast áhættu fyrir þá og ástvini þeirra. Staðsetning notenda er ekki deilt eða rakin til að tryggja friðhelgi þeirra. Notendur geta sett hættuviðvaranir til að hjálpa öðrum að forðast að verða fórnarlamb áhættusamra aðstæðna.</value>
+  </data>
+  <data name="UbicacionImportante" xml:space="preserve">
+    <value>Það er mikilvægt að vita staðsetningu notandans svo að þú getir látið hann vita ef einhver setur hættuviðvörun nálægt staðsetningu sinni. Hins vegar er staðsetning notandans einkamál og aðeins er deilt þeim punktum á kortinu þar sem viðvaranir eru settar.</value>
+  </data>
+  <data name="GenteUnida" xml:space="preserve">
+    <value>Með SOSpect getur samfélagið komið saman til að draga úr glæpum og forðast að verða fórnarlamb áhættusamra aðstæðna og varað aðra við að vera öruggur líka.</value>
+  </data>
+  <data name="contactenos" xml:space="preserve">
+    <value>Hafðu samband við okkur</value>
+  </data>
+  <data name="visitenos" xml:space="preserve">
+    <value>Heimsæktu okkur á</value>
+  </data>
+  <data name="ZonaVigilancia" xml:space="preserve">
+    <value>Áskrift að eftirlitssvæði</value>
+  </data>
+  <data name="SeleccioneUbicacionVigilar" xml:space="preserve">
+    <value>Veldu staðsetningu til að horfa á</value>
+  </data>
+  <data name="SeleccionEnMapa" xml:space="preserve">
+    <value>Veldu á korti</value>
+  </data>
+  <data name="ExplicaZonaVigilancia" xml:space="preserve">
+    <value>Allar viðvaranir sem eru settar á þann stað sem þú ætlar að velja verða tilkynntar, sama hver setur þær. Þannig geturðu verið meðvitaður um hætturnar sem eru í gangi á þeim tímapunkti. Þetta er tilvalið til að vera meðvitaður um hættur á stöðum eins og skólum barna þinna eða háskólum eða svæðum þar sem ættingjar þínir eða ástvinir vinna.</value>
+  </data>
+  <data name="CrearZonaV" xml:space="preserve">
+    <value>Búa til eftirlitssvæði með þessari staðsetningu</value>
+  </data>
+  <data name="LabelLatitud" xml:space="preserve">
+    <value>Breidd</value>
+  </data>
+  <data name="LabelLongitud" xml:space="preserve">
+    <value>Lengdargráða</value>
+  </data>
+  <data name="LabelIntroduccion" xml:space="preserve">
+    <value>Kynning</value>
+  </data>
+  <data name="AmpliacionRadio" xml:space="preserve">
+    <value>Stækkun viðvörunarradíuss</value>
+  </data>
+  <data name="TuRadioActual" xml:space="preserve">
+    <value>Núverandi radíus þinn er:</value>
+  </data>
+  <data name="CrearNuevoRadio" xml:space="preserve">
+    <value>Búðu til áskrift mína að þessu nýja útvarpi</value>
+  </data>
+  <data name="ExplicacionVigencias" xml:space="preserve">
+    <value>Allar áskriftir hafa gildi, vinsamlegast athugaðu verð áskrifta í fyrsta valkosti aðalvalmyndarinnar</value>
+  </data>
+  <data name="VasARequerir" xml:space="preserve">
+    <value>Þú þarft</value>
+  </data>
+  <data name="xPoderesParaSubs" xml:space="preserve">
+    <value>Vald til að bæta þessu útvarpi við núverandi útvarp</value>
+  </data>
+  <data name="Exito" xml:space="preserve">
+    <value>Velgengni</value>
+  </data>
+  <data name="SubscripcionCreada" xml:space="preserve">
+    <value>Áskriftin hefur verið búin til.</value>
+  </data>
+  <data name="MensajeError" xml:space="preserve">
+    <value>Villa kom upp við tengingu við þjóninn. Reyndu aftur.</value>
+  </data>
+  <data name="SeleccionaRuta" xml:space="preserve">
+    <value>Þú verður að velja flóttaleið hins grunaða.</value>
+  </data>
+  <data name="AprobarSolicitudes" xml:space="preserve">
+    <value>Samþykkja beiðnir</value>
+  </data>
+  <data name="LabelAprobar" xml:space="preserve">
+    <value>Samþykkja</value>
+  </data>
+  <data name="LabelRechazar" xml:space="preserve">
+    <value>Hafna</value>
+  </data>
+  <data name="CompletarSubscripcion" xml:space="preserve">
+    <value>Ljúka verndaðri áskrift</value>
+  </data>
+  <data name="CompletarSubsc" xml:space="preserve">
+    <value>Ljúka áskrift</value>
+  </data>
+  <data name="LblMensajes" xml:space="preserve">
+    <value>Skilaboð</value>
+  </data>
+  <data name="LblFechaMensaje" xml:space="preserve">
+    <value>Boðsdagur</value>
+  </data>
+  <data name="LblMenu" xml:space="preserve">
+    <value>STELLING</value>
+  </data>
+  <data name="OptCompraPoderes" xml:space="preserve">
+    <value>Kauptu krafta til að opna eiginleika</value>
+  </data>
+  <data name="OptGestionarProtegidos" xml:space="preserve">
+    <value>Stjórna vernduðum verndaraðilum mínum</value>
+  </data>
+  <data name="OptCrearZonas" xml:space="preserve">
+    <value>Búa til eftirlitssvæði</value>
+  </data>
+  <data name="OptAumentarRadio" xml:space="preserve">
+    <value>Auka radíus viðvörunarmóttöku minnar</value>
+  </data>
+  <data name="OptAcercaDe" xml:space="preserve">
+    <value>Um SOSpect umsóknina</value>
+  </data>
+  <data name="OptCerrarSesion" xml:space="preserve">
+    <value>Aftengja</value>
+  </data>
+  <data name="LblProtectores" xml:space="preserve">
+    <value>Verndarar mínir</value>
+  </data>
+  <data name="LblSuspender" xml:space="preserve">
+    <value>Tímabundin stöðvun</value>
+  </data>
+  <data name="LblEliminarProtegido" xml:space="preserve">
+    <value>Fjarlægja varið</value>
+  </data>
+  <data name="LblSubscrProtegido" xml:space="preserve">
+    <value>Vernduð áskrift</value>
+  </data>
+  <data name="LblIDUsuarioAProteger" xml:space="preserve">
+    <value>Sláðu inn notandakennið sem á að vernda. (Þetta gildi er staðsett efst í SOSpect stillingarvalmynd notandans sem þú vilt tengja)</value>
+  </data>
+  <data name="LblRelacionProtegido" xml:space="preserve">
+    <value>Samband mitt við þennan skjólstæðing er:</value>
+  </data>
+  <data name="LblSolicitarPermiso" xml:space="preserve">
+    <value>Biðja um leyfi frá notanda</value>
+  </data>
+  <data name="LblCompleteCampos" xml:space="preserve">
+    <value>Vinsamlegast kláraðu alla reiti.</value>
+  </data>
+  <data name="LblProcesarSolicitud" xml:space="preserve">
+    <value>Villa kom upp við afgreiðslu beiðninnar. Reyndu aftur.</value>
+  </data>
+  <data name="LblProtegidos" xml:space="preserve">
+    <value>Skjólstæðingar mínir</value>
+  </data>
+  <data name="LblUsuarioProtegido" xml:space="preserve">
+    <value>Verndað notandakenni</value>
+  </data>
+  <data name="LblFechaActivacion" xml:space="preserve">
+    <value>Virkjunardagsetning</value>
+  </data>
+  <data name="LblFechaFinalizacion" xml:space="preserve">
+    <value>Lokadagur</value>
+  </data>
+  <data name="LblAccion" xml:space="preserve">
+    <value>Aðgerð</value>
+  </data>
+  <data name="LblCantidadPoderes" xml:space="preserve">
+    <value>Fjöldi valdheimilda</value>
+  </data>
+  <data name="LblPrecio" xml:space="preserve">
+    <value>Verð</value>
+  </data>
+  <data name="LblComprar" xml:space="preserve">
+    <value>Kaupa</value>
+  </data>
+  <data name="LblValoresSubsc" xml:space="preserve">
+    <value>Verðmæti áskriftar</value>
+  </data>
+  <data name="LblTerminos" xml:space="preserve">
+    <value>Þjónustuskilmálar fyrir SOSpect APP</value>
+  </data>
+  <data name="LblAcepto" xml:space="preserve">
+    <value>Ég samþykki samninginn</value>
+  </data>
+  <data name="LblNoAcepto" xml:space="preserve">
+    <value>Ég samþykki ekki</value>
+  </data>
+  <data name="LblOpcionesProtegidos" xml:space="preserve">
+    <value>Verndað og varið af SOSpect forritinu</value>
+  </data>
+  <data name="LblExplicacionProtegidos" xml:space="preserve">
+    <value>Þú getur fengið tilkynningar frá meðlimum félagshringsins þíns, jafnvel þótt þeir séu langt í burtu frá þér. Hér getur þú stjórnað þessum eiginleika</value>
+  </data>
+  <data name="OptIniciarTramite" xml:space="preserve">
+    <value>Byrjaðu að bæta við vernduðu</value>
+  </data>
+  <data name="OptAprobarSolicitud" xml:space="preserve">
+    <value>Samþykkja beiðni frá verndara</value>
+  </data>
+  <data name="OptListarProtegidos" xml:space="preserve">
+    <value>Sjá lista yfir skjólstæðinga mína</value>
+  </data>
+  <data name="OptListarProtectores" xml:space="preserve">
+    <value>Sjá lista yfir verndara mína</value>
+  </data>
+  <data name="OptVolver" xml:space="preserve">
+    <value>Skila</value>
+  </data>
+  <data name="LblPoderesSospect" xml:space="preserve">
+    <value>Kraftur SOSpect forrits</value>
+  </data>
+  <data name="LblOpcionesPoderes" xml:space="preserve">
+    <value>Velkomin í orkustjórnunarkostinn, hvað viltu gera?</value>
+  </data>
+  <data name="LblSubscripcionesCosto" xml:space="preserve">
+    <value>Mig langar að vita hvaða áskriftir ég get keypt og kostnað þeirra</value>
+  </data>
+  <data name="LblQuieroComprar" xml:space="preserve">
+    <value>Ég vil kaupa ofurkrafta til að eignast áskriftir</value>
+  </data>
+  <data name="ExplicacionRadio" xml:space="preserve">
+    <value>Sjálfgefinn radíus fyrir alla notendur forritsins er 100 metrar í kring. Þú getur stækkað þann radíus með því að nota kraft forritsins. Veldu síðan radíusinn sem þú vilt sjálfur:</value>
+  </data>
+  <data name="LblAsunto" xml:space="preserve">
+    <value>Stutt lýsing</value>
+  </data>
+  <data name="LblCompraPoderes" xml:space="preserve">
+    <value>Kaup á aflaheimildum</value>
+  </data>
+  <data name="OptCompletarTramite" xml:space="preserve">
+    <value>Ljúka málsmeðferð til að bæta við vernduðum</value>
+  </data>
+  <data name="LabelHecho" xml:space="preserve">
+    <value>Búinn</value>
+  </data>
+  <data name="LabelEscapoEnEstaDireccion" xml:space="preserve">
+    <value>Hann slapp í þessa átt</value>
+  </data>
+  <data name="OptMisSubs" xml:space="preserve">
+    <value>Áskriftirnar mínar</value>
+  </data>
+  <data name="LblMisSubscripciones" xml:space="preserve">
+    <value>Áskriftirnar mínar</value>
+  </data>
+  <data name="LblidUsuario" xml:space="preserve">
+    <value>Notandakenni:</value>
+  </data>
+  <data name="LblTipo" xml:space="preserve">
+    <value>Tegund áskriftar:</value>
+  </data>
+  <data name="LblDescripcionPuntos" xml:space="preserve">
+    <value>Lýsing:</value>
+  </data>
+  <data name="LblFechaFinPuntos" xml:space="preserve">
+    <value>Lokadagsetning:</value>
+  </data>
+  <data name="LblPoderesPuntos" xml:space="preserve">
+    <value>Heimildir til endurnýjunar:</value>
+  </data>
+  <data name="LblRenovar" xml:space="preserve">
+    <value>Endurnýja</value>
+  </data>
+  <data name="LblCancelarSubscripcion" xml:space="preserve">
+    <value>Segja upp áskrift</value>
+  </data>
+  <data name="LblSeguroDeCancelar" xml:space="preserve">
+    <value>Ertu viss um að þú viljir segja upp áskriftinni? Ekki verður skilað aflaheimildum sem neytt er.</value>
+  </data>
+  <data name="LblAceptar" xml:space="preserve">
+    <value>Þiggja</value>
+  </data>
+  <data name="Alarm_1" xml:space="preserve">
+    <value>Viðvörun eða hætta</value>
+  </data>
+  <data name="Alarm_2" xml:space="preserve">
+    <value>Glæpur eða glæpur framinn</value>
+  </data>
+  <data name="Alarm_3" xml:space="preserve">
+    <value>Götuslagsmál</value>
+  </data>
+  <data name="Alarm_4" xml:space="preserve">
+    <value>Týnt gæludýr</value>
+  </data>
+  <data name="Alarm_5" xml:space="preserve">
+    <value>Týndur einstaklingur</value>
+  </data>
+  <data name="Alarm_6" xml:space="preserve">
+    <value>Uppþot eða mótmæli</value>
+  </data>
+  <data name="Alarm_7" xml:space="preserve">
+    <value>Óska eftir sjónrænu meðlæti með útgangi út á götu</value>
+  </data>
+  <data name="Alarm_8" xml:space="preserve">
+    <value>Heimilisofbeldi</value>
+  </data>
+  <data name="Alarm_9" xml:space="preserve">
+    <value>Grunaður um að flýja á þitt svæði</value>
+  </data>
+  <data name="LblCostoPoderes" xml:space="preserve">
+    <value>Pakkakostnaður</value>
+  </data>
+  <data name="LblSuscripcionesDisponibles" xml:space="preserve">
+    <value>Áskriftir í boði</value>
+  </data>
+  <data name="LblFamilia" xml:space="preserve">
+    <value>Fjölskylda</value>
+  </data>
+  <data name="LblAmigo" xml:space="preserve">
+    <value>Vinur</value>
+  </data>
+  <data name="LblCompanero" xml:space="preserve">
+    <value>Félagi</value>
+  </data>
+  <data name="LblOtroSinDefinir" xml:space="preserve">
+    <value>Aðrar óskilgreindar</value>
+  </data>
+  <data name="LabelExito" xml:space="preserve">
+    <value>Velgengni</value>
+  </data>
+  <data name="LblSolicitudAprobada" xml:space="preserve">
+    <value>Umsókn samþykkt með góðum árangri.</value>
+  </data>
+  <data name="MensajeErrorAprobando" xml:space="preserve">
+    <value>Villa við samþykkt beiðni</value>
+  </data>
+  <data name="MensajeErrorRechazando" xml:space="preserve">
+    <value>Gat ekki hafnað beiðni.</value>
+  </data>
+  <data name="LblSolicitudRechazada" xml:space="preserve">
+    <value>Umsókn hafnað.</value>
+  </data>
+  <data name="LblUsuarioSolicitante" xml:space="preserve">
+    <value>Beiðni um notanda</value>
+  </data>
+  <data name="LblFechaSolicitud" xml:space="preserve">
+    <value>Gildistöku- dagsetning</value>
+  </data>
+  <data name="LblAccionRealizar" xml:space="preserve">
+    <value>Aðgerðir sem grípa skal til</value>
+  </data>
+  <data name="LblSubscripcionCompletada" xml:space="preserve">
+    <value>Áskrift lokið</value>
+  </data>
+  <data name="LblSubscripcionFallida" xml:space="preserve">
+    <value>Áskrift mistókst</value>
+  </data>
+  <data name="LblUsuarioAprobador" xml:space="preserve">
+    <value>Notandi samþykktaraðila</value>
+  </data>
+  <data name="LblFechaAprobacion" xml:space="preserve">
+    <value>Dagsetning samþykkis</value>
+  </data>
+  <data name="LblSubscrEliminada" xml:space="preserve">
+    <value>Óskráð</value>
+  </data>
+  <data name="LblSubsEliminadaExitosamente" xml:space="preserve">
+    <value>Áskrift fjarlægð</value>
+  </data>
+  <data name="LblEliminarProtector" xml:space="preserve">
+    <value>Fjarlægðu hlífðarbúnað</value>
+  </data>
+  <data name="LblRenovacionAplicada" xml:space="preserve">
+    <value>Tókst að framkvæma endurnýjun</value>
+  </data>
+  <data name="LblErrorRenovando" xml:space="preserve">
+    <value>Villa við að endurnýja, reyna aftur eða tilkynna til stuðnings, hafðu samband í boði í "valmynd"&gt;"Um" valkostinum</value>
+  </data>
+  <data name="LblCancelacionAplicada" xml:space="preserve">
+    <value>Afpöntun tókst</value>
+  </data>
+  <data name="LblErrorCancelando" xml:space="preserve">
+    <value>Villa við að hætta við, reyna aftur eða tilkynna til stuðnings, hafðu samband í boði í "valmynd"&gt;"Um" valkostinum</value>
+  </data>
+  <data name="LblZonaCreada" xml:space="preserve">
+    <value>Áskrift að umbeðnu eftirlitssvæði hefur farið fram með góðum árangri</value>
+  </data>
+  <data name="LblErrorZonaVigil" xml:space="preserve">
+    <value>Villa við að gerast áskrifandi að nýja svæðinu sem beðið er um, reyna aftur eða tilkynna til stuðnings, hafðu samband í boði í valmöguleikanum "valmynd"&gt;"Um"</value>
+  </data>
+  <data name="LblSeleccionaNuevoRadio" xml:space="preserve">
+    <value>Veldu lokahlutinn fyrir nýja fjölvann þinn.</value>
+  </data>
+  <data name="LblUsuarioProtector" xml:space="preserve">
+    <value>Notandi sem veitir vörn</value>
+  </data>
+  <data name="LblSeguroEliminarProtegido" xml:space="preserve">
+    <value>Ertu viss um að fjarlægja skjólstæðing þinn? Heimildunum sem notaðar eru í þessari áskrift verður ekki skilað.</value>
+  </data>
+  <data name="LblSuspenderProtectores" xml:space="preserve">
+    <value>Ertu viss um að fresta tilkynningum til verndara þinna í 6 klukkustundir? Allir verndarar þínir verða stöðvaðir og lokatími áskriftarinnar verður ekki framlengdur af þessum sökum. Verndaranum verður ekki tilkynnt um þessa aðgerð.</value>
+  </data>
+  <data name="LblSuspensionRealizada" xml:space="preserve">
+    <value>Stöðvun viðvörunar til allra verndara þinna í 6 klukkustundir tókst.</value>
+  </data>
+  <data name="LabelSeguroEliminarProtector" xml:space="preserve">
+    <value>Ertu viss um að fjarlægja verndarann þinn? Heimildunum sem notaðar eru í þessari áskrift verður ekki skilað og verndaranum verður tilkynnt um þessa aðgerð.</value>
+  </data>
+  <data name="LabelProtectorEliminado" xml:space="preserve">
+    <value>Valda verndaranum hefur verið eytt. Valdinu verður ekki skilað til verndarans. Verndara ver ur tilkynnt um essa a ger</value>
+  </data>
+  <data name="LblConfirmacionRequerida" xml:space="preserve">
+    <value>Mikilvægur! Staðfestingar krafist!</value>
+  </data>
+  <data name="LblNoHayRegistros" xml:space="preserve">
+    <value>Það eru engar annálar til að birta á þessum tíma</value>
+  </data>
+  <data name="LblMiLogin" xml:space="preserve">
+    <value>Innskráningin mín er:</value>
+  </data>
+  <data name="LblSaldoPoderesEs" xml:space="preserve">
+    <value>Orkujafnvægi mitt er:</value>
+  </data>
+  <data name="LblUsuarioID" xml:space="preserve">
+    <value>Notandakennið mitt er</value>
+  </data>
+  <data name="LblNoHayRegistrosAqui" xml:space="preserve">
+    <value>Enginn hefur skrifað neitt ennþá!</value>
+  </data>
+  <data name="LblAlertaReportadaPorMi" xml:space="preserve">
+    <value>Viðvörun tilkynnt af mér</value>
+  </data>
+  <data name="LblPara" xml:space="preserve">
+    <value>Viðtakandi skeytis:</value>
+  </data>
+  <data name="LblDe" xml:space="preserve">
+    <value>Sendandi skeytisins:</value>
+  </data>
+  <data name="ConfiguraciondeSOSpect" xml:space="preserve">
+    <value>SOSpect stillingar</value>
+  </data>
+  <data name="LblExitoEnAceptacion" xml:space="preserve">
+    <value>Samþykki þitt er geymt!</value>
+  </data>
+  <data name="LblFalloEnAceptacion" xml:space="preserve">
+    <value>Skráning mistókst. Vinsamlegast reyndu aftur!</value>
+  </data>
+  <data name="LblDeclinacionAceptacion" xml:space="preserve">
+    <value>Án þess að samþykkja samning geturðu ekki haldið áfram!</value>
+  </data>
+  <data name="LblParaIniciar" xml:space="preserve">
+    <value>BYRJUM Í SOSpect!! Til að uppfæra tilkynningar í nágrenninu pikkarðu á bláa hressingarhnappinn</value>
+  </data>
+  <data name="LblAlarmaNoGrave" xml:space="preserve">
+    <value>Notaðu gula hnappinn til að setja tilkynningar um litla hættu og láta samfélag þitt eða verndara vita. Þú getur valið tegund viðvörunar og merkt hana sem glæp framinn. Þessi hnappur ræsir viðvörunina á nákvæmri staðsetningu þinni og er gagnleg þegar þú þarft hjálp. Þú getur einnig valið punkt á kortinu til að finna viðvörunina án þess að skerða staðsetningu þína.</value>
+  </data>
+  <data name="LblCrimenCometido" xml:space="preserve">
+    <value>Rauði hnappurinn kveikir á flokki: glæpur framinn viðvörun. SOSpect krefst þess ekki að þú takir flokk með vegna mikilvægis tíma í þessum tilvikum. Vekjaraklukkan er sjálfkrafa sett á nákvæma staðsetningu þína. Þú getur líka valið punkt á kortinu til að setja viðvörunina og síðan breytt flokknum í glæpi framinn.</value>
+  </data>
+  <data name="LblDescripcionAlarmas" xml:space="preserve">
+    <value>Í 'Lýsa' valkostinum neðst finnur þú lista yfir vekjara sem þú eða aðrir hafa sett inn. Ef þú bjóst til vekjaraklukkuna geturðu bætt við lýsingu. Ef viðvörunin var búin til af einhverjum öðrum geturðu metið sannleiksgildi hennar og bætt við lýsingu hennar. Farðu varlega! Ef þú gefur rangar upplýsingar eða rangar einkunnir getur verið að reikningnum þínum verði lokað. Farðu vandlega yfir skilmála og skilyrði til að forðast þetta.</value>
+  </data>
+  <data name="LblDescripcionMensajes" xml:space="preserve">
+    <value>Í bjöllunni efst í hægra horninu geturðu lesið skilaboðin þín, þar á meðal áskriftartilkynningar og nýlegar áminningar. Þessi listi er frábrugðinn lýsingarvalkostinum, þar sem þú getur fundið nýlegar uppkallanir beint.</value>
+  </data>
+  <data name="LblDescripcionMenu" xml:space="preserve">
+    <value>Í gírnum efst í vinstra horninu finnur þú SOSpect stillingarvalkostina. Þú getur keypt krafta til að kaupa áskriftir og vernda fjölskyldu þína eða auka radíus viðvörunarmóttökunnar. MUNA! Í byrjun gefum við þér 80 krafta svo þú getir keypt tvær áskriftir frá upphafi.</value>
+  </data>
+  <data name="LblRecomendaciones" xml:space="preserve">
+    <value>SAMAN ERUM VIÐ ÓSIGRANDI! Grunnaðgerðir viðvörunar og móttöku viðvarana innan 100 metra radíuss eru ókeypis og þegar þú byrjar gefum við þér 2 áskriftir. Bjóddu samfélagi þínu og fjölskyldu að nota þessa ókeypis þjónustu til að berjast gegn vaxandi glæpum. Þú getur bjargað mannslífum eða verið bjargað með því að fá viðvörun í tíma. Viðvaranir um týnt fólk eða gæludýr hafa drægni upp á 10 kílómetra og ofbeldisfull mótmæli hafa 1 kílómetra drægni</value>
+  </data>
+  <data name="LblPromocion" xml:space="preserve">
+    <value>Að lokum, mundu að þú munt vinna þér inn umboð fyrir hverja sanna einkunn sem þú gefur í SOSpect, þegar atkvæðagreiðslu viðvörunarkerfisins lýkur eftir 90 mínútur frá staðsetningu þeirra. Flestir eru heiðarlegir og saman munum við vernda hvert annað og fjölskyldur okkar. VELKOMIN Í SOSPECT!</value>
+  </data>
+  <data name="LblDescripcionMapa" xml:space="preserve">
+    <value>Hvenær sem er geturðu valið "MAP" valkostinn vinstra megin við neðri stikuna, sem er upphafspunktur SOSpect. Þaðan er hægt að skoða viðvörunarkerfi í nágrenninu. Staðsetning þín mun birtast í miðju kortsins og hringurinn táknar radíusinn sem gæti haft áhrif á þig. Sjálfgefið er að þessi radíus sé 100 metrar, en þú getur breytt honum í stillingarvalmyndinni.</value>
+  </data>
+  <data name="LblRecomendacionImportante" xml:space="preserve">
+    <value>Það er mikilvægt að þú opnir SOSpect reglulega, áður en þú ferð að heiman eða þegar þú kemur á stað, til að uppfæra staðsetningu þína. Þannig getum við látið þig vita ef einhver áhætta er á þínu svæði. Vinsamlegast athugaðu að þegar appið er lokað getum við ekki fengið staðsetningu þína vegna takmarkana sem stýrikerfi tækisins setja. Athugaðu skilmála og skilyrði sem tengjast staðsetningu þinni.</value>
+  </data>
+  <data name="LblUsuarioBloqueado" xml:space="preserve">
+    <value>Notanda lokað vegna neikvæðra merkja</value>
+  </data>
+  <data name="LblMarcasNegativas" xml:space="preserve">
+    <value>Fjöldi neikvæðra merkja minna er</value>
+  </data>
+  <data name="LblCuentaSuspendida" xml:space="preserve">
+    <value>Reikningi lokað tímabundið vegna neikvæðra merkja frá öðrum notendum</value>
+  </data>
+  <data name="LblTitleCuentaSuspendida" xml:space="preserve">
+    <value>Reikningi lokað tímabundið</value>
+  </data>
+  <data name="LblFechaFinSuspension" xml:space="preserve">
+    <value>Lokadagsetning stöðvunar er</value>
+  </data>
+  <data name="LblTocaAqui" xml:space="preserve">
+    <value>Pikkaðu hér til að fara</value>
+  </data>
+  <data name="LblNoTienesConexion" xml:space="preserve">
+    <value>Engin nettenging</value>
+  </data>
+  <data name="LblExplicacionSinConexion" xml:space="preserve">
+    <value>Yfirlýsing þín er nauðsynleg til að skrá þig inn á SOSpect. Án internetsins getum við ekki vitað hvort það er virkt.</value>
+  </data>
+  <data name="LblSinConexionDescripcion" xml:space="preserve">
+    <value>Virkt internet er nauðsynlegt til að endurheimta SOSpect reikningsstöðu þína.</value>
+  </data>
+  <data name="LblSinConexionQueHacer" xml:space="preserve">
+    <value>Vinsamlegast virkjaðu internetið þitt og endurræstu SOSpect</value>
+  </data>
+  <data name="SefinalizalasubscripcionporsolicituddelusuarioPROTEGIDOatravésdelaAPIdesdelaAPP" xml:space="preserve">
+    <value>Áskriftinni er sagt upp að beiðni PROTECTED notandans í gegnum API frá APP</value>
+  </data>
+  <data name="Nopuederenovarsedebidoaquefuecancelada,requieresubscripciónnueva" xml:space="preserve">
+    <value>Er ekki hægt að endurnýja vegna þess að henni var sagt upp, þarfnast nýrrar áskriftar</value>
+  </data>
+  <data name="Alarmasgeneradaspormicirculosocial" xml:space="preserve">
+    <value>Viðvörun sem myndast af félagslegum hring mínum</value>
+  </data>
+  <data name="Incrementomidiametrodevigilancia" xml:space="preserve">
+    <value>Ég auka þvermál eftirlitsins</value>
+  </data>
+  <data name="Zonadevigilanciaadicional" xml:space="preserve">
+    <value>Viðbótareftirlitssvæði</value>
+  </data>
+  <data name="Renovable" xml:space="preserve">
+    <value>Endurnýjanlegur</value>
+  </data>
+  <data name="SefinalizalasubscripcionporsolicituddelusuarioPROTECTORatravésdelaAPIdesdelaAPP" xml:space="preserve">
+    <value>Áskriftinni er sagt upp að beiðni PROTECTOR notandans í gegnum API frá APP</value>
+  </data>
+  <data name="LblEsRenovable" xml:space="preserve">
+    <value>Er það endurnýjanlegt?</value>
+  </data>
+  <data name="LblObsSubs" xml:space="preserve">
+    <value>Athugasemd vegna áskriftar:</value>
+  </data>
+  <data name="NingunaObservacion" xml:space="preserve">
+    <value>Engar athugasemdir</value>
+  </data>
+  <data name="Subscripcionvigente" xml:space="preserve">
+    <value>Núverandi áskrift</value>
+  </data>
+  <data name="Actualmenteactivoenotrasuscripcion" xml:space="preserve">
+    <value>Eins og er virkur í annarri áskrift</value>
+  </data>
+  <data name="LblRadioActual" xml:space="preserve">
+    <value>Núverandi radíus minn til að taka á móti viðvörunum er:</value>
+  </data>
+  <data name="LblPoderesRequeridosZV" xml:space="preserve">
+    <value>Nauðsynlegar heimildir fyrir valda stækkun</value>
+  </data>
+  <data name="OptTerminosCondiciones" xml:space="preserve">
+    <value>SOSpect Skilmálar og skilyrði</value>
+  </data>
+  <data name="DebesAbrirLaApp" xml:space="preserve">
+    <value>SOSpect getur ekki vitað breytingar á staðsetningu notandans þegar hann er lokaður, þetta gerist með rafhlöðuvarðveislustefnu stýrikerfa farsímanna, svo það er mikilvægt að notandinn opni forritið oft til að athuga viðvörun á svæðinu sem það hefur flutt til og fá nálæga viðvörun í tíma.</value>
+  </data>
+  <data name="InvitaMasPersonas" xml:space="preserve">
+    <value>Til að bæta öryggi notandans er mikilvægt að þeir sem eru í kringum hann, fjölskylda og nágrannar, sæki forritið sem er ókeypis. Ef það eru engir nálægir notendur getur verið að notandinn verði ekki látinn vita í tæka tíð eða að viðvaranir þeirra heyrist ekki og viðhalda áhættuástandinu eins og það var áður en forritinu var hlaðið niður. Það er mikilvægt að bjóða fleirum að hjálpa hvert öðru!</value>
+  </data>
+  <data name="Insertiondone" xml:space="preserve">
+    <value>Ísetning framkvæmd.</value>
+  </data>
+  <data name="AnerroroccurredwhilequalifyingthealarmCode1" xml:space="preserve">
+    <value>Villa kom upp við að meta vöktun með kóða 1</value>
+  </data>
+  <data name="AnerroroccurredwhilequalifyingthealarmCode2" xml:space="preserve">
+    <value>Villa kom upp við að meta vöktun með kóða 2</value>
+  </data>
+  <data name="AnerroroccurredwiththealarmqualificationmodelCode3" xml:space="preserve">
+    <value>Villa kom upp við mat á uppkalli með kóða 3</value>
+  </data>
+  <data name="Userregistrationsuccessful" xml:space="preserve">
+    <value>Notandi þinn hefur verið skráður!</value>
+  </data>
+  <data name="Anerroroccurredwhileregisteringtheusercode1" xml:space="preserve">
+    <value>Villa kom upp þegar kóði 1 skráði notandann þinn</value>
+  </data>
+  <data name="Anerroroccurredwhileregisteringtheusercode2" xml:space="preserve">
+    <value>Villa kom upp þegar kóði 2 skráði notandann þinn</value>
+  </data>
+  <data name="Anerroroccurredwiththepeoplemodelforuserregistrationcode3" xml:space="preserve">
+    <value>Villa kom upp við skráningu notanda í kóða 3</value>
+  </data>
+  <data name="Permisosolicitadoconexito" xml:space="preserve">
+    <value>Tókst að biðja um leyfi</value>
+  </data>
+  <data name="OcurriounerrorenelprocesodesolicitarpermisoalprotegidoCodigo1" xml:space="preserve">
+    <value>Villa með kóða 1 átti sér stað þegar beðið var um leyfi frá vernduðu</value>
+  </data>
+  <data name="Nofueposiblerealizarenviarlasolicituddepermisoalprotegidoporqueelmodelonoesvalido" xml:space="preserve">
+    <value>Það var ekki hægt að senda leyfisbeiðnina til vernduðu, líkanið er ógilt</value>
+  </data>
+  <data name="AlertaEnUbicacion" xml:space="preserve">
+    <value>Viltu búa til SOSpect viðvörun á þessum stað?</value>
+  </data>
+  <data name="CrearEnUbicacionActual" xml:space="preserve">
+    <value>Viltu búa til SOSpect viðvörun á núverandi stað?</value>
+  </data>
+  <data name="SeguroCerrarSesion" xml:space="preserve">
+    <value>Ertu viss um að skrá þig út?</value>
+  </data>
+  <data name="Tu" xml:space="preserve">
+    <value>Þú</value>
+  </data>
+  <data name="Anonimo" xml:space="preserve">
+    <value>Nafnlaus</value>
+  </data>
+  <data name="AlarmaCerrada" xml:space="preserve">
+    <value>Viðvörun lokuð</value>
+  </data>
+  <data name="LblSaldoPoderesInsuficiente" xml:space="preserve">
+    <value>Afljafnvægi þitt er ófullnægjandi</value>
+  </data>
+  <data name="LblComprarPoderes" xml:space="preserve">
+    <value>Kauptu umboð</value>
+  </data>
+  <data name="LblSeguroRenovar" xml:space="preserve">
+    <value>Ertu viss um að endurnýja þessa áskrift?</value>
+  </data>
+  <data name="OptReportes" xml:space="preserve">
+    <value>Skýrslur</value>
+  </data>
+  <data name="LblReportesTitulo" xml:space="preserve">
+    <value>SOSpect skýrslur</value>
+  </data>
+  <data name="LblReportesDescripcion" xml:space="preserve">
+    <value>Skýrslur gefa þér tækifæri til að skilja hvernig þú hefur hjálpað öðrum notendum með því að forðast slæmar aðstæður. Að auki leyfa þeir þér að bera kennsl á hættuleg svæði á kortinu þínu og fylgjast með þróun glæpa með tímanum. Einnig, með mynsturgreiningu, er hægt að búa til snemma viðvaranir áður en neikvæðir atburðir eiga sér stað. Mikilvægt er að hafa í huga að grunnskýrslan er ókeypis en aðrar skýrslur geta haft kostnað í för með sér vegna útreikningsnotkunar sem nauðsynleg er fyrir framleiðslu þeirra.</value>
+  </data>
+  <data name="OptReporteDeCalorEnZona" xml:space="preserve">
+    <value>Tilkynntu með hitakortum</value>
+  </data>
+  <data name="OptReporteEvolucionEnElTiempo" xml:space="preserve">
+    <value>Tilkynna um þróun eftir tíma</value>
+  </data>
+  <data name="OptReportesPredictivos" xml:space="preserve">
+    <value>Forspárskýrsla</value>
+  </data>
+  <data name="OptReporteAnaliticoDeDescripcionesAlarmas" xml:space="preserve">
+    <value>Greiningarskýrslur um viðvörunarspjall</value>
+  </data>
+  <data name="LblReporteCalorSospect" xml:space="preserve">
+    <value>SOSpect hitakort</value>
+  </data>
+  <data name="LblReporteEnConstruccion" xml:space="preserve">
+    <value>Bráðum!! Þessi virkni er í smíðum!</value>
+  </data>
+  <data name="LblDescripcionMapaDeCalor" xml:space="preserve">
+    <value>Í þessari skýrslu hefurðu aðgang að hitakorti af þínu svæði, þar sem þú getur valið mismunandi mánuði síðan SOSpect hóf starfsemi sína. Þessi virkni gerir þér kleift að fylgjast með og skilja þróun hvers svæðis á kortinu sem vekur áhuga þinn.</value>
+  </data>
+  <data name="LblCostoReporte" xml:space="preserve">
+    <value>Hafðu í huga að notkun þessarar virkni ber reiknikostnað og krefst krafta þó að það verði ekki hátt gildi. Hins vegar geturðu eignast það án vandræða með því að nota kraftana sem við gefum þér í fyrstu notkun þinni á forritinu.</value>
+  </data>
+  <data name="LblReporteEvolucionAlarmas" xml:space="preserve">
+    <value>Þróun viðvörunar sett í SOSpect</value>
+  </data>
+  <data name="LblDescripcionEvolucionAlarmas" xml:space="preserve">
+    <value>Í þessari skýrslu muntu geta þekkt þróun hverrar tegundar viðvörunar með tímanum á þínu svæði. Þú munt geta fylgst með og greint hættulega þróun, auk þess að bera kennsl á hugsanlega fækkun glæpa.</value>
+  </data>
+  <data name="LblReportePredictivo" xml:space="preserve">
+    <value>SOSpect forspárskýrslur</value>
+  </data>
+  <data name="LblDescripcionReportesPredictivos" xml:space="preserve">
+    <value>Þar sem SOSpect samfélagið býr til næg gögn er hægt að gera líkindatengdar atburðaspár og greiningartæki. Þessar skýrslur munu gera þér kleift að vita hvenær bylgjur viðvarana eða aukning á glæpastarfsemi nálgast og gefa þér tækifæri til að gera nauðsynlegar varúðarráðstafanir til að koma í veg fyrir áhættu fyrir þig, fjölskyldu þína og samfélag þitt.</value>
+  </data>
+  <data name="LblReporteAnalisisDeTextos" xml:space="preserve">
+    <value>SOSpect viðvörun spjall greiningarskýrsla</value>
+  </data>
+  <data name="LblDescripcionAnalisisTextos" xml:space="preserve">
+    <value>Þökk sé því að notendur lýsa viðvörunum og uppfæra þróun þeirra í gegnum innra spjall SOSpect, mun þessi skýrsla leyfa að sjá fyrir sér leturgerðirnar sem hafa mest áhrif á samfélagið. Þetta veitir tækifæri til að grípa til aðgerða til að bæta skynjun á öryggi á þínu svæði.</value>
+  </data>
+  <data name="LblRangoReporte" xml:space="preserve">
+    <value>Þessi skýrsla nær yfir síðustu 30 daga</value>
+  </data>
+  <data name="AcercadeSOSpect" xml:space="preserve">
+    <value>Um SOSpect</value>
+  </data>
+  <data name="Porcentajedealarmasciertasfrenteafalsasenunradiodeunkilometroymedio" xml:space="preserve">
+    <value>Hundraðshluti raunverulegra viðvarana á móti falskri viðvörun innan eins og hálfs kílómetra radíuss</value>
+  </data>
+  <data name="Promediodetiempoenminutosentrelanzamientodealarmaenmizonaylaprimeracalificacionodescripcion" xml:space="preserve">
+    <value>Meðaltími í mínútum frá því að viðvörun er ræst á mínu svæði þar til ég fæ fyrstu einkunn eða lýsingu</value>
+  </data>
+  <data name="Cantidadrealdepersonasenunradiodeunkilometroymedio" xml:space="preserve">
+    <value>Raunverulegur fjöldi fólks innan eins og hálfs kílómetra radíus</value>
+  </data>
+  <data name="Cantidadrealdepersonasenmiradioactual" xml:space="preserve">
+    <value>Raunverulegur fjöldi fólks í núverandi radíus mínum</value>
+  </data>
+  <data name="Miradioactualderecepcionyenviodealarmasenmetros" xml:space="preserve">
+    <value>Núverandi radíus minn til að taka á móti og senda viðvörun í metrum</value>
+  </data>
+  <data name="Cantidadrealdepersonasquerecibieronmisalarmas" xml:space="preserve">
+    <value>Raunverulegur fjöldi fólks sem fékk vekjaraklukkuna mína</value>
+  </data>
+  <data name="Cantidaddenotificacionesdealarmaenviadasdemiparte" xml:space="preserve">
+    <value>Fjöldi viðvörunartilkynninga sem sendar eru frá mér</value>
+  </data>
+  <data name="Personasquereportaronmiayudacomonegativaofalsa" xml:space="preserve">
+    <value>Fólk sem sagði hjálp mína neikvæða eða falska</value>
+  </data>
+  <data name="Personasqueagradecieronmiayuda" xml:space="preserve">
+    <value>Fólk sem kunni að meta hjálp mína</value>
+  </data>
+  <data name="Poderesganadosporregalos" xml:space="preserve">
+    <value>Kraftar fengnir með gjöfum</value>
+  </data>
+  <data name="LblParticipacionTpAlarma" xml:space="preserve">
+    <value>Þátttaka eftir tegund viðvörunar</value>
+  </data>
+  <data name="LblMetricBasics" xml:space="preserve">
+    <value>Grunnmælikvarðar</value>
+  </data>
+  <data name="LblEfectiAlarmas" xml:space="preserve">
+    <value>Virkni viðvörunarbúnaðar</value>
+  </data>
+  <data name="LblTotalAlarmas" xml:space="preserve">
+    <value>Heildarfjöldi viðvarana</value>
+  </data>
+  <data name="LblAlarmasVerdaderas" xml:space="preserve">
+    <value>Raunveruleg viðvörun</value>
+  </data>
+  <data name="LblAlarmasFalsas" xml:space="preserve">
+    <value>Falskar viðvaranir</value>
+  </data>
+  <data name="LblAlarmasEfectivas" xml:space="preserve">
+    <value>Hundraðshluti virkra viðvarana</value>
+  </data>
+  <data name="LblMarcarLeidos" xml:space="preserve">
+    <value>Merkja allt sem lesið</value>
+  </data>
+  <data name="LblSeMarcaronComoLeidos" xml:space="preserve">
+    <value>Öll bréf voru merkt sem lesin</value>
+  </data>
+  <data name="LabelNuevaVersion" xml:space="preserve">
+    <value>Það er komin ný útgáfa af SOSpect og það þarf að halda áfram</value>
+  </data>
+  <data name="OptReporteBasico" xml:space="preserve">
+    <value>Grunnskýrslur - ÓKEYPIS!</value>
+  </data>
+  <data name="LblReporteBasicoSospect" xml:space="preserve">
+    <value>SOSpect grunnskýrslur</value>
+  </data>
+  <data name="LblReporteBasicoDescripcion" xml:space="preserve">
+    <value>Grunnskýrslur SOSpect veita þér mikilvægar upplýsingar um þau áhrif sem viðvörunarskýrslur þínar hafa haft á samfélagið þitt. Að auki sýna þeir þér fjölda krafta sem fengist hafa með því að hjálpa samfélaginu þínu með því að skora nákvæmlega viðvörun og heiðarleika í þessum einkunnum. Með þessum skýrslum getur þú einnig metið heildarhegðun svæðisins þíns síðastliðinn mánuð, þar á meðal fjölda notenda sem tóku þátt í ferlinu og fjölda notenda sem fengu neikvæða einkunn vegna rangra skuldbindinga.</value>
+  </data>
+  <data name="LblReporteBasicoDescripcionCorta" xml:space="preserve">
+    <value>Grunnskýrslur SOSpect veita þér mikilvægar upplýsingar um... Sjá meira...</value>
+  </data>
+  <data name="LblDescripcionRepTipoAlarma" xml:space="preserve">
+    <value>Þessi skýrsla gefur þér upplýsingar um algengustu viðvaranir innan eins og hálfs kílómetra radíuss frá núverandi staðsetningu þinni.</value>
+  </data>
+  <data name="LblDescripcionRepEfectAlarmas" xml:space="preserve">
+    <value>Þessi skýrsla veitir þér upplýsingar um skilvirkni sambandsins milli raunverulegra og falskra viðvarana innan eins og hálfs kílómetra radíuss frá núverandi staðsetningu þinni.</value>
+  </data>
+  <data name="LblDescripcionRepMetricasBasicas" xml:space="preserve">
+    <value>Þessi skýrsla veitir þér gögn um fjölda notenda innan eins og hálfs kílómetra radíuss frá núverandi staðsetningu þinni, svo og fjölda notenda í núverandi radíus viðvörunar forrita. Að auki inniheldur það nokkrar viðbótarupplýsingar sem vekja áhuga þinn.</value>
+  </data>
+  <data name="OptVolumenAlarmas" xml:space="preserve">
+    <value>Hljóðstyrkur eftir tegund nálægra viðvörunarkerfa</value>
+  </data>
+  <data name="OptEfectividadAlarmas" xml:space="preserve">
+    <value>Virkni nærliggjandi viðvörunar</value>
+  </data>
+  <data name="OptMetricasBasicas" xml:space="preserve">
+    <value>Grunnmælingar á nálægum viðvörunum</value>
+  </data>
+  <data name="LblCredibilidadActual" xml:space="preserve">
+    <value>The trúverðugleika viðvörun minn er:</value>
+  </data>
+  <data name="OptManualUsuarioSospect" xml:space="preserve">
+    <value>SOSpect notendahandbók</value>
+  </data>
+  <data name="LblDescManualUsuario" xml:space="preserve">
+    <value>Hittu SOSpect, ókeypis app sem er hannað til að vernda þig og ástvini þína. Við höfum búið til hnitmiðaða og ítarlega handbók á netinu sem mun hjálpa þér að nota hana rétt. Með þessari handbók geturðu fengið sem mest út úr SOSpect og nýtt þér alla öryggiseiginleika þess.</value>
+  </data>
+  <data name="SesionApple" xml:space="preserve">
+    <value>SKRÁÐU ÞIG INN MEÐ APPLE</value>
+  </data>
+  <data name="LblCredibilidadAlarmaActual" xml:space="preserve">
+    <value>Trúverðugleiki viðvörunarinnar:</value>
+  </data>
+  <data name="LblAccedeAlManual" xml:space="preserve">
+    <value>Hægt er að nálgast handbókina á:</value>
+  </data>
+  <data name="LblRefrescarLista" xml:space="preserve">
+    <value>Endurnýja viðvörunarlista</value>
+  </data>
+  <data name="LblErrorCorreoDispositivo" xml:space="preserve">
+    <value>Ekki tókst að senda tölvupóst á þessu tæki</value>
+  </data>
+  <data name="LblErrorCorreo" xml:space="preserve">
+    <value>Villa við sendingu tölvupósts:</value>
+  </data>
+  <data name="LblSeleccioneTipoAlarma" xml:space="preserve">
+    <value>Vinsamlegast veldu tegund upphringingar</value>
+  </data>
+  <data name="LblCompraFallida" xml:space="preserve">
+    <value>Kaupin voru ekki gerð. Athugaðu internetaðgang og reyndu aftur</value>
+  </data>
+  <data name="LblSeleccionePuntoMapa" xml:space="preserve">
+    <value>Þú verður að velja eftirlitssvæði á kortinu</value>
+  </data>
+  <data name="Cantidaddealarmascolocadasenlaszonasdevigilanciasuscritas" xml:space="preserve">
+    <value>Fjöldi viðvarana sem komið er fyrir á eftirlitssvæðum í áskrift</value>
+  </data>
+  <data name="Cantidaddealarmascolocadaspormisprotegidos" xml:space="preserve">
+    <value>Fjöldi viðvarana sem skjólstæðingar mínir setja</value>
+  </data>
+  <data name="Credibilidadactualdelasalarmasqueenvioamicomunidad" xml:space="preserve">
+    <value>Núverandi trúverðugleika viðvaranir ég sendi samfélaginu mínu</value>
+  </data>
+  <data name="LblCompraExitosa" xml:space="preserve">
+    <value>Til hamingju! Þú keyptir heimildir til að kaupa áskriftir. Þú finnur skýringarskilaboð í bjöllunni!</value>
+  </data>
+  <data name="LblDebesHabilitarNotif" xml:space="preserve">
+    <value>Þú verður að virkja að senda tilkynningar til að SOSpect virki</value>
+  </data>
+  <data name="LblHabilitarNotifSettings" xml:space="preserve">
+    <value>Þetta forrit getur stutt tilkynningar, en þú þarft að virkja þetta í stillingunum þínum.</value>
+  </data>
+  <data name="LblErrorHabilitandoUsoNotif" xml:space="preserve">
+    <value>Villa kom upp sem kom í veg fyrir notkun push-tilkynninga</value>
+  </data>
+  <data name="LblMostrarDireccionEscape" xml:space="preserve">
+    <value>Flóttaleið Mark flóttamanns</value>
+  </data>
+  <data name="LblProximamenteSOSpect" xml:space="preserve">
+    <value>Tilkoma bráðum á SOSpect!</value>
+  </data>
+  <data name="LblReportesProximos" xml:space="preserve">
+    <value>Greiningar- og forspárskýrslur með gagnavísindum!</value>
+  </data>
+  <data name="LblHolaBienvenido" xml:space="preserve">
+    <value>Halló! Velkomin í SOSpect. 
+
+SOSpect er ókeypis tól hannað til að vernda þig og ástvini þína með því að veita tímanlega viðvaranir um nálægar hættur! Þú mega ekki fá margir viðvörun á fyrstur, eins og there stytting á are not eða am not' margir fólk nálægur þú enn hver hafa setja í embætti SOSpect. Við biðjum þig um að prófa okkur og ekki fjarlægja forritið. SOSpect getur bjargað lífi þínu á einhverjum tímapunkti, sem og einhverjum í fjölskyldu þinni eða samfélagi.
+
+Í hlutanum "Grunnskýrsla" í valmyndinni "Skýrslur" sem er að finna í stillingunum geturðu séð í hlutanum "Grunnmælingar" fjölda notenda í nágrenninu innan umfangssvæðis þíns, þar sem þú færð viðvörun. Hjálpaðu okkur að auka þá tölu, það er ókeypis og gerir þér kleift að lifa öruggari!
+
+Við bjóðum þér að lesa vandlega þessa stuttu kynningarhandbók sem gefur þér hugmynd um hvernig SOSpect virkar. Vinsamlegast athugaðu að það birtist aðeins einu sinni eftir að appið hefur verið sett upp.
+
+Þakka þér fyrir að nota SOSpect og fyrir að stuðla að öryggi allra!
+
+Pikkaðu á skjáinn til að halda áfram...</value>
+  </data>
+</root>

@@ -1,0 +1,99 @@
+﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                 x:Class="sospect.Views.BasicReportEfectividadAlarmasPage"
+                 xmlns:converters="clr-namespace:sospect.Converters"
+                 xmlns:fonts="clr-namespace:sospect.Resources.Fonts;assembly=sospect"
+                 xmlns:helpers="clr-namespace:sospect.Helpers"
+                 xmlns:charts="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
+                 BackgroundColor="White"
+                 xmlns:ads="clr-namespace:sospect.CustomRenderers"
+                 Title="{helpers:TranslateExtension Text='LblReporteBasicoSospect'}">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:InverseBooleanConverter x:Key="InverseBooleanConverter"/>
+            <converters:SKColorToXamarinColorConverter x:Key="ColorConverter"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <ScrollView>
+            <StackLayout Margin="20" >
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Row="0" Grid.Column="0" Margin="0,10,0,0" TextColor="Gray" Grid.ColumnSpan="3" Text="{helpers:TranslateExtension Text='LblEfectiAlarmas'}" FontAttributes="Bold" FontSize="Large" />
+                    <Label
+                        Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3"
+                        Text="{helpers:TranslateExtension Text='LblDescripcionRepEfectAlarmas'}"
+                        Margin="0,20,0,20"
+                        FontSize="Medium"
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="StartAndExpand" 
+                        HorizontalTextAlignment="Start"
+                        TextColor="Black">
+                    </Label>
+
+                    <Label
+                        Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3"
+                        Text="{helpers:TranslateExtension Text='LblRangoReporte'}"
+                        FontSize="Small"
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="StartAndExpand" 
+                        HorizontalTextAlignment="Start"
+                        TextColor="Gray"/>
+
+                    <!-- Sección de EfectividadAlarmas -->
+                    
+                    <Label Grid.Row="3" Grid.Column="0" Margin="0,20,0,20" TextColor="Gray" Grid.ColumnSpan="3" Text="{Binding EfectividadAlarmas.DescripcionTraducida}" />
+                    <Grid Grid.Row="4" Grid.ColumnSpan="3" Margin="0,0,0,10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="1" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="1" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="1" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+
+                        <Label Grid.Row="0" Grid.Column="0" FontSize="Medium" TextColor="Gray" Text="{helpers:TranslateExtension Text='LblTotalAlarmas'}" />
+                        <Label Grid.Row="0" Grid.Column="1"  FontSize="Medium" TextColor="Black"   HorizontalOptions="EndAndExpand" Text="{Binding EfectividadAlarmas.total_alarmas, StringFormat='{0}'}" />
+                        <BoxView Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" HeightRequest="1" BackgroundColor="Black" />
+
+                        <Label Grid.Row="2" Grid.Column="0" FontSize="Medium" TextColor="Gray" Text="{helpers:TranslateExtension Text='LblAlarmasVerdaderas'}" />
+                        <Label Grid.Row="2" Grid.Column="1"  FontSize="Medium" TextColor="Black"   HorizontalOptions="EndAndExpand" Text="{Binding EfectividadAlarmas.alarmas_ciertas, StringFormat='{0}'}" />
+                        <BoxView Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" HeightRequest="1" BackgroundColor="Black" />
+
+                        <Label Grid.Row="4" Grid.Column="0" FontSize="Medium" TextColor="Gray" Text="{helpers:TranslateExtension Text='LblAlarmasFalsas'}" />
+                        <Label Grid.Row="4" Grid.Column="1"  FontSize="Medium" TextColor="Black"  HorizontalOptions="EndAndExpand" Text="{Binding EfectividadAlarmas.alarmas_falsas, StringFormat='{0}'}" />
+                        <BoxView Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" HeightRequest="1" BackgroundColor="Black" />
+
+                        <Label Grid.Row="6" Grid.Column="0" FontSize="Medium" TextColor="Gray" Text="{helpers:TranslateExtension Text='LblAlarmasEfectivas'}" />
+                        <Label Grid.Row="6" Grid.Column="1"  FontSize="Medium" TextColor="Black"  HorizontalOptions="EndAndExpand" Text="{Binding EfectividadAlarmas.porcentaje_ciertas, StringFormat='{0:P}'}" />
+                        <BoxView Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" HeightRequest="1" BackgroundColor="Black" />
+                    </Grid>
+                </Grid>
+            </StackLayout>
+        </ScrollView>
+        <Grid BackgroundColor="LightGray" Grid.Row="1" HeightRequest="90">
+            <ads:AdBanner></ads:AdBanner>
+        </Grid>
+    </Grid>
+</ContentPage>

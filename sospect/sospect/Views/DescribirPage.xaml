@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:fonts="clr-namespace:sospect.Resources.Fonts;assembly=sospect"
+    xmlns:helpers="clr-namespace:sospect.Helpers"
+    xmlns:ads="clr-namespace:sospect.CustomRenderers"
+    xmlns:converters="clr-namespace:sospect.Converters"
+    Title="SOSpect"
+    BackgroundColor="White"
+    x:Name="DescribirAlarmaList"
+    x:Class="sospect.Views.DescribirPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:FlagPropietarioAlarmaToTextConverter x:Key="FlagPropietarioAlarmaToTextConverter" />
+            <converters:MultiBoolToVisibilityConverter x:Key="MultiBoolToVisibilityConverter" />
+            <converters:BooleanNegatorConverter x:Key="BooleanNegatorConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <Grid BackgroundColor="White"
+              VerticalOptions="FillAndExpand"
+              Margin="0,20,0,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <ListView
+                Grid.Row="0"
+                BackgroundColor="White"
+                Grid.Column="0"
+                Margin="20,0"
+                ItemsSource="{Binding ListadoAlarmas}"
+                HasUnevenRows="True"
+                SelectionMode="None"
+                HeightRequest="NaN"
+                IsVisible="{Binding EmptyState, Converter={converters:BooleanNegatorConverter}}"
+                VerticalOptions="FillAndExpand">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"></RowDefinition>
+                                    <RowDefinition Height="*"></RowDefinition>
+                                    <RowDefinition Height="*"></RowDefinition>
+                                    <RowDefinition Height="*"></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                    <ColumnDefinition Width="auto"></ColumnDefinition>
+                                    <ColumnDefinition Width="35"></ColumnDefinition>
+                                    <ColumnDefinition Width="35"></ColumnDefinition>
+                                    <ColumnDefinition Width="35"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.Column="0"
+                                       Grid.Row="0"
+                                       Text="{Binding descripciontipoalarma}"
+                                       FontAttributes="Bold"
+                                       TextColor="Black"
+                                       FontSize="Small"
+                                       VerticalTextAlignment="Center"
+                                       VerticalOptions="Center"
+                                       HorizontalOptions="Start"
+                                       HorizontalTextAlignment="Start"></Label>
+                                <Label Grid.Column="0"
+                                       Grid.Row="1"
+                                       FontSize="Small"
+                                       Text="{Binding fecha_alarma}"
+                                       VerticalTextAlignment="Center"
+                                       VerticalOptions="Center"
+                                       TextColor="DarkGray"
+                                       FontAttributes="Bold"
+                                       HorizontalOptions="Start"
+                                       HorizontalTextAlignment="Start"></Label>
+                                <Label Grid.Column="0"
+                                       Grid.Row="2"
+                                       FontSize="Small"
+                                       Text="{Binding CredibilidadAlarma}"
+                                       VerticalTextAlignment="Center"
+                                       VerticalOptions="Center"
+                                       TextColor="DarkGray"
+                                       FontAttributes="Bold"
+                                       HorizontalOptions="Start"
+                                       HorizontalTextAlignment="Start"></Label>
+                                <Label Grid.Column="0"
+                                       Grid.Row="3"
+                                       TextColor="DarkGray"
+                                       FontSize="Small"
+                                       Text="{Binding flag_propietario_alarma, Converter={StaticResource FlagPropietarioAlarmaToTextConverter}}"
+                                       VerticalTextAlignment="Center"
+                                       VerticalOptions="Center"
+                                       FontAttributes="Bold"
+                                       LineBreakMode="TailTruncation"
+                                       HorizontalOptions="Start"
+                                       HorizontalTextAlignment="Start"
+                                       Margin="0,0,10,0"></Label>
+                                <Label Grid.Column="1"
+                                       Grid.Row="3"
+                                       Text="{helpers:TranslateExtension Text='AlarmaCerrada'}"
+                                       TextColor="DarkGray"
+                                       FontSize="Small"
+                                       VerticalTextAlignment="Center"
+                                       VerticalOptions="Center"
+                                       FontAttributes="Bold"
+                                       LineBreakMode="TailTruncation"
+                                       HorizontalOptions="Start"
+                                       HorizontalTextAlignment="Start"
+                                       IsVisible="{Binding EsAlarmaActiva, Converter={StaticResource BooleanNegatorConverter}}"></Label>
+                                <ImageButton Grid.Column="1"
+                                             Grid.Row="0"
+                                             Grid.RowSpan="3"
+                                             BackgroundColor="Red"
+                                             Command="{Binding BindingContext.ConfirmarAlarmaCommand,Source={x:Reference DescribirAlarmaList}}"
+                                             CommandParameter="{Binding .}"
+                                             VerticalOptions="Center">
+                                    <ImageButton.IsVisible>
+                                        <MultiBinding Converter="{StaticResource MultiBoolToVisibilityConverter}">
+                                            <Binding Path="flag_propietario_alarma" />
+                                            <Binding Path="EsAlarmaActiva" />
+                                        </MultiBinding>
+                                    </ImageButton.IsVisible>
+                                    <ImageButton.Source>
+                                        <FontImageSource FontFamily="{StaticResource IcoMoonFamily}"
+                                                         Color="Black"
+                                                         Glyph="{x:Static fonts:IconFont.ListCheck}"
+                                                         ></FontImageSource>
+                                    </ImageButton.Source>
+                                </ImageButton>
+                                <ImageButton Grid.Column="2"
+                                             Grid.Row="0"
+                                             Grid.RowSpan="3"
+                                             BackgroundColor="Transparent"
+                                             Command="{Binding BindingContext.DescribirAlarmaCommand,
+                                             Source={x:Reference DescribirAlarmaList}}"
+                                             CommandParameter="{Binding .}"
+                                             IsVisible="{Binding EsAlarmaActiva}"
+                                             VerticalOptions="Center">
+                                    <ImageButton.Source>
+                                        <FontImageSource FontFamily="{StaticResource IcoMoonFamily}"
+                                                         Color="Black"
+                                                         Glyph="{x:Static fonts:IconFont.PenToSquare}"
+                                                         ></FontImageSource>
+                                    </ImageButton.Source>
+                                </ImageButton>
+                                <ImageButton Grid.Column="3"
+                                             Grid.Row="0"
+                                             Grid.RowSpan="3"
+                                             BackgroundColor="Transparent"
+                                             Command="{Binding BindingContext.VerDetallesAlarmaCommand, Source={x:Reference DescribirAlarmaList}}" CommandParameter="{Binding .}"
+                                             VerticalOptions="Center">
+                                    <ImageButton.Source>
+                                        <FontImageSource FontFamily="{StaticResource IcoMoonFamily}"
+                                                         Color="Black"
+                                                         Glyph="{x:Static fonts:IconFont.Eye}"
+                                                         ></FontImageSource>
+                                    </ImageButton.Source>
+                                </ImageButton>
+                                <ImageButton Grid.Column="4"
+                                             Grid.Row="0"
+                                             Grid.RowSpan="3"
+                                             BackgroundColor="Transparent"
+                                             Command="{Binding BindingContext.VerAlarmaEnMapaCommand, Source={x:Reference DescribirAlarmaList}}" CommandParameter="{Binding .}"
+                                             VerticalOptions="Center">
+                                    <ImageButton.Source>
+                                        <FontImageSource FontFamily="{StaticResource IcoMoonFamily}"
+                                                         Color="Black"
+                                                         Glyph="{x:Static fonts:IconFont.MapLocationDot}"
+                                                         ></FontImageSource>
+                                    </ImageButton.Source>
+                                </ImageButton>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+                <ListView.Header>
+                    <Label Margin="{OnPlatform iOS='0,10,0,10', Android='0,20,0,20'}" Padding="25" FontSize="Small" Text="{helpers:TranslateExtension Text='AlarmasRecientes'}" FontAttributes="Bold" HorizontalOptions="Center" HorizontalTextAlignment="Start" TextColor="Gray"></Label>
+                </ListView.Header>
+            </ListView>
+
+            <Frame Padding="5" BorderColor="Black" BackgroundColor="LightGray" Margin="0,15,0,0" HorizontalOptions="Center" HeightRequest="35" WidthRequest="380" CornerRadius="10" Grid.Row="1">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding RefreshCommand}" NumberOfTapsRequired="1" />
+                </Frame.GestureRecognizers>
+                <Label Text="{helpers:TranslateExtension Text='LblRefrescarLista'}"
+                       TextColor="Black"
+                       LineBreakMode="WordWrap"
+                       HorizontalOptions="CenterAndExpand"
+                       VerticalOptions="CenterAndExpand"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center" />
+            </Frame>
+
+            <Label
+                x:Name="EmptyListLabel"
+                Text="{helpers:TranslateExtension Text='LblNoHayRegistros'}"
+                FontSize="18"
+                TextColor="Gray"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                IsVisible="{Binding EmptyState}" />
+
+
+            <Grid BackgroundColor="LightGray" Grid.Row="2" HeightRequest="90">
+                <ads:AdBanner></ads:AdBanner>
+            </Grid>
+            <Grid BackgroundColor="Black"
+                  Grid.RowSpan="2"
+                  Opacity="0.5"
+                  HorizontalOptions="FillAndExpand"
+                  VerticalOptions="FillAndExpand"
+                  IsVisible="{Binding IsRunning}">
+                <ActivityIndicator VerticalOptions="Center"
+                                   HorizontalOptions="Center"
+                                   HeightRequest="50"
+                                   WidthRequest="50"
+                                   Color="DarkBlue"
+                                   IsRunning="{Binding IsRunning}"/>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

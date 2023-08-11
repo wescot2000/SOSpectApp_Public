@@ -1,0 +1,1090 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Bienvenido" xml:space="preserve">
+    <value>კეთილი იყოს თქვენი მობრძანება SOSpect- ში</value>
+  </data>
+  <data name="InicieSesion" xml:space="preserve">
+    <value>გაიარეთ ავტორიზაცია</value>
+  </data>
+  <data name="InicieSesionCon" xml:space="preserve">
+    <value>ან გაიარეთ ავტორიზაცია</value>
+  </data>
+  <data name="SesionFacebook" xml:space="preserve">
+    <value>FACEBOOK - ით შესვლა</value>
+  </data>
+  <data name="SesionGoogle" xml:space="preserve">
+    <value>GOOGLE - ით შესვლა</value>
+  </data>
+  <data name="LabelAlerta" xml:space="preserve">
+    <value>გაფრთხილება</value>
+  </data>
+  <data name="LabelCrimen" xml:space="preserve">
+    <value>დანაშაული</value>
+  </data>
+  <data name="LabelOK" xml:space="preserve">
+    <value>კარგი</value>
+  </data>
+  <data name="LabelCancelar" xml:space="preserve">
+    <value>გაუქმება</value>
+  </data>
+  <data name="ReportarCrimen" xml:space="preserve">
+    <value>დანაშაულის შეტყობინება</value>
+  </data>
+  <data name="LabelMapa" xml:space="preserve">
+    <value>რუკა</value>
+  </data>
+  <data name="LabelDescribir" xml:space="preserve">
+    <value>აღწერა</value>
+  </data>
+  <data name="DescripcionAlarma" xml:space="preserve">
+    <value>განგაშის აღწერა</value>
+  </data>
+  <data name="DescripcionSospechoso" xml:space="preserve">
+    <value>ეჭვმიტანილის აღწერა</value>
+  </data>
+  <data name="DescripcionVehiculo" xml:space="preserve">
+    <value>ავტომობილის აღწერა</value>
+  </data>
+  <data name="DescripcionArma" xml:space="preserve">
+    <value>იარაღის აღწერა</value>
+  </data>
+  <data name="PuntuacionDescripcion" xml:space="preserve">
+    <value>შეფასების აღწერა</value>
+  </data>
+  <data name="LabelEditar" xml:space="preserve">
+    <value>რედაქტირება</value>
+  </data>
+  <data name="DescripcionesParaAlarma" xml:space="preserve">
+    <value>ამ განგაშის აღწერილობა</value>
+  </data>
+  <data name="EspacioPublicidad" xml:space="preserve">
+    <value>ფართი რეკლამისთვის</value>
+  </data>
+  <data name="AlarmasRecientes" xml:space="preserve">
+    <value>ბოლოდროინდელი სიგნალიზაცია აღწერილობის დასამატებლად</value>
+  </data>
+  <data name="ConfirmarAlarma" xml:space="preserve">
+    <value>სიგნალიზაციის დადასტურება</value>
+  </data>
+  <data name="LabelInformacion" xml:space="preserve">
+    <value>ინფორმაცია</value>
+  </data>
+  <data name="LabelError" xml:space="preserve">
+    <value>შეცდომა</value>
+  </data>
+  <data name="LabelCancelado" xml:space="preserve">
+    <value>გაუქმებული</value>
+  </data>
+  <data name="LabelLoginCancelado" xml:space="preserve">
+    <value>შესვლა გაუქმდა</value>
+  </data>
+  <data name="LabelFallo" xml:space="preserve">
+    <value>მარცხი</value>
+  </data>
+  <data name="RecibeAlarma" xml:space="preserve">
+    <value>თქვენ მიიღეთ განგაში იქ, სადაც ხართ, რეალურია?</value>
+  </data>
+  <data name="LabelConfirmo" xml:space="preserve">
+    <value>დადასტურება</value>
+  </data>
+  <data name="LabelNoSeguro" xml:space="preserve">
+    <value>არ ვარ დარწმუნებული</value>
+  </data>
+  <data name="LabelEsFalsa" xml:space="preserve">
+    <value>ეს მცდარია</value>
+  </data>
+  <data name="LabelConfirmar" xml:space="preserve">
+    <value>დადასტურება</value>
+  </data>
+  <data name="AdvertenciaCalificacion" xml:space="preserve">
+    <value>ეს რეიტინგი მოგვიანებით არ შეიძლება შეიცვალოს. ამან შეიძლება გავლენა მოახდინოს თქვენს მომავალ სანდოობაზე, თუ რეიტინგების კონსენსუსი ეწინააღმდეგება თქვენს ხმას. დარწმუნებული ხარ??</value>
+  </data>
+  <data name="LabelSi" xml:space="preserve">
+    <value>დიახ</value>
+  </data>
+  <data name="LabelNo" xml:space="preserve">
+    <value>არა</value>
+  </data>
+  <data name="AlarmaEnviada" xml:space="preserve">
+    <value>სიგნალიზაცია გაგზავნილია!</value>
+  </data>
+  <data name="MsgTrasAlarmaEnviada" xml:space="preserve">
+    <value>თუ უსაფრთხოდ ხართ, აღწერეთ განგაში, თუ არა, დამალეთ თქვენი ტელეფონი და გამოდით საფრთხისგან.</value>
+  </data>
+  <data name="notificacionurgente" xml:space="preserve">
+    <value>გადაუდებელი შეტყობინება გაიგზავნება უახლოეს ტელეფონებზე:</value>
+  </data>
+  <data name="LabelAlarma" xml:space="preserve">
+    <value>სიგნალიზაცია</value>
+  </data>
+  <data name="LabelMetros" xml:space="preserve">
+    <value>მეტრი</value>
+  </data>
+  <data name="LabelTuUbicacion" xml:space="preserve">
+    <value>თქვენი ადგილდებარეობა</value>
+  </data>
+  <data name="LabelUsuario" xml:space="preserve">
+    <value>მომხმარებელი</value>
+  </data>
+  <data name="LabelTipoAlarma" xml:space="preserve">
+    <value>განგაშის ტიპი</value>
+  </data>
+  <data name="DireccionEscape" xml:space="preserve">
+    <value>გთხოვთ, მიუთითოთ ეჭვმიტანილის გაქცევის მისამართი.</value>
+  </data>
+  <data name="DescripcionAlerta" xml:space="preserve">
+    <value>გაფრთხილების აღწერა</value>
+  </data>
+  <data name="DescripcionImplicado" xml:space="preserve">
+    <value>გაფრთხილებაში ჩართული პირის აღწერა</value>
+  </data>
+  <data name="DescripcionVehiculoImp" xml:space="preserve">
+    <value>სატრანსპორტო საშუალება ჩართულია (ასეთის არსებობის შემთხვევაში)</value>
+  </data>
+  <data name="ArmaImplicada" xml:space="preserve">
+    <value>ჩართული იარაღი (ასეთის არსებობის შემთხვევაში)</value>
+  </data>
+  <data name="LabelRutaEscape" xml:space="preserve">
+    <value>საეჭვო გაქცევის მარშრუტი</value>
+  </data>
+  <data name="ObjetivoSospect" xml:space="preserve">
+    <value>SOSpect მიზნად ისახავს საზოგადოებას გააფრთხილოს და მიიღოს გაფრთხილება საფრთხეების შესახებ მომხმარებლის ადგილას, რათა თავიდან აიცილოს რისკები მათთვის და მათი ახლობლების მიმართ. მომხმარებლების ადგილმდებარეობა არ არის გაზიარებული ან თვალყურის დევნება, რაც უზრუნველყოფს მათ კონფიდენციალურობას. მომხმარებლებს შეუძლიათ განათავსონ საფრთხის გაფრთხილებები, რათა დაეხმარონ სხვებს, თავი აარიდონ სარისკო სიტუაციების მსხვერპლს.</value>
+  </data>
+  <data name="UbicacionImportante" xml:space="preserve">
+    <value>მნიშვნელოვანია იცოდეთ მომხმარებლის ადგილმდებარეობა, ასე რომ თქვენ შეგიძლიათ გააფრთხილოთ ისინი, თუ ვინმე საფრთხეს უქმნის გაფრთხილებას მათი ადგილმდებარეობის მახლობლად. ამასთან, მომხმარებლის ადგილმდებარეობა პირადია და მხოლოდ ის წერტილებია რუკაზე, სადაც განთავსებულია სიგნალები.</value>
+  </data>
+  <data name="GenteUnida" xml:space="preserve">
+    <value>SOSpect– ით, საზოგადოებას შეუძლია შეიკრიბოს დანაშაულის შესამცირებლად და თავიდან აიცილოს სარისკო სიტუაციების მსხვერპლი, გააფრთხილოს სხვებიც, რომ უსაფრთხოდ დარჩნენ.</value>
+  </data>
+  <data name="contactenos" xml:space="preserve">
+    <value>დაგვიკავშირდით</value>
+  </data>
+  <data name="visitenos" xml:space="preserve">
+    <value>გვეწვიეთ,</value>
+  </data>
+  <data name="ZonaVigilancia" xml:space="preserve">
+    <value>სათვალთვალო ზონის გამოწერა</value>
+  </data>
+  <data name="SeleccioneUbicacionVigilar" xml:space="preserve">
+    <value>აირჩიეთ ადგილმდებარეობა საყურებლად</value>
+  </data>
+  <data name="SeleccionEnMapa" xml:space="preserve">
+    <value>რუკაზე</value>
+  </data>
+  <data name="ExplicaZonaVigilancia" xml:space="preserve">
+    <value>ყველა სიგნალიზაცია, რომელიც მოთავსებულია იმ წერტილში, რომლის არჩევასაც აპირებთ, ეცნობება, არ აქვს მნიშვნელობა ვინ განათავსებს მათ. ამ გზით თქვენ შეგიძლიათ იცოდეთ იმ საფრთხეების შესახებ, რომლებიც ამ ეტაპზე მიმდინარეობს. ეს იდეალურია იმისთვის, რომ იცოდეთ საფრთხეები ისეთ ადგილებში, როგორიცაა თქვენი შვილების სკოლები ან უნივერსიტეტები ან ის ადგილები, სადაც თქვენი ნათესავები ან ახლობლები მუშაობენ.</value>
+  </data>
+  <data name="CrearZonaV" xml:space="preserve">
+    <value>შექმენით სათვალთვალო ზონა ამ ადგილთან ერთად</value>
+  </data>
+  <data name="LabelLatitud" xml:space="preserve">
+    <value>გრძედი</value>
+  </data>
+  <data name="LabelLongitud" xml:space="preserve">
+    <value>გრძედი</value>
+  </data>
+  <data name="LabelIntroduccion" xml:space="preserve">
+    <value>შესავალი</value>
+  </data>
+  <data name="AmpliacionRadio" xml:space="preserve">
+    <value>განგაშის რადიუსის გაფართოება</value>
+  </data>
+  <data name="TuRadioActual" xml:space="preserve">
+    <value>თქვენი ამჟამინდელი რადიუსია:</value>
+  </data>
+  <data name="CrearNuevoRadio" xml:space="preserve">
+    <value>შექმენით ჩემი გამოწერა ამ ახალი რადიოსთვის</value>
+  </data>
+  <data name="ExplicacionVigencias" xml:space="preserve">
+    <value>ყველა გამოწერას აქვს მოქმედების ვადა, გთხოვთ შეამოწმოთ გამოწერების ფასები მთავარი მენიუს პირველ ვარიანტში</value>
+  </data>
+  <data name="VasARequerir" xml:space="preserve">
+    <value>თქვენ დაგჭირდებათ</value>
+  </data>
+  <data name="xPoderesParaSubs" xml:space="preserve">
+    <value>ამ რადიოს დამატება თქვენს ამჟამინდელ რადიოში</value>
+  </data>
+  <data name="Exito" xml:space="preserve">
+    <value>წარმატება</value>
+  </data>
+  <data name="SubscripcionCreada" xml:space="preserve">
+    <value>გამოწერა წარმატებით შეიქმნა.</value>
+  </data>
+  <data name="MensajeError" xml:space="preserve">
+    <value>სერვერთან დაკავშირების შეცდომა იყო. გთხოვთ, კიდევ სცადოთ.</value>
+  </data>
+  <data name="SeleccionaRuta" xml:space="preserve">
+    <value>თქვენ უნდა აირჩიოთ ეჭვმიტანილის გაქცევის მარშრუტი.</value>
+  </data>
+  <data name="AprobarSolicitudes" xml:space="preserve">
+    <value>მოთხოვნის დამტკიცება</value>
+  </data>
+  <data name="LabelAprobar" xml:space="preserve">
+    <value>მოვუწონებდი</value>
+  </data>
+  <data name="LabelRechazar" xml:space="preserve">
+    <value>უარყოფა</value>
+  </data>
+  <data name="CompletarSubscripcion" xml:space="preserve">
+    <value>სრული დაცული გამოწერა</value>
+  </data>
+  <data name="CompletarSubsc" xml:space="preserve">
+    <value>გამოწერა დასრულებულია</value>
+  </data>
+  <data name="LblMensajes" xml:space="preserve">
+    <value>შეტყობინებები</value>
+  </data>
+  <data name="LblFechaMensaje" xml:space="preserve">
+    <value>შეტყობინების თარიღი</value>
+  </data>
+  <data name="LblMenu" xml:space="preserve">
+    <value>კონფიგურაცია</value>
+  </data>
+  <data name="OptCompraPoderes" xml:space="preserve">
+    <value>შეიძინეთ უფლებამოსილება ფუნქციების განბლოკვისთვის</value>
+  </data>
+  <data name="OptGestionarProtegidos" xml:space="preserve">
+    <value>მართეთ ჩემი დაცული დამცველები</value>
+  </data>
+  <data name="OptCrearZonas" xml:space="preserve">
+    <value>სათვალთვალო ზონების შექმნა</value>
+  </data>
+  <data name="OptAumentarRadio" xml:space="preserve">
+    <value>გაზარდეთ ჩემი გაფრთხილების მიღების რადიუსი</value>
+  </data>
+  <data name="OptAcercaDe" xml:space="preserve">
+    <value>SOSpect პროგრამის შესახებ</value>
+  </data>
+  <data name="OptCerrarSesion" xml:space="preserve">
+    <value>გასვლა</value>
+  </data>
+  <data name="LblProtectores" xml:space="preserve">
+    <value>ჩემი დამცველები</value>
+  </data>
+  <data name="LblSuspender" xml:space="preserve">
+    <value>დროებით შეჩერება</value>
+  </data>
+  <data name="LblEliminarProtegido" xml:space="preserve">
+    <value>დაცული წაშლა</value>
+  </data>
+  <data name="LblSubscrProtegido" xml:space="preserve">
+    <value>დაცული გამოწერა</value>
+  </data>
+  <data name="LblIDUsuarioAProteger" xml:space="preserve">
+    <value>შეიყვანეთ მომხმარებლის ID დასაცავად. (ეს მნიშვნელობა მდებარეობს მომხმარებლის SOSpect კონფიგურაციის მენიუს ზედა ნაწილში, რომლის დაკავშირებაც გსურთ)</value>
+  </data>
+  <data name="LblRelacionProtegido" xml:space="preserve">
+    <value>ჩემი ურთიერთობა ამ პროტეჟთან არის:</value>
+  </data>
+  <data name="LblSolicitarPermiso" xml:space="preserve">
+    <value>მომხმარებლისგან მოითხოვეთ ნებართვა</value>
+  </data>
+  <data name="LblCompleteCampos" xml:space="preserve">
+    <value>გთხოვთ, დაასრულოთ ყველა ველი.</value>
+  </data>
+  <data name="LblProcesarSolicitud" xml:space="preserve">
+    <value>იყო მოთხოვნის დამუშავების შეცდომა. გთხოვთ, კიდევ სცადოთ.</value>
+  </data>
+  <data name="LblProtegidos" xml:space="preserve">
+    <value>My Protégés</value>
+  </data>
+  <data name="LblUsuarioProtegido" xml:space="preserve">
+    <value>დაცული მომხმარებლის ID</value>
+  </data>
+  <data name="LblFechaActivacion" xml:space="preserve">
+    <value>ჩართვის თარიღი</value>
+  </data>
+  <data name="LblFechaFinalizacion" xml:space="preserve">
+    <value>დასრულების თარიღი</value>
+  </data>
+  <data name="LblAccion" xml:space="preserve">
+    <value>აქცია</value>
+  </data>
+  <data name="LblCantidadPoderes" xml:space="preserve">
+    <value>უფლებამოსილების რაოდენობა</value>
+  </data>
+  <data name="LblPrecio" xml:space="preserve">
+    <value>ფასი</value>
+  </data>
+  <data name="LblComprar" xml:space="preserve">
+    <value>იყიდება</value>
+  </data>
+  <data name="LblValoresSubsc" xml:space="preserve">
+    <value>სააბონენტო ღირებულებები</value>
+  </data>
+  <data name="LblTerminos" xml:space="preserve">
+    <value>SOSpect APP-ის მომსახურების პირობები</value>
+  </data>
+  <data name="LblAcepto" xml:space="preserve">
+    <value>მე ვიღებ ხელშეკრულებას</value>
+  </data>
+  <data name="LblNoAcepto" xml:space="preserve">
+    <value>არ ვიღებ</value>
+  </data>
+  <data name="LblOpcionesProtegidos" xml:space="preserve">
+    <value>დაცული და დაცულია SOSpect App-ით</value>
+  </data>
+  <data name="LblExplicacionProtegidos" xml:space="preserve">
+    <value>თქვენ შეგიძლიათ მიიღოთ შეტყობინებები თქვენი სოციალური წრის წევრებისგან, მაშინაც კი, თუ ისინი შორს არიან თქვენგან. აქ შეგიძლიათ მართოთ ეს ფუნქცია</value>
+  </data>
+  <data name="OptIniciarTramite" xml:space="preserve">
+    <value>დაიწყეთ დაცული დამატების პროცესი</value>
+  </data>
+  <data name="OptAprobarSolicitud" xml:space="preserve">
+    <value>მოიწონეთ მოთხოვნა დამცველისგან</value>
+  </data>
+  <data name="OptListarProtegidos" xml:space="preserve">
+    <value>იხილეთ ჩემი პროტეჟების სია</value>
+  </data>
+  <data name="OptListarProtectores" xml:space="preserve">
+    <value>იხილეთ ჩემი მფარველების სია</value>
+  </data>
+  <data name="OptVolver" xml:space="preserve">
+    <value>დაბრუნება</value>
+  </data>
+  <data name="LblPoderesSospect" xml:space="preserve">
+    <value>SOSpect აპლიკაციის უფლებამოსილებები</value>
+  </data>
+  <data name="LblOpcionesPoderes" xml:space="preserve">
+    <value>კეთილი იყოს თქვენი მობრძანება ენერგიის მართვის ვარიანტში, რისი გაკეთება გსურთ?</value>
+  </data>
+  <data name="LblSubscripcionesCosto" xml:space="preserve">
+    <value>მინდა ვიცოდე რა ხელმოწერები შემიძლია ვიყიდო და მათი ღირებულება</value>
+  </data>
+  <data name="LblQuieroComprar" xml:space="preserve">
+    <value>მსურს სუპერ უფლებამოსილებები ვიყიდო გამოწერების შესაძენად</value>
+  </data>
+  <data name="ExplicacionRadio" xml:space="preserve">
+    <value>აპლიკაციის ყველა მომხმარებლისთვის ნაგულისხმევი რადიუსი 100 მეტრია. თქვენ შეგიძლიათ გააფართოვოთ ეს რადიუსი აპის უფლებამოსილების გამოყენებით. შემდეგ შეარჩიეთ თქვენთვის სასურველი რადიუსი:</value>
+  </data>
+  <data name="LblAsunto" xml:space="preserve">
+    <value>მოკლე აღწერა</value>
+  </data>
+  <data name="LblCompraPoderes" xml:space="preserve">
+    <value>უფლებამოსილებების შეძენა</value>
+  </data>
+  <data name="OptCompletarTramite" xml:space="preserve">
+    <value>დაცული დამატების სრული პროცედურა</value>
+  </data>
+  <data name="LabelHecho" xml:space="preserve">
+    <value>დასრულებული</value>
+  </data>
+  <data name="LabelEscapoEnEstaDireccion" xml:space="preserve">
+    <value>ის ამ მიმართულებით გაიქცა</value>
+  </data>
+  <data name="OptMisSubs" xml:space="preserve">
+    <value>ჩემი გამოწერები</value>
+  </data>
+  <data name="LblMisSubscripciones" xml:space="preserve">
+    <value>ჩემი გამოწერები</value>
+  </data>
+  <data name="LblidUsuario" xml:space="preserve">
+    <value>მომხმარებლის ID:</value>
+  </data>
+  <data name="LblTipo" xml:space="preserve">
+    <value>გამოწერის ტიპი:</value>
+  </data>
+  <data name="LblDescripcionPuntos" xml:space="preserve">
+    <value>აღწერა:</value>
+  </data>
+  <data name="LblFechaFinPuntos" xml:space="preserve">
+    <value>დამთავრების თარიღი:</value>
+  </data>
+  <data name="LblPoderesPuntos" xml:space="preserve">
+    <value>განახლების უფლებამოსილება:</value>
+  </data>
+  <data name="LblRenovar" xml:space="preserve">
+    <value>განახლება</value>
+  </data>
+  <data name="LblCancelarSubscripcion" xml:space="preserve">
+    <value>გამოწერის გაუქმება</value>
+  </data>
+  <data name="LblSeguroDeCancelar" xml:space="preserve">
+    <value>დარწმუნებული ხართ, რომ გსურთ გამოწერის გაუქმება? მოხმარებული უფლებამოსილების დაბრუნება არ განხორციელდება.</value>
+  </data>
+  <data name="LblAceptar" xml:space="preserve">
+    <value>მიღება</value>
+  </data>
+  <data name="Alarm_1" xml:space="preserve">
+    <value>გაფრთხილება ან საფრთხე</value>
+  </data>
+  <data name="Alarm_2" xml:space="preserve">
+    <value>დანაშაული ან დანაშაული ჩადენილია</value>
+  </data>
+  <data name="Alarm_3" xml:space="preserve">
+    <value>ქუჩის ჩხუბი</value>
+  </data>
+  <data name="Alarm_4" xml:space="preserve">
+    <value>დაკარგული შინაური ცხოველი</value>
+  </data>
+  <data name="Alarm_5" xml:space="preserve">
+    <value>დაკარგული ადამიანი</value>
+  </data>
+  <data name="Alarm_6" xml:space="preserve">
+    <value>არეულობები ან პროტესტი</value>
+  </data>
+  <data name="Alarm_7" xml:space="preserve">
+    <value>მოითხოვეთ ვიზუალური თანხლებით ქუჩაში გასასვლელით</value>
+  </data>
+  <data name="Alarm_8" xml:space="preserve">
+    <value>ოჯახური ძალადობა</value>
+  </data>
+  <data name="Alarm_9" xml:space="preserve">
+    <value>ეჭვმიტანილი გაქცევა თქვენი ადგილმდებარეობის ზონაში</value>
+  </data>
+  <data name="LblCostoPoderes" xml:space="preserve">
+    <value>პაკეტის ღირებულება</value>
+  </data>
+  <data name="LblSuscripcionesDisponibles" xml:space="preserve">
+    <value>ამჟამად ხელმისაწვდომია ხელმოწერები</value>
+  </data>
+  <data name="LblFamilia" xml:space="preserve">
+    <value>ოჯახი</value>
+  </data>
+  <data name="LblAmigo" xml:space="preserve">
+    <value>მეგობარი</value>
+  </data>
+  <data name="LblCompanero" xml:space="preserve">
+    <value>თანამგზავრი</value>
+  </data>
+  <data name="LblOtroSinDefinir" xml:space="preserve">
+    <value>სხვა დაუზუსტებელი</value>
+  </data>
+  <data name="LabelExito" xml:space="preserve">
+    <value>წარმატება</value>
+  </data>
+  <data name="LblSolicitudAprobada" xml:space="preserve">
+    <value>განაცხადი წარმატებით დამტკიცებულია.</value>
+  </data>
+  <data name="MensajeErrorAprobando" xml:space="preserve">
+    <value>მოთხოვნის დამტკიცების შეცდომა</value>
+  </data>
+  <data name="MensajeErrorRechazando" xml:space="preserve">
+    <value>მოთხოვნის უარყოფა ვერ მოხერხდა.</value>
+  </data>
+  <data name="LblSolicitudRechazada" xml:space="preserve">
+    <value>განაცხადი წარმატებით უარყო.</value>
+  </data>
+  <data name="LblUsuarioSolicitante" xml:space="preserve">
+    <value>მომხმარებლის მოთხოვნა</value>
+  </data>
+  <data name="LblFechaSolicitud" xml:space="preserve">
+    <value>განაცხადის თარიღი</value>
+  </data>
+  <data name="LblAccionRealizar" xml:space="preserve">
+    <value>აქცია უნდა განხორციელდეს</value>
+  </data>
+  <data name="LblSubscripcionCompletada" xml:space="preserve">
+    <value>გამოწერა დასრულებულია</value>
+  </data>
+  <data name="LblSubscripcionFallida" xml:space="preserve">
+    <value>გამოწერა ვერ განხორციელდა</value>
+  </data>
+  <data name="LblUsuarioAprobador" xml:space="preserve">
+    <value>დამტკიცების მომხმარებელი</value>
+  </data>
+  <data name="LblFechaAprobacion" xml:space="preserve">
+    <value>დამტკიცების თარიღი</value>
+  </data>
+  <data name="LblSubscrEliminada" xml:space="preserve">
+    <value>გამოწერილი</value>
+  </data>
+  <data name="LblSubsEliminadaExitosamente" xml:space="preserve">
+    <value>გამოწერა წარმატებით წაიშალა</value>
+  </data>
+  <data name="LblEliminarProtector" xml:space="preserve">
+    <value>ამოიღეთ დამცავი</value>
+  </data>
+  <data name="LblRenovacionAplicada" xml:space="preserve">
+    <value>წარმატებით განხორციელდა რემონტი</value>
+  </data>
+  <data name="LblErrorRenovando" xml:space="preserve">
+    <value>შეცდომის განახლება, გადასინჯვა ან მოხსენება მხარდაჭერისთვის, დაუკავშირდით "მენიუს" &gt;"შესახებ" ვარიანტს</value>
+  </data>
+  <data name="LblCancelacionAplicada" xml:space="preserve">
+    <value>გაუქმება წარმატებით განხორციელდა</value>
+  </data>
+  <data name="LblErrorCancelando" xml:space="preserve">
+    <value>შეცდომა გაუქმების, გადასინჯვის ან ანგარიშგების მხარდასაჭერად, დაუკავშირდით ხელმისაწვდომია "მენიუში"&gt;"შესახებ" ვარიანტში</value>
+  </data>
+  <data name="LblZonaCreada" xml:space="preserve">
+    <value>მოთხოვნილი სათვალთვალო ზონის გამოწერა წარმატებით განხორციელდა</value>
+  </data>
+  <data name="LblErrorZonaVigil" xml:space="preserve">
+    <value>ახალი მოთხოვნილი ზონის გამოწერის შეცდომა, გადასინჯეთ ან შეატყობინეთ მხარდასაჭერად, დაუკავშირდით ვარიანტს "მენიუ"&gt;"შესახებ"</value>
+  </data>
+  <data name="LblSeleccionaNuevoRadio" xml:space="preserve">
+    <value>აირჩიეთ ახალი რადიუსი მეტრში</value>
+  </data>
+  <data name="LblUsuarioProtector" xml:space="preserve">
+    <value>დამცავი მომხმარებელი</value>
+  </data>
+  <data name="LblSeguroEliminarProtegido" xml:space="preserve">
+    <value>დარწმუნებული ხართ, რომ ამოიღეთ თქვენი პროტეჟე? ამ გამოწერაში გამოყენებული უფლებამოსილებები არ დაბრუნდება.</value>
+  </data>
+  <data name="LblSuspenderProtectores" xml:space="preserve">
+    <value>დარწმუნებული ხართ, რომ შეაჩერეთ შეტყობინებები თქვენს მფარველებს 6 საათის განმავლობაში? ყველა თქვენი მფარველი შეჩერდება სიგნალიზაცია და გამოწერის დასრულების დრო ამ მიზეზით არ გაგრძელდება. მფარველს არ ეცნობება ამ ქმედების შესახებ.</value>
+  </data>
+  <data name="LblSuspensionRealizada" xml:space="preserve">
+    <value>6 საათის განმავლობაში ყველა თქვენი მფარველისთვის სიგნალიზაციის შეჩერება წარმატებული იყო.</value>
+  </data>
+  <data name="LabelSeguroEliminarProtector" xml:space="preserve">
+    <value>დარწმუნებული ხართ, რომ ამოიღეთ თქვენი მფარველი? ამ გამოწერაში გამოყენებული უფლებამოსილებები არ დაბრუნდება და მფარველს ეცნობება ამ ქმედების შესახებ.</value>
+  </data>
+  <data name="LabelProtectorEliminado" xml:space="preserve">
+    <value>შერჩეული დამცავი წაშლილია. უფლებამოსილება არ დაუბრუნდება მფარველს. ამის შესახებ მფარველს ეცნობება</value>
+  </data>
+  <data name="LblConfirmacionRequerida" xml:space="preserve">
+    <value>მნიშვნელოვანია! საჭიროა დადასტურება!</value>
+  </data>
+  <data name="LblNoHayRegistros" xml:space="preserve">
+    <value>ამ დროს არ არის ჟურნალების ჩვენება</value>
+  </data>
+  <data name="LblMiLogin" xml:space="preserve">
+    <value>ჩემი შესვლა არის:</value>
+  </data>
+  <data name="LblSaldoPoderesEs" xml:space="preserve">
+    <value>ჩემი ძალაუფლების ბალანსია:</value>
+  </data>
+  <data name="LblUsuarioID" xml:space="preserve">
+    <value>ჩემი მომხმარებლის პირადობის მოწმობა არის</value>
+  </data>
+  <data name="LblNoHayRegistrosAqui" xml:space="preserve">
+    <value>ჯერ არავის დაუწერია არაფერი!</value>
+  </data>
+  <data name="LblAlertaReportadaPorMi" xml:space="preserve">
+    <value>ჩემ მიერ გავრცელებული გაფრთხილება</value>
+  </data>
+  <data name="LblPara" xml:space="preserve">
+    <value>შეტყობინების მიმღები:</value>
+  </data>
+  <data name="LblDe" xml:space="preserve">
+    <value>შეტყობინების გამგზავნი:</value>
+  </data>
+  <data name="ConfiguraciondeSOSpect" xml:space="preserve">
+    <value>SOSpect კონფიგურაცია</value>
+  </data>
+  <data name="LblExitoEnAceptacion" xml:space="preserve">
+    <value>თქვენი კონტრაქტის მიღება ინახება!</value>
+  </data>
+  <data name="LblFalloEnAceptacion" xml:space="preserve">
+    <value>რეგისტრაცია ვერ შედგა. მჲლწ რვ, ოთქთ!</value>
+  </data>
+  <data name="LblDeclinacionAceptacion" xml:space="preserve">
+    <value>ხელშეკრულების მიღების გარეშე ვერ გააგრძელებთ!</value>
+  </data>
+  <data name="LblParaIniciar" xml:space="preserve">
+    <value>დავიწყოთ SOSpect!! ახლომდებარე გაფრთხილებების განახლებისთვის შეეხეთ ლურჯი განახლების ღილაკს</value>
+  </data>
+  <data name="LblAlarmaNoGrave" xml:space="preserve">
+    <value>გამოიყენეთ ყვითელი ღილაკი დაბალი საფრთხის შემცველი სიგნალების დასათვალიაებლად და თქვენი საზოგადოების ან დამცველების გასაფრთხილებლად. თქვენ შეგიძლიათ აირჩიოთ გაფრთხილების ტიპი და მონიშნოთ იგი, როგორც ჩადენილი დანაშაული. ეს ღილაკი იწყებს გაფრთხილებას თქვენს ზუსტ ადგილას, სასარგებლოა, როდესაც დახმარება გჭირდებათ. თქვენ ასევე შეგიძლიათ აირჩიოთ წერტილი რუკაზე, რათა იპოვოთ გაფრთხილება თქვენი ადგილმდებარეობის კომპრომისის გარეშე.</value>
+  </data>
+  <data name="LblCrimenCometido" xml:space="preserve">
+    <value>წითელი ღილაკი იწვევს კატეგორიას: დანაშაული ჩადენილი განგაში. SOSpect არ მოითხოვს, რომ ამ შემთხვევებში დროის მნიშვნელობის გამო კატეგორიაში შეიტანოთ კატეგორია. სიგნალიზაცია ავტომატურად იდება თქვენს ზუსტ ადგილას. თქვენ ასევე შეგიძლიათ აირჩიოთ წერტილი რუკაზე, რომ განათავსოთ გაფრთხილება და შემდეგ შეცვალოთ კატეგორია ჩადენილ დანაშაულზე.</value>
+  </data>
+  <data name="LblDescripcionAlarmas" xml:space="preserve">
+    <value>ქვედა ზოლში "აღწერა" ვარიანტში ნახავთ სიგნალიზაციის ჩამონათვალს, რომელიც განთავსებულია თქვენ ან სხვების მიერ. თუ თქვენ შექმენით განგაში, შეგიძლიათ დაამატოთ აღწერა. თუ განგაში შეიქმნა სხვის მიერ, შეგიძლიათ შეაფასოთ მისი სიზუსტე და შეავსოთ მისი აღწერა. ფრთხილად იყავი! თუ თქვენ მიაწოდებთ ცრუ ინფორმაციას ან არასწორ რეიტინგებს, თქვენი ანგარიში შეიძლება შეჩერდეს. ყურადღებით გადახედეთ წესებსა და პირობებს, რათა თავიდან აიცილოთ ეს.</value>
+  </data>
+  <data name="LblDescripcionMensajes" xml:space="preserve">
+    <value>ზედა მარჯვენა კუთხეში ზარში შეგიძლიათ წაიკითხოთ თქვენი შეტყობინებები, რომლებიც მოიცავს გამოწერის შეტყობინებებს და ბოლოდროინდელ მაღვიძარას. ეს სია განსხვავდება აღწერილობების ვარიანტისგან, სადაც შეგიძლიათ იპოვოთ ბოლოდროინდელი სიგნალიზაცია პირდაპირ.</value>
+  </data>
+  <data name="LblDescripcionMenu" xml:space="preserve">
+    <value>ზედა მარცხენა კუთხეში სიჩქარეში ნახავთ SOSpect კონფიგურაციის ვარიანტებს. თქვენ შეგიძლიათ შეიძინოთ ხელმოწერების შეძენის უფლებამოსილება და დაიცვათ თქვენი ოჯახი ან გააფართოვოთ განგაშის მიღების რადიუსი. გახსოვდეთ! დასაწყისში, ჩვენ გაძლევთ 80 ძალას, ასე რომ თქვენ შეგიძლიათ შეიძინოთ ორი გამოწერა თავიდანვე.</value>
+  </data>
+  <data name="LblRecomendaciones" xml:space="preserve">
+    <value>ერთად ჩვენ უძლეველი ვართ! 100 მეტრის რადიუსში გაფრთხილებისა და მიღების ძირითადი ფუნქციები უფასოა, ხოლო როდესაც დაიწყებთ, ჩვენ გაძლევთ 2 გამოწერას. მოიწვიეთ თქვენი საზოგადოება და ოჯახი, რომ გამოიყენონ ეს უფასო სერვისი დანაშაულის ზრდის წინააღმდეგ საბრძოლველად. თქვენ შეგიძლიათ შეინახოთ სიცოცხლე ან გადაარჩინოთ დროულად გაფრთხილების მიღებით. დაკარგული ადამიანების ან შინაური ცხოველების გაფრთხილებებს 10 კილომეტრის დიაპაზონი აქვთ, ხოლო ძალადობრივ დემონსტრაციებს 1 კილომეტრის დიაპაზონი აქვთ</value>
+  </data>
+  <data name="LblPromocion" xml:space="preserve">
+    <value>დაბოლოს, გახსოვდეთ, რომ თქვენ მიიღებთ მინდობილობას თითოეული ჭეშმარიტი რეიტინგისთვის, რომელსაც თქვენ გთავაზობთ SOSpect– ში, როდესაც სიგნალიზაციის კენჭისყრა იხურება მათი განთავსებიდან 90 წუთის შემდეგ. ადამიანების უმეტესობა პატიოსანია და ერთად ჩვენ დავიცავთ ერთმანეთს და ჩვენს ოჯახებს. კეთილი იყოს თქვენი მობრძანება SOSPECT!</value>
+  </data>
+  <data name="LblDescripcionMapa" xml:space="preserve">
+    <value>ნებისმიერ დროს, თქვენ შეგიძლიათ აირჩიოთ "MAP" ვარიანტი ქვედა ზოლის მარცხნივ, რაც SOSpect- ის საწყისი წერტილია. იქიდან შეგიძლიათ იხილოთ ახლომდებარე სიგნალიზაცია. თქვენი ადგილმდებარეობა გამოჩნდება რუკის ცენტრში და წრე წარმოადგენს რადიუსს, რამაც შეიძლება გავლენა მოახდინოს თქვენზე. სტანდარტულად, ეს რადიუსი 100 მეტრია, მაგრამ მისი შეცვლა შეგიძლიათ პარამეტრების მენიუში.</value>
+  </data>
+  <data name="LblRecomendacionImportante" xml:space="preserve">
+    <value>მნიშვნელოვანია, რომ პერიოდულად გახსნათ SOSpect, სახლიდან გასვლამდე ან ადგილზე მისვლისას, თქვენი ადგილმდებარეობის განახლებისთვის. ამ გზით, ჩვენ შეგვიძლია გაცნობოთ, არის თუ არა რაიმე რისკი თქვენს მხარეში. გთხოვთ გაითვალისწინოთ, რომ როდესაც აპლიკაცია დახურულია, ჩვენ ვერ მივიღებთ თქვენს მდებარეობას მოწყობილობის ოპერაციული სისტემების მიერ დაწესებული შეზღუდვების გამო. შეამოწმეთ თქვენს ადგილმდებარეობასთან დაკავშირებული წესები და პირობები.</value>
+  </data>
+  <data name="LblUsuarioBloqueado" xml:space="preserve">
+    <value>მომხმარებელი შეჩერებულია უარყოფითი ნიშნებისთვის</value>
+  </data>
+  <data name="LblMarcasNegativas" xml:space="preserve">
+    <value>ჩემი უარყოფითი ნიშნების რაოდენობაა</value>
+  </data>
+  <data name="LblCuentaSuspendida" xml:space="preserve">
+    <value>სხვა მომხმარებლების უარყოფითი ნიშნების გამო დროებით შეჩერებული ანგარიში</value>
+  </data>
+  <data name="LblTitleCuentaSuspendida" xml:space="preserve">
+    <value>ანგარიში დროებით შეჩერებულია</value>
+  </data>
+  <data name="LblFechaFinSuspension" xml:space="preserve">
+    <value>შეჩერების დასრულების თარიღი არის</value>
+  </data>
+  <data name="LblTocaAqui" xml:space="preserve">
+    <value>დააჭირეთ აქ წასასვლელად</value>
+  </data>
+  <data name="LblNoTienesConexion" xml:space="preserve">
+    <value>არანაირი ინტერნეტი</value>
+  </data>
+  <data name="LblExplicacionSinConexion" xml:space="preserve">
+    <value>თქვენი განცხადება საჭიროა SOSpect- ში შესასვლელად. ინტერნეტის გარეშე ჩვენ არ ვიცით, აქტიურია თუ არა.</value>
+  </data>
+  <data name="LblSinConexionDescripcion" xml:space="preserve">
+    <value>თქვენი SOSpect ანგარიშის სტატუსის მისაღებად საჭიროა აქტიური ინტერნეტი.</value>
+  </data>
+  <data name="LblSinConexionQueHacer" xml:space="preserve">
+    <value>გთხოვთ, გაააქტიუროთ თქვენი ინტერნეტი და გადატვირთოთ SOSpect</value>
+  </data>
+  <data name="SefinalizalasubscripcionporsolicituddelusuarioPROTEGIDOatravésdelaAPIdesdelaAPP" xml:space="preserve">
+    <value>გამოწერა წყდება დაცული მომხმარებლის მოთხოვნით აპლიკაციიდან API- ს საშუალებით</value>
+  </data>
+  <data name="Nopuederenovarsedebidoaquefuecancelada,requieresubscripciónnueva" xml:space="preserve">
+    <value>არ შეიძლება განახლდეს, რადგან ის გაუქმდა, მოითხოვს ახალ გამოწერას</value>
+  </data>
+  <data name="Alarmasgeneradaspormicirculosocial" xml:space="preserve">
+    <value>ჩემი სოციალური წრის მიერ წარმოქმნილი სიგნალიზაცია</value>
+  </data>
+  <data name="Incrementomidiametrodevigilancia" xml:space="preserve">
+    <value>მე ვზრდი ჩემი მეთვალყურეობის დიამეტრს</value>
+  </data>
+  <data name="Zonadevigilanciaadicional" xml:space="preserve">
+    <value>დამატებითი სამეთვალყურეო ზონა</value>
+  </data>
+  <data name="Renovable" xml:space="preserve">
+    <value>განახლება</value>
+  </data>
+  <data name="SefinalizalasubscripcionporsolicituddelusuarioPROTECTORatravésdelaAPIdesdelaAPP" xml:space="preserve">
+    <value>გამოწერა წყდება PROTECTOR მომხმარებლის მოთხოვნით API– დან APP– დან</value>
+  </data>
+  <data name="LblEsRenovable" xml:space="preserve">
+    <value>განახლებადია?</value>
+  </data>
+  <data name="LblObsSubs" xml:space="preserve">
+    <value>გამოწერის შენიშვნა:</value>
+  </data>
+  <data name="NingunaObservacion" xml:space="preserve">
+    <value>უკომენტაროდ</value>
+  </data>
+  <data name="Subscripcionvigente" xml:space="preserve">
+    <value>მიმდინარე გამოწერა</value>
+  </data>
+  <data name="Actualmenteactivoenotrasuscripcion" xml:space="preserve">
+    <value>ამჟამად აქტიურია სხვა გამოწერაზე</value>
+  </data>
+  <data name="LblRadioActual" xml:space="preserve">
+    <value>ჩემი ამჟამინდელი რადიუსი სიგნალიზაციის მისაღებად არის:</value>
+  </data>
+  <data name="LblPoderesRequeridosZV" xml:space="preserve">
+    <value>შერჩეული გაფართოებისთვის საჭირო უფლებამოსილებები</value>
+  </data>
+  <data name="OptTerminosCondiciones" xml:space="preserve">
+    <value>SOSpect წესები და პირობები</value>
+  </data>
+  <data name="DebesAbrirLaApp" xml:space="preserve">
+    <value>SOSpect ვერ იცის მომხმარებლის ადგილმდებარეობის ცვლილებები, როდესაც ის დახურულია, ეს ხდება მობილური ტელეფონების ოპერაციული სისტემების ბატარეის კონსერვაციის პოლიტიკით, ამიტომ მნიშვნელოვანია, რომ მომხმარებელი ხშირად ხსნის აპლიკაციას, რათა შეამოწმოს სიგნალიზაცია იმ მხარეში, სადაც იგი გადავიდა და დროულად მიიღოს ახლომდებარე სიგნალიზაცია.</value>
+  </data>
+  <data name="InvitaMasPersonas" xml:space="preserve">
+    <value>მომხმარებლის უსაფრთხოების გასაუმჯობესებლად მნიშვნელოვანია, რომ მის გარშემო მყოფებმა, ოჯახმა და მეზობლებმა, ჩამოტვირთონ პროგრამა, რომელიც უფასოა. თუ ახლომდებარე მომხმარებლები არ არიან, მომხმარებელი შეიძლება დროულად არ იყოს გაფრთხილებული ან მათი გაფრთხილებები არ ისმის, რისკის მდგომარეობის შენარჩუნება, როგორც ეს იყო პროგრამის ჩამოტვირთვამდე. მნიშვნელოვანია მოიწვიოთ მეტი ადამიანი ერთმანეთის დასახმარებლად!</value>
+  </data>
+  <data name="Insertiondone" xml:space="preserve">
+    <value>ჩასმა შესრულებულია.</value>
+  </data>
+  <data name="AnerroroccurredwhilequalifyingthealarmCode1" xml:space="preserve">
+    <value>განგაშის შეფასებისას მოხდა კოდი 1</value>
+  </data>
+  <data name="AnerroroccurredwhilequalifyingthealarmCode2" xml:space="preserve">
+    <value>განგაშის შეფასებისას მოხდა შეცდომა კოდი 2-ით</value>
+  </data>
+  <data name="AnerroroccurredwiththealarmqualificationmodelCode3" xml:space="preserve">
+    <value>შეცდომა მოხდა კოდით სიგნალიზაციის დროს 3</value>
+  </data>
+  <data name="Userregistrationsuccessful" xml:space="preserve">
+    <value>თქვენი მომხმარებელი რეგისტრირებულია!</value>
+  </data>
+  <data name="Anerroroccurredwhileregisteringtheusercode1" xml:space="preserve">
+    <value>თქვენი მომხმარებლის რეგისტრაციისას კოდ 1-ის შეცდომა</value>
+  </data>
+  <data name="Anerroroccurredwhileregisteringtheusercode2" xml:space="preserve">
+    <value>თქვენი მომხმარებლის რეგისტრაციისას მოხდა კოდი 2-ის შეცდომა</value>
+  </data>
+  <data name="Anerroroccurredwiththepeoplemodelforuserregistrationcode3" xml:space="preserve">
+    <value>თქვენი მომხმარებლის რეგისტრაციისას მე -3 კოდით დაფიქსირდა შეცდომა</value>
+  </data>
+  <data name="Permisosolicitadoconexito" xml:space="preserve">
+    <value>წარმატებით მოთხოვნილი ნებართვა</value>
+  </data>
+  <data name="OcurriounerrorenelprocesodesolicitarpermisoalprotegidoCodigo1" xml:space="preserve">
+    <value>კოდი 1-ის შეცდომა მოხდა დაცული ნებართვის მოთხოვნის პროცესში</value>
+  </data>
+  <data name="Nofueposiblerealizarenviarlasolicituddepermisoalprotegidoporqueelmodelonoesvalido" xml:space="preserve">
+    <value>ნებართვის მოთხოვნის დაცულად გაგზავნა შეუძლებელი იყო, მოდელი არასწორია</value>
+  </data>
+  <data name="AlertaEnUbicacion" xml:space="preserve">
+    <value>გსურთ შექმნათ SOSpect გაფრთხილება ამ ადგილას?</value>
+  </data>
+  <data name="CrearEnUbicacionActual" xml:space="preserve">
+    <value>გსურთ შექმნათ SOSpect გაფრთხილება თქვენს ამჟამინდელ ადგილას?</value>
+  </data>
+  <data name="SeguroCerrarSesion" xml:space="preserve">
+    <value>დარწმუნებული ხართ, რომ გამოხვალთ?</value>
+  </data>
+  <data name="Tu" xml:space="preserve">
+    <value>შენ</value>
+  </data>
+  <data name="Anonimo" xml:space="preserve">
+    <value>ანონიმური</value>
+  </data>
+  <data name="AlarmaCerrada" xml:space="preserve">
+    <value>სიგნალიზაცია დაკეტილია</value>
+  </data>
+  <data name="LblSaldoPoderesInsuficiente" xml:space="preserve">
+    <value>თქვენი ელექტროენერგიის ბალანსი არასაკმარისია</value>
+  </data>
+  <data name="LblComprarPoderes" xml:space="preserve">
+    <value>შეიძინეთ მინდობილობის უფლება</value>
+  </data>
+  <data name="LblSeguroRenovar" xml:space="preserve">
+    <value>დარწმუნებული ხართ ამ გამოწერის განახლებაში?</value>
+  </data>
+  <data name="OptReportes" xml:space="preserve">
+    <value>ანგარიშები</value>
+  </data>
+  <data name="LblReportesTitulo" xml:space="preserve">
+    <value>SOSpect ანგარიშები</value>
+  </data>
+  <data name="LblReportesDescripcion" xml:space="preserve">
+    <value>ანგარიშები საშუალებას გაძლევთ გაიგოთ, თუ როგორ დაეხმარეთ სხვა მომხმარებლებს არასასურველი სიტუაციების თავიდან ასაცილებლად. გარდა ამისა, ისინი საშუალებას გაძლევთ ამოიცნოთ საშიში ადგილები თქვენი ქალაქის რუკაზე და დააკვირდეთ დანაშაულის ევოლუციას დროთა განმავლობაში. ასევე, ნიმუშის ანალიზის საშუალებით, შესაძლებელია ადრეული გაფრთხილებების გენერირება, სანამ უარყოფითი მოვლენები მოხდება. მნიშვნელოვანია აღინიშნოს, რომ ძირითადი ანგარიში უფასოა, ხოლო სხვა ანგარიშებს შეიძლება ჰქონდეს ღირებულება მათი თაობისთვის საჭირო გამოთვლითი მოხმარების გამო.</value>
+  </data>
+  <data name="OptReporteDeCalorEnZona" xml:space="preserve">
+    <value>მოხსენება სითბოს რუქებით</value>
+  </data>
+  <data name="OptReporteEvolucionEnElTiempo" xml:space="preserve">
+    <value>გაფრთხილება ევოლუციის შესახებ იტყობინება დროთა განმავლობაში</value>
+  </data>
+  <data name="OptReportesPredictivos" xml:space="preserve">
+    <value>პროგნოზირებადი ანგარიშგება</value>
+  </data>
+  <data name="OptReporteAnaliticoDeDescripcionesAlarmas" xml:space="preserve">
+    <value>განგაშის ჩეთების ანალიტიკური ანგარიშები</value>
+  </data>
+  <data name="LblReporteCalorSospect" xml:space="preserve">
+    <value>SOSpect სითბოს რუკები</value>
+  </data>
+  <data name="LblReporteEnConstruccion" xml:space="preserve">
+    <value>მალე !! ეს ფუნქციონირება შენდება!</value>
+  </data>
+  <data name="LblDescripcionMapaDeCalor" xml:space="preserve">
+    <value>ამ ანგარიშში თქვენ გექნებათ წვდომა თქვენი ტერიტორიის სითბოს რუქაზე, სადაც შეგიძლიათ აირჩიოთ სხვადასხვა თვეები მას შემდეგ, რაც SOSpect– მა დაიწყო მისი ფუნქციონირება. ეს ფუნქციონირება საშუალებას მოგცემთ დააკვირდეთ და გაიგოთ რუკის თითოეული სფეროს ევოლუცია, რომელიც თქვენთვის საინტერესოა.</value>
+  </data>
+  <data name="LblCostoReporte" xml:space="preserve">
+    <value>გაითვალისწინეთ, რომ ამ ფუნქციონირების გამოყენება გამოთვლითი ღირებულებაა და მოითხოვს უფლებამოსილებას, თუმცა ეს არ იქნება მაღალი ღირებულება. ამასთან, თქვენ შეგიძლიათ შეიძინოთ იგი უპრობლემოდ იმ უფლებამოსილების გამოყენებით, რომელსაც ჩვენ გაძლევთ განაცხადის პირველ გამოყენებაში.</value>
+  </data>
+  <data name="LblReporteEvolucionAlarmas" xml:space="preserve">
+    <value>SOSpect- ში მოთავსებული სიგნალიზაციის ევოლუცია</value>
+  </data>
+  <data name="LblDescripcionEvolucionAlarmas" xml:space="preserve">
+    <value>ამ ანგარიშში თქვენ შეძლებთ იცოდეთ თითოეული ტიპის განგაშის ტენდენციები დროთა განმავლობაში თქვენს მხარეში. თქვენ შეძლებთ დააკვირდეთ და გააანალიზოთ საშიში ტენდენციები, ასევე დაადგინოთ დანაშაულის შესაძლო შემცირება.</value>
+  </data>
+  <data name="LblReportePredictivo" xml:space="preserve">
+    <value>SOSpect პროგნოზირებადი ანგარიშები</value>
+  </data>
+  <data name="LblDescripcionReportesPredictivos" xml:space="preserve">
+    <value>როგორც SOSpect საზოგადოება ქმნის საკმარის მონაცემებს, შესაძლებელია ალბათობაზე დაფუძნებული ღონისძიების პროგნოზები და ანალიტიკური ინსტრუმენტები. ეს მოხსენებები საშუალებას მოგცემთ იცოდეთ, როდის ახლოვდება გაფრთხილებების ტალღები ან დანაშაულებრივი საქმიანობის ზრდა, რაც საშუალებას მოგცემთ მიიღოთ საჭირო ზომები, რათა თავიდან აიცილოთ რაიმე რისკი თქვენთვის, თქვენი ოჯახისთვის და თქვენი საზოგადოებისთვის.</value>
+  </data>
+  <data name="LblReporteAnalisisDeTextos" xml:space="preserve">
+    <value>SOSpect განგაშის ჩეთის ანალიზის ანგარიში</value>
+  </data>
+  <data name="LblDescripcionAnalisisTextos" xml:space="preserve">
+    <value>იმის წყალობით, რომ მომხმარებლები აღწერენ განგაშს და განაახლებენ თავიანთ ევოლუციას SOSpect– ის შიდა ჩეთის საშუალებით, ეს ანგარიში საშუალებას მისცემს წარმოიდგინოს ტიპოლოგიები, რომლებიც ყველაზე მეტად მოქმედებს საზოგადოებაზე. ეს საშუალებას  იძლევა მიიღოთ ზომები თქვენს ტერიტორიაზე უსაფრთხოების აღქმის გასაუმჯობესებლად.</value>
+  </data>
+  <data name="LblRangoReporte" xml:space="preserve">
+    <value>ეს ანგარიში მოიცავს ბოლო 30 დღეს</value>
+  </data>
+  <data name="AcercadeSOSpect" xml:space="preserve">
+    <value>SOSpect- ის შესახებ</value>
+  </data>
+  <data name="Porcentajedealarmasciertasfrenteafalsasenunradiodeunkilometroymedio" xml:space="preserve">
+    <value>ჭეშმარიტი და ცრუ სიგნალიზაციის პროცენტული მაჩვენებელი ერთი და ნახევარი კილომეტრის რადიუსში</value>
+  </data>
+  <data name="Promediodetiempoenminutosentrelanzamientodealarmaenmizonaylaprimeracalificacionodescripcion" xml:space="preserve">
+    <value>წუთებში საშუალო დრო ჩემს მხარეში განგაშის გაშვებასა და პირველ რეიტინგს ან აღწერას შორის</value>
+  </data>
+  <data name="Cantidadrealdepersonasenunradiodeunkilometroymedio" xml:space="preserve">
+    <value>ადამიანების რეალური რაოდენობა კილომეტრსა და ნახევარში რადიუსში</value>
+  </data>
+  <data name="Cantidadrealdepersonasenmiradioactual" xml:space="preserve">
+    <value>ჩემი ამჟამინდელი რადიუსის ადამიანების რეალური რაოდენობა</value>
+  </data>
+  <data name="Miradioactualderecepcionyenviodealarmasenmetros" xml:space="preserve">
+    <value>ჩემი ამჟამინდელი რადიუსი, რომ მიიღოთ და გავაგზავნოთ სიგნალიზაცია მეტრში</value>
+  </data>
+  <data name="Cantidadrealdepersonasquerecibieronmisalarmas" xml:space="preserve">
+    <value>იმ ადამიანების რეალური რაოდენობა, რომლებმაც მიიღეს ჩემი სიგნალიზაცია</value>
+  </data>
+  <data name="Cantidaddenotificacionesdealarmaenviadasdemiparte" xml:space="preserve">
+    <value>ჩემგან გაგზავნილი განგაშის შეტყობინებების რაოდენობა</value>
+  </data>
+  <data name="Personasquereportaronmiayudacomonegativaofalsa" xml:space="preserve">
+    <value>ადამიანები, რომლებმაც ჩემი დახმარება უარყოფითი ან ყალბი</value>
+  </data>
+  <data name="Personasqueagradecieronmiayuda" xml:space="preserve">
+    <value>ადამიანები, რომლებიც აფასებდნენ ჩემს დახმარებას</value>
+  </data>
+  <data name="Poderesganadosporregalos" xml:space="preserve">
+    <value>საჩუქრებით მიღებული უფლებამოსილებები</value>
+  </data>
+  <data name="LblParticipacionTpAlarma" xml:space="preserve">
+    <value>მონაწილეობა განგაშის ტიპის მიხედვით</value>
+  </data>
+  <data name="LblMetricBasics" xml:space="preserve">
+    <value>ძირითადი მეტრიკა</value>
+  </data>
+  <data name="LblEfectiAlarmas" xml:space="preserve">
+    <value>სიგნალიზაციის ეფექტურობა</value>
+  </data>
+  <data name="LblTotalAlarmas" xml:space="preserve">
+    <value>სულ სიგნალიზაცია</value>
+  </data>
+  <data name="LblAlarmasVerdaderas" xml:space="preserve">
+    <value>ნამდვილი სიგნალიზაცია</value>
+  </data>
+  <data name="LblAlarmasFalsas" xml:space="preserve">
+    <value>ცრუ სიგნალიზაცია</value>
+  </data>
+  <data name="LblAlarmasEfectivas" xml:space="preserve">
+    <value>ეფექტური სიგნალიზაციის პროცენტული მაჩვენებელი</value>
+  </data>
+  <data name="LblMarcarLeidos" xml:space="preserve">
+    <value>მონიშნეთ ყველა წაკითხული</value>
+  </data>
+  <data name="LblSeMarcaronComoLeidos" xml:space="preserve">
+    <value>ყველა შეტყობინება აღინიშნა წაკითხულის სახით</value>
+  </data>
+  <data name="LabelNuevaVersion" xml:space="preserve">
+    <value>არსებობს SOSpect- ის ახალი ვერსია და საჭიროა გაგრძელება</value>
+  </data>
+  <data name="OptReporteBasico" xml:space="preserve">
+    <value>ძირითადი ანგარიშები - უფასო!</value>
+  </data>
+  <data name="LblReporteBasicoSospect" xml:space="preserve">
+    <value>SOSpect ძირითადი ანგარიშები</value>
+  </data>
+  <data name="LblReporteBasicoDescripcion" xml:space="preserve">
+    <value>SOSpect– ის ძირითადი ანგარიშები მოგაწვდით მნიშვნელოვან ინფორმაციას თქვენს საზოგადოებაში თქვენი განგაშის ანგარიშების გავლენის შესახებ. გარდა ამისა, ისინი გაჩვენებენ მიღებული უფლებამოსილების რაოდენობას თქვენი საზოგადოების დახმარებით, ამ რეიტინგებში სიგნალიზაციისა და პატიოსნების ზუსტად გატანით. ამ ანგარიშების საშუალებით, თქვენ ასევე შეგიძლიათ შეაფასოთ თქვენი ტერიტორიის საერთო ქცევა გასული თვის განმავლობაში, მათ შორის იმ მომხმარებელთა რაოდენობა, რომლებიც მონაწილეობდნენ პროცესში და იმ მომხმარებელთა რაოდენობა, რომლებმაც მიიღეს უარყოფითი ნიშნები არასწორი ჩართულობის გამო.</value>
+  </data>
+  <data name="LblReporteBasicoDescripcionCorta" xml:space="preserve">
+    <value>SOSpect– ის ძირითადი ანგარიშები მოგაწვდით მნიშვნელოვან ინფორმაციას ... იხილეთ მეტი...</value>
+  </data>
+  <data name="LblDescripcionRepTipoAlarma" xml:space="preserve">
+    <value>ეს ანგარიში გაძლევთ ინფორმაციას ყველაზე ხშირი სიგნალიზაციის შესახებ თქვენი ამჟამინდელი მდებარეობიდან ერთი და ნახევარი კილომეტრის რადიუსში.</value>
+  </data>
+  <data name="LblDescripcionRepEfectAlarmas" xml:space="preserve">
+    <value>ეს ანგარიში მოგაწვდით ინფორმაციას რეალურ და ცრუ განგაშის ეფექტურობასთან დაკავშირებით თქვენი ამჟამინდელი მდებარეობიდან ერთი და ნახევარი კილომეტრის რადიუსში.</value>
+  </data>
+  <data name="LblDescripcionRepMetricasBasicas" xml:space="preserve">
+    <value>ეს ანგარიში მოგაწვდით მონაცემებს თქვენი ამჟამინდელი მდებარეობის კილომეტრის და ნახევარი რადიუსის ფარგლებში მომხმარებელთა რაოდენობის შესახებ, ასევე მომხმარებლების რაოდენობას აპების სიგნალიზაციის თქვენს ამჟამინდელ რადიუსში. გარდა ამისა, იგი მოიცავს თქვენი ინტერესის რამდენიმე დამატებით ინფორმაციას.</value>
+  </data>
+  <data name="OptVolumenAlarmas" xml:space="preserve">
+    <value>მოცულობა ახლომდებარე სიგნალიზაციის ტიპის მიხედვით</value>
+  </data>
+  <data name="OptEfectividadAlarmas" xml:space="preserve">
+    <value>ახლომდებარე სიგნალიზაციის ეფექტურობა</value>
+  </data>
+  <data name="OptMetricasBasicas" xml:space="preserve">
+    <value>ახლომდებარე სიგნალიზაციის ძირითადი მეტრიკა</value>
+  </data>
+  <data name="LblCredibilidadActual" xml:space="preserve">
+    <value>ჩემი სიგნალიზაციის სანდოობაა:</value>
+  </data>
+  <data name="OptManualUsuarioSospect" xml:space="preserve">
+    <value>SOSpect მომხმარებლის სახელმძღვანელო</value>
+  </data>
+  <data name="LblDescManualUsuario" xml:space="preserve">
+    <value>შეხვდით SOSpect, უფასო აპლიკაცია, რომელიც შექმნილია თქვენი და თქვენი ახლობლების დასაცავად. ჩვენ შევქმენით ლაკონური და დეტალური ონლაინ სახელმძღვანელო, რომელიც დაგეხმარებათ სწორად გამოიყენოთ იგი. ამ სახელმძღვანელოს დახმარებით შეგიძლიათ მაქსიმალურად ისარგებლოთ SOSpect– ით და ისარგებლოთ მისი უსაფრთხოების ყველა მახასიათებლით.</value>
+  </data>
+  <data name="SesionApple" xml:space="preserve">
+    <value>შესვლა APPLE- ით</value>
+  </data>
+  <data name="LblCredibilidadAlarmaActual" xml:space="preserve">
+    <value>განგაშის სანდოობა:</value>
+  </data>
+  <data name="LblAccedeAlManual" xml:space="preserve">
+    <value>სახელმძღვანელოზე წვდომა შეგიძლიათ შემდეგზე:</value>
+  </data>
+  <data name="LblRefrescarLista" xml:space="preserve">
+    <value>განგაშის სიის განახლება</value>
+  </data>
+  <data name="LblErrorCorreoDispositivo" xml:space="preserve">
+    <value>ამ მოწყობილობაზე ელფოსტის გაგზავნა ვერ შეძლო</value>
+  </data>
+  <data name="LblErrorCorreo" xml:space="preserve">
+    <value>ელ.ფოსტის გაგზავნის შეცდომა:</value>
+  </data>
+  <data name="LblSeleccioneTipoAlarma" xml:space="preserve">
+    <value>გთხოვთ აირჩიოთ განგაშის ტიპი</value>
+  </data>
+  <data name="LblCompraFallida" xml:space="preserve">
+    <value>შესყიდვა არ განხორციელებულა. გთხოვთ, შეამოწმოთ ინტერნეტთან წვდომა და გადახედოთ</value>
+  </data>
+  <data name="LblSeleccionePuntoMapa" xml:space="preserve">
+    <value>თქვენ უნდა აირჩიოთ სათვალთვალო ზონა რუკაზე</value>
+  </data>
+  <data name="Cantidaddealarmascolocadasenlaszonasdevigilanciasuscritas" xml:space="preserve">
+    <value>გამოწერილი სათვალთვალო ზონებში განთავსებული სიგნალიზაციის რაოდენობა</value>
+  </data>
+  <data name="Cantidaddealarmascolocadaspormisprotegidos" xml:space="preserve">
+    <value>ჩემი პროტეჟეს მიერ განთავსებული სიგნალიზაციის რაოდენობა</value>
+  </data>
+  <data name="Credibilidadactualdelasalarmasqueenvioamicomunidad" xml:space="preserve">
+    <value>განგაშის ამჟამინდელი სანდოობა, რომელსაც ჩემს საზოგადოებას ვუგზავნი</value>
+  </data>
+  <data name="LblCompraExitosa" xml:space="preserve">
+    <value>გილოცავთ! თქვენ შეიძინეთ ხელმოწერების შეძენის უფლებამოსილება. თქვენ ნახავთ განმარტებით შეტყობინებას ზარში!</value>
+  </data>
+  <data name="LblDebesHabilitarNotif" xml:space="preserve">
+    <value>თქვენ უნდა ჩართოთ შეტყობინებების გაგზავნა SOSpect– ისთვის სამუშაოდ</value>
+  </data>
+  <data name="LblHabilitarNotifSettings" xml:space="preserve">
+    <value>ამ აპს შეუძლია შეტყობინებების მხარდაჭერა, მაგრამ თქვენ უნდა ჩართოთ ეს თქვენს პარამეტრებში.</value>
+  </data>
+  <data name="LblErrorHabilitandoUsoNotif" xml:space="preserve">
+    <value>მოხდა შეცდომა, რამაც ხელი შეუშალა push შეტყობინებების გამოყენებას</value>
+  </data>
+  <data name="LblMostrarDireccionEscape" xml:space="preserve">
+    <value>მარკ გაქცეულის გაქცევის მარშრუტი</value>
+  </data>
+  <data name="LblProximamenteSOSpect" xml:space="preserve">
+    <value>მალე SOSpect- ში!</value>
+  </data>
+  <data name="LblReportesProximos" xml:space="preserve">
+    <value>ანალიტიკური და პროგნოზირებადი ანგარიშები მონაცემთა მეცნიერებასთან!</value>
+  </data>
+  <data name="LblHolaBienvenido" xml:space="preserve">
+    <value>გამარჯობა! კეთილი იყოს თქვენი მობრძანება SOSpect- ში. 
+
+SOSpect არის უფასო ინსტრუმენტი, რომელიც შექმნილია თქვენი და თქვენი ახლობლების დასაცავად, დროული გაფრთხილებების მიწოდებით ახლომდებარე რისკების შესახებ! თავიდან შეიძლება ბევრი სიგნალიზაცია არ მიიღოთ, რადგან თქვენს მახლობლად ბევრი ადამიანი არ არის, ვინც SOSpect- მა დააინსტალირა. ჩვენ ვთხოვთ, რომ სცადოთ და არ წაშალოთ პროგრამა. SOSpect- ს შეუძლია გადაარჩინოს თქვენი ცხოვრება რაღაც მომენტში, ისევე როგორც თქვენს ოჯახში ან საზოგადოებაში.
+
+პარამეტრებში ნაპოვნი "ძირითადი ანგარიშის" განყოფილებაში შეგიძლიათ იხილოთ "ძირითადი მეტრიკა" განყოფილებაში ახლომდებარე მომხმარებლების რაოდენობა თქვენს დაფარვის ზონაში, სადაც მიიღებთ მაღვიძარას. დაგვეხმარეთ ამ რიცხვის გაზრდაში, ის უფასოა და საშუალებას მოგცემთ უფრო უსაფრთხოდ იცხოვროთ!
+
+გეპატიჟებით ყურადღებით წაიკითხოთ ეს მოკლე შესავალი სახელმძღვანელო, რომელიც მოგცემთ წარმოდგენას, თუ როგორ მუშაობს SOSpect. გთხოვთ გაითვალისწინოთ, რომ ის გამოჩნდება მხოლოდ აპის დაინსტალირების შემდეგ.
+
+გმადლობთ, რომ იყენებთ SOSpect- ს და ყველას უსაფრთხოებაში წვლილისთვის!
+
+შეეხეთ ეკრანს გასაგრძელებლად...</value>
+  </data>
+</root>

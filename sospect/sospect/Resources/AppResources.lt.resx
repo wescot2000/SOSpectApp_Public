@@ -1,0 +1,1090 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Bienvenido" xml:space="preserve">
+    <value>Sveiki atvykę į SOSpect</value>
+  </data>
+  <data name="InicieSesion" xml:space="preserve">
+    <value>Norėdami tęsti, prisijunkite</value>
+  </data>
+  <data name="InicieSesionCon" xml:space="preserve">
+    <value>arba prisijunkite naudodami</value>
+  </data>
+  <data name="SesionFacebook" xml:space="preserve">
+    <value>PRISIJUNKITE NAUDODAMI "FACEBOOK"</value>
+  </data>
+  <data name="SesionGoogle" xml:space="preserve">
+    <value>PRISIJUNGIMAS NAUDOJANT "GOOGLE"</value>
+  </data>
+  <data name="LabelAlerta" xml:space="preserve">
+    <value>Įspėjimo</value>
+  </data>
+  <data name="LabelCrimen" xml:space="preserve">
+    <value>Nusikaltimas</value>
+  </data>
+  <data name="LabelOK" xml:space="preserve">
+    <value>GERAI</value>
+  </data>
+  <data name="LabelCancelar" xml:space="preserve">
+    <value>Atšaukti</value>
+  </data>
+  <data name="ReportarCrimen" xml:space="preserve">
+    <value>Pranešti apie nusikaltimą</value>
+  </data>
+  <data name="LabelMapa" xml:space="preserve">
+    <value>Žemėlapis</value>
+  </data>
+  <data name="LabelDescribir" xml:space="preserve">
+    <value>Aprašyti</value>
+  </data>
+  <data name="DescripcionAlarma" xml:space="preserve">
+    <value>Aliarmo aprašymas</value>
+  </data>
+  <data name="DescripcionSospechoso" xml:space="preserve">
+    <value>Įtariamojo apibūdinimas</value>
+  </data>
+  <data name="DescripcionVehiculo" xml:space="preserve">
+    <value>Transporto priemonės aprašymas</value>
+  </data>
+  <data name="DescripcionArma" xml:space="preserve">
+    <value>Ginklo aprašymas</value>
+  </data>
+  <data name="PuntuacionDescripcion" xml:space="preserve">
+    <value>Taškų skaičiavimo aprašymas</value>
+  </data>
+  <data name="LabelEditar" xml:space="preserve">
+    <value>Redaguoti</value>
+  </data>
+  <data name="DescripcionesParaAlarma" xml:space="preserve">
+    <value>Šio aliarmo aprašymai</value>
+  </data>
+  <data name="EspacioPublicidad" xml:space="preserve">
+    <value>Erdvė reklamai</value>
+  </data>
+  <data name="AlarmasRecientes" xml:space="preserve">
+    <value>Naujausi pavojaus signalai, kad pridėtumėte aprašymą</value>
+  </data>
+  <data name="ConfirmarAlarma" xml:space="preserve">
+    <value>Patvirtinkite aliarmą</value>
+  </data>
+  <data name="LabelInformacion" xml:space="preserve">
+    <value>Informacija</value>
+  </data>
+  <data name="LabelError" xml:space="preserve">
+    <value>Klaida</value>
+  </data>
+  <data name="LabelCancelado" xml:space="preserve">
+    <value>Atšauktas</value>
+  </data>
+  <data name="LabelLoginCancelado" xml:space="preserve">
+    <value>Prisijungimas atšauktas</value>
+  </data>
+  <data name="LabelFallo" xml:space="preserve">
+    <value>Triktis</value>
+  </data>
+  <data name="RecibeAlarma" xml:space="preserve">
+    <value>Gavote žadintuvą netoli tos vietos, kur esate, ar tai tikra?</value>
+  </data>
+  <data name="LabelConfirmo" xml:space="preserve">
+    <value>Patvirtinti</value>
+  </data>
+  <data name="LabelNoSeguro" xml:space="preserve">
+    <value>Nesu tikras</value>
+  </data>
+  <data name="LabelEsFalsa" xml:space="preserve">
+    <value>Tai netiesa</value>
+  </data>
+  <data name="LabelConfirmar" xml:space="preserve">
+    <value>Patvirtinti</value>
+  </data>
+  <data name="AdvertenciaCalificacion" xml:space="preserve">
+    <value>Vėliau šis įvertinimas negali būti pakeistas. Tai gali turėti įtakos jūsų būsimam patikimumui, jei reitingų konsensusas prieštarauja jūsų balsavimui. Ar tikrai?</value>
+  </data>
+  <data name="LabelSi" xml:space="preserve">
+    <value>Taip</value>
+  </data>
+  <data name="LabelNo" xml:space="preserve">
+    <value>Ne</value>
+  </data>
+  <data name="AlarmaEnviada" xml:space="preserve">
+    <value>Žadintuvas išsiųstas!</value>
+  </data>
+  <data name="MsgTrasAlarmaEnviada" xml:space="preserve">
+    <value>Jei esate saugūs, aprašykite žadintuvą, jei ne, paslėpkite telefoną ir išeikite iš pavojaus.</value>
+  </data>
+  <data name="notificacionurgente" xml:space="preserve">
+    <value>Skubus pranešimas bus išsiųstas artimiausiais telefonais adresu:</value>
+  </data>
+  <data name="LabelAlarma" xml:space="preserve">
+    <value>Signalizacijos</value>
+  </data>
+  <data name="LabelMetros" xml:space="preserve">
+    <value>metras</value>
+  </data>
+  <data name="LabelTuUbicacion" xml:space="preserve">
+    <value>Jūsų vietovė</value>
+  </data>
+  <data name="LabelUsuario" xml:space="preserve">
+    <value>Naudotojas</value>
+  </data>
+  <data name="LabelTipoAlarma" xml:space="preserve">
+    <value>Signalizacijos tipas</value>
+  </data>
+  <data name="DireccionEscape" xml:space="preserve">
+    <value>Nurodykite įtariamojo pabėgimo adresą.</value>
+  </data>
+  <data name="DescripcionAlerta" xml:space="preserve">
+    <value>Perspėjimo aprašymas</value>
+  </data>
+  <data name="DescripcionImplicado" xml:space="preserve">
+    <value>Su perspėjimu susijusio asmens aprašymas</value>
+  </data>
+  <data name="DescripcionVehiculoImp" xml:space="preserve">
+    <value>Dalyvaujanti transporto priemonė (jei taikoma)</value>
+  </data>
+  <data name="ArmaImplicada" xml:space="preserve">
+    <value>Susijęs ginklas (jei taikoma)</value>
+  </data>
+  <data name="LabelRutaEscape" xml:space="preserve">
+    <value>Įtartinas evakuacijos maršrutas</value>
+  </data>
+  <data name="ObjetivoSospect" xml:space="preserve">
+    <value>SOSpect siekia leisti bendruomenei įspėti ir gauti įspėjimus apie pavojus vartotojo vietoje, kad būtų išvengta rizikos jiems ir jų artimiesiems. Vartotojų buvimo vieta nėra bendrinama ar stebima, užtikrinant jų privatumą. Vartotojai gali pateikti įspėjimus apie pavojų, kad padėtų kitiems netapti rizikingų situacijų aukomis.</value>
+  </data>
+  <data name="UbicacionImportante" xml:space="preserve">
+    <value>Svarbu žinoti vartotojo buvimo vietą, kad galėtumėte jį įspėti, jei kas nors pateikia pavojaus įspėjimą netoli jo vietos. Tačiau vartotojo vieta yra privati ir bendrinami tik tie žemėlapio taškai, kuriuose pateikiami įspėjimai.</value>
+  </data>
+  <data name="GenteUnida" xml:space="preserve">
+    <value>Naudodama "SOSpect", bendruomenė gali susiburti, kad sumažintų nusikalstamumą ir netaptų rizikingų situacijų aukomis, įspėdama ir kitus išlikti saugius.</value>
+  </data>
+  <data name="contactenos" xml:space="preserve">
+    <value>Susisiekite su mumis</value>
+  </data>
+  <data name="visitenos" xml:space="preserve">
+    <value>Aplankykite mus</value>
+  </data>
+  <data name="ZonaVigilancia" xml:space="preserve">
+    <value>Priežiūros zonos prenumerata</value>
+  </data>
+  <data name="SeleccioneUbicacionVigilar" xml:space="preserve">
+    <value>Pasirinkite vietą, kurią norite žiūrėti</value>
+  </data>
+  <data name="SeleccionEnMapa" xml:space="preserve">
+    <value>Pasirinkite žemėlapyje</value>
+  </data>
+  <data name="ExplicaZonaVigilancia" xml:space="preserve">
+    <value>Apie visus pavojaus signalus, kurie bus išdėstyti toje vietoje, kurią ketinate pasirinkti, bus pranešta, nesvarbu, kas juos įdės. Tokiu būdu galite žinoti apie pavojus, kurie tuo metu kyla. Tai idealiai tinka žinoti apie pavojus tokiose vietose kaip jūsų vaikų mokyklos ar universitetai ar vietovės, kuriose dirba jūsų artimieji ar artimieji.</value>
+  </data>
+  <data name="CrearZonaV" xml:space="preserve">
+    <value>Sukurkite stebėjimo zoną naudodami šią vietą</value>
+  </data>
+  <data name="LabelLatitud" xml:space="preserve">
+    <value>Platuma</value>
+  </data>
+  <data name="LabelLongitud" xml:space="preserve">
+    <value>Ilguma</value>
+  </data>
+  <data name="LabelIntroduccion" xml:space="preserve">
+    <value>Įvadas</value>
+  </data>
+  <data name="AmpliacionRadio" xml:space="preserve">
+    <value>Aliarmo spindulio išplėtimas</value>
+  </data>
+  <data name="TuRadioActual" xml:space="preserve">
+    <value>Jūsų dabartinis spindulys yra:</value>
+  </data>
+  <data name="CrearNuevoRadio" xml:space="preserve">
+    <value>Sukurkite šio naujo radijo prenumeratą</value>
+  </data>
+  <data name="ExplicacionVigencias" xml:space="preserve">
+    <value>Visos prenumeratos galioja, patikrinkite prenumeratų kainas pirmoje pagrindinio meniu parinktyje</value>
+  </data>
+  <data name="VasARequerir" xml:space="preserve">
+    <value>Jums reikės</value>
+  </data>
+  <data name="xPoderesParaSubs" xml:space="preserve">
+    <value>Galios pridėti šį radiją prie dabartinio radijo</value>
+  </data>
+  <data name="Exito" xml:space="preserve">
+    <value>Sėkmė</value>
+  </data>
+  <data name="SubscripcionCreada" xml:space="preserve">
+    <value>Prenumerata sėkmingai sukurta.</value>
+  </data>
+  <data name="MensajeError" xml:space="preserve">
+    <value>Jungiantis prie serverio įvyko klaida. Bandykite dar kartą.</value>
+  </data>
+  <data name="SeleccionaRuta" xml:space="preserve">
+    <value>Turite pasirinkti įtariamojo pabėgimo maršrutą.</value>
+  </data>
+  <data name="AprobarSolicitudes" xml:space="preserve">
+    <value>Užklausų patvirtinimas</value>
+  </data>
+  <data name="LabelAprobar" xml:space="preserve">
+    <value>Patvirtinti</value>
+  </data>
+  <data name="LabelRechazar" xml:space="preserve">
+    <value>Atmesti</value>
+  </data>
+  <data name="CompletarSubscripcion" xml:space="preserve">
+    <value>Visiškai apsaugota prenumerata</value>
+  </data>
+  <data name="CompletarSubsc" xml:space="preserve">
+    <value>Užbaigti prenumeratą</value>
+  </data>
+  <data name="LblMensajes" xml:space="preserve">
+    <value>Pranešimus</value>
+  </data>
+  <data name="LblFechaMensaje" xml:space="preserve">
+    <value>Pranešimo data</value>
+  </data>
+  <data name="LblMenu" xml:space="preserve">
+    <value>KONFIGŪRACIJA</value>
+  </data>
+  <data name="OptCompraPoderes" xml:space="preserve">
+    <value>Įsigykite galių funkcijoms atrakinti</value>
+  </data>
+  <data name="OptGestionarProtegidos" xml:space="preserve">
+    <value>Valdykite mano apsaugotas apsaugas</value>
+  </data>
+  <data name="OptCrearZonas" xml:space="preserve">
+    <value>Sukurkite stebėjimo zonas</value>
+  </data>
+  <data name="OptAumentarRadio" xml:space="preserve">
+    <value>Įspėjimo priėmimo spindulio padidinimas</value>
+  </data>
+  <data name="OptAcercaDe" xml:space="preserve">
+    <value>Apie "SOSpect" programą</value>
+  </data>
+  <data name="OptCerrarSesion" xml:space="preserve">
+    <value>Išeiti</value>
+  </data>
+  <data name="LblProtectores" xml:space="preserve">
+    <value>Mano gynėjai</value>
+  </data>
+  <data name="LblSuspender" xml:space="preserve">
+    <value>Laikinai sustabdyti</value>
+  </data>
+  <data name="LblEliminarProtegido" xml:space="preserve">
+    <value>Pašalinti apsaugotą</value>
+  </data>
+  <data name="LblSubscrProtegido" xml:space="preserve">
+    <value>Apsaugota prenumerata</value>
+  </data>
+  <data name="LblIDUsuarioAProteger" xml:space="preserve">
+    <value>Įveskite vartotojo ID, kad apsaugotumėte. (Ši reikšmė yra vartotojo, kurį norite susieti, SOSpect konfigūracijos meniu viršuje)</value>
+  </data>
+  <data name="LblRelacionProtegido" xml:space="preserve">
+    <value>Mano santykis su šia protėvyne yra toks:</value>
+  </data>
+  <data name="LblSolicitarPermiso" xml:space="preserve">
+    <value>Naudotojo leidimo užklausa</value>
+  </data>
+  <data name="LblCompleteCampos" xml:space="preserve">
+    <value>Užpildykite visus laukus.</value>
+  </data>
+  <data name="LblProcesarSolicitud" xml:space="preserve">
+    <value>Apdorojant užklausą įvyko klaida. Bandykite dar kartą.</value>
+  </data>
+  <data name="LblProtegidos" xml:space="preserve">
+    <value>Mano protėvynės</value>
+  </data>
+  <data name="LblUsuarioProtegido" xml:space="preserve">
+    <value>Apsaugotas vartotojo ID</value>
+  </data>
+  <data name="LblFechaActivacion" xml:space="preserve">
+    <value>Aktyvinimo data</value>
+  </data>
+  <data name="LblFechaFinalizacion" xml:space="preserve">
+    <value>Pabaigos data</value>
+  </data>
+  <data name="LblAccion" xml:space="preserve">
+    <value>Veiksmas</value>
+  </data>
+  <data name="LblCantidadPoderes" xml:space="preserve">
+    <value>Įgaliojimų skaičius</value>
+  </data>
+  <data name="LblPrecio" xml:space="preserve">
+    <value>Kaina</value>
+  </data>
+  <data name="LblComprar" xml:space="preserve">
+    <value>Pirkti</value>
+  </data>
+  <data name="LblValoresSubsc" xml:space="preserve">
+    <value>Prenumeratos vertės</value>
+  </data>
+  <data name="LblTerminos" xml:space="preserve">
+    <value>"SOSpect APP" paslaugų teikimo sąlygos</value>
+  </data>
+  <data name="LblAcepto" xml:space="preserve">
+    <value>Sutinku su sutartimi</value>
+  </data>
+  <data name="LblNoAcepto" xml:space="preserve">
+    <value>Nesutinku</value>
+  </data>
+  <data name="LblOpcionesProtegidos" xml:space="preserve">
+    <value>Apsaugota ir apsaugota "SOSpect" programa</value>
+  </data>
+  <data name="LblExplicacionProtegidos" xml:space="preserve">
+    <value>Galite gauti įspėjimus iš savo socialinio rato narių, net jei jie yra toli nuo jūsų. Čia galite valdyti šią funkciją</value>
+  </data>
+  <data name="OptIniciarTramite" xml:space="preserve">
+    <value>Pradėkite apsaugoto asmens įtraukimo procesą</value>
+  </data>
+  <data name="OptAprobarSolicitud" xml:space="preserve">
+    <value>Patvirtinkite gynėjo prašymą</value>
+  </data>
+  <data name="OptListarProtegidos" xml:space="preserve">
+    <value>Žiūrėkite mano protėvynių sąrašą</value>
+  </data>
+  <data name="OptListarProtectores" xml:space="preserve">
+    <value>Peržiūrėkite mano gynėjų sąrašą</value>
+  </data>
+  <data name="OptVolver" xml:space="preserve">
+    <value>Grįžti</value>
+  </data>
+  <data name="LblPoderesSospect" xml:space="preserve">
+    <value>"SOSpect" programos galios</value>
+  </data>
+  <data name="LblOpcionesPoderes" xml:space="preserve">
+    <value>Sveiki atvykę į energijos valdymo parinktį, ką norite daryti?</value>
+  </data>
+  <data name="LblSubscripcionesCosto" xml:space="preserve">
+    <value>Noriu sužinoti, kokias prenumeratas galiu įsigyti ir jų kainą</value>
+  </data>
+  <data name="LblQuieroComprar" xml:space="preserve">
+    <value>Noriu nusipirkti super galių, kad įsigyčiau prenumeratas</value>
+  </data>
+  <data name="ExplicacionRadio" xml:space="preserve">
+    <value>Numatytasis visų programos vartotojų spindulys yra 100 metrų aplink. Galite išplėsti tą spindulį naudodami programos galias. Tada pasirinkite sau norimą spindulį:</value>
+  </data>
+  <data name="LblAsunto" xml:space="preserve">
+    <value>Trumpas aprašymas</value>
+  </data>
+  <data name="LblCompraPoderes" xml:space="preserve">
+    <value>Įgaliojimų pirkimas</value>
+  </data>
+  <data name="OptCompletarTramite" xml:space="preserve">
+    <value>Apsaugotos medžiagos įtraukimo procedūros užbaigimas</value>
+  </data>
+  <data name="LabelHecho" xml:space="preserve">
+    <value>Baigtas</value>
+  </data>
+  <data name="LabelEscapoEnEstaDireccion" xml:space="preserve">
+    <value>Jis pabėgo šia kryptimi</value>
+  </data>
+  <data name="OptMisSubs" xml:space="preserve">
+    <value>Mano prenumeratos</value>
+  </data>
+  <data name="LblMisSubscripciones" xml:space="preserve">
+    <value>Mano prenumeratos</value>
+  </data>
+  <data name="LblidUsuario" xml:space="preserve">
+    <value>Vartotojo ID:</value>
+  </data>
+  <data name="LblTipo" xml:space="preserve">
+    <value>Prenumeratos tipas:</value>
+  </data>
+  <data name="LblDescripcionPuntos" xml:space="preserve">
+    <value>Apibūdinimas:</value>
+  </data>
+  <data name="LblFechaFinPuntos" xml:space="preserve">
+    <value>Pabaigos data:</value>
+  </data>
+  <data name="LblPoderesPuntos" xml:space="preserve">
+    <value>Atnaujinimo įgaliojimai:</value>
+  </data>
+  <data name="LblRenovar" xml:space="preserve">
+    <value>Atnaujinti</value>
+  </data>
+  <data name="LblCancelarSubscripcion" xml:space="preserve">
+    <value>Prenumeratos atšaukimas</value>
+  </data>
+  <data name="LblSeguroDeCancelar" xml:space="preserve">
+    <value>Ar tikrai norite atšaukti prenumeratą? Išnaudotos galios nebus grąžintos.</value>
+  </data>
+  <data name="LblAceptar" xml:space="preserve">
+    <value>Priimti</value>
+  </data>
+  <data name="Alarm_1" xml:space="preserve">
+    <value>Įspėjimas arba pavojus</value>
+  </data>
+  <data name="Alarm_2" xml:space="preserve">
+    <value>Padarytas nusikaltimas arba nusižengimas</value>
+  </data>
+  <data name="Alarm_3" xml:space="preserve">
+    <value>Gatvės muštynės</value>
+  </data>
+  <data name="Alarm_4" xml:space="preserve">
+    <value>Pasiklydęs augintinis</value>
+  </data>
+  <data name="Alarm_5" xml:space="preserve">
+    <value>Pasiklydęs žmogus</value>
+  </data>
+  <data name="Alarm_6" xml:space="preserve">
+    <value>Riaušės ar protestai</value>
+  </data>
+  <data name="Alarm_7" xml:space="preserve">
+    <value>Paprašykite vizualinio akompanimento išeidami į gatvę</value>
+  </data>
+  <data name="Alarm_8" xml:space="preserve">
+    <value>Smurtas</value>
+  </data>
+  <data name="Alarm_9" xml:space="preserve">
+    <value>Įtariama, kad bėgate į savo vietovę</value>
+  </data>
+  <data name="LblCostoPoderes" xml:space="preserve">
+    <value>Paketo kaina</value>
+  </data>
+  <data name="LblSuscripcionesDisponibles" xml:space="preserve">
+    <value>Šiuo metu galimos prenumeratos</value>
+  </data>
+  <data name="LblFamilia" xml:space="preserve">
+    <value>Šeima</value>
+  </data>
+  <data name="LblAmigo" xml:space="preserve">
+    <value>Bendras</value>
+  </data>
+  <data name="LblCompanero" xml:space="preserve">
+    <value>Kompanionas</value>
+  </data>
+  <data name="LblOtroSinDefinir" xml:space="preserve">
+    <value>Kiti neapibrėžti</value>
+  </data>
+  <data name="LabelExito" xml:space="preserve">
+    <value>Sėkmė</value>
+  </data>
+  <data name="LblSolicitudAprobada" xml:space="preserve">
+    <value>Paraiška sėkmingai patvirtinta.</value>
+  </data>
+  <data name="MensajeErrorAprobando" xml:space="preserve">
+    <value>Klaida tvirtinant užklausą</value>
+  </data>
+  <data name="MensajeErrorRechazando" xml:space="preserve">
+    <value>Nepavyko atmesti prašymo.</value>
+  </data>
+  <data name="LblSolicitudRechazada" xml:space="preserve">
+    <value>Paraiška sėkmingai atmesta.</value>
+  </data>
+  <data name="LblUsuarioSolicitante" xml:space="preserve">
+    <value>Prašantis vartotojas</value>
+  </data>
+  <data name="LblFechaSolicitud" xml:space="preserve">
+    <value>Taikymo data</value>
+  </data>
+  <data name="LblAccionRealizar" xml:space="preserve">
+    <value>Veiksmai, kurių reikia imtis</value>
+  </data>
+  <data name="LblSubscripcionCompletada" xml:space="preserve">
+    <value>Prenumerata baigta</value>
+  </data>
+  <data name="LblSubscripcionFallida" xml:space="preserve">
+    <value>Prenumerata nepavyko</value>
+  </data>
+  <data name="LblUsuarioAprobador" xml:space="preserve">
+    <value>Tvirtintojo vartotojas</value>
+  </data>
+  <data name="LblFechaAprobacion" xml:space="preserve">
+    <value>Patvirtinimo data</value>
+  </data>
+  <data name="LblSubscrEliminada" xml:space="preserve">
+    <value>Prenumeratos atsisakymas</value>
+  </data>
+  <data name="LblSubsEliminadaExitosamente" xml:space="preserve">
+    <value>Prenumerata sėkmingai pašalinta</value>
+  </data>
+  <data name="LblEliminarProtector" xml:space="preserve">
+    <value>Nuimkite apsaugą</value>
+  </data>
+  <data name="LblRenovacionAplicada" xml:space="preserve">
+    <value>Sėkmingai įgyvendinta renovacija</value>
+  </data>
+  <data name="LblErrorRenovando" xml:space="preserve">
+    <value>Klaida atnaujinant, bandant iš naujo arba pranešant palaikymo tarnybai, kontaktas pasiekiamas parinktyje "meniu"&gt;"Apie"</value>
+  </data>
+  <data name="LblCancelacionAplicada" xml:space="preserve">
+    <value>Atšaukimas buvo sėkmingas</value>
+  </data>
+  <data name="LblErrorCancelando" xml:space="preserve">
+    <value>Klaida atšaukiant, bandant iš naujo arba pranešant palaikymo tarnybai, kontaktas pasiekiamas parinktyje "meniu"&gt;"Apie"</value>
+  </data>
+  <data name="LblZonaCreada" xml:space="preserve">
+    <value>Prašomos priežiūros zonos prenumerata sėkmingai įvykdyta</value>
+  </data>
+  <data name="LblErrorZonaVigil" xml:space="preserve">
+    <value>Klaida prenumeruojant naują pageidaujamą zoną, bandant dar kartą arba pranešant palaikymo tarnybai, kontaktas pasiekiamas parinktyje "meniu"&gt;"Apie"</value>
+  </data>
+  <data name="LblSeleccionaNuevoRadio" xml:space="preserve">
+    <value>Pasirinkite naują spindulį metrais</value>
+  </data>
+  <data name="LblUsuarioProtector" xml:space="preserve">
+    <value>Apsauginis vartotojas</value>
+  </data>
+  <data name="LblSeguroEliminarProtegido" xml:space="preserve">
+    <value>Ar tikrai pašalinsite savo protėvį? Šioje prenumeratoje naudotos galios nebus grąžintos.</value>
+  </data>
+  <data name="LblSuspenderProtectores" xml:space="preserve">
+    <value>Ar tikrai sustabdysite pranešimus savo gynėjams 6 valandoms? Visi jūsų apsaugai bus sustabdyti aliarmai, o prenumeratos pabaigos laikas dėl šios priežasties nebus pratęstas. Saugotojas nebus informuotas apie šį veiksmą.</value>
+  </data>
+  <data name="LblSuspensionRealizada" xml:space="preserve">
+    <value>Signalizacijos sustabdymas visiems jūsų gynėjams 6 valandoms buvo sėkmingas.</value>
+  </data>
+  <data name="LabelSeguroEliminarProtector" xml:space="preserve">
+    <value>Ar tikrai pašalinsite apsaugą? Šioje prenumeratoje panaudoti įgaliojimai nebus grąžinti, o apie šį veiksmą bus pranešta gynėjui.</value>
+  </data>
+  <data name="LabelProtectorEliminado" xml:space="preserve">
+    <value>Pasirinktas gynėjas buvo ištrintas. Įgaliojimai nebus grąžinti gynėjui. Apie šį veiksmą bus pranešta gynėjui</value>
+  </data>
+  <data name="LblConfirmacionRequerida" xml:space="preserve">
+    <value>Svarbus! Reikalingas patvirtinimas!</value>
+  </data>
+  <data name="LblNoHayRegistros" xml:space="preserve">
+    <value>Šiuo metu nėra žurnalų, kuriuos būtų galima rodyti</value>
+  </data>
+  <data name="LblMiLogin" xml:space="preserve">
+    <value>Mano prisijungimo vardas:</value>
+  </data>
+  <data name="LblSaldoPoderesEs" xml:space="preserve">
+    <value>Mano galios balansas yra:</value>
+  </data>
+  <data name="LblUsuarioID" xml:space="preserve">
+    <value>Mano vartotojo ID yra</value>
+  </data>
+  <data name="LblNoHayRegistrosAqui" xml:space="preserve">
+    <value>Dar niekas nieko neparašė!</value>
+  </data>
+  <data name="LblAlertaReportadaPorMi" xml:space="preserve">
+    <value>Įspėjimas, apie kurį pranešiau aš</value>
+  </data>
+  <data name="LblPara" xml:space="preserve">
+    <value>Pranešimo gavėjas:</value>
+  </data>
+  <data name="LblDe" xml:space="preserve">
+    <value>Laiško siuntėjas:</value>
+  </data>
+  <data name="ConfiguraciondeSOSpect" xml:space="preserve">
+    <value>SOSpect konfigūracija</value>
+  </data>
+  <data name="LblExitoEnAceptacion" xml:space="preserve">
+    <value>Jūsų sutarties priėmimas yra saugomas!</value>
+  </data>
+  <data name="LblFalloEnAceptacion" xml:space="preserve">
+    <value>Registracija nepavyko. Prašome bandyti dar kartą!</value>
+  </data>
+  <data name="LblDeclinacionAceptacion" xml:space="preserve">
+    <value>Nesutikdami su sutartimi negalite tęsti!</value>
+  </data>
+  <data name="LblParaIniciar" xml:space="preserve">
+    <value>PRADĖKIME SOSpect!! Norėdami atnaujinti įspėjimus apie netoliese esančius įrenginius, bakstelėkite mėlyną atnaujinimo mygtuką</value>
+  </data>
+  <data name="LblAlarmaNoGrave" xml:space="preserve">
+    <value>Naudokite geltoną mygtuką, kad pateiktumėte įspėjimus apie nedidelį pavojų ir įspėtumėte savo bendruomenę ar gynėjus. Galite pasirinkti perspėjimo tipą ir pažymėti jį kaip įvykdytą nusikaltimą. Šis mygtukas paleidžia įspėjimą tikslioje jūsų vietoje ir yra naudingas, kai reikia pagalbos. Taip pat galite pasirinkti tašką žemėlapyje, kad surastumėte įspėjimą nepakenkdami savo vietai.</value>
+  </data>
+  <data name="LblCrimenCometido" xml:space="preserve">
+    <value>Raudonas mygtukas suaktyvina kategoriją: nusikaltimas padarė aliarmą. SOSpect nereikalauja, kad įtrauktumėte kategoriją dėl laiko svarbos šiais atvejais. Žadintuvas automatiškai įjungiamas į jūsų tikslią vietą. Taip pat galite pasirinkti tašką žemėlapyje, kad įdėtumėte perspėjimą, tada pakeiskite kategoriją į padarytą nusikaltimą.</value>
+  </data>
+  <data name="LblDescripcionAlarmas" xml:space="preserve">
+    <value>Apatinėje juostoje esančioje parinktyje "Apibūdinti" rasite jūsų ar kitų pateiktų aliarmų sąrašą. Jei sukūrėte žadintuvą, galite pridėti aprašymą. Jei žadintuvą sukūrė kažkas kitas, galite įvertinti jo teisingumą ir papildyti jo aprašymą. Būk atsargus! Jei pateiksite klaidingą informaciją arba neteisingus įvertinimus, jūsų paskyra gali būti laikinai sustabdyta. Atidžiai peržiūrėkite taisykles ir sąlygas, kad to išvengtumėte.</value>
+  </data>
+  <data name="LblDescripcionMensajes" xml:space="preserve">
+    <value>Viršutiniame dešiniajame kampe esančiame varpelyje galite skaityti savo pranešimus, kuriuose yra prenumeratos pranešimai ir naujausi pavojaus signalai. Šis sąrašas skiriasi nuo aprašymų parinkties, kurioje galite tiesiogiai rasti naujausius pavojaus signalus.</value>
+  </data>
+  <data name="LblDescripcionMenu" xml:space="preserve">
+    <value>Viršutiniame kairiajame kampe esančioje pavaroje rasite SOSpect konfigūravimo parinktis. Galite nusipirkti galių, kad įsigytumėte prenumeratas ir apsaugotumėte savo šeimą arba išplėstumėte žadintuvo priėmimo spindulį. MINĖTI! Pradžioje suteikiame jums 80 galių, kad nuo pat pradžių galėtumėte įsigyti dvi prenumeratas.</value>
+  </data>
+  <data name="LblRecomendaciones" xml:space="preserve">
+    <value>KARTU MES ESAME NENUGALIMI! Pagrindinės įspėjimo ir įspėjimų gavimo 100 metrų spinduliu funkcijos yra nemokamos, o kai pradėsite, mes suteikiame jums 2 prenumeratas. Pakvieskite savo bendruomenę ir šeimos narius pasinaudoti šia nemokama paslauga kovojant su didėjančiu nusikalstamumu. Galite išgelbėti gyvybes arba būti išgelbėti laiku gavę įspėjimą. Perspėjimai apie prarastus žmones ar naminius gyvūnus yra 10 kilometrų, o smurtinės demonstracijos - 1 kilometras</value>
+  </data>
+  <data name="LblPromocion" xml:space="preserve">
+    <value>Galiausiai atminkite, kad gausite įgaliojimą už kiekvieną teisingą įvertinimą, kurį pateikiate "SOSpect", kai aliarmų balsavimas baigsis po 90 minučių nuo jų išdėstymo. Dauguma žmonių yra sąžiningi ir kartu mes apsaugosime vieni kitus ir savo šeimas. SVEIKI ATVYKĘ Į SOSPECT!</value>
+  </data>
+  <data name="LblDescripcionMapa" xml:space="preserve">
+    <value>Bet kuriuo metu apatinės juostos kairėje galite pasirinkti parinktį "MAP", kuri yra "SOSpect" pradžios taškas. Iš ten galite peržiūrėti netoliese esančius žadintuvus. Jūsų vieta bus rodoma žemėlapio centre, o apskritimas nurodo spindulį, kuris gali jus paveikti. Pagal numatytuosius nustatymus šis spindulys yra 100 metrų, tačiau jį galite pakeisti nustatymų meniu.</value>
+  </data>
+  <data name="LblRecomendacionImportante" xml:space="preserve">
+    <value>Svarbu periodiškai atidaryti SOSpect, prieš išeinant iš namų arba atvykus į vietą, kad atnaujintumėte savo vietą. Tokiu būdu galime jums pranešti, jei jūsų vietovėje yra kokia nors rizika. Atminkite, kad uždarius programą negalėsime sužinoti jūsų buvimo vietos dėl įrenginių operacinių sistemų nustatytų apribojimų. Patikrinkite taisykles ir nuostatas, susijusias su jūsų buvimo vieta.</value>
+  </data>
+  <data name="LblUsuarioBloqueado" xml:space="preserve">
+    <value>Vartotojas sustabdytas dėl neigiamų ženklų</value>
+  </data>
+  <data name="LblMarcasNegativas" xml:space="preserve">
+    <value>Mano neigiamų balų skaičius yra</value>
+  </data>
+  <data name="LblCuentaSuspendida" xml:space="preserve">
+    <value>Paskyra laikinai sustabdyta dėl neigiamų kitų naudotojų ženklų</value>
+  </data>
+  <data name="LblTitleCuentaSuspendida" xml:space="preserve">
+    <value>Paskyra laikinai sustabdyta</value>
+  </data>
+  <data name="LblFechaFinSuspension" xml:space="preserve">
+    <value>Sustabdymo pabaigos data yra</value>
+  </data>
+  <data name="LblTocaAqui" xml:space="preserve">
+    <value>Norėdami eiti, bakstelėkite čia</value>
+  </data>
+  <data name="LblNoTienesConexion" xml:space="preserve">
+    <value>Nėra interneto ryšio</value>
+  </data>
+  <data name="LblExplicacionSinConexion" xml:space="preserve">
+    <value>Jūsų pareiškimas reikalingas norint prisijungti prie "SOSpect". Be interneto negalime žinoti, ar jis aktyvus.</value>
+  </data>
+  <data name="LblSinConexionDescripcion" xml:space="preserve">
+    <value>Aktyvus internetas reikalingas norint sužinoti jūsų SOSpect paskyros būseną.</value>
+  </data>
+  <data name="LblSinConexionQueHacer" xml:space="preserve">
+    <value>Suaktyvinkite internetą ir iš naujo paleiskite SOSpect</value>
+  </data>
+  <data name="SefinalizalasubscripcionporsolicituddelusuarioPROTEGIDOatravésdelaAPIdesdelaAPP" xml:space="preserve">
+    <value>Prenumerata nutraukiama APSAUGOTO vartotojo prašymu per API iš TPP</value>
+  </data>
+  <data name="Nopuederenovarsedebidoaquefuecancelada,requieresubscripciónnueva" xml:space="preserve">
+    <value>Negalima atnaujinti, nes jis buvo atšauktas, reikalinga nauja prenumerata</value>
+  </data>
+  <data name="Alarmasgeneradaspormicirculosocial" xml:space="preserve">
+    <value>Pavojaus signalai, kuriuos generuoja mano socialinis ratas</value>
+  </data>
+  <data name="Incrementomidiametrodevigilancia" xml:space="preserve">
+    <value>Aš padidinu savo stebėjimo skersmenį</value>
+  </data>
+  <data name="Zonadevigilanciaadicional" xml:space="preserve">
+    <value>Papildoma priežiūros zona</value>
+  </data>
+  <data name="Renovable" xml:space="preserve">
+    <value>Atsinaujinančios</value>
+  </data>
+  <data name="SefinalizalasubscripcionporsolicituddelusuarioPROTECTORatravésdelaAPIdesdelaAPP" xml:space="preserve">
+    <value>Prenumerata nutraukiama PROTECTOR vartotojo prašymu per API iš APP</value>
+  </data>
+  <data name="LblEsRenovable" xml:space="preserve">
+    <value>Ar ji gali būti pratęsta?</value>
+  </data>
+  <data name="LblObsSubs" xml:space="preserve">
+    <value>Prenumeratos pastaba:</value>
+  </data>
+  <data name="NingunaObservacion" xml:space="preserve">
+    <value>Nėra komentarų</value>
+  </data>
+  <data name="Subscripcionvigente" xml:space="preserve">
+    <value>Dabartinė prenumerata</value>
+  </data>
+  <data name="Actualmenteactivoenotrasuscripcion" xml:space="preserve">
+    <value>Šiuo metu aktyvi su kita prenumerata</value>
+  </data>
+  <data name="LblRadioActual" xml:space="preserve">
+    <value>Mano dabartinis spindulys gauti pavojaus signalus yra:</value>
+  </data>
+  <data name="LblPoderesRequeridosZV" xml:space="preserve">
+    <value>Galios, reikalingos pasirinktai plėtrai</value>
+  </data>
+  <data name="OptTerminosCondiciones" xml:space="preserve">
+    <value>SOSpect taisyklės ir sąlygos</value>
+  </data>
+  <data name="DebesAbrirLaApp" xml:space="preserve">
+    <value>"SOSpect" negali žinoti vartotojo buvimo vietos pokyčių, kai jis yra uždarytas, tai atsitinka pagal mobiliųjų telefonų operacinių sistemų baterijų išsaugojimo politiką, todėl svarbu, kad vartotojas dažnai atidarytų programą, kad patikrintų pavojaus signalus toje vietoje, į kurią jis persikėlė, ir laiku gautų netoliese esančius pavojaus signalus.</value>
+  </data>
+  <data name="InvitaMasPersonas" xml:space="preserve">
+    <value>Siekiant pagerinti vartotojo saugumą, svarbu, kad aplinkiniai, šeima ir kaimynai atsisiųstų nemokamą programą. Jei netoliese nėra vartotojų, vartotojas gali būti laiku neįspėtas arba jo įspėjimai gali būti neišgirsti, išlaikant rizikos būseną, kokia ji buvo prieš atsisiunčiant programą. Svarbu pakviesti daugiau žmonių padėti vieni kitiems!</value>
+  </data>
+  <data name="Insertiondone" xml:space="preserve">
+    <value>Įterpimas atliktas.</value>
+  </data>
+  <data name="AnerroroccurredwhilequalifyingthealarmCode1" xml:space="preserve">
+    <value>Vertinant žadintuvą su kodu 1 įvyko klaida</value>
+  </data>
+  <data name="AnerroroccurredwhilequalifyingthealarmCode2" xml:space="preserve">
+    <value>Vertinant žadintuvą su kodu 2 įvyko klaida</value>
+  </data>
+  <data name="AnerroroccurredwiththealarmqualificationmodelCode3" xml:space="preserve">
+    <value>Klaida įvyko vertinant aliarmą su kodu 3</value>
+  </data>
+  <data name="Userregistrationsuccessful" xml:space="preserve">
+    <value>Jūsų vartotojas buvo užregistruotas!</value>
+  </data>
+  <data name="Anerroroccurredwhileregisteringtheusercode1" xml:space="preserve">
+    <value>Klaida įvyko registruojant vartotoją kodu 1</value>
+  </data>
+  <data name="Anerroroccurredwhileregisteringtheusercode2" xml:space="preserve">
+    <value>Klaida įvyko registruojant vartotoją kodu 2</value>
+  </data>
+  <data name="Anerroroccurredwiththepeoplemodelforuserregistrationcode3" xml:space="preserve">
+    <value>Klaida įvyko registruojant vartotoją kodu 3</value>
+  </data>
+  <data name="Permisosolicitadoconexito" xml:space="preserve">
+    <value>Sėkmingai paprašytas leidimas</value>
+  </data>
+  <data name="OcurriounerrorenelprocesodesolicitarpermisoalprotegidoCodigo1" xml:space="preserve">
+    <value>Klaida su kodu 1 įvyko prašant leidimo iš apsaugoto</value>
+  </data>
+  <data name="Nofueposiblerealizarenviarlasolicituddepermisoalprotegidoporqueelmodelonoesvalido" xml:space="preserve">
+    <value>Nebuvo įmanoma išsiųsti leidimo prašymo saugomam asmeniui, modelis negalioja</value>
+  </data>
+  <data name="AlertaEnUbicacion" xml:space="preserve">
+    <value>Norite sukurti SOSpect įspėjimą šioje vietoje?</value>
+  </data>
+  <data name="CrearEnUbicacionActual" xml:space="preserve">
+    <value>Norite sukurti SOSpect įspėjimą savo dabartinėje vietoje?</value>
+  </data>
+  <data name="SeguroCerrarSesion" xml:space="preserve">
+    <value>Ar tikrai atsijungsite?</value>
+  </data>
+  <data name="Tu" xml:space="preserve">
+    <value>Tu</value>
+  </data>
+  <data name="Anonimo" xml:space="preserve">
+    <value>Anonimas</value>
+  </data>
+  <data name="AlarmaCerrada" xml:space="preserve">
+    <value>Signalizacija išjungta</value>
+  </data>
+  <data name="LblSaldoPoderesInsuficiente" xml:space="preserve">
+    <value>Jūsų galios balansas yra nepakankamas</value>
+  </data>
+  <data name="LblComprarPoderes" xml:space="preserve">
+    <value>Pirkite įgaliojimus</value>
+  </data>
+  <data name="LblSeguroRenovar" xml:space="preserve">
+    <value>Ar esate tikri dėl šios prenumeratos atnaujinimo?</value>
+  </data>
+  <data name="OptReportes" xml:space="preserve">
+    <value>Ataskaitos</value>
+  </data>
+  <data name="LblReportesTitulo" xml:space="preserve">
+    <value>SOSpect ataskaitos</value>
+  </data>
+  <data name="LblReportesDescripcion" xml:space="preserve">
+    <value>Ataskaitos suteikia jums galimybę suprasti, kaip padėjote kitiems naudotojams išvengti nepalankių situacijų. Be to, jie leidžia nustatyti pavojingas zonas savo miesto žemėlapyje ir stebėti nusikalstamumo raidą laikui bėgant. Be to, atliekant modelio analizę, galima generuoti išankstinius įspėjimus prieš įvykstant neigiamiems įvykiams. Svarbu pažymėti, kad pagrindinė ataskaita yra nemokama, o kitos ataskaitos gali turėti išlaidų dėl skaičiavimo suvartojimo, reikalingo jų generavimui.</value>
+  </data>
+  <data name="OptReporteDeCalorEnZona" xml:space="preserve">
+    <value>Ataskaita su spalvų intensyvumo žemėlapiais</value>
+  </data>
+  <data name="OptReporteEvolucionEnElTiempo" xml:space="preserve">
+    <value>Įspėjimo evoliucijos ataskaita pagal laiką</value>
+  </data>
+  <data name="OptReportesPredictivos" xml:space="preserve">
+    <value>Nuspėjamosios ataskaitos</value>
+  </data>
+  <data name="OptReporteAnaliticoDeDescripcionesAlarmas" xml:space="preserve">
+    <value>Analitinės aliarmo pokalbių ataskaitos</value>
+  </data>
+  <data name="LblReporteCalorSospect" xml:space="preserve">
+    <value>SOSpect šilumos žemėlapiai</value>
+  </data>
+  <data name="LblReporteEnConstruccion" xml:space="preserve">
+    <value>Greitai!! Ši funkcija kuriama!</value>
+  </data>
+  <data name="LblDescripcionMapaDeCalor" xml:space="preserve">
+    <value>Šioje ataskaitoje turėsite prieigą prie savo vietovės šilumos žemėlapio, kuriame galėsite pasirinkti skirtingus mėnesius nuo SOSpect veiklos pradžios. Ši funkcija leis jums stebėti ir suprasti kiekvienos jus dominančios žemėlapio srities raidą.</value>
+  </data>
+  <data name="LblCostoReporte" xml:space="preserve">
+    <value>Atminkite, kad šios funkcijos naudojimas reikalauja skaičiavimo išlaidų ir reikalauja galios, nors tai nebus didelė vertė. Tačiau galite jį įsigyti be jokių problemų naudodamiesi galiomis, kurias suteikiame pirmą kartą naudodami programą.</value>
+  </data>
+  <data name="LblReporteEvolucionAlarmas" xml:space="preserve">
+    <value>Pavojaus signalų, įdėtų į SOSpect, evoliucija</value>
+  </data>
+  <data name="LblDescripcionEvolucionAlarmas" xml:space="preserve">
+    <value>Šioje ataskaitoje galėsite sužinoti kiekvieno tipo aliarmo tendencijas laikui bėgant jūsų vietovėje. Galėsite stebėti ir analizuoti pavojingumo tendencijas, taip pat nustatyti galimą nusikalstamumo sumažėjimą.</value>
+  </data>
+  <data name="LblReportePredictivo" xml:space="preserve">
+    <value>SOSpect nuspėjamosios ataskaitos</value>
+  </data>
+  <data name="LblDescripcionReportesPredictivos" xml:space="preserve">
+    <value>Kadangi SOSpect bendruomenė generuoja pakankamai duomenų, galima atlikti tikimybe pagrįstas įvykių prognozes ir analitinius įrankius. Šios ataskaitos leis jums sužinoti, kada artėja įspėjimų bangos ar nusikalstamos veiklos padidėjimas, suteikdami jums galimybę imtis būtinų atsargumo priemonių, kad išvengtumėte bet kokio pavojaus jums, jūsų šeimai ir jūsų bendruomenei.</value>
+  </data>
+  <data name="LblReporteAnalisisDeTextos" xml:space="preserve">
+    <value>SOSpect žadintuvo pokalbių analizės ataskaita</value>
+  </data>
+  <data name="LblDescripcionAnalisisTextos" xml:space="preserve">
+    <value>Dėl to, kad vartotojai apibūdina pavojaus signalus ir atnaujina jų evoliuciją per vidinį "SOSpect" pokalbį, ši ataskaita leis vizualizuoti tipologijas, kurios labiausiai veikia bendruomenę. Tai suteikia galimybę imtis veiksmų, kad pagerėtų saugos suvokimas jūsų vietovėje.</value>
+  </data>
+  <data name="LblRangoReporte" xml:space="preserve">
+    <value>Ši ataskaita apima pastarąsias 30 dienų</value>
+  </data>
+  <data name="AcercadeSOSpect" xml:space="preserve">
+    <value>Apie SOSpect</value>
+  </data>
+  <data name="Porcentajedealarmasciertasfrenteafalsasenunradiodeunkilometroymedio" xml:space="preserve">
+    <value>Teisingų ir klaidingų pavojaus signalų procentas pusantro kilometro spinduliu</value>
+  </data>
+  <data name="Promediodetiempoenminutosentrelanzamientodealarmaenmizonaylaprimeracalificacionodescripcion" xml:space="preserve">
+    <value>Vidutinis laikas minutėmis nuo aliarmo paleidimo mano vietovėje iki pirmojo įvertinimo ar aprašo</value>
+  </data>
+  <data name="Cantidadrealdepersonasenunradiodeunkilometroymedio" xml:space="preserve">
+    <value>Faktinis žmonių skaičius pusantro kilometro spinduliu</value>
+  </data>
+  <data name="Cantidadrealdepersonasenmiradioactual" xml:space="preserve">
+    <value>Faktinis žmonių skaičius mano dabartiniame spindulyje</value>
+  </data>
+  <data name="Miradioactualderecepcionyenviodealarmasenmetros" xml:space="preserve">
+    <value>Mano dabartinis aliarmų priėmimo ir siuntimo spindulys metrais</value>
+  </data>
+  <data name="Cantidadrealdepersonasquerecibieronmisalarmas" xml:space="preserve">
+    <value>Faktinis žmonių, gavusių mano pavojaus signalus, skaičius</value>
+  </data>
+  <data name="Cantidaddenotificacionesdealarmaenviadasdemiparte" xml:space="preserve">
+    <value>Iš manęs išsiųstų pavojaus signalų skaičius</value>
+  </data>
+  <data name="Personasquereportaronmiayudacomonegativaofalsa" xml:space="preserve">
+    <value>Žmonės, kurie pranešė apie mano pagalbą kaip neigiamą ar klaidingą</value>
+  </data>
+  <data name="Personasqueagradecieronmiayuda" xml:space="preserve">
+    <value>Žmonės, kurie vertino mano pagalbą</value>
+  </data>
+  <data name="Poderesganadosporregalos" xml:space="preserve">
+    <value>Dovanomis įgytos galios</value>
+  </data>
+  <data name="LblParticipacionTpAlarma" xml:space="preserve">
+    <value>Dalyvavimas pagal aliarmo tipą</value>
+  </data>
+  <data name="LblMetricBasics" xml:space="preserve">
+    <value>Pagrindinė metrika</value>
+  </data>
+  <data name="LblEfectiAlarmas" xml:space="preserve">
+    <value>Signalizacijos efektyvumas</value>
+  </data>
+  <data name="LblTotalAlarmas" xml:space="preserve">
+    <value>Iš viso pavojaus signalų</value>
+  </data>
+  <data name="LblAlarmasVerdaderas" xml:space="preserve">
+    <value>Tikri pavojaus signalai</value>
+  </data>
+  <data name="LblAlarmasFalsas" xml:space="preserve">
+    <value>Klaidingi pavojaus signalai</value>
+  </data>
+  <data name="LblAlarmasEfectivas" xml:space="preserve">
+    <value>Veiksmingų pavojaus signalų procentinė dalis</value>
+  </data>
+  <data name="LblMarcarLeidos" xml:space="preserve">
+    <value>Pažymėti viską kaip skaitytą</value>
+  </data>
+  <data name="LblSeMarcaronComoLeidos" xml:space="preserve">
+    <value>Visi pranešimai buvo pažymėti kaip perskaityti</value>
+  </data>
+  <data name="LabelNuevaVersion" xml:space="preserve">
+    <value>Yra nauja SOSpect versija ir ją reikia tęsti</value>
+  </data>
+  <data name="OptReporteBasico" xml:space="preserve">
+    <value>Pagrindinės ataskaitos - NEMOKAMOS!</value>
+  </data>
+  <data name="LblReporteBasicoSospect" xml:space="preserve">
+    <value>SOSpect pagrindinės ataskaitos</value>
+  </data>
+  <data name="LblReporteBasicoDescripcion" xml:space="preserve">
+    <value>Pagrindinės "SOSpect" ataskaitos suteikia jums vertingos informacijos apie tai, kokį poveikį jūsų aliarmo pranešimai padarė jūsų bendruomenei. Be to, jie parodo, kiek galių įgijo padėdami savo bendruomenei, tiksliai įvertindami pavojaus signalus ir sąžiningumą tuose reitinguose. Naudodami šias ataskaitas taip pat galite įvertinti bendrą vietovės elgseną per pastarąjį mėnesį, įskaitant procese dalyvavusių naudotojų skaičių ir naudotojų, gavusių neigiamų įvertinimų dėl neteisingo įtraukimo, skaičių.</value>
+  </data>
+  <data name="LblReporteBasicoDescripcionCorta" xml:space="preserve">
+    <value>Pagrindinės "SOSpect" ataskaitos suteikia jums vertingos informacijos apie... Žiūrėti daugiau...</value>
+  </data>
+  <data name="LblDescripcionRepTipoAlarma" xml:space="preserve">
+    <value>Šioje ataskaitoje pateikiama informacija apie dažniausiai pasitaikančius pavojaus signalus pusantro kilometro spinduliu nuo jūsų dabartinės vietos.</value>
+  </data>
+  <data name="LblDescripcionRepEfectAlarmas" xml:space="preserve">
+    <value>Šioje ataskaitoje pateikiama informacija apie efektyvumo ryšį tarp tikrų ir klaidingų pavojaus signalų pusantro kilometro spinduliu nuo jūsų dabartinės vietos.</value>
+  </data>
+  <data name="LblDescripcionRepMetricasBasicas" xml:space="preserve">
+    <value>Šioje ataskaitoje pateikiami duomenys apie naudotojų skaičių pusantro kilometro spinduliu nuo jūsų dabartinės vietos, taip pat naudotojų skaičių dabartiniame programų aliarmų spindulyje. Be to, jame yra keletas papildomos jus dominančios informacijos.</value>
+  </data>
+  <data name="OptVolumenAlarmas" xml:space="preserve">
+    <value>Netoliese esančių aliarmų tūris pagal tipą</value>
+  </data>
+  <data name="OptEfectividadAlarmas" xml:space="preserve">
+    <value>Netoliese esančių aliarmų efektyvumas</value>
+  </data>
+  <data name="OptMetricasBasicas" xml:space="preserve">
+    <value>Pagrindinė netoliese esančių aliarmų metrika</value>
+  </data>
+  <data name="LblCredibilidadActual" xml:space="preserve">
+    <value>Mano pavojaus signalų patikimumas yra toks:</value>
+  </data>
+  <data name="OptManualUsuarioSospect" xml:space="preserve">
+    <value>"SOSpect" vartotojo vadovas</value>
+  </data>
+  <data name="LblDescManualUsuario" xml:space="preserve">
+    <value>Susipažinkite su "SOSpect" – nemokama programa, skirta apsaugoti jus ir jūsų artimuosius. Sukūrėme glaustą ir išsamų internetinį vadovą, kuris padės tinkamai juo naudotis. Naudodami šį vadovą galite išnaudoti visas SOSpect galimybes ir pasinaudoti visomis jo saugos funkcijomis.</value>
+  </data>
+  <data name="SesionApple" xml:space="preserve">
+    <value>PRISIJUNGIMAS NAUDOJANT "APPLE"</value>
+  </data>
+  <data name="LblCredibilidadAlarmaActual" xml:space="preserve">
+    <value>Pavojaus signalo patikimumas:</value>
+  </data>
+  <data name="LblAccedeAlManual" xml:space="preserve">
+    <value>Vadovą galite rasti adresu:</value>
+  </data>
+  <data name="LblRefrescarLista" xml:space="preserve">
+    <value>Atnaujinti žadintuvų sąrašą</value>
+  </data>
+  <data name="LblErrorCorreoDispositivo" xml:space="preserve">
+    <value>Nepavyko išsiųsti el. laiško šiame įrenginyje</value>
+  </data>
+  <data name="LblErrorCorreo" xml:space="preserve">
+    <value>Klaida siunčiant el. laišką:</value>
+  </data>
+  <data name="LblSeleccioneTipoAlarma" xml:space="preserve">
+    <value>Pasirinkite aliarmo tipą</value>
+  </data>
+  <data name="LblCompraFallida" xml:space="preserve">
+    <value>Pirkimas nebuvo atliktas. Patikrinkite prieigą prie interneto ir bandykite dar kartą</value>
+  </data>
+  <data name="LblSeleccionePuntoMapa" xml:space="preserve">
+    <value>Žemėlapyje turite pasirinkti stebėjimo zoną</value>
+  </data>
+  <data name="Cantidaddealarmascolocadasenlaszonasdevigilanciasuscritas" xml:space="preserve">
+    <value>Registruotose stebėjimo zonose įrengtų pavojaus signalų skaičius</value>
+  </data>
+  <data name="Cantidaddealarmascolocadaspormisprotegidos" xml:space="preserve">
+    <value>Žadintuvų, kuriuos įdėjo mano protėviai, skaičius</value>
+  </data>
+  <data name="Credibilidadactualdelasalarmasqueenvioamicomunidad" xml:space="preserve">
+    <value>Dabartinis pavojaus signalų, kuriuos siunčiu savo bendruomenei, patikimumas</value>
+  </data>
+  <data name="LblCompraExitosa" xml:space="preserve">
+    <value>Sveikinu! Įsigijote teises įsigyti prenumeratas. Varpelyje rasite aiškinamąjį pranešimą!</value>
+  </data>
+  <data name="LblDebesHabilitarNotif" xml:space="preserve">
+    <value>Turite įjungti pranešimų siuntimą, kad SOSpect veiktų</value>
+  </data>
+  <data name="LblHabilitarNotifSettings" xml:space="preserve">
+    <value>Ši programa gali palaikyti pranešimus, tačiau tai turite įjungti nustatymuose.</value>
+  </data>
+  <data name="LblErrorHabilitandoUsoNotif" xml:space="preserve">
+    <value>Įvyko klaida, kuri neleido naudoti tiesioginių pranešimų</value>
+  </data>
+  <data name="LblMostrarDireccionEscape" xml:space="preserve">
+    <value>Marko bėglio evakuacijos maršrutas</value>
+  </data>
+  <data name="LblProximamenteSOSpect" xml:space="preserve">
+    <value>Jau greitai "SOSpect"!</value>
+  </data>
+  <data name="LblReportesProximos" xml:space="preserve">
+    <value>Analitinės ir nuspėjamosios ataskaitos su duomenų mokslu!</value>
+  </data>
+  <data name="LblHolaBienvenido" xml:space="preserve">
+    <value>Sveiki! Sveiki atvykę į SOSpect. 
+
+SOSpect yra nemokamas įrankis, skirtas apsaugoti jus ir jūsų artimuosius, laiku įspėjant apie netoliese esančias rizikas! Iš pradžių galite negauti daug pavojaus signalų, nes šalia jūsų dar nėra daug žmonių, kurie įdiegė SOSpect. Prašome pabandyti ir nepašalinti programos. SOSpect tam tikru momentu gali išgelbėti jūsų, taip pat jūsų šeimos ar bendruomenės žmogaus gyvybę.
+
+Nustatymuose esančio meniu "Ataskaitos" skiltyje "Pagrindinė ataskaita" skiltyje "Pagrindinė metrika" galite matyti netoliese esančių naudotojų skaičių aprėpties zonoje, kur gausite pavojaus signalus. Padėkite mums padidinti šį skaičių, tai nemokama ir leis jums gyventi saugiau!
+
+Kviečiame atidžiai perskaityti šį trumpą įvadinį vadovą, kuris suteiks jums idėją, kaip veikia SOSpect. Atminkite, kad jis bus rodomas tik vieną kartą įdiegus programą.
+
+Dėkojame, kad naudojate SOSpect ir prisidedate prie visų saugumo!
+
+Bakstelėkite ekraną, kad tęstumėte...</value>
+  </data>
+</root>

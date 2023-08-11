@@ -1,0 +1,84 @@
+﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                 x:Class="sospect.Views.BasicReportMetricasBasicasPage"
+                 xmlns:converters="clr-namespace:sospect.Converters"
+                 xmlns:fonts="clr-namespace:sospect.Resources.Fonts;assembly=sospect"
+                 xmlns:helpers="clr-namespace:sospect.Helpers"
+                 xmlns:ads="clr-namespace:sospect.CustomRenderers"
+                 xmlns:charts="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
+                 BackgroundColor="White"
+                 Title="{helpers:TranslateExtension Text='LblReporteBasicoSospect'}">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:InverseBooleanConverter x:Key="InverseBooleanConverter"/>
+            <converters:SKColorToXamarinColorConverter x:Key="ColorConverter"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <ScrollView>
+            <StackLayout Margin="20" >
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Row="0" Margin="0,20,0,20" Grid.Column="0" Grid.ColumnSpan="3" TextColor="Gray" Text="{helpers:TranslateExtension Text='LblMetricBasics'}" FontAttributes="Bold" FontSize="Large" />
+                    <Label
+                        Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3"
+                        Text="{helpers:TranslateExtension Text='LblDescripcionRepMetricasBasicas'}"
+                        Margin="0,20,0,20"
+                        FontSize="Medium"
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="StartAndExpand" 
+                        HorizontalTextAlignment="Start"
+                        TextColor="Black">
+                    </Label>
+
+                    <Label
+                        Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3"
+                        Text="{helpers:TranslateExtension Text='LblRangoReporte'}"
+                        FontSize="Small"
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="StartAndExpand" 
+                        HorizontalTextAlignment="Start"
+                        TextColor="Gray"/>
+
+                    <!-- Sección de MetricasBasicasReporte -->
+                    
+                    <CollectionView Margin="0,20,0,0" BackgroundColor="White" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" ItemsSource="{Binding MetricasBasicasReporte}">
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="3*"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <Label Grid.Column="0" FontSize="Small" TextColor="Gray" Text="{Binding DescripcionTraducida}" />
+                                    <Label Grid.Column="1" VerticalTextAlignment="Center" FontSize="Small" FontAttributes="Bold" TextColor="Black" Text="{Binding cantidad}" HorizontalOptions="EndAndExpand"/>
+
+                                    <BoxView Grid.Column="0" Grid.ColumnSpan="2" VerticalOptions="End" HeightRequest="1" BackgroundColor="Black" />
+                                </Grid>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                </Grid>
+            </StackLayout>
+        </ScrollView>
+        <Grid BackgroundColor="LightGray" Grid.Row="1" HeightRequest="90">
+            <ads:AdBanner></ads:AdBanner>
+        </Grid>
+    </Grid>
+</ContentPage>

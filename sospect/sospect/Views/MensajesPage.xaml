@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:fonts="clr-namespace:sospect.Resources.Fonts;assembly=sospect"
+             xmlns:helpers="clr-namespace:sospect.Helpers"
+             xmlns:ads="clr-namespace:sospect.CustomRenderers"
+             BackgroundColor="White"
+             Title="{helpers:TranslateExtension Text='LblMensajes'}"
+             x:Class="sospect.Views.MensajesPage">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <StackLayout Grid.Row="0" Margin="0,20,0,0">
+                <Label Text="{helpers:TranslateExtension Text='LblMensajes'}" TextColor="Gray" FontSize="Large" FontAttributes="Bold" HorizontalOptions="Center" />
+                <ListView x:Name="MessagesListView"
+                      ItemsSource="{Binding Messages}"
+                      BackgroundColor="White"
+                      HasUnevenRows="True"
+                      ItemTapped="MessagesListView_ItemTapped">
+                    <ListView.Header>
+                        <Grid Margin="0,20,0,0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="auto"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Label Text="{helpers:TranslateExtension Text='LblAsunto'}" TextColor="Gray" FontSize="Small" FontAttributes="Bold" HorizontalTextAlignment="Start"></Label>
+                            <Label Text="{helpers:TranslateExtension Text='LblFechaMensaje'}" TextColor="Gray" FontSize="Small" FontAttributes="Bold" HorizontalTextAlignment="End"></Label>
+                        </Grid>
+                    </ListView.Header>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid Margin="0,20,0,0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Label FontAttributes="{Binding estado, Converter={StaticResource BooleanToFontAttributeConverter}}" FontSize="Small" TextColor="Gray" Text="{Binding asunto}" Grid.Column="0"/>
+                                    <Label FontAttributes="{Binding estado, Converter={StaticResource BooleanToFontAttributeConverter}}" FontSize="Small" TextColor="Gray" Text="{Binding fecha_mensaje}" Grid.Column="1"/>
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <Label
+                x:Name="EmptyListLabel"
+                Text="{helpers:TranslateExtension Text='LblNoHayRegistros'}"
+                FontSize="18"
+                TextColor="Gray"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                IsVisible="{Binding IsListEmpty}" />
+                
+            </StackLayout>
+
+            <Frame Padding="5" BorderColor="Black" BackgroundColor="LightGray" Margin="0,15,0,0" HorizontalOptions="Center" HeightRequest="35" WidthRequest="380" CornerRadius="10" Grid.Row="1">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding MarkAllAsReadCommand}" NumberOfTapsRequired="1" />
+                </Frame.GestureRecognizers>
+                <Label Text="{helpers:TranslateExtension Text='LblMarcarLeidos'}"
+                       TextColor="Black"
+                       LineBreakMode="WordWrap"
+                       HorizontalOptions="CenterAndExpand"
+                       VerticalOptions="CenterAndExpand"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center" />
+            </Frame>
+
+            <Grid BackgroundColor="Black"
+                  Opacity="0.5"
+                  HorizontalOptions="FillAndExpand"
+                  VerticalOptions="FillAndExpand"
+                  Grid.Row="0"
+                  IsVisible="{Binding IsRunning}">
+                <ActivityIndicator VerticalOptions="Center"
+                                   HorizontalOptions="Center"
+                                   HeightRequest="50"
+                                   WidthRequest="50"
+                                   Color="DarkBlue"
+                                   IsRunning="{Binding IsRunning}">
+                </ActivityIndicator>
+            </Grid>
+            <Grid BackgroundColor="LightGray" Grid.Row="2" HeightRequest="90">
+                <ads:AdBanner></ads:AdBanner>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

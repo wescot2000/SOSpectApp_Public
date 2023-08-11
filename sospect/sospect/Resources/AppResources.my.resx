@@ -1,0 +1,1090 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Bienvenido" xml:space="preserve">
+    <value>SOSpect ကို ကြိုဆိုပါ</value>
+  </data>
+  <data name="InicieSesion" xml:space="preserve">
+    <value>ဆက်လက်လုပ်ဆောင်ရန် မှတ်ပုံတင်ပါ</value>
+  </data>
+  <data name="InicieSesionCon" xml:space="preserve">
+    <value>ဒါမှမဟုတ် ဝင်ဝင်ပါ</value>
+  </data>
+  <data name="SesionFacebook" xml:space="preserve">
+    <value>ဖေ့(စ်)ဘွတ်(ခ်)နဲ့ ဝင်ပါ</value>
+  </data>
+  <data name="SesionGoogle" xml:space="preserve">
+    <value>ဂူဂဲလ်နဲ့ လက်မှတ်ထိုးပါ</value>
+  </data>
+  <data name="LabelAlerta" xml:space="preserve">
+    <value>သတိပေးချက်</value>
+  </data>
+  <data name="LabelCrimen" xml:space="preserve">
+    <value>ရာဇဝတ်မှု</value>
+  </data>
+  <data name="LabelOK" xml:space="preserve">
+    <value>ဟုတ်ပြီ</value>
+  </data>
+  <data name="LabelCancelar" xml:space="preserve">
+    <value>ပယ်ဖျက်ပါ</value>
+  </data>
+  <data name="ReportarCrimen" xml:space="preserve">
+    <value>ရာဇဝတ်မှု အစီရင်ခံစာ</value>
+  </data>
+  <data name="LabelMapa" xml:space="preserve">
+    <value>မြေပုံ</value>
+  </data>
+  <data name="LabelDescribir" xml:space="preserve">
+    <value>ဖော်ပြပါ</value>
+  </data>
+  <data name="DescripcionAlarma" xml:space="preserve">
+    <value>နှိုးဆော်ချက်၏ ဖော်ပြချက်</value>
+  </data>
+  <data name="DescripcionSospechoso" xml:space="preserve">
+    <value>သံသယရှိသူရဲ့ ဖော်ပြချက်</value>
+  </data>
+  <data name="DescripcionVehiculo" xml:space="preserve">
+    <value>ယာဉ်ဖော်ပြချက်</value>
+  </data>
+  <data name="DescripcionArma" xml:space="preserve">
+    <value>လက်နက်၏ ဖော်ပြချက်</value>
+  </data>
+  <data name="PuntuacionDescripcion" xml:space="preserve">
+    <value>အမှတ်အသား ဖော်ပြချက်ကို အမှတ်ရခြင်း</value>
+  </data>
+  <data name="LabelEditar" xml:space="preserve">
+    <value>ထုတ်ဝေခြင်း</value>
+  </data>
+  <data name="DescripcionesParaAlarma" xml:space="preserve">
+    <value>ဒီနှိုးဆော်မှုအတွက် ပြုလုပ်ထားတဲ့ ဖော်ပြချက်တွေ</value>
+  </data>
+  <data name="EspacioPublicidad" xml:space="preserve">
+    <value>ကြော်ငြာများအတွက် နေရာ</value>
+  </data>
+  <data name="AlarmasRecientes" xml:space="preserve">
+    <value>ဖော်ပြချက်ကို ထပ်ဖြည့်စွက်ရန် မကြာသေးမီက သတိပေးချက်များ</value>
+  </data>
+  <data name="ConfirmarAlarma" xml:space="preserve">
+    <value>နှိုးဆော်ချက်ကို အတည်ပြုပါ</value>
+  </data>
+  <data name="LabelInformacion" xml:space="preserve">
+    <value>သတင်းအချက်အလက်</value>
+  </data>
+  <data name="LabelError" xml:space="preserve">
+    <value>အမှားအယွင်း</value>
+  </data>
+  <data name="LabelCancelado" xml:space="preserve">
+    <value>ဖျက်သိမ်းလိုက်</value>
+  </data>
+  <data name="LabelLoginCancelado" xml:space="preserve">
+    <value>Login ဖျက်သိမ်းခံရ</value>
+  </data>
+  <data name="LabelFallo" xml:space="preserve">
+    <value>ၡုံးနိမ့်မှု</value>
+  </data>
+  <data name="RecibeAlarma" xml:space="preserve">
+    <value>ခင်ဗျားရှိတဲ့နေရာအနီးမှာ နှိုးဆော်ချက်ရရှိခဲ့တာ တကယ့်လား။</value>
+  </data>
+  <data name="LabelConfirmo" xml:space="preserve">
+    <value>အတည်ပြုပါ</value>
+  </data>
+  <data name="LabelNoSeguro" xml:space="preserve">
+    <value>ငါမသေချာဘူး</value>
+  </data>
+  <data name="LabelEsFalsa" xml:space="preserve">
+    <value>မှားတာက မှားတယ်</value>
+  </data>
+  <data name="LabelConfirmar" xml:space="preserve">
+    <value>အတည်ပြုပါ</value>
+  </data>
+  <data name="AdvertenciaCalificacion" xml:space="preserve">
+    <value>ဤအဆင့်သတ်မှတ်ချက်ကို နောက်ပိုင်းတွင် မပြောင်းလဲနိုင်ပါ။ နှုန်းထား များ ၏ သဘောညီညီ မှု သည် သင် ၏ မဲ ကို ဆန့်ကျင် လျှင် ၎င်း သည် သင် ၏ အနာဂတ် ယုံကြည် စိတ်ချ မှု ကို အကျိုး သက်ရောက် နိုင် ပါ သည် ။ သေချာလား?</value>
+  </data>
+  <data name="LabelSi" xml:space="preserve">
+    <value>၁၉ ။</value>
+  </data>
+  <data name="LabelNo" xml:space="preserve">
+    <value>မဟုတ်ဘူး</value>
+  </data>
+  <data name="AlarmaEnviada" xml:space="preserve">
+    <value>နှိုးဆော်ချက်ပေးလိုက်တယ်!</value>
+  </data>
+  <data name="MsgTrasAlarmaEnviada" xml:space="preserve">
+    <value>အန္တရာယ်ကင်းပါက နှိုးဆော်ချက်ကို ကျေးဇူးပြု၍ နှိုးဆော်ပါက ဖုန်းကိုဝှက်ထားပြီး အန္တရာယ်မှလွတ်သွားပါ။</value>
+  </data>
+  <data name="notificacionurgente" xml:space="preserve">
+    <value>အနီးဆုံးဖုန်းတွေဆီ အရေးတကြီး သတိပေးချက်တစ်ခု ပေးပို့ပါမယ်။</value>
+  </data>
+  <data name="LabelAlarma" xml:space="preserve">
+    <value>သတိပေးချက်</value>
+  </data>
+  <data name="LabelMetros" xml:space="preserve">
+    <value>မီတာ</value>
+  </data>
+  <data name="LabelTuUbicacion" xml:space="preserve">
+    <value>သင့်နေရာ</value>
+  </data>
+  <data name="LabelUsuario" xml:space="preserve">
+    <value>အသုံးပြုသူ</value>
+  </data>
+  <data name="LabelTipoAlarma" xml:space="preserve">
+    <value>နှိုးဆော်မှုအမျိုးအစား</value>
+  </data>
+  <data name="DireccionEscape" xml:space="preserve">
+    <value>သံသယရှိသူရဲ့ လွတ်မြောက်ရာလိပ်စာကို ကျေးဇူးပြု၍ ညွှန်ပြပါ။</value>
+  </data>
+  <data name="DescripcionAlerta" xml:space="preserve">
+    <value>သတိပေးချက်၏ ဖော်ပြချက်</value>
+  </data>
+  <data name="DescripcionImplicado" xml:space="preserve">
+    <value>သတိပေးချက်တွင် ပါဝင်ခဲ့သူ၏ ဖော်ပြချက်</value>
+  </data>
+  <data name="DescripcionVehiculoImp" xml:space="preserve">
+    <value>မော်တော်ယာဉ်ပါဝင် (သက်ဆိုင်ပါက)</value>
+  </data>
+  <data name="ArmaImplicada" xml:space="preserve">
+    <value>ပါဝင်ပတ်သက်သော လက်နက် (သက်ဆိုင်မှုရှိပါက)</value>
+  </data>
+  <data name="LabelRutaEscape" xml:space="preserve">
+    <value>သံသယဖြစ်ဖွယ် လွတ်မြောက်ရာလမ်း</value>
+  </data>
+  <data name="ObjetivoSospect" xml:space="preserve">
+    <value>SOSpect က သူ တို့ နှင့် သူ တို့ ချစ် မြတ်နိုး ရ သူ များ ကို အန္တရာယ် များ ကို ရှောင်ရှား ရန် အလို့ငှာ ၊ အသုံးပြု သူ တစ် ဦး ၏ တည်နေရာ တွင် အန္တရာယ် များ ၏ သတိပေးချက် များ ကို အသိုင်းအဝိုင်း အား သတိပေး ရန် နှင့် လက်ခံ ရရှိ ရန် ခွင့်ပြု ရန် ရည်ရွယ် သည် ။ အသုံးပြု သူ များ ၏ တည်နေရာ ကို မျှဝေ ခြင်း သို့မဟုတ် ခြေရာခံ ခြင်း မ ရှိ ပါ ၊ သူ တို့ ၏ ကိုယ်ပိုင် ပိုင်ဆိုင် မှု ကို သေချာ စေ သည် ။ အသုံးပြုသူများသည် အန္တရာယ်ရှိသောအခြေအနေများ၏ သားကောင်မဖြစ်စေရန် အခြားသူများကို ကူညီပေးရန် အန္တရာယ်ရှိသော သတိပေးချက်များကို ပေးနိုင်သည်။</value>
+  </data>
+  <data name="UbicacionImportante" xml:space="preserve">
+    <value>တစ်စုံတစ်ယောက် က သူ တို့ ၏ တည်နေရာ အနီး တွင် အန္တရာယ် သတိပေး ချက် တစ် ခု ထား လျှင် သူ တို့ ကို သတိပေး နိုင် ရန် အသုံးပြု သူ ၏ တည်နေရာ ကို သိ ရန် အရေးကြီး သည် ။ သို့သော်လည်း ၊ အသုံးပြု သူ ၏ တည်နေရာ သည် ပုဂ္ဂလိက ဖြစ် ပြီး သတိပေးချက် များ ကို မျှဝေ သည့် မြေပုံ ပေါ်ရှိ အချက်အလက် များ သာလျှင် ဖြစ် သည် ။</value>
+  </data>
+  <data name="GenteUnida" xml:space="preserve">
+    <value>ရာဇဝတ်မှုလျော့နည်းစေရန်နှင့် အန္တရာယ်များသောအခြေအနေများ ကျရောက်ခြင်းကို ရှောင်ရှားရန်နှင့် ဘေးကင်းလုံခြုံမှုရှိရန် အခြားသူများကိုလည်း သတိပေးခြင်းဖြင့် ရာဇဝတ်မှုလျော့နည်းစေရန် ရပ်ကွက်သည် အတူတကွစုဝေးနိုင်ကြသည်။</value>
+  </data>
+  <data name="contactenos" xml:space="preserve">
+    <value>ကျွန်တော်တို့နဲ့ ဆက်သွယ်ပါ</value>
+  </data>
+  <data name="visitenos" xml:space="preserve">
+    <value>ကျွန်တော်တို့ဆီ လည်ပတ်ပြီး လည်ပတ်ကြည့်</value>
+  </data>
+  <data name="ZonaVigilancia" xml:space="preserve">
+    <value>စောင့်ကြည့်ရေးဇုန် နှစ်စဉ်ကြေး</value>
+  </data>
+  <data name="SeleccioneUbicacionVigilar" xml:space="preserve">
+    <value>စောင့်ကြည့်ရန် နေရာကိုရွေးပါ</value>
+  </data>
+  <data name="SeleccionEnMapa" xml:space="preserve">
+    <value>မြေပုံပေါ်မှာရွေးပါ</value>
+  </data>
+  <data name="ExplicaZonaVigilancia" xml:space="preserve">
+    <value>သင်ရွေးချယ်မည့်အချိန်၌ ထားရှိမည့် သတိပေးချက်အားလုံးကို မည်သူ့နေရာ၌မဆို အသိပေးပါလိမ့်မည်။ ဒီလိုနည်းနဲ့ အဲဒီအချိန်မှာ ပြေးနေတဲ့ အန္တရာယ်တွေကို သတိပြုမိနိုင်ပါတယ်။ သင့် ကလေး များ ၏ ကျောင်း များ ၊ တက္ကသိုလ် များ သို့မဟုတ် သင့် ဆွေမျိုး များ သို့မဟုတ် ချစ် မြတ်နိုး ရ သူ များ အလုပ် လုပ် သည့် နေရာ များ တွင် အန္တရာယ် များ ကို သတိပြု ခြင်း သည် သင့် ကလေး များ ၏ ကျောင်း များ သို့မဟုတ် တက္ကသိုလ် များ သို့မဟုတ် ဒေသ များ တွင် အန္တရာယ် များ ကို သတိပြု ခြင်း အတွက် သင့်တော် သည် ။</value>
+  </data>
+  <data name="CrearZonaV" xml:space="preserve">
+    <value>ဒီနေရာနဲ့ စောင့်ကြည့်ရေးဇုန်ကို ဖန်တီးပါ</value>
+  </data>
+  <data name="LabelLatitud" xml:space="preserve">
+    <value>လတ်တီတွဒ်</value>
+  </data>
+  <data name="LabelLongitud" xml:space="preserve">
+    <value>လောင်ဂျီတွဒ်</value>
+  </data>
+  <data name="LabelIntroduccion" xml:space="preserve">
+    <value>နိဒါန်း</value>
+  </data>
+  <data name="AmpliacionRadio" xml:space="preserve">
+    <value>နှိုးဆော်မှုအဝန်းကို တိုးချဲ့ခြင်း</value>
+  </data>
+  <data name="TuRadioActual" xml:space="preserve">
+    <value>ခင်ဗျားရဲ့ လက်ရှိအသံလွှင့်မှုကတော့</value>
+  </data>
+  <data name="CrearNuevoRadio" xml:space="preserve">
+    <value>ဒီရေဒီယိုအသစ်အတွက် ကျွန်မရဲ့ နှစ်စဉ်ကြေးကို ဖန်တီးပါ</value>
+  </data>
+  <data name="ExplicacionVigencias" xml:space="preserve">
+    <value>နှစ်စဉ်ကြေးအားလုံးဟာ တရားဝင်တယ်၊ အဓိကစာရင်းရဲ့ ပထမရွေးချယ်မှုမှာ နှစ်စဉ်ကြေးစျေးနှုန်းတွေကို ကျေးဇူးပြု၍ စစ်ဆေးပါ</value>
+  </data>
+  <data name="VasARequerir" xml:space="preserve">
+    <value>လိုအပ်ပါလိမ့်မယ်</value>
+  </data>
+  <data name="xPoderesParaSubs" xml:space="preserve">
+    <value>ဒီရေဒီယိုကို လက်ရှိ ရေဒီယိုမှာ ထည့်ပေးနိုင်တဲ့ စွမ်းအားတွေ</value>
+  </data>
+  <data name="Exito" xml:space="preserve">
+    <value>အောင်မြင်မှု</value>
+  </data>
+  <data name="SubscripcionCreada" xml:space="preserve">
+    <value>နှစ်စဉ်ကြေးကို အောင်မြင်စွာဖန်တီးခဲ့သည်။</value>
+  </data>
+  <data name="MensajeError" xml:space="preserve">
+    <value>ဆာဗာနဲ့ ချိတ်ဆက်ထားတဲ့ အမှားတစ်ခုရှိတယ်။ ကျေးဇူးပြု၍ ပြန်ကြိုးစားပါ။</value>
+  </data>
+  <data name="SeleccionaRuta" xml:space="preserve">
+    <value>သံသယရှိသူရဲ့ လွတ်မြောက်ရာလမ်းကို ရွေးချယ်ရမယ်။</value>
+  </data>
+  <data name="AprobarSolicitudes" xml:space="preserve">
+    <value>တောင်းဆိုချက်များကို အတည်ပြုပါ</value>
+  </data>
+  <data name="LabelAprobar" xml:space="preserve">
+    <value>ခွင့်ပြုချက်</value>
+  </data>
+  <data name="LabelRechazar" xml:space="preserve">
+    <value>ငြင်းပယ်ပါ</value>
+  </data>
+  <data name="CompletarSubscripcion" xml:space="preserve">
+    <value>အပြည့်အဝ ကာကွယ်ထားတဲ့ နှစ်စဉ်ကြေး</value>
+  </data>
+  <data name="CompletarSubsc" xml:space="preserve">
+    <value>နှစ်စဉ်ကြေးအပြည့်အစုံ</value>
+  </data>
+  <data name="LblMensajes" xml:space="preserve">
+    <value>မက်ဆေ့</value>
+  </data>
+  <data name="LblFechaMensaje" xml:space="preserve">
+    <value>သတင်းအချက်အလက် ရက်စွဲ</value>
+  </data>
+  <data name="LblMenu" xml:space="preserve">
+    <value>ဖွဲ့စည်းတည်ဆောက်ရေး</value>
+  </data>
+  <data name="OptCompraPoderes" xml:space="preserve">
+    <value>အသွင်အပြင်များကို ဖွင့်ရန် အာဏာဝယ်ယူပါ</value>
+  </data>
+  <data name="OptGestionarProtegidos" xml:space="preserve">
+    <value>ကာကွယ်စောင့်ရှောက်သူတွေကို စီမံခန့်ခွဲပါ</value>
+  </data>
+  <data name="OptCrearZonas" xml:space="preserve">
+    <value>စောင့်ကြည့်ရေးဇုန်တွေကို ဖန်တီးပါ</value>
+  </data>
+  <data name="OptAumentarRadio" xml:space="preserve">
+    <value>ကျွန်မရဲ့ သတိရှိတဲ့ ဧည့်ကြိုအသံလွှင့်မှုကို တိုးမြှင့်ပါ</value>
+  </data>
+  <data name="OptAcercaDe" xml:space="preserve">
+    <value>SOSpect application အကြောင်း</value>
+  </data>
+  <data name="OptCerrarSesion" xml:space="preserve">
+    <value>ထွက်ခွာသွားပါ</value>
+  </data>
+  <data name="LblProtectores" xml:space="preserve">
+    <value>ကျွန်မရဲ့ကာကွယ်မှုတွေ</value>
+  </data>
+  <data name="LblSuspender" xml:space="preserve">
+    <value>ယာယီ ဆိုင်းငံ့ထားခြင်း</value>
+  </data>
+  <data name="LblEliminarProtegido" xml:space="preserve">
+    <value>အကာအကွယ်ကို ဖယ်ရှားပါ</value>
+  </data>
+  <data name="LblSubscrProtegido" xml:space="preserve">
+    <value>ကာကွယ်ထားသော နှစ်စဉ်ကြေး</value>
+  </data>
+  <data name="LblIDUsuarioAProteger" xml:space="preserve">
+    <value>ကာကွယ်ရန် အသုံးပြုသူ ID ကို ဝင်ပါ။ (ထိုတန်ဖိုးသည် သင်ချိတ်ဆက်လိုသော အသုံးပြုသူ၏ SOSpect ပုံစံစာရင်း၏ ထိပ်ဆုံးတွင် တည်ရှိသည်)</value>
+  </data>
+  <data name="LblRelacionProtegido" xml:space="preserve">
+    <value>ဒီပရိုတက်ဂျီနဲ့ ကျွန်မရဲ့ ဆက်ဆံရေးကတော့</value>
+  </data>
+  <data name="LblSolicitarPermiso" xml:space="preserve">
+    <value>အသုံးပြုသူထံမှ ခွင့်ပြုချက်တောင်း</value>
+  </data>
+  <data name="LblCompleteCampos" xml:space="preserve">
+    <value>ကျေးဇူးပြု၍ လယ်ကွင်းအားလုံးကို ပြီးအောင်လုပ်ပါ။</value>
+  </data>
+  <data name="LblProcesarSolicitud" xml:space="preserve">
+    <value>တောင်းဆိုချက်ကို စီမံဆောင်ရွက်ရာတွင် မှားယွင်းမှုတစ်ခုရှိခဲ့သည်။ ကျေးဇူးပြု၍ ပြန်ကြိုးစားပါ။</value>
+  </data>
+  <data name="LblProtegidos" xml:space="preserve">
+    <value>ပရိုတက်ဂျီး</value>
+  </data>
+  <data name="LblUsuarioProtegido" xml:space="preserve">
+    <value>ကာကွယ်ထားသော အသုံးပြုသူ ID</value>
+  </data>
+  <data name="LblFechaActivacion" xml:space="preserve">
+    <value>လှုပ်ရှားမှု ရက်စွဲ</value>
+  </data>
+  <data name="LblFechaFinalizacion" xml:space="preserve">
+    <value>အဆုံးသတ်ရက်စွဲ</value>
+  </data>
+  <data name="LblAccion" xml:space="preserve">
+    <value>လှုပ်ရှားမှု</value>
+  </data>
+  <data name="LblCantidadPoderes" xml:space="preserve">
+    <value>အာဏာအရေအတွက်</value>
+  </data>
+  <data name="LblPrecio" xml:space="preserve">
+    <value>ဈေးနှုန်း</value>
+  </data>
+  <data name="LblComprar" xml:space="preserve">
+    <value>ဝယ်ယူပါ</value>
+  </data>
+  <data name="LblValoresSubsc" xml:space="preserve">
+    <value>နှစ်စဉ်ကြေးစံနှုန်းများ</value>
+  </data>
+  <data name="LblTerminos" xml:space="preserve">
+    <value>SOSpect APP အတွက် ဝန်ဆောင်မှု စည်းကမ်းချက်များ</value>
+  </data>
+  <data name="LblAcepto" xml:space="preserve">
+    <value>စာချုပ်ကို လက်ခံပါတယ်</value>
+  </data>
+  <data name="LblNoAcepto" xml:space="preserve">
+    <value>ကျွန်တော် လက်မခံဘူး</value>
+  </data>
+  <data name="LblOpcionesProtegidos" xml:space="preserve">
+    <value>SOSpect App က ကာကွယ်ကာ ကာကွယ်ပေးပြီး ကာကွယ်ပေး</value>
+  </data>
+  <data name="LblExplicacionProtegidos" xml:space="preserve">
+    <value>သင့်နှင့်ဝေးနေလျှင်ပင် သင့်လူမှုအသိုင်းအဝိုင်းဝင်များထံမှ သတိပေးချက်များကို သင်ရရှိနိုင်ပါသည်။ ဒီမှာ ဒီအသွင်အပြင်ကို စီမံခန့်ခွဲနိုင်ပါတယ်</value>
+  </data>
+  <data name="OptIniciarTramite" xml:space="preserve">
+    <value>အကာအကွယ်တစ်ခု ထပ်ဖြည့်စွက်သည့် လုပ်ငန်းစဉ်ကို စတင်ပါ</value>
+  </data>
+  <data name="OptAprobarSolicitud" xml:space="preserve">
+    <value>ကာကွယ်သူတစ်ဦးထံမှ တောင်းဆိုချက်ကို အတည်ပြု</value>
+  </data>
+  <data name="OptListarProtegidos" xml:space="preserve">
+    <value>ကျွန်မရဲ့ ပရိုတက်ဂျီးစာရင်းကို ကြည့်ပါ</value>
+  </data>
+  <data name="OptListarProtectores" xml:space="preserve">
+    <value>ကျွန်မရဲ့ ကာကွယ်သူတွေရဲ့ စာရင်းကို ကြည့်ပါ</value>
+  </data>
+  <data name="OptVolver" xml:space="preserve">
+    <value>ပြန်လာပါ</value>
+  </data>
+  <data name="LblPoderesSospect" xml:space="preserve">
+    <value>SOSpect App ရဲ့ စွမ်းအား</value>
+  </data>
+  <data name="LblOpcionesPoderes" xml:space="preserve">
+    <value>စွမ်းအင် စီမံ ခန့်ခွဲ ရေး ရွေးချယ် မှု ကို ကြိုဆို ပါ တယ် ၊ ဘာ လုပ် ချင် သလဲ ။</value>
+  </data>
+  <data name="LblSubscripcionesCosto" xml:space="preserve">
+    <value>ဘယ်နှစ်စဉ်ကြေးတွေ ဝယ်နိုင်တယ်၊ သူတို့ရဲ့ ကုန်ကျစရိတ်တွေကို သိချင်ပါတယ်</value>
+  </data>
+  <data name="LblQuieroComprar" xml:space="preserve">
+    <value>နှစ်စဉ်ကြေးယူဖို့ စူပါတန်ခိုးတွေကို ဝယ်ချင်ပါတယ်</value>
+  </data>
+  <data name="ExplicacionRadio" xml:space="preserve">
+    <value>ပရိုဂရမ် ၏ အသုံးပြု သူ အားလုံး အတွက် မူတည် သော ရေဒီယို သည် မီတာ ၁၀၀ ဝန်းကျင် တွင် ရှိ သည် ။ ဒီရေဒီယိုကို ပရိုဂရမ်ရဲ့ စွမ်းအားတွေကိုသုံးပြီး တိုးချဲ့နိုင်ပါတယ်။ ပြီးတော့ ကိုယ့်အတွက် လိုချင်တဲ့ အသံလွှင့်မှုကို ရွေးလိုက်ပါ–</value>
+  </data>
+  <data name="LblAsunto" xml:space="preserve">
+    <value>တိုတိုတုတ်တုတ် ဖော်ပြချက်</value>
+  </data>
+  <data name="LblCompraPoderes" xml:space="preserve">
+    <value>အာဏာပိုင်များဝယ်ယူခြင်း</value>
+  </data>
+  <data name="OptCompletarTramite" xml:space="preserve">
+    <value>အကာအကွယ်ပေးဖို့ လုပ်ထုံးလုပ်နည်း အပြည့်အစုံ</value>
+  </data>
+  <data name="LabelHecho" xml:space="preserve">
+    <value>ပြီးပြည့်စုံ</value>
+  </data>
+  <data name="LabelEscapoEnEstaDireccion" xml:space="preserve">
+    <value>ဤဘက်သို့ ထွက်ပြေးလွတ်မြောက်ခဲ့</value>
+  </data>
+  <data name="OptMisSubs" xml:space="preserve">
+    <value>ကျွန်မရဲ့ နှစ်စဉ်ကြေးတွေ</value>
+  </data>
+  <data name="LblMisSubscripciones" xml:space="preserve">
+    <value>ကျွန်မရဲ့ နှစ်စဉ်ကြေးတွေ</value>
+  </data>
+  <data name="LblidUsuario" xml:space="preserve">
+    <value>အသုံးပြုသူ ID:</value>
+  </data>
+  <data name="LblTipo" xml:space="preserve">
+    <value>နှစ်စဉ်ကြေး အမျိုးအစား -</value>
+  </data>
+  <data name="LblDescripcionPuntos" xml:space="preserve">
+    <value>ဖော်ပြချက် -</value>
+  </data>
+  <data name="LblFechaFinPuntos" xml:space="preserve">
+    <value>အဆုံးသတ်ရက်စွဲ -</value>
+  </data>
+  <data name="LblPoderesPuntos" xml:space="preserve">
+    <value>အပြန်အလှန်အသုံးပြုနိုင်စွမ်းများ -</value>
+  </data>
+  <data name="LblRenovar" xml:space="preserve">
+    <value>အပြန်အလှန်</value>
+  </data>
+  <data name="LblCancelarSubscripcion" xml:space="preserve">
+    <value>နှစ်စဉ်ကြေးကို ဖျက်သိမ်းပါ</value>
+  </data>
+  <data name="LblSeguroDeCancelar" xml:space="preserve">
+    <value>နှစ်စဉ်ကြေးကို ဖျက်သိမ်းလိုကြောင်း သေချာပါသလား။ သုံးစွဲသော အာဏာများ ပြန်လည်ရရှိမည်မဟုတ်ပါ။</value>
+  </data>
+  <data name="LblAceptar" xml:space="preserve">
+    <value>လက်ခံလက်ခံပါ</value>
+  </data>
+  <data name="Alarm_1" xml:space="preserve">
+    <value>သတိပေးခြင်း သို့မဟုတ် အန္တရာယ်</value>
+  </data>
+  <data name="Alarm_2" xml:space="preserve">
+    <value>ရာဇဝတ်မှု ကျူးလွန်ခဲ့တဲ့ ရာဇဝတ်မှု ဒါမှမဟုတ် ရာဇဝတ်မှု ကျူးလွန်ခဲ့</value>
+  </data>
+  <data name="Alarm_3" xml:space="preserve">
+    <value>လမ်းပိတ်ဆို့မှု</value>
+  </data>
+  <data name="Alarm_4" xml:space="preserve">
+    <value>ပျောက်ဆုံးသွားတဲ့ အိမ်မွေးအိမ်မွေး</value>
+  </data>
+  <data name="Alarm_5" xml:space="preserve">
+    <value>ပျောက်ဆုံးနေသူ</value>
+  </data>
+  <data name="Alarm_6" xml:space="preserve">
+    <value>ရုန်းရင်းဆန်ခတ်မှုတွေ ဒါမှမဟုတ် ဆန္ဒပြမှုတွေ</value>
+  </data>
+  <data name="Alarm_7" xml:space="preserve">
+    <value>လမ်းပေါ်ထွက်ပြီး ရုပ်မြင်သံကြားတွဲကို တောင်းဆိုပါ</value>
+  </data>
+  <data name="Alarm_8" xml:space="preserve">
+    <value>အိမ်တွင်းအကြမ်းဖက်မှု</value>
+  </data>
+  <data name="Alarm_9" xml:space="preserve">
+    <value>သင့်နေရာကို ထွက်ပြေးနေတဲ့ သံသယရှိသူ</value>
+  </data>
+  <data name="LblCostoPoderes" xml:space="preserve">
+    <value>ပက်ကေ့ခ်ျကုန်ကျစရိတ်</value>
+  </data>
+  <data name="LblSuscripcionesDisponibles" xml:space="preserve">
+    <value>လောလောဆယ် ရရှိနိုင်သော နှစ်စဉ်ကြေးများ</value>
+  </data>
+  <data name="LblFamilia" xml:space="preserve">
+    <value>မိသားစု</value>
+  </data>
+  <data name="LblAmigo" xml:space="preserve">
+    <value>သူငယ်ချင်း</value>
+  </data>
+  <data name="LblCompanero" xml:space="preserve">
+    <value>အပေါင်းအဖော်</value>
+  </data>
+  <data name="LblOtroSinDefinir" xml:space="preserve">
+    <value>အခြားမသတ်မှတ်ထားသော အခြား</value>
+  </data>
+  <data name="LabelExito" xml:space="preserve">
+    <value>အောင်မြင်မှု</value>
+  </data>
+  <data name="LblSolicitudAprobada" xml:space="preserve">
+    <value>လျှောက်လွှာကို အောင်မြင်စွာ အတည်ပြုခဲ့သည်။</value>
+  </data>
+  <data name="MensajeErrorAprobando" xml:space="preserve">
+    <value>ခွင့်ပြုချက်တောင်းဆိုချက်မှားယွင်းမှု</value>
+  </data>
+  <data name="MensajeErrorRechazando" xml:space="preserve">
+    <value>တောင်းဆိုချက်ကို ငြင်းပယ်ရန် ပျက်ကွက်ခဲ့သည်။</value>
+  </data>
+  <data name="LblSolicitudRechazada" xml:space="preserve">
+    <value>လျှောက်လွှာကို အောင်မြင်စွာငြင်းပယ်ခဲ့သည်။</value>
+  </data>
+  <data name="LblUsuarioSolicitante" xml:space="preserve">
+    <value>အသုံးပြုသူကို တောင်းဆို</value>
+  </data>
+  <data name="LblFechaSolicitud" xml:space="preserve">
+    <value>Application ရက်စွဲ</value>
+  </data>
+  <data name="LblAccionRealizar" xml:space="preserve">
+    <value>ဆောင်ရွက်ရန် အရေးယူဆောင်ရွက်ရန်</value>
+  </data>
+  <data name="LblSubscripcionCompletada" xml:space="preserve">
+    <value>နှစ်စဉ်ကြေးပြီးစီးသွားပြီ</value>
+  </data>
+  <data name="LblSubscripcionFallida" xml:space="preserve">
+    <value>နှစ်စဉ်ကြေး မအောင်မြင်ခဲ့</value>
+  </data>
+  <data name="LblUsuarioAprobador" xml:space="preserve">
+    <value>Appver သုံးသူ</value>
+  </data>
+  <data name="LblFechaAprobacion" xml:space="preserve">
+    <value>ခွင့်ပြုချက်ရတဲ့ ရက်စွဲ</value>
+  </data>
+  <data name="LblSubscrEliminada" xml:space="preserve">
+    <value>လက်မှတ်မထိုးဘဲ</value>
+  </data>
+  <data name="LblSubsEliminadaExitosamente" xml:space="preserve">
+    <value>နှစ်စဉ်ကြေးကို အောင်မြင်စွာ ဖယ်ရှားခဲ့</value>
+  </data>
+  <data name="LblEliminarProtector" xml:space="preserve">
+    <value>အကာအကွယ်ကို ဖယ်ရှားပါ</value>
+  </data>
+  <data name="LblRenovacionAplicada" xml:space="preserve">
+    <value>အသစ်ပြုပြင်ရေးကို အောင်မြင်စွာ အကောင်အထည်ဖော်</value>
+  </data>
+  <data name="LblErrorRenovando" xml:space="preserve">
+    <value>"မီနူး"&gt;" ရွေးချယ်စရာတွင် ရရှိနိုင်သည့် အမှား အသစ်ပြုပြင်ခြင်း၊ ပြန်လည်အသုံးချခြင်း သို့မဟုတ် အစီရင်ခံခြင်းတို့တွင် ရရှိနိုင်သည့် အမှားများ</value>
+  </data>
+  <data name="LblCancelacionAplicada" xml:space="preserve">
+    <value>ဖျက်သိမ်းခြင်း အောင်မြင်စွာ ပြုလုပ်ခဲ့</value>
+  </data>
+  <data name="LblErrorCancelando" xml:space="preserve">
+    <value>"မီနူး"&gt;&gt;" ရွေးချယ်စရာတွင် ရရှိနိုင်သည့် အမှားကို ဖျက်သိမ်းခြင်း၊ ပြန်လည်အသုံးချခြင်း သို့မဟုတ် အစီရင်ခံခြင်းတို့ကို ဖျက်သိမ်းခြင်း</value>
+  </data>
+  <data name="LblZonaCreada" xml:space="preserve">
+    <value>တောင်းဆိုထားတဲ့ စောင့်ကြည့်ရေးဇုန်ရဲ့ နှစ်စဉ်ကြေးကို အောင်မြင်စွာ ဆောင်ရွက်ခဲ့ပါတယ်</value>
+  </data>
+  <data name="LblErrorZonaVigil" xml:space="preserve">
+    <value>တောင်းဆိုထားတဲ့ ဇုန်အသစ်ကို နှစ်စဉ်ကြေးယူခြင်း၊ ပြန်လည်သုံးသပ်ဖို့ ဒါမှမဟုတ် ထောက်ပံ့ဖို့ အစီရင်ခံတဲ့ အမှားအယွင်းကို "မီနူး"&gt;"</value>
+  </data>
+  <data name="LblSeleccionaNuevoRadio" xml:space="preserve">
+    <value>မီတာများတွင် ရေဒီယိုအသစ်ကို ရွေးချယ်ပါ</value>
+  </data>
+  <data name="LblUsuarioProtector" xml:space="preserve">
+    <value>အကာအကွယ်အသုံးပြုခြင်း</value>
+  </data>
+  <data name="LblSeguroEliminarProtegido" xml:space="preserve">
+    <value>ပရိုတက်ဂျီးကို ဖယ်ရှားပစ်မယ်ဆိုတာ သေချာလား။ ဤနှစ်စဉ်ကြေးတွင် အသုံးပြုသော အာဏာများကို ပြန်ပေးမည်မဟုတ်ပါ။</value>
+  </data>
+  <data name="LblSuspenderProtectores" xml:space="preserve">
+    <value>သင့်ကာကွယ်ပေးသူများထံ အသိပေးချက်များကို ၆ နာရီကြာ ဆိုင်းငံ့ထားမည် သေချာပါသလော။ သင်၏ ကာကွယ်ပေးသူအားလုံးကို သတိပေးချက်များကို ဆိုင်းငံ့ထားမည်ဖြစ်ပြီး နှစ်စဉ်ကြေးကုန်ဆုံးချိန်ကို ဤအကြောင်းကြောင့် တိုးချဲ့မည်မဟုတ်ပါ။ ဤလုပ်ရပ်ကို ကာကွယ်သူအား အသိပေးမည်မဟုတ်ပါ။</value>
+  </data>
+  <data name="LblSuspensionRealizada" xml:space="preserve">
+    <value>သင်၏ကာကွယ်ပေးသူအားလုံးအား သတိပေးချက်အားလုံးကို ၆ နာရီကြာ ဆိုင်းငံ့ထားခြင်း အောင်မြင်ခဲ့သည်။</value>
+  </data>
+  <data name="LabelSeguroEliminarProtector" xml:space="preserve">
+    <value>သင့်ကာကွယ်ပေးသူကို ဖယ်ရှားဖို့ သေချာပါသလား။ ဤ နှစ်စဉ်ကြေး တွင် အသုံးပြု ခဲ့ သော အာဏာ များ ကို ပြန်လည် ပေး လိမ့်မည် မ ဟုတ် ပါ နောက်ပြီး ကာကွယ် သူ ကို ဤ လုပ်ဆောင် ချက် ကို အသိပေး လိမ့်မည် ။</value>
+  </data>
+  <data name="LabelProtectorEliminado" xml:space="preserve">
+    <value>ရွေးချယ်ထားသော ကာကွယ်သူကို ဖျက်ပစ်လိုက်ပြီဖြစ်သည်။ အာဏာတွေကို ကာကွယ်သူဆီ ပြန်သွားမှာ မဟုတ်ဘူး။ ကာကွယ်သူကို ဒီလုပ်ရပ်ကို အသိပေးပါလိမ့်မယ်</value>
+  </data>
+  <data name="LblConfirmacionRequerida" xml:space="preserve">
+    <value>အရေးပါ! အတည်ပြုရန်လိုအပ်သည်!</value>
+  </data>
+  <data name="LblNoHayRegistros" xml:space="preserve">
+    <value>ဒီအချိန်မှာ ပြသရမယ့် မှတ်စုတွေ မရှိပါဘူး</value>
+  </data>
+  <data name="LblMiLogin" xml:space="preserve">
+    <value>ကျွန်မရဲ့ ဝင်ဂျင်ကတော့</value>
+  </data>
+  <data name="LblSaldoPoderesEs" xml:space="preserve">
+    <value>ကျွန်မရဲ့ စွမ်းအင် ဟန်ချက်ကတော့</value>
+  </data>
+  <data name="LblUsuarioID" xml:space="preserve">
+    <value>ကျွန်မရဲ့ သုံးသူ ID ကတော့</value>
+  </data>
+  <data name="LblNoHayRegistrosAqui" xml:space="preserve">
+    <value>မည်သူမျှ အဘယ်အရာကိုမျှ မရေးရသေးပါ!</value>
+  </data>
+  <data name="LblAlertaReportadaPorMi" xml:space="preserve">
+    <value>ကျွန်မ သတင်းပို့ခဲ့တဲ့ သတိပေးချက်</value>
+  </data>
+  <data name="LblPara" xml:space="preserve">
+    <value>သတင်းလက်ခံရရှိသူ -</value>
+  </data>
+  <data name="LblDe" xml:space="preserve">
+    <value>သတင်းတရားကို စေလွှတ်ပေးသူ -</value>
+  </data>
+  <data name="ConfiguraciondeSOSpect" xml:space="preserve">
+    <value>SOSpect Confcation</value>
+  </data>
+  <data name="LblExitoEnAceptacion" xml:space="preserve">
+    <value>သင်၏စာချုပ်လက်ခံမှုကို သိမ်းဆည်းထားပါသည်!</value>
+  </data>
+  <data name="LblFalloEnAceptacion" xml:space="preserve">
+    <value>မှတ်ပုံတင်ခြင်း မအောင်မြင်ခဲ့ပေ။ ကျေးဇူးပြု၍ ပြန်လည်ဆန်းစစ်ပါ!</value>
+  </data>
+  <data name="LblDeclinacionAceptacion" xml:space="preserve">
+    <value>စာချုပ်ကို လက်မခံဘဲ ဆက်လက်မလုပ်နိုင်ပါ!</value>
+  </data>
+  <data name="LblParaIniciar" xml:space="preserve">
+    <value>ဆော့စပက်ကွင်းမှ စတင်ကြစို့! အနီးအနားရှိ သတိပေးချက်များကို အသစ်ပြင်ဆင်ရန် အပြာရောင် လန်းဆန်းစေသော ခလုတ်ကို ခလုတ်ခလုတ်ကို ခလုတ်ဆွဲပါ</value>
+  </data>
+  <data name="LblAlarmaNoGrave" xml:space="preserve">
+    <value>အဝါရောင်ခလုတ်ကိုသုံးပြီး အန္တရာယ်နည်းတဲ့ သတိပေးချက်တွေကို နေရာချပေးပြီး သင့်ရပ်ရွာ ဒါမှမဟုတ် ကာကွယ်ပေးသူတွေကို သတိပေးပါ။ နိုးကြားမှုအမျိုးအစားကိုရွေးချယ်ပြီး ကျူးလွန်ခဲ့တဲ့ ရာဇဝတ်မှုတစ်ခုအဖြစ် သတ်မှတ်နိုင်ပါတယ်။ ဤခလုတ်သည် သင့်နေရာအတိအကျတွင် သတိပေးချက်ကိုဖွင့်ပေးပြီး အကူအညီလိုအပ်သည့်အခါ အသုံးဝင်သည်။ သင်၏တည်နေရာကို အလျှော့ပေးလိုက်လျောခြင်းမရှိဘဲ မြေပုံပေါ်မှ အချက်တစ်ချက်ကိုလည်း ရွေးချယ်နိုင်ပါသည်။</value>
+  </data>
+  <data name="LblCrimenCometido" xml:space="preserve">
+    <value>အနီရောင်ခလုတ်က အမျိုးအစားတစ်ခုကို အစပျိုးပေးတယ်၊ ရာဇဝတ်မှုက နှိုးဆော်မှု ကျူးလွန်ခဲ့တယ်။ SSpect က ဒီကိစ္စတွေမှာ အချိန်ရဲ့ အရေးပါမှုကြောင့် အမျိုးအစားတစ်ခု ထည့်သွင်းဖို့ မတောင်းဆိုပါဘူး။ နှိုးဆော်သံကို သင့်နေရာအတိအကျမှာ အလိုအလျောက် ထားပါတယ်။ ထို့ပြင် မြေပုံပေါ်ရှိ အချက်တစ်ချက်ကို ရွေးချယ်ပြီးနောက် အမျိုးအစားကို ကျူးလွန်ခဲ့သော ရာဇဝတ်မှုအဖြစ် ပြောင်းလဲပေးနိုင်သည်။</value>
+  </data>
+  <data name="LblDescripcionAlarmas" xml:space="preserve">
+    <value>အောက်ဘက်ဘားမှာ 'ဖော်ပြပါ' ရွေးချယ်စရာမှာ သင် ဒါမှမဟုတ် တခြားသူတွေ ထားတဲ့ သတိပေးချက်စာရင်းကို တွေ့ရပါလိမ့်မယ်။ နှိုးဆော်ချက်ကို ဖန်တီးမယ်ဆိုရင် ဖော်ပြချက်တစ်ခု ထပ်ထည့်နိုင်ပါတယ်။ နှိုးဆော်သံကို အခြားသူတစ်ဦးက ဖန်တီးခဲ့မည်ဆိုလျှင် ယင်း၏မှန်ကန်မှုကို နှုန်းထားနိုင်ပြီး ယင်း၏ဖော်ပြချက်ကို ဖြည့်စွက်ပေးနိုင်သည်။ သတိထားပါ! အကယ်၍ သင်သည် မှားယွင်းသောသတင်းအချက်အလက်များ သို့မဟုတ် မှားယွင်းသော အဆင့်သတ်မှတ်ချက်များပေးမည်ဆိုလျှင် သင့်မှတ်တမ်းကို ဆိုင်းငံ့ထားနိုင်သည်။ ယင်းကိုရှောင်ရှားရန် စည်းမျဉ်းများနှင့် အခြေအနေများကို အသေအချာသုံးသပ်ပါ။</value>
+  </data>
+  <data name="LblDescripcionMensajes" xml:space="preserve">
+    <value>နှစ်စဉ်ကြေးအသိပေးချက်များနှင့် မကြာသေးမီက သတိပေးချက်များပါဝင်သည့် သင့်သတင်းအချက်အလက်များကို ဖတ်ရှုနိုင်ပါသည်။ ဤစာရင်းသည် မကြာသေးမီက သတိပေးချက်များကို တိုက်ရိုက်တွေ့ရှိနိုင်သည့် ဖော်ပြချက်ရွေးချယ်စရာနှင့် မတူချေ။</value>
+  </data>
+  <data name="LblDescripcionMenu" xml:space="preserve">
+    <value>အထက် ဘယ်ဘက်ထောင့်မှာရှိတဲ့ စက်ကိရိယာတွေမှာ SOSpect စီစဉ်ဖွဲ့စည်းပုံ ရွေးချယ်စရာတွေကို ရှာတွေ့ပါလိမ့်မယ်။ သင်သည် နှစ်စဉ်ကြေးဝယ်ယူရန်နှင့် သင့်မိသားစုကို ကာကွယ်ရန် သို့မဟုတ် သတိပေးဧည့်ခံပွဲရေဒီယပ်စ်ကို တိုးချဲ့ရန် အခွင့်အာဏာများကို ဝယ်ယူနိုင်ပါသည်။ အမှတ်တရပါ! အစကတည်းက အစကတည်းက နှစ်စဉ်ကြေးနှစ်ခုဝယ်နိုင်ဖို့ အာဏာ ၈၀ ပေးပါတယ်။</value>
+  </data>
+  <data name="LblRecomendaciones" xml:space="preserve">
+    <value>ကျွန်တော်တို့ အတူတကွ မအောင်မြင်နိုင်ကြဘူး! မီတာ ၁၀၀ အတွင်း သတိပေးချက် များ လက်ခံ ခြင်း နှင့် လက်ခံ ရရှိ ခြင်း ၏ အခြေခံ လုပ်ဆောင် ချက် များ သည် အခမဲ့ ဖြစ် ပြီး ၊ သင် စတင် သောအခါ ကျွန်ုပ် တို့ သည် နှစ်စဉ်ကြေး ၂ ခု ပေး သည် ။ ရာဇဝတ်မှုတိုးများလာတာကို တိုက်လှန်ဖို့ ဒီလွတ်လပ်တဲ့လုပ်ငန်းကို အသုံးပြုဖို့ သင့်အသိုင်းအဝိုင်းနဲ့ မိသားစုကို ဖိတ်ခေါ်ပါ။ သင်သည် အသက်များကိုကယ်တင်နိုင်သည် သို့မဟုတ် အချိန်မီ သတိပေးချက်ရရှိခြင်းဖြင့် ကယ်တင်နိုင်ပါသည်။ ပျောက်ဆုံးသွားတဲ့ လူတွေ ဒါမှမဟုတ် အိမ်မွေးစိမ်းတွေရဲ့ သတိပေးချက်တွေဟာ ၁၀ ကီလိုမီတာ အတိုင်းအတာရှိပြီး အကြမ်းဖက် ဆန္ဒပြမှုတွေမှာ ၁ ကီလိုမီတာ အတိုင်းအတာရှိတယ်</value>
+  </data>
+  <data name="LblPromocion" xml:space="preserve">
+    <value>နောက်ဆုံးတွင် အက်စ်အိုစပက်တွင် သင်ထောက်ပံ့ပေးသည့် မှန်ကန်သော သတ်မှတ်ချက်တိုင်းအတွက် ရှေ့နေ၏တန်ခိုးကို ရရှိမည်ဖြစ်ကြောင်း သတိရပါ။ လူအများစုက ရိုးသားပြီး အချင်းချင်းနဲ့ မိသားစုတွေကို အတူတကွ ကာကွယ်ပေးကြမယ်။ ဆောင့်ကွက်ကို ကြိုဆိုပါတယ်။</value>
+  </data>
+  <data name="LblDescripcionMapa" xml:space="preserve">
+    <value>ဘယ်အချိန်မှာမဆို SSpect ရဲ့ အစပြုတဲ့နေရာဖြစ်တဲ့ အောက်ဘက် ဘားရဲ့ ဘယ်ဘက်မှာ "MAP" ရွေးချယ်စရာကို ရွေးချယ်နိုင်ပါတယ်။ အဲဒီကနေ အနီးအနားက နှိုးဆော်ချက်တွေကို ကြည့်နိုင်ပါတယ်။ သင်၏တည်နေရာသည် မြေပုံ၏အလယ်ဗဟိုတွင် ပေါ်လာမည်ဖြစ်ပြီး စက်ဝိုင်းသည် သင့်ကိုထိခိုက်စေနိုင်သည့် အဝန်းကို ကိုယ်စားပြုသည်။ စံထားချက်အရ ဒီရေဒီယိုဟာ မီတာ ၁၀၀ ရှိပေမဲ့ သတ်မှတ်ချက်စာရင်းထဲမှာ ပြုပြင်နိုင်ပါတယ်။</value>
+  </data>
+  <data name="LblRecomendacionImportante" xml:space="preserve">
+    <value>အိမ်ကနေ မထွက်ခွာခင် ဒါမှမဟုတ် နေရာကိုရောက်တဲ့အခါ သင့်တည်နေရာကို အသစ်ပြင်ဆင်ဖို့ အရေးကြီးပါတယ်။ ဒီလိုနည်းနဲ့ သင့်ဒေသမှာ အန္တရာယ်ရှိမရှိ သိစေနိုင်ပါတယ်။ ဒီ ပရိုဂရမ်ကို ပိတ်လိုက်တဲ့အခါ စက်ကိရိယာ အော်ပရေးတင်းစနစ်တွေ ချမှတ်ထားတဲ့ ကန့်သတ်ချက်တွေကြောင့် သင့်နေရာကို မရရှိနိုင်ဘူးဆိုတာ ကျေးဇူးပြု၍ သတိပြုပါ။ သင့်တည်နေရာနှင့်ဆက်နွှယ်သည့် ဝေါဟာရများနှင့် အခြေအနေများကို စစ်ဆေးပါ။</value>
+  </data>
+  <data name="LblUsuarioBloqueado" xml:space="preserve">
+    <value>အသုံးပြုသူကို အပျက်သဘော အမှတ်အသားတွေအတွက် ဆိုင်းငံ့ထားတယ်</value>
+  </data>
+  <data name="LblMarcasNegativas" xml:space="preserve">
+    <value>ကျွန်မရဲ့ အပျက်သဘော အမှတ်အသားအရေအတွက်ကတော့</value>
+  </data>
+  <data name="LblCuentaSuspendida" xml:space="preserve">
+    <value>အခြားအသုံးပြုသူများထံမှ အပျက်သဘော အမှတ်များကြောင့် အကောင့်ကို ယာယီရပ်ဆိုင်းထား</value>
+  </data>
+  <data name="LblTitleCuentaSuspendida" xml:space="preserve">
+    <value>အကောင့်ကို ယာယီရပ်ဆိုင်းထား</value>
+  </data>
+  <data name="LblFechaFinSuspension" xml:space="preserve">
+    <value>ဆိုင်းငံ့ထားတဲ့ အဆုံးသတ်ရက်ကတော့</value>
+  </data>
+  <data name="LblTocaAqui" xml:space="preserve">
+    <value>ဒီမှာ ခပ်ယူပြီး သွားဖို့</value>
+  </data>
+  <data name="LblNoTienesConexion" xml:space="preserve">
+    <value>အင်တာနက် ဆက်သွယ်မှု မရှိပါ</value>
+  </data>
+  <data name="LblExplicacionSinConexion" xml:space="preserve">
+    <value>သင့်ဖော်ပြချက်ကို SOSpect ထဲဝင်ဖို့လိုပါတယ်။ အင်တာနက်မရှိရင် ဒါက တက်ကြွမှုရှိမရှိ ကျွန်တော်တို့ မသိနိုင်ဘူး။</value>
+  </data>
+  <data name="LblSinConexionDescripcion" xml:space="preserve">
+    <value>သင်၏ SOSpect အကောင့်အခြေအနေကို ပြန်လည်ရယူရန် တက်ကြွသော အင်တာနက်လိုအပ်သည်။</value>
+  </data>
+  <data name="LblSinConexionQueHacer" xml:space="preserve">
+    <value>ကျေးဇူးပြု၍ သင်၏ အင်တာနက်ကို လှုပ်ရှားပြီး SOSpect ကို ပြန်လည်စတင်ပါ</value>
+  </data>
+  <data name="SefinalizalasubscripcionporsolicituddelusuarioPROTEGIDOatravésdelaAPIdesdelaAPP" xml:space="preserve">
+    <value>အေပီပီမှ API မှတစ်ဆင့် ကာကွယ်ရေးအသုံးပြုသူ၏ တောင်းဆိုချက်ဖြင့် နှစ်စဉ်ကြေးကို ရပ်ဆိုင်းလိုက်သည်။</value>
+  </data>
+  <data name="Nopuederenovarsedebidoaquefuecancelada,requieresubscripciónnueva" xml:space="preserve">
+    <value>၎င်းကို ဖျက်သိမ်းလိုက်သောကြောင့် အသစ်မပြုပြင်နိုင်ပါ၊ နှစ်စဉ်ကြေးအသစ် လိုအပ်</value>
+  </data>
+  <data name="Alarmasgeneradaspormicirculosocial" xml:space="preserve">
+    <value>ကျွန်မရဲ့ လူမှုအသိုင်းအဝိုင်းက ဖြစ်ပေါ်လာတဲ့ သတိပေးချက်တွေ</value>
+  </data>
+  <data name="Incrementomidiametrodevigilancia" xml:space="preserve">
+    <value>ကျွန်မရဲ့ စောင့်ကြည့်မှု အကွာအဝေးကို တိုးမြှင့်တယ်</value>
+  </data>
+  <data name="Zonadevigilanciaadicional" xml:space="preserve">
+    <value>နောက်ထပ် စောင့်ကြည့်ရေးဇုန်</value>
+  </data>
+  <data name="Renovable" xml:space="preserve">
+    <value>အစားထိုးနိုင်စွမ်း</value>
+  </data>
+  <data name="SefinalizalasubscripcionporsolicituddelusuarioPROTECTORatravésdelaAPIdesdelaAPP" xml:space="preserve">
+    <value>နှစ်စဉ်ကြေးကို APP မှ API မှတစ်ဆင့် ကာကွယ်ရေးအသုံးပြုသူ၏ တောင်းဆိုချက်ဖြင့် ရပ်ဆိုင်းလိုက်သည်</value>
+  </data>
+  <data name="LblEsRenovable" xml:space="preserve">
+    <value>အစားထိုးလို့ရသလား။</value>
+  </data>
+  <data name="LblObsSubs" xml:space="preserve">
+    <value>နှစ်စဉ်ကြေး မှတ်ချက် -</value>
+  </data>
+  <data name="NingunaObservacion" xml:space="preserve">
+    <value>မှတ်ချက်တွေ မရှိပါဘူး</value>
+  </data>
+  <data name="Subscripcionvigente" xml:space="preserve">
+    <value>လက်ရှိ နှစ်စဉ်ကြေး</value>
+  </data>
+  <data name="Actualmenteactivoenotrasuscripcion" xml:space="preserve">
+    <value>လောလောဆယ်မှာတော့ နောက်ထပ် နှစ်စဉ်ကြေးကို တက်တက်ကြွကြွ</value>
+  </data>
+  <data name="LblRadioActual" xml:space="preserve">
+    <value>နှိုးဆော်ချက်တွေရဖို့ ကျွန်မရဲ့ လက်ရှိရေဒီယပ်စ်ကတော့</value>
+  </data>
+  <data name="LblPoderesRequeridosZV" xml:space="preserve">
+    <value>ရွေးချယ်ထားသော တိုးချဲ့မှုအတွက် လိုအပ်သော စွမ်းအားများ</value>
+  </data>
+  <data name="OptTerminosCondiciones" xml:space="preserve">
+    <value>SOSpect ဝေါဟာရများနှင့် အခြေအနေများ</value>
+  </data>
+  <data name="DebesAbrirLaApp" xml:space="preserve">
+    <value>SSpect က သုံးစွဲသူရဲ့ တည်နေရာ အပြောင်းအလဲတွေကို ပိတ်လိုက်တဲ့အခါ မသိနိုင်ဘူး၊ ဤ အရာ သည် ဆဲလ်ဖုန်း များ ၏ လည်ပတ် မှု စနစ် များ ၏ ဘက်ထရီ ထိန်းသိမ်း ရေး မူဝါဒ များ ကြောင့် ဖြစ် ပေါ်လာ သည် ၊ ထို့ကြောင့် အသုံးပြု သူ သည် ၎င်း ရွေ့လျား ခဲ့ သော နယ်မြေ တွင် သတိပေးချက် များ ကို စစ်ဆေး ရန် နှင့် အချိန်မီ အနီးအနား သတိပေးချက် များ ကို လက်ခံ ရရှိ ရန် လျှောက်လွှာ ကို မကြာခဏ ဖွင့် ပေး ရန် အရေးကြီး သည် ။</value>
+  </data>
+  <data name="InvitaMasPersonas" xml:space="preserve">
+    <value>အသုံးပြုသူ၏ ဘေးကင်းလုံခြုံမှုကို တိုးတက်ကောင်းမွန်စေရန် သူ့ဝန်းကျင်ရှိသူများ၊ မိသားစုနှင့် အိမ်နီးချင်းများက အခမဲ့ လျှောက်လွှာကို ကူးယူရန် အရေးကြီးသည်။ အနီးအနား အသုံးပြု သူ များ မ ရှိ ခဲ့ လျှင် ၊ အသုံးပြု သူ ကို အချိန်မီ သတိပေး ခြင်း မ ရှိ နိုင် သို့မဟုတ် သူ တို့ ၏ သတိပေးချက် များ ကို ကြား ရ မည် မ ဟုတ် ပါ ၊ ပရိုဂရမ် ကို မ ကူးယူ ခင် အန္တရာယ် အခြေအနေ ကို ထိန်းသိမ်း ထား နိုင် ပါ သည် ။ တစ်ယောက်ကိုတစ်ယောက် ကူညီပေးဖို့ လူတွေကို ဖိတ်ခေါ်ဖို့ အရေးကြီးပါတယ်။</value>
+  </data>
+  <data name="Insertiondone" xml:space="preserve">
+    <value>ပေါင်းထွင်းလုပ်ဆောင်ရလေသည်။</value>
+  </data>
+  <data name="AnerroroccurredwhilequalifyingthealarmCode1" xml:space="preserve">
+    <value>နှိုးဆော်ချက်ကို သတ်မှတ်နေစဉ် အမှားတစ်ခု ဖြစ်ပွားခဲ့</value>
+  </data>
+  <data name="AnerroroccurredwhilequalifyingthealarmCode2" xml:space="preserve">
+    <value>နှိုးဆော်ချက်ကို သတ်မှတ်နေစဉ် အမှားတစ်ခု ဖြစ်ပွားခဲ့</value>
+  </data>
+  <data name="AnerroroccurredwiththealarmqualificationmodelCode3" xml:space="preserve">
+    <value>နှိုးဆော်မှုနှုန်း ၃ ဖြင့် နှိုးဆော်မှုနှုန်း သတ်မှတ်နေစဉ် မှားယွင်းမှု ဖြစ်ပွားခဲ့</value>
+  </data>
+  <data name="Userregistrationsuccessful" xml:space="preserve">
+    <value>ခင်ဗျားရဲ့အသုံးပြုသူကို မှတ်ပုံတင်ထားပါတယ်။</value>
+  </data>
+  <data name="Anerroroccurredwhileregisteringtheusercode1" xml:space="preserve">
+    <value>သင့်အသုံးပြုသူကို မှတ်ပုံတင်ထားတဲ့ သင်္ကေတ ၁ နဲ့အမှားတစ်ခု ဖြစ်ပျက်ခဲ့</value>
+  </data>
+  <data name="Anerroroccurredwhileregisteringtheusercode2" xml:space="preserve">
+    <value>သင့်အသုံးပြုသူကို မှတ်ပုံတင်ထားတဲ့ သင်္ကေတ ၂ နဲ့အမှားတစ်ခု ဖြစ်ပျက်ခဲ့</value>
+  </data>
+  <data name="Anerroroccurredwiththepeoplemodelforuserregistrationcode3" xml:space="preserve">
+    <value>သင့်အသုံးပြုသူကို မှတ်ပုံတင်ထားတဲ့ သင်္ကေတ ၃ နဲ့အမှားတစ်ခု ဖြစ်ပျက်ခဲ့</value>
+  </data>
+  <data name="Permisosolicitadoconexito" xml:space="preserve">
+    <value>ခွင့်ပြုချက်ကို အောင်မြင်စွာတောင်းဆိုခဲ့</value>
+  </data>
+  <data name="OcurriounerrorenelprocesodesolicitarpermisoalprotegidoCodigo1" xml:space="preserve">
+    <value>ကာကွယ်ပေးသူထံမှ ခွင့်ပြုချက်တောင်းသည့် လုပ်ငန်းစဉ်တွင် ကုဒ် ၁ နှင့်အမှားတစ်ခု ဖြစ်ပွားခဲ့</value>
+  </data>
+  <data name="Nofueposiblerealizarenviarlasolicituddepermisoalprotegidoporqueelmodelonoesvalido" xml:space="preserve">
+    <value>ကာကွယ်ခံရသူထံ ခွင့်ပြုချက်တောင်းဆိုချက် ပေးပို့ရန် မဖြစ်နိုင်ခဲ့ပါ၊ မော်ဒယ်သည် မမှန်ကန်ပါ</value>
+  </data>
+  <data name="AlertaEnUbicacion" xml:space="preserve">
+    <value>ဒီနေရာမှာ SOSpect သတိပေးချက်တစ်ခု ဖန်တီးချင်လား။</value>
+  </data>
+  <data name="CrearEnUbicacionActual" xml:space="preserve">
+    <value>သင်၏လက်ရှိနေရာ၌ SOSpect သတိပေးချက်တစ်ခု ဖန်တီးလိုပါသလော။</value>
+  </data>
+  <data name="SeguroCerrarSesion" xml:space="preserve">
+    <value>ဝင်ထွက်မယ် သေချာလား။</value>
+  </data>
+  <data name="Tu" xml:space="preserve">
+    <value>ခင်ဗျား</value>
+  </data>
+  <data name="Anonimo" xml:space="preserve">
+    <value>အမည်မသိ</value>
+  </data>
+  <data name="AlarmaCerrada" xml:space="preserve">
+    <value>သတိပေးချက်ပိတ်ထား</value>
+  </data>
+  <data name="LblSaldoPoderesInsuficiente" xml:space="preserve">
+    <value>သင့်စွမ်းအင် ဟန်ချက်ညီမှုက လုံလောက်မှုမရှိပါဘူး</value>
+  </data>
+  <data name="LblComprarPoderes" xml:space="preserve">
+    <value>ရှေ့နေရဲ့ အာဏာကို ဝယ်ယူပါ</value>
+  </data>
+  <data name="LblSeguroRenovar" xml:space="preserve">
+    <value>ဤနှစ်စဉ်ကြေးကို အပြန်အလှန်အသုံးပြုမည်ကို သေချာပါသလော။</value>
+  </data>
+  <data name="OptReportes" xml:space="preserve">
+    <value>အစီရင်ခံစာ</value>
+  </data>
+  <data name="LblReportesTitulo" xml:space="preserve">
+    <value>SOSpect အစီရင်ခံစာများ</value>
+  </data>
+  <data name="LblReportesDescripcion" xml:space="preserve">
+    <value>အစီရင်ခံစာများက ဆိုးဝါးသောအခြေအနေများကို ရှောင်ခြင်းဖြင့် အခြားအသုံးပြုသူများကို မည်သို့ကူညီပေးခဲ့ကြောင်း နားလည်ရန် အခွင့်အရေးရစေသည်။ ဒါ့အပြင် သင့်မြို့မြေပုံပေါ်က အန္တရာယ်ရှိတဲ့နေရာတွေကို ခွဲခြားသိမြင်နိုင်ပြီး အချိန်ကြာလာတာနဲ့အမျှ ရာဇဝတ်မှုရဲ့ ဆင့်ကဲဖြစ်စဉ်ကို စောင့်ကြည့်ခွင့်ပေးပါတယ်။ ထို့ပြင် အပျက်သဘောဖြစ်ရပ်များ မဖြစ်ပေါ်မီ အစောပိုင်းသတိပေးချက်များ ဖြစ်ပေါ်စေနိုင်သည်။ အခြား အစီရင်ခံ စာ များ သည် သူ တို့ ၏ မျိုးဆက် အတွက် လိုအပ် သော တွက်ချက် မှု သုံးစွဲ မှု ကြောင့် ကုန်ကျ စရိတ် တစ် ခု ရှိ နိုင် စဉ် ၊ အခြေခံ အစီရင်ခံ စာ သည် အခမဲ့ ဖြစ် ကြောင်း သတိပြု ရန် အရေးကြီး သည် ။</value>
+  </data>
+  <data name="OptReporteDeCalorEnZona" xml:space="preserve">
+    <value>အပူမြေပုံတွေနဲ့ မှတ်တမ်းတင်ပါ</value>
+  </data>
+  <data name="OptReporteEvolucionEnElTiempo" xml:space="preserve">
+    <value>နိုးကြားသော ဆင့်ကဲဖြစ်ပြောင်း အစီရင်ခံစာ</value>
+  </data>
+  <data name="OptReportesPredictivos" xml:space="preserve">
+    <value>ကြိုတင်ခန့်မှန်းခြင်း အစီရင်ခံစာ</value>
+  </data>
+  <data name="OptReporteAnaliticoDeDescripcionesAlarmas" xml:space="preserve">
+    <value>နှိုးဆော်ချက်တွေရဲ့ ဆန်းစစ်လေ့လာမှုမှတ်တမ်းတွေ</value>
+  </data>
+  <data name="LblReporteCalorSospect" xml:space="preserve">
+    <value>SOSpect အပူမြေပုံများ</value>
+  </data>
+  <data name="LblReporteEnConstruccion" xml:space="preserve">
+    <value>မကြာခင်မှာပဲ! ဤလုပ်ငန်းဆောင်တာကို ဆောက်လုပ်လျက်ရှိသည်!</value>
+  </data>
+  <data name="LblDescripcionMapaDeCalor" xml:space="preserve">
+    <value>ဤ အစီရင်ခံ စာ တွင် ၊ သင် သည် သင့် ဒေသ ၏ အပူ မြေပုံ တစ် ခု ကို ဝင်ရောက် ကြည့်ရှု နိုင် မည် ဖြစ် ပြီး ၊ ထို နေရာ တွင် SOSpect လုပ်ငန်း စတင် ကတည်းက လပေါင်း များ စွာ ရွေးချယ် နိုင် ပါ သည် ။ ဒီလုပ်ဆောင်မှုက သင့်အတွက် စိတ်ဝင်စားစရာကောင်းတဲ့ မြေပုံတစ်ခုစီရဲ့ ဆင့်ကဲဖြစ်စဉ်ကို လေ့လာပြီး နားလည်စေပါလိမ့်မယ်။</value>
+  </data>
+  <data name="LblCostoReporte" xml:space="preserve">
+    <value>ဤလုပ်ဆောင်နိုင်စွမ်းကို အသုံးပြုခြင်းသည် တွက်ချက်မှုကုန်ကျစရိတ်ဖြစ်ပြီး ယင်းသည် အလွန်တန်ဖိုးရှိမည်မဟုတ်သော်လည်း အင်အားများလိုအပ်ကြောင်း စိတ်စွဲမှတ်ထားပါ။ သို့သော် လျှောက်လွှာကို ဦးဆုံးအသုံးပြုရာတွင် ကျွန်ုပ်တို့ပေးသည့်တန်ခိုးများကို အသုံးပြု၍ ပြဿနာမရှိဘဲ ယင်းကို သင်ဝယ်ယူနိုင်ပါသည်။</value>
+  </data>
+  <data name="LblReporteEvolucionAlarmas" xml:space="preserve">
+    <value>SOSpect မှာတင်ထားတဲ့ သတိပေးချက်တွေရဲ့ ဆင့်ကဲဖြစ်စဉ်</value>
+  </data>
+  <data name="LblDescripcionEvolucionAlarmas" xml:space="preserve">
+    <value>ဤမှတ်တမ်းတွင် သင့်ဒေသတွင် အချိန်ကြာလာသည်နှင့်အမျှ နှိုးဆော်မှုအမျိုးအစားတိုင်း၏ ဦးတည်ချက်များကို သင်သိရှိနိုင်ပါလိမ့်မည်။ သင်သည် အန္တရာယ်ရှိသောသဘောထားများကို လေ့လာဆန်းစစ်နိုင်မည်ဖြစ်သည့်အပြင် ရာဇဝတ်မှုလျော့နည်းသွားနိုင်ကြောင်း ခွဲခြားသိမြင်နိုင်ပါလိမ့်မည်။</value>
+  </data>
+  <data name="LblReportePredictivo" xml:space="preserve">
+    <value>SOSpect ကြိုတင်ခန့်မှန်းမှတ်မှတ်တမ်းများ</value>
+  </data>
+  <data name="LblDescripcionReportesPredictivos" xml:space="preserve">
+    <value>SOSpect အသိုင်းအဝိုင်းက အချက်အလက်အလုံအလောက်ရရှိလာတာနဲ့အမျှ ဖြစ်နိုင်ခြေအခြေပြု ဖြစ်ရပ် ခန့်မှန်းချက်တွေနဲ့ ဆန်းစစ်လေ့လာမှုဆိုင်ရာ ကိရိယာတွေကို ပြုလုပ်နိုင်ပါတယ်။ သင့်မိသားစုနှင့် သင့်အသိုင်းအဝိုင်းအတွက် မည်သည့်အန္တရာယ်ကိုမဆို ရှောင်ရှားရန် လိုအပ်သောကြိုတင်ကာကွယ်မှုများ ပြုလုပ်ရန် အခွင့်အရေးရစေရန် ဤမှတ်တမ်းများက သင့်အား သိစေပါလိမ့်မည်။</value>
+  </data>
+  <data name="LblReporteAnalisisDeTextos" xml:space="preserve">
+    <value>SOSpect နှိုးဆော်ချက် လေ့လာဆန်းစစ်မှု အစီရင်ခံစာ</value>
+  </data>
+  <data name="LblDescripcionAnalisisTextos" xml:space="preserve">
+    <value>အသုံးပြုသူများသည် နှိုးဆော်ချက်များကို ဖော်ပြပြီး SOSpect ၏ အတွင်းပိုင်း စကားပြောခန်းမှတစ်ဆင့် ၎င်းတို့၏ ဆင့်ကဲဖြစ်စဉ်ကို အသစ်ပြင်ဆင်ပေးသည့်အချက်ကို ကျေးဇူးတင်ပါသည်။ ယင်းက သင့်ဒေသရှိ လုံခြုံမှုနှင့်ပတ်သက်သော အမြင်ကို တိုးတက်ကောင်းမွန်စေရန် အရေးယူဆောင်ရွက်ရန် အခွင့်အရေးရစေသည်။</value>
+  </data>
+  <data name="LblRangoReporte" xml:space="preserve">
+    <value>ဒီမှတ်တမ်းက လွန်ခဲ့တဲ့ ရက် ၃၀ ကို ဖုံးအုပ်ထားပါတယ်</value>
+  </data>
+  <data name="AcercadeSOSpect" xml:space="preserve">
+    <value>SOSpecct အကြောင်း</value>
+  </data>
+  <data name="Porcentajedealarmasciertasfrenteafalsasenunradiodeunkilometroymedio" xml:space="preserve">
+    <value>တစ်ကီလိုမီတာခွဲအတွင်းမှာ စစ်မှန်တဲ့နှိုးဆော်ချက်တွေနဲ့ မှားယွင်းတဲ့ သတိပေးချက်တွေရဲ့ ရာခိုင်နှုန်း</value>
+  </data>
+  <data name="Promediodetiempoenminutosentrelanzamientodealarmaenmizonaylaprimeracalificacionodescripcion" xml:space="preserve">
+    <value>ကျွန်တော့်ဒေသမှာ နှိုးဆော်မှု လွှတ်တင်မှုနဲ့ ပထမဆုံး အဆင့်သတ်မှတ်ချက် ဒါမှမဟုတ် ဖော်ပြချက်ကြား မိနစ်ပိုင်းအတွင်း ပျမ်းမျှအချိန်</value>
+  </data>
+  <data name="Cantidadrealdepersonasenunradiodeunkilometroymedio" xml:space="preserve">
+    <value>ကီလိုမီတာနဲ့ တစ်ဝက်အတွင်းက တကယ့်လူအရေအတွက်</value>
+  </data>
+  <data name="Cantidadrealdepersonasenmiradioactual" xml:space="preserve">
+    <value>လက်ရှိအသံလွှင့်ရုံထဲက လူအရေအတွက်အရေအတွက်</value>
+  </data>
+  <data name="Miradioactualderecepcionyenviodealarmasenmetros" xml:space="preserve">
+    <value>လက်ခံပြီး မီတာတွေမှာ နှိုးဆော်ချက်တွေ ပေးပို့နေတဲ့ ကျွန်မရဲ့ လက်ရှိအကွာအကျဉ်း</value>
+  </data>
+  <data name="Cantidadrealdepersonasquerecibieronmisalarmas" xml:space="preserve">
+    <value>ကျွန်မရဲ့ နှိုးဆော်ချက်တွေကို လက်ခံရရှိခဲ့တဲ့ လူအရေအတွက်</value>
+  </data>
+  <data name="Cantidaddenotificacionesdealarmaenviadasdemiparte" xml:space="preserve">
+    <value>ကျွန်တော့်ဆီကပေးပို့တဲ့ သတိပေးချက်အရေအတွက်</value>
+  </data>
+  <data name="Personasquereportaronmiayudacomonegativaofalsa" xml:space="preserve">
+    <value>ကျွန်တော့်အကူအညီကို အပျက်သဘော ဒါမှမဟုတ် မှားတယ်လို့ သတင်းပို့ခဲ့တဲ့သူတွေ</value>
+  </data>
+  <data name="Personasqueagradecieronmiayuda" xml:space="preserve">
+    <value>ကျွန်တော့်အကူအညီကို တန်ဖိုးထားတဲ့သူတွေ</value>
+  </data>
+  <data name="Poderesganadosporregalos" xml:space="preserve">
+    <value>လက်ဆောင်များဖြင့်ရရှိသောတန်ခိုးများ</value>
+  </data>
+  <data name="LblParticipacionTpAlarma" xml:space="preserve">
+    <value>နှိုးဆော်မှုအမျိုးအစားဖြင့် ပါဝင်ခြင်း</value>
+  </data>
+  <data name="LblMetricBasics" xml:space="preserve">
+    <value>အခြေခံ မက်ထရစ်</value>
+  </data>
+  <data name="LblEfectiAlarmas" xml:space="preserve">
+    <value>နှိုးဆော်ချက်များ၏ ထိရောက်မှု</value>
+  </data>
+  <data name="LblTotalAlarmas" xml:space="preserve">
+    <value>စုစုပေါင်းနှိုးဆော်ချက်များ</value>
+  </data>
+  <data name="LblAlarmasVerdaderas" xml:space="preserve">
+    <value>စစ်မှန်သောနှိုးဆော်ချက်များ</value>
+  </data>
+  <data name="LblAlarmasFalsas" xml:space="preserve">
+    <value>မှားယွင်းသောနှိုးဆော်ချက်များ</value>
+  </data>
+  <data name="LblAlarmasEfectivas" xml:space="preserve">
+    <value>ထိရောက်သောနှိုးဆော်ချက်များ၏ ရာခိုင်နှုန်း</value>
+  </data>
+  <data name="LblMarcarLeidos" xml:space="preserve">
+    <value>စာဖတ်သလောက် အမှတ်အသားအားလုံးကို မှတ်သားထားပါ</value>
+  </data>
+  <data name="LblSeMarcaronComoLeidos" xml:space="preserve">
+    <value>သတင်းအချက်အလက်အားလုံးကို ဖတ်ရှုခြင်းအဖြစ် မှတ်သားထား</value>
+  </data>
+  <data name="LabelNuevaVersion" xml:space="preserve">
+    <value>SOSpect ရဲ့ ဗားရှင်းအသစ်တစ်ခုရှိပြီး ဆက်လုပ်ဆောင်ဖို့လိုပါတယ်</value>
+  </data>
+  <data name="OptReporteBasico" xml:space="preserve">
+    <value>အခြေခံမှတ်တမ်း - အခမဲ့!</value>
+  </data>
+  <data name="LblReporteBasicoSospect" xml:space="preserve">
+    <value>SOSpect အခြေခံမှတ်တမ်းများ</value>
+  </data>
+  <data name="LblReporteBasicoDescripcion" xml:space="preserve">
+    <value>SOSpect ရဲ့ အခြေခံ အစီရင်ခံစာတွေက သင့်အသိုင်းအဝိုင်းအပေါ် သင့်နှိုးဆော်မှုမှတ်တမ်းတွေရဲ့ အကျိုးသက်ရောက်မှုနဲ့ပတ်သက်ပြီး တန်ဖိုးရှိတဲ့ သတင်းအချက်အလက်တွေ ပေးပါတယ်။ ထို့ပြင် ထိုအဆင့်သတ်မှတ်ချက်များတွင် တိကျမှန်ကန်စွာ သတိပေးချက်များနှင့် ရိုးသားမှုတို့ဖြင့် သင့်အသိုင်းအဝိုင်းကို ကူညီပေးခြင်းဖြင့် ရရှိသည့် အာဏာအရေအတွက်ကို ဖော်ပြသည်။ ဤ အစီရင်ခံ စာ များ မှတစ်ဆင့် ၊ သင် သည် လုပ်ငန်းစဉ် တွင် ပါဝင် ခဲ့ သော အသုံးပြု သူ အရေအတွက် နှင့် မှားယွင်း သော စေ့စပ် ညှိနှိုင်း မှု များ ကြောင့် အပျက်သဘော အမှတ် များ လက်ခံ ရရှိ ခဲ့ သော အသုံးပြု သူ အရေအတွက် အပါအဝင် ၊ လွန် ခဲ့ သော လ ကျော် က သင့် နယ်မြေ ၏ ခြုံငုံ အပြုအမူ ကို လည်း အကဲဖြတ် နိုင် ပါ သည် ။</value>
+  </data>
+  <data name="LblReporteBasicoDescripcionCorta" xml:space="preserve">
+    <value>SSpect ရဲ့ အခြေခံမှတ်တမ်းတွေက သင့်ကို တန်ဖိုးရှိတဲ့ အချက်အလက်တွေ ပေးပါတယ်...... ထပ်ကြည့်ပါ...</value>
+  </data>
+  <data name="LblDescripcionRepTipoAlarma" xml:space="preserve">
+    <value>ဤ အစီရင်ခံ စာ က သင် ၏ လက်ရှိ နေရာ မှ တစ် ကီလိုမီတာ ခွဲ အတွင်း မကြာခဏ အများဆုံး နှိုးဆော် မှု များ နှင့် ပတ်သက် ၍ သတင်း အချက်အလက် များ ကို ပေး ထား သည် ။</value>
+  </data>
+  <data name="LblDescripcionRepEfectAlarmas" xml:space="preserve">
+    <value>ဤ အစီရင်ခံ စာ က သင့် လက်ရှိ နေရာ မှ တစ် ကီလိုမီတာ ခွဲ အတွင်း အမှန်တကယ် နှင့် မှားယွင်း သော သတိပေးချက် များ အကြား ထိရောက် မှု ရှိ သော ဆက်စပ် မှု အပေါ် သတင်း အချက်အလက် များ ကို ပေး ထား သည် ။</value>
+  </data>
+  <data name="LblDescripcionRepMetricasBasicas" xml:space="preserve">
+    <value>ဤ အစီရင်ခံ စာ က သင့် လက်ရှိ တည်နေရာ ၏ ကီလိုမီတာ တစ်ဝက် အတွင်း အသုံးပြု သူ အရေအတွက် အပေါ် အချက်အလက် များ အပြင် ၊ သင့် လက်ရှိ ပရိုဂရမ် သတိပေးချက် များ ၏ အသံလွှင့် ဌာန တွင် အသုံးပြု သူ အရေအတွက် ကို လည်း ပေး ထား သည် ။ ထို့ပြင် ယင်းတွင် သင့်စိတ်ဝင်စားမှုဆိုင်ရာ ထပ်ဆင့်အချက်အလက်များစွာပါဝင်သည်။</value>
+  </data>
+  <data name="OptVolumenAlarmas" xml:space="preserve">
+    <value>အနီးအနားရှိနှိုးဆော်ချက်အမျိုးအစားဖြင့် အသံပမာဏ</value>
+  </data>
+  <data name="OptEfectividadAlarmas" xml:space="preserve">
+    <value>အနီးအနားရှိနှိုးဆော်ချက်များ၏ ထိရောက်မှု</value>
+  </data>
+  <data name="OptMetricasBasicas" xml:space="preserve">
+    <value>အနီးအနားသတိပေးချက်များ၏ အခြေခံ မက်ထရစ်များ</value>
+  </data>
+  <data name="LblCredibilidadActual" xml:space="preserve">
+    <value>ကျွန်မရဲ့ နှိုးဆော်ချက်တွေရဲ့ယုံကြည်စိတ်ချမှုကတော့</value>
+  </data>
+  <data name="OptManualUsuarioSospect" xml:space="preserve">
+    <value>SOSpect သုံးသူလက်စွဲစာမူ</value>
+  </data>
+  <data name="LblDescManualUsuario" xml:space="preserve">
+    <value>သင်နှင့် သင့်ချစ်မြတ်နိုးရသူများကို ကာကွယ်ရန် ပုံစံပြုထားသည့် အခမဲ့ ပရိုဂရယ်တစ်ခုဖြစ်သည့် SOSpect နှင့် တွေ့ဆုံပါ။ အွန်လိုင်းလက်စွဲကို ကောင်းစွာအသုံးပြုဖို့ ကူညီပေးမယ့် တိုတုတ်တုတ်နဲ့ အသေးစိတ်အချက်အလက်တွေကို ကျွန်တော်တို့ ဖန်တီးထားပါတယ်။ ဤလက်စွဲစာအုပ်ဖြင့် SOSpect မှ အများဆုံးရယူနိုင်ပြီး ယင်း၏လုံခြုံရေးအသွင်အပြင်အားလုံးကို အခွင့်ကောင်းယူနိုင်သည်။</value>
+  </data>
+  <data name="SesionApple" xml:space="preserve">
+    <value>အက်ပဲလ်နဲ့အတူ ဆိုင်းဘုတ်</value>
+  </data>
+  <data name="LblCredibilidadAlarmaActual" xml:space="preserve">
+    <value>နှိုးဆော်မှုရဲ့ အသိအမှတ်ပြုမှု -</value>
+  </data>
+  <data name="LblAccedeAlManual" xml:space="preserve">
+    <value>လက်စွဲစာစွဲကို ဝင်ကြည့်နိုင်ပါတယ်</value>
+  </data>
+  <data name="LblRefrescarLista" xml:space="preserve">
+    <value>လန်းဆန်းစေသော နှိုးဆော်မှုစာရင်း</value>
+  </data>
+  <data name="LblErrorCorreoDispositivo" xml:space="preserve">
+    <value>ဒီကိရိယာပေါ်က အီးမေးလ် မပို့နိုင်ဘူး</value>
+  </data>
+  <data name="LblErrorCorreo" xml:space="preserve">
+    <value>အီးမေးလ်ပို့တဲ့ မှားယွင်းမှု–</value>
+  </data>
+  <data name="LblSeleccioneTipoAlarma" xml:space="preserve">
+    <value>ကျေးဇူးပြု၍ နှိုးဆော်မှုအမျိုးအစားကို ရွေးပါ</value>
+  </data>
+  <data name="LblCompraFallida" xml:space="preserve">
+    <value>မဝယ်ရသေးပေ။ ကျေးဇူးပြု၍ အင်တာနက်ချိတ်ဆက်မှုကို စစ်ဆေးပါ</value>
+  </data>
+  <data name="LblSeleccionePuntoMapa" xml:space="preserve">
+    <value>မြေပုံပေါ်မှာ စောင့်ကြည့်ရေးဇုန်တစ်ခုကို ရွေးရမယ်</value>
+  </data>
+  <data name="Cantidaddealarmascolocadasenlaszonasdevigilanciasuscritas" xml:space="preserve">
+    <value>နှစ်စဉ်ကြေးယူထားတဲ့ စောင့်ကြည့်နေရာတွေမှာ နေရာချထားတဲ့ သတိပေးချက်အရေအတွက်</value>
+  </data>
+  <data name="Cantidaddealarmascolocadaspormisprotegidos" xml:space="preserve">
+    <value>ပရိုတက်ဂျီးတွေ တင်ထားတဲ့ နှိုးဆော်ချက်အရေအတွက်</value>
+  </data>
+  <data name="Credibilidadactualdelasalarmasqueenvioamicomunidad" xml:space="preserve">
+    <value>ကျွန်မအသိုင်းအဝိုင်းကို ပေးပို့တဲ့ နှိုးဆော်ချက်တွေရဲ့ လက်ရှိယုံကြည်စိတ်ချမှု</value>
+  </data>
+  <data name="LblCompraExitosa" xml:space="preserve">
+    <value>၁၉ ။ နှစ်စဉ်ကြေးဝယ်ယူရန် အာဏာများကို ဝယ်ယူခဲ့သည်။ ခေါင်းလောင်းထဲမှာ ရှင်းပြတဲ့သတင်းကို တွေ့ရပါလိမ့်မယ်။</value>
+  </data>
+  <data name="LblDebesHabilitarNotif" xml:space="preserve">
+    <value>SOSpect အတွက် အသိပေးချက်တွေ ပေးပို့နိုင်အောင် လုပ်ပေးရမယ်</value>
+  </data>
+  <data name="LblHabilitarNotifSettings" xml:space="preserve">
+    <value>ဒီ ပရိုဂရိုဂရံက အသိပေးချက်တွေကို ထောက်ပံ့ပေးနိုင်ပေမဲ့ အဲဒါကို သင့်နေရာတွေမှာ လုပ်ပေးဖို့လိုပါတယ်။</value>
+  </data>
+  <data name="LblErrorHabilitandoUsoNotif" xml:space="preserve">
+    <value>တွန်းအားအသိပေးချက်များ အသုံးပြုခြင်းကို တားဆီးပေးသည့် အမှားတစ်ခု ဖြစ်ပွားခဲ့</value>
+  </data>
+  <data name="LblMostrarDireccionEscape" xml:space="preserve">
+    <value>မာ့ခ် ထွက်ပြေးသူ လွတ်မြောက်ရာလမ်း</value>
+  </data>
+  <data name="LblProximamenteSOSpect" xml:space="preserve">
+    <value>မကြာခင် SOSpect မှာ ရောက်လာတော့မယ်!</value>
+  </data>
+  <data name="LblReportesProximos" xml:space="preserve">
+    <value>အချက်အလက်သိပ္ပံနဲ့ လေ့လာဆန်းစစ်ပြီး ကြိုတင်ခန့်မှန်းထားတဲ့ အစီရင်ခံစာတွေ!</value>
+  </data>
+  <data name="LblHolaBienvenido" xml:space="preserve">
+    <value>ဟဲလို! SOSpect ကို ကြိုဆိုပါတယ်။ 
+
+အနီးအနားရှိ အန္တရာယ်များနှင့်ပတ်သက်၍ အချိန်မီသတိပေးခြင်းဖြင့် သင့်ချစ်မြတ်နိုးရသူများကို ကာကွယ်ရန် အခမဲ့ကိရိယာတစ်ခုဖြစ်သည်! အစပိုင်းမှာတော့ SOSpect တပ်ဆင်ထားတဲ့ လူတွေ အများကြီး မရှိသေးတဲ့အတွက် သတိပေးချက်တွေ အများကြီး ရနိုင်မှာ မဟုတ်ဘူး။ လျှောက်လွှာကို မဖြည့်ဆည်းပေးဖို့ တောင်းဆိုပါတယ်။ SSpect က သင့်အသက်တာနဲ့ သင့်မိသားစု ဒါမှမဟုတ် အသိုင်းအဝိုင်းမှာရှိတဲ့သူတစ်ယောက်ရဲ့ အသက်ကို တစ်ချိန်ချိန်မှာ ကယ်တင်နိုင်ပါတယ်။
+
+နေရာ များ တွင် တွေ့ ရှိ ရ သော " အခြေခံ အစီရင်ခံ စာ " စာရင်း ၏ " အခြေခံ အစီရင်ခံ စာ " စာရင်း တွင် ၊ သင် သည် သတိပေးချက် များ ရရှိ မည့် ၊ သင် ၏ လွှမ်းခြုံ မှု နယ်ပယ် အတွင်း ရှိ အနီးအနား ရှိ အသုံးပြု သူ အရေအတွက် ကို " အခြေခံ မက်ထရစ် " အပိုင်း တွင် တွေ့မြင် နိုင် ပါ သည် ။ အဲဒီအရေအတွက်ကို တိုးမြှင့်ပေးပါ၊ အခမဲ့ဖြစ်ပြီး ပိုပြီး လုံခြုံစွာ နေထိုင်ခွင့်ပေးပါလိမ့်မယ်။
+
+ဒီနိဒါန်းလက်စွဲစာအုပ်တိုလေးကို ဂရုတစိုက်ဖတ်ဖို့ ဖိတ်ခေါ်ပါတယ်။ အဲဒါက SOSpect ဘယ်လိုအလုပ်လုပ်တယ်ဆိုတာ စိတ်ကူးတစ်ခု ပေးပါလိမ့်မယ်။ ပရိုဂရမ်ကို တပ်ဆင်ပြီးမှတစ်ကြိမ်သာ ပြသမည်ဖြစ်ကြောင်း ကျေးဇူးပြု၍ သတိပြုပါ။
+
+SOSpect ကိုသုံးပြီး လူတိုင်းရဲ့ ဘေးကင်းလုံခြုံမှုအတွက် ပါဝင်ကူညီပေးတဲ့အတွက် ကျေးဇူးတင်ပါတယ်။
+
+ဆက်လုပ်ဖို့ ပြင်ဆင်ထားတဲ့ ဇာတ်ညွှန်းကို ခပ်ယူပါ......</value>
+  </data>
+</root>

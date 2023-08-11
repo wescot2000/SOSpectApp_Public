@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:fonts="clr-namespace:sospect.Resources.Fonts;assembly=sospect"
+    xmlns:helpers="clr-namespace:sospect.Helpers"
+    xmlns:ads="clr-namespace:sospect.CustomRenderers"
+    BackgroundColor="White"
+    x:Class="sospect.Views.MenuPage"
+    Title="{helpers:TranslateExtension Text='ConfiguraciondeSOSpect'}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+    <ScrollView>
+        <StackLayout Spacing="0" Padding="5">
+            <?Label Text="{Binding userId}" FontAttributes="Bold" HorizontalTextAlignment="Center" Margin="0,5,0,0"?>
+            <Frame BorderColor="Transparent" BackgroundColor="Transparent" HasShadow="False">
+                <Entry Text="{Binding userId}"
+                       TextColor="Black"
+                       FontAttributes="None"
+                       FontSize="Medium"
+                       HorizontalTextAlignment="Center" 
+                       Margin="0,0,0,0"
+                       IsReadOnly="False"
+                       BackgroundColor="Transparent" />
+            </Frame>
+            <Label Text="{Binding LoginUsuario}" TextColor="Gray" FontSize="Small" HorizontalTextAlignment="Center" Margin="0,0,0,0"></Label>
+            <Label Text="{Binding SaldoPoderes}" TextColor="Gray" FontSize="Small" HorizontalTextAlignment="Center" Margin="0,0,0,0"></Label>
+            <Label Text="{Binding MarcaBloqueo}" TextColor="Gray" FontSize="Small" HorizontalTextAlignment="Center" Margin="0,0,0,0"></Label>
+            <Label Text="{Binding RadioActual}" TextColor="Gray" FontSize="Small" HorizontalTextAlignment="Center" Margin="0,0,0,0"></Label>
+            <Label Text="{Binding CredibilidadActual}" TextColor="Gray" FontSize="Small" HorizontalTextAlignment="Center" Margin="0,0,0,0"></Label>
+
+            <Frame Padding="5" BorderColor="Black" BackgroundColor="LightGray" Margin="0,20,0,0" HorizontalOptions="Center" HeightRequest="35" WidthRequest="380" CornerRadius="10">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding SuperpoderesCommand}" NumberOfTapsRequired="1" />
+                </Frame.GestureRecognizers>
+                <Label Text="{helpers:TranslateExtension Text='OptCompraPoderes'}" 
+                       TextColor="Black"
+                       LineBreakMode="WordWrap"
+                       HorizontalOptions="CenterAndExpand"
+                       VerticalOptions="CenterAndExpand"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center" />
+            </Frame>
+
+            <Frame Padding="5" BorderColor="Black" BackgroundColor="LightGray" Margin="0,15,0,0" HorizontalOptions="Center" HeightRequest="35" WidthRequest="380" CornerRadius="10">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding ProtegidosCommand}" NumberOfTapsRequired="1" />
+                </Frame.GestureRecognizers>
+                <Label Text="{helpers:TranslateExtension Text='OptGestionarProtegidos'}" 
+                       TextColor="Black"
+                       LineBreakMode="WordWrap"
+                       HorizontalOptions="CenterAndExpand"
+                       VerticalOptions="CenterAndExpand"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center" />
+            </Frame>
+
+            <Frame Padding="5" BorderColor="Black" BackgroundColor="LightGray" Margin="0,15,0,0" HorizontalOptions="Center" HeightRequest="35" WidthRequest="380" CornerRadius="10">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding CrearZonasCommand}" NumberOfTapsRequired="1" />
+                </Frame.GestureRecognizers>
+                <Label Text="{helpers:TranslateExtension Text='OptCrearZonas'}" 
+                       TextColor="Black"
+                       LineBreakMode="WordWrap"
+                       HorizontalOptions="CenterAndExpand"
+                       VerticalOptions="CenterAndExpand"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center" />
+            </Frame>
+
+            <Frame Padding="5" BorderColor="Black" BackgroundColor="LightGray" Margin="0,15,0,0" HorizontalOptions="Center" HeightRequest="35" WidthRequest="380" CornerRadius="10">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding RadioAlertasCommand}" NumberOfTapsRequired="1" />
+                </Frame.GestureRecognizers>
+                <Label Text="{helpers:TranslateExtension Text='OptAumentarRadio'}" 
+                       TextColor="Black"
+                       LineBreakMode="WordWrap"
+                       HorizontalOptions="CenterAndExpand"
+                       VerticalOptions="CenterAndExpand"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center" />
+            </Frame>
+
+            <Frame Padding="5" BorderColor="Black" BackgroundColor="LightGray" Margin="0,15,0,0" HorizontalOptions="Center" HeightRequest="35" WidthRequest="380" CornerRadius="10">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding RenovarSubscrCommand}" NumberOfTapsRequired="1" />
+                </Frame.GestureRecognizers>
+                <Label Text="{helpers:TranslateExtension Text='OptMisSubs'}" 
+                       TextColor="Black"
+                       LineBreakMode="WordWrap"
+                       HorizontalOptions="CenterAndExpand"
+                       VerticalOptions="CenterAndExpand"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center" />
+            </Frame>
+
+            <Frame Padding="5" BorderColor="Black" BackgroundColor="LightGray" Margin="0,15,0,0" HorizontalOptions="Center" HeightRequest="35" WidthRequest="380" CornerRadius="10">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding ReportesCommand}" NumberOfTapsRequired="1" />
+                </Frame.GestureRecognizers>
+                <Label Text="{helpers:TranslateExtension Text='OptReportes'}" 
+                       TextColor="Black"
+                       LineBreakMode="WordWrap"
+                       HorizontalOptions="CenterAndExpand"
+                       VerticalOptions="CenterAndExpand"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center" />
+            </Frame>
+
+            <Frame Padding="5" BorderColor="Black" BackgroundColor="LightGray" Margin="0,15,0,0" HorizontalOptions="Center" HeightRequest="35" WidthRequest="380" CornerRadius="10">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding TerminosCondicionesCommand}" NumberOfTapsRequired="1" />
+                </Frame.GestureRecognizers>
+                <Label Text="{helpers:TranslateExtension Text='OptTerminosCondiciones'}" 
+                       TextColor="Black"
+                       LineBreakMode="WordWrap"
+                       HorizontalOptions="CenterAndExpand"
+                       VerticalOptions="CenterAndExpand"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center" />
+            </Frame>
+
+            <Frame Padding="5" BorderColor="Black" BackgroundColor="LightGray" Margin="0,15,0,0" HorizontalOptions="Center" HeightRequest="35" WidthRequest="380" CornerRadius="10">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding ManualSospectCommand}" NumberOfTapsRequired="1" />
+                </Frame.GestureRecognizers>
+                    <Label Text="{helpers:TranslateExtension Text='OptManualUsuarioSospect'}" 
+                       TextColor="Black"
+                       LineBreakMode="WordWrap"
+                       HorizontalOptions="CenterAndExpand"
+                       VerticalOptions="CenterAndExpand"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center" />
+            </Frame>
+
+            <Frame Padding="5" BorderColor="Black" BackgroundColor="LightGray" Margin="0,15,0,0" HorizontalOptions="Center" HeightRequest="35" WidthRequest="380" CornerRadius="10">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding AcercaDeCommand}" NumberOfTapsRequired="1" />
+                </Frame.GestureRecognizers>
+                <Label Text="{helpers:TranslateExtension Text='OptAcercaDe'}" 
+                       TextColor="Black"
+                       LineBreakMode="WordWrap"
+                       HorizontalOptions="CenterAndExpand"
+                       VerticalOptions="CenterAndExpand"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center"/>
+            </Frame>
+
+            <Frame Padding="5" BorderColor="Black" BackgroundColor="LightGray" Margin="0,15,0,0" HorizontalOptions="Center" HeightRequest="35" WidthRequest="380" CornerRadius="10">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding CerrarSesionCommand}" NumberOfTapsRequired="1" />
+                </Frame.GestureRecognizers>
+                <Label Text="{helpers:TranslateExtension Text='OptCerrarSesion'}" 
+                       TextColor="Black"
+                       LineBreakMode="WordWrap"
+                       HorizontalOptions="CenterAndExpand"
+                       VerticalOptions="CenterAndExpand"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center" />
+            </Frame>
+                       
+        </StackLayout>
+    </ScrollView>
+        <Grid BackgroundColor="LightGray" Grid.Row="1" HeightRequest="90">
+            <ads:AdBanner></ads:AdBanner>
+        </Grid>
+    </Grid>
+</ContentPage>

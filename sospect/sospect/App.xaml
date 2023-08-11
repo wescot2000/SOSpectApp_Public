@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:Converters="clr-namespace:sospect.Converters"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="sospect.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <Converters:CalificacionDescripcionAlarmaAColorPositivoConverter
+                x:Key="CalificacionDescripcionAlarmaAColorPositivoConverter"></Converters:CalificacionDescripcionAlarmaAColorPositivoConverter>
+            <Converters:CalificacionDescripcionAlarmaAColorNegativoConverter
+                x:Key="CalificacionDescripcionAlarmaAColorNegativoConverter"></Converters:CalificacionDescripcionAlarmaAColorNegativoConverter>
+            <Converters:StringNullOrEmptyToBoolConverter
+                x:Key="StringNullOrEmptyToBoolConverter"></Converters:StringNullOrEmptyToBoolConverter>
+            <Converters:BooleanNegatorConverter
+                x:Key="BooleanNegatorConverter"></Converters:BooleanNegatorConverter>
+            <Converters:BooleanToFontAttributeConverter
+                x:Key="BooleanToFontAttributeConverter"></Converters:BooleanToFontAttributeConverter>
+
+            <OnPlatform x:Key="FontAwesomeFamily" x:TypeArguments="x:String">
+                <On Platform="iOS" Value="Font Awesome 6 Free"/>
+                <On Platform="Android" Value="Font Awesome 6 Free-Regular-400.otf#Font Awesome 6 Free-Regular-400"/>
+            </OnPlatform>
+            <OnPlatform x:Key="IcoMoonFamily" x:TypeArguments="x:String">
+                <On Platform="iOS" Value="icomoon"/>
+                <On Platform="Android" Value="icomoon.ttf#icomoon"/>
+            </OnPlatform>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

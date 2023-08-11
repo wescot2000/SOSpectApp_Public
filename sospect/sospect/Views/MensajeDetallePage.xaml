@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:fonts="clr-namespace:sospect.Resources.Fonts;assembly=sospect"
+             xmlns:helpers="clr-namespace:sospect.Helpers"
+             xmlns:resources="clr-namespace:sospect.Resources;assembly=sospect"
+             xmlns:converters="clr-namespace:sospect.Converters"
+             xmlns:ads="clr-namespace:sospect.CustomRenderers"
+             Title="{helpers:TranslateExtension Text='LblMensajes'}"
+             BackgroundColor="White"
+             x:Class="sospect.Views.MensajeDetallePage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:NullToBoolConverter x:Key="NullToBoolConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <ScrollView VerticalOptions="FillAndExpand">
+            <StackLayout Grid.Row="0" Padding="10" VerticalOptions="FillAndExpand">
+                <Label x:Name="SubjectLabel"
+                   FontAttributes="Bold"
+                   FontSize="Large"
+                   TextColor="Gray"
+                   Text="{Binding DetalleMensaje.asunto}"/>
+                <Label x:Name="DateLabel"
+                   FontSize="Small"
+                       TextColor="Gray"
+                   Text="{Binding DetalleMensaje.fecha_mensaje}"/>
+                <Label x:Name="ToLabel"
+                   FontSize="Small"
+                       TextColor="Gray"
+                   Text="{Binding ToLabel}"/>
+                <Label x:Name="FromLabel"
+                   FontSize="Small"
+                       TextColor="Gray"
+                   Text="{Binding FromLabel}"/>
+                <Label x:Name="BodyLabel"
+                   FontSize="Medium"
+                   Margin="0, 20, 0, 0"
+                       TextColor="Gray"
+                   Text="{Binding DetalleMensaje.texto}"/>
+
+                <Label x:Name="LinkLabel"
+                FontSize="Medium"
+                Margin="0, 20, 0, 0"
+                TextDecorations="Underline"
+                TextColor="Blue"
+                IsVisible="{Binding DetalleMensaje.alarma_id, Converter={StaticResource NullToBoolConverter}}"
+                Text="{helpers:TranslateExtension Text='LblTocaAqui'}">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding NavigateToAlarmCommand}" CommandParameter="{Binding DetalleMensaje.alarma_id}"></TapGestureRecognizer>
+                    </Label.GestureRecognizers>
+                </Label>
+            </StackLayout>
+        </ScrollView>
+        <Grid BackgroundColor="Black"
+                  Opacity="0.5"
+                  HorizontalOptions="FillAndExpand"
+                  VerticalOptions="FillAndExpand"
+                  Grid.Row="0"
+                  IsVisible="{Binding IsRunning}">
+            <ActivityIndicator VerticalOptions="Center"
+                                   HorizontalOptions="Center"
+                                   HeightRequest="50"
+                                   WidthRequest="50"
+                                   Color="DarkBlue"
+                                   IsRunning="{Binding IsRunning}">
+            </ActivityIndicator>
+        </Grid>
+        <Grid BackgroundColor="LightGray" Grid.Row="1" HeightRequest="90">
+            <ads:AdBanner></ads:AdBanner>
+        </Grid>
+    </Grid>
+</ContentPage>

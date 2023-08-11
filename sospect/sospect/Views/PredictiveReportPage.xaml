@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="sospect.Views.PredictiveReportPage"
+             xmlns:fonts="clr-namespace:sospect.Resources.Fonts;assembly=sospect"
+             xmlns:helpers="clr-namespace:sospect.Helpers"
+             BackgroundColor="White"
+             Title="{helpers:TranslateExtension Text='LblReportePredictivo'}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Label
+            Grid.Row="0" Grid.Column="1"
+               Text="{helpers:TranslateExtension Text='LblReporteEnConstruccion'}"
+               FontSize="Medium"
+               HorizontalOptions="CenterAndExpand"
+               VerticalOptions="CenterAndExpand" 
+               HorizontalTextAlignment="Center"
+               TextColor="Red"/>
+
+        <Label
+            Grid.Row="1" Grid.Column="1"
+               Text="{helpers:TranslateExtension Text='LblDescripcionReportesPredictivos'}"
+               FontSize="Small"
+               Margin="0,50,0,20"
+               VerticalOptions="StartAndExpand" 
+               HorizontalTextAlignment="Center"
+               TextColor="Gray"/>
+
+        <Label
+            Grid.Row="2" Grid.Column="1"
+               Text="{helpers:TranslateExtension Text='LblCostoReporte'}"
+               FontSize="Small"
+               Margin="0,50,0,20"
+               VerticalOptions="StartAndExpand" 
+               HorizontalTextAlignment="Center"
+               TextColor="Gray"/>
+    </Grid>
+</ContentPage>

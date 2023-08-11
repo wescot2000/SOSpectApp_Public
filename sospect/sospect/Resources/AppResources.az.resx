@@ -1,0 +1,1090 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Bienvenido" xml:space="preserve">
+    <value>SOSpect-a xoş gəlmisiniz</value>
+  </data>
+  <data name="InicieSesion" xml:space="preserve">
+    <value>Davam etmək üçün daxil olmaq</value>
+  </data>
+  <data name="InicieSesionCon" xml:space="preserve">
+    <value>və ya onunla daxil olaraq</value>
+  </data>
+  <data name="SesionFacebook" xml:space="preserve">
+    <value>FACEBOOK-LA GIRIŞ</value>
+  </data>
+  <data name="SesionGoogle" xml:space="preserve">
+    <value>GOOGLE ILƏ İmzaLA</value>
+  </data>
+  <data name="LabelAlerta" xml:space="preserve">
+    <value>Xəbərdarlıq</value>
+  </data>
+  <data name="LabelCrimen" xml:space="preserve">
+    <value>Cinayət</value>
+  </data>
+  <data name="LabelOK" xml:space="preserve">
+    <value>YAXŞI</value>
+  </data>
+  <data name="LabelCancelar" xml:space="preserve">
+    <value>Ləğv etmək</value>
+  </data>
+  <data name="ReportarCrimen" xml:space="preserve">
+    <value>Hesabat Cinayət</value>
+  </data>
+  <data name="LabelMapa" xml:space="preserve">
+    <value>Xəritə</value>
+  </data>
+  <data name="LabelDescribir" xml:space="preserve">
+    <value>Təsvir Et</value>
+  </data>
+  <data name="DescripcionAlarma" xml:space="preserve">
+    <value>Alarmın təsviri</value>
+  </data>
+  <data name="DescripcionSospechoso" xml:space="preserve">
+    <value>Şübhəli şəxsin təsviri</value>
+  </data>
+  <data name="DescripcionVehiculo" xml:space="preserve">
+    <value>Nəqliyyat vasitəsinin təsviri</value>
+  </data>
+  <data name="DescripcionArma" xml:space="preserve">
+    <value>Silahın təsviri</value>
+  </data>
+  <data name="PuntuacionDescripcion" xml:space="preserve">
+    <value>İzah</value>
+  </data>
+  <data name="LabelEditar" xml:space="preserve">
+    <value>_Düzəlt</value>
+  </data>
+  <data name="DescripcionesParaAlarma" xml:space="preserve">
+    <value>Bu alarm üçün hazırlanmış təsvirlər</value>
+  </data>
+  <data name="EspacioPublicidad" xml:space="preserve">
+    <value>Reklam üçün yer</value>
+  </data>
+  <data name="AlarmasRecientes" xml:space="preserve">
+    <value>Təsviri əlavə etmək üçün son alarmlar</value>
+  </data>
+  <data name="ConfirmarAlarma" xml:space="preserve">
+    <value>Səs-küy təsdiqlə</value>
+  </data>
+  <data name="LabelInformacion" xml:space="preserve">
+    <value>Məlumat</value>
+  </data>
+  <data name="LabelError" xml:space="preserve">
+    <value>Xəta</value>
+  </data>
+  <data name="LabelCancelado" xml:space="preserve">
+    <value>Ləğv edildi</value>
+  </data>
+  <data name="LabelLoginCancelado" xml:space="preserve">
+    <value>Giriş ləğv edildi</value>
+  </data>
+  <data name="LabelFallo" xml:space="preserve">
+    <value>Səhv</value>
+  </data>
+  <data name="RecibeAlarma" xml:space="preserve">
+    <value>Yaşadığınız yerə yaxın səs-küy sizi təşvişə saldı. Bu, gerçəkdirmi?</value>
+  </data>
+  <data name="LabelConfirmo" xml:space="preserve">
+    <value>Təsdiqlə</value>
+  </data>
+  <data name="LabelNoSeguro" xml:space="preserve">
+    <value>Əmin deyiləm</value>
+  </data>
+  <data name="LabelEsFalsa" xml:space="preserve">
+    <value>Yalan olar</value>
+  </data>
+  <data name="LabelConfirmar" xml:space="preserve">
+    <value>Təsdiqlə</value>
+  </data>
+  <data name="AdvertenciaCalificacion" xml:space="preserve">
+    <value>Bu reytinqi sonradan dəyişmək mümkün deyil. Əgər reytinqlərin konsensusu sizin səsvermənizə zidd olarsa, bu, sizin gələcək etibarınıza təsir edə bilər. Sən əminsən?</value>
+  </data>
+  <data name="LabelSi" xml:space="preserve">
+    <value>Bəli</value>
+  </data>
+  <data name="LabelNo" xml:space="preserve">
+    <value>Xeyr</value>
+  </data>
+  <data name="AlarmaEnviada" xml:space="preserve">
+    <value>Səs-küy göndərildi!</value>
+  </data>
+  <data name="MsgTrasAlarmaEnviada" xml:space="preserve">
+    <value>Əgər təhlükəsizsinizsə, zəhmət olmasa, səs-küyünüzü təsvir edin. Telefonunuzu gizləyin və təhlükədən qurtulun.</value>
+  </data>
+  <data name="notificacionurgente" xml:space="preserve">
+    <value>Ən yaxın telefonlara təcili bildiriş göndəriləcək:</value>
+  </data>
+  <data name="LabelAlarma" xml:space="preserve">
+    <value>Səsgücləndirici</value>
+  </data>
+  <data name="LabelMetros" xml:space="preserve">
+    <value>metr</value>
+  </data>
+  <data name="LabelTuUbicacion" xml:space="preserve">
+    <value>Yeriniz</value>
+  </data>
+  <data name="LabelUsuario" xml:space="preserve">
+    <value>İstifadəçi</value>
+  </data>
+  <data name="LabelTipoAlarma" xml:space="preserve">
+    <value>Alarm növü</value>
+  </data>
+  <data name="DireccionEscape" xml:space="preserve">
+    <value>Xahiş edirik şübhəli şəxsin qaçış ünvanını bildirəsiniz.</value>
+  </data>
+  <data name="DescripcionAlerta" xml:space="preserve">
+    <value>Xəbərdarlığın təsviri</value>
+  </data>
+  <data name="DescripcionImplicado" xml:space="preserve">
+    <value>Xəbərdarlıqda iştirak edən şəxsin təsviri</value>
+  </data>
+  <data name="DescripcionVehiculoImp" xml:space="preserve">
+    <value>Nəqliyyat vasitəsi ilə bağlı (Əgər tətbiq olunursa)</value>
+  </data>
+  <data name="ArmaImplicada" xml:space="preserve">
+    <value>Daxil olan silah (Əgər tətbiq olunursa)</value>
+  </data>
+  <data name="LabelRutaEscape" xml:space="preserve">
+    <value>Şübhəli qaçış yolu</value>
+  </data>
+  <data name="ObjetivoSospect" xml:space="preserve">
+    <value>SOSpect-un məqsədi cəmiyyətin onlara və onların yaxınlarına təhlükələrdən yayınmaq məqsədilə istifadəçinin yerində təhlükələr barədə xəbərdar olmasına və xəbərdarlıq almasına imkan verməkdir. İstifadəçilərin yeri paylaşılmır və ya izlənilmir, onların şəxsi məlumatlarını təmin edir. İstifadəçilər təhlükəli vəziyyətlərin qurbanı olmamaq üçün təhlükəli xəbərdarlıqlar edə bilərlər.</value>
+  </data>
+  <data name="UbicacionImportante" xml:space="preserve">
+    <value>İstifadəçinin yerini bilmək vacibdir ki, əgər kimsə onların yerləşdiyi yerin yaxınlığında təhlükəli xəbərdarlıq edərsə, onları xəbərdar edə biləsiniz. Bununla belə, istifadəçinin yeri özəldir və yalnız xəbərdarlıqların edildiyi xəritədəki nöqtələr paylaşılır.</value>
+  </data>
+  <data name="GenteUnida" xml:space="preserve">
+    <value>SOSpect ilə cəmiyyət cinayətkarlığı azaltmaq və riskli vəziyyətlərin qurbanı olmamaq üçün bir yerə toplaşaraq, başqalarını da təhlükəsizlikdə qalmağı xəbərdar edə bilər.</value>
+  </data>
+  <data name="contactenos" xml:space="preserve">
+    <value>Bizimlə əlaqə saxlayın</value>
+  </data>
+  <data name="visitenos" xml:space="preserve">
+    <value>Bizi ziyarət et</value>
+  </data>
+  <data name="ZonaVigilancia" xml:space="preserve">
+    <value>Nəzarət Zonası Abunəliyi</value>
+  </data>
+  <data name="SeleccioneUbicacionVigilar" xml:space="preserve">
+    <value>İzləmək üçün yeri seçin</value>
+  </data>
+  <data name="SeleccionEnMapa" xml:space="preserve">
+    <value>Xəritədə seç</value>
+  </data>
+  <data name="ExplicaZonaVigilancia" xml:space="preserve">
+    <value>Seçəcəyiniz məqamda qoyulan bütün səs-küylərə kim tərəfindən qoyulmasından asılı olmayaraq xəbər veriləcək. Belə olan halda həmin vaxt baş verən təhlükələrdən xəbərdar ola bilərsən. Bu, uşaqlarınızın məktəb və ya universitet və ya qohumlarınızın və ya yaxınlarınızın işlədiyi ərazilərdə təhlükələrdən xəbərdar olmaq üçün əlverişlidir.</value>
+  </data>
+  <data name="CrearZonaV" xml:space="preserve">
+    <value>Bu yer ilə nəzarət zonası yaradın</value>
+  </data>
+  <data name="LabelLatitud" xml:space="preserve">
+    <value>Enlik</value>
+  </data>
+  <data name="LabelLongitud" xml:space="preserve">
+    <value>Uzunluq</value>
+  </data>
+  <data name="LabelIntroduccion" xml:space="preserve">
+    <value>Giriş</value>
+  </data>
+  <data name="AmpliacionRadio" xml:space="preserve">
+    <value>Alarm radiusunun genişləndirilməsi</value>
+  </data>
+  <data name="TuRadioActual" xml:space="preserve">
+    <value>Hazırkı radiusunuz:</value>
+  </data>
+  <data name="CrearNuevoRadio" xml:space="preserve">
+    <value>Bu yeni radio üçün abunəliyimi yarat</value>
+  </data>
+  <data name="ExplicacionVigencias" xml:space="preserve">
+    <value>Bütün abunələrin keçərliliyi var. Xahiş edirik əsas menyunun ilkin variantında abunəliyin qiymətlərini yoxlayın</value>
+  </data>
+  <data name="VasARequerir" xml:space="preserve">
+    <value>Tələb edəcəksən</value>
+  </data>
+  <data name="xPoderesParaSubs" xml:space="preserve">
+    <value>Bu radioya indiki radionuza əlavə etmək üçün güclər</value>
+  </data>
+  <data name="Exito" xml:space="preserve">
+    <value>Müvəffəqiyyət</value>
+  </data>
+  <data name="SubscripcionCreada" xml:space="preserve">
+    <value>Abunəlik uğurla yaradılmışdır.</value>
+  </data>
+  <data name="MensajeError" xml:space="preserve">
+    <value>Vericiyə bağlanma xətası oldu. Zəhmət olmasa, yenidən cəhd edin.</value>
+  </data>
+  <data name="SeleccionaRuta" xml:space="preserve">
+    <value>Şübhəli şəxsin qaçış yolunu seçməlisiniz.</value>
+  </data>
+  <data name="AprobarSolicitudes" xml:space="preserve">
+    <value>Xahişləri qəbul etdir</value>
+  </data>
+  <data name="LabelAprobar" xml:space="preserve">
+    <value>Təsdiqlə</value>
+  </data>
+  <data name="LabelRechazar" xml:space="preserve">
+    <value>Rədd Et</value>
+  </data>
+  <data name="CompletarSubscripcion" xml:space="preserve">
+    <value>Qorumalı abunə yazılışını tamamla</value>
+  </data>
+  <data name="CompletarSubsc" xml:space="preserve">
+    <value>Abunəlik Tamamla</value>
+  </data>
+  <data name="LblMensajes" xml:space="preserve">
+    <value>İsmarışlar</value>
+  </data>
+  <data name="LblFechaMensaje" xml:space="preserve">
+    <value>İsmarış tarixi</value>
+  </data>
+  <data name="LblMenu" xml:space="preserve">
+    <value>KONFIQURASIYA</value>
+  </data>
+  <data name="OptCompraPoderes" xml:space="preserve">
+    <value>Xüsusiyyətləri açmaq üçün səlahiyyətləri satın alın</value>
+  </data>
+  <data name="OptGestionarProtegidos" xml:space="preserve">
+    <value>Qoruyucularımı idarə et</value>
+  </data>
+  <data name="OptCrearZonas" xml:space="preserve">
+    <value>Nəzarət zonaları yaradılsın</value>
+  </data>
+  <data name="OptAumentarRadio" xml:space="preserve">
+    <value>Xəbərdarlıq qəbul radiusumu artır</value>
+  </data>
+  <data name="OptAcercaDe" xml:space="preserve">
+    <value>SOSpect tətbiqi haqqında</value>
+  </data>
+  <data name="OptCerrarSesion" xml:space="preserve">
+    <value>_Qeyd Et</value>
+  </data>
+  <data name="LblProtectores" xml:space="preserve">
+    <value>Mənim qoruyucularım</value>
+  </data>
+  <data name="LblSuspender" xml:space="preserve">
+    <value>Müvəqqəti olaraq dayandır</value>
+  </data>
+  <data name="LblEliminarProtegido" xml:space="preserve">
+    <value>Qorumalı</value>
+  </data>
+  <data name="LblSubscrProtegido" xml:space="preserve">
+    <value>Qorumalı abunə</value>
+  </data>
+  <data name="LblIDUsuarioAProteger" xml:space="preserve">
+    <value>Qorumaq üçün istifadəçi ID-lərini daxil edin. (Həmin dəyər bağlamaq istədiyiniz istifadəçinin SOSpect konfiqurasiya menyusunun yuxarısında yerləşir)</value>
+  </data>
+  <data name="LblRelacionProtegido" xml:space="preserve">
+    <value>Mənim bu protezlə münasibətim belədir:</value>
+  </data>
+  <data name="LblSolicitarPermiso" xml:space="preserve">
+    <value>İstifadəçidən icazə istə</value>
+  </data>
+  <data name="LblCompleteCampos" xml:space="preserve">
+    <value>Zəhmət olmasa bütün sahələri tamamla.</value>
+  </data>
+  <data name="LblProcesarSolicitud" xml:space="preserve">
+    <value>İstək işlənərkən xəta oldu. Zəhmət olmasa, yenidən cəhd edin.</value>
+  </data>
+  <data name="LblProtegidos" xml:space="preserve">
+    <value>Mənim Protégés</value>
+  </data>
+  <data name="LblUsuarioProtegido" xml:space="preserve">
+    <value>Qorumalı istifadəçi ID-i</value>
+  </data>
+  <data name="LblFechaActivacion" xml:space="preserve">
+    <value>Aktivasiya tarixi</value>
+  </data>
+  <data name="LblFechaFinalizacion" xml:space="preserve">
+    <value>Bitiş tarixi</value>
+  </data>
+  <data name="LblAccion" xml:space="preserve">
+    <value>Hərəkət</value>
+  </data>
+  <data name="LblCantidadPoderes" xml:space="preserve">
+    <value>Səlahiyyətlərin sayı</value>
+  </data>
+  <data name="LblPrecio" xml:space="preserve">
+    <value>Qiymət</value>
+  </data>
+  <data name="LblComprar" xml:space="preserve">
+    <value>Al</value>
+  </data>
+  <data name="LblValoresSubsc" xml:space="preserve">
+    <value>Abunəlik qiymətləri</value>
+  </data>
+  <data name="LblTerminos" xml:space="preserve">
+    <value>SOSpect APP üçün xidmət şərtləri</value>
+  </data>
+  <data name="LblAcepto" xml:space="preserve">
+    <value>Müqaviləni qəbul edirəm</value>
+  </data>
+  <data name="LblNoAcepto" xml:space="preserve">
+    <value>Qəbul etmirəm</value>
+  </data>
+  <data name="LblOpcionesProtegidos" xml:space="preserve">
+    <value>SOSpect App tərəfindən qorunur və qorunur</value>
+  </data>
+  <data name="LblExplicacionProtegidos" xml:space="preserve">
+    <value>Sosial dairənizin üzvləri sizdən uzaq olsalar belə, xəbərdarlıq ala bilərsiniz. Bu funksiyanı buradan idarə edə bilərsiniz</value>
+  </data>
+  <data name="OptIniciarTramite" xml:space="preserve">
+    <value>Qorunan əlavə etmək prosesini başla</value>
+  </data>
+  <data name="OptAprobarSolicitud" xml:space="preserve">
+    <value>Qoruyucudan xahişi qəbul etmək</value>
+  </data>
+  <data name="OptListarProtegidos" xml:space="preserve">
+    <value>Mənim protégés siyahısı bax</value>
+  </data>
+  <data name="OptListarProtectores" xml:space="preserve">
+    <value>Qoruyucularımın siyahısına baxın</value>
+  </data>
+  <data name="OptVolver" xml:space="preserve">
+    <value>Qayıt</value>
+  </data>
+  <data name="LblPoderesSospect" xml:space="preserve">
+    <value>SOSpect App-ın gücləri</value>
+  </data>
+  <data name="LblOpcionesPoderes" xml:space="preserve">
+    <value>Elektrik idarəetmə seçiminə xoş gəlmisiniz, nə etmək istəyirsiniz?</value>
+  </data>
+  <data name="LblSubscripcionesCosto" xml:space="preserve">
+    <value>Bilmək istəyirəm ki, hansı abunələri ala bilərəm və onların qiyməti</value>
+  </data>
+  <data name="LblQuieroComprar" xml:space="preserve">
+    <value>Abunə almaq üçün super səlahiyyətlər almaq istəyirəm</value>
+  </data>
+  <data name="ExplicacionRadio" xml:space="preserve">
+    <value>Tətbiqin bütün istifadəçiləri üçün default radiusu 100 metr ətrafındadır. Bu radiusu proqramın səlahiyyətlərindən istifadə edərək genişləndirə bilərsiniz. Sonra özünüz üçün istədiyiniz radiusu seçin:</value>
+  </data>
+  <data name="LblAsunto" xml:space="preserve">
+    <value>İzah</value>
+  </data>
+  <data name="LblCompraPoderes" xml:space="preserve">
+    <value>Səlahiyyətlərin satın alınması</value>
+  </data>
+  <data name="OptCompletarTramite" xml:space="preserve">
+    <value>Qorumalı əlavə etmək üçün proseduru tamamla</value>
+  </data>
+  <data name="LabelHecho" xml:space="preserve">
+    <value>Qurtardı</value>
+  </data>
+  <data name="LabelEscapoEnEstaDireccion" xml:space="preserve">
+    <value>O, bu istiqamətdə qaçdı</value>
+  </data>
+  <data name="OptMisSubs" xml:space="preserve">
+    <value>Abunəlik</value>
+  </data>
+  <data name="LblMisSubscripciones" xml:space="preserve">
+    <value>Abunəlik</value>
+  </data>
+  <data name="LblidUsuario" xml:space="preserve">
+    <value>İstifadəçi ID-i:</value>
+  </data>
+  <data name="LblTipo" xml:space="preserve">
+    <value>Abunə növü:</value>
+  </data>
+  <data name="LblDescripcionPuntos" xml:space="preserve">
+    <value>İzah:</value>
+  </data>
+  <data name="LblFechaFinPuntos" xml:space="preserve">
+    <value>Bitiş tarixi:</value>
+  </data>
+  <data name="LblPoderesPuntos" xml:space="preserve">
+    <value>Yeniləşmənin gücləri:</value>
+  </data>
+  <data name="LblRenovar" xml:space="preserve">
+    <value>Yenilə</value>
+  </data>
+  <data name="LblCancelarSubscripcion" xml:space="preserve">
+    <value>Abunəlik</value>
+  </data>
+  <data name="LblSeguroDeCancelar" xml:space="preserve">
+    <value>Əminsinizmi ki, abunəni ləğv etmək istəyirsiniz? Qəbul edilən qüvvələrin geri qaytarılması mümkün olmayacaq.</value>
+  </data>
+  <data name="LblAceptar" xml:space="preserve">
+    <value>Qəbul Et</value>
+  </data>
+  <data name="Alarm_1" xml:space="preserve">
+    <value>Xəbərdarlıq və ya təhlükə</value>
+  </data>
+  <data name="Alarm_2" xml:space="preserve">
+    <value>Cinayət və ya cinayət törədilib</value>
+  </data>
+  <data name="Alarm_3" xml:space="preserve">
+    <value>Küçə çəkişməsi</value>
+  </data>
+  <data name="Alarm_4" xml:space="preserve">
+    <value>İtirilmiş ev heyvanı</value>
+  </data>
+  <data name="Alarm_5" xml:space="preserve">
+    <value>İtirilmiş şəxs</value>
+  </data>
+  <data name="Alarm_6" xml:space="preserve">
+    <value>İğtişaşlar və ya etirazlar</value>
+  </data>
+  <data name="Alarm_7" xml:space="preserve">
+    <value>Küçəyə çıxmaqla vizual müşayiəti istə</value>
+  </data>
+  <data name="Alarm_8" xml:space="preserve">
+    <value>Məişət zorakılığı</value>
+  </data>
+  <data name="Alarm_9" xml:space="preserve">
+    <value>Sizin yerləşdiyiniz əraziyə qaçan şübhəli şəxs</value>
+  </data>
+  <data name="LblCostoPoderes" xml:space="preserve">
+    <value>Paket Qiyməti</value>
+  </data>
+  <data name="LblSuscripcionesDisponibles" xml:space="preserve">
+    <value>Hazırda mövcud olan abunələr</value>
+  </data>
+  <data name="LblFamilia" xml:space="preserve">
+    <value>Ailə</value>
+  </data>
+  <data name="LblAmigo" xml:space="preserve">
+    <value>Dost</value>
+  </data>
+  <data name="LblCompanero" xml:space="preserve">
+    <value>Tərəf Müqabili</value>
+  </data>
+  <data name="LblOtroSinDefinir" xml:space="preserve">
+    <value>Digər qeyri-müəyyən</value>
+  </data>
+  <data name="LabelExito" xml:space="preserve">
+    <value>Müvəffəqiyyət</value>
+  </data>
+  <data name="LblSolicitudAprobada" xml:space="preserve">
+    <value>Ərizə müvəffəqiyyətlə təsdiqləndi.</value>
+  </data>
+  <data name="MensajeErrorAprobando" xml:space="preserve">
+    <value>İstək təsdiqlə xətası: %s</value>
+  </data>
+  <data name="MensajeErrorRechazando" xml:space="preserve">
+    <value>Xahiş rədd edilə bilmədi.</value>
+  </data>
+  <data name="LblSolicitudRechazada" xml:space="preserve">
+    <value>Ərizə müvəffəqiyyətlə rədd edildi.</value>
+  </data>
+  <data name="LblUsuarioSolicitante" xml:space="preserve">
+    <value>İstifadəçini sorğulamaq</value>
+  </data>
+  <data name="LblFechaSolicitud" xml:space="preserve">
+    <value>Müraciət tarixi</value>
+  </data>
+  <data name="LblAccionRealizar" xml:space="preserve">
+    <value>Tədbir keçiriləcək</value>
+  </data>
+  <data name="LblSubscripcionCompletada" xml:space="preserve">
+    <value>Abunə yazılışı başa çatdı</value>
+  </data>
+  <data name="LblSubscripcionFallida" xml:space="preserve">
+    <value>Abunəlik bacarılmadı</value>
+  </data>
+  <data name="LblUsuarioAprobador" xml:space="preserve">
+    <value>Qəbul edən istifadəçi</value>
+  </data>
+  <data name="LblFechaAprobacion" xml:space="preserve">
+    <value>Razılıq verilmə tarixi</value>
+  </data>
+  <data name="LblSubscrEliminada" xml:space="preserve">
+    <value>Abunə olmayanlar</value>
+  </data>
+  <data name="LblSubsEliminadaExitosamente" xml:space="preserve">
+    <value>Abunəlik müvəffəqiyyətlə aradan qaldırıldı</value>
+  </data>
+  <data name="LblEliminarProtector" xml:space="preserve">
+    <value>Qoruma</value>
+  </data>
+  <data name="LblRenovacionAplicada" xml:space="preserve">
+    <value>Uğurla təmir-bərpa işləri həyata keçirilir</value>
+  </data>
+  <data name="LblErrorRenovando" xml:space="preserve">
+    <value>Dəstək üçün yeniləmə, təkrar və ya hesabat vermə xətası, "menu"&gt;"About" seçimində mövcud olan əlaqə</value>
+  </data>
+  <data name="LblCancelacionAplicada" xml:space="preserve">
+    <value>Ləğvetmə uğurla həyata keçirildi</value>
+  </data>
+  <data name="LblErrorCancelando" xml:space="preserve">
+    <value>Dəstək üçün xəta ləğv edilir, yenidən edilir və ya hesabat verilir, "menu"&gt;"About" seçimində mövcud olan əlaqə</value>
+  </data>
+  <data name="LblZonaCreada" xml:space="preserve">
+    <value>İstəyən nəzarət zonasının abunəliyi uğurla həyata keçirilib</value>
+  </data>
+  <data name="LblErrorZonaVigil" xml:space="preserve">
+    <value>Yeni istnad olunan zonaya abunə yazılma xətası, dəstək üçün yenidən və ya hesabat verilməsi, "menu"&gt;"About" variantında mövcud olan əlaqə</value>
+  </data>
+  <data name="LblSeleccionaNuevoRadio" xml:space="preserve">
+    <value>Yeni radiusu metr olaraq seçin</value>
+  </data>
+  <data name="LblUsuarioProtector" xml:space="preserve">
+    <value>Qoruyucu istifadəçi</value>
+  </data>
+  <data name="LblSeguroEliminarProtegido" xml:space="preserve">
+    <value>Sən öz protezinizi mütləq çıxarın? Bu abunədə istifadə olunan səlahiyyətlər geri qaytarılmır.</value>
+  </data>
+  <data name="LblSuspenderProtectores" xml:space="preserve">
+    <value>Qoruyucularınıza bildirişləri 6 saat ərzində dayandırdığınıza əminsinizmi? Bütün qoruyucularınız alarmlar dayandırılacaq və abunənin son vaxtı bu səbəbdən uzadılmayacaq. Qoruyucuya bu hərəkət barədə xəbər verilməz.</value>
+  </data>
+  <data name="LblSuspensionRealizada" xml:space="preserve">
+    <value>Bütün qoruyucularınıza 6 saat ərzində səs-küylərin dayandırılması uğurlu alındı.</value>
+  </data>
+  <data name="LabelSeguroEliminarProtector" xml:space="preserve">
+    <value>Qoruyucunuzu mütləq silə bilərsiniz? Bu abunədə istifadə olunan səlahiyyətlər geri qaytarıla bilməyəcək və qoruyucuya bu hərəkət barədə xəbər veriləcək.</value>
+  </data>
+  <data name="LabelProtectorEliminado" xml:space="preserve">
+    <value>Seçili qoruyucu silindi. Qüvvələr qoruyucuya qaytarıla bilməyəcək. Qoruyucuya bu hərəkət barədə xəbər veriləcək</value>
+  </data>
+  <data name="LblConfirmacionRequerida" xml:space="preserve">
+    <value>Vacibdir! Təsdiq tələb olunur!</value>
+  </data>
+  <data name="LblNoHayRegistros" xml:space="preserve">
+    <value>Bu vaxt göstəriləcək heç bir giriş yoxdur</value>
+  </data>
+  <data name="LblMiLogin" xml:space="preserve">
+    <value>Mənim girişim belədir:</value>
+  </data>
+  <data name="LblSaldoPoderesEs" xml:space="preserve">
+    <value>Mənim gücüm balansım belədir:</value>
+  </data>
+  <data name="LblUsuarioID" xml:space="preserve">
+    <value>İstifadəçi Id-lərim</value>
+  </data>
+  <data name="LblNoHayRegistrosAqui" xml:space="preserve">
+    <value>Hələ heç kim heç nə yazmayıb!</value>
+  </data>
+  <data name="LblAlertaReportadaPorMi" xml:space="preserve">
+    <value>Xəbərdarlığı məndən xəbər verdi</value>
+  </data>
+  <data name="LblPara" xml:space="preserve">
+    <value>İsmarış alıcısı:</value>
+  </data>
+  <data name="LblDe" xml:space="preserve">
+    <value>İsmarışı göndərən:</value>
+  </data>
+  <data name="ConfiguraciondeSOSpect" xml:space="preserve">
+    <value>SOSpect Quraşdırma</value>
+  </data>
+  <data name="LblExitoEnAceptacion" xml:space="preserve">
+    <value>Sizin müqavilə qəbul saxlanılır!</value>
+  </data>
+  <data name="LblFalloEnAceptacion" xml:space="preserve">
+    <value>Qeydiyyat baş tutmadı. Xahiş edirik, yenidən edin!</value>
+  </data>
+  <data name="LblDeclinacionAceptacion" xml:space="preserve">
+    <value>Müqaviləni qəbul etmədən davam edə bilməzsiniz!</value>
+  </data>
+  <data name="LblParaIniciar" xml:space="preserve">
+    <value>SOSpect-DA BAŞLAYAQ!! Yaxınlıqdakı xəbərdarlıqları yeniləmək üçün mavi yenilə düyməsinə toxunun</value>
+  </data>
+  <data name="LblAlarmaNoGrave" xml:space="preserve">
+    <value>Sarı düymədən istifadə edərək aşağı təhlükəli xəbərdarlıqlar yerləşdirin və cəmiyyətinizi və ya qoruyucularınızı xəbərdar edin. Ayıq-sayıqlığı seçib cinayət kimi qeyd edə bilərsiniz. Bu düymə sizin dəqiq yerinizdə xəbərdarlıq başlatır, kömək lazım zaman faydalı olmaq. Həmçinin xəritədə yerinizə xələl gətirmədən xəbərdarlığı tapmaq üçün nöqtə seçə bilərsiniz.</value>
+  </data>
+  <data name="LblCrimenCometido" xml:space="preserve">
+    <value>Qırmızı düymə bir kateqoriyaya səbəb olur: cinayət təşvişə səbəb oldu. SOSpect bu hallarda zamanın əhəmiyyətinə görə kateqoriya daxil etməyinizi tələb etmir. Alarm avtomatik olaraq dəqiq yerinizə yerləşdirilir. Xəbərdarlığı yerləşdirmək üçün xəritədə bir nöqtə də seçib, sonra kateqoriyanı cinayətə dəyişə bilərsiniz.</value>
+  </data>
+  <data name="LblDescripcionAlarmas" xml:space="preserve">
+    <value>Alt bardakı 'Təsvir et' variantında siz və ya başqaları tərəfindən qoyulan səsgücləndiricilərin siyahısını tapacaqsınız. Alarmı yaratsanız, təsvir əlavə edə bilərsiniz. Əgər səs-küy başqası tərəfindən yaradılıbsa, onun sürətini qiymətləndirə və təsvirini tamamlaya bilərsiniz. Ehtiyatlı ol! Əgər siz yalan məlumat və ya yanlış reytinqlər təqdim edirsinizsə, hesabınız dayandırıla bilər. Bundan qaçınmaq üçün şərtləri və şərtləri diqqətlə nəzərdən keçirin.</value>
+  </data>
+  <data name="LblDescripcionMensajes" xml:space="preserve">
+    <value>Yuxarı sağ küncündəki zəngdə mesajlarınızı oxuya bilərsiniz. Bu mesajlara abunə bildirişləri və son zamanlar səs-küy daxildir. Bu siyahı təsvirlər variantından fərqlənir. Burada siz birbaşa son səs-küyləri tapa bilərsiniz.</value>
+  </data>
+  <data name="LblDescripcionMenu" xml:space="preserve">
+    <value>Sol yuxarı küncdəki təchizatda SIZ SOSpect konfiqurasiya variantlarını tapacaqsınız. Abunə almaq və ailənizi qorumaq və ya alarm qəbul radiusunuzu genişləndirmək üçün səlahiyyətlər ala bilərsiniz. UNUTMA! Başlanğıcda sizə 80 səlahiyyət veririk ki, əvvəldən iki abunə ala biləsiniz.</value>
+  </data>
+  <data name="LblRecomendaciones" xml:space="preserve">
+    <value>BIZ BIRLIKDƏ YENILMƏZIK! 100 metr radiusda xəbərdarlıqların xəbərdar edilməsi və alınmasının əsas funksiyaları pulsuzdur. Başladığınız zaman biz sizə 2 abunəlik veririk. Cəmiyyətinizi və ailənizi artan cinayətkarlığa qarşı mübarizə üçün bu pulsuz xidmətdən istifadə etməyə dəvət edin. Vaxtında xəbərdarlıq alaraq insanların həyatını xilas edə və ya xilas ola bilərsiniz. İtirilmiş insanlar və ya ev heyvanları ilə bağlı xəbərdarlıqlar 10 kilometrə bərabərdir. Zorakılıq nümayişləri isə 1 kilometrə bərabərdir</value>
+  </data>
+  <data name="LblPromocion" xml:space="preserve">
+    <value>Nəhayət, unutmayın ki, SOSpect-da təqdim etdiyiniz hər bir doğru reytinqə görə vəkillik səlahiyyəti qazanacaqsınız. Bu zaman səsgücləndiricilərin səsverməsi onların yerləşdirilməsindən 90 dəqiqə sonra bağlanır. İnsanların əksəriyyəti dürüstdür və biz bir-birimizi və ailəmizi qoruyacağıq. SOSPECT-A XOŞ GƏLMISINIZ!</value>
+  </data>
+  <data name="LblDescripcionMapa" xml:space="preserve">
+    <value>İstənilən vaxt alt zolağın solunda "MAP" variantını seçə bilərsiniz. Bu, SOSpect-un başlanğıc nöqtəsidir. Buradan yaxınlıqdakı səs-küyə baxa bilərsiniz. Sizin yeriniz xəritənin mərkəzində görünəcək. Dairə sizə təsir edə biləcək radiusu təmsil edir. Default olaraq bu radius 100 metrdir, amma onu qurğular menyusunda dəyişdirə bilərsiniz.</value>
+  </data>
+  <data name="LblRecomendacionImportante" xml:space="preserve">
+    <value>SoSpect-ları periodik olaraq, evdən çıxmazdan əvvəl və ya bir yerə gəldiyiniz zaman, yerinizi yeniləmək üçün açmağınız vacibdir. Bu yolla ərazinizdə hər hansı riskin olub-olmadığını sizə bildirə bilərik. Nəzərinizə çatdıraq ki, proqram bağlandıqda, cihaz əməliyyat sistemləri tərəfindən qoyulan məhdudiyyətlərə görə sizin yerinizi əldə edə bilmirik. Yerinizlə bağlı şərtləri və şərtləri yoxlayın.</value>
+  </data>
+  <data name="LblUsuarioBloqueado" xml:space="preserve">
+    <value>İstifadəçi mənfi işarələrə görə təxirə salındı</value>
+  </data>
+  <data name="LblMarcasNegativas" xml:space="preserve">
+    <value>Mənfi işarələrin sayı mənim</value>
+  </data>
+  <data name="LblCuentaSuspendida" xml:space="preserve">
+    <value>Digər istifadəçilərin mənfi işarələrinə görə hesab müvəqqəti olaraq dayandırılır</value>
+  </data>
+  <data name="LblTitleCuentaSuspendida" xml:space="preserve">
+    <value>Hesab müvəqqəti olaraq dayandırılır</value>
+  </data>
+  <data name="LblFechaFinSuspension" xml:space="preserve">
+    <value>Dayandırılmanın bitmə tarixi</value>
+  </data>
+  <data name="LblTocaAqui" xml:space="preserve">
+    <value>Getmək üçün buraya toxunun</value>
+  </data>
+  <data name="LblNoTienesConexion" xml:space="preserve">
+    <value>İnternet bağlantısı yoxdur</value>
+  </data>
+  <data name="LblExplicacionSinConexion" xml:space="preserve">
+    <value>İfadəniz SOSpect-a daxil olmaq üçün tələb olunur. İnternet olmadan onun aktiv olub-olmadığını bilə bilmərik.</value>
+  </data>
+  <data name="LblSinConexionDescripcion" xml:space="preserve">
+    <value>Aktiv internet SOSpect hesab statusunuzu geri almaq üçün tələb olunur.</value>
+  </data>
+  <data name="LblSinConexionQueHacer" xml:space="preserve">
+    <value>Zəhmət olmasa, internetinizi aktivləşdirin və SOSpect-a yenidən başladın</value>
+  </data>
+  <data name="SefinalizalasubscripcionporsolicituddelusuarioPROTEGIDOatravésdelaAPIdesdelaAPP" xml:space="preserve">
+    <value>Abunəlik APP-dən API vasitəsilə PROTECTED istifadəçisinin xahişi ilə dayandırılır</value>
+  </data>
+  <data name="Nopuederenovarsedebidoaquefuecancelada,requieresubscripciónnueva" xml:space="preserve">
+    <value>Ləğv edildiyi üçün yenilənə bilmir, yeni abunə tələb edir</value>
+  </data>
+  <data name="Alarmasgeneradaspormicirculosocial" xml:space="preserve">
+    <value>Sosial dairəmdən yaranan səs-küylər</value>
+  </data>
+  <data name="Incrementomidiametrodevigilancia" xml:space="preserve">
+    <value>Nəzarət diametrimi artırıram</value>
+  </data>
+  <data name="Zonadevigilanciaadicional" xml:space="preserve">
+    <value>Əlavə nəzarət zonası</value>
+  </data>
+  <data name="Renovable" xml:space="preserve">
+    <value>Bərpa olunan</value>
+  </data>
+  <data name="SefinalizalasubscripcionporsolicituddelusuarioPROTECTORatravésdelaAPIdesdelaAPP" xml:space="preserve">
+    <value>Abunəlik APP-dən API vasitəsilə PROTECTOR istifadəçisinin xahişi ilə dayandırılır</value>
+  </data>
+  <data name="LblEsRenovable" xml:space="preserve">
+    <value>Bərpa olunur?</value>
+  </data>
+  <data name="LblObsSubs" xml:space="preserve">
+    <value>Abunə qeydi:</value>
+  </data>
+  <data name="NingunaObservacion" xml:space="preserve">
+    <value>Şərh Yoxdur</value>
+  </data>
+  <data name="Subscripcionvigente" xml:space="preserve">
+    <value>Hazırkı abunə</value>
+  </data>
+  <data name="Actualmenteactivoenotrasuscripcion" xml:space="preserve">
+    <value>Hal-hazırda digər abunə yazılışı üzrə aktiv</value>
+  </data>
+  <data name="LblRadioActual" xml:space="preserve">
+    <value>Alarm almaq üçün hazırkı radiusum:</value>
+  </data>
+  <data name="LblPoderesRequeridosZV" xml:space="preserve">
+    <value>Seçilmiş genişlənmə üçün tələb olunan güclər</value>
+  </data>
+  <data name="OptTerminosCondiciones" xml:space="preserve">
+    <value>SOSpect Şərtləri və Şərtləri</value>
+  </data>
+  <data name="DebesAbrirLaApp" xml:space="preserve">
+    <value>SOSpect istifadəçinin qapalı olduğu zaman yerinin dəyişməsini bilə bilməz. Bu, mobil telefonların əməliyyat sistemlərinin batareyanın qorunması siyasəti nəticəsində baş verir. Buna görə də istifadəçinin hərəkətə gəldiyi ərazidəki alarmları yoxlamaq üçün tətbiqi tez-tez açması və vaxtında yaxınlıqdakı alarmları alması vacibdir.</value>
+  </data>
+  <data name="InvitaMasPersonas" xml:space="preserve">
+    <value>İstifadəçinin təhlükəsizliyini yaxşılaşdırmaq üçün onun ətrafında olanların, ailə və qonşuların pulsuz olan tətbiqi yükləməsi vacibdir. Əgər yaxınlıqda olan istifadəçilər yoxdursa, istifadəçi vaxtında xəbərdar olmaya və ya onların xəbərdarlıqları eşidilmir. Bu, tətbiqi yükləməzdən əvvəl olduğu kimi risk halını qoruyub saxlayır. Daha çox insanı bir-birinə köməyə dəvət etmək vacibdir!</value>
+  </data>
+  <data name="Insertiondone" xml:space="preserve">
+    <value>İnsersiya həyata keçirilir.</value>
+  </data>
+  <data name="AnerroroccurredwhilequalifyingthealarmCode1" xml:space="preserve">
+    <value>Alarmı kod 1 ilə reytinq edərkən xəta baş verdi</value>
+  </data>
+  <data name="AnerroroccurredwhilequalifyingthealarmCode2" xml:space="preserve">
+    <value>Alarmı kod 2 ilə sə'ylə sə'y edərkən xəta baş verdi</value>
+  </data>
+  <data name="AnerroroccurredwiththealarmqualificationmodelCode3" xml:space="preserve">
+    <value>Kod 3 ilə reytinqli alarm zamanı xəta baş verdi</value>
+  </data>
+  <data name="Userregistrationsuccessful" xml:space="preserve">
+    <value>İstifadəçiniz qeydiyyatdan keçib!</value>
+  </data>
+  <data name="Anerroroccurredwhileregisteringtheusercode1" xml:space="preserve">
+    <value>1-ci kod istifadəçinizi qeydiyyatdan keçirərkən xəta baş verdi</value>
+  </data>
+  <data name="Anerroroccurredwhileregisteringtheusercode2" xml:space="preserve">
+    <value>2-ci kod istifadəçinizi qeydiyyatdan keçirərkən xəta baş verdi</value>
+  </data>
+  <data name="Anerroroccurredwiththepeoplemodelforuserregistrationcode3" xml:space="preserve">
+    <value>3-cü kod istifadəçinizi qeydiyyatdan keçirərkən xəta baş verdi</value>
+  </data>
+  <data name="Permisosolicitadoconexito" xml:space="preserve">
+    <value>İcazə müvəffəqiyyətlə istənilmişdi</value>
+  </data>
+  <data name="OcurriounerrorenelprocesodesolicitarpermisoalprotegidoCodigo1" xml:space="preserve">
+    <value>Qorunanlardan icazə istənərkən kod 1 ilə xəta baş verdi</value>
+  </data>
+  <data name="Nofueposiblerealizarenviarlasolicituddepermisoalprotegidoporqueelmodelonoesvalido" xml:space="preserve">
+    <value>İcazə istəyini qorunanlara göndərmək mümkün olmadı, model qüvvədə deyil</value>
+  </data>
+  <data name="AlertaEnUbicacion" xml:space="preserve">
+    <value>Bu yerdə SOSpect xəbərdarlığı yaratmaq istəyirsiniz?</value>
+  </data>
+  <data name="CrearEnUbicacionActual" xml:space="preserve">
+    <value>Hazırkı yerinizdə SOSpect xəbərdarlığı yaratmaq istəyirsiniz?</value>
+  </data>
+  <data name="SeguroCerrarSesion" xml:space="preserve">
+    <value>Bəs siz mütləq qeyd edirsiniz?</value>
+  </data>
+  <data name="Tu" xml:space="preserve">
+    <value>Sən</value>
+  </data>
+  <data name="Anonimo" xml:space="preserve">
+    <value>Anonim</value>
+  </data>
+  <data name="AlarmaCerrada" xml:space="preserve">
+    <value>Alarm bağlandı</value>
+  </data>
+  <data name="LblSaldoPoderesInsuficiente" xml:space="preserve">
+    <value>Güc balansınız kifayət deyil</value>
+  </data>
+  <data name="LblComprarPoderes" xml:space="preserve">
+    <value>Vəkilin səlahiyyətlərini satın alın</value>
+  </data>
+  <data name="LblSeguroRenovar" xml:space="preserve">
+    <value>Bu abunəliyi yeniləməkdən əminsiniz?</value>
+  </data>
+  <data name="OptReportes" xml:space="preserve">
+    <value>Hesabatlar</value>
+  </data>
+  <data name="LblReportesTitulo" xml:space="preserve">
+    <value>SOSpect hesabatları</value>
+  </data>
+  <data name="LblReportesDescripcion" xml:space="preserve">
+    <value>Hesabatlar sizə zərərli vəziyyətlərdən qaçmaqla digər istifadəçilərə necə kömək etdiyinizi anlamaq imkanı verir. Bundan əlavə, onlar sizə şəhərinizin xəritəsindəki təhlükəli əraziləri müəyyən etməyə və vaxt keçdikcə cinayətkarlığın təkamül nəzəriyyəsini müşahidə etməyə imkan verir. Həmçinin, pattern analizi vasitəsilə mənfi hadisələr baş verməmişdən əvvəl erkən xəbərdarlıqlar yaratmaq mümkündür. Nəzərə almaq lazımdır ki, əsas hesabat pulsuzdur, digər hesabatlar isə onların nəsli üçün zəruri olan hesablama istehlakına görə xərcə malik ola bilər.</value>
+  </data>
+  <data name="OptReporteDeCalorEnZona" xml:space="preserve">
+    <value>İstilik xəritələri ilə hesabat</value>
+  </data>
+  <data name="OptReporteEvolucionEnElTiempo" xml:space="preserve">
+    <value>Xəbərdarlıq təkamül hesabatı zaman</value>
+  </data>
+  <data name="OptReportesPredictivos" xml:space="preserve">
+    <value>Proqressiv hesabat</value>
+  </data>
+  <data name="OptReporteAnaliticoDeDescripcionesAlarmas" xml:space="preserve">
+    <value>Təşvişli söhbətlərin analitik hesabatları</value>
+  </data>
+  <data name="LblReporteCalorSospect" xml:space="preserve">
+    <value>SOSpect istilik xəritələri</value>
+  </data>
+  <data name="LblReporteEnConstruccion" xml:space="preserve">
+    <value>Tezliklə!! Bu funksionallıq tikintidədir!</value>
+  </data>
+  <data name="LblDescripcionMapaDeCalor" xml:space="preserve">
+    <value>Bu hesabatda siz ərazinizin istilik xəritəsinə daxil ola bilərsiniz. BURADA SOSpect fəaliyyətə başladığı vaxtdan bəri müxtəlif aylar seçə bilərsiniz. Bu funksionallıq sizə maraqlı olan xəritənin hər bir sahəsinin təkamül nəzəriyyəsini müşahidə etməyə və anlamağa imkan verəcək.</value>
+  </data>
+  <data name="LblCostoReporte" xml:space="preserve">
+    <value>Yadda saxlayın ki, bu funksiyanın istifadəsi hesablama xərci daşıyır və yüksək qiymət olmasa da, səlahiyyətlər tələb edir. Bununla belə, tətbiqi ilk istifadənizdə sizə verdiyimiz səlahiyyətlərdən istifadə edərək onu heç bir problem olmadan əldə edə bilərsiniz.</value>
+  </data>
+  <data name="LblReporteEvolucionAlarmas" xml:space="preserve">
+    <value>SOSpect-da yerləşdirilən təşvişlərin təkamülü</value>
+  </data>
+  <data name="LblDescripcionEvolucionAlarmas" xml:space="preserve">
+    <value>Bu hesabatda siz öz ərazinizdə vaxt keçdikcə hər növ təşvişin trendlərini biləcəksiniz. Siz təhlükəlilik tendensiyalarını müşahidə və təhlil edə, həmçinin cinayətkarlığın mümkün azalmalarını müəyyən edə biləcəksiniz.</value>
+  </data>
+  <data name="LblReportePredictivo" xml:space="preserve">
+    <value>SOSpect Proqnozlaşdırıcı Hesabatlar</value>
+  </data>
+  <data name="LblDescripcionReportesPredictivos" xml:space="preserve">
+    <value>SOSpect cəmiyyəti kifayət qədər məlumat əldə etdikcə, ehtimala əsaslanan hadisə proqnozları və analitik alətlər hazırlana bilər. Bu hesabatlar sizə xəbərdarlıq dalğalarının və ya cinayət fəaliyyətinin artmasının nə zaman yaxınlaşdığını bilməyə imkan verəcək. Bu, sizə, ailənizə və cəmiyyətinizə hər hansı risk etməmək üçün lazımi ehtiyat tədbirlərini görmək imkanı verəcək.</value>
+  </data>
+  <data name="LblReporteAnalisisDeTextos" xml:space="preserve">
+    <value>SOSpect alarm chat təhlil hesabat</value>
+  </data>
+  <data name="LblDescripcionAnalisisTextos" xml:space="preserve">
+    <value>İstifadəçilərin səs-küyləri təsvir etməsi və soSpect-un daxili söhbəti vasitəsilə təkamüllərini yeniləməsi sayəsində bu hesabat cəmiyyətə ən çox təsir edən tipologiyaları təsəvvür etməyə imkan verəcək. Bu, ərazinizdə təhlükəsizlik haqqında təsəvvürlərin yaxşılaşdırılması üçün tədbirlər görmək imkanı yaradır.</value>
+  </data>
+  <data name="LblRangoReporte" xml:space="preserve">
+    <value>Bu hesabat son 30 günü əhatə edir</value>
+  </data>
+  <data name="AcercadeSOSpect" xml:space="preserve">
+    <value>SOSpect haqqında</value>
+  </data>
+  <data name="Porcentajedealarmasciertasfrenteafalsasenunradiodeunkilometroymedio" xml:space="preserve">
+    <value>Bir kilometr yarım radiusda həqiqi və yalançı səs-küylərin faizi</value>
+  </data>
+  <data name="Promediodetiempoenminutosentrelanzamientodealarmaenmizonaylaprimeracalificacionodescripcion" xml:space="preserve">
+    <value>Yaşadığım ərazidə alarm işə salınması ilə ilk reytinq və ya təsvir arasındakı dəqiqələrdə orta vaxt</value>
+  </data>
+  <data name="Cantidadrealdepersonasenunradiodeunkilometroymedio" xml:space="preserve">
+    <value>Kilometr yarım radiusda olan insanların faktiki sayı</value>
+  </data>
+  <data name="Cantidadrealdepersonasenmiradioactual" xml:space="preserve">
+    <value>Hazırkı radiusumdakı insanların faktiki sayı</value>
+  </data>
+  <data name="Miradioactualderecepcionyenviodealarmasenmetros" xml:space="preserve">
+    <value>Hal-hazırda aldığım və metrlərdə səs-küy göndərdiyim radiusum</value>
+  </data>
+  <data name="Cantidadrealdepersonasquerecibieronmisalarmas" xml:space="preserve">
+    <value>Səs-küyümü alanların faktiki sayı</value>
+  </data>
+  <data name="Cantidaddenotificacionesdealarmaenviadasdemiparte" xml:space="preserve">
+    <value>Məndən göndərilən səs bildirişlərinin sayı</value>
+  </data>
+  <data name="Personasquereportaronmiayudacomonegativaofalsa" xml:space="preserve">
+    <value>Mənim köməyimi mənfi və ya yalan kimi bildirən insanlar</value>
+  </data>
+  <data name="Personasqueagradecieronmiayuda" xml:space="preserve">
+    <value>Mənim köməyimə qiymət verən insanlar</value>
+  </data>
+  <data name="Poderesganadosporregalos" xml:space="preserve">
+    <value>Hədiyyələrin əldə etdiyi güclər</value>
+  </data>
+  <data name="LblParticipacionTpAlarma" xml:space="preserve">
+    <value>Alarm növü üzrə iştirak</value>
+  </data>
+  <data name="LblMetricBasics" xml:space="preserve">
+    <value>Əsas metrikalar</value>
+  </data>
+  <data name="LblEfectiAlarmas" xml:space="preserve">
+    <value>Alarmların effektivliyi</value>
+  </data>
+  <data name="LblTotalAlarmas" xml:space="preserve">
+    <value>Ümumi səsgücləndiricilər</value>
+  </data>
+  <data name="LblAlarmasVerdaderas" xml:space="preserve">
+    <value>Həqiqi səs-küylər</value>
+  </data>
+  <data name="LblAlarmasFalsas" xml:space="preserve">
+    <value>Yanlış səs-küy</value>
+  </data>
+  <data name="LblAlarmasEfectivas" xml:space="preserve">
+    <value>Effektiv alarmların faizi</value>
+  </data>
+  <data name="LblMarcarLeidos" xml:space="preserve">
+    <value>Hamısını oxuduqca işarələ</value>
+  </data>
+  <data name="LblSeMarcaronComoLeidos" xml:space="preserve">
+    <value>Bütün mesajlar oxunduğu kimi qeyd edildi</value>
+  </data>
+  <data name="LabelNuevaVersion" xml:space="preserve">
+    <value>SOSpect-ın yeni versiyası var və onun davam etməsi tələb olunur</value>
+  </data>
+  <data name="OptReporteBasico" xml:space="preserve">
+    <value>Əsas hesabatlar - PULSUZ!</value>
+  </data>
+  <data name="LblReporteBasicoSospect" xml:space="preserve">
+    <value>SOSpect Əsas hesabatlar</value>
+  </data>
+  <data name="LblReporteBasicoDescripcion" xml:space="preserve">
+    <value>SOSpect-un əsas hesabatları sizə təşviş hesabatlarınızın cəmiyyətinizə göstərdiyi tə'sir haqqında dəyərli məlumatlar təqdim edir. Bundan əlavə, onlar bu reytinqlərdə səs-küy və dürüstlüklə cəmiyyətinizə kömək etməklə əldə edilən səlahiyyətlərin sayını göstərir. Bu hesabatlar vasitəsi ilə siz ötən ay ərzində ərazinizin ümumi davranışını, o cümlədən bu prosesdə iştirak edən istifadəçilərin sayını və yanlış nişanlanmalar səbəbindən mənfi işarələr alan istifadəçilərin sayını da qiymətləndirə bilərsiniz.</value>
+  </data>
+  <data name="LblReporteBasicoDescripcionCorta" xml:space="preserve">
+    <value>SOSpect-un əsas hesabatları sizə haqqında dəyərli məlumatlar təqdim edir... Daha çox bax...</value>
+  </data>
+  <data name="LblDescripcionRepTipoAlarma" xml:space="preserve">
+    <value>Bu hesabat sizə indiki yerinizdən bir kilometr yarım məsafədə radiusda ən tez-tez səs-küy haqqında məlumat verir.</value>
+  </data>
+  <data name="LblDescripcionRepEfectAlarmas" xml:space="preserve">
+    <value>Bu hesabat sizə indiki yerinizdən bir kilometr yarım məsafədə radiusda real və yalançı alarmlar arasındakı effektivlik əlaqəsi haqqında məlumat verir.</value>
+  </data>
+  <data name="LblDescripcionRepMetricasBasicas" xml:space="preserve">
+    <value>Bu hesabat sizə hazırkı yerinizin bir kilometr yarım radiusunda istifadəçilərin sayı, eləcə də proqram alarmlarının indiki radiusunda olan istifadəçilərin sayı haqqında məlumatları təqdim edir. Bundan əlavə, bu kitaba sizin üçün maraqlı olan bir neçə əlavə məlumat da daxildir.</value>
+  </data>
+  <data name="OptVolumenAlarmas" xml:space="preserve">
+    <value>Yaxınlıqdakı səsgücləndiricilərin növünə görə həcm</value>
+  </data>
+  <data name="OptEfectividadAlarmas" xml:space="preserve">
+    <value>Yaxınlıqdakı səs-küylərin effektivliyi</value>
+  </data>
+  <data name="OptMetricasBasicas" xml:space="preserve">
+    <value>Yaxınlıqdakı alarmların əsas metrikası</value>
+  </data>
+  <data name="LblCredibilidadActual" xml:space="preserve">
+    <value>Səs-küylərimin etibarlılığı belədir:</value>
+  </data>
+  <data name="OptManualUsuarioSospect" xml:space="preserve">
+    <value>İSTIFADƏÇI kitabçası</value>
+  </data>
+  <data name="LblDescManualUsuario" xml:space="preserve">
+    <value>Sizi və yaxınlarınızı qorumaq üçün hazırlanmış pulsuz proqram olan SOSpect ilə tanış olun. Biz sizə düzgün istifadə etməkdə kömək edəcək bir sıx və ətraflı onlayn kitabça yaratmışıq. Bu kitabça ilə SIZ SOSpect-dan ən yaxşısını əldə edə və onun bütün təhlükəsizlik xüsusiyyətlərindən yararlana bilərsiniz.</value>
+  </data>
+  <data name="SesionApple" xml:space="preserve">
+    <value>APPLE ILƏ İmzaLA</value>
+  </data>
+  <data name="LblCredibilidadAlarmaActual" xml:space="preserve">
+    <value>Alarmın etibarlılığı:</value>
+  </data>
+  <data name="LblAccedeAlManual" xml:space="preserve">
+    <value>Kitabçaya aşağıdakı ünvandan daxil ola bilərsiniz:</value>
+  </data>
+  <data name="LblRefrescarLista" xml:space="preserve">
+    <value>Səsgücləndiricilər siyahısı</value>
+  </data>
+  <data name="LblErrorCorreoDispositivo" xml:space="preserve">
+    <value>Bu qurğuya e-poçt göndərılə bilmədi</value>
+  </data>
+  <data name="LblErrorCorreo" xml:space="preserve">
+    <value>E-poçt göndərmə xətası: %s</value>
+  </data>
+  <data name="LblSeleccioneTipoAlarma" xml:space="preserve">
+    <value>Xahiş edirik, səsgücləndirici növünü seçin</value>
+  </data>
+  <data name="LblCompraFallida" xml:space="preserve">
+    <value>Alqı-satqı həyata keçirilib. Xahiş edirik internetə daxil olub yenidən yoxlayın</value>
+  </data>
+  <data name="LblSeleccionePuntoMapa" xml:space="preserve">
+    <value>Xəritədə nəzarət zonası seçməlisiniz</value>
+  </data>
+  <data name="Cantidaddealarmascolocadasenlaszonasdevigilanciasuscritas" xml:space="preserve">
+    <value>Abunə olan nəzarət sahələrinə yerləşdirilən səs-küylərin sayı</value>
+  </data>
+  <data name="Cantidaddealarmascolocadaspormisprotegidos" xml:space="preserve">
+    <value>Protégés tərəfindən qoyulan səs-küylərin sayı</value>
+  </data>
+  <data name="Credibilidadactualdelasalarmasqueenvioamicomunidad" xml:space="preserve">
+    <value>Cəmiyyətimə göndərdiyim səs-küylərin indiki etibarlılığı</value>
+  </data>
+  <data name="LblCompraExitosa" xml:space="preserve">
+    <value>Təbrik edirik! Abunə almaq üçün səlahiyyətlər aldınız. Zəngdə izahlı xəbər tapacaqsınız!</value>
+  </data>
+  <data name="LblDebesHabilitarNotif" xml:space="preserve">
+    <value>SOSpect işləməsi üçün bildirişlərin göndərilməsini fəallaşdırmalısınız</value>
+  </data>
+  <data name="LblHabilitarNotifSettings" xml:space="preserve">
+    <value>Bu proqram bildirişləri dəstəkləyə bilər, lakin bunu ayarlarınızda fəal etməlisiniz.</value>
+  </data>
+  <data name="LblErrorHabilitandoUsoNotif" xml:space="preserve">
+    <value>Push bildirişlərinin istifadəsinin qarşısını alan xəta baş verdi</value>
+  </data>
+  <data name="LblMostrarDireccionEscape" xml:space="preserve">
+    <value>Mark Fugitive-in qaçış yolu</value>
+  </data>
+  <data name="LblProximamenteSOSpect" xml:space="preserve">
+    <value>Tezliklə SOSpect-da gəlir!</value>
+  </data>
+  <data name="LblReportesProximos" xml:space="preserve">
+    <value>Məlumat elmi ilə analitik və proqressiv hesabatlar!</value>
+  </data>
+  <data name="LblHolaBienvenido" xml:space="preserve">
+    <value>Salam! SOSpect-a xoş gəlmisiniz. 
+
+"SOSpect" – yaxın risklər barədə vaxtında xəbərdarlıq etməklə, sizi və yaxınlarınızı qorumaq üçün hazırlanmış pulsuz vasitədir! Əvvəlcə bir çox alarm ala bilməzsiniz, çünki hələ soSpect quraşdıran yaxında çox adam yoxdur. Xahiş edirik ki, bizə cəhd göstərəsiniz və müraciəti uydurmayın. «SOSpect» müəyyən bir vaxtda, eləcə də ailə üzvlərinizdən və ya ailə üzvlərinizdən kiminsə həyatını xilas edə bilər.
+
+Ayarlarda rast gəlinən "Hesabatlar" menyusunun "Əsas hesabat" bölməsində "Əsas metrikalar" bölməsində əhatə sahəniz daxilində yaxınlıqda olan istifadəçilərin sayını görə bilərsiniz. Burada sizə alarmlar veriləcək. Bizə bu sayı artırmaq kömək edin, pulsuzdur və sizə daha təhlükəsiz yaşamağa imkan verəcək!
+
+Sizi bu qısa giriş kitabçasını diqqətlə oxumağa dəvət edirik. Bu kitabça sizə SOSpect-in necə işlədiyi barədə təsəvvür yaradacaq. Xahiş edirik qeyd edək ki, proqram quraşdırıldıqdan sonra yalnız bir dəfə göstəriləcək.
+
+SOSpect istifadə etdiyiniz və hər kəsin təhlükəsizliyinə töhfə etdiyiniz üçün təşəkkür edirik!
+
+Davam etmək üçün ekrana toxunun...</value>
+  </data>
+</root>

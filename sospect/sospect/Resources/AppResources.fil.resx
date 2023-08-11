@@ -1,0 +1,1090 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Bienvenido" xml:space="preserve">
+    <value>Maligayang pagdating sa SOSpect</value>
+  </data>
+  <data name="InicieSesion" xml:space="preserve">
+    <value>Mag log in upang magpatuloy</value>
+  </data>
+  <data name="InicieSesionCon" xml:space="preserve">
+    <value>o mag log in gamit ang</value>
+  </data>
+  <data name="SesionFacebook" xml:space="preserve">
+    <value>MAG LOG IN GAMIT ANG FACEBOOK</value>
+  </data>
+  <data name="SesionGoogle" xml:space="preserve">
+    <value>MAG SIGN IN GAMIT ANG GOOGLE</value>
+  </data>
+  <data name="LabelAlerta" xml:space="preserve">
+    <value>Alerto</value>
+  </data>
+  <data name="LabelCrimen" xml:space="preserve">
+    <value>Krimen</value>
+  </data>
+  <data name="LabelOK" xml:space="preserve">
+    <value>ok na</value>
+  </data>
+  <data name="LabelCancelar" xml:space="preserve">
+    <value>Kanselahin</value>
+  </data>
+  <data name="ReportarCrimen" xml:space="preserve">
+    <value>Ireport ang Krimen</value>
+  </data>
+  <data name="LabelMapa" xml:space="preserve">
+    <value>Mapa</value>
+  </data>
+  <data name="LabelDescribir" xml:space="preserve">
+    <value>Ilarawan ang</value>
+  </data>
+  <data name="DescripcionAlarma" xml:space="preserve">
+    <value>Paglalarawan ng alarma</value>
+  </data>
+  <data name="DescripcionSospechoso" xml:space="preserve">
+    <value>Paglalarawan ng suspek</value>
+  </data>
+  <data name="DescripcionVehiculo" xml:space="preserve">
+    <value>Paglalarawan ng sasakyan</value>
+  </data>
+  <data name="DescripcionArma" xml:space="preserve">
+    <value>Paglalarawan ng sandata</value>
+  </data>
+  <data name="PuntuacionDescripcion" xml:space="preserve">
+    <value>Paglalarawan ng puntos</value>
+  </data>
+  <data name="LabelEditar" xml:space="preserve">
+    <value>I-edit</value>
+  </data>
+  <data name="DescripcionesParaAlarma" xml:space="preserve">
+    <value>Mga paglalarawan na ginawa para sa alarma na ito</value>
+  </data>
+  <data name="EspacioPublicidad" xml:space="preserve">
+    <value>Space para sa advertising</value>
+  </data>
+  <data name="AlarmasRecientes" xml:space="preserve">
+    <value>Kamakailang mga alarma upang magdagdag ng paglalarawan</value>
+  </data>
+  <data name="ConfirmarAlarma" xml:space="preserve">
+    <value>Kumpirmahin ang alarma</value>
+  </data>
+  <data name="LabelInformacion" xml:space="preserve">
+    <value>Impormasyon</value>
+  </data>
+  <data name="LabelError" xml:space="preserve">
+    <value>Mali</value>
+  </data>
+  <data name="LabelCancelado" xml:space="preserve">
+    <value>Kinansela</value>
+  </data>
+  <data name="LabelLoginCancelado" xml:space="preserve">
+    <value>Kinansela ang pag login</value>
+  </data>
+  <data name="LabelFallo" xml:space="preserve">
+    <value>Pagkabigo</value>
+  </data>
+  <data name="RecibeAlarma" xml:space="preserve">
+    <value>Nakatanggap ka ng alarma malapit sa kinaroroonan mo, totoo ba ito</value>
+  </data>
+  <data name="LabelConfirmo" xml:space="preserve">
+    <value>Kumpirmahin</value>
+  </data>
+  <data name="LabelNoSeguro" xml:space="preserve">
+    <value>di ba ako sure</value>
+  </data>
+  <data name="LabelEsFalsa" xml:space="preserve">
+    <value>Ito ay mali</value>
+  </data>
+  <data name="LabelConfirmar" xml:space="preserve">
+    <value>Kumpirmahin</value>
+  </data>
+  <data name="AdvertenciaCalificacion" xml:space="preserve">
+    <value>Ang rating na ito ay hindi maaaring baguhin sa ibang pagkakataon. Maaaring makaapekto ito sa iyong hinaharap na kredibilidad kung ang pinagkasunduan ng mga rating ay laban sa iyong boto. Sigurado ka ba?</value>
+  </data>
+  <data name="LabelSi" xml:space="preserve">
+    <value>Oo nga</value>
+  </data>
+  <data name="LabelNo" xml:space="preserve">
+    <value>Hindi</value>
+  </data>
+  <data name="AlarmaEnviada" xml:space="preserve">
+    <value>Nagpadala ng alarma!</value>
+  </data>
+  <data name="MsgTrasAlarmaEnviada" xml:space="preserve">
+    <value>Kung ligtas ka mangyaring ilarawan ang alarma, kung hindi, itago ang iyong telepono at makalabas sa panganib.</value>
+  </data>
+  <data name="notificacionurgente" xml:space="preserve">
+    <value>Ang isang kagyat na abiso ay ipapadala sa pinakamalapit na mga telepono sa:</value>
+  </data>
+  <data name="LabelAlarma" xml:space="preserve">
+    <value>Alarma</value>
+  </data>
+  <data name="LabelMetros" xml:space="preserve">
+    <value>metre</value>
+  </data>
+  <data name="LabelTuUbicacion" xml:space="preserve">
+    <value>Ang iyong lokasyon</value>
+  </data>
+  <data name="LabelUsuario" xml:space="preserve">
+    <value>Gumagamit</value>
+  </data>
+  <data name="LabelTipoAlarma" xml:space="preserve">
+    <value>Uri ng alarma</value>
+  </data>
+  <data name="DireccionEscape" xml:space="preserve">
+    <value>Pakisaad ang escape address ng suspek.</value>
+  </data>
+  <data name="DescripcionAlerta" xml:space="preserve">
+    <value>Paglalarawan ng alerto</value>
+  </data>
+  <data name="DescripcionImplicado" xml:space="preserve">
+    <value>Paglalarawan ng taong kasangkot sa alerto</value>
+  </data>
+  <data name="DescripcionVehiculoImp" xml:space="preserve">
+    <value>Sasakyan na kasangkot (Kung naaangkop)</value>
+  </data>
+  <data name="ArmaImplicada" xml:space="preserve">
+    <value>Armas na kasangkot (Kung naaangkop)</value>
+  </data>
+  <data name="LabelRutaEscape" xml:space="preserve">
+    <value>Kaduda dudang ruta ng pagtakas</value>
+  </data>
+  <data name="ObjetivoSospect" xml:space="preserve">
+    <value>Layunin ng SOSpect na payagan ang komunidad na mag alerto at tumanggap ng mga alerto ng mga panganib sa lokasyon ng isang gumagamit, upang maiwasan ang mga panganib sa kanila at sa kanilang mga mahal sa buhay. Ang lokasyon ng mga gumagamit ay hindi ibinahagi o sinusubaybayan, tinitiyak ang kanilang privacy. Ang mga gumagamit ay maaaring maglagay ng mga alerto sa panganib upang matulungan ang iba na maiwasan ang pagkabiktima sa mga mapanganib na sitwasyon.</value>
+  </data>
+  <data name="UbicacionImportante" xml:space="preserve">
+    <value>Mahalagang malaman ang lokasyon ng gumagamit upang ma alerto mo sila kung may maglagay ng alerto sa panganib malapit sa kanilang lokasyon. Gayunpaman, ang lokasyon ng gumagamit ay pribado at ang mga punto lamang sa mapa kung saan inilalagay ang mga alerto ay ibinabahagi.</value>
+  </data>
+  <data name="GenteUnida" xml:space="preserve">
+    <value>Sa SOSpect, maaaring magsama sama ang komunidad upang mabawasan ang krimen at maiwasan ang pagkabiktima sa mga mapanganib na sitwasyon, na nag aalerto sa iba na manatiling ligtas din.</value>
+  </data>
+  <data name="contactenos" xml:space="preserve">
+    <value>Makipag ugnay sa amin</value>
+  </data>
+  <data name="visitenos" xml:space="preserve">
+    <value>Bisitahin mo kami ha</value>
+  </data>
+  <data name="ZonaVigilancia" xml:space="preserve">
+    <value>Subscription sa Zone ng Pagsubaybay</value>
+  </data>
+  <data name="SeleccioneUbicacionVigilar" xml:space="preserve">
+    <value>Piliin ang lokasyon upang panoorin</value>
+  </data>
+  <data name="SeleccionEnMapa" xml:space="preserve">
+    <value>Piliin sa mapa</value>
+  </data>
+  <data name="ExplicaZonaVigilancia" xml:space="preserve">
+    <value>Ang lahat ng mga alarma na inilagay sa puntong iyong pupuntahan upang piliin ay aabisuhan kahit sino ang maglagay ng mga ito. Sa ganoong paraan, maaari mong malaman ang mga panganib na tumatakbo sa puntong iyon. Ito ay mainam para maging aware sa mga panganib sa mga lugar tulad ng mga paaralan o unibersidad ng iyong mga anak o mga lugar kung saan nagtatrabaho ang iyong mga kamag anak o mahal sa buhay.</value>
+  </data>
+  <data name="CrearZonaV" xml:space="preserve">
+    <value>Lumikha ng surveillance zone gamit ang lokasyong ito</value>
+  </data>
+  <data name="LabelLatitud" xml:space="preserve">
+    <value>Latitud</value>
+  </data>
+  <data name="LabelLongitud" xml:space="preserve">
+    <value>Longhitud</value>
+  </data>
+  <data name="LabelIntroduccion" xml:space="preserve">
+    <value>Panimula</value>
+  </data>
+  <data name="AmpliacionRadio" xml:space="preserve">
+    <value>Pagpapalawak ng alarma radius</value>
+  </data>
+  <data name="TuRadioActual" xml:space="preserve">
+    <value>Ang iyong kasalukuyang radius ay:</value>
+  </data>
+  <data name="CrearNuevoRadio" xml:space="preserve">
+    <value>Lumikha ng aking subscription para sa bagong radyo na ito</value>
+  </data>
+  <data name="ExplicacionVigencias" xml:space="preserve">
+    <value>Ang lahat ng mga subscription ay may bisa, mangyaring suriin ang mga presyo ng mga subscription sa unang pagpipilian ng pangunahing menu</value>
+  </data>
+  <data name="VasARequerir" xml:space="preserve">
+    <value>Ikaw ay mangangailangan ng</value>
+  </data>
+  <data name="xPoderesParaSubs" xml:space="preserve">
+    <value>Powers upang idagdag ang radyo na ito sa iyong kasalukuyang radyo</value>
+  </data>
+  <data name="Exito" xml:space="preserve">
+    <value>Tagumpay</value>
+  </data>
+  <data name="SubscripcionCreada" xml:space="preserve">
+    <value>Ang subscription ay matagumpay na nalikha.</value>
+  </data>
+  <data name="MensajeError" xml:space="preserve">
+    <value>May error sa pagkonekta sa server. Try mo na lang ulit.</value>
+  </data>
+  <data name="SeleccionaRuta" xml:space="preserve">
+    <value>Kailangan mong piliin ang ruta ng pagtakas ng suspek.</value>
+  </data>
+  <data name="AprobarSolicitudes" xml:space="preserve">
+    <value>Aprubahan ang mga kahilingan</value>
+  </data>
+  <data name="LabelAprobar" xml:space="preserve">
+    <value>Aprubahan ang</value>
+  </data>
+  <data name="LabelRechazar" xml:space="preserve">
+    <value>Itakwil ang</value>
+  </data>
+  <data name="CompletarSubscripcion" xml:space="preserve">
+    <value>Kumpletuhin ang protektadong subscription</value>
+  </data>
+  <data name="CompletarSubsc" xml:space="preserve">
+    <value>Kumpletuhin ang Subscription</value>
+  </data>
+  <data name="LblMensajes" xml:space="preserve">
+    <value>Mga Mensahe</value>
+  </data>
+  <data name="LblFechaMensaje" xml:space="preserve">
+    <value>Petsa ng mensahe</value>
+  </data>
+  <data name="LblMenu" xml:space="preserve">
+    <value>CONFIGURATION</value>
+  </data>
+  <data name="OptCompraPoderes" xml:space="preserve">
+    <value>Bumili ng mga kapangyarihan upang i unlock ang mga tampok</value>
+  </data>
+  <data name="OptGestionarProtegidos" xml:space="preserve">
+    <value>Pamahalaan ang aking mga protektado-protektor</value>
+  </data>
+  <data name="OptCrearZonas" xml:space="preserve">
+    <value>Lumikha ng mga zone ng pagsubaybay</value>
+  </data>
+  <data name="OptAumentarRadio" xml:space="preserve">
+    <value>Dagdagan ang radius ng aking alert reception</value>
+  </data>
+  <data name="OptAcercaDe" xml:space="preserve">
+    <value>Tungkol sa SOSpect application</value>
+  </data>
+  <data name="OptCerrarSesion" xml:space="preserve">
+    <value>Mag-log out</value>
+  </data>
+  <data name="LblProtectores" xml:space="preserve">
+    <value>Ang aking mga tagapagtanggol</value>
+  </data>
+  <data name="LblSuspender" xml:space="preserve">
+    <value>Pansamantalang suspindihin</value>
+  </data>
+  <data name="LblEliminarProtegido" xml:space="preserve">
+    <value>Alisin ang Protektado</value>
+  </data>
+  <data name="LblSubscrProtegido" xml:space="preserve">
+    <value>Protektadong subscription</value>
+  </data>
+  <data name="LblIDUsuarioAProteger" xml:space="preserve">
+    <value>Ipasok ang user ID upang protektahan. (Ang halaga na iyon ay matatagpuan sa tuktok ng menu ng pagsasaayos ng SOSpect ng gumagamit na nais mong i link)</value>
+  </data>
+  <data name="LblRelacionProtegido" xml:space="preserve">
+    <value>Ang relasyon ko sa protege na ito ay:</value>
+  </data>
+  <data name="LblSolicitarPermiso" xml:space="preserve">
+    <value>Humingi ng pahintulot mula sa gumagamit</value>
+  </data>
+  <data name="LblCompleteCampos" xml:space="preserve">
+    <value>Kumpletuhin lamang ang lahat ng mga patlang.</value>
+  </data>
+  <data name="LblProcesarSolicitud" xml:space="preserve">
+    <value>May error sa pagproseso ng request. Try mo na lang ulit.</value>
+  </data>
+  <data name="LblProtegidos" xml:space="preserve">
+    <value>My Protégés</value>
+  </data>
+  <data name="LblUsuarioProtegido" xml:space="preserve">
+    <value>Protektadong ID ng gumagamit</value>
+  </data>
+  <data name="LblFechaActivacion" xml:space="preserve">
+    <value>Petsa ng pag-activate</value>
+  </data>
+  <data name="LblFechaFinalizacion" xml:space="preserve">
+    <value>Petsa ng pagtatapos</value>
+  </data>
+  <data name="LblAccion" xml:space="preserve">
+    <value>Aksyon</value>
+  </data>
+  <data name="LblCantidadPoderes" xml:space="preserve">
+    <value>Bilang ng mga kapangyarihan</value>
+  </data>
+  <data name="LblPrecio" xml:space="preserve">
+    <value>Presyo</value>
+  </data>
+  <data name="LblComprar" xml:space="preserve">
+    <value>Bumili ng</value>
+  </data>
+  <data name="LblValoresSubsc" xml:space="preserve">
+    <value>Mga halaga ng subscription</value>
+  </data>
+  <data name="LblTerminos" xml:space="preserve">
+    <value>Mga Tuntunin ng Serbisyo para sa SOSpect APP</value>
+  </data>
+  <data name="LblAcepto" xml:space="preserve">
+    <value>Tinatanggap ko ang kontrata</value>
+  </data>
+  <data name="LblNoAcepto" xml:space="preserve">
+    <value>Hindi ko tinatanggap ang</value>
+  </data>
+  <data name="LblOpcionesProtegidos" xml:space="preserve">
+    <value>Protektado at protektado ng SOSpect App</value>
+  </data>
+  <data name="LblExplicacionProtegidos" xml:space="preserve">
+    <value>Maaari kang makatanggap ng mga alerto mula sa mga miyembro ng iyong social circle kahit na malayo sila sa iyo. Dito maaari mong pamahalaan ang tampok na ito</value>
+  </data>
+  <data name="OptIniciarTramite" xml:space="preserve">
+    <value>Simulan ang proseso ng pagdaragdag ng isang protektadong</value>
+  </data>
+  <data name="OptAprobarSolicitud" xml:space="preserve">
+    <value>Aprubahan ang isang kahilingan mula sa isang tagapagtanggol</value>
+  </data>
+  <data name="OptListarProtegidos" xml:space="preserve">
+    <value>Tingnan ang listahan ng aking protege</value>
+  </data>
+  <data name="OptListarProtectores" xml:space="preserve">
+    <value>Tingnan ang listahan ng aking mga tagapagtanggol</value>
+  </data>
+  <data name="OptVolver" xml:space="preserve">
+    <value>Ibalik ang</value>
+  </data>
+  <data name="LblPoderesSospect" xml:space="preserve">
+    <value>Mga kapangyarihan ng SOSpect App</value>
+  </data>
+  <data name="LblOpcionesPoderes" xml:space="preserve">
+    <value>Welcome po sa power management option, ano po ba ang gusto ninyong gawin</value>
+  </data>
+  <data name="LblSubscripcionesCosto" xml:space="preserve">
+    <value>Gusto kong malaman kung ano ang mga subscription na maaari kong bilhin at ang kanilang gastos</value>
+  </data>
+  <data name="LblQuieroComprar" xml:space="preserve">
+    <value>Gusto ko bumili ng super powers para makakuha ng mga subscription</value>
+  </data>
+  <data name="ExplicacionRadio" xml:space="preserve">
+    <value>Ang default na radius para sa lahat ng mga gumagamit ng application ay 100 metro sa paligid. Maaari mong palawakin ang radius na iyon gamit ang mga kapangyarihan ng app. Pagkatapos ay piliin ang radius na gusto mo para sa iyong sarili:</value>
+  </data>
+  <data name="LblAsunto" xml:space="preserve">
+    <value>Maikling paglalarawan</value>
+  </data>
+  <data name="LblCompraPoderes" xml:space="preserve">
+    <value>Pagbili ng mga kapangyarihan</value>
+  </data>
+  <data name="OptCompletarTramite" xml:space="preserve">
+    <value>Kumpletuhin ang pamamaraan upang magdagdag ng isang protektadong</value>
+  </data>
+  <data name="LabelHecho" xml:space="preserve">
+    <value>Nakumpleto na</value>
+  </data>
+  <data name="LabelEscapoEnEstaDireccion" xml:space="preserve">
+    <value>Nakatakas siya sa direksyon na ito</value>
+  </data>
+  <data name="OptMisSubs" xml:space="preserve">
+    <value>Ang Aking Mga Subscription</value>
+  </data>
+  <data name="LblMisSubscripciones" xml:space="preserve">
+    <value>Ang Aking Mga Subscription</value>
+  </data>
+  <data name="LblidUsuario" xml:space="preserve">
+    <value>ID ng Gumagamit:</value>
+  </data>
+  <data name="LblTipo" xml:space="preserve">
+    <value>Uri ng subscription:</value>
+  </data>
+  <data name="LblDescripcionPuntos" xml:space="preserve">
+    <value>Paglalarawan :</value>
+  </data>
+  <data name="LblFechaFinPuntos" xml:space="preserve">
+    <value>Petsa ng pagtatapos:</value>
+  </data>
+  <data name="LblPoderesPuntos" xml:space="preserve">
+    <value>Mga kapangyarihan ng pagbabagong lakas:</value>
+  </data>
+  <data name="LblRenovar" xml:space="preserve">
+    <value>Mag-renew</value>
+  </data>
+  <data name="LblCancelarSubscripcion" xml:space="preserve">
+    <value>Kanselahin ang Subscription</value>
+  </data>
+  <data name="LblSeguroDeCancelar" xml:space="preserve">
+    <value>Sigurado ka bang gusto mong kanselahin ang subscription? Walang pagbabalik ng mga kapangyarihang natupok ang gagawin.</value>
+  </data>
+  <data name="LblAceptar" xml:space="preserve">
+    <value>Tanggapin</value>
+  </data>
+  <data name="Alarm_1" xml:space="preserve">
+    <value>Babala o panganib</value>
+  </data>
+  <data name="Alarm_2" xml:space="preserve">
+    <value>Krimen o krimen na ginawa</value>
+  </data>
+  <data name="Alarm_3" xml:space="preserve">
+    <value>Labanan sa kalye</value>
+  </data>
+  <data name="Alarm_4" xml:space="preserve">
+    <value>Nawala ang alagang hayop</value>
+  </data>
+  <data name="Alarm_5" xml:space="preserve">
+    <value>Nawala ang tao</value>
+  </data>
+  <data name="Alarm_6" xml:space="preserve">
+    <value>Mga kaguluhan o protesta</value>
+  </data>
+  <data name="Alarm_7" xml:space="preserve">
+    <value>Humiling ng visual na saliw sa pamamagitan ng paglabas sa kalye</value>
+  </data>
+  <data name="Alarm_8" xml:space="preserve">
+    <value>Karahasan sa Tahanan</value>
+  </data>
+  <data name="Alarm_9" xml:space="preserve">
+    <value>Suspek na tumakas papunta sa iyong location area</value>
+  </data>
+  <data name="LblCostoPoderes" xml:space="preserve">
+    <value>Gastos ng Package</value>
+  </data>
+  <data name="LblSuscripcionesDisponibles" xml:space="preserve">
+    <value>Kasalukuyang magagamit ang mga subscription</value>
+  </data>
+  <data name="LblFamilia" xml:space="preserve">
+    <value>Pamilya</value>
+  </data>
+  <data name="LblAmigo" xml:space="preserve">
+    <value>Kaibigan</value>
+  </data>
+  <data name="LblCompanero" xml:space="preserve">
+    <value>Kasama</value>
+  </data>
+  <data name="LblOtroSinDefinir" xml:space="preserve">
+    <value>Iba pang mga hindi natukoy</value>
+  </data>
+  <data name="LabelExito" xml:space="preserve">
+    <value>Tagumpay</value>
+  </data>
+  <data name="LblSolicitudAprobada" xml:space="preserve">
+    <value>Matagumpay na naaprubahan ang aplikasyon.</value>
+  </data>
+  <data name="MensajeErrorAprobando" xml:space="preserve">
+    <value>Error sa pag apruba ng kahilingan</value>
+  </data>
+  <data name="MensajeErrorRechazando" xml:space="preserve">
+    <value>Nabigong tanggihan ang kahilingan.</value>
+  </data>
+  <data name="LblSolicitudRechazada" xml:space="preserve">
+    <value>Application matagumpay na tinanggihan.</value>
+  </data>
+  <data name="LblUsuarioSolicitante" xml:space="preserve">
+    <value>Humihingi ng Gumagamit</value>
+  </data>
+  <data name="LblFechaSolicitud" xml:space="preserve">
+    <value>Petsa ng aplikasyon</value>
+  </data>
+  <data name="LblAccionRealizar" xml:space="preserve">
+    <value>Aksyon na dapat gawin</value>
+  </data>
+  <data name="LblSubscripcionCompletada" xml:space="preserve">
+    <value>Nakumpleto ang subscription</value>
+  </data>
+  <data name="LblSubscripcionFallida" xml:space="preserve">
+    <value>Nabigo ang subscription</value>
+  </data>
+  <data name="LblUsuarioAprobador" xml:space="preserve">
+    <value>Gumagamit ng approver</value>
+  </data>
+  <data name="LblFechaAprobacion" xml:space="preserve">
+    <value>Petsa ng pag apruba</value>
+  </data>
+  <data name="LblSubscrEliminada" xml:space="preserve">
+    <value>Hindi naka-subscribe</value>
+  </data>
+  <data name="LblSubsEliminadaExitosamente" xml:space="preserve">
+    <value>Matagumpay na natanggal ang subscription</value>
+  </data>
+  <data name="LblEliminarProtector" xml:space="preserve">
+    <value>Alisin ang tagapagtanggol</value>
+  </data>
+  <data name="LblRenovacionAplicada" xml:space="preserve">
+    <value>Matagumpay na ipinatupad ang renovation</value>
+  </data>
+  <data name="LblErrorRenovando" xml:space="preserve">
+    <value>Error sa pag renew, muling pagtatangka o pag uulat upang suportahan, makipag ugnay na magagamit sa "menu"&gt;"Tungkol sa" na pagpipilian</value>
+  </data>
+  <data name="LblCancelacionAplicada" xml:space="preserve">
+    <value>Matagumpay na nagawa ang pagkansela</value>
+  </data>
+  <data name="LblErrorCancelando" xml:space="preserve">
+    <value>Error sa pagkansela, muling pagtatangka o pag uulat sa suporta, makipag ugnay sa magagamit sa "menu"&gt;"Tungkol sa" na pagpipilian</value>
+  </data>
+  <data name="LblZonaCreada" xml:space="preserve">
+    <value>Ang subscription ng hiniling na zone ng pagsubaybay ay matagumpay na isinagawa</value>
+  </data>
+  <data name="LblErrorZonaVigil" xml:space="preserve">
+    <value>Error sa pag subscribe ng bagong hiniling na zone, muling subukan o mag ulat sa suporta, makipag ugnay sa magagamit sa opsyon na "menu"&gt;"Tungkol sa"</value>
+  </data>
+  <data name="LblSeleccionaNuevoRadio" xml:space="preserve">
+    <value>Piliin ang bagong radius sa metro</value>
+  </data>
+  <data name="LblUsuarioProtector" xml:space="preserve">
+    <value>Proteksiyon na gumagamit</value>
+  </data>
+  <data name="LblSeguroEliminarProtegido" xml:space="preserve">
+    <value>Sigurado ka bang aalisin ang protege mo Ang mga kapangyarihan na ginamit sa subscription na ito ay hindi na ibabalik.</value>
+  </data>
+  <data name="LblSuspenderProtectores" xml:space="preserve">
+    <value>Sigurado ka bang suspindihin ang mga notification sa iyong mga protector sa loob ng 6 na oras Ang lahat ng iyong mga tagapagtanggol ay suspindihin ang mga alarma at ang oras ng pagtatapos ng subscription ay hindi palalawigin para sa kadahilanang ito. Hindi aabisuhan ang tagapagtanggol ng aksyong ito.</value>
+  </data>
+  <data name="LblSuspensionRealizada" xml:space="preserve">
+    <value>Ang suspensyon ng mga alarma sa lahat ng iyong mga tagapagtanggol para sa 6 na oras ay matagumpay.</value>
+  </data>
+  <data name="LabelSeguroEliminarProtector" xml:space="preserve">
+    <value>Sigurado ka bang aalisin ang iyong protector? Ang mga kapangyarihan na ginamit sa subscription na ito ay hindi ibabalik at ang tagapagtanggol ay aabisuhan ng pagkilos na ito.</value>
+  </data>
+  <data name="LabelProtectorEliminado" xml:space="preserve">
+    <value>Natanggal na ang napiling protector. Ang mga kapangyarihan ay hindi ibabalik sa tagapagtanggol. Ang tagapagtanggol ay aabisuhan ng aksyong ito</value>
+  </data>
+  <data name="LblConfirmacionRequerida" xml:space="preserve">
+    <value>Mahalaga! Kailangan ng kumpirmasyon!</value>
+  </data>
+  <data name="LblNoHayRegistros" xml:space="preserve">
+    <value>Walang mga log na ipapakita sa oras na ito</value>
+  </data>
+  <data name="LblMiLogin" xml:space="preserve">
+    <value>Ang aking pag login ay:</value>
+  </data>
+  <data name="LblSaldoPoderesEs" xml:space="preserve">
+    <value>Ang power balance ko ay:</value>
+  </data>
+  <data name="LblUsuarioID" xml:space="preserve">
+    <value>Ang aking user ID ay</value>
+  </data>
+  <data name="LblNoHayRegistrosAqui" xml:space="preserve">
+    <value>Wala pang nakasulat!</value>
+  </data>
+  <data name="LblAlertaReportadaPorMi" xml:space="preserve">
+    <value>Alerto na iniulat ko</value>
+  </data>
+  <data name="LblPara" xml:space="preserve">
+    <value>Tatanggap ng mensahe:</value>
+  </data>
+  <data name="LblDe" xml:space="preserve">
+    <value>Nagpadala ng mensahe:</value>
+  </data>
+  <data name="ConfiguraciondeSOSpect" xml:space="preserve">
+    <value>Pag configure ng SOSpect</value>
+  </data>
+  <data name="LblExitoEnAceptacion" xml:space="preserve">
+    <value>Naka-imbak ang pagtanggap ng kontrata mo!</value>
+  </data>
+  <data name="LblFalloEnAceptacion" xml:space="preserve">
+    <value>Nabigo ang pagpaparehistro. Subukang muli!</value>
+  </data>
+  <data name="LblDeclinacionAceptacion" xml:space="preserve">
+    <value>Kung hindi tumatanggap ng kontrata hindi ka maaaring magpatuloy!</value>
+  </data>
+  <data name="LblParaIniciar" xml:space="preserve">
+    <value>MAGSIMULA TAYO sa SOSpect!! Upang i update ang mga kalapit na alerto, i tap ang asul na pindutan ng refresh</value>
+  </data>
+  <data name="LblAlarmaNoGrave" xml:space="preserve">
+    <value>Gamitin ang dilaw na pindutan upang maglagay ng mga alerto na mababa ang panganib at alerto ang iyong komunidad o mga tagapagtanggol. Maaari mong piliin ang uri ng alerto at markahan ito bilang isang krimen na nagawa. Ang pindutan na ito ay naglulunsad ng alerto sa iyong eksaktong lokasyon, pagiging kapaki pakinabang kapag kailangan mo ng tulong. Maaari ka ring pumili ng isang punto sa mapa upang mahanap ang alerto nang hindi nakompromiso ang iyong lokasyon.</value>
+  </data>
+  <data name="LblCrimenCometido" xml:space="preserve">
+    <value>Ang pulang pindutan ay nag trigger ng isang kategorya: krimen na nakatuon alarma. SOSpect ay hindi nangangailangan sa iyo na isama ang isang kategorya dahil sa kahalagahan ng oras sa mga kasong ito. Ang alarma ay awtomatikong inilalagay sa iyong eksaktong lokasyon. Maaari ka ring pumili ng isang punto sa mapa upang ilagay ang alerto at pagkatapos ay baguhin ang kategorya sa krimen na nagawa.</value>
+  </data>
+  <data name="LblDescripcionAlarmas" xml:space="preserve">
+    <value>Sa opsyon na 'Ilarawan' sa ilalim na bar, makikita mo ang isang listahan ng mga alarma na inilagay mo o ng iba. Kung nilikha mo ang alarma, maaari kang magdagdag ng isang paglalarawan. Kung ang alarma ay nilikha ng ibang tao, maaari mong i rate ang veracity nito at punan ang paglalarawan nito. Mag-ingat! Kung magbibigay ka ng maling impormasyon o maling mga rating, maaaring masuspinde ang iyong account. Repasuhin nang mabuti ang mga tuntunin at kundisyon upang maiwasan ito.</value>
+  </data>
+  <data name="LblDescripcionMensajes" xml:space="preserve">
+    <value>Sa kampanilya sa kanang sulok sa itaas, maaari mong basahin ang iyong mga mensahe, na kinabibilangan ng mga notification sa subscription at kamakailang mga alarma. Ang listahang ito ay naiiba mula sa pagpipilian ng mga paglalarawan, kung saan maaari mong mahanap ang mga kamakailang alarma nang direkta.</value>
+  </data>
+  <data name="LblDescripcionMenu" xml:space="preserve">
+    <value>Sa gear sa kaliwang sulok sa itaas makikita mo ang mga pagpipilian sa pagsasaayos ng SOSpect. Maaari kang bumili ng mga kapangyarihan upang bumili ng mga subscription at protektahan ang iyong pamilya o palawakin ang radius ng iyong alarm reception. TANDAAN! Sa simula, binibigyan ka namin ng 80 kapangyarihan upang maaari kang bumili ng dalawang subscription mula sa simula.</value>
+  </data>
+  <data name="LblRecomendaciones" xml:space="preserve">
+    <value>SAMA-SAMA TAYONG HINDI MATATALO! Ang mga pangunahing function ng pag alerto at pagtanggap ng mga alerto sa loob ng isang radius ng 100 metro ay libre, at kapag nagsimula ka binibigyan ka namin ng 2 subscription. Anyayahan ang iyong komunidad at pamilya na gamitin ang libreng serbisyong ito upang labanan ang tumataas na krimen. Maaari kang magligtas ng mga buhay o maligtas sa pamamagitan ng pagtanggap ng alerto sa oras. Ang mga alerto ng mga nawawalang tao o alagang hayop ay may saklaw na 10 kilometro, at ang marahas na demonstrasyon ay may saklaw na 1 kilometro</value>
+  </data>
+  <data name="LblPromocion" xml:space="preserve">
+    <value>Sa wakas, tandaan na makakakuha ka ng isang kapangyarihan ng abogado para sa bawat truthful rating na ibinigay mo sa SOSpect, kapag ang pagboto ng mga alarma ay nagsasara pagkatapos ng 90 minuto mula sa kanilang paglalagay. Karamihan sa mga tao ay tapat at magkasama naming protektahan ang isa't isa at ang aming mga pamilya. MALIGAYANG PAGDATING SA SOSPECT!</value>
+  </data>
+  <data name="LblDescripcionMapa" xml:space="preserve">
+    <value>Sa anumang oras, maaari mong piliin ang pagpipilian na "MAP" sa kaliwa ng ilalim na bar, na siyang panimulang punto ng SOSpect. Mula doon, maaari mong tingnan ang mga kalapit na alarma. Ang iyong lokasyon ay lilitaw sa gitna ng mapa, at ang bilog ay kumakatawan sa radius na maaaring makaapekto sa iyo. Bilang default, ang radius na ito ay 100 metro, ngunit maaari mong baguhin ito sa menu ng mga setting.</value>
+  </data>
+  <data name="LblRecomendacionImportante" xml:space="preserve">
+    <value>Mahalaga na buksan mo ang SOSpect paminsan minsan, bago umalis ng bahay o pagdating mo sa isang lugar, upang i update ang iyong lokasyon. Sa ganitong paraan, maaari naming ipaalam sa iyo kung mayroong anumang panganib sa iyong lugar. Mangyaring tandaan na kapag isinara ang app, hindi namin makuha ang iyong lokasyon dahil sa mga paghihigpit na ipinataw ng mga operating system ng aparato. Suriin ang mga tuntunin at kundisyon na may kaugnayan sa iyong lokasyon.</value>
+  </data>
+  <data name="LblUsuarioBloqueado" xml:space="preserve">
+    <value>User suspendido para sa mga negatibong marka</value>
+  </data>
+  <data name="LblMarcasNegativas" xml:space="preserve">
+    <value>Ang dami kong negative marks ay</value>
+  </data>
+  <data name="LblCuentaSuspendida" xml:space="preserve">
+    <value>Pansamantalang nasuspinde ang account dahil sa mga negatibong marka mula sa ibang mga gumagamit</value>
+  </data>
+  <data name="LblTitleCuentaSuspendida" xml:space="preserve">
+    <value>Pansamantalang sinuspinde ang account</value>
+  </data>
+  <data name="LblFechaFinSuspension" xml:space="preserve">
+    <value>Ang petsa ng pagtatapos ng suspensyon ay</value>
+  </data>
+  <data name="LblTocaAqui" xml:space="preserve">
+    <value>Tapikin dito upang pumunta</value>
+  </data>
+  <data name="LblNoTienesConexion" xml:space="preserve">
+    <value>Walang koneksyon sa internet</value>
+  </data>
+  <data name="LblExplicacionSinConexion" xml:space="preserve">
+    <value>Ang iyong pahayag ay kinakailangan upang mag log in sa SOSpect. Kung walang internet hindi natin malalaman kung aktibo ito.</value>
+  </data>
+  <data name="LblSinConexionDescripcion" xml:space="preserve">
+    <value>Kinakailangan ang aktibong internet upang makuha ang status ng iyong SOSpect account.</value>
+  </data>
+  <data name="LblSinConexionQueHacer" xml:space="preserve">
+    <value>Mangyaring i activate ang iyong internet at i restart ang SOSpect</value>
+  </data>
+  <data name="SefinalizalasubscripcionporsolicituddelusuarioPROTEGIDOatravésdelaAPIdesdelaAPP" xml:space="preserve">
+    <value>Ang subscription ay natapos sa pamamagitan ng kahilingan ng PROTECTED user sa pamamagitan ng API mula sa APP</value>
+  </data>
+  <data name="Nopuederenovarsedebidoaquefuecancelada,requieresubscripciónnueva" xml:space="preserve">
+    <value>Hindi ma renew dahil kinansela ito, nangangailangan ng bagong subscription</value>
+  </data>
+  <data name="Alarmasgeneradaspormicirculosocial" xml:space="preserve">
+    <value>Mga alarma na nabuo ng aking social circle</value>
+  </data>
+  <data name="Incrementomidiametrodevigilancia" xml:space="preserve">
+    <value>Pinatataas ko ang aking diameter ng pagsubaybay</value>
+  </data>
+  <data name="Zonadevigilanciaadicional" xml:space="preserve">
+    <value>Karagdagang zone ng pagsubaybay</value>
+  </data>
+  <data name="Renovable" xml:space="preserve">
+    <value>Renewable</value>
+  </data>
+  <data name="SefinalizalasubscripcionporsolicituddelusuarioPROTECTORatravésdelaAPIdesdelaAPP" xml:space="preserve">
+    <value>Ang subscription ay natapos sa pamamagitan ng kahilingan ng gumagamit ng PROTECTOR sa pamamagitan ng API mula sa APP</value>
+  </data>
+  <data name="LblEsRenovable" xml:space="preserve">
+    <value>Renewable po ba ito</value>
+  </data>
+  <data name="LblObsSubs" xml:space="preserve">
+    <value>Subscription remark:</value>
+  </data>
+  <data name="NingunaObservacion" xml:space="preserve">
+    <value>Walang mga Puna</value>
+  </data>
+  <data name="Subscripcionvigente" xml:space="preserve">
+    <value>Kasalukuyang subscription</value>
+  </data>
+  <data name="Actualmenteactivoenotrasuscripcion" xml:space="preserve">
+    <value>Kasalukuyang aktibo sa isa pang subscription</value>
+  </data>
+  <data name="LblRadioActual" xml:space="preserve">
+    <value>Ang aking kasalukuyang radius upang makatanggap ng mga alarma ay:</value>
+  </data>
+  <data name="LblPoderesRequeridosZV" xml:space="preserve">
+    <value>Mga kapangyarihan na kinakailangan para sa napiling pagpapalaki</value>
+  </data>
+  <data name="OptTerminosCondiciones" xml:space="preserve">
+    <value>SOSpect Mga Tuntunin at Kundisyon</value>
+  </data>
+  <data name="DebesAbrirLaApp" xml:space="preserve">
+    <value>SOSpect ay hindi maaaring malaman ang mga pagbabago ng lokasyon ng gumagamit kapag ito ay sarado, ito ay nangyayari sa pamamagitan ng mga patakaran sa pag iingat ng baterya ng mga operating system ng mga cell phone, kaya mahalaga na ang gumagamit ay madalas na buksan ang application upang suriin ang mga alarma sa lugar kung saan ito ay lumipat at makatanggap ng mga kalapit na alarma sa oras.</value>
+  </data>
+  <data name="InvitaMasPersonas" xml:space="preserve">
+    <value>Upang mapabuti ang kaligtasan ng gumagamit mahalaga na ang mga nasa paligid niya, pamilya at kapitbahay, i download ang application na libre. Kung walang mga kalapit na gumagamit, ang gumagamit ay maaaring hindi alerto sa oras o ang kanilang mga alerto ay maaaring hindi marinig, na pinapanatili ang estado ng panganib tulad ng dati bago i download ang application. Mahalagang anyayahan ang mas maraming tao na tulungan ang isa't isa!</value>
+  </data>
+  <data name="Insertiondone" xml:space="preserve">
+    <value>Insertion ang ginanap.</value>
+  </data>
+  <data name="AnerroroccurredwhilequalifyingthealarmCode1" xml:space="preserve">
+    <value>May nangyaring error habang nire rate ang alarm na may code 1</value>
+  </data>
+  <data name="AnerroroccurredwhilequalifyingthealarmCode2" xml:space="preserve">
+    <value>May nangyaring error habang nire rate ang alarm na may code 2</value>
+  </data>
+  <data name="AnerroroccurredwiththealarmqualificationmodelCode3" xml:space="preserve">
+    <value>May nangyaring error habang rating alarm na may code 3</value>
+  </data>
+  <data name="Userregistrationsuccessful" xml:space="preserve">
+    <value>Ang iyong user ay nakarehistro!</value>
+  </data>
+  <data name="Anerroroccurredwhileregisteringtheusercode1" xml:space="preserve">
+    <value>May nangyaring error sa code 1 na nagrerehistro sa iyong user</value>
+  </data>
+  <data name="Anerroroccurredwhileregisteringtheusercode2" xml:space="preserve">
+    <value>May nangyaring error sa code 2 na nagrerehistro sa iyong user</value>
+  </data>
+  <data name="Anerroroccurredwiththepeoplemodelforuserregistrationcode3" xml:space="preserve">
+    <value>May nangyaring error sa code 3 na nagrerehistro ng iyong user</value>
+  </data>
+  <data name="Permisosolicitadoconexito" xml:space="preserve">
+    <value>Matagumpay na hiniling na pahintulot</value>
+  </data>
+  <data name="OcurriounerrorenelprocesodesolicitarpermisoalprotegidoCodigo1" xml:space="preserve">
+    <value>Ang isang error sa code 1 ay naganap sa proseso ng paghingi ng pahintulot mula sa protektadong</value>
+  </data>
+  <data name="Nofueposiblerealizarenviarlasolicituddepermisoalprotegidoporqueelmodelonoesvalido" xml:space="preserve">
+    <value>Hindi naipadala ang kahilingan ng pahintulot sa protektado, ang modelo ay hindi wasto</value>
+  </data>
+  <data name="AlertaEnUbicacion" xml:space="preserve">
+    <value>Gusto mong lumikha ng SOSpect alert sa lokasyong ito?</value>
+  </data>
+  <data name="CrearEnUbicacionActual" xml:space="preserve">
+    <value>Gusto mong lumikha ng SOSpect alert sa iyong kasalukuyang lokasyon?</value>
+  </data>
+  <data name="SeguroCerrarSesion" xml:space="preserve">
+    <value>Sigurado ka bang mag-log out?</value>
+  </data>
+  <data name="Tu" xml:space="preserve">
+    <value>Ikaw</value>
+  </data>
+  <data name="Anonimo" xml:space="preserve">
+    <value>Anonymous</value>
+  </data>
+  <data name="AlarmaCerrada" xml:space="preserve">
+    <value>Sarado ang alarma</value>
+  </data>
+  <data name="LblSaldoPoderesInsuficiente" xml:space="preserve">
+    <value>Kulang ang power balance mo</value>
+  </data>
+  <data name="LblComprarPoderes" xml:space="preserve">
+    <value>Bumili ng mga kapangyarihan ng abogado</value>
+  </data>
+  <data name="LblSeguroRenovar" xml:space="preserve">
+    <value>Sigurado ka bang magre-renew ng subscription na ito?</value>
+  </data>
+  <data name="OptReportes" xml:space="preserve">
+    <value>Mga Ulat</value>
+  </data>
+  <data name="LblReportesTitulo" xml:space="preserve">
+    <value>Mga Ulat ng SOSpect</value>
+  </data>
+  <data name="LblReportesDescripcion" xml:space="preserve">
+    <value>Ang mga ulat ay nagbibigay sa iyo ng pagkakataon na maunawaan kung paano mo natulungan ang iba pang mga gumagamit sa pamamagitan ng pag iwas sa mga masamang sitwasyon. Bilang karagdagan, pinapayagan ka nilang matukoy ang mga mapanganib na lugar sa mapa ng iyong lungsod at obserbahan ang ebolusyon ng krimen sa paglipas ng panahon. Gayundin, sa pamamagitan ng pagsusuri ng pattern, posibleng makabuo ng maagang mga babala bago maganap ang mga negatibong kaganapan. Mahalagang tandaan na ang pangunahing ulat ay libre, habang ang iba pang mga ulat ay maaaring magkaroon ng gastos dahil sa computational consumption na kinakailangan para sa kanilang henerasyon.</value>
+  </data>
+  <data name="OptReporteDeCalorEnZona" xml:space="preserve">
+    <value>Mag ulat gamit ang mga mapa ng init</value>
+  </data>
+  <data name="OptReporteEvolucionEnElTiempo" xml:space="preserve">
+    <value>Alert evolution ulat sa pamamagitan ng oras</value>
+  </data>
+  <data name="OptReportesPredictivos" xml:space="preserve">
+    <value>Paghuhula sa pag uulat</value>
+  </data>
+  <data name="OptReporteAnaliticoDeDescripcionesAlarmas" xml:space="preserve">
+    <value>Analytical ulat ng mga chat alarma</value>
+  </data>
+  <data name="LblReporteCalorSospect" xml:space="preserve">
+    <value>SOSpect Heat Maps</value>
+  </data>
+  <data name="LblReporteEnConstruccion" xml:space="preserve">
+    <value>Sa lalong madaling panahon!! Ang pag andar na ito ay itinatayo!</value>
+  </data>
+  <data name="LblDescripcionMapaDeCalor" xml:space="preserve">
+    <value>Sa ulat na ito, magkakaroon ka ng access sa isang mapa ng init ng iyong lugar, kung saan maaari kang pumili ng iba't ibang buwan mula nang simulan ng SOSpect ang operasyon nito. Ang pag andar na ito ay magbibigay daan sa iyo upang obserbahan at maunawaan ang ebolusyon ng bawat lugar ng mapa na interesado sa iyo.</value>
+  </data>
+  <data name="LblCostoReporte" xml:space="preserve">
+    <value>Isaisip na ang paggamit ng pag andar na ito ay nagdadala ng isang computational cost at nangangailangan ng mga kapangyarihan bagaman hindi ito magiging isang mataas na halaga. Gayunpaman, maaari mong makuha ito nang walang anumang problema gamit ang mga kapangyarihan na ibinibigay namin sa iyo sa iyong unang paggamit ng application.</value>
+  </data>
+  <data name="LblReporteEvolucionAlarmas" xml:space="preserve">
+    <value>Ebolusyon ng mga alarma inilagay sa SOSpect</value>
+  </data>
+  <data name="LblDescripcionEvolucionAlarmas" xml:space="preserve">
+    <value>Sa ulat na ito, malalaman mo ang mga trend ng bawat uri ng alarma sa paglipas ng panahon sa iyong lugar. Magagawa mong upang obserbahan at suriin ang dangerousness trend, pati na rin matukoy ang mga posibleng pagbaba sa krimen.</value>
+  </data>
+  <data name="LblReportePredictivo" xml:space="preserve">
+    <value>SOSpect Mga Ulat sa Paghuhula</value>
+  </data>
+  <data name="LblDescripcionReportesPredictivos" xml:space="preserve">
+    <value>Habang ang komunidad ng SOSpect ay bumubuo ng sapat na data, ang mga hula sa kaganapan na batay sa probabilidad at mga tool sa pag analitika ay maaaring gawin. Ang mga ulat na ito ay magbibigay daan sa iyo upang malaman kung kailan ang mga alon ng mga alerto o pagtaas sa kriminal na aktibidad ay papalapit, na nagbibigay sa iyo ng pagkakataon na gawin ang mga kinakailangang pag iingat upang maiwasan ang anumang panganib sa iyo, sa iyong pamilya at sa iyong komunidad.</value>
+  </data>
+  <data name="LblReporteAnalisisDeTextos" xml:space="preserve">
+    <value>SOSpect ulat ng pagsusuri ng alarma chat</value>
+  </data>
+  <data name="LblDescripcionAnalisisTextos" xml:space="preserve">
+    <value>Salamat sa katotohanan na inilalarawan ng mga gumagamit ang mga alarma at na update ang kanilang ebolusyon sa pamamagitan ng panloob na chat ng SOSpect, ang ulat na ito ay magpapahintulot na maisalarawan ang mga typologies na pinaka nakakaapekto sa komunidad. Nagbibigay ito ng pagkakataon na gumawa ng aksyon upang mapabuti ang persepsyon ng kaligtasan sa iyong lugar.</value>
+  </data>
+  <data name="LblRangoReporte" xml:space="preserve">
+    <value>Ang ulat na ito ay sumasaklaw sa huling 30 araw</value>
+  </data>
+  <data name="AcercadeSOSpect" xml:space="preserve">
+    <value>Tungkol sa SOSpect</value>
+  </data>
+  <data name="Porcentajedealarmasciertasfrenteafalsasenunradiodeunkilometroymedio" xml:space="preserve">
+    <value>Porsyento ng totoo kumpara sa mga maling alarma sa loob ng isang radius ng isa at kalahating kilometro</value>
+  </data>
+  <data name="Promediodetiempoenminutosentrelanzamientodealarmaenmizonaylaprimeracalificacionodescripcion" xml:space="preserve">
+    <value>Average na oras sa ilang minuto sa pagitan ng paglulunsad ng alarma sa aking lugar at unang rating o paglalarawan</value>
+  </data>
+  <data name="Cantidadrealdepersonasenunradiodeunkilometroymedio" xml:space="preserve">
+    <value>Aktwal na bilang ng mga tao sa loob ng isa't kalahating kilometro radius</value>
+  </data>
+  <data name="Cantidadrealdepersonasenmiradioactual" xml:space="preserve">
+    <value>Aktwal na bilang ng mga tao sa aking kasalukuyang radius</value>
+  </data>
+  <data name="Miradioactualderecepcionyenviodealarmasenmetros" xml:space="preserve">
+    <value>Ang aking kasalukuyang radius ng pagtanggap at pagpapadala ng mga alarma sa metro</value>
+  </data>
+  <data name="Cantidadrealdepersonasquerecibieronmisalarmas" xml:space="preserve">
+    <value>Aktwal na bilang ng mga tao na nakatanggap ng aking mga alarma</value>
+  </data>
+  <data name="Cantidaddenotificacionesdealarmaenviadasdemiparte" xml:space="preserve">
+    <value>Bilang ng mga notification ng alarma na ipinadala mula sa akin</value>
+  </data>
+  <data name="Personasquereportaronmiayudacomonegativaofalsa" xml:space="preserve">
+    <value>Mga taong nag ulat ng aking tulong bilang negatibo o mali</value>
+  </data>
+  <data name="Personasqueagradecieronmiayuda" xml:space="preserve">
+    <value>Mga taong nagpahalaga sa tulong ko</value>
+  </data>
+  <data name="Poderesganadosporregalos" xml:space="preserve">
+    <value>Mga kapangyarihang nakuha sa pamamagitan ng mga kaloob</value>
+  </data>
+  <data name="LblParticipacionTpAlarma" xml:space="preserve">
+    <value>Paglahok sa pamamagitan ng uri ng alarma</value>
+  </data>
+  <data name="LblMetricBasics" xml:space="preserve">
+    <value>Mga pangunahing sukatan</value>
+  </data>
+  <data name="LblEfectiAlarmas" xml:space="preserve">
+    <value>Epektibo ng mga alarma</value>
+  </data>
+  <data name="LblTotalAlarmas" xml:space="preserve">
+    <value>Kabuuang mga alarma</value>
+  </data>
+  <data name="LblAlarmasVerdaderas" xml:space="preserve">
+    <value>Tunay na mga alarma</value>
+  </data>
+  <data name="LblAlarmasFalsas" xml:space="preserve">
+    <value>Mga maling alarma</value>
+  </data>
+  <data name="LblAlarmasEfectivas" xml:space="preserve">
+    <value>Porsyento ng mga epektibong alarma</value>
+  </data>
+  <data name="LblMarcarLeidos" xml:space="preserve">
+    <value>Markahan ang lahat bilang nabasa</value>
+  </data>
+  <data name="LblSeMarcaronComoLeidos" xml:space="preserve">
+    <value>Lahat ng mensahe ay minarkahan bilang nabasa</value>
+  </data>
+  <data name="LabelNuevaVersion" xml:space="preserve">
+    <value>May bagong bersyon ng SOSpect at ito ay kinakailangan upang magpatuloy</value>
+  </data>
+  <data name="OptReporteBasico" xml:space="preserve">
+    <value>Mga pangunahing ulat - LIBRE!</value>
+  </data>
+  <data name="LblReporteBasicoSospect" xml:space="preserve">
+    <value>SOSpect Mga Pangunahing Ulat</value>
+  </data>
+  <data name="LblReporteBasicoDescripcion" xml:space="preserve">
+    <value>Ang mga pangunahing ulat ng SOSpect ay nagbibigay sa iyo ng mahalagang impormasyon tungkol sa epekto ng iyong mga ulat ng alarma sa iyong komunidad. Bilang karagdagan, ipinapakita nila sa iyo ang bilang ng mga kapangyarihan na nakuha sa pamamagitan ng pagtulong sa iyong komunidad sa pamamagitan ng tumpak na pag score ng mga alarma at katapatan sa mga rating na iyon. Sa pamamagitan ng mga ulat na ito, maaari mo ring suriin ang pangkalahatang pag uugali ng iyong lugar sa nakalipas na buwan, kabilang ang bilang ng mga gumagamit na lumahok sa proseso at ang bilang ng mga gumagamit na nakatanggap ng mga negatibong marka dahil sa maling mga pakikipag ugnayan.</value>
+  </data>
+  <data name="LblReporteBasicoDescripcionCorta" xml:space="preserve">
+    <value>Ang mga pangunahing ulat ng SOSpect ay nagbibigay sa iyo ng mahalagang impormasyon tungkol sa... Tingnan ang higit pa...</value>
+  </data>
+  <data name="LblDescripcionRepTipoAlarma" xml:space="preserve">
+    <value>Ang ulat na ito ay nagbibigay sa iyo ng impormasyon tungkol sa mga pinaka madalas na alarma sa loob ng isang radius ng isa at kalahating kilometro mula sa iyong kasalukuyang lokasyon.</value>
+  </data>
+  <data name="LblDescripcionRepEfectAlarmas" xml:space="preserve">
+    <value>Ang ulat na ito ay nagbibigay sa iyo ng impormasyon sa pagiging epektibo ng relasyon sa pagitan ng tunay at maling mga alarma sa loob ng isang radius ng isa at kalahating kilometro mula sa iyong kasalukuyang lokasyon.</value>
+  </data>
+  <data name="LblDescripcionRepMetricasBasicas" xml:space="preserve">
+    <value>Ang ulat na ito ay nagbibigay sa iyo ng data sa bilang ng mga gumagamit sa loob ng isang kilometro at kalahating radius ng iyong kasalukuyang lokasyon, pati na rin ang bilang ng mga gumagamit sa iyong kasalukuyang radius ng mga alarma ng app. Bilang karagdagan, kasama dito ang ilang karagdagang impormasyon ng iyong interes.</value>
+  </data>
+  <data name="OptVolumenAlarmas" xml:space="preserve">
+    <value>Dami sa pamamagitan ng uri ng mga kalapit na alarma</value>
+  </data>
+  <data name="OptEfectividadAlarmas" xml:space="preserve">
+    <value>Epektibo ng mga kalapit na alarma</value>
+  </data>
+  <data name="OptMetricasBasicas" xml:space="preserve">
+    <value>Mga pangunahing sukatan ng mga kalapit na alarma</value>
+  </data>
+  <data name="LblCredibilidadActual" xml:space="preserve">
+    <value>Ang kredibilidad ng aking mga alarma ay:</value>
+  </data>
+  <data name="OptManualUsuarioSospect" xml:space="preserve">
+    <value>SOSpect Manwal ng Gumagamit</value>
+  </data>
+  <data name="LblDescManualUsuario" xml:space="preserve">
+    <value>Kilalanin ang SOSpect, isang libreng app na idinisenyo upang maprotektahan ka at ang iyong mga mahal sa buhay. Lumikha kami ng isang maikli at detalyadong online manual na makakatulong sa iyo na gamitin ito nang tama. Gamit ang manwal na ito, maaari mong makuha ang pinaka out ng SOSpect at samantalahin ang lahat ng mga tampok ng seguridad nito.</value>
+  </data>
+  <data name="SesionApple" xml:space="preserve">
+    <value>MAG SIGN IN GAMIT ANG APPLE</value>
+  </data>
+  <data name="LblCredibilidadAlarmaActual" xml:space="preserve">
+    <value>Kredibilidad ng alarma:</value>
+  </data>
+  <data name="LblAccedeAlManual" xml:space="preserve">
+    <value>Maaari mong ma access ang manual sa:</value>
+  </data>
+  <data name="LblRefrescarLista" xml:space="preserve">
+    <value>I-refresh ang listahan ng alarma</value>
+  </data>
+  <data name="LblErrorCorreoDispositivo" xml:space="preserve">
+    <value>Hindi makapagpadala ng email sa device na ito</value>
+  </data>
+  <data name="LblErrorCorreo" xml:space="preserve">
+    <value>May error sa pagpapadala ng email:</value>
+  </data>
+  <data name="LblSeleccioneTipoAlarma" xml:space="preserve">
+    <value>Piliin lamang ang uri ng alarma</value>
+  </data>
+  <data name="LblCompraFallida" xml:space="preserve">
+    <value>Hindi nagawa ang pagbili. Paki check ang internet access at muling subukan</value>
+  </data>
+  <data name="LblSeleccionePuntoMapa" xml:space="preserve">
+    <value>Kailangan mong pumili ng surveillance zone sa mapa</value>
+  </data>
+  <data name="Cantidaddealarmascolocadasenlaszonasdevigilanciasuscritas" xml:space="preserve">
+    <value>Bilang ng mga alarma na inilagay sa mga subscribed surveillance area</value>
+  </data>
+  <data name="Cantidaddealarmascolocadaspormisprotegidos" xml:space="preserve">
+    <value>Bilang ng mga alarma na inilagay ng aking protege</value>
+  </data>
+  <data name="Credibilidadactualdelasalarmasqueenvioamicomunidad" xml:space="preserve">
+    <value>Kasalukuyang kredibilidad ng mga alarma na ipinapadala ko sa aking komunidad</value>
+  </data>
+  <data name="LblCompraExitosa" xml:space="preserve">
+    <value>Binabati kita! Bumili ka ng mga kapangyarihan upang bumili ng mga subscription. Makikita mo ang isang paliwanag na mensahe sa kampana!</value>
+  </data>
+  <data name="LblDebesHabilitarNotif" xml:space="preserve">
+    <value>Kailangan mong paganahin ang pagpapadala ng mga abiso para sa SOSpect upang gumana</value>
+  </data>
+  <data name="LblHabilitarNotifSettings" xml:space="preserve">
+    <value>Maaaring suportahan ng app na ito ang mga abiso, ngunit kailangan mong paganahin ito sa iyong mga setting.</value>
+  </data>
+  <data name="LblErrorHabilitandoUsoNotif" xml:space="preserve">
+    <value>May nangyaring error na pumigil sa paggamit ng mga push notification</value>
+  </data>
+  <data name="LblMostrarDireccionEscape" xml:space="preserve">
+    <value>Mark Fugitive's Escape Route</value>
+  </data>
+  <data name="LblProximamenteSOSpect" xml:space="preserve">
+    <value>Darating sa lalong madaling panahon sa SOSpect!</value>
+  </data>
+  <data name="LblReportesProximos" xml:space="preserve">
+    <value>Analytical at predictive ulat na may data science!</value>
+  </data>
+  <data name="LblHolaBienvenido" xml:space="preserve">
+    <value>Hello! Maligayang pagdating sa SOSpect. 
+
+SOSpect ay isang libreng tool na dinisenyo upang protektahan ka at ang iyong mga mahal sa buhay sa pamamagitan ng pagbibigay ng napapanahong mga alerto tungkol sa mga kalapit na panganib! Maaaring hindi ka makakuha ng maraming mga alarma sa una, dahil wala pang maraming mga tao na malapit sa iyo na naka install ng SOSpect. Hinihiling namin na bigyan mo kami ng isang subukan at huwag i uninstall ang application. SOSpect ay maaaring i save ang iyong buhay sa ilang mga punto, pati na rin na ng isang tao sa iyong pamilya o komunidad.
+
+Sa seksyon ng "Basic Report" ng menu na "Mga Ulat" na matatagpuan sa mga setting, makikita mo sa seksyon ng "Basic Metrics" ang bilang ng mga kalapit na gumagamit sa loob ng iyong saklaw na lugar, kung saan makakatanggap ka ng mga alarma. Tulungan kaming madagdagan ang bilang na iyon, libre ito at magbibigay daan sa iyo na mabuhay nang mas ligtas!
+
+Inaanyayahan ka naming maingat na basahin ang maikling panimulang manwal na ito, na magbibigay sa iyo ng ideya kung paano gumagana ang SOSpect. Mangyaring tandaan na ito ay ipapakita lamang nang isang beses pagkatapos mai install ang app.
+
+Salamat sa paggamit ng SOSpect at sa pag-ambag sa kaligtasan ng lahat!
+
+Tapikin ang screen upang magpatuloy...</value>
+  </data>
+</root>

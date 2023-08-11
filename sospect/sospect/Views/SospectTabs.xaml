@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:fonts="clr-namespace:sospect.Resources.Fonts;assembly=sospect"
+             xmlns:Paginas="clr-namespace:sospect.Views"
+             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+             xmlns:helpers="clr-namespace:sospect.Helpers"
+             android:TabbedPage.ToolbarPlacement="Bottom"
+             BarBackgroundColor="LightGray"
+             Title="SOSpect"
+             BarTextColor="Gray"
+             SelectedTabColor="Blue"
+             x:Class="sospect.Views.SospectTabs">
+    <!--Pages can be added as references or inline-->
+    <Paginas:HomePage Title="{helpers:TranslateExtension Text='LabelMapa'}">
+        <Paginas:HomePage.IconImageSource>
+            <FontImageSource FontFamily="{StaticResource IcoMoonFamily}" Glyph="{x:Static fonts:IconFont.MapLocationDot}"></FontImageSource>
+        </Paginas:HomePage.IconImageSource>
+    </Paginas:HomePage>
+    <Paginas:DescribirPage Title="{helpers:TranslateExtension Text='LabelDescribir'}">
+        <Paginas:DescribirPage.IconImageSource>
+            <FontImageSource FontFamily="{StaticResource IcoMoonFamily}" Glyph="{x:Static fonts:IconFont.PenToSquare}"></FontImageSource>
+        </Paginas:DescribirPage.IconImageSource>
+    </Paginas:DescribirPage>
+</TabbedPage>

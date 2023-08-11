@@ -1,0 +1,1090 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Bienvenido" xml:space="preserve">
+    <value>SOSspect бағдарламасына қош келдіңіз</value>
+  </data>
+  <data name="InicieSesion" xml:space="preserve">
+    <value>Жалғастыру үшін кіру</value>
+  </data>
+  <data name="InicieSesionCon" xml:space="preserve">
+    <value>немесе кіріңіз</value>
+  </data>
+  <data name="SesionFacebook" xml:space="preserve">
+    <value>FACEBOOK ЖЕЛІСІМЕН КІРУ</value>
+  </data>
+  <data name="SesionGoogle" xml:space="preserve">
+    <value>GOOGLE БАҒДАРЛАМАСЫНА КІРУ</value>
+  </data>
+  <data name="LabelAlerta" xml:space="preserve">
+    <value>Ескерту</value>
+  </data>
+  <data name="LabelCrimen" xml:space="preserve">
+    <value>Қылмыс</value>
+  </data>
+  <data name="LabelOK" xml:space="preserve">
+    <value>ЖАҚСЫ</value>
+  </data>
+  <data name="LabelCancelar" xml:space="preserve">
+    <value>Болдырмау</value>
+  </data>
+  <data name="ReportarCrimen" xml:space="preserve">
+    <value>Қылмыс туралы есеп</value>
+  </data>
+  <data name="LabelMapa" xml:space="preserve">
+    <value>Карта</value>
+  </data>
+  <data name="LabelDescribir" xml:space="preserve">
+    <value>Сипаттама</value>
+  </data>
+  <data name="DescripcionAlarma" xml:space="preserve">
+    <value>Ескертудің сипаттамасы</value>
+  </data>
+  <data name="DescripcionSospechoso" xml:space="preserve">
+    <value>Күдіктінің тізімдемесі</value>
+  </data>
+  <data name="DescripcionVehiculo" xml:space="preserve">
+    <value>Көлік құралының сипаттамасы</value>
+  </data>
+  <data name="DescripcionArma" xml:space="preserve">
+    <value>Қарудың сипаттамасы</value>
+  </data>
+  <data name="PuntuacionDescripcion" xml:space="preserve">
+    <value>Есеп сипаттамасы</value>
+  </data>
+  <data name="LabelEditar" xml:space="preserve">
+    <value>Өңдеу</value>
+  </data>
+  <data name="DescripcionesParaAlarma" xml:space="preserve">
+    <value>Осы ескерту үшін жасалған сипаттамалар</value>
+  </data>
+  <data name="EspacioPublicidad" xml:space="preserve">
+    <value>Жарнамаға арналған орын</value>
+  </data>
+  <data name="AlarmasRecientes" xml:space="preserve">
+    <value>Сипаттама қосуға арналған соңғы ескертулер</value>
+  </data>
+  <data name="ConfirmarAlarma" xml:space="preserve">
+    <value>Ескертуді растау</value>
+  </data>
+  <data name="LabelInformacion" xml:space="preserve">
+    <value>Ақпарат</value>
+  </data>
+  <data name="LabelError" xml:space="preserve">
+    <value>Қате</value>
+  </data>
+  <data name="LabelCancelado" xml:space="preserve">
+    <value>Бас тартылды</value>
+  </data>
+  <data name="LabelLoginCancelado" xml:space="preserve">
+    <value>Кіруден бас тартылды</value>
+  </data>
+  <data name="LabelFallo" xml:space="preserve">
+    <value>Істен шығу</value>
+  </data>
+  <data name="RecibeAlarma" xml:space="preserve">
+    <value>Сіз қай жерде екеніңіз туралы дабыл алдыңыз, ол шындыққа жанасады ма?</value>
+  </data>
+  <data name="LabelConfirmo" xml:space="preserve">
+    <value>Растау</value>
+  </data>
+  <data name="LabelNoSeguro" xml:space="preserve">
+    <value>Cенімді емеспін</value>
+  </data>
+  <data name="LabelEsFalsa" xml:space="preserve">
+    <value>Жалған</value>
+  </data>
+  <data name="LabelConfirmar" xml:space="preserve">
+    <value>Растау</value>
+  </data>
+  <data name="AdvertenciaCalificacion" xml:space="preserve">
+    <value>Бұл рейтингті кейінірек өзгертуге болмайды. Егер рейтингтердің консенсусы сіздің дауысыңызға қарсы болса, ол сіздің болашақ беделіңізге әсер етуі мүмкін. Сенімдісің бе?</value>
+  </data>
+  <data name="LabelSi" xml:space="preserve">
+    <value>Иә</value>
+  </data>
+  <data name="LabelNo" xml:space="preserve">
+    <value>Жоқ</value>
+  </data>
+  <data name="AlarmaEnviada" xml:space="preserve">
+    <value>Ескерту жіберілді!</value>
+  </data>
+  <data name="MsgTrasAlarmaEnviada" xml:space="preserve">
+    <value>Егер қауіпсіз болсаңыз, телефоныңызды жасырып, қауіптен шығуыңызды сұраймыз.</value>
+  </data>
+  <data name="notificacionurgente" xml:space="preserve">
+    <value>Жедел хабарлама жақын телефондарға мына мекенжай бойынша жіберіледі:</value>
+  </data>
+  <data name="LabelAlarma" xml:space="preserve">
+    <value>Ескерту</value>
+  </data>
+  <data name="LabelMetros" xml:space="preserve">
+    <value>метр</value>
+  </data>
+  <data name="LabelTuUbicacion" xml:space="preserve">
+    <value>Орыныңыз</value>
+  </data>
+  <data name="LabelUsuario" xml:space="preserve">
+    <value>Пайдаланушы</value>
+  </data>
+  <data name="LabelTipoAlarma" xml:space="preserve">
+    <value>Ескерту түрі</value>
+  </data>
+  <data name="DireccionEscape" xml:space="preserve">
+    <value>Күдіктінің қашқан мекен-жайын көрсетуіңізді сұраймын.</value>
+  </data>
+  <data name="DescripcionAlerta" xml:space="preserve">
+    <value>Ескертудің сипаттамасы</value>
+  </data>
+  <data name="DescripcionImplicado" xml:space="preserve">
+    <value>Құлақтандыруға қатысатын адамның сипаттамасы</value>
+  </data>
+  <data name="DescripcionVehiculoImp" xml:space="preserve">
+    <value>Тартылған көлік құралы (егер қолданылса)</value>
+  </data>
+  <data name="ArmaImplicada" xml:space="preserve">
+    <value>Тартылған қару (егер қолданылса)</value>
+  </data>
+  <data name="LabelRutaEscape" xml:space="preserve">
+    <value>Күдікті қашу жолы</value>
+  </data>
+  <data name="ObjetivoSospect" xml:space="preserve">
+    <value>SOSpect қоғамға өздеріне және олардың жақындарына қауіп төндірмеу үшін пайдаланушының орналасқан жерінде қауіп-қатер туралы хабарлауға және ескертулер алуға мүмкіндік беруге бағытталған. Пайдаланушылардың орналасуы ортақ пайдаланылмайды және бақыланбайды, бұл олардың құпиялылығын қамтамасыз етеді. Пайдаланушылар басқаларға қауіпті жағдайлардың құрбаны болмауға көмектесу үшін қауіптілік туралы ескертулер орналастыра алады.</value>
+  </data>
+  <data name="UbicacionImportante" xml:space="preserve">
+    <value>Пайдаланушының орнын білу маңызды, егер кімде-кім қауіптілік туралы ескертуді өз орнына жақын орналастырса, оларды құлақтандыруға болады. Дегенмен, пайдаланушының орналасқан жері жеке болып табылады және ескертулер орналастырылған картадағы нүктелер ғана ортақ қолданылады.</value>
+  </data>
+  <data name="GenteUnida" xml:space="preserve">
+    <value>SOSpect көмегімен қоғамдастық қылмысты азайту және қатерлі жағдайлардың құрбаны болмау үшін бірігіп, басқаларды да қауіпсіз болу туралы хабардар ете алады.</value>
+  </data>
+  <data name="contactenos" xml:space="preserve">
+    <value>Бізге хабарласыңыз</value>
+  </data>
+  <data name="visitenos" xml:space="preserve">
+    <value>Бізге кіріңіз</value>
+  </data>
+  <data name="ZonaVigilancia" xml:space="preserve">
+    <value>Бақылау аймағының жазылымы</value>
+  </data>
+  <data name="SeleccioneUbicacionVigilar" xml:space="preserve">
+    <value>Көруге арналған орынды таңдау</value>
+  </data>
+  <data name="SeleccionEnMapa" xml:space="preserve">
+    <value>Картада таңдау</value>
+  </data>
+  <data name="ExplicaZonaVigilancia" xml:space="preserve">
+    <value>Таңдалатын нүктеге қойылған барлық ескертулер кімнің орналастырғанына қарамастан хабарланады. Сол жолмен сол кезде жүріп жатқан қауіп-қатерден хабардар болуға болады. Бұл балалар мектептері немесе жоғары оқу орындары немесе туыстарыңыз немесе жақындарыңыз жұмыс істейтін аудандар сияқты жерлерде қауіп-қатер туралы хабардар болу үшін өте қолайлы.</value>
+  </data>
+  <data name="CrearZonaV" xml:space="preserve">
+    <value>Осы орынмен бақылау аймағын құру</value>
+  </data>
+  <data name="LabelLatitud" xml:space="preserve">
+    <value>Ендік</value>
+  </data>
+  <data name="LabelLongitud" xml:space="preserve">
+    <value>Бойлық</value>
+  </data>
+  <data name="LabelIntroduccion" xml:space="preserve">
+    <value>Кіріспе</value>
+  </data>
+  <data name="AmpliacionRadio" xml:space="preserve">
+    <value>Дабыл радиусының кеңеюі</value>
+  </data>
+  <data name="TuRadioActual" xml:space="preserve">
+    <value>Сіздің қазіргі радиусыңыз:</value>
+  </data>
+  <data name="CrearNuevoRadio" xml:space="preserve">
+    <value>Осы жаңа радио үшін жазылымымды жасау</value>
+  </data>
+  <data name="ExplicacionVigencias" xml:space="preserve">
+    <value>Барлық жазылымдардың жарамдылығы бар, негізгі мәзірдің бірінші нұсқасында жазылым бағасын тексеруіңізді сұраймыз</value>
+  </data>
+  <data name="VasARequerir" xml:space="preserve">
+    <value>Сіз талап ететін боласыз</value>
+  </data>
+  <data name="xPoderesParaSubs" xml:space="preserve">
+    <value>Осы радионы ағымдағы радиоға қосу өкілеттігі</value>
+  </data>
+  <data name="Exito" xml:space="preserve">
+    <value>Сәттілік</value>
+  </data>
+  <data name="SubscripcionCreada" xml:space="preserve">
+    <value>Жазылым сәтті жасалды.</value>
+  </data>
+  <data name="MensajeError" xml:space="preserve">
+    <value>Серверге қосылатын қате пайда болды. Қайталап көріңіз.</value>
+  </data>
+  <data name="SeleccionaRuta" xml:space="preserve">
+    <value>Күдіктінің қашу жолын таңдау керек.</value>
+  </data>
+  <data name="AprobarSolicitudes" xml:space="preserve">
+    <value>Сұрау салуларды бекіту</value>
+  </data>
+  <data name="LabelAprobar" xml:space="preserve">
+    <value>Бекіту</value>
+  </data>
+  <data name="LabelRechazar" xml:space="preserve">
+    <value>Қабылдамау</value>
+  </data>
+  <data name="CompletarSubscripcion" xml:space="preserve">
+    <value>Қорғалған жазылымды аяқтау</value>
+  </data>
+  <data name="CompletarSubsc" xml:space="preserve">
+    <value>Жазылымды аяқтау</value>
+  </data>
+  <data name="LblMensajes" xml:space="preserve">
+    <value>Хабарлар</value>
+  </data>
+  <data name="LblFechaMensaje" xml:space="preserve">
+    <value>Хабар күні</value>
+  </data>
+  <data name="LblMenu" xml:space="preserve">
+    <value>БАПТАУЛАРЫ</value>
+  </data>
+  <data name="OptCompraPoderes" xml:space="preserve">
+    <value>Мүмкіндіктерді ашу үшін өкілеттіктерді сатып алу</value>
+  </data>
+  <data name="OptGestionarProtegidos" xml:space="preserve">
+    <value>Қорғалған қорғаушыларымды басқару</value>
+  </data>
+  <data name="OptCrearZonas" xml:space="preserve">
+    <value>Бақылау аймақтарын құру</value>
+  </data>
+  <data name="OptAumentarRadio" xml:space="preserve">
+    <value>Ескертуді қабылдау радиусын арттыру</value>
+  </data>
+  <data name="OptAcercaDe" xml:space="preserve">
+    <value>SOSpect қосымшасы туралы</value>
+  </data>
+  <data name="OptCerrarSesion" xml:space="preserve">
+    <value>Өшіру</value>
+  </data>
+  <data name="LblProtectores" xml:space="preserve">
+    <value>Менің протекторатым</value>
+  </data>
+  <data name="LblSuspender" xml:space="preserve">
+    <value>Уақытша тоқтата тұру</value>
+  </data>
+  <data name="LblEliminarProtegido" xml:space="preserve">
+    <value>Қорғалғанды жою</value>
+  </data>
+  <data name="LblSubscrProtegido" xml:space="preserve">
+    <value>Қорғалған жазылым</value>
+  </data>
+  <data name="LblIDUsuarioAProteger" xml:space="preserve">
+    <value>Қорғау үшін пайдаланушы идентификатын енгізіңіз. (Бұл мән сілтеме жасағыңыз келетін пайдаланушының SOSspect конфигурация мәзірінің жоғарғы жағында орналасқан)</value>
+  </data>
+  <data name="LblRelacionProtegido" xml:space="preserve">
+    <value>Менің осы протекторатымен қарым-қатынасым:</value>
+  </data>
+  <data name="LblSolicitarPermiso" xml:space="preserve">
+    <value>Пайдаланушыдан рұқсат сұрау</value>
+  </data>
+  <data name="LblCompleteCampos" xml:space="preserve">
+    <value>Барлық өрістерді аяқтаңыз.</value>
+  </data>
+  <data name="LblProcesarSolicitud" xml:space="preserve">
+    <value>Сұрауды өңдеуде қате пайда болды. Қайталап көріңіз.</value>
+  </data>
+  <data name="LblProtegidos" xml:space="preserve">
+    <value>My Protégés</value>
+  </data>
+  <data name="LblUsuarioProtegido" xml:space="preserve">
+    <value>Қорғалған пайдаланушы идентифика- ты</value>
+  </data>
+  <data name="LblFechaActivacion" xml:space="preserve">
+    <value>Белсендіру күні</value>
+  </data>
+  <data name="LblFechaFinalizacion" xml:space="preserve">
+    <value>Аяқталу күні</value>
+  </data>
+  <data name="LblAccion" xml:space="preserve">
+    <value>Әрекет</value>
+  </data>
+  <data name="LblCantidadPoderes" xml:space="preserve">
+    <value>Өкілеттіктер саны</value>
+  </data>
+  <data name="LblPrecio" xml:space="preserve">
+    <value>Бағасы</value>
+  </data>
+  <data name="LblComprar" xml:space="preserve">
+    <value>Сатып алу</value>
+  </data>
+  <data name="LblValoresSubsc" xml:space="preserve">
+    <value>Жазылым мәндері</value>
+  </data>
+  <data name="LblTerminos" xml:space="preserve">
+    <value>SOSspect APP үшін қызмет көрсету шарттары</value>
+  </data>
+  <data name="LblAcepto" xml:space="preserve">
+    <value>Келісімшартты қабылдадым</value>
+  </data>
+  <data name="LblNoAcepto" xml:space="preserve">
+    <value>Қабылдамаймын</value>
+  </data>
+  <data name="LblOpcionesProtegidos" xml:space="preserve">
+    <value>SOSpect бағдарламасымен қорғалған және қорғалған</value>
+  </data>
+  <data name="LblExplicacionProtegidos" xml:space="preserve">
+    <value>Әлеуметтік үйірме мүшелерінен ескертулер алуға болады, тіпті олар сізден алыс болса да. Мұнда осы мүмкіндікті басқаруға болады</value>
+  </data>
+  <data name="OptIniciarTramite" xml:space="preserve">
+    <value>Қорғалғанды қосу процесін бастау</value>
+  </data>
+  <data name="OptAprobarSolicitud" xml:space="preserve">
+    <value>Протектораттың сұрау салуын бекіту</value>
+  </data>
+  <data name="OptListarProtegidos" xml:space="preserve">
+    <value>Менің протектораттарымның тізімін қараңыз</value>
+  </data>
+  <data name="OptListarProtectores" xml:space="preserve">
+    <value>Менің протекторларымның тізімін қараңыз</value>
+  </data>
+  <data name="OptVolver" xml:space="preserve">
+    <value>Қайтарым</value>
+  </data>
+  <data name="LblPoderesSospect" xml:space="preserve">
+    <value>SOSpect бағдарламасының өкілеттіктері</value>
+  </data>
+  <data name="LblOpcionesPoderes" xml:space="preserve">
+    <value>Қуатты басқару параметріне қош келдіңіз, не істегіңіз келеді?</value>
+  </data>
+  <data name="LblSubscripcionesCosto" xml:space="preserve">
+    <value>Қандай жазылымдарды сатып ала алатынымды және олардың құнын білгім келеді</value>
+  </data>
+  <data name="LblQuieroComprar" xml:space="preserve">
+    <value>Жазылымдарды сатып алу үшін супердержаваларды сатып алғым келеді</value>
+  </data>
+  <data name="ExplicacionRadio" xml:space="preserve">
+    <value>Қолданбаның барлық пайдаланушылары үшін әдепкі радиусы 100 метрді құрайды. Бұл радиусты қосымшаның өкілеттіктерін пайдаланып кеңейтуге болады. Содан кейін өзіңіз үшін қажет радиусты таңдаңыз:</value>
+  </data>
+  <data name="LblAsunto" xml:space="preserve">
+    <value>Қысқаша сипаттама</value>
+  </data>
+  <data name="LblCompraPoderes" xml:space="preserve">
+    <value>Өкілеттіктерді сатып алу</value>
+  </data>
+  <data name="OptCompletarTramite" xml:space="preserve">
+    <value>Қорғалғанды қосу процедурасын аяқтау</value>
+  </data>
+  <data name="LabelHecho" xml:space="preserve">
+    <value>Аяқталды</value>
+  </data>
+  <data name="LabelEscapoEnEstaDireccion" xml:space="preserve">
+    <value>Ол осы бағытта қашып кетті</value>
+  </data>
+  <data name="OptMisSubs" xml:space="preserve">
+    <value>Менің жазылымдарым</value>
+  </data>
+  <data name="LblMisSubscripciones" xml:space="preserve">
+    <value>Менің жазылымдарым</value>
+  </data>
+  <data name="LblidUsuario" xml:space="preserve">
+    <value>Пайдаланушы идентифика- ты:</value>
+  </data>
+  <data name="LblTipo" xml:space="preserve">
+    <value>Жазылым түрі:</value>
+  </data>
+  <data name="LblDescripcionPuntos" xml:space="preserve">
+    <value>Сипаттама:</value>
+  </data>
+  <data name="LblFechaFinPuntos" xml:space="preserve">
+    <value>Аяқталу күні:</value>
+  </data>
+  <data name="LblPoderesPuntos" xml:space="preserve">
+    <value>Жаңарту өкілеттігі:</value>
+  </data>
+  <data name="LblRenovar" xml:space="preserve">
+    <value>Жаңарту</value>
+  </data>
+  <data name="LblCancelarSubscripcion" xml:space="preserve">
+    <value>Жазылымнан бас тарту</value>
+  </data>
+  <data name="LblSeguroDeCancelar" xml:space="preserve">
+    <value>Жазылымнан бас тартқыңыз келетініне сенімдісіз бе? Тұтынылған өкiлеттiктердi қайтару жүргiзiлмейдi.</value>
+  </data>
+  <data name="LblAceptar" xml:space="preserve">
+    <value>Қабылдау</value>
+  </data>
+  <data name="Alarm_1" xml:space="preserve">
+    <value>Ескерту немесе қауiптiлiк</value>
+  </data>
+  <data name="Alarm_2" xml:space="preserve">
+    <value>Қылмыс немесе жасалған қылмыс</value>
+  </data>
+  <data name="Alarm_3" xml:space="preserve">
+    <value>Көше браузері</value>
+  </data>
+  <data name="Alarm_4" xml:space="preserve">
+    <value>Жоғалған үй жануары</value>
+  </data>
+  <data name="Alarm_5" xml:space="preserve">
+    <value>Жоғалған адам</value>
+  </data>
+  <data name="Alarm_6" xml:space="preserve">
+    <value>Тәртіпсіздіктер немесе наразылықтар</value>
+  </data>
+  <data name="Alarm_7" xml:space="preserve">
+    <value>Көшеге шығу арқылы көрнекі сүйемелдеуді сұрату</value>
+  </data>
+  <data name="Alarm_8" xml:space="preserve">
+    <value>Тұрмыстық зорлық-зомбылық</value>
+  </data>
+  <data name="Alarm_9" xml:space="preserve">
+    <value>Орналасқан жеріңізге қашып бара жатқан күдікті</value>
+  </data>
+  <data name="LblCostoPoderes" xml:space="preserve">
+    <value>Пакет құны</value>
+  </data>
+  <data name="LblSuscripcionesDisponibles" xml:space="preserve">
+    <value>Қазіргі уақытта қол жетімді жазылымдар</value>
+  </data>
+  <data name="LblFamilia" xml:space="preserve">
+    <value>Отбасы</value>
+  </data>
+  <data name="LblAmigo" xml:space="preserve">
+    <value>Дос</value>
+  </data>
+  <data name="LblCompanero" xml:space="preserve">
+    <value>Компань</value>
+  </data>
+  <data name="LblOtroSinDefinir" xml:space="preserve">
+    <value>Басқа анықталмағандар</value>
+  </data>
+  <data name="LabelExito" xml:space="preserve">
+    <value>Сәттілік</value>
+  </data>
+  <data name="LblSolicitudAprobada" xml:space="preserve">
+    <value>Өтінім сәтті мақұлданды.</value>
+  </data>
+  <data name="MensajeErrorAprobando" xml:space="preserve">
+    <value>Сұрауды бекіту қатесі</value>
+  </data>
+  <data name="MensajeErrorRechazando" xml:space="preserve">
+    <value>Сұрау қабылданбады.</value>
+  </data>
+  <data name="LblSolicitudRechazada" xml:space="preserve">
+    <value>Қолданба сәтті қабылданбады.</value>
+  </data>
+  <data name="LblUsuarioSolicitante" xml:space="preserve">
+    <value>Пайдаланушыға сұрау салу</value>
+  </data>
+  <data name="LblFechaSolicitud" xml:space="preserve">
+    <value>Өтінім берілген күн</value>
+  </data>
+  <data name="LblAccionRealizar" xml:space="preserve">
+    <value>Қабылдануы тиіс шаралар</value>
+  </data>
+  <data name="LblSubscripcionCompletada" xml:space="preserve">
+    <value>Жазылым аяқталды</value>
+  </data>
+  <data name="LblSubscripcionFallida" xml:space="preserve">
+    <value>Жазылым жаңылысы</value>
+  </data>
+  <data name="LblUsuarioAprobador" xml:space="preserve">
+    <value>Мақұлдаушы пайдаланушы</value>
+  </data>
+  <data name="LblFechaAprobacion" xml:space="preserve">
+    <value>Бекітілген күні</value>
+  </data>
+  <data name="LblSubscrEliminada" xml:space="preserve">
+    <value>Жазылмаған</value>
+  </data>
+  <data name="LblSubsEliminadaExitosamente" xml:space="preserve">
+    <value>Жазылым сәтті жойылды</value>
+  </data>
+  <data name="LblEliminarProtector" xml:space="preserve">
+    <value>Протекторатты жою</value>
+  </data>
+  <data name="LblRenovacionAplicada" xml:space="preserve">
+    <value>Жөндеу сәтті жүзеге асырылды</value>
+  </data>
+  <data name="LblErrorRenovando" xml:space="preserve">
+    <value>Қолдау көрсету үшін қатені жаңарту, қайта жаңғырту немесе есеп беру, «&gt; туралы» параметрінде қол жетімді контакт</value>
+  </data>
+  <data name="LblCancelacionAplicada" xml:space="preserve">
+    <value>Күшін жою сәтті жүргізілді</value>
+  </data>
+  <data name="LblErrorCancelando" xml:space="preserve">
+    <value>Қолдау көрсету үшін қатені болдырмау, қайта жаңғырту немесе есеп беру, «&gt; туралы» параметрінде қол жетімді контакт</value>
+  </data>
+  <data name="LblZonaCreada" xml:space="preserve">
+    <value>Сұрау салынған бақылау аймағына жазылу сәтті жүргізілді</value>
+  </data>
+  <data name="LblErrorZonaVigil" xml:space="preserve">
+    <value>Жаңа сұралған аймаққа жазылу, қолдауға қайта жазу немесе есеп беру қатесі, «&gt; туралы» параметрінде қол жетімді контакт</value>
+  </data>
+  <data name="LblSeleccionaNuevoRadio" xml:space="preserve">
+    <value>Жаңа радиусты метрмен таңдау</value>
+  </data>
+  <data name="LblUsuarioProtector" xml:space="preserve">
+    <value>Қорғау пайдаланушысы</value>
+  </data>
+  <data name="LblSeguroEliminarProtegido" xml:space="preserve">
+    <value>Протекторатын міндетті түрде жоясыз ба? Бұл жазылымда қолданылатын өкілеттіктер қайтарылмайды.</value>
+  </data>
+  <data name="LblSuspenderProtectores" xml:space="preserve">
+    <value>Сіз өзіңіздің протектораттарыңызға хабарламаларды 6 сағатқа тоқтата тұруға міндеттісіз бе? Барлық протектораттарыңызда ескертулер тоқтатылады және жазылымның аяқталу уақыты осы себептен ұзартылмайды. Бұл әрекет туралы протекторатқа хабарланбайды.</value>
+  </data>
+  <data name="LblSuspensionRealizada" xml:space="preserve">
+    <value>Барлық протектораттарға 6 сағат бойы дабыл қағу сәтті өтті.</value>
+  </data>
+  <data name="LabelSeguroEliminarProtector" xml:space="preserve">
+    <value>Протекторатты міндетті түрде жоясыз ба? Бұл жазылымда пайдаланылатын өкілеттіктер қайтарылмайды және бұл әрекет туралы протекторатқа хабарланады.</value>
+  </data>
+  <data name="LabelProtectorEliminado" xml:space="preserve">
+    <value>Таңдалған протекторат жойылды. Өкiлеттiктер протекторатқа қайтарылмайды. Протекторатқа бұл әрекет туралы хабарланады</value>
+  </data>
+  <data name="LblConfirmacionRequerida" xml:space="preserve">
+    <value>Маңызды! Растау қажет!</value>
+  </data>
+  <data name="LblNoHayRegistros" xml:space="preserve">
+    <value>Бұл уақытта көрсетілетін журналдар жоқ</value>
+  </data>
+  <data name="LblMiLogin" xml:space="preserve">
+    <value>Менің кіруім:</value>
+  </data>
+  <data name="LblSaldoPoderesEs" xml:space="preserve">
+    <value>Менің қуат балансым:</value>
+  </data>
+  <data name="LblUsuarioID" xml:space="preserve">
+    <value>Менің пайдаланушы идентифика- тым</value>
+  </data>
+  <data name="LblNoHayRegistrosAqui" xml:space="preserve">
+    <value>Әлі ешкім ештеңе жазған жоқ!</value>
+  </data>
+  <data name="LblAlertaReportadaPorMi" xml:space="preserve">
+    <value>Мен хабарлаған ескерту</value>
+  </data>
+  <data name="LblPara" xml:space="preserve">
+    <value>Хабар алушы:</value>
+  </data>
+  <data name="LblDe" xml:space="preserve">
+    <value>Хабарды жіберуші:</value>
+  </data>
+  <data name="ConfiguraciondeSOSpect" xml:space="preserve">
+    <value>SOSpect конфигурациясы</value>
+  </data>
+  <data name="LblExitoEnAceptacion" xml:space="preserve">
+    <value>Сіздің келісім-шартыңыз сақталуда!</value>
+  </data>
+  <data name="LblFalloEnAceptacion" xml:space="preserve">
+    <value>Тіркеу сәтсіз аяқталды. Қайтадан сұраймын!</value>
+  </data>
+  <data name="LblDeclinacionAceptacion" xml:space="preserve">
+    <value>Келiсiм-шартты қабылдамай-ақ жалғастыра алмайсыз!</value>
+  </data>
+  <data name="LblParaIniciar" xml:space="preserve">
+    <value>СОСПЕКТТЕН БАСТАЙЫҚ!! Жақын маңдағы ескертулерді жаңарту үшін көк жаңарту түймешігін түртіңіз</value>
+  </data>
+  <data name="LblAlarmaNoGrave" xml:space="preserve">
+    <value>Қауіптілігі төмен ескертулерді орналастыру және қауымдастықты немесе протектораттарды ескерту үшін сары түймешікті пайдаланыңыз. Құлақтандыру түрін таңдап, оны жасалған қылмыс деп белгілеуге болады. Бұл батырма көмек қажет болғанда пайдалы бола отырып, ескертуді дәл орнында іске қосады. Сондай-ақ, орналасқан жеріңізге нұқсан келтірмей ескертуді табу үшін картадағы нүктені таңдауға болады.</value>
+  </data>
+  <data name="LblCrimenCometido" xml:space="preserve">
+    <value>Қызыл түйме санатты іске қосады: қылмыс дабыл қағуда. SOSspect бұл жағдайларда уақыттың маңыздылығына байланысты санатты қосуды талап етпейді. Ескерту автоматты түрде дәл тұрған жеріңізде орналастырылады. Сондай-ақ, ескертуді орналастыру үшін картадағы нүктені таңдап, жасалған қылмыс санатын өзгертуге болады.</value>
+  </data>
+  <data name="LblDescripcionAlarmas" xml:space="preserve">
+    <value>Төменгі жолақтағы «Сипаттау» параметрінде сіз немесе басқалар орналастырған ескертулер тізімін табасыз. Егер ескертуді жасасаңыз, сипаттама қосуға болады. Егер дабылды басқа біреу жасаса, оның шынайылығын бағалап, оның сипаттамасын толықтыра аласыз. Абай бол! Жалған ақпарат немесе дұрыс емес рейтингтер берген жағдайда тіркелгіңіз тоқтатылуы мүмкін. Мұны болдырмау үшін шарттар мен шарттарды мұқият қарап шығыңыз.</value>
+  </data>
+  <data name="LblDescripcionMensajes" xml:space="preserve">
+    <value>Жоғарғы оң жақ бұрыштағы қоңырауда жазылым хабарландырулары мен соңғы ескертулерді қамтитын хабарларды оқи аласыз. Бұл тізім сипаттамалар параметрінен өзгеше, мұнда соңғы ескертулерді тікелей табуға болады.</value>
+  </data>
+  <data name="LblDescripcionMenu" xml:space="preserve">
+    <value>Жоғарғы сол жақ бұрыштағы тісті доңғалақта SOSspect конфигурация параметрлерін табасыз. Жазылымдарды сатып алу және отбасыңызды қорғау үшін өкілеттіктерді сатып алуға немесе дабыл қабылдау радиусын кеңейтуге болады. ЕСІҢІЗДЕ БОЛСЫН! Басында біз сізге 80 өкілеттік береміз, осылайша басынан бастап екі жазылым сатып алуға болады.</value>
+  </data>
+  <data name="LblRecomendaciones" xml:space="preserve">
+    <value>БІЗ БІРГЕ МЫЗҒЫМАСПЫЗ! 100 метр радиусында құлақтандыру мен құлақтандыруды қабылдаудың негізгі функциялары тегін, ал басталу кезінде сізге 2 жазылым береміз. Қоғамыңыз бен отбасыңызды қылмыстың өсуімен күресу үшін осы тегін қызметті пайдалануға шақырыңыз. Уақытында ескерту алу арқылы адам өмірін сақтап қалуға немесе сақтауға болады. Жоғалған адамдарды немесе үй жануарларын құлақтандырудың диапазоны 10 километр, ал зорлық-зомбылық көрсетулер 1 километр диапазоны бар</value>
+  </data>
+  <data name="LblPromocion" xml:space="preserve">
+    <value>Сайып келгенде, сіз SOSpect-тегі әрбір шыншыл рейтинг үшін сенімхат табатыныңызды есте сақтаңыз, ол кезде дабылдардың дауыс беруі оларды орналастырғаннан кейін 90 минуттан кейін жабылады. Адамдардың көпшілігі адал және біз бірге бір-бірімізді және отбасыларымызды қорғаймыз. SOSPECT-КЕ ҚОШ КЕЛДІҢІЗДЕР!</value>
+  </data>
+  <data name="LblDescripcionMapa" xml:space="preserve">
+    <value>Кез келген уақытта SOSpect бастапқы нүктесі болып табылатын төменгі жолақтың сол жағындағы «MAP» параметрін таңдауға болады. Сол жерден жақын маңдағы дабылдарды көруге болады. Орналасқан жеріңіз картаның ортасында пайда болады, ал шеңбер сізге әсер етуі мүмкін радиусты білдіреді. Әдепкі бойынша, бұл радиус 100 метрді құрайды, бірақ оны параметрлер мәзірінде өзгертуге болады.</value>
+  </data>
+  <data name="LblRecomendacionImportante" xml:space="preserve">
+    <value>SOSpect-ті үйден шықпас бұрын немесе орынға келгенде, орнын жаңарту үшін мезгіл-мезгіл ашу маңызды. Осылайша, сізге өз аймағыңызда қандай да бір қауіп-қатердің бар-жоқ екенін хабарлай аламыз. Бағдарлама жабылған кезде құрылғының операциялық жүйелері енгізген шектеулерге байланысты өз орныңызды ала алмайтынымызды ескеріңіз. Орналасқан жеріңізге қатысты шарттар мен шарттарды тексеріңіз.</value>
+  </data>
+  <data name="LblUsuarioBloqueado" xml:space="preserve">
+    <value>Теріс белгілер үшін тоқтатылған пайдаланушы</value>
+  </data>
+  <data name="LblMarcasNegativas" xml:space="preserve">
+    <value>Менің теріс белгілерімнің саны</value>
+  </data>
+  <data name="LblCuentaSuspendida" xml:space="preserve">
+    <value>Басқа пайдаланушылардың теріс белгілеріне байланысты уақытша тоқтатылған тіркелгі</value>
+  </data>
+  <data name="LblTitleCuentaSuspendida" xml:space="preserve">
+    <value>Уақытша тоқтатылған шот</value>
+  </data>
+  <data name="LblFechaFinSuspension" xml:space="preserve">
+    <value>Тоқтата тұру мерзімінің аяқталу күні</value>
+  </data>
+  <data name="LblTocaAqui" xml:space="preserve">
+    <value>Өту үшін осында түртіңіз</value>
+  </data>
+  <data name="LblNoTienesConexion" xml:space="preserve">
+    <value>Интернетке қосылу жоқ</value>
+  </data>
+  <data name="LblExplicacionSinConexion" xml:space="preserve">
+    <value>Сіздің мәлімдемеңіз SOSspect торабына кіруге міндетті. Интернетсіз оның белсенді екенін білмейміз.</value>
+  </data>
+  <data name="LblSinConexionDescripcion" xml:space="preserve">
+    <value>SOSspect тіркелгісінің күйін шығарып алу үшін белсенді интернет қажет.</value>
+  </data>
+  <data name="LblSinConexionQueHacer" xml:space="preserve">
+    <value>Интернетті белсендіріп, SOSspect бағдарламасын қайта іске қосуыңызды сұраймыз</value>
+  </data>
+  <data name="SefinalizalasubscripcionporsolicituddelusuarioPROTEGIDOatravésdelaAPIdesdelaAPP" xml:space="preserve">
+    <value>АЕҚ пайдаланушының сұрау салуы бойынша АЕК-тен жазылу тоқтатылады</value>
+  </data>
+  <data name="Nopuederenovarsedebidoaquefuecancelada,requieresubscripciónnueva" xml:space="preserve">
+    <value>Жаңарту мүмкін емес, себебі ол жойылды, жаңа жазылым қажет</value>
+  </data>
+  <data name="Alarmasgeneradaspormicirculosocial" xml:space="preserve">
+    <value>Менің әлеуметтік үйірмесімнен пайда болған дабылдар</value>
+  </data>
+  <data name="Incrementomidiametrodevigilancia" xml:space="preserve">
+    <value>Бақылау диаметрімді ұлғайтамын</value>
+  </data>
+  <data name="Zonadevigilanciaadicional" xml:space="preserve">
+    <value>Қосымша бақылау аймағы</value>
+  </data>
+  <data name="Renovable" xml:space="preserve">
+    <value>Жаңартылатын энергия көздері</value>
+  </data>
+  <data name="SefinalizalasubscripcionporsolicituddelusuarioPROTECTORatravésdelaAPIdesdelaAPP" xml:space="preserve">
+    <value>АЕК арқылы АӨО пайдаланушысының сұрау салуы бойынша жазылу тоқтатылады</value>
+  </data>
+  <data name="LblEsRenovable" xml:space="preserve">
+    <value>Ол жаңартыла ма?</value>
+  </data>
+  <data name="LblObsSubs" xml:space="preserve">
+    <value>Жазылым ескертуі:</value>
+  </data>
+  <data name="NingunaObservacion" xml:space="preserve">
+    <value>Түсініктемелер жоқ</value>
+  </data>
+  <data name="Subscripcionvigente" xml:space="preserve">
+    <value>Ағымдағы жазылым</value>
+  </data>
+  <data name="Actualmenteactivoenotrasuscripcion" xml:space="preserve">
+    <value>Қазіргі уақытта басқа жазылымда белсенді</value>
+  </data>
+  <data name="LblRadioActual" xml:space="preserve">
+    <value>Дабылдарды қабылдауға арналған қазіргі радиусым:</value>
+  </data>
+  <data name="LblPoderesRequeridosZV" xml:space="preserve">
+    <value>Іріктелген үлкейту үшін қажетті өкілеттіктер</value>
+  </data>
+  <data name="OptTerminosCondiciones" xml:space="preserve">
+    <value>SOSpect шарттары мен шарттары</value>
+  </data>
+  <data name="DebesAbrirLaApp" xml:space="preserve">
+    <value>SOSspect пайдаланушының жабылған кездегі орнының өзгеруін біле алмайды, бұл ұялы телефондардың операциялық жүйелерінің аккумуляторлық батареяларын сақтау саясатымен орын алады, сондықтан пайдаланушының өзі жылжыған аймақтағы дабылдарды тексеруге арналған қосымшаны жиі ашуы және уақытында жақын маңдағы дабылдарды алуы маңызды.</value>
+  </data>
+  <data name="InvitaMasPersonas" xml:space="preserve">
+    <value>Пайдаланушының қауіпсіздігін арттыру үшін оның айналасындағылардың, отбасының және көршілерінің тегін қосымшаны жүктеуі маңызды. Егер жақын маңдағы пайдаланушылар болмаса, пайдаланушы уақытында құлақтандырылмауы мүмкін немесе олардың ескертулері өтінімді жүктегенге дейінгідей қауіп жағдайын сақтай отырып, естілмеуі мүмкін. Бір-біріне көмектесетін адамдарды көбірек шақырған маңызды!</value>
+  </data>
+  <data name="Insertiondone" xml:space="preserve">
+    <value>Ендіру орындалды.</value>
+  </data>
+  <data name="AnerroroccurredwhilequalifyingthealarmCode1" xml:space="preserve">
+    <value>Ескертуді 1 кодымен бағалау кезінде қате пайда болды</value>
+  </data>
+  <data name="AnerroroccurredwhilequalifyingthealarmCode2" xml:space="preserve">
+    <value>Ескертуді 2 кодымен бағалау кезінде қате пайда болды</value>
+  </data>
+  <data name="AnerroroccurredwiththealarmqualificationmodelCode3" xml:space="preserve">
+    <value>Қате 3 коды бар рейтингтік дабыл кезінде пайда болды</value>
+  </data>
+  <data name="Userregistrationsuccessful" xml:space="preserve">
+    <value>Сіздің пайдаланушыңыз тіркелді!</value>
+  </data>
+  <data name="Anerroroccurredwhileregisteringtheusercode1" xml:space="preserve">
+    <value>Пайдаланушыны тіркейтін 1-кодпен қате пайда болды</value>
+  </data>
+  <data name="Anerroroccurredwhileregisteringtheusercode2" xml:space="preserve">
+    <value>Пайдаланушыны тіркейтін 2-кодпен қате пайда болды</value>
+  </data>
+  <data name="Anerroroccurredwiththepeoplemodelforuserregistrationcode3" xml:space="preserve">
+    <value>Пайдаланушыны тіркейтін 3 коды бар қате пайда болды</value>
+  </data>
+  <data name="Permisosolicitadoconexito" xml:space="preserve">
+    <value>Сәтті сұралған рұқсат</value>
+  </data>
+  <data name="OcurriounerrorenelprocesodesolicitarpermisoalprotegidoCodigo1" xml:space="preserve">
+    <value>Қорғаушыдан рұқсат сұрату барысында 1 коды бар қате орын алды</value>
+  </data>
+  <data name="Nofueposiblerealizarenviarlasolicituddepermisoalprotegidoporqueelmodelonoesvalido" xml:space="preserve">
+    <value>Қорғаушыға рұқсат беру туралы сұрау салуды жіберу мүмкін болмады, үлгі жарамсыз</value>
+  </data>
+  <data name="AlertaEnUbicacion" xml:space="preserve">
+    <value>Осы жерде SOSpect ескертуін жасағыңыз келе ме?</value>
+  </data>
+  <data name="CrearEnUbicacionActual" xml:space="preserve">
+    <value>Ағымдағы орында SOSspect ескертуін жасағыңыз келе ме?</value>
+  </data>
+  <data name="SeguroCerrarSesion" xml:space="preserve">
+    <value>Міндетті түрде кіріп кетесіз бе?</value>
+  </data>
+  <data name="Tu" xml:space="preserve">
+    <value>Сіз</value>
+  </data>
+  <data name="Anonimo" xml:space="preserve">
+    <value>Анонимді</value>
+  </data>
+  <data name="AlarmaCerrada" xml:space="preserve">
+    <value>Ескерту жабылды</value>
+  </data>
+  <data name="LblSaldoPoderesInsuficiente" xml:space="preserve">
+    <value>Қуат балансы жеткіліксіз</value>
+  </data>
+  <data name="LblComprarPoderes" xml:space="preserve">
+    <value>Сенiм бiлдiрiлген өкiлеттiктердi сатып</value>
+  </data>
+  <data name="LblSeguroRenovar" xml:space="preserve">
+    <value>Осы жазылымды жаңартатыныңызға сенімдісіз бе?</value>
+  </data>
+  <data name="OptReportes" xml:space="preserve">
+    <value>Есептер</value>
+  </data>
+  <data name="LblReportesTitulo" xml:space="preserve">
+    <value>SOSpect есептері</value>
+  </data>
+  <data name="LblReportesDescripcion" xml:space="preserve">
+    <value>Есептер басқа пайдаланушыларға жағымсыз жағдайларды болдырмау арқылы қалай көмектескеніңізді түсінуге мүмкіндік береді. Бұдан басқа, олар қала картасындағы қауіпті аумақтарды анықтауға және уақыт өте келе қылмыстың эволюциясын сақтауға мүмкіндік береді. Сондай-ақ заңдылықты талдау арқылы теріс оқиғалар орын алғанға дейін ерте ескертулер жасауға болады. Негізгі есептің тегін екенін атап өткен жөн, ал басқа есептерде олардың ұрпағы үшін қажетті есептеу тұтынуына байланысты өзіндік құн болуы мүмкін.</value>
+  </data>
+  <data name="OptReporteDeCalorEnZona" xml:space="preserve">
+    <value>Жылу карталарымен есеп беру</value>
+  </data>
+  <data name="OptReporteEvolucionEnElTiempo" xml:space="preserve">
+    <value>Уақыт бойынша құлақтандыру эволюциясы туралы есеп</value>
+  </data>
+  <data name="OptReportesPredictivos" xml:space="preserve">
+    <value>Болжамды есеп беру</value>
+  </data>
+  <data name="OptReporteAnaliticoDeDescripcionesAlarmas" xml:space="preserve">
+    <value>Ескерту сөйлесулерінің талдамалық есептері</value>
+  </data>
+  <data name="LblReporteCalorSospect" xml:space="preserve">
+    <value>SOSpect жылу карталары</value>
+  </data>
+  <data name="LblReporteEnConstruccion" xml:space="preserve">
+    <value>Көп ұзамай!! Бұл функционал салынып жатыр!</value>
+  </data>
+  <data name="LblDescripcionMapaDeCalor" xml:space="preserve">
+    <value>Бұл есепте өз аймағыңыздың жылу картасына қатынаса аласыз, онда SOSpect өз жұмысын бастағаннан бері әр түрлі айларды таңдауға болады. Бұл функционал сізді қызықтыратын картаның әрбір саласының эволюциясын бақылауға және түсінуге мүмкіндік береді.</value>
+  </data>
+  <data name="LblCostoReporte" xml:space="preserve">
+    <value>Бұл функционалды пайдалану есептеу құнын көтеретінін және ол жоғары мәнге ие болмаса да өкілеттіктерді талап ететінін есте сақтаңыз. Дегенмен, өтінімді бірінші рет пайдаланғанда біз сізге беретін өкілеттіктерді пайдалана отырып, оны қандай да бір қиындықсыз сатып алуға болады.</value>
+  </data>
+  <data name="LblReporteEvolucionAlarmas" xml:space="preserve">
+    <value>SOSpect бағдарламасында орналастырылған дабыл эволюциясы</value>
+  </data>
+  <data name="LblDescripcionEvolucionAlarmas" xml:space="preserve">
+    <value>Бұл есепте сіз өз аймағыңызда уақыт өте келе дабылдың әрбір түрінің үрдістерін біле аласыз. Сіздер қауіптілік үрдістерін бақылап, талдай аласыздар, сондай-ақ қылмыстың ықтимал азаюын анықтай аласыздар.</value>
+  </data>
+  <data name="LblReportePredictivo" xml:space="preserve">
+    <value>SOSpect болжамды есептері</value>
+  </data>
+  <data name="LblDescripcionReportesPredictivos" xml:space="preserve">
+    <value>SOSpect қоғамдастығы жеткілікті деректерді қалыптастырып отырғандықтан, ықтималдыққа негізделген оқиғалар болжамдары мен аналитикалық құралдар жасалуы мүмкін. Бұл баяндамалар ескерту толқындарының қашан жақындап келе жатқанын немесе қылмыстық әрекеттің күшеюін білуге мүмкіндік береді, бұл сізге, отбасыңызға және сіздің қауымдастықыңызға қандай да бір қауіп төндірмеу үшін қажетті сақтық шараларын қолдануға мүмкіндік береді.</value>
+  </data>
+  <data name="LblReporteAnalisisDeTextos" xml:space="preserve">
+    <value>SOSpect ескерту чат талдау есебі</value>
+  </data>
+  <data name="LblDescripcionAnalisisTextos" xml:space="preserve">
+    <value>Пайдаланушылар дабылдарды сипаттап, өз эволюциясын SOSpect ішкі чаты арқылы жаңартатындықтан, бұл есеп қауымдастыққа ең көп әсер ететін типологияларды визуализациялауға мүмкіндік береді. Бұл өз аймағыңыздағы қауіпсіздікті қабылдауды жақсарту бойынша шаралар қабылдауға мүмкіндік береді.</value>
+  </data>
+  <data name="LblRangoReporte" xml:space="preserve">
+    <value>Бұл есеп соңғы 30 күнді қамтиды</value>
+  </data>
+  <data name="AcercadeSOSpect" xml:space="preserve">
+    <value>SOSPECT туралы</value>
+  </data>
+  <data name="Porcentajedealarmasciertasfrenteafalsasenunradiodeunkilometroymedio" xml:space="preserve">
+    <value>Бір жарым километр радиусында шынайы жалған сигнализацияның пайызы</value>
+  </data>
+  <data name="Promediodetiempoenminutosentrelanzamientodealarmaenmizonaylaprimeracalificacionodescripcion" xml:space="preserve">
+    <value>Менің аймағымдағы дабылды іске қосу мен бірінші рейтинг немесе сипаттама арасындағы минуттағы орташа уақыт</value>
+  </data>
+  <data name="Cantidadrealdepersonasenunradiodeunkilometroymedio" xml:space="preserve">
+    <value>Километр және жарым радиус шегіндегі адамдардың нақты саны</value>
+  </data>
+  <data name="Cantidadrealdepersonasenmiradioactual" xml:space="preserve">
+    <value>Менің қазіргі радиусымдағы адамдардың нақты саны</value>
+  </data>
+  <data name="Miradioactualderecepcionyenviodealarmasenmetros" xml:space="preserve">
+    <value>Сигнализацияны қабылдау және жіберудің ағымдағы радиусы метрмен</value>
+  </data>
+  <data name="Cantidadrealdepersonasquerecibieronmisalarmas" xml:space="preserve">
+    <value>Менің дабылымды алған адамдардың нақты саны</value>
+  </data>
+  <data name="Cantidaddenotificacionesdealarmaenviadasdemiparte" xml:space="preserve">
+    <value>Менен жіберілген сигнал беру хабарламаларының саны</value>
+  </data>
+  <data name="Personasquereportaronmiayudacomonegativaofalsa" xml:space="preserve">
+    <value>Менің көмегімді теріс немесе жалған деп хабарлаған адамдар</value>
+  </data>
+  <data name="Personasqueagradecieronmiayuda" xml:space="preserve">
+    <value>Менің көмегімді жоғары бағалаған адамдар</value>
+  </data>
+  <data name="Poderesganadosporregalos" xml:space="preserve">
+    <value>Сыйлықтар есебінен алынған өкілеттіктер</value>
+  </data>
+  <data name="LblParticipacionTpAlarma" xml:space="preserve">
+    <value>Ескерту түрі бойынша қатысу</value>
+  </data>
+  <data name="LblMetricBasics" xml:space="preserve">
+    <value>Негізгі көрсеткіштер</value>
+  </data>
+  <data name="LblEfectiAlarmas" xml:space="preserve">
+    <value>Ескертулердің тиімділігі</value>
+  </data>
+  <data name="LblTotalAlarmas" xml:space="preserve">
+    <value>Жалпы ескертулер</value>
+  </data>
+  <data name="LblAlarmasVerdaderas" xml:space="preserve">
+    <value>Шын ескертулер</value>
+  </data>
+  <data name="LblAlarmasFalsas" xml:space="preserve">
+    <value>Жалған ескертулер</value>
+  </data>
+  <data name="LblAlarmasEfectivas" xml:space="preserve">
+    <value>Тиімді дабылдардың үлесі</value>
+  </data>
+  <data name="LblMarcarLeidos" xml:space="preserve">
+    <value>Барлығын оқылған деп белгілеу</value>
+  </data>
+  <data name="LblSeMarcaronComoLeidos" xml:space="preserve">
+    <value>Барлық хабарлар оқылған деп белгіленді</value>
+  </data>
+  <data name="LabelNuevaVersion" xml:space="preserve">
+    <value>SOSpect-тің жаңа нұсқасы пайда болды және оны жалғастыру қажет</value>
+  </data>
+  <data name="OptReporteBasico" xml:space="preserve">
+    <value>Негiзгi есептер - ТЕГIН!</value>
+  </data>
+  <data name="LblReporteBasicoSospect" xml:space="preserve">
+    <value>SOSpect негізгі есептері</value>
+  </data>
+  <data name="LblReporteBasicoDescripcion" xml:space="preserve">
+    <value>SOSpect негізгі есептері сізге ескерту есептеріңіздің қауымдастыққа тигізген әсері туралы құнды ақпарат береді. Бұдан басқа, олар сізге осы рейтингтерде дабылдар мен адалдықты дәл бағалау арқылы қауымдастыққа көмек көрсету арқылы алынған өкілеттіктер санын көрсетеді. Осы есептер арқылы, сондай-ақ, өткен айдағы өз аймағыңыздың жалпы мінез-құлқын, соның ішінде процеске қатысқан пайдаланушылардың санын және дұрыс емес өзара іс-қимыл салдарынан теріс белгілер алған пайдаланушылардың санын бағалауға болады.</value>
+  </data>
+  <data name="LblReporteBasicoDescripcionCorta" xml:space="preserve">
+    <value>SOSpect-тің негізгі есептері сізге құнды ақпарат береді... Қосымша қараңыз...</value>
+  </data>
+  <data name="LblDescripcionRepTipoAlarma" xml:space="preserve">
+    <value>Бұл есеп сізге қазіргі орналасқан жеріңізден бір жарым шақырым радиусында жиі дабыл қағу туралы ақпарат береді.</value>
+  </data>
+  <data name="LblDescripcionRepEfectAlarmas" xml:space="preserve">
+    <value>Осы есеп сізге ағымдағы орналасқан жеріңізден бір жарым километр радиусында нақты және жалған дабылдардың тиімділік байланысы туралы ақпарат береді.</value>
+  </data>
+  <data name="LblDescripcionRepMetricasBasicas" xml:space="preserve">
+    <value>Бұл есеп сізге ағымдағы орынның бір жарым радиусында пайдаланушылар саны, сондай-ақ бағдарлама дабылдарының ағымдағы радиусындағы пайдаланушылар саны туралы деректерді ұсынады. Бұдан басқа, ол сіздің қызығушылығыңызды білдіретін бірнеше қосымша ақпаратты қамтиды.</value>
+  </data>
+  <data name="OptVolumenAlarmas" xml:space="preserve">
+    <value>Жақын маңдағы сигнализация түрлері бойынша көлемі</value>
+  </data>
+  <data name="OptEfectividadAlarmas" xml:space="preserve">
+    <value>Жақын маңдағы сигнализацияның тиімділігі</value>
+  </data>
+  <data name="OptMetricasBasicas" xml:space="preserve">
+    <value>Жақын маңдағы сигнализацияның негізгі көрсеткіштері</value>
+  </data>
+  <data name="LblCredibilidadActual" xml:space="preserve">
+    <value>Менің дабылдарымның сенімділігі:</value>
+  </data>
+  <data name="OptManualUsuarioSospect" xml:space="preserve">
+    <value>SOSpect пайдаланушы нұсқауы</value>
+  </data>
+  <data name="LblDescManualUsuario" xml:space="preserve">
+    <value>SOSspect бағдарламасымен кездесіңіз, сізді және жақындарыңызды қорғауға арналған тегін бағдарлама. Біз қысқа және егжей-тегжейлі онлайн-нұсқаулық жасадық, ол сізге оны дұрыс пайдалануға көмектеседі. Осы нұсқаулықтың көмегімен SOSspect-тен барынша көп нәрсені алып, оның барлық қауіпсіздік мүмкіндіктерін пайдалануға болады.</value>
+  </data>
+  <data name="SesionApple" xml:space="preserve">
+    <value>APPLE АРҚЫЛЫ КІРУ</value>
+  </data>
+  <data name="LblCredibilidadAlarmaActual" xml:space="preserve">
+    <value>Ескертудің дұрыстығы:</value>
+  </data>
+  <data name="LblAccedeAlManual" xml:space="preserve">
+    <value>Нұсқаулыққа мына мекенжай бойынша қатынасуға болады:</value>
+  </data>
+  <data name="LblRefrescarLista" xml:space="preserve">
+    <value>Ескерту тізімін жаңарту</value>
+  </data>
+  <data name="LblErrorCorreoDispositivo" xml:space="preserve">
+    <value>Бұл құрылғыда электрондық пошта жіберілмеді</value>
+  </data>
+  <data name="LblErrorCorreo" xml:space="preserve">
+    <value>Электрондық поштаны жіберу қатесі:</value>
+  </data>
+  <data name="LblSeleccioneTipoAlarma" xml:space="preserve">
+    <value>Ескерту түрін таңдаңыз</value>
+  </data>
+  <data name="LblCompraFallida" xml:space="preserve">
+    <value>Сатып алу жүргізілмеді. Интернетке кіруді және қайта жазуды тексеруіңізді сұраймыз</value>
+  </data>
+  <data name="LblSeleccionePuntoMapa" xml:space="preserve">
+    <value>Картадағы бақылау аймағын таңдау керек</value>
+  </data>
+  <data name="Cantidaddealarmascolocadasenlaszonasdevigilanciasuscritas" xml:space="preserve">
+    <value>Абонементтелген бақылау учаскелерінде орналастырылған дабылдардың саны</value>
+  </data>
+  <data name="Cantidaddealarmascolocadaspormisprotegidos" xml:space="preserve">
+    <value>Менің протектораттарым орналастырған дабылдар саны</value>
+  </data>
+  <data name="Credibilidadactualdelasalarmasqueenvioamicomunidad" xml:space="preserve">
+    <value>Өз қоғамдастығыма жіберетін дабылдардың ағымдағы сенімділігі</value>
+  </data>
+  <data name="LblCompraExitosa" xml:space="preserve">
+    <value>Құттықтаймын! Жазылымдарды сатып алу бойынша өкілеттіктерді сатып алдыңыз. Қоңыраудан түсіндірме хабар табасыз!</value>
+  </data>
+  <data name="LblDebesHabilitarNotif" xml:space="preserve">
+    <value>SOSpect үшін хабарландыруларды жұмыс істеуге жіберуді қосу керек</value>
+  </data>
+  <data name="LblHabilitarNotifSettings" xml:space="preserve">
+    <value>Бұл бағдарлама хабарландыруларды қолдай алады, бірақ оны параметрлеріңізде қосу қажет.</value>
+  </data>
+  <data name="LblErrorHabilitandoUsoNotif" xml:space="preserve">
+    <value>Push хабарландыруларын пайдалануға кедергі келтірген қате пайда болды</value>
+  </data>
+  <data name="LblMostrarDireccionEscape" xml:space="preserve">
+    <value>Марк Фугитивтің қашу бағыты</value>
+  </data>
+  <data name="LblProximamenteSOSpect" xml:space="preserve">
+    <value>Жақын арада SOSpect-те келе жатыр!</value>
+  </data>
+  <data name="LblReportesProximos" xml:space="preserve">
+    <value>Деректер ғылымымен талдамалық және болжамдық есептер!</value>
+  </data>
+  <data name="LblHolaBienvenido" xml:space="preserve">
+    <value>Сәлеметсіз бе! SOSspect бағдарламасына қош келдіңіз. 
+
+SOSpect – жақын маңдағы тәуекелдер туралы уақытылы ескертулер беру арқылы сізді және жақындарыңызды қорғауға арналған тегін құрал! Алғашқыда көптеген дабылдарды алмауыңыз мүмкін, себебі жақын маңда SOSpect орнатқан адамдар әлі көп емес. Бізге сынап көруіңізді және қолданбаңызды жоймауыңызды сұраймыз. SOSpect қандай да бір сәтте өз өміріңізді, сондай-ақ отбасыңыздағы немесе қауымдастықтағы біреудің өмірін сақтап қалуы мүмкін.
+
+Параметрлерден табылған «Есептер» мәзірінің «Негізгі есеп» бөлімінде «Негізгі көрсеткіштер» бөлімінде жабын аймағының шегінде жақын пайдаланушылардың санын көруге болады, онда ескертулер беріледі. Бізге бұл санды көбейтуге көмектесіңіздер, ол тегін және қауіпсіз өмір сүруге мүмкіндік береді!
+
+Сізді SOSpect қалай жұмыс істейтіні туралы ой беретін қысқа кіріспе нұсқаулықпен мұқият танысуға шақырамыз. Бағдарлама орнатылғаннан кейін бір рет қана көрсетілетінін ескеріңіз.
+
+SOSpect-ті пайдаланғаныңыз үшін және әркімнің қауіпсіздігіне үлес қосқаныңыз үшін рахмет!
+
+Жалғастыру үшін экранды түртіңіз...</value>
+  </data>
+</root>

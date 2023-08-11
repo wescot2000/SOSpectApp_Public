@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="sospect.Views.ProtectedUsersPage"
+             xmlns:fonts="clr-namespace:sospect.Resources.Fonts;assembly=sospect"
+             xmlns:helpers="clr-namespace:sospect.Helpers"
+             BackgroundColor="White"
+             Title="{helpers:TranslateExtension Text='LblProtegidos'}">
+    <ContentPage.Content>
+        <Grid>
+            <Grid Margin="0,20,0,0">
+                <ListView x:Name="ProtectedUsersListView"
+                          BackgroundColor="White"
+                      HasUnevenRows="True"
+                      ItemsSource="{Binding ProtectedUsers}"
+                      SelectionMode="None">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Frame Padding="5" Margin="5" CornerRadius="10" BackgroundColor="White" HasShadow="True">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="Auto" />
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto" />
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+                                        <Label Grid.Row="0" Grid.Column="0" TextColor="Gray" FontSize="Small" Text="{helpers:TranslateExtension Text='LblUsuarioProtegido'}" FontAttributes="Bold" />
+                                        <Label Grid.Row="0" Grid.Column="1" TextColor="Gray" FontSize="Small" Text="{Binding User_Id_ThirdParty_Protegido}" />
+                                        <Label Grid.Row="1" Grid.Column="0" TextColor="Gray" FontSize="Small" Text="{helpers:TranslateExtension Text='LabelUsuario'}" FontAttributes="Bold" />
+                                        <Label Grid.Row="1" Grid.Column="1" TextColor="Gray" FontSize="Small" Text="{Binding Login_Protegido}" />
+                                        <Label Grid.Row="2" Grid.Column="0" TextColor="Gray" FontSize="Small" Text="{helpers:TranslateExtension Text='LblFechaActivacion'}" FontAttributes="Bold" />
+                                        <Label Grid.Row="2" Grid.Column="1" TextColor="Gray" FontSize="Small" Text="{Binding Fecha_Activacion, StringFormat='{0:yyyy-MM-dd}'}" />
+                                        <Label Grid.Row="3" Grid.Column="0" TextColor="Gray" FontSize="Small" Text="{helpers:TranslateExtension Text='LblFechaFinalizacion'}" FontAttributes="Bold" />
+                                        <Label Grid.Row="3" Grid.Column="1" TextColor="Gray" FontSize="Small" Text="{Binding Fecha_Finalizacion, StringFormat='{0:yyyy-MM-dd}'}" />
+
+                                        <Frame Grid.Row="4" Grid.ColumnSpan="2" Padding="5" BorderColor="Black" BackgroundColor="LightGray" Margin="0,15,0,0" HorizontalOptions="Center" HeightRequest="35" WidthRequest="350" CornerRadius="10" >
+                                            <Frame.GestureRecognizers>
+                                                <TapGestureRecognizer Command="{Binding Source={x:Reference ProtectedUsersListView}, Path=BindingContext.DeleteProtectedUserCommand}" CommandParameter="{Binding .}" NumberOfTapsRequired="1" />
+                                            </Frame.GestureRecognizers>
+                                            <Label Text="{helpers:TranslateExtension Text='LblEliminarProtegido'}" 
+                                                   TextColor="Black"
+                                                   LineBreakMode="WordWrap"
+                                                   HorizontalOptions="CenterAndExpand"
+                                                   VerticalOptions="CenterAndExpand"
+                                                   HorizontalTextAlignment="Center"
+                                                   VerticalTextAlignment="Center" />
+                                            </Frame>
+
+                                    </Grid>
+                                </Frame>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <Label
+                x:Name="EmptyListLabel"
+                Text="{helpers:TranslateExtension Text='LblNoHayRegistros'}"
+                FontSize="18"
+                TextColor="Gray"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                IsVisible="{Binding IsListEmpty}" />
+            </Grid>
+            <Grid BackgroundColor="Black"
+                  Opacity="0.5"
+                  HorizontalOptions="FillAndExpand"
+                  VerticalOptions="FillAndExpand"
+                  IsVisible="{Binding IsRunning}">
+                <ActivityIndicator VerticalOptions="Center"
+                                   HorizontalOptions="Center"
+                                   HeightRequest="50"
+                                   WidthRequest="50"
+                                   Color="DarkBlue"
+                                   IsRunning="{Binding IsRunning}">
+                </ActivityIndicator>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

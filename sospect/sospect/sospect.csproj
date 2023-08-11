@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>netstandard2.0</TargetFramework>
+		<ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+		<BuildWithMSBuildOnMono>true</BuildWithMSBuildOnMono>
+	</PropertyGroup>
+	<PropertyGroup>
+		<Nullable>enable</Nullable>
+		<LangVersion>8.0</LangVersion>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<DebugType>portable</DebugType>
+		<DebugSymbols>true</DebugSymbols>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="Sharpnado.MaterialFrame" Version="1.3.0" />
+		<PackageReference Include="Xamarin.Forms" Version="5.0.0.2545" />
+		<PackageReference Include="Xamarin.Essentials" Version="1.7.3" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+		<PackageReference Include="MvvmLightLibs" Version="5.4.1.1" />
+		<PackageReference Include="Xamarin.Forms.Maps" Version="5.0.0.2545" />
+		<PackageReference Include="Rg.Plugins.Popup" Version="2.1.0" />
+		<PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.27.0" />
+		<PackageReference Include="Plugin.InAppBilling" Version="6.7.0" />
+		<PackageReference Include="Microcharts" Version="0.9.5.9" />
+		<PackageReference Include="Microcharts.Forms" Version="0.9.5.9" />
+		<PackageReference Include="Microsoft.AppCenter.Crashes" Version="5.0.2" />
+		<PackageReference Include="Microsoft.AppCenter.Analytics" Version="5.0.2" />
+	</ItemGroup>
+	<ItemGroup>
+		<None Remove="Views\" />
+		<None Remove="Xamarin.Auth" />
+		<None Remove="AppConstants\" />
+		<None Remove="AuthHelpers\" />
+		<None Remove="Newtonsoft.Json" />
+		<None Remove="Plugin.FacebookClient" />
+		<None Remove="Models\" />
+		<None Remove="Services\" />
+		<None Remove="ViewModels\" />
+		<None Remove="MvvmLightLibs" />
+		<None Remove="Xamarin.Forms.Maps" />
+		<None Remove="Rg.Plugins.Popup" />
+		<None Remove="Popups\" />
+		<None Remove="ThriveGmbH.BottomNavigationBar.XF" />
+		<None Remove="Interfaces\" />
+		<None Remove="Resources\" />
+		<None Remove="Resources\Fonts\" />
+		<None Remove="CustomRenderers\" />
+		<None Remove="AWSSDK.CognitoIdentity" />
+		<None Remove="Utils\" />
+		<None Remove="AWSSDK.SimpleNotificationService" />
+		<None Remove="Shiny" />
+		<None Remove="Extensions\" />
+		<None Remove="System.IdentityModel.Tokens.Jwt" />
+		<None Remove="TemplateSelectors\" />
+		<None Remove="Converters\" />
+	</ItemGroup>
+	<ItemGroup>
+		<Folder Include="Resources\es.lproj\" />
+		<Folder Include="AppConstants\" />
+		<Folder Include="AuthHelpers\" />
+		<Folder Include="Services\" />
+		<Folder Include="Interfaces\" />
+		<Folder Include="Resources\Fonts\" />
+		<Folder Include="CustomRenderers\" />
+		<Folder Include="Utils\" />
+		<Folder Include="Extensions\" />
+		<Folder Include="TemplateSelectors\" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Compile Update="Popups\SuperPowersPopupPage.xaml.cs">
+	    <SubType>Code</SubType>
+	    <DependentUpon>SuperPowersPopupPage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Popups\ProtegidosPopupPage.xaml.cs">
+	    <DependentUpon>ProtegidosPopupPage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Resources\AppResources.Designer.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>AppResources.resx</DependentUpon>
+	  </Compile>
+	  <Compile Update="Views\TextAnalyticsPage.xaml.cs">
+	    <DependentUpon>TextAnalyticsPage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Views\PredictiveReportPage.xaml.cs">
+	    <DependentUpon>PredictiveReportPage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Views\TimeEvolutionReportPage.xaml.cs">
+	    <DependentUpon>TimeEvolutionReportPage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Views\HeatReportPage.xaml.cs">
+	    <SubType>Code</SubType>
+	    <DependentUpon>HeatReportPage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Views\InternetRequiredForApp.xaml.cs">
+	    <DependentUpon>InternetRequiredForApp.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Views\SuspendedAccountPage.xaml.cs">
+	    <DependentUpon>SuspendedAccountPage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Views\TutorialPopupPage.xaml.cs">
+	    <DependentUpon>TutorialPopupPage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Views\ConfirmationPage.xaml.cs">
+	    <DependentUpon>ConfirmationPage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Views\SubscriptionsPage.xaml.cs">
+	    <DependentUpon>SubscriptionsPage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Views\TermsAndConditionsPage.xaml.cs">
+	    <DependentUpon>TermsAndConditionsPage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Views\SubscriptionValuesPage.xaml.cs">
+	    <DependentUpon>SubscriptionValuesPage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Views\AboutPage.xaml.cs">
+	    <DependentUpon>AboutPage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Views\MyProtectorsPage.xaml.cs">
+	    <DependentUpon>MyProtectorsPage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Views\ProtectedUsersPage.xaml.cs">
+	    <DependentUpon>ProtectedUsersPage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Views\CompleteSubscriptionPage.xaml.cs">
+	    <DependentUpon>CompleteSubscriptionPage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Views\MensajeDetallePage.xaml.cs">
+	    <DependentUpon>MensajeDetallePage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Views\MensajesPage.xaml.cs">
+	    <DependentUpon>MensajesPage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Views\AlarmRadiusPage.xaml.cs">
+	    <SubType>Code</SubType>
+	    <DependentUpon>AlarmRadiusPage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Views\ProtectedSubscriptionPage.xaml.cs">
+	    <DependentUpon>ProtectedSubscriptionPage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Views\AprobarSolicitudesPage.xaml.cs">
+	    <SubType>Code</SubType>
+	    <DependentUpon>AprobarSolicitudesPage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Views\ZoneSubscriptionPage.xaml.cs">
+	    <DependentUpon>ZoneSubscriptionPage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Views\PurchaseSuperPowersPage.xaml.cs">
+	    <DependentUpon>PurchaseSuperPowersPage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Views\MenuPage.xaml.cs">
+	    <SubType>Code</SubType>
+	    <DependentUpon>MenuPage.xaml</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+	<ItemGroup>
+	  <EmbeddedResource Update="Popups\SuperPowersPopupPage.xaml">
+	    <SubType>Designer</SubType>
+	    <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+	  </EmbeddedResource>
+	  <EmbeddedResource Update="Resources\AppResources.resx">
+	    <Generator>PublicResXFileCodeGenerator</Generator>
+	    <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
+	  </EmbeddedResource>
+	  <EmbeddedResource Update="Views\HeatReportPage.xaml">
+	    <SubType>Designer</SubType>
+	    <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+	  </EmbeddedResource>
+	  <EmbeddedResource Update="Views\MenuPage.xaml">
+	    <SubType>Designer</SubType>
+	    <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+	  </EmbeddedResource>
+	  <EmbeddedResource Update="Views\AlarmRadiusPage.xaml">
+	    <SubType>Designer</SubType>
+	    <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+	  </EmbeddedResource>
+	  <EmbeddedResource Update="Views\AprobarSolicitudesPage.xaml">
+	    <SubType>Designer</SubType>
+	    <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+	  </EmbeddedResource>
+	</ItemGroup>
+</Project>

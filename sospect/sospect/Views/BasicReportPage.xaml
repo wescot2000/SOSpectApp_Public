@@ -1,0 +1,119 @@
+﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="sospect.Views.BasicReportPage"
+             xmlns:converters="clr-namespace:sospect.Converters"
+             xmlns:fonts="clr-namespace:sospect.Resources.Fonts;assembly=sospect"
+             xmlns:helpers="clr-namespace:sospect.Helpers"
+             xmlns:ads="clr-namespace:sospect.CustomRenderers"
+             xmlns:charts="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
+             BackgroundColor="White"
+             Title="{helpers:TranslateExtension Text='LblReporteBasicoSospect'}">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:InverseBooleanConverter x:Key="InverseBooleanConverter"/>
+            <converters:SKColorToXamarinColorConverter x:Key="ColorConverter"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+    <ScrollView>
+        <StackLayout Margin="20">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <Label
+                    Grid.Row="0"
+                    Text="{helpers:TranslateExtension Text='LblReporteBasicoDescripcion'}"
+                    IsVisible="{Binding Expandir}"
+                    Margin="0,20,0,20"
+                    FontSize="Medium"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="StartAndExpand" 
+                    HorizontalTextAlignment="Start"
+                    TextColor="Black">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Command="{Binding ExpandirCommand}" />
+                    </Label.GestureRecognizers>
+                </Label>
+
+                <Label
+                    Grid.Row="0" 
+                    Text="{helpers:TranslateExtension Text='LblReporteBasicoDescripcionCorta'}"
+                    IsVisible="{Binding Expandir, Converter={StaticResource InverseBooleanConverter}}"
+                    Margin="0,20,0,20"
+                    FontSize="Medium"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="StartAndExpand" 
+                    HorizontalTextAlignment="Start"
+                    TextColor="Black">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Command="{Binding ExpandirCommand}" />
+                    </Label.GestureRecognizers>
+                </Label>
+
+                <Label
+                    Grid.Row="1"
+                    Text="{helpers:TranslateExtension Text='LblRangoReporte'}"
+                    FontSize="Small"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="StartAndExpand" 
+                    HorizontalTextAlignment="Start"
+                    TextColor="Gray"/>
+
+                <Frame Grid.Row="2" Padding="5" BorderColor="Black" BackgroundColor="LightGray" Margin="0,15,0,0" HorizontalOptions="Center" HeightRequest="35" WidthRequest="380" CornerRadius="10">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding TipoAlarmasCommand}" NumberOfTapsRequired="1" />
+                    </Frame.GestureRecognizers>
+                        <Label Text="{helpers:TranslateExtension Text='OptVolumenAlarmas'}"
+                           TextColor="Black"
+                           LineBreakMode="WordWrap"
+                           HorizontalOptions="CenterAndExpand"
+                           VerticalOptions="CenterAndExpand"
+                           HorizontalTextAlignment="Center"
+                           VerticalTextAlignment="Center" />
+                </Frame>
+
+                <Frame Grid.Row="3" Padding="5" BorderColor="Black" BackgroundColor="LightGray" Margin="0,15,0,0" HorizontalOptions="Center" HeightRequest="35" WidthRequest="380" CornerRadius="10">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding EfectividadAlarmasCommand}" NumberOfTapsRequired="1" />
+                    </Frame.GestureRecognizers>
+                        <Label Text="{helpers:TranslateExtension Text='OptEfectividadAlarmas'}"
+                           TextColor="Black"
+                           LineBreakMode="WordWrap"
+                           HorizontalOptions="CenterAndExpand"
+                           VerticalOptions="CenterAndExpand"
+                           HorizontalTextAlignment="Center"
+                           VerticalTextAlignment="Center" />
+                </Frame>
+
+                <Frame Grid.Row="4" Padding="5" BorderColor="Black" BackgroundColor="LightGray" Margin="0,15,0,0" HorizontalOptions="Center" HeightRequest="35" WidthRequest="380" CornerRadius="10">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding MetricasBasicasCommand}" NumberOfTapsRequired="1" />
+                    </Frame.GestureRecognizers>
+                        <Label Text="{helpers:TranslateExtension Text='OptMetricasBasicas'}"
+                           TextColor="Black"
+                           LineBreakMode="WordWrap"
+                           HorizontalOptions="CenterAndExpand"
+                           VerticalOptions="CenterAndExpand"
+                           HorizontalTextAlignment="Center"
+                           VerticalTextAlignment="Center" />
+                </Frame>
+
+            </Grid>
+        </StackLayout>
+    </ScrollView>
+    <Grid BackgroundColor="LightGray" Grid.Row="1" HeightRequest="90">
+            <ads:AdBanner></ads:AdBanner>
+        </Grid>
+    </Grid>
+</ContentPage>

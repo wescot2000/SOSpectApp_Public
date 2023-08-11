@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<popup:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:popup="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+             x:Class="sospect.Views.TutorialPopupPage"
+             BackgroundColor="Transparent"
+             HasSystemPadding="False">
+    <popup:PopupPage.Content>
+        <Frame BackgroundColor="#A0000000"
+               Padding="10"
+               HasShadow="True"
+               HorizontalOptions="{Binding FrameHorizontalOptions}"
+               VerticalOptions="{Binding FrameVerticalOptions}"
+               WidthRequest="{Binding FrameWidthRequest}"
+               HeightRequest="{Binding FrameHeightRequest}"
+               Margin="{Binding FrameMargin}">
+            <Grid x:Name="ClickableGrid">
+                <ScrollView>
+                <Label Text="{Binding TutorialText}"
+                       TextColor="White"
+                       FontSize="Small"
+                       HorizontalOptions="Start"
+                       VerticalOptions="Start" 
+                       HorizontalTextAlignment="{Binding LabelAlignment}"
+                       Margin="0,0,0,0" />
+                    </ScrollView>
+            </Grid>
+        </Frame>
+    </popup:PopupPage.Content>
+</popup:PopupPage>

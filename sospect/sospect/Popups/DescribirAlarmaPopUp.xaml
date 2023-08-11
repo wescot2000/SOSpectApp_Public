@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<rg:PopupPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:rg="http://rotorgames.com"
+    xmlns:maps="clr-namespace:sospect.CustomRenderers"
+    xmlns:helpers="clr-namespace:sospect.Helpers"
+    CloseWhenBackgroundIsClicked="False"
+    BackgroundColor="Transparent"
+    HasSystemPadding="False"
+    x:Class="sospect.Popups.DescribirAlarmaPopUp">
+    <rg:PopupPage.Animation>
+        <rg:ScaleAnimation
+            DurationIn="400"
+            DurationOut="300"
+            EasingIn="SinOut"
+            EasingOut="SinIn"
+            HasBackgroundAnimation="True"
+            PositionIn="Center"
+            PositionOut="Center"
+            ScaleIn="1.2"
+            ScaleOut="0.8" />
+    </rg:PopupPage.Animation>
+    <Grid>
+        <BoxView Color="#66000000" AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All" />
+        <Frame CornerRadius="10"
+               VerticalOptions="Center"
+               HorizontalOptions="Center"
+               BackgroundColor="White"
+               WidthRequest="350"
+               Margin="10">
+            <ScrollView>
+                <StackLayout >
+                    <StackLayout IsVisible="{Binding flag_propietario_alarma}">
+                        <Label TextColor="Gray" FontSize="Small" Text="{helpers:TranslateExtension Text='LabelTipoAlarma'}"></Label>
+
+                        <Frame BorderColor="Gray" Padding="0" CornerRadius="5" HasShadow="False">
+                            <Grid>
+                                <Picker BackgroundColor="White" TextColor="Black" 
+                                    ItemsSource="{Binding TiposAlarma}" 
+                                    ItemDisplayBinding="{Binding DescripcionTraducida}" 
+                                    SelectedItem="{Binding TipoAlarmaSeleccionado}" 
+                                    IsEnabled="{Binding PickerEnabled}"/>
+                                <Image Source="dropdown_icon.png" HorizontalOptions="End" HeightRequest="15" WidthRequest="15" Margin="0,0,10,0" VerticalOptions="Center"/>
+                            </Grid>
+                        </Frame>
+
+
+                    </StackLayout>
+
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <!-- Row for Label -->
+                            <RowDefinition Height="Auto" />
+                            <!-- Row for Button -->
+                            <!-- Additional rows for other elements -->
+                        </Grid.RowDefinitions>
+
+                        <Label  Grid.Row="0" IsVisible="{Binding MostrarBotonPuntoHuida}"
+                               TextColor="Red" FontSize="Small"
+                               Text="{helpers:TranslateExtension Text='DireccionEscape'}"
+                               HorizontalTextAlignment="Center"></Label>
+                        <Button  Grid.Row="1" HorizontalOptions="FillAndExpand" IsVisible="{Binding MostrarBotonPuntoHuida}" FontAttributes="Bold" BackgroundColor="LightGray" CornerRadius="5" TextColor="Red" FontSize="Medium" Text="{helpers:TranslateExtension Text='LblMostrarDireccionEscape'}" Clicked="Abrir_MapaClicked"></Button>
+                    </Grid>
+                    <Label TextColor="Gray" FontSize="Small" Text="{helpers:TranslateExtension Text='DescripcionAlerta'}"></Label>
+
+                    <Frame BorderColor="Gray" Padding="0" CornerRadius="5" HasShadow="False">
+                        <Editor BackgroundColor="White" TextColor="Black" Text="{Binding DescripcionAlarma.DescripcionAlarma}" HeightRequest="100"/>
+                    </Frame>
+
+
+
+                    <Label TextColor="Gray" FontSize="Small" Text="{helpers:TranslateExtension Text='DescripcionImplicado'}"></Label>
+                    <Frame BorderColor="Gray" Padding="0" CornerRadius="5" HasShadow="False">
+                        <Editor BackgroundColor="White" TextColor="Black" Text="{Binding DescripcionAlarma.DescripcionSospechoso}" HeightRequest="100"/>
+                    </Frame>
+
+
+                    <Label TextColor="Gray" FontSize="Small" Text="{helpers:TranslateExtension Text='DescripcionVehiculoImp'}"></Label>
+                    <Frame BorderColor="Gray" Padding="0" CornerRadius="5" HasShadow="False">
+                        <Entry BackgroundColor="White" TextColor="Black" Text="{Binding DescripcionAlarma.DescripcionVehiculo}"/>
+                    </Frame>
+
+
+                    <Label TextColor="Gray" FontSize="Small" Text="{helpers:TranslateExtension Text='ArmaImplicada'}"></Label>
+                    <Frame BorderColor="Gray" Padding="0" CornerRadius="5" HasShadow="False">
+                        <Entry BackgroundColor="White" TextColor="Black" Text="{Binding DescripcionAlarma.DescripcionArmas}"/>
+                    </Frame>
+
+
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Padding="10">
+
+                        <Frame Grid.Row="2" Grid.ColumnSpan="2" Padding="5" BorderColor="Black" BackgroundColor="LightGray" HorizontalOptions="Center" HeightRequest="35" WidthRequest="150" CornerRadius="10" IsVisible="{Binding FlagUsuarioDebeFirmar}" >
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding CancelarCommand}" NumberOfTapsRequired="1" />
+                            </Frame.GestureRecognizers>
+                            <Label Text="{helpers:TranslateExtension Text='LabelCancelar'}" 
+                                TextColor="Black"
+                                LineBreakMode="WordWrap"
+                                HorizontalOptions="CenterAndExpand"
+                                VerticalOptions="CenterAndExpand"
+                                HorizontalTextAlignment="Center"
+                                VerticalTextAlignment="Center" />
+                        </Frame>
+
+                        <Frame Grid.Row="2" Grid.ColumnSpan="2" Padding="5" BorderColor="Black" BackgroundColor="LightGray" HorizontalOptions="Center" HeightRequest="35" WidthRequest="150" CornerRadius="10" IsVisible="{Binding FlagUsuarioDebeFirmar}" >
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding HechoCommand}" NumberOfTapsRequired="1" />
+                            </Frame.GestureRecognizers>
+                            <Label Text="{helpers:TranslateExtension Text='LabelHecho'}" 
+                                TextColor="Black"
+                                LineBreakMode="WordWrap"
+                                HorizontalOptions="CenterAndExpand"
+                                VerticalOptions="CenterAndExpand"
+                                HorizontalTextAlignment="Center"
+                                VerticalTextAlignment="Center" />
+                        </Frame>
+
+                    </StackLayout>
+                </StackLayout>
+            </ScrollView>
+        </Frame>
+    </Grid>
+</rg:PopupPage>
+

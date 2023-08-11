@@ -1,0 +1,1090 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Bienvenido" xml:space="preserve">
+    <value>Καλώς ήρθατε στο SOSpect</value>
+  </data>
+  <data name="InicieSesion" xml:space="preserve">
+    <value>Συνδεθείτε για να συνεχίσετε</value>
+  </data>
+  <data name="InicieSesionCon" xml:space="preserve">
+    <value>ή συνδεθείτε με</value>
+  </data>
+  <data name="SesionFacebook" xml:space="preserve">
+    <value>ΣΎΝΔΕΣΗ ΜΈΣΩ FACEBOOK</value>
+  </data>
+  <data name="SesionGoogle" xml:space="preserve">
+    <value>ΣΥΝΔΕΘΕΊΤΕ ΜΈΣΩ GOOGLE</value>
+  </data>
+  <data name="LabelAlerta" xml:space="preserve">
+    <value>Ξύπνιος</value>
+  </data>
+  <data name="LabelCrimen" xml:space="preserve">
+    <value>Έγκλημα</value>
+  </data>
+  <data name="LabelOK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="LabelCancelar" xml:space="preserve">
+    <value>Ακυρώνω</value>
+  </data>
+  <data name="ReportarCrimen" xml:space="preserve">
+    <value>Αναφορά εγκλήματος</value>
+  </data>
+  <data name="LabelMapa" xml:space="preserve">
+    <value>Χάρτης</value>
+  </data>
+  <data name="LabelDescribir" xml:space="preserve">
+    <value>Περιγράφω</value>
+  </data>
+  <data name="DescripcionAlarma" xml:space="preserve">
+    <value>Περιγραφή του συναγερμού</value>
+  </data>
+  <data name="DescripcionSospechoso" xml:space="preserve">
+    <value>Περιγραφή του υπόπτου</value>
+  </data>
+  <data name="DescripcionVehiculo" xml:space="preserve">
+    <value>Περιγραφή οχήματος</value>
+  </data>
+  <data name="DescripcionArma" xml:space="preserve">
+    <value>Περιγραφή του όπλου</value>
+  </data>
+  <data name="PuntuacionDescripcion" xml:space="preserve">
+    <value>Περιγραφή βαθμολογίας</value>
+  </data>
+  <data name="LabelEditar" xml:space="preserve">
+    <value>Επεξεργασία</value>
+  </data>
+  <data name="DescripcionesParaAlarma" xml:space="preserve">
+    <value>Περιγραφές που έγιναν για αυτόν τον συναγερμό</value>
+  </data>
+  <data name="EspacioPublicidad" xml:space="preserve">
+    <value>Χώρος για διαφήμιση</value>
+  </data>
+  <data name="AlarmasRecientes" xml:space="preserve">
+    <value>Πρόσφατοι συναγερμοί για προσθήκη περιγραφής</value>
+  </data>
+  <data name="ConfirmarAlarma" xml:space="preserve">
+    <value>Επιβεβαίωση συναγερμού</value>
+  </data>
+  <data name="LabelInformacion" xml:space="preserve">
+    <value>Πληροφορία</value>
+  </data>
+  <data name="LabelError" xml:space="preserve">
+    <value>Λάθος</value>
+  </data>
+  <data name="LabelCancelado" xml:space="preserve">
+    <value>Ακυρωθεί</value>
+  </data>
+  <data name="LabelLoginCancelado" xml:space="preserve">
+    <value>Η σύνδεση ακυρώθηκε</value>
+  </data>
+  <data name="LabelFallo" xml:space="preserve">
+    <value>Αποτυχία</value>
+  </data>
+  <data name="RecibeAlarma" xml:space="preserve">
+    <value>Λάβατε έναν συναγερμό κοντά στο σημείο που βρίσκεστε, είναι πραγματικό;</value>
+  </data>
+  <data name="LabelConfirmo" xml:space="preserve">
+    <value>Επιβεβαιώνω</value>
+  </data>
+  <data name="LabelNoSeguro" xml:space="preserve">
+    <value>Δεν είμαι σίγουρος</value>
+  </data>
+  <data name="LabelEsFalsa" xml:space="preserve">
+    <value>Είναι ψευδές</value>
+  </data>
+  <data name="LabelConfirmar" xml:space="preserve">
+    <value>Επιβεβαιώνω</value>
+  </data>
+  <data name="AdvertenciaCalificacion" xml:space="preserve">
+    <value>Αυτή η αξιολόγηση δεν μπορεί να αλλάξει αργότερα. Θα μπορούσε να επηρεάσει τη μελλοντική αξιοπιστία σας εάν η συναίνεση των αξιολογήσεων είναι εναντίον της ψήφου σας. Είσαι σίγουρος?</value>
+  </data>
+  <data name="LabelSi" xml:space="preserve">
+    <value>Ναι</value>
+  </data>
+  <data name="LabelNo" xml:space="preserve">
+    <value>Όχι</value>
+  </data>
+  <data name="AlarmaEnviada" xml:space="preserve">
+    <value>Ο συναγερμός έστειλε!</value>
+  </data>
+  <data name="MsgTrasAlarmaEnviada" xml:space="preserve">
+    <value>Εάν είστε ασφαλείς, περιγράψτε τον συναγερμό, εάν όχι, κρύψτε το τηλέφωνό σας και βγείτε από τον κίνδυνο.</value>
+  </data>
+  <data name="notificacionurgente" xml:space="preserve">
+    <value>Μια επείγουσα ειδοποίηση θα σταλεί στα πλησιέστερα τηλέφωνα στη διεύθυνση:</value>
+  </data>
+  <data name="LabelAlarma" xml:space="preserve">
+    <value>Συναγερμός</value>
+  </data>
+  <data name="LabelMetros" xml:space="preserve">
+    <value>μέτρο</value>
+  </data>
+  <data name="LabelTuUbicacion" xml:space="preserve">
+    <value>Η τοποθεσία σας</value>
+  </data>
+  <data name="LabelUsuario" xml:space="preserve">
+    <value>Χρήστης</value>
+  </data>
+  <data name="LabelTipoAlarma" xml:space="preserve">
+    <value>Τύπος συναγερμού</value>
+  </data>
+  <data name="DireccionEscape" xml:space="preserve">
+    <value>Παρακαλείσθε να αναφέρετε τη διεύθυνση διαφυγής του υπόπτου.</value>
+  </data>
+  <data name="DescripcionAlerta" xml:space="preserve">
+    <value>Περιγραφή της καταχώρισης</value>
+  </data>
+  <data name="DescripcionImplicado" xml:space="preserve">
+    <value>Περιγραφή του προσώπου που αφορά η καταχώριση</value>
+  </data>
+  <data name="DescripcionVehiculoImp" xml:space="preserve">
+    <value>Εμπλεκόμενο όχημα (Κατά περίπτωση)</value>
+  </data>
+  <data name="ArmaImplicada" xml:space="preserve">
+    <value>Εμπλεκόμενο όπλο (Εάν υπάρχει)</value>
+  </data>
+  <data name="LabelRutaEscape" xml:space="preserve">
+    <value>Ύποπτη οδός διαφυγής</value>
+  </data>
+  <data name="ObjetivoSospect" xml:space="preserve">
+    <value>Το SOSpect στοχεύει να επιτρέψει στην κοινότητα να ειδοποιεί και να λαμβάνει ειδοποιήσεις για κινδύνους στην τοποθεσία ενός χρήστη, προκειμένου να αποφευχθούν κίνδυνοι για αυτούς και τους αγαπημένους τους. Η τοποθεσία των χρηστών δεν κοινοποιείται ούτε παρακολουθείται, διασφαλίζοντας το απόρρητό τους. Οι χρήστες μπορούν να τοποθετήσουν ειδοποιήσεις κινδύνου για να βοηθήσουν τους άλλους να αποφύγουν να πέσουν θύματα επικίνδυνων καταστάσεων.</value>
+  </data>
+  <data name="UbicacionImportante" xml:space="preserve">
+    <value>Είναι σημαντικό να γνωρίζετε την τοποθεσία του χρήστη, ώστε να μπορείτε να τον ειδοποιήσετε εάν κάποιος τοποθετήσει μια ειδοποίηση κινδύνου κοντά στην τοποθεσία του. Ωστόσο, η τοποθεσία του χρήστη είναι ιδιωτική και κοινοποιούνται μόνο τα σημεία στο χάρτη όπου τοποθετούνται ειδοποιήσεις.</value>
+  </data>
+  <data name="GenteUnida" xml:space="preserve">
+    <value>Με το SOSpect, η κοινότητα μπορεί να ενωθεί για να μειώσει την εγκληματικότητα και να αποφύγει να πέσει θύμα επικίνδυνων καταστάσεων, προειδοποιώντας και άλλους να παραμείνουν ασφαλείς.</value>
+  </data>
+  <data name="contactenos" xml:space="preserve">
+    <value>Επικοινωνήστε μαζί μας</value>
+  </data>
+  <data name="visitenos" xml:space="preserve">
+    <value>Επισκεφθείτε μας στο</value>
+  </data>
+  <data name="ZonaVigilancia" xml:space="preserve">
+    <value>Συνδρομή στη ζώνη επιτήρησης</value>
+  </data>
+  <data name="SeleccioneUbicacionVigilar" xml:space="preserve">
+    <value>Επιλέξτε την τοποθεσία που θέλετε να παρακολουθήσετε</value>
+  </data>
+  <data name="SeleccionEnMapa" xml:space="preserve">
+    <value>Επιλογή στο χάρτη</value>
+  </data>
+  <data name="ExplicaZonaVigilancia" xml:space="preserve">
+    <value>Όλοι οι συναγερμοί που τοποθετούνται στο σημείο που πρόκειται να επιλέξετε θα ειδοποιηθούν ανεξάρτητα από το ποιος τους τοποθετεί. Με αυτόν τον τρόπο, μπορείτε να γνωρίζετε τους κινδύνους που τρέχουν σε εκείνο το σημείο. Αυτό είναι ιδανικό για να γνωρίζετε τους κινδύνους σε μέρη όπως τα σχολεία ή τα πανεπιστήμια των παιδιών σας ή περιοχές όπου εργάζονται οι συγγενείς ή οι αγαπημένοι σας.</value>
+  </data>
+  <data name="CrearZonaV" xml:space="preserve">
+    <value>Δημιουργία ζώνης επιτήρησης με αυτήν την τοποθεσία</value>
+  </data>
+  <data name="LabelLatitud" xml:space="preserve">
+    <value>Γεωγραφικό πλάτος</value>
+  </data>
+  <data name="LabelLongitud" xml:space="preserve">
+    <value>Γεωγραφικό μήκος</value>
+  </data>
+  <data name="LabelIntroduccion" xml:space="preserve">
+    <value>Εισαγωγή</value>
+  </data>
+  <data name="AmpliacionRadio" xml:space="preserve">
+    <value>Επέκταση της ακτίνας συναγερμού</value>
+  </data>
+  <data name="TuRadioActual" xml:space="preserve">
+    <value>Η τρέχουσα ακτίνα σας είναι:</value>
+  </data>
+  <data name="CrearNuevoRadio" xml:space="preserve">
+    <value>Δημιουργία της συνδρομής μου για αυτό το νέο ραδιόφωνο</value>
+  </data>
+  <data name="ExplicacionVigencias" xml:space="preserve">
+    <value>Όλες οι συνδρομές έχουν ισχύ, ελέγξτε τις τιμές των συνδρομών στην πρώτη επιλογή του κύριου μενού</value>
+  </data>
+  <data name="VasARequerir" xml:space="preserve">
+    <value>Θα χρειαστείτε</value>
+  </data>
+  <data name="xPoderesParaSubs" xml:space="preserve">
+    <value>Εξουσίες για να προσθέσετε αυτό το ραδιόφωνο στο τρέχον ραδιόφωνο</value>
+  </data>
+  <data name="Exito" xml:space="preserve">
+    <value>Επιτυχία</value>
+  </data>
+  <data name="SubscripcionCreada" xml:space="preserve">
+    <value>Η συνδρομή δημιουργήθηκε με επιτυχία.</value>
+  </data>
+  <data name="MensajeError" xml:space="preserve">
+    <value>Παρουσιάστηκε σφάλμα κατά τη σύνδεση με το διακομιστή. Παρακαλώ προσπαθήστε ξανά.</value>
+  </data>
+  <data name="SeleccionaRuta" xml:space="preserve">
+    <value>Πρέπει να επιλέξετε τη διαδρομή διαφυγής του υπόπτου.</value>
+  </data>
+  <data name="AprobarSolicitudes" xml:space="preserve">
+    <value>Έγκριση αιτημάτων</value>
+  </data>
+  <data name="LabelAprobar" xml:space="preserve">
+    <value>Εγκρίνω</value>
+  </data>
+  <data name="LabelRechazar" xml:space="preserve">
+    <value>Απορρίπτω</value>
+  </data>
+  <data name="CompletarSubscripcion" xml:space="preserve">
+    <value>Πλήρης προστατευμένη συνδρομή</value>
+  </data>
+  <data name="CompletarSubsc" xml:space="preserve">
+    <value>Πλήρης συνδρομή</value>
+  </data>
+  <data name="LblMensajes" xml:space="preserve">
+    <value>Μηνύματα</value>
+  </data>
+  <data name="LblFechaMensaje" xml:space="preserve">
+    <value>Ημερομηνία μηνύματος</value>
+  </data>
+  <data name="LblMenu" xml:space="preserve">
+    <value>ΔΙΑΜΌΡΦΩΣΗ</value>
+  </data>
+  <data name="OptCompraPoderes" xml:space="preserve">
+    <value>Αγοράστε δυνάμεις για να ξεκλειδώσετε λειτουργίες</value>
+  </data>
+  <data name="OptGestionarProtegidos" xml:space="preserve">
+    <value>Διαχείριση των προστατευμένων προστατευτικών μου</value>
+  </data>
+  <data name="OptCrearZonas" xml:space="preserve">
+    <value>Δημιουργία ζωνών επιτήρησης</value>
+  </data>
+  <data name="OptAumentarRadio" xml:space="preserve">
+    <value>Αύξηση της ακτίνας λήψης ειδοποιήσεων</value>
+  </data>
+  <data name="OptAcercaDe" xml:space="preserve">
+    <value>Σχετικά με την εφαρμογή SOSpect</value>
+  </data>
+  <data name="OptCerrarSesion" xml:space="preserve">
+    <value>Αποσυνδεθείτε</value>
+  </data>
+  <data name="LblProtectores" xml:space="preserve">
+    <value>Οι προστάτες μου</value>
+  </data>
+  <data name="LblSuspender" xml:space="preserve">
+    <value>Προσωρινή αναστολή</value>
+  </data>
+  <data name="LblEliminarProtegido" xml:space="preserve">
+    <value>Κατάργηση προστατευμένου</value>
+  </data>
+  <data name="LblSubscrProtegido" xml:space="preserve">
+    <value>Προστατευμένη συνδρομή</value>
+  </data>
+  <data name="LblIDUsuarioAProteger" xml:space="preserve">
+    <value>Εισαγάγετε το αναγνωριστικό χρήστη για προστασία. (Αυτή η τιμή βρίσκεται στην κορυφή του μενού ρυθμίσεων SOSpect του χρήστη που θέλετε να συνδέσετε)</value>
+  </data>
+  <data name="LblRelacionProtegido" xml:space="preserve">
+    <value>Η σχέση μου με αυτόν τον προστατευόμενο είναι:</value>
+  </data>
+  <data name="LblSolicitarPermiso" xml:space="preserve">
+    <value>Ζητήστε άδεια από το χρήστη</value>
+  </data>
+  <data name="LblCompleteCampos" xml:space="preserve">
+    <value>Παρακαλούμε συμπληρώστε όλα τα πεδία.</value>
+  </data>
+  <data name="LblProcesarSolicitud" xml:space="preserve">
+    <value>Παρουσιάστηκε σφάλμα κατά την επεξεργασία της αίτησης. Παρακαλώ προσπαθήστε ξανά.</value>
+  </data>
+  <data name="LblProtegidos" xml:space="preserve">
+    <value>Οι προστατευόμενοί μου</value>
+  </data>
+  <data name="LblUsuarioProtegido" xml:space="preserve">
+    <value>Προστατευμένο αναγνωριστικό χρήστη</value>
+  </data>
+  <data name="LblFechaActivacion" xml:space="preserve">
+    <value>Ημερομηνία ενεργοποίησης</value>
+  </data>
+  <data name="LblFechaFinalizacion" xml:space="preserve">
+    <value>Ημερομηνία λήξης</value>
+  </data>
+  <data name="LblAccion" xml:space="preserve">
+    <value>Ενέργεια</value>
+  </data>
+  <data name="LblCantidadPoderes" xml:space="preserve">
+    <value>Αριθμός εξουσιών</value>
+  </data>
+  <data name="LblPrecio" xml:space="preserve">
+    <value>Τιμή</value>
+  </data>
+  <data name="LblComprar" xml:space="preserve">
+    <value>Αγοράζω</value>
+  </data>
+  <data name="LblValoresSubsc" xml:space="preserve">
+    <value>Τιμές συνδρομής</value>
+  </data>
+  <data name="LblTerminos" xml:space="preserve">
+    <value>Όροι Παροχής Υπηρεσιών για το SOSpect APP</value>
+  </data>
+  <data name="LblAcepto" xml:space="preserve">
+    <value>Αποδέχομαι τη σύμβαση</value>
+  </data>
+  <data name="LblNoAcepto" xml:space="preserve">
+    <value>Δεν δέχομαι</value>
+  </data>
+  <data name="LblOpcionesProtegidos" xml:space="preserve">
+    <value>Προστατεύεται και προστατεύεται από την εφαρμογή SOSpect</value>
+  </data>
+  <data name="LblExplicacionProtegidos" xml:space="preserve">
+    <value>Μπορείτε να λαμβάνετε ειδοποιήσεις από μέλη του κοινωνικού σας κύκλου ακόμα κι αν βρίσκονται μακριά σας. Εδώ μπορείτε να διαχειριστείτε αυτήν τη δυνατότητα</value>
+  </data>
+  <data name="OptIniciarTramite" xml:space="preserve">
+    <value>Ξεκινήστε τη διαδικασία προσθήκης προστατευμένου</value>
+  </data>
+  <data name="OptAprobarSolicitud" xml:space="preserve">
+    <value>Έγκριση αιτήματος από προστάτη</value>
+  </data>
+  <data name="OptListarProtegidos" xml:space="preserve">
+    <value>Δείτε τη λίστα των προστατευόμενών μου</value>
+  </data>
+  <data name="OptListarProtectores" xml:space="preserve">
+    <value>Δείτε τη λίστα των προστατών μου</value>
+  </data>
+  <data name="OptVolver" xml:space="preserve">
+    <value>Επιστροφή</value>
+  </data>
+  <data name="LblPoderesSospect" xml:space="preserve">
+    <value>Εξουσίες της εφαρμογής SOSpect</value>
+  </data>
+  <data name="LblOpcionesPoderes" xml:space="preserve">
+    <value>Καλώς ήλθατε στην επιλογή διαχείρισης ενέργειας, τι θέλετε να κάνετε;</value>
+  </data>
+  <data name="LblSubscripcionesCosto" xml:space="preserve">
+    <value>Θέλω να μάθω ποιες συνδρομές μπορώ να αγοράσω και το κόστος τους</value>
+  </data>
+  <data name="LblQuieroComprar" xml:space="preserve">
+    <value>Θέλω να αγοράσω υπερδυνάμεις για να αποκτήσω συνδρομές</value>
+  </data>
+  <data name="ExplicacionRadio" xml:space="preserve">
+    <value>Η προεπιλεγμένη ακτίνα για όλους τους χρήστες της εφαρμογής είναι 100 μέτρα γύρω. Μπορείτε να επεκτείνετε αυτήν την ακτίνα χρησιμοποιώντας τις δυνάμεις της εφαρμογής. Στη συνέχεια, επιλέξτε την ακτίνα που θέλετε για τον εαυτό σας:</value>
+  </data>
+  <data name="LblAsunto" xml:space="preserve">
+    <value>Σύντομη περιγραφή</value>
+  </data>
+  <data name="LblCompraPoderes" xml:space="preserve">
+    <value>Αγορά εξουσιών</value>
+  </data>
+  <data name="OptCompletarTramite" xml:space="preserve">
+    <value>Ολοκλήρωση διαδικασίας προσθήκης προστατευμένου</value>
+  </data>
+  <data name="LabelHecho" xml:space="preserve">
+    <value>Ολοκληρωθεί</value>
+  </data>
+  <data name="LabelEscapoEnEstaDireccion" xml:space="preserve">
+    <value>Διέφυγε προς αυτή την κατεύθυνση</value>
+  </data>
+  <data name="OptMisSubs" xml:space="preserve">
+    <value>Οι συνδρομές μου</value>
+  </data>
+  <data name="LblMisSubscripciones" xml:space="preserve">
+    <value>Οι συνδρομές μου</value>
+  </data>
+  <data name="LblidUsuario" xml:space="preserve">
+    <value>Αναγνωριστικό χρήστη:</value>
+  </data>
+  <data name="LblTipo" xml:space="preserve">
+    <value>Τύπος συνδρομής:</value>
+  </data>
+  <data name="LblDescripcionPuntos" xml:space="preserve">
+    <value>Περιγραφή: __________:</value>
+  </data>
+  <data name="LblFechaFinPuntos" xml:space="preserve">
+    <value>Ημερομηνία λήξης:</value>
+  </data>
+  <data name="LblPoderesPuntos" xml:space="preserve">
+    <value>Εξουσίες ανανέωσης:</value>
+  </data>
+  <data name="LblRenovar" xml:space="preserve">
+    <value>Ανανεώνω</value>
+  </data>
+  <data name="LblCancelarSubscripcion" xml:space="preserve">
+    <value>Ακύρωση συνδρομής</value>
+  </data>
+  <data name="LblSeguroDeCancelar" xml:space="preserve">
+    <value>Είστε βέβαιοι ότι θέλετε να ακυρώσετε τη συνδρομή; Δεν θα γίνει επιστροφή των εξουσιών που καταναλώθηκαν.</value>
+  </data>
+  <data name="LblAceptar" xml:space="preserve">
+    <value>Αποδέχομαι</value>
+  </data>
+  <data name="Alarm_1" xml:space="preserve">
+    <value>Προειδοποίηση ή κίνδυνος</value>
+  </data>
+  <data name="Alarm_2" xml:space="preserve">
+    <value>Έγκλημα ή έγκλημα που διαπράχθηκε</value>
+  </data>
+  <data name="Alarm_3" xml:space="preserve">
+    <value>Καυγάς στο δρόμο</value>
+  </data>
+  <data name="Alarm_4" xml:space="preserve">
+    <value>Χαμένο κατοικίδιο ζώο</value>
+  </data>
+  <data name="Alarm_5" xml:space="preserve">
+    <value>Χαμένος άνθρωπος</value>
+  </data>
+  <data name="Alarm_6" xml:space="preserve">
+    <value>Ταραχές ή διαμαρτυρίες</value>
+  </data>
+  <data name="Alarm_7" xml:space="preserve">
+    <value>Ζητήστε οπτική συνοδεία από την έξοδο στο δρόμο</value>
+  </data>
+  <data name="Alarm_8" xml:space="preserve">
+    <value>Ενδοοικογενειακή βία</value>
+  </data>
+  <data name="Alarm_9" xml:space="preserve">
+    <value>Ύποπτος φυγής στην περιοχή τοποθεσίας σας</value>
+  </data>
+  <data name="LblCostoPoderes" xml:space="preserve">
+    <value>Κόστος πακέτου</value>
+  </data>
+  <data name="LblSuscripcionesDisponibles" xml:space="preserve">
+    <value>Διαθέσιμες συνδρομές αυτήν τη στιγμή</value>
+  </data>
+  <data name="LblFamilia" xml:space="preserve">
+    <value>Οικογένεια</value>
+  </data>
+  <data name="LblAmigo" xml:space="preserve">
+    <value>Φίλος</value>
+  </data>
+  <data name="LblCompanero" xml:space="preserve">
+    <value>Σύντροφος</value>
+  </data>
+  <data name="LblOtroSinDefinir" xml:space="preserve">
+    <value>Άλλα απροσδιόριστα</value>
+  </data>
+  <data name="LabelExito" xml:space="preserve">
+    <value>Επιτυχία</value>
+  </data>
+  <data name="LblSolicitudAprobada" xml:space="preserve">
+    <value>Η αίτηση εγκρίθηκε επιτυχώς.</value>
+  </data>
+  <data name="MensajeErrorAprobando" xml:space="preserve">
+    <value>Σφάλμα κατά την έγκριση αίτησης</value>
+  </data>
+  <data name="MensajeErrorRechazando" xml:space="preserve">
+    <value>Αποτυχία απόρριψης αιτήματος.</value>
+  </data>
+  <data name="LblSolicitudRechazada" xml:space="preserve">
+    <value>Η αίτηση απορρίφθηκε επιτυχώς.</value>
+  </data>
+  <data name="LblUsuarioSolicitante" xml:space="preserve">
+    <value>Αιτών χρήστης</value>
+  </data>
+  <data name="LblFechaSolicitud" xml:space="preserve">
+    <value>Ημερομηνία εφαρμογής</value>
+  </data>
+  <data name="LblAccionRealizar" xml:space="preserve">
+    <value>Ενέργειες που πρέπει να αναληφθούν</value>
+  </data>
+  <data name="LblSubscripcionCompletada" xml:space="preserve">
+    <value>Η συνδρομή ολοκληρώθηκε</value>
+  </data>
+  <data name="LblSubscripcionFallida" xml:space="preserve">
+    <value>Η συνδρομή απέτυχε</value>
+  </data>
+  <data name="LblUsuarioAprobador" xml:space="preserve">
+    <value>Υπεύθυνος έγκρισης χρήστη</value>
+  </data>
+  <data name="LblFechaAprobacion" xml:space="preserve">
+    <value>Ημερομηνία έγκρισης</value>
+  </data>
+  <data name="LblSubscrEliminada" xml:space="preserve">
+    <value>Διαγραφεί</value>
+  </data>
+  <data name="LblSubsEliminadaExitosamente" xml:space="preserve">
+    <value>Η συνδρομή καταργήθηκε με επιτυχία</value>
+  </data>
+  <data name="LblEliminarProtector" xml:space="preserve">
+    <value>Αφαιρέστε το προστατευτικό</value>
+  </data>
+  <data name="LblRenovacionAplicada" xml:space="preserve">
+    <value>Ανακαίνιση που υλοποιήθηκε με επιτυχία</value>
+  </data>
+  <data name="LblErrorRenovando" xml:space="preserve">
+    <value>Σφάλμα ανανέωσης, επανάληψης ή αναφοράς στην υποστήριξη, η επαφή είναι διαθέσιμη στην επιλογή "μενού"&gt;"Σχετικά"</value>
+  </data>
+  <data name="LblCancelacionAplicada" xml:space="preserve">
+    <value>Η ακύρωση έγινε με επιτυχία</value>
+  </data>
+  <data name="LblErrorCancelando" xml:space="preserve">
+    <value>Σφάλμα ακύρωσης, επανάληψης ή αναφοράς στην υποστήριξη, η επαφή είναι διαθέσιμη στην επιλογή "μενού"&gt;"Σχετικά"</value>
+  </data>
+  <data name="LblZonaCreada" xml:space="preserve">
+    <value>Η εγγραφή της ζητούμενης ζώνης επιτήρησης πραγματοποιήθηκε με επιτυχία</value>
+  </data>
+  <data name="LblErrorZonaVigil" xml:space="preserve">
+    <value>Σφάλμα εγγραφής στη νέα ζητούμενη ζώνη, επανάληψη ή αναφορά στην υποστήριξη, επαφή διαθέσιμη στην επιλογή "μενού"&gt;"Σχετικά"</value>
+  </data>
+  <data name="LblSeleccionaNuevoRadio" xml:space="preserve">
+    <value>Επιλέξτε τη νέα ακτίνα σε μέτρα</value>
+  </data>
+  <data name="LblUsuarioProtector" xml:space="preserve">
+    <value>Προστατευτικός χρήστης</value>
+  </data>
+  <data name="LblSeguroEliminarProtegido" xml:space="preserve">
+    <value>Είστε βέβαιοι ότι θα αφαιρέσετε τον προστατευόμενό σας; Οι εξουσίες που χρησιμοποιούνται σε αυτήν τη συνδρομή δεν θα επιστραφούν.</value>
+  </data>
+  <data name="LblSuspenderProtectores" xml:space="preserve">
+    <value>Είστε βέβαιοι ότι θα αναστείλετε τις ειδοποιήσεις στους προστάτες σας για 6 ώρες; Όλα τα προστατευτικά σας θα τεθούν σε αναστολή συναγερμών και η ώρα λήξης της συνδρομής δεν θα παραταθεί για αυτόν τον λόγο. Ο προστάτης δεν θα ειδοποιηθεί για αυτήν την ενέργεια.</value>
+  </data>
+  <data name="LblSuspensionRealizada" xml:space="preserve">
+    <value>Η αναστολή των συναγερμών σε όλους τους προστάτες σας για 6 ώρες ήταν επιτυχής.</value>
+  </data>
+  <data name="LabelSeguroEliminarProtector" xml:space="preserve">
+    <value>Είστε βέβαιοι ότι θα αφαιρέσετε το προστατευτικό σας; Οι εξουσίες που χρησιμοποιούνται σε αυτήν τη συνδρομή δεν θα επιστραφούν και ο προστάτης θα ειδοποιηθεί για αυτήν την ενέργεια.</value>
+  </data>
+  <data name="LabelProtectorEliminado" xml:space="preserve">
+    <value>Το επιλεγμένο προστατευτικό έχει διαγραφεί. Οι εξουσίες δεν θα επιστραφούν στον προστάτη. Ο προστάτης θα ειδοποιηθεί για αυτήν την ενέργεια</value>
+  </data>
+  <data name="LblConfirmacionRequerida" xml:space="preserve">
+    <value>Σημαντικός! Απαιτείται επιβεβαίωση!</value>
+  </data>
+  <data name="LblNoHayRegistros" xml:space="preserve">
+    <value>Δεν υπάρχουν αρχεία καταγραφής για εμφάνιση αυτήν τη στιγμή</value>
+  </data>
+  <data name="LblMiLogin" xml:space="preserve">
+    <value>Η σύνδεσή μου είναι:</value>
+  </data>
+  <data name="LblSaldoPoderesEs" xml:space="preserve">
+    <value>Η ισορροπία ισχύος μου είναι:</value>
+  </data>
+  <data name="LblUsuarioID" xml:space="preserve">
+    <value>Το αναγνωριστικό χρήστη μου είναι</value>
+  </data>
+  <data name="LblNoHayRegistrosAqui" xml:space="preserve">
+    <value>Κανείς δεν έχει γράψει τίποτα ακόμα!</value>
+  </data>
+  <data name="LblAlertaReportadaPorMi" xml:space="preserve">
+    <value>Ειδοποίηση που αναφέρθηκε από εμένα</value>
+  </data>
+  <data name="LblPara" xml:space="preserve">
+    <value>Παραλήπτης μηνύματος:</value>
+  </data>
+  <data name="LblDe" xml:space="preserve">
+    <value>Αποστολέας του μηνύματος:</value>
+  </data>
+  <data name="ConfiguraciondeSOSpect" xml:space="preserve">
+    <value>Διαμόρφωση SOSpect</value>
+  </data>
+  <data name="LblExitoEnAceptacion" xml:space="preserve">
+    <value>Η αποδοχή του συμβολαίου σας αποθηκεύεται!</value>
+  </data>
+  <data name="LblFalloEnAceptacion" xml:space="preserve">
+    <value>Η εγγραφή απέτυχε. Παρακαλώ προσπαθήστε ξανά!</value>
+  </data>
+  <data name="LblDeclinacionAceptacion" xml:space="preserve">
+    <value>Χωρίς αποδοχή συμβολαίου δεν μπορείς να συνεχίσεις!</value>
+  </data>
+  <data name="LblParaIniciar" xml:space="preserve">
+    <value>ΑΣ ΞΕΚΙΝΗΣΟΥΜΕ ΣΤΟ SOSpect!! Για να ενημερώσετε τις κοντινές ειδοποιήσεις, πατήστε το μπλε κουμπί ανανέωσης</value>
+  </data>
+  <data name="LblAlarmaNoGrave" xml:space="preserve">
+    <value>Χρησιμοποιήστε το κίτρινο κουμπί για να τοποθετήσετε ειδοποιήσεις χαμηλού κινδύνου και να ειδοποιήσετε την κοινότητα ή τους προστάτες σας. Μπορείτε να επιλέξετε τον τύπο ειδοποίησης και να την επισημάνετε ως έγκλημα που διαπράχθηκε. Αυτό το κουμπί εκκινεί την ειδοποίηση στην ακριβή τοποθεσία σας, είναι χρήσιμη όταν χρειάζεστε βοήθεια. Μπορείτε επίσης να επιλέξετε ένα σημείο στον χάρτη για να εντοπίσετε την ειδοποίηση χωρίς να θέσετε σε κίνδυνο την τοποθεσία σας.</value>
+  </data>
+  <data name="LblCrimenCometido" xml:space="preserve">
+    <value>Το κόκκινο κουμπί ενεργοποιεί μια κατηγορία: έγκλημα που διαπράχθηκε συναγερμός. Το SOSpect δεν απαιτεί από εσάς να συμπεριλάβετε μια κατηγορία λόγω της σημασίας του χρόνου σε αυτές τις περιπτώσεις. Ο συναγερμός τοποθετείται αυτόματα στην ακριβή τοποθεσία σας. Μπορείτε επίσης να επιλέξετε ένα σημείο στον χάρτη για να τοποθετήσετε την ειδοποίηση και, στη συνέχεια, να αλλάξετε την κατηγορία σε έγκλημα που διαπράχθηκε.</value>
+  </data>
+  <data name="LblDescripcionAlarmas" xml:space="preserve">
+    <value>Στην επιλογή «Περιγραφή» στην κάτω γραμμή, θα βρείτε μια λίστα συναγερμών που έχουν τοποθετηθεί από εσάς ή άλλους. Εάν δημιουργήσατε εσείς το ξυπνητήρι, μπορείτε να προσθέσετε μια περιγραφή. Εάν ο συναγερμός δημιουργήθηκε από κάποιον άλλο, μπορείτε να αξιολογήσετε την ακρίβειά του και να συμπληρώσετε την περιγραφή του. Πρόσεχε! Εάν παρέχετε ψευδείς πληροφορίες ή εσφαλμένες αξιολογήσεις, ο λογαριασμός σας ενδέχεται να τεθεί σε αναστολή. Ελέγξτε προσεκτικά τους όρους και τις προϋποθέσεις για να αποφύγετε αυτό.</value>
+  </data>
+  <data name="LblDescripcionMensajes" xml:space="preserve">
+    <value>Στο κουδούνι στην επάνω δεξιά γωνία, μπορείτε να διαβάσετε τα μηνύματά σας, τα οποία περιλαμβάνουν ειδοποιήσεις συνδρομής και πρόσφατα ξυπνητήρια. Αυτή η λίστα διαφέρει από την επιλογή περιγραφών, όπου μπορείτε να βρείτε απευθείας πρόσφατους συναγερμούς.</value>
+  </data>
+  <data name="LblDescripcionMenu" xml:space="preserve">
+    <value>Στο γρανάζι στην επάνω αριστερή γωνία θα βρείτε τις επιλογές διαμόρφωσης SOSpect. Μπορείτε να αγοράσετε δυνάμεις για να αγοράσετε συνδρομές και να προστατεύσετε την οικογένειά σας ή να επεκτείνετε την ακτίνα λήψης συναγερμού. ΘΥΜΆΜΑΙ! Στην αρχή, σας δίνουμε 80 δυνάμεις, ώστε να μπορείτε να αγοράσετε δύο συνδρομές από την αρχή.</value>
+  </data>
+  <data name="LblRecomendaciones" xml:space="preserve">
+    <value>ΜΑΖΊ ΕΊΜΑΣΤΕ ΑΝΊΚΗΤΟΙ! Οι βασικές λειτουργίες ειδοποίησης και λήψης ειδοποιήσεων σε ακτίνα 100 μέτρων είναι δωρεάν και όταν ξεκινάτε σας δίνουμε 2 συνδρομές. Προσκαλέστε την κοινότητα και την οικογένειά σας να χρησιμοποιήσουν αυτή τη δωρεάν υπηρεσία για την καταπολέμηση της αυξανόμενης εγκληματικότητας. Μπορείτε να σώσετε ζωές ή να σωθείτε, λαμβάνοντας εγκαίρως μια ειδοποίηση. Οι ειδοποιήσεις για χαμένους ανθρώπους ή κατοικίδια ζώα έχουν εμβέλεια 10 χιλιομέτρων και οι βίαιες διαδηλώσεις έχουν εμβέλεια 1 χιλιομέτρου</value>
+  </data>
+  <data name="LblPromocion" xml:space="preserve">
+    <value>Τέλος, να θυμάστε ότι θα κερδίσετε πληρεξούσιο για κάθε ειλικρινή βαθμολογία που παρέχετε στο SOSpect, όταν κλείσει η ψηφοφορία των συναγερμών μετά από 90 λεπτά από την τοποθέτησή τους. Οι περισσότεροι άνθρωποι είναι ειλικρινείς και μαζί θα προστατεύσουμε ο ένας τον άλλον και τις οικογένειές μας. ΚΑΛΏΣ ΉΡΘΑΤΕ ΣΤΟ SOSPECT!</value>
+  </data>
+  <data name="LblDescripcionMapa" xml:space="preserve">
+    <value>Ανά πάσα στιγμή, μπορείτε να επιλέξετε την επιλογή "MAP" στα αριστερά της κάτω γραμμής, η οποία είναι το σημείο εκκίνησης του SOSpect. Από εκεί, μπορείτε να δείτε κοντινούς συναγερμούς. Η τοποθεσία σας θα εμφανιστεί στο κέντρο του χάρτη και ο κύκλος αντιπροσωπεύει την ακτίνα που θα μπορούσε να σας επηρεάσει. Από προεπιλογή, αυτή η ακτίνα είναι 100 μέτρα, αλλά μπορείτε να την τροποποιήσετε στο μενού ρυθμίσεων.</value>
+  </data>
+  <data name="LblRecomendacionImportante" xml:space="preserve">
+    <value>Είναι σημαντικό να ανοίγετε το SOSpect περιοδικά, πριν φύγετε από το σπίτι ή όταν φτάσετε σε ένα μέρος, για να ενημερώσετε την τοποθεσία σας. Με αυτόν τον τρόπο, μπορούμε να σας ενημερώσουμε εάν υπάρχει κίνδυνος στην περιοχή σας. Λάβετε υπόψη ότι όταν η εφαρμογή είναι κλειστή, δεν μπορούμε να λάβουμε την τοποθεσία σας λόγω περιορισμών που επιβάλλονται από λειτουργικά συστήματα συσκευών. Ελέγξτε τους όρους και τις προϋποθέσεις που σχετίζονται με την τοποθεσία σας.</value>
+  </data>
+  <data name="LblUsuarioBloqueado" xml:space="preserve">
+    <value>Ο χρήστης τέθηκε σε αναστολή λόγω αρνητικών βαθμών</value>
+  </data>
+  <data name="LblMarcasNegativas" xml:space="preserve">
+    <value>Ο αριθμός των αρνητικών βαθμών μου είναι</value>
+  </data>
+  <data name="LblCuentaSuspendida" xml:space="preserve">
+    <value>Ο λογαριασμός τέθηκε προσωρινά σε αναστολή λόγω αρνητικών βαθμών από άλλους χρήστες</value>
+  </data>
+  <data name="LblTitleCuentaSuspendida" xml:space="preserve">
+    <value>Ο λογαριασμός τέθηκε προσωρινά σε αναστολή</value>
+  </data>
+  <data name="LblFechaFinSuspension" xml:space="preserve">
+    <value>Η ημερομηνία λήξης της αναστολής είναι</value>
+  </data>
+  <data name="LblTocaAqui" xml:space="preserve">
+    <value>Πατήστε εδώ για να πάτε</value>
+  </data>
+  <data name="LblNoTienesConexion" xml:space="preserve">
+    <value>Δεν υπάρχει σύνδεση στο διαδίκτυο</value>
+  </data>
+  <data name="LblExplicacionSinConexion" xml:space="preserve">
+    <value>Η δήλωσή σας είναι απαραίτητη για να συνδεθείτε στο SOSpect. Χωρίς το διαδίκτυο δεν μπορούμε να γνωρίζουμε αν είναι ενεργό.</value>
+  </data>
+  <data name="LblSinConexionDescripcion" xml:space="preserve">
+    <value>Απαιτείται ενεργό διαδίκτυο για την ανάκτηση της κατάστασης του λογαριασμού σας SOSpect.</value>
+  </data>
+  <data name="LblSinConexionQueHacer" xml:space="preserve">
+    <value>Ενεργοποιήστε το διαδίκτυο και επανεκκινήστε το SOSpect</value>
+  </data>
+  <data name="SefinalizalasubscripcionporsolicituddelusuarioPROTEGIDOatravésdelaAPIdesdelaAPP" xml:space="preserve">
+    <value>Η συνδρομή τερματίζεται κατόπιν αιτήματος του ΠΡΟΣΤΑΤΕΥΜΕΝΟΥ χρήστη μέσω του API από την εφαρμογή</value>
+  </data>
+  <data name="Nopuederenovarsedebidoaquefuecancelada,requieresubscripciónnueva" xml:space="preserve">
+    <value>Δεν μπορεί να ανανεωθεί επειδή ακυρώθηκε, απαιτεί νέα συνδρομή</value>
+  </data>
+  <data name="Alarmasgeneradaspormicirculosocial" xml:space="preserve">
+    <value>Συναγερμοί που δημιουργούνται από τον κοινωνικό μου κύκλο</value>
+  </data>
+  <data name="Incrementomidiametrodevigilancia" xml:space="preserve">
+    <value>Αυξάνω τη διάμετρο επιτήρησης</value>
+  </data>
+  <data name="Zonadevigilanciaadicional" xml:space="preserve">
+    <value>Πρόσθετη ζώνη επιτήρησης</value>
+  </data>
+  <data name="Renovable" xml:space="preserve">
+    <value>Ανανεώσιμων πηγών</value>
+  </data>
+  <data name="SefinalizalasubscripcionporsolicituddelusuarioPROTECTORatravésdelaAPIdesdelaAPP" xml:space="preserve">
+    <value>Η συνδρομή τερματίζεται κατόπιν αιτήματος του χρήστη PROTECTOR μέσω του API από την εφαρμογή</value>
+  </data>
+  <data name="LblEsRenovable" xml:space="preserve">
+    <value>Είναι ανανεώσιμη;</value>
+  </data>
+  <data name="LblObsSubs" xml:space="preserve">
+    <value>Σχόλιο συνδρομής:</value>
+  </data>
+  <data name="NingunaObservacion" xml:space="preserve">
+    <value>Δεν υπάρχουν Σχόλια</value>
+  </data>
+  <data name="Subscripcionvigente" xml:space="preserve">
+    <value>Τρέχουσα συνδρομή</value>
+  </data>
+  <data name="Actualmenteactivoenotrasuscripcion" xml:space="preserve">
+    <value>Αυτήν τη στιγμή ενεργή σε άλλη συνδρομή</value>
+  </data>
+  <data name="LblRadioActual" xml:space="preserve">
+    <value>Η τρέχουσα ακτίνα μου για να λαμβάνω συναγερμούς είναι:</value>
+  </data>
+  <data name="LblPoderesRequeridosZV" xml:space="preserve">
+    <value>Εξουσίες που απαιτούνται για την επιλεγείσα διεύρυνση</value>
+  </data>
+  <data name="OptTerminosCondiciones" xml:space="preserve">
+    <value>SOSpect Όροι και Προϋποθέσεις</value>
+  </data>
+  <data name="DebesAbrirLaApp" xml:space="preserve">
+    <value>Το SOSpect δεν μπορεί να γνωρίζει τις αλλαγές θέσης του χρήστη όταν είναι κλειστό, αυτό συμβαίνει από τις πολιτικές διατήρησης μπαταριών των λειτουργικών συστημάτων των κινητών τηλεφώνων, οπότε είναι σημαντικό ο χρήστης να ανοίγει συχνά την εφαρμογή για να ελέγχει συναγερμούς στην περιοχή στην οποία έχει μετακινηθεί και να λαμβάνει εγκαίρως κοντινούς συναγερμούς.</value>
+  </data>
+  <data name="InvitaMasPersonas" xml:space="preserve">
+    <value>Για να βελτιωθεί η ασφάλεια του χρήστη, είναι σημαντικό οι γύρω του, η οικογένεια και οι γείτονες, να κατεβάσουν την εφαρμογή που είναι δωρεάν. Εάν δεν υπάρχουν κοντινοί χρήστες, ο χρήστης ενδέχεται να μην ειδοποιηθεί εγκαίρως ή οι ειδοποιήσεις του ενδέχεται να μην ακουστούν, διατηρώντας την κατάσταση κινδύνου όπως ήταν πριν από τη λήψη της εφαρμογής. Είναι σημαντικό να προσκαλέσετε περισσότερους ανθρώπους να βοηθήσουν ο ένας τον άλλον!</value>
+  </data>
+  <data name="Insertiondone" xml:space="preserve">
+    <value>Η εισαγωγή εκτελέστηκε.</value>
+  </data>
+  <data name="AnerroroccurredwhilequalifyingthealarmCode1" xml:space="preserve">
+    <value>Παρουσιάστηκε σφάλμα κατά την αξιολόγηση του συναγερμού με τον κωδικό 1</value>
+  </data>
+  <data name="AnerroroccurredwhilequalifyingthealarmCode2" xml:space="preserve">
+    <value>Παρουσιάστηκε σφάλμα κατά την αξιολόγηση του συναγερμού με κωδικό 2</value>
+  </data>
+  <data name="AnerroroccurredwiththealarmqualificationmodelCode3" xml:space="preserve">
+    <value>Παρουσιάστηκε σφάλμα κατά την αξιολόγηση συναγερμού με κωδικό 3</value>
+  </data>
+  <data name="Userregistrationsuccessful" xml:space="preserve">
+    <value>Ο χρήστης σας έχει εγγραφεί!</value>
+  </data>
+  <data name="Anerroroccurredwhileregisteringtheusercode1" xml:space="preserve">
+    <value>Παρουσιάστηκε σφάλμα με τον κωδικό 1 κατά την καταχώρηση του χρήστη σας</value>
+  </data>
+  <data name="Anerroroccurredwhileregisteringtheusercode2" xml:space="preserve">
+    <value>Παρουσιάστηκε σφάλμα με τον κωδικό 2 κατά την καταχώρηση του χρήστη σας</value>
+  </data>
+  <data name="Anerroroccurredwiththepeoplemodelforuserregistrationcode3" xml:space="preserve">
+    <value>Παρουσιάστηκε σφάλμα με τον κωδικό 3 κατά την καταχώρηση του χρήστη σας</value>
+  </data>
+  <data name="Permisosolicitadoconexito" xml:space="preserve">
+    <value>Ζητήθηκε με επιτυχία άδεια</value>
+  </data>
+  <data name="OcurriounerrorenelprocesodesolicitarpermisoalprotegidoCodigo1" xml:space="preserve">
+    <value>Παρουσιάστηκε σφάλμα με τον κωδικό 1 κατά τη διαδικασία αίτησης άδειας από το προστατευμένο</value>
+  </data>
+  <data name="Nofueposiblerealizarenviarlasolicituddepermisoalprotegidoporqueelmodelonoesvalido" xml:space="preserve">
+    <value>Δεν ήταν δυνατή η αποστολή της αίτησης άδειας στο προστατευμένο, το μοντέλο δεν είναι έγκυρο</value>
+  </data>
+  <data name="AlertaEnUbicacion" xml:space="preserve">
+    <value>Θέλετε να δημιουργήσετε μια ειδοποίηση SOSpect σε αυτήν την τοποθεσία;</value>
+  </data>
+  <data name="CrearEnUbicacionActual" xml:space="preserve">
+    <value>Θέλετε να δημιουργήσετε μια ειδοποίηση SOSpect στην τρέχουσα τοποθεσία σας;</value>
+  </data>
+  <data name="SeguroCerrarSesion" xml:space="preserve">
+    <value>Είστε σίγουροι ότι θα αποσυνδεθείτε;</value>
+  </data>
+  <data name="Tu" xml:space="preserve">
+    <value>Εσύ</value>
+  </data>
+  <data name="Anonimo" xml:space="preserve">
+    <value>Ανώνυμος</value>
+  </data>
+  <data name="AlarmaCerrada" xml:space="preserve">
+    <value>Ο συναγερμός έκλεισε</value>
+  </data>
+  <data name="LblSaldoPoderesInsuficiente" xml:space="preserve">
+    <value>Το υπόλοιπο ισχύος σας είναι ανεπαρκές</value>
+  </data>
+  <data name="LblComprarPoderes" xml:space="preserve">
+    <value>Αγοράστε πληρεξούσια</value>
+  </data>
+  <data name="LblSeguroRenovar" xml:space="preserve">
+    <value>Είστε σίγουροι για την ανανέωση αυτής της συνδρομής;</value>
+  </data>
+  <data name="OptReportes" xml:space="preserve">
+    <value>Εκθέσεις</value>
+  </data>
+  <data name="LblReportesTitulo" xml:space="preserve">
+    <value>Αναφορές SOSpect</value>
+  </data>
+  <data name="LblReportesDescripcion" xml:space="preserve">
+    <value>Οι αναφορές σάς δίνουν την ευκαιρία να κατανοήσετε πώς έχετε βοηθήσει άλλους χρήστες αποφεύγοντας δυσμενείς καταστάσεις. Επιπλέον, σας επιτρέπουν να εντοπίσετε επικίνδυνες περιοχές στο χάρτη της πόλης σας και να παρατηρήσετε την εξέλιξη του εγκλήματος με την πάροδο του χρόνου. Επίσης, μέσω της ανάλυσης προτύπων, είναι δυνατή η δημιουργία έγκαιρων προειδοποιήσεων πριν συμβούν αρνητικά γεγονότα. Είναι σημαντικό να σημειωθεί ότι η βασική αναφορά είναι δωρεάν, ενώ άλλες αναφορές μπορεί να έχουν κόστος λόγω της υπολογιστικής κατανάλωσης που απαιτείται για την παραγωγή τους.</value>
+  </data>
+  <data name="OptReporteDeCalorEnZona" xml:space="preserve">
+    <value>Αναφορά με χάρτες θερμότητας</value>
+  </data>
+  <data name="OptReporteEvolucionEnElTiempo" xml:space="preserve">
+    <value>Αναφορά εξέλιξης ειδοποίησης ανά χρόνο</value>
+  </data>
+  <data name="OptReportesPredictivos" xml:space="preserve">
+    <value>Προγνωστική αναφορά</value>
+  </data>
+  <data name="OptReporteAnaliticoDeDescripcionesAlarmas" xml:space="preserve">
+    <value>Αναλυτικές αναφορές συνομιλιών συναγερμού</value>
+  </data>
+  <data name="LblReporteCalorSospect" xml:space="preserve">
+    <value>SOSpect Heat Χάρτες</value>
+  </data>
+  <data name="LblReporteEnConstruccion" xml:space="preserve">
+    <value>Γρήγορα!! Αυτή η λειτουργία είναι υπό κατασκευή!</value>
+  </data>
+  <data name="LblDescripcionMapaDeCalor" xml:space="preserve">
+    <value>Σε αυτή την αναφορά, θα έχετε πρόσβαση σε έναν χάρτη θερμότητας της περιοχής σας, όπου μπορείτε να επιλέξετε διαφορετικούς μήνες από τότε που ξεκίνησε η λειτουργία του SOSpect. Αυτή η λειτουργία θα σας επιτρέψει να παρατηρήσετε και να κατανοήσετε την εξέλιξη κάθε περιοχής του χάρτη που σας ενδιαφέρει.</value>
+  </data>
+  <data name="LblCostoReporte" xml:space="preserve">
+    <value>Λάβετε υπόψη ότι η χρήση αυτής της λειτουργικότητας έχει υπολογιστικό κόστος και απαιτεί δυνάμεις, αν και δεν θα είναι υψηλή αξία. Ωστόσο, μπορείτε να το αποκτήσετε χωρίς κανένα πρόβλημα χρησιμοποιώντας τις εξουσίες που σας δίνουμε κατά την πρώτη χρήση της εφαρμογής.</value>
+  </data>
+  <data name="LblReporteEvolucionAlarmas" xml:space="preserve">
+    <value>Εξέλιξη των συναγερμών που τοποθετούνται στο SOSpect</value>
+  </data>
+  <data name="LblDescripcionEvolucionAlarmas" xml:space="preserve">
+    <value>Σε αυτήν την αναφορά, θα μπορείτε να γνωρίζετε τις τάσεις κάθε τύπου συναγερμού με την πάροδο του χρόνου στην περιοχή σας. Θα είστε σε θέση να παρατηρήσετε και να αναλύσετε τις τάσεις επικινδυνότητας, καθώς και να εντοπίσετε πιθανές μειώσεις στο έγκλημα.</value>
+  </data>
+  <data name="LblReportePredictivo" xml:space="preserve">
+    <value>Προγνωστικές αναφορές SOSpect</value>
+  </data>
+  <data name="LblDescripcionReportesPredictivos" xml:space="preserve">
+    <value>Καθώς η κοινότητα SOSpect παράγει αρκετά δεδομένα, μπορούν να γίνουν προβλέψεις συμβάντων βάσει πιθανοτήτων και αναλυτικά εργαλεία. Αυτές οι αναφορές θα σας επιτρέψουν να γνωρίζετε πότε πλησιάζουν κύματα συναγερμών ή αύξηση της εγκληματικής δραστηριότητας, δίνοντάς σας την ευκαιρία να λάβετε τις απαραίτητες προφυλάξεις για να αποφύγετε κάθε κίνδυνο για εσάς, την οικογένειά σας και την κοινότητά σας.</value>
+  </data>
+  <data name="LblReporteAnalisisDeTextos" xml:space="preserve">
+    <value>Αναφορά ανάλυσης συνομιλίας συναγερμού SOSpect</value>
+  </data>
+  <data name="LblDescripcionAnalisisTextos" xml:space="preserve">
+    <value>Χάρη στο γεγονός ότι οι χρήστες περιγράφουν τους συναγερμούς και ενημερώνουν την εξέλιξή τους μέσω της εσωτερικής συνομιλίας του SOSpect, αυτή η αναφορά θα επιτρέψει την οπτικοποίηση των τυπολογιών που επηρεάζουν περισσότερο την κοινότητα. Αυτό παρέχει την ευκαιρία να αναλάβετε δράση για να βελτιώσετε την αντίληψη της ασφάλειας στην περιοχή σας.</value>
+  </data>
+  <data name="LblRangoReporte" xml:space="preserve">
+    <value>Αυτή η έκθεση καλύπτει τις τελευταίες 30 ημέρες</value>
+  </data>
+  <data name="AcercadeSOSpect" xml:space="preserve">
+    <value>Σχετικά με το SOSpect</value>
+  </data>
+  <data name="Porcentajedealarmasciertasfrenteafalsasenunradiodeunkilometroymedio" xml:space="preserve">
+    <value>Ποσοστό αληθών έναντι ψευδών συναγερμών σε ακτίνα ενάμισι χιλιομέτρου</value>
+  </data>
+  <data name="Promediodetiempoenminutosentrelanzamientodealarmaenmizonaylaprimeracalificacionodescripcion" xml:space="preserve">
+    <value>Μέσος χρόνος σε λεπτά μεταξύ της έναρξης συναγερμού στην περιοχή μου και της πρώτης αξιολόγησης ή περιγραφής</value>
+  </data>
+  <data name="Cantidadrealdepersonasenunradiodeunkilometroymedio" xml:space="preserve">
+    <value>Πραγματικός αριθμός ατόμων σε ακτίνα ενάμισι χιλιομέτρου</value>
+  </data>
+  <data name="Cantidadrealdepersonasenmiradioactual" xml:space="preserve">
+    <value>Πραγματικός αριθμός ατόμων στην τρέχουσα ακτίνα μου</value>
+  </data>
+  <data name="Miradioactualderecepcionyenviodealarmasenmetros" xml:space="preserve">
+    <value>Η τρέχουσα ακτίνα λήψης και αποστολής συναγερμών σε μετρητές</value>
+  </data>
+  <data name="Cantidadrealdepersonasquerecibieronmisalarmas" xml:space="preserve">
+    <value>Πραγματικός αριθμός ατόμων που έλαβαν τις ειδοποιήσεις μου</value>
+  </data>
+  <data name="Cantidaddenotificacionesdealarmaenviadasdemiparte" xml:space="preserve">
+    <value>Αριθμός ειδοποιήσεων συναγερμού που στάλθηκαν από εμένα</value>
+  </data>
+  <data name="Personasquereportaronmiayudacomonegativaofalsa" xml:space="preserve">
+    <value>Άτομα που ανέφεραν τη βοήθειά μου ως αρνητική ή ψευδή</value>
+  </data>
+  <data name="Personasqueagradecieronmiayuda" xml:space="preserve">
+    <value>Άνθρωποι που εκτίμησαν τη βοήθειά μου</value>
+  </data>
+  <data name="Poderesganadosporregalos" xml:space="preserve">
+    <value>Δυνάμεις που αποκτήθηκαν με δώρα</value>
+  </data>
+  <data name="LblParticipacionTpAlarma" xml:space="preserve">
+    <value>Συμμετοχή ανά τύπο συναγερμού</value>
+  </data>
+  <data name="LblMetricBasics" xml:space="preserve">
+    <value>Βασικές μετρήσεις</value>
+  </data>
+  <data name="LblEfectiAlarmas" xml:space="preserve">
+    <value>Αποτελεσματικότητα των συναγερμών</value>
+  </data>
+  <data name="LblTotalAlarmas" xml:space="preserve">
+    <value>Συνολικοί συναγερμοί</value>
+  </data>
+  <data name="LblAlarmasVerdaderas" xml:space="preserve">
+    <value>Πραγματικοί συναγερμοί</value>
+  </data>
+  <data name="LblAlarmasFalsas" xml:space="preserve">
+    <value>Ψευδείς συναγερμοί</value>
+  </data>
+  <data name="LblAlarmasEfectivas" xml:space="preserve">
+    <value>Ποσοστό αποτελεσματικών συναγερμών</value>
+  </data>
+  <data name="LblMarcarLeidos" xml:space="preserve">
+    <value>Επισήμανση όλων ως αναγνωσμένων</value>
+  </data>
+  <data name="LblSeMarcaronComoLeidos" xml:space="preserve">
+    <value>Όλα τα μηνύματα επισημάνθηκαν ως αναγνωσμένα</value>
+  </data>
+  <data name="LabelNuevaVersion" xml:space="preserve">
+    <value>Υπάρχει μια νέα έκδοση του SOSpect και απαιτείται να συνεχιστεί</value>
+  </data>
+  <data name="OptReporteBasico" xml:space="preserve">
+    <value>Βασικές αναφορές - ΔΩΡΕΑΝ!</value>
+  </data>
+  <data name="LblReporteBasicoSospect" xml:space="preserve">
+    <value>Βασικές αναφορές SOSpect</value>
+  </data>
+  <data name="LblReporteBasicoDescripcion" xml:space="preserve">
+    <value>Οι βασικές αναφορές του SOSpect σας παρέχουν πολύτιμες πληροφορίες σχετικά με τον αντίκτυπο που είχαν οι αναφορές συναγερμού σας στην κοινότητά σας. Επιπλέον, σας δείχνουν τον αριθμό των δυνάμεων που αποκτήθηκαν βοηθώντας την κοινότητά σας, βαθμολογώντας με ακρίβεια τους συναγερμούς και την ειλικρίνεια σε αυτές τις αξιολογήσεις. Μέσω αυτών των αναφορών, μπορείτε επίσης να αξιολογήσετε τη συνολική συμπεριφορά της περιοχής σας τον περασμένο μήνα, συμπεριλαμβανομένου του αριθμού των χρηστών που συμμετείχαν στη διαδικασία και του αριθμού των χρηστών που έλαβαν αρνητική βαθμολογία λόγω λανθασμένων δεσμεύσεων.</value>
+  </data>
+  <data name="LblReporteBasicoDescripcionCorta" xml:space="preserve">
+    <value>Οι βασικές αναφορές του SOSpect σας παρέχουν πολύτιμες πληροφορίες για... Δείτε περισσότερα...</value>
+  </data>
+  <data name="LblDescripcionRepTipoAlarma" xml:space="preserve">
+    <value>Αυτή η αναφορά σάς παρέχει πληροφορίες σχετικά με τους πιο συχνούς συναγερμούς σε ακτίνα ενάμισι χιλιομέτρου από την τρέχουσα τοποθεσία σας.</value>
+  </data>
+  <data name="LblDescripcionRepEfectAlarmas" xml:space="preserve">
+    <value>Αυτή η αναφορά σας παρέχει πληροφορίες σχετικά με τη σχέση αποτελεσματικότητας μεταξύ πραγματικών και ψευδών συναγερμών σε ακτίνα ενάμισι χιλιομέτρου από την τρέχουσα τοποθεσία σας.</value>
+  </data>
+  <data name="LblDescripcionRepMetricasBasicas" xml:space="preserve">
+    <value>Αυτή η αναφορά σάς παρέχει δεδομένα σχετικά με τον αριθμό των χρηστών σε ακτίνα ενάμισι χιλιομέτρου από την τρέχουσα τοποθεσία σας, καθώς και τον αριθμό των χρηστών στην τρέχουσα ακτίνα ειδοποιήσεων εφαρμογών. Επιπλέον, περιλαμβάνει αρκετές πρόσθετες πληροφορίες που σας ενδιαφέρουν.</value>
+  </data>
+  <data name="OptVolumenAlarmas" xml:space="preserve">
+    <value>Ένταση ανά τύπο κοντινών συναγερμών</value>
+  </data>
+  <data name="OptEfectividadAlarmas" xml:space="preserve">
+    <value>Αποτελεσματικότητα των κοντινών συναγερμών</value>
+  </data>
+  <data name="OptMetricasBasicas" xml:space="preserve">
+    <value>Βασικές μετρήσεις κοντινών συναγερμών</value>
+  </data>
+  <data name="LblCredibilidadActual" xml:space="preserve">
+    <value>Η αξιοπιστία των συναγερμών μου είναι:</value>
+  </data>
+  <data name="OptManualUsuarioSospect" xml:space="preserve">
+    <value>Εγχειρίδιο χρήστη SOSpect</value>
+  </data>
+  <data name="LblDescManualUsuario" xml:space="preserve">
+    <value>Γνωρίστε το SOSpect, μια δωρεάν εφαρμογή που έχει σχεδιαστεί για να προστατεύει εσάς και τους αγαπημένους σας. Έχουμε δημιουργήσει ένα συνοπτικό και λεπτομερές ηλεκτρονικό εγχειρίδιο που θα σας βοηθήσει να το χρησιμοποιήσετε σωστά. Με αυτό το εγχειρίδιο, μπορείτε να αξιοποιήσετε στο έπακρο το SOSpect και να επωφεληθείτε από όλα τα χαρακτηριστικά ασφαλείας του.</value>
+  </data>
+  <data name="SesionApple" xml:space="preserve">
+    <value>ΣΥΝΔΕΣΗ ΜΕΣΩ APPLE</value>
+  </data>
+  <data name="LblCredibilidadAlarmaActual" xml:space="preserve">
+    <value>Αξιοπιστία του συναγερμού:</value>
+  </data>
+  <data name="LblAccedeAlManual" xml:space="preserve">
+    <value>Μπορείτε να αποκτήσετε πρόσβαση στο εγχειρίδιο στη διεύθυνση:</value>
+  </data>
+  <data name="LblRefrescarLista" xml:space="preserve">
+    <value>Ανανέωση λίστας ξυπνητηριών</value>
+  </data>
+  <data name="LblErrorCorreoDispositivo" xml:space="preserve">
+    <value>Δεν ήταν δυνατή η αποστολή email σε αυτήν τη συσκευή</value>
+  </data>
+  <data name="LblErrorCorreo" xml:space="preserve">
+    <value>Σφάλμα κατά την αποστολή μηνύματος ηλεκτρονικού ταχυδρομείου:</value>
+  </data>
+  <data name="LblSeleccioneTipoAlarma" xml:space="preserve">
+    <value>Επιλέξτε τον τύπο συναγερμού</value>
+  </data>
+  <data name="LblCompraFallida" xml:space="preserve">
+    <value>Η αγορά δεν έγινε. Ελέγξτε την πρόσβαση στο διαδίκτυο και προσπαθήστε ξανά</value>
+  </data>
+  <data name="LblSeleccionePuntoMapa" xml:space="preserve">
+    <value>Πρέπει να επιλέξετε μια ζώνη επιτήρησης στο χάρτη</value>
+  </data>
+  <data name="Cantidaddealarmascolocadasenlaszonasdevigilanciasuscritas" xml:space="preserve">
+    <value>Αριθμός συναγερμών που έχουν τοποθετηθεί σε συνδρομητικές περιοχές επιτήρησης</value>
+  </data>
+  <data name="Cantidaddealarmascolocadaspormisprotegidos" xml:space="preserve">
+    <value>Αριθμός συναγερμών που τοποθετήθηκαν από τους προστατευόμενούς μου</value>
+  </data>
+  <data name="Credibilidadactualdelasalarmasqueenvioamicomunidad" xml:space="preserve">
+    <value>Τρέχουσα αξιοπιστία των συναγερμών που στέλνω στην κοινότητά μου</value>
+  </data>
+  <data name="LblCompraExitosa" xml:space="preserve">
+    <value>Συγχαρητήρια! Αγοράσατε δυνάμεις για να αγοράσετε συνδρομές. Θα βρείτε ένα επεξηγηματικό μήνυμα στο κουδούνι!</value>
+  </data>
+  <data name="LblDebesHabilitarNotif" xml:space="preserve">
+    <value>Πρέπει να ενεργοποιήσετε την αποστολή ειδοποιήσεων για να λειτουργήσει το SOSpect</value>
+  </data>
+  <data name="LblHabilitarNotifSettings" xml:space="preserve">
+    <value>Αυτή η εφαρμογή μπορεί να υποστηρίζει ειδοποιήσεις, αλλά πρέπει να το ενεργοποιήσετε στις ρυθμίσεις σας.</value>
+  </data>
+  <data name="LblErrorHabilitandoUsoNotif" xml:space="preserve">
+    <value>Παρουσιάστηκε σφάλμα που εμπόδισε τη χρήση ειδοποιήσεων push</value>
+  </data>
+  <data name="LblMostrarDireccionEscape" xml:space="preserve">
+    <value>Η διαδρομή διαφυγής του Mark Fugitive</value>
+  </data>
+  <data name="LblProximamenteSOSpect" xml:space="preserve">
+    <value>Σύντομα κοντά σας στο SOSpect!</value>
+  </data>
+  <data name="LblReportesProximos" xml:space="preserve">
+    <value>Αναλυτικές και προγνωστικές αναφορές με την επιστήμη των δεδομένων!</value>
+  </data>
+  <data name="LblHolaBienvenido" xml:space="preserve">
+    <value>Γεια σας! Καλώς ήρθατε στο SOSpect. 
+
+Το SOSpect είναι ένα δωρεάν εργαλείο που έχει σχεδιαστεί για να προστατεύει εσάς και τους αγαπημένους σας παρέχοντας έγκαιρες ειδοποιήσεις σχετικά με κοντινούς κινδύνους! Μπορεί να μην λάβετε πολλούς συναγερμούς στην αρχή, καθώς δεν υπάρχουν πολλοί άνθρωποι κοντά σας ακόμα που έχουν εγκαταστήσει το SOSpect. Σας ζητούμε να μας δοκιμάσετε και να μην απεγκαταστήσετε την εφαρμογή. Το SOSpect μπορεί να σώσει τη ζωή σας κάποια στιγμή, καθώς και τη ζωή κάποιου στην οικογένεια ή την κοινότητά σας.
+
+Στην ενότητα "Βασική αναφορά" του μενού "Αναφορές" που βρίσκεται στις ρυθμίσεις, μπορείτε να δείτε στην ενότητα "Βασικές μετρήσεις" τον αριθμό των κοντινών χρηστών εντός της περιοχής κάλυψής σας, όπου θα λαμβάνετε συναγερμούς. Βοηθήστε μας να αυξήσουμε αυτόν τον αριθμό, είναι δωρεάν και θα σας επιτρέψει να ζήσετε με μεγαλύτερη ασφάλεια!
+
+Σας προσκαλούμε να διαβάσετε προσεκτικά αυτό το σύντομο εισαγωγικό εγχειρίδιο, το οποίο θα σας δώσει μια ιδέα για το πώς λειτουργεί το SOSpect. Λάβετε υπόψη ότι θα εμφανιστεί μόνο μία φορά μετά την εγκατάσταση της εφαρμογής.
+
+Σας ευχαριστούμε που χρησιμοποιείτε το SOSpect και που συμβάλλετε στην ασφάλεια όλων!
+
+Πατήστε την οθόνη για να συνεχίσετε...</value>
+  </data>
+</root>

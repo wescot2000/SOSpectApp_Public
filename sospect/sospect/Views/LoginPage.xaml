@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:helpers="clr-namespace:sospect.Helpers"
+    x:Class="sospect.Views.LoginPage">
+    <ContentPage.Content>
+        <Grid>
+            <Image Aspect="AspectFill" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                <Image.Source>
+                    <OnPlatform x:TypeArguments="ImageSource">
+                        <On Platform="iOS" Value="splash_sospect.png"/>
+                    </OnPlatform>
+                </Image.Source>
+            </Image>
+            <Grid>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition
+                        Width="0.07345132743*"></ColumnDefinition>
+                        <ColumnDefinition
+                        Width="auto"></ColumnDefinition>
+                        <ColumnDefinition
+                        Width="0.07345132743*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition
+                        Height="0.2032893652*"></RowDefinition>
+                        <RowDefinition
+                        Height="0.6619373454*"></RowDefinition>
+                        <RowDefinition
+                        Height="0.1347732894*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid
+                    Grid.Column="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition
+                            Height="2*"></RowDefinition>
+                            <RowDefinition
+                            Height="auto"></RowDefinition>
+                            <RowDefinition
+                            Height="*"></RowDefinition>
+                        </Grid.RowDefinitions>
+                    </Grid>
+                    <Frame BackgroundColor="Transparent" HasShadow="False"
+                    Grid.Column="1"
+                    Grid.Row="1">
+                        <Grid BackgroundColor="White"
+                        RowSpacing="2">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition
+                                Width="0.07345132743*"></ColumnDefinition>
+                                <ColumnDefinition
+                                Width="0.9*"></ColumnDefinition>
+                                <ColumnDefinition
+                                Width="0.07345132743*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"></RowDefinition>
+                                    <RowDefinition Height="*"></RowDefinition>
+                                    <!-- Quitamos las filas que no están en uso -->
+                                    <RowDefinition Height="Auto"></RowDefinition>
+                                    <RowDefinition Height="Auto"></RowDefinition>
+                                    <RowDefinition Height="Auto"></RowDefinition>
+                                    <RowDefinition Height="5"></RowDefinition>
+                                    <RowDefinition Height="Auto"></RowDefinition>
+                                    <RowDefinition Height="Auto"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Label
+                            Text="{helpers:TranslateExtension Text='Bienvenido'}"
+                            FontSize="{Binding FontSizeLarge}"
+                            TextColor="Black"
+                            x:Name="Bienvenido"
+                            HorizontalTextAlignment="Center"
+                            FontAttributes="Bold"
+                            Grid.Column="1"
+                            Grid.Row="1"></Label>
+                            <Label
+                            Text="{helpers:TranslateExtension Text='InicieSesion'}"
+                            HorizontalTextAlignment="Center"
+                            FontSize="{Binding FontSizeMicro}"
+                            TextColor="Gray"
+                            x:Name="InciarSesionLabel"
+                            Grid.Column="1"
+                            Grid.Row="2"></Label>
+
+                            <Grid
+                            Grid.Row="5"
+                            Grid.Column="1"
+                            ColumnSpacing="0"
+                            Padding="0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition
+                                    Width="20"></ColumnDefinition>
+                                    <ColumnDefinition
+                                    Width="Auto"></ColumnDefinition>
+                                    <ColumnDefinition
+                                    Width="*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                            </Grid>
+                            <Grid
+                            IsVisible="false"
+                            Grid.Row="8"
+                            Grid.Column="1">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition
+                                    Width="*"></ColumnDefinition>
+                                    <ColumnDefinition
+                                    Width="*"></ColumnDefinition>
+                                    <ColumnDefinition
+                                    Width="Auto"></ColumnDefinition>
+                                    <ColumnDefinition
+                                    Width="*"></ColumnDefinition>
+                                    <ColumnDefinition
+                                    Width="*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Grid
+                                Grid.Column="1">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition
+                                        Height="*"></RowDefinition>
+                                        <RowDefinition
+                                        Height=".5"></RowDefinition>
+                                        <RowDefinition
+                                        Height="*"></RowDefinition>
+                                    </Grid.RowDefinitions>
+                                    <BoxView
+                                    HeightRequest="1"
+                                    BackgroundColor="LightGray"
+                                    Grid.Row="1"></BoxView>
+                                </Grid>
+
+                                <Label
+                                Text="{helpers:TranslateExtension Text='InicieSesionCon'}"
+                                Grid.Column="2"
+                                FontSize="{Binding FontSizeMicro}"
+                                x:Name="InicieSesionConLabel"
+                                HorizontalTextAlignment="Center"
+                                VerticalTextAlignment="Center"></Label>
+                                <Grid
+                                IsVisible="false"
+                                Grid.Column="3">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition
+                                        Height="*"></RowDefinition>
+                                        <RowDefinition
+                                        Height=".5"></RowDefinition>
+                                        <RowDefinition
+                                        Height="*"></RowDefinition>
+                                    </Grid.RowDefinitions>
+                                    <BoxView
+                                    HeightRequest="1"
+                                    BackgroundColor="LightGray"
+                                    Grid.Row="1"></BoxView>
+                                </Grid>
+                            </Grid>
+                            <Button Margin="0,5"
+                            Text="{helpers:TranslateExtension Text='SesionFacebook'}"
+                            HorizontalOptions="FillAndExpand"
+                            Grid.Column="1"
+                            Grid.Row="9"
+                            FontSize="{Binding FontSizeMicro}"
+                            Padding="10"
+                            TextColor="White"
+                            x:Name="FacebookBoton"
+                            Command="{Binding FacebookCommand}"
+                            CornerRadius="13"
+                            BackgroundColor="#3B5998"></Button>
+                            <Button Margin="0,5"
+                            Text="{helpers:TranslateExtension Text='SesionGoogle'}"
+                            HorizontalOptions="FillAndExpand"
+                            Grid.Column="1"
+                            Grid.Row="10"
+                            FontSize="{Binding FontSizeMicro}"
+                            Padding="1"
+                            x:Name="GoogleBoton"
+                            Command="{Binding GoogleCommand}"
+                            TextColor="White"
+                            CornerRadius="13"
+                            BackgroundColor="#D50000"></Button>
+                            <Button Margin="0,5"
+                            Text="{helpers:TranslateExtension Text='SesionApple'}"
+                            HorizontalOptions="FillAndExpand"
+                            Grid.Column="1"
+                            Grid.Row="11"
+                            FontSize="{Binding FontSizeMicro}"
+                            Padding="1"
+                            x:Name="AppleBoton"
+                            Command="{Binding AppleCommand}"
+                            TextColor="White"
+                            CornerRadius="13"
+                            BackgroundColor="Black"></Button>
+                        </Grid>
+                    </Frame>
+                </Grid>
+                <Grid BackgroundColor="Black" Opacity="0.5" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" IsVisible="{Binding IsRunning}">
+                    <ActivityIndicator VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="50" WidthRequest="50" Color="DarkBlue" IsRunning="{Binding IsRunning}"></ActivityIndicator>
+                </Grid>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

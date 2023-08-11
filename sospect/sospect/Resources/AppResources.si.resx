@@ -1,0 +1,1090 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Bienvenido" xml:space="preserve">
+    <value>SOSpect වෙත සාදරයෙන් පිළිගනිමු</value>
+  </data>
+  <data name="InicieSesion" xml:space="preserve">
+    <value>දිගටම කරගෙන යාමට පිවිසෙන්න</value>
+  </data>
+  <data name="InicieSesionCon" xml:space="preserve">
+    <value>හෝ සමඟ ලොග් වන්න</value>
+  </data>
+  <data name="SesionFacebook" xml:space="preserve">
+    <value>ෆේස්බුක් සමඟ පිවිසෙන්න</value>
+  </data>
+  <data name="SesionGoogle" xml:space="preserve">
+    <value>Google සමඟ ලියාපදිංචි වන්න</value>
+  </data>
+  <data name="LabelAlerta" xml:space="preserve">
+    <value>අනතුරු ඇඟවීම</value>
+  </data>
+  <data name="LabelCrimen" xml:space="preserve">
+    <value>අපරාධ</value>
+  </data>
+  <data name="LabelOK" xml:space="preserve">
+    <value>හොඳයි</value>
+  </data>
+  <data name="LabelCancelar" xml:space="preserve">
+    <value>අවලංගු කරන්න</value>
+  </data>
+  <data name="ReportarCrimen" xml:space="preserve">
+    <value>අපරාධ වාර්තා කරන්න</value>
+  </data>
+  <data name="LabelMapa" xml:space="preserve">
+    <value>සිතියම</value>
+  </data>
+  <data name="LabelDescribir" xml:space="preserve">
+    <value>විස්තර කරන්න</value>
+  </data>
+  <data name="DescripcionAlarma" xml:space="preserve">
+    <value>එලාම් පිළිබඳ විස්තරය</value>
+  </data>
+  <data name="DescripcionSospechoso" xml:space="preserve">
+    <value>සැකකරු පිළිබඳ විස්තරය</value>
+  </data>
+  <data name="DescripcionVehiculo" xml:space="preserve">
+    <value>වාහන විස්තරය</value>
+  </data>
+  <data name="DescripcionArma" xml:space="preserve">
+    <value>ආයුධය පිළිබඳ විස්තරය</value>
+  </data>
+  <data name="PuntuacionDescripcion" xml:space="preserve">
+    <value>ලකුණු විස්තරය</value>
+  </data>
+  <data name="LabelEditar" xml:space="preserve">
+    <value>සංස්කරණය කරන්න</value>
+  </data>
+  <data name="DescripcionesParaAlarma" xml:space="preserve">
+    <value>මෙම එලාම් සඳහා කරන ලද විස්තර</value>
+  </data>
+  <data name="EspacioPublicidad" xml:space="preserve">
+    <value>වෙළඳ දැන්වීම් සඳහා අවකාශය</value>
+  </data>
+  <data name="AlarmasRecientes" xml:space="preserve">
+    <value>විස්තරය එකතු කිරීමට මෑත අනතුරු ඇඟවීම්</value>
+  </data>
+  <data name="ConfirmarAlarma" xml:space="preserve">
+    <value>එලාම් තහවුරු කරන්න</value>
+  </data>
+  <data name="LabelInformacion" xml:space="preserve">
+    <value>තොරතුරු</value>
+  </data>
+  <data name="LabelError" xml:space="preserve">
+    <value>දෝෂය</value>
+  </data>
+  <data name="LabelCancelado" xml:space="preserve">
+    <value>අවලංගු කර ඇත</value>
+  </data>
+  <data name="LabelLoginCancelado" xml:space="preserve">
+    <value>පිවිසුම අවලංගු යි</value>
+  </data>
+  <data name="LabelFallo" xml:space="preserve">
+    <value>අසමත් වීම</value>
+  </data>
+  <data name="RecibeAlarma" xml:space="preserve">
+    <value>ඔයා ඉන්න තැන ට කිට්ටුවම එලාම් එකක් ආවා, ඒක ඇත්තද?</value>
+  </data>
+  <data name="LabelConfirmo" xml:space="preserve">
+    <value>තහවුරු කරන්න</value>
+  </data>
+  <data name="LabelNoSeguro" xml:space="preserve">
+    <value>මට විශ්වාස නෑ</value>
+  </data>
+  <data name="LabelEsFalsa" xml:space="preserve">
+    <value>ඒක බොරු</value>
+  </data>
+  <data name="LabelConfirmar" xml:space="preserve">
+    <value>තහවුරු කරන්න</value>
+  </data>
+  <data name="AdvertenciaCalificacion" xml:space="preserve">
+    <value>මෙම ශ්රේණිගත කිරීම පසුව වෙනස් කළ නොහැක. ශ්රේණිගත කිරීම්වල සම්මුතිය ඔබේ ඡන්දයට පටහැනි නම් එය ඔබේ අනාගත විශ්වසනීයත්වයට බලපායි. ඔයාට විශ්වාසද?</value>
+  </data>
+  <data name="LabelSi" xml:space="preserve">
+    <value>ඔව්</value>
+  </data>
+  <data name="LabelNo" xml:space="preserve">
+    <value>නෑ</value>
+  </data>
+  <data name="AlarmaEnviada" xml:space="preserve">
+    <value>එලාම් එව්වා!</value>
+  </data>
+  <data name="MsgTrasAlarmaEnviada" xml:space="preserve">
+    <value>ඔබ ආරක්ෂිත නම් කරුණාකර එලාම් විස්තර කරන්න, එසේ නොමැති නම්, ඔබේ දුරකථනය සඟවා අනතුරෙන් මිදෙන්න.</value>
+  </data>
+  <data name="notificacionurgente" xml:space="preserve">
+    <value>හදිසි දැනුම්දීමක් ළඟම ඇති දුරකථන වෙත යවනු ලැබේ:</value>
+  </data>
+  <data name="LabelAlarma" xml:space="preserve">
+    <value>එලාම්</value>
+  </data>
+  <data name="LabelMetros" xml:space="preserve">
+    <value>මීටරය</value>
+  </data>
+  <data name="LabelTuUbicacion" xml:space="preserve">
+    <value>ඔබේ ස්ථානය</value>
+  </data>
+  <data name="LabelUsuario" xml:space="preserve">
+    <value>පරිශීලක</value>
+  </data>
+  <data name="LabelTipoAlarma" xml:space="preserve">
+    <value>එලාම් වර්ගය</value>
+  </data>
+  <data name="DireccionEscape" xml:space="preserve">
+    <value>කරුණාකර සැකකරුගේ පලායාමේ ලිපිනය දක්වන්න.</value>
+  </data>
+  <data name="DescripcionAlerta" xml:space="preserve">
+    <value>අනතුරු ඇඟවීම පිළිබඳ විස්තරය</value>
+  </data>
+  <data name="DescripcionImplicado" xml:space="preserve">
+    <value>අනතුරු ඇඟවීමට සම්බන්ධ පුද්ගලයාගේ විස්තරය</value>
+  </data>
+  <data name="DescripcionVehiculoImp" xml:space="preserve">
+    <value>අදාළ වාහනය (අදාළ නම්)</value>
+  </data>
+  <data name="ArmaImplicada" xml:space="preserve">
+    <value>සම්බන්ධ ආයුධ (අදාළ නම්)</value>
+  </data>
+  <data name="LabelRutaEscape" xml:space="preserve">
+    <value>සැක සහිත පලායාමේ මාර්ගය</value>
+  </data>
+  <data name="ObjetivoSospect" xml:space="preserve">
+    <value>SOSpect හි අරමුණ වන්නේ පරිශීලකයාගේ ස්ථානයේ අන්තරායන් පිළිබඳ අනතුරු ඇඟවීම් සහ අනතුරු ඇඟවීම් ලබා ගැනීමට ප්රජාවට ඉඩ දීමයි, ඔවුන්ට සහ ඔවුන්ගේ ආදරණීයයන්ට ඇති අවදානම් වළක්වා ගැනීම සඳහා. පරිශීලකයින්ගේ ස්ථානය බෙදා හදා ගැනීම හෝ ලුහුබැඳීම සිදු නොකෙරේ, ඔවුන්ගේ පෞද්ගලිකත්වය සහතික කරයි. අවදානම් සහගත තත්වයන්ට ගොදුරු වීම වළක්වා ගැනීමට අන් අයට උපකාර කිරීම සඳහා පරිශීලකයින්ට උපද්රව අනතුරු ඇඟවීම් තැබිය හැකිය.</value>
+  </data>
+  <data name="UbicacionImportante" xml:space="preserve">
+    <value>පරිශීලකයාගේ ස්ථානය දැන ගැනීම වැදගත් වන අතර එමඟින් යමෙකු ඔවුන්ගේ ස්ථානය අසල අනතුරු ඇඟවීමක් කළහොත් ඔබට ඔවුන්ට අනතුරු ඇඟවිය හැකිය. කෙසේ වෙතත්, පරිශීලකයාගේ ස්ථානය පෞද්ගලික වන අතර අනතුරු ඇඟවීම් තබා ඇති සිතියමේ ඇති ස්ථාන පමණක් බෙදා ගනු ලැබේ.</value>
+  </data>
+  <data name="GenteUnida" xml:space="preserve">
+    <value>SOSpect සමඟ, අපරාධ අවම කිරීම සහ අවදානම් සහගත තත්වයන්ට ගොදුරු වීම වළක්වා ගැනීම සඳහා ප්රජාවට එකට එකතු විය හැකි අතර, අන් අයටද ආරක්ෂිතව සිටීමට අනතුරු අඟවයි.</value>
+  </data>
+  <data name="contactenos" xml:space="preserve">
+    <value>අප අමතන්න</value>
+  </data>
+  <data name="visitenos" xml:space="preserve">
+    <value>අප හමුවන්න</value>
+  </data>
+  <data name="ZonaVigilancia" xml:space="preserve">
+    <value>නිරීක්ෂණ කලාප දායකත්වය</value>
+  </data>
+  <data name="SeleccioneUbicacionVigilar" xml:space="preserve">
+    <value>නැරඹිය යුතු ස්ථානය තෝරන්න</value>
+  </data>
+  <data name="SeleccionEnMapa" xml:space="preserve">
+    <value>සිතියම මත තෝරන්න</value>
+  </data>
+  <data name="ExplicaZonaVigilancia" xml:space="preserve">
+    <value>ඔබ තෝරා ගැනීමට යන ස්ථානයේ තබා ඇති සියලුම එලාම් කවුරුන් තැබුවත් දැනුම් දෙනු ලැබේ. මේ ආකාරයෙන්, එම අවස්ථාවේදී ක්රියාත්මක වන අන්තරායන් ගැන ඔබට දැනුවත් විය හැකිය. ඔබේ දරුවන්ගේ පාසල් හෝ විශ්ව විද්යාල හෝ ඔබේ ඥාතීන් හෝ ආදරණීයයන් සේවය කරන ප්රදේශ වැනි ස්ථානවල උපද්රව පිළිබඳව දැනුවත් වීම සඳහා මෙය කදිම වේ.</value>
+  </data>
+  <data name="CrearZonaV" xml:space="preserve">
+    <value>මෙම ස්ථානය සමඟ නිරීක්ෂණ කලාපයක් නිර්මාණය කරන්න</value>
+  </data>
+  <data name="LabelLatitud" xml:space="preserve">
+    <value>අක්ෂාංශ</value>
+  </data>
+  <data name="LabelLongitud" xml:space="preserve">
+    <value>දේශාංශ</value>
+  </data>
+  <data name="LabelIntroduccion" xml:space="preserve">
+    <value>හැඳින්වීම</value>
+  </data>
+  <data name="AmpliacionRadio" xml:space="preserve">
+    <value>එලාම් අරය පුළුල් කිරීම</value>
+  </data>
+  <data name="TuRadioActual" xml:space="preserve">
+    <value>ඔබගේ වර්තමාන අරය වන්නේ:</value>
+  </data>
+  <data name="CrearNuevoRadio" xml:space="preserve">
+    <value>මෙම නව ගුවන් විදුලිය සඳහා මගේ දායකත්වය සාදන්න</value>
+  </data>
+  <data name="ExplicacionVigencias" xml:space="preserve">
+    <value>සියලුම දායකත්වයන්ට වලංගු භාවයක් ඇත, කරුණාකර ප්රධාන මෙනුවේ පළමු විකල්පයේ දායකත්ව වල මිල ගණන් පරීක්ෂා කරන්න</value>
+  </data>
+  <data name="VasARequerir" xml:space="preserve">
+    <value>ඔබට අවශ්ය වනු ඇත</value>
+  </data>
+  <data name="xPoderesParaSubs" xml:space="preserve">
+    <value>ඔබගේ වර්තමාන ගුවන් විදුලියට මෙම රේඩියෝව එක් කිරීමට බලතල</value>
+  </data>
+  <data name="Exito" xml:space="preserve">
+    <value>සාර්ථකත්වය</value>
+  </data>
+  <data name="SubscripcionCreada" xml:space="preserve">
+    <value>දායකත්වය සාර්ථකව නිර්මාණය කර ඇත.</value>
+  </data>
+  <data name="MensajeError" xml:space="preserve">
+    <value>සර්වර් එකට සම්බන්ධ වීමේ දෝෂයක් තිබුණා. කරුණාකර නැවත උත්සාහ කරන්න.</value>
+  </data>
+  <data name="SeleccionaRuta" xml:space="preserve">
+    <value>ඔබ සැකකරුගේ පලායාමේ මාර්ගය තෝරා ගත යුතුය.</value>
+  </data>
+  <data name="AprobarSolicitudes" xml:space="preserve">
+    <value>ඉල්ලීම් අනුමත කරන්න</value>
+  </data>
+  <data name="LabelAprobar" xml:space="preserve">
+    <value>අනුමත කරන්න</value>
+  </data>
+  <data name="LabelRechazar" xml:space="preserve">
+    <value>ප්රතික්ෂේප කරන්න</value>
+  </data>
+  <data name="CompletarSubscripcion" xml:space="preserve">
+    <value>සම්පූර්ණ ආරක්ෂිත දායකත්වය</value>
+  </data>
+  <data name="CompletarSubsc" xml:space="preserve">
+    <value>සම්පූර්ණ දායකත්වය</value>
+  </data>
+  <data name="LblMensajes" xml:space="preserve">
+    <value>පණිවුඩ</value>
+  </data>
+  <data name="LblFechaMensaje" xml:space="preserve">
+    <value>පණිවුඩ දිනය</value>
+  </data>
+  <data name="LblMenu" xml:space="preserve">
+    <value>වින්යාසය</value>
+  </data>
+  <data name="OptCompraPoderes" xml:space="preserve">
+    <value>විශේෂාංග අගුළු ඇරීමට බලතල මිලදී ගන්න</value>
+  </data>
+  <data name="OptGestionarProtegidos" xml:space="preserve">
+    <value>මගේ ආරක්ෂිත ආරක්ෂකයින් කළමනාකරණය කරන්න</value>
+  </data>
+  <data name="OptCrearZonas" xml:space="preserve">
+    <value>නිරීක්ෂණ කලාප නිර්මාණය කිරීම</value>
+  </data>
+  <data name="OptAumentarRadio" xml:space="preserve">
+    <value>මගේ අනතුරු ඇඟවීමේ පිළිගැනීමේ අරය වැඩි කරන්න</value>
+  </data>
+  <data name="OptAcercaDe" xml:space="preserve">
+    <value>SOSpect යෙදුම ගැන</value>
+  </data>
+  <data name="OptCerrarSesion" xml:space="preserve">
+    <value>ලොග් වන්න</value>
+  </data>
+  <data name="LblProtectores" xml:space="preserve">
+    <value>මගේ ආරක්ෂකයන්</value>
+  </data>
+  <data name="LblSuspender" xml:space="preserve">
+    <value>තාවකාලිකව අත්හිටුවන්න</value>
+  </data>
+  <data name="LblEliminarProtegido" xml:space="preserve">
+    <value>ආරක්ෂා ඉවත් කරන්න</value>
+  </data>
+  <data name="LblSubscrProtegido" xml:space="preserve">
+    <value>ආරක්ෂිත දායකත්වය</value>
+  </data>
+  <data name="LblIDUsuarioAProteger" xml:space="preserve">
+    <value>ආරක්ෂා කිරීමට පරිශීලක හැඳුනුම්පත ඇතුලත් කරන්න. (එම අගය ඔබට සම්බන්ධ කිරීමට අවශ්ය පරිශීලකයාගේ SOSpect වින්යාස මෙනුවේ ඉහළින් පිහිටා ඇත)</value>
+  </data>
+  <data name="LblRelacionProtegido" xml:space="preserve">
+    <value>මෙම ගෝලයා සමඟ මගේ සම්බන්ධතාවය නම්:</value>
+  </data>
+  <data name="LblSolicitarPermiso" xml:space="preserve">
+    <value>පරිශීලකයාගෙන් අවසර ඉල්ලන්න</value>
+  </data>
+  <data name="LblCompleteCampos" xml:space="preserve">
+    <value>කරුණාකර සියලු ක්ෂේත්ර සම්පූර්ණ කරන්න.</value>
+  </data>
+  <data name="LblProcesarSolicitud" xml:space="preserve">
+    <value>ඉල්ලීම සැකසීමේ දෝෂයක් තිබුණා. කරුණාකර නැවත උත්සාහ කරන්න.</value>
+  </data>
+  <data name="LblProtegidos" xml:space="preserve">
+    <value>My Protégés</value>
+  </data>
+  <data name="LblUsuarioProtegido" xml:space="preserve">
+    <value>ආරක්ෂිත පරිශීලක හැඳුනුම්පත</value>
+  </data>
+  <data name="LblFechaActivacion" xml:space="preserve">
+    <value>සක් රීය කරන දිනය</value>
+  </data>
+  <data name="LblFechaFinalizacion" xml:space="preserve">
+    <value>අවසන් දිනය</value>
+  </data>
+  <data name="LblAccion" xml:space="preserve">
+    <value>ක් රියාව</value>
+  </data>
+  <data name="LblCantidadPoderes" xml:space="preserve">
+    <value>බලතල ගණන</value>
+  </data>
+  <data name="LblPrecio" xml:space="preserve">
+    <value>මිල</value>
+  </data>
+  <data name="LblComprar" xml:space="preserve">
+    <value>මිලදී ගන්න</value>
+  </data>
+  <data name="LblValoresSubsc" xml:space="preserve">
+    <value>දායකත්ව අගයන්</value>
+  </data>
+  <data name="LblTerminos" xml:space="preserve">
+    <value>SOSpect APP සඳහා සේවා කොන්දේසි</value>
+  </data>
+  <data name="LblAcepto" xml:space="preserve">
+    <value>මම කොන්ත් රාත්තුව පිළිගන්නවා</value>
+  </data>
+  <data name="LblNoAcepto" xml:space="preserve">
+    <value>මම පිළිගන්නේ නැහැ</value>
+  </data>
+  <data name="LblOpcionesProtegidos" xml:space="preserve">
+    <value>SOSpect යෙදුම විසින් ආරක්ෂා සහ ආරක්ෂා</value>
+  </data>
+  <data name="LblExplicacionProtegidos" xml:space="preserve">
+    <value>ඔබේ සමාජ කවයේ සාමාජිකයින් ඔබෙන් දුරස් වුවද ඔබට අනතුරු ඇඟවීම් ලබා ගත හැකිය. මෙන්න ඔබට මෙම විශේෂාංගය කළමනාකරණය කළ හැකිය</value>
+  </data>
+  <data name="OptIniciarTramite" xml:space="preserve">
+    <value>ආරක්ෂිත එකතු කිරීමේ ක්රියාවලිය ආරම්භ කරන්න</value>
+  </data>
+  <data name="OptAprobarSolicitud" xml:space="preserve">
+    <value>ආරක්ෂකයෙකුගේ ඉල්ලීමක් අනුමත කරන්න</value>
+  </data>
+  <data name="OptListarProtegidos" xml:space="preserve">
+    <value>මගේ අනුගාමිකයන්ගේ ලැයිස්තුව බලන්න</value>
+  </data>
+  <data name="OptListarProtectores" xml:space="preserve">
+    <value>මගේ ආරක්ෂකයන්ගේ ලැයිස්තුව බලන්න</value>
+  </data>
+  <data name="OptVolver" xml:space="preserve">
+    <value>ආපසු යන්න</value>
+  </data>
+  <data name="LblPoderesSospect" xml:space="preserve">
+    <value>SOSpect යෙදුමේ බලතල</value>
+  </data>
+  <data name="LblOpcionesPoderes" xml:space="preserve">
+    <value>බලය කළමනාකරණ විකල්පය වෙත සාදරයෙන් පිළිගනිමු, ඔබට කුමක් කිරීමට අවශ්යද?</value>
+  </data>
+  <data name="LblSubscripcionesCosto" xml:space="preserve">
+    <value>මට මිලදී ගත හැකි දායකත්වයන් සහ ඒවායේ පිරිවැය දැන ගැනීමට මට අවශ්යයි</value>
+  </data>
+  <data name="LblQuieroComprar" xml:space="preserve">
+    <value>මට දායකත්ව ලබා ගැනීම සඳහා සුපිරි බලයන් මිලදී ගැනීමට අවශ්යයි</value>
+  </data>
+  <data name="ExplicacionRadio" xml:space="preserve">
+    <value>යෙදුමේ සියලුම පරිශීලකයින් සඳහා පෙරනිමි අරය වටා මීටර් 100 කි. යෙදුමේ බලතල භාවිතා කරමින් ඔබට එම අරය පුළුල් කළ හැකිය. ඉන්පසු ඔබට අවශ්ය අරය ඔබම තෝරන්න:</value>
+  </data>
+  <data name="LblAsunto" xml:space="preserve">
+    <value>කෙටි විස්තරය</value>
+  </data>
+  <data name="LblCompraPoderes" xml:space="preserve">
+    <value>බලතල මිලදී ගැනීම</value>
+  </data>
+  <data name="OptCompletarTramite" xml:space="preserve">
+    <value>ආරක්ෂිත එකතු කිරීම සඳහා සම්පූර්ණ ක්රියා පටිපාටිය</value>
+  </data>
+  <data name="LabelHecho" xml:space="preserve">
+    <value>සම්පුර්ණ කර ඇත</value>
+  </data>
+  <data name="LabelEscapoEnEstaDireccion" xml:space="preserve">
+    <value>ඔහු මේ දිශාවට පලා ගියේය</value>
+  </data>
+  <data name="OptMisSubs" xml:space="preserve">
+    <value>මගේ දායකත්වය</value>
+  </data>
+  <data name="LblMisSubscripciones" xml:space="preserve">
+    <value>මගේ දායකත්වය</value>
+  </data>
+  <data name="LblidUsuario" xml:space="preserve">
+    <value>පරිශීලක හැඳුනුම්පත:</value>
+  </data>
+  <data name="LblTipo" xml:space="preserve">
+    <value>දායකත්ව වර්ගය:</value>
+  </data>
+  <data name="LblDescripcionPuntos" xml:space="preserve">
+    <value>විස්තරය:</value>
+  </data>
+  <data name="LblFechaFinPuntos" xml:space="preserve">
+    <value>අවසන් දිනය:</value>
+  </data>
+  <data name="LblPoderesPuntos" xml:space="preserve">
+    <value>අළුත් කිරීමේ බලතල:</value>
+  </data>
+  <data name="LblRenovar" xml:space="preserve">
+    <value>අළුත් කරන්න</value>
+  </data>
+  <data name="LblCancelarSubscripcion" xml:space="preserve">
+    <value>දායකත්වය අවලංගු කරන්න</value>
+  </data>
+  <data name="LblSeguroDeCancelar" xml:space="preserve">
+    <value>ඔබට දායකත්වය අවලංගු කිරීමට අවශ්ය බව ඔබට විශ්වාසද? පරිභෝජනය කරන ලද බලතල නැවත ලබා නොදෙනු ඇත.</value>
+  </data>
+  <data name="LblAceptar" xml:space="preserve">
+    <value>පිළිගන්න</value>
+  </data>
+  <data name="Alarm_1" xml:space="preserve">
+    <value>අනතුරු ඇඟවීම හෝ අන්තරාය</value>
+  </data>
+  <data name="Alarm_2" xml:space="preserve">
+    <value>සිදු කරන ලද අපරාධ හෝ අපරාධ</value>
+  </data>
+  <data name="Alarm_3" xml:space="preserve">
+    <value>වීදි ගැටුම</value>
+  </data>
+  <data name="Alarm_4" xml:space="preserve">
+    <value>අහිමි වූ සුරතල් සතුන්</value>
+  </data>
+  <data name="Alarm_5" xml:space="preserve">
+    <value>අහිමි වූ පුද්ගලයා</value>
+  </data>
+  <data name="Alarm_6" xml:space="preserve">
+    <value>කෝලාහල හෝ විරෝධතා</value>
+  </data>
+  <data name="Alarm_7" xml:space="preserve">
+    <value>වීථියට පිටවීම මගින් දෘශ්ය සහයෝගීතාව ඉල්ලා සිටින්න</value>
+  </data>
+  <data name="Alarm_8" xml:space="preserve">
+    <value>ගෘහස්ථ හිංසනය</value>
+  </data>
+  <data name="Alarm_9" xml:space="preserve">
+    <value>ඔබ සිටින ප් රදේශයට පලා යන සැකකරුවෙකු</value>
+  </data>
+  <data name="LblCostoPoderes" xml:space="preserve">
+    <value>පැකේජ පිරිවැය</value>
+  </data>
+  <data name="LblSuscripcionesDisponibles" xml:space="preserve">
+    <value>දැනට ලබා ගත හැකි දායකත්වයන්</value>
+  </data>
+  <data name="LblFamilia" xml:space="preserve">
+    <value>පවුල</value>
+  </data>
+  <data name="LblAmigo" xml:space="preserve">
+    <value>මිතුරා</value>
+  </data>
+  <data name="LblCompanero" xml:space="preserve">
+    <value>සහකාරිය</value>
+  </data>
+  <data name="LblOtroSinDefinir" xml:space="preserve">
+    <value>වෙනත් නිර්වචනය නොකළ</value>
+  </data>
+  <data name="LabelExito" xml:space="preserve">
+    <value>සාර්ථකත්වය</value>
+  </data>
+  <data name="LblSolicitudAprobada" xml:space="preserve">
+    <value>අයදුම්පත සාර්ථකව අනුමත කර ඇත.</value>
+  </data>
+  <data name="MensajeErrorAprobando" xml:space="preserve">
+    <value>ඉල්ලීම අනුමත කිරීමේ දෝෂයක්</value>
+  </data>
+  <data name="MensajeErrorRechazando" xml:space="preserve">
+    <value>ඉල්ලීම ප් රතික්ෂේප කිරීමට අපොහොසත් විය.</value>
+  </data>
+  <data name="LblSolicitudRechazada" xml:space="preserve">
+    <value>අයදුම්පත සාර්ථකව ප් රතික්ෂේප වේ.</value>
+  </data>
+  <data name="LblUsuarioSolicitante" xml:space="preserve">
+    <value>පරිශීලකඉල්ලීම</value>
+  </data>
+  <data name="LblFechaSolicitud" xml:space="preserve">
+    <value>අයදුම් කරන දිනය</value>
+  </data>
+  <data name="LblAccionRealizar" xml:space="preserve">
+    <value>ගත යුතු ක් රියාමාර්ග</value>
+  </data>
+  <data name="LblSubscripcionCompletada" xml:space="preserve">
+    <value>දායකත්වය අවසන්</value>
+  </data>
+  <data name="LblSubscripcionFallida" xml:space="preserve">
+    <value>දායකත්වය අසාර්ථක යි</value>
+  </data>
+  <data name="LblUsuarioAprobador" xml:space="preserve">
+    <value>අනුමත කරන්නා පරිශීලක</value>
+  </data>
+  <data name="LblFechaAprobacion" xml:space="preserve">
+    <value>අනුමත කළ දිනය</value>
+  </data>
+  <data name="LblSubscrEliminada" xml:space="preserve">
+    <value>දායක නොවූ</value>
+  </data>
+  <data name="LblSubsEliminadaExitosamente" xml:space="preserve">
+    <value>දායකත්වය සාර්ථකව ඉවත් කර ඇත</value>
+  </data>
+  <data name="LblEliminarProtector" xml:space="preserve">
+    <value>ආරක්ෂකයා ඉවත් කරන්න</value>
+  </data>
+  <data name="LblRenovacionAplicada" xml:space="preserve">
+    <value>සාර්ථකව ක්රියාත්මක ප්රතිසංස්කරණ</value>
+  </data>
+  <data name="LblErrorRenovando" xml:space="preserve">
+    <value>දෝෂය අළුත් කිරීම, නැවත උත්සාහ කිරීම හෝ සහාය වීම වාර්තා කිරීම, "මෙනුව" &gt;"ගැන" විකල්පයේ ලබා ගත හැකි අමතන්න</value>
+  </data>
+  <data name="LblCancelacionAplicada" xml:space="preserve">
+    <value>අවලංගු කිරීම සාර්ථකව සිදු කරන ලදී</value>
+  </data>
+  <data name="LblErrorCancelando" xml:space="preserve">
+    <value>අවලංගු කිරීම, නැවත උත්සාහ කිරීම හෝ සහාය ට වාර්තා කිරීමේ දෝෂයක්, "මෙනුව" &gt;"ගැන" විකල්පයේ ලබා ගත හැකි අමතන්න</value>
+  </data>
+  <data name="LblZonaCreada" xml:space="preserve">
+    <value>ඉල්ලුම් කරන ලද නිරීක්ෂණ කලාපයේ දායකත්වය සාර්ථකව සිදු කර ඇත</value>
+  </data>
+  <data name="LblErrorZonaVigil" xml:space="preserve">
+    <value>නව ඉල්ලූ කලාපය ට දායක වීමේ දෝෂයක්, නැවත උත්සාහ කිරීම හෝ සහාය දැක්වීමට වාර්තා කිරීම, විකල්පය "මෙනුව"&gt;"ගැන" ලබා ගත හැකි අමතන්න</value>
+  </data>
+  <data name="LblSeleccionaNuevoRadio" xml:space="preserve">
+    <value>මීටර් වලින් නව අරය තෝරන්න</value>
+  </data>
+  <data name="LblUsuarioProtector" xml:space="preserve">
+    <value>ආරක්ෂිත පරිශීලක</value>
+  </data>
+  <data name="LblSeguroEliminarProtegido" xml:space="preserve">
+    <value>ඔයාට විශ්වාසද ඔයාගේ ගෝලය අයින් කරන්න? මෙම දායකත්වය සඳහා භාවිතා කරන බලතල ආපසු ලබා නොදෙනු ඇත.</value>
+  </data>
+  <data name="LblSuspenderProtectores" xml:space="preserve">
+    <value>පැය 6 ක් සඳහා ඔබේ ආරක්ෂකයින්ට දැනුම්දීම් අත්හිටුවීමට ඔබට විශ්වාසද? ඔබගේ සියලුම ආරක්ෂකයින් අත්හිටුවන එලාම් වන අතර මෙම හේතුව නිසා දායකත්වයේ අවසාන කාලය දීර්ඝ නොකෙරේ. ආරක්ෂකයාට මෙම ක්රියාව දැනුම් නොදෙනු ඇත.</value>
+  </data>
+  <data name="LblSuspensionRealizada" xml:space="preserve">
+    <value>පැය 6 ක් සඳහා ඔබගේ සියලු ආරක්ෂකයින්ට අනතුරු ඇඟවීම් අත්හිටුවීම සාර්ථක විය.</value>
+  </data>
+  <data name="LabelSeguroEliminarProtector" xml:space="preserve">
+    <value>ඔබේ ආරක්ෂකයා ඉවත් කිරීමට ඔබට විශ්වාසද? මෙම දායකත්වය සඳහා භාවිතා කරන බලතල ආපසු ලබා නොදෙන අතර ආරක්ෂකයාට මෙම ක්රියාව දැනුම් දෙනු ලැබේ.</value>
+  </data>
+  <data name="LabelProtectorEliminado" xml:space="preserve">
+    <value>තෝරාගත් ආරක්ෂකයා මකා දමා ඇත. බලතල ආරක්ෂකයාට ආපසු ලබා නොදෙනු ඇත. ආරක්ෂකයාට මෙම ක්රියාව දැනුම් දෙනු ලැබේ</value>
+  </data>
+  <data name="LblConfirmacionRequerida" xml:space="preserve">
+    <value>වැදගත්! තහවුරු කිරීම අවශ් යයි!</value>
+  </data>
+  <data name="LblNoHayRegistros" xml:space="preserve">
+    <value>මෙම අවස්ථාවේ ප්රදර්ශනය කිරීමට ලඝු-සටහන් නොමැත</value>
+  </data>
+  <data name="LblMiLogin" xml:space="preserve">
+    <value>මගේ පිවිසුම වන්නේ:</value>
+  </data>
+  <data name="LblSaldoPoderesEs" xml:space="preserve">
+    <value>මගේ බල තුලනය වන්නේ:</value>
+  </data>
+  <data name="LblUsuarioID" xml:space="preserve">
+    <value>මගේ පරිශීලක හැඳුනුම්පත</value>
+  </data>
+  <data name="LblNoHayRegistrosAqui" xml:space="preserve">
+    <value>තවම කවුරුවත් මුකුත් ලියලා නෑ!</value>
+  </data>
+  <data name="LblAlertaReportadaPorMi" xml:space="preserve">
+    <value>මා විසින් වාර්තා කරන ලද අනතුරු ඇඟවීම</value>
+  </data>
+  <data name="LblPara" xml:space="preserve">
+    <value>පණිවුඩය ලබන්නා:</value>
+  </data>
+  <data name="LblDe" xml:space="preserve">
+    <value>පණිවුඩය යවන්නා:</value>
+  </data>
+  <data name="ConfiguraciondeSOSpect" xml:space="preserve">
+    <value>SOSpect වින්යාසය</value>
+  </data>
+  <data name="LblExitoEnAceptacion" xml:space="preserve">
+    <value>ඔබේ ගිවිසුම් පිළිගැනීම ගබඩා කර ඇත!</value>
+  </data>
+  <data name="LblFalloEnAceptacion" xml:space="preserve">
+    <value>ලියාපදිංචිය අසාර්ථක යි. කරුණාකර නැවත උත්සාහ කරන්න!</value>
+  </data>
+  <data name="LblDeclinacionAceptacion" xml:space="preserve">
+    <value>කොන්ත්රාත්තුවක් භාර නොගෙන ඔබට දිගටම සිටිය නොහැක!</value>
+  </data>
+  <data name="LblParaIniciar" xml:space="preserve">
+    <value>SOSPect හි ආරම්භ කරමු!! අසල අනතුරු ඇඟවීම් යාවත්කාලීන කිරීමට, නිල් නැවුම් බොත්තම තට්ටු කරන්න</value>
+  </data>
+  <data name="LblAlarmaNoGrave" xml:space="preserve">
+    <value>අඩු උපද්රව අනතුරු ඇඟවීම් තැබීමට සහ ඔබේ ප්රජාව හෝ ආරක්ෂකයින් දැනුවත් කිරීමට කහ බොත්තම භාවිතා කරන්න. ඔබට අනතුරු ඇඟවීමේ වර්ගය තෝරාගෙන එය සිදු කරන ලද අපරාධයක් ලෙස සලකුණු කළ හැකිය. මෙම බොත්තම ඔබගේ නිශ්චිත ස්ථානයේ අනතුරු ඇඟවීම දියත් කරයි, ඔබට උදව් අවශ්ය වූ විට ප්රයෝජනවත් වේ. ඔබේ ස්ථානය ට එකඟ නොවී අනතුරු ඇඟවීම සොයා ගැනීමට ඔබට සිතියමේ ලක්ෂ්යයක් තෝරා ගත හැකිය.</value>
+  </data>
+  <data name="LblCrimenCometido" xml:space="preserve">
+    <value>රතු බොත්තම ප්රවර්ගයක් අවුලුවයි: අපරාධ සිදු එලාම්. SOSPect මෙම අවස්ථාවන්හිදී කාලය ෙහි වැදගත්කම නිසා ඔබට කාණ්ඩයක් ඇතුළත් කිරීමට අවශ්ය නොවේ. එලාම් ස්වයංක්රීයව ඔබගේ නිශ්චිත ස්ථානයේ තබා ඇත. ඔබට අනතුරු ඇඟවීම තැබීමට සිතියමේ ලක්ෂ්යයක් තෝරා ගත හැකි අතර පසුව සිදු කරන ලද අපරාධ සඳහා කාණ්ඩය වෙනස් කළ හැකිය.</value>
+  </data>
+  <data name="LblDescripcionAlarmas" xml:space="preserve">
+    <value>පහළ තීරුවේ 'විස්තර කරන්න' විකල්පය තුළ, ඔබ හෝ වෙනත් අය විසින් තබා ඇති එලාම් ලැයිස්තුවක් ඔබට හමුවනු ඇත. ඔබ එලාම් නිර්මාණය කළේ නම්, ඔබට විස්තරයක් එකතු කළ හැකිය. එලාම් එක වෙනත් කෙනෙකු විසින් නිර්මාණය කර ඇත්නම්, ඔබට එහි සත්යතාවය ශ්රේණිගත කළ හැකි අතර එහි විස්තරයට අනුපූරක විය හැකිය. සැලකිලිමත් වන්න! ඔබ අසත්ය තොරතුරු හෝ වැරදි ශ්රේණිගත කිරීම් ලබා දෙන්නේ නම්, ඔබේ ගිණුම අත්හිටුවිය හැකිය. මෙය වළක්වා ගැනීම සඳහා නියමයන් සහ කොන්දේසි ප්රවේශමෙන් සමාලෝචනය කරන්න.</value>
+  </data>
+  <data name="LblDescripcionMensajes" xml:space="preserve">
+    <value>ඉහළ දකුණු කෙළවරේ ඇති සීනුව තුළ, ඔබට ඔබගේ පණිවිඩ කියවිය හැකිය, ඒවාට දායකත්ව දැනුම්දීම් සහ මෑත අනතුරු ඇඟවීම් ඇතුළත් වේ. මෙම ලැයිස්තුව විස්තර කිරීමේ විකල්පයට වඩා වෙනස් වන අතර එහිදී ඔබට මෑත අනතුරු ඇඟවීම් කෙලින්ම සොයාගත හැකිය.</value>
+  </data>
+  <data name="LblDescripcionMenu" xml:space="preserve">
+    <value>ඉහළ වම් කෙළවරේ ඇති ආම්පන්නවල ඔබට SOSpect වින්යාස විකල්ප සොයාගත හැකිය. ඔබට දායකත්ව මිලදී ගැනීමට සහ ඔබේ පවුල ආරක්ෂා කිරීමට හෝ ඔබේ එලාම් පිළිගැනීමේ අරය පුළුල් කිරීමට බලතල මිලදී ගත හැකිය. මතක තියාගන්න! ආරම්භයේ දී, අපි ඔබට බලතල 80 ක් ලබා දෙන අතර එමඟින් ඔබට ආරම්භයේ සිටම දායකත්ව දෙකක් මිලදී ගත හැකිය.</value>
+  </data>
+  <data name="LblRecomendaciones" xml:space="preserve">
+    <value>එකට අපි පරාජය කළ නොහැකි! මීටර් 100 ක අරයක් තුළ අනතුරු ඇඟවීමේ සහ ලබා ගැනීමේ මූලික කාර්යයන් නොමිලේ වන අතර, ඔබ ආරම්භ කරන විට අපි ඔබට දායකත්ව 2 ක් ලබා දෙන්නෙමු. ඉහළ යන අපරාධ වලට එරෙහිව සටන් කිරීම සඳහා මෙම නොමිලේ සේවාව භාවිතා කිරීමට ඔබේ ප්රජාවට සහ පවුලේ අයට ආරාධනා කරන්න. නියමිත වේලාවට අනතුරු ඇඟවීමක් ලැබීමෙන් ඔබට ජීවිත බේරා ගත හැකිය හෝ බේරා ගත හැකිය. නැතිවූ පුද්ගලයින් හෝ සුරතල් සතුන් පිළිබඳ අනතුරු ඇඟවීම් කිලෝමීටර 10 ක පරාසයක් ඇති අතර ප්රචණ්ඩකාරී උද්ඝෝෂණවලට කිලෝමීටර 1 ක පරාසයක් ඇත</value>
+  </data>
+  <data name="LblPromocion" xml:space="preserve">
+    <value>අවසාන වශයෙන්, SOSpect හි ඔබ සපයන එක් එක් සත්යවාදී ශ්රේණිගත කිරීම සඳහා ඔබ ඇටෝර්නි බලයක් උපයා ගන්නා බව මතක තබා ගන්න, එලාම් වල ඡන්දය ඔවුන්ගේ ස්ථානගත කිරීමෙන් මිනිත්තු 90 කට පසු වසා දමන විට. බොහෝ අය අවංක වන අතර එකට අපි එකිනෙකා සහ අපගේ පවුල් ආරක්ෂා කරන්නෙමු. SOSPECT වෙත සාදරයෙන් පිළිගනිමු!</value>
+  </data>
+  <data name="LblDescripcionMapa" xml:space="preserve">
+    <value>ඕනෑම වේලාවක, SOSpect හි ආරම්භක ස්ථානය වන පහළ තීරුවේ වම් පස ඇති "MAP" විකල්පය ඔබට තෝරා ගත හැකිය. එතැන් සිට, ඔබට අසල ඇති එලාම් නැරඹිය හැකිය. ඔබේ ස්ථානය සිතියමේ මධ්යයේ දිස්වනු ඇති අතර, රවුම ඔබට බලපෑම් කළ හැකි අරය නියෝජනය කරයි. පෙරනිමියෙන්, මෙම අරය මීටර් 100 කි, නමුත් ඔබට සැකසුම් මෙනුවේ එය වෙනස් කළ හැකිය.</value>
+  </data>
+  <data name="LblRecomendacionImportante" xml:space="preserve">
+    <value>ඔබේ ස්ථානය යාවත්කාලීන කිරීම සඳහා ඔබ නිවසින් පිටවීමට පෙර හෝ ස්ථානයකට පැමිණෙන විට ඔබ SOSpect වරින් වර විවෘත කිරීම වැදගත්ය. මේ ආකාරයෙන්, ඔබේ ප්රදේශයේ යම් අවදානමක් තිබේ නම් අපට ඔබට දැනුම් දිය හැකිය. යෙදුම වසා ඇති විට, උපාංග මෙහෙයුම් පද්ධති විසින් පනවා ඇති සීමාවන් හේතුවෙන් ඔබගේ ස්ථානය ලබා ගැනීමට අපට නොහැකි බව කරුණාවෙන් සලකන්න. ඔබගේ ස්ථානයට අදාළ නියමයන් සහ කොන්දේසි පරීක්ෂා කරන්න.</value>
+  </data>
+  <data name="LblUsuarioBloqueado" xml:space="preserve">
+    <value>සෘණ ලකුණු සඳහා පරිශීලකයා අත්හිටුවයි</value>
+  </data>
+  <data name="LblMarcasNegativas" xml:space="preserve">
+    <value>මගේ සෘණ ලකුණු ගණන</value>
+  </data>
+  <data name="LblCuentaSuspendida" xml:space="preserve">
+    <value>වෙනත් පරිශීලකයින්ගේ සෘණ ලකුණු හේතුවෙන් ගිණුම තාවකාලිකව අත්හිටුවයි</value>
+  </data>
+  <data name="LblTitleCuentaSuspendida" xml:space="preserve">
+    <value>ගිණුම තාවකාලිකව අත්හිටුවයි</value>
+  </data>
+  <data name="LblFechaFinSuspension" xml:space="preserve">
+    <value>අත්හිටුවීමේ අවසාන දිනය වන්නේ</value>
+  </data>
+  <data name="LblTocaAqui" xml:space="preserve">
+    <value>යන්න මෙතන තට්ටු කරන්න</value>
+  </data>
+  <data name="LblNoTienesConexion" xml:space="preserve">
+    <value>අන්තර්ජාල සම්බන්ධතාවයක් නොමැත</value>
+  </data>
+  <data name="LblExplicacionSinConexion" xml:space="preserve">
+    <value>ඔබගේ ප් රකාශය SOSpect වෙත පිවිසීමට අවශ් ය වේ. අන්තර්ජාලය නොමැතිව එය ක්රියාකාරී දැයි අපට දැනගත නොහැක.</value>
+  </data>
+  <data name="LblSinConexionDescripcion" xml:space="preserve">
+    <value>ඔබගේ SOSpect ගිණුමේ තත්ත්වය නැවත ලබා ගැනීම සඳහා සක්රීය අන්තර්ජාල පහසුකම් අවශ්ය වේ.</value>
+  </data>
+  <data name="LblSinConexionQueHacer" xml:space="preserve">
+    <value>කරුණාකර ඔබගේ අන්තර්ජාලය සක්රිය කර SOSpect නැවත ආරම්භ කරන්න</value>
+  </data>
+  <data name="SefinalizalasubscripcionporsolicituddelusuarioPROTEGIDOatravésdelaAPIdesdelaAPP" xml:space="preserve">
+    <value>APP වෙතින් API හරහා ආරක්ෂිත පරිශීලකයාගේ ඉල්ලීම අනුව දායකත්වය අවසන් කරනු ලැබේ</value>
+  </data>
+  <data name="Nopuederenovarsedebidoaquefuecancelada,requieresubscripciónnueva" xml:space="preserve">
+    <value>එය අවලංගු කළ නිසා අලුත් කළ නොහැක, නව දායකත්වය අවශ්ය වේ</value>
+  </data>
+  <data name="Alarmasgeneradaspormicirculosocial" xml:space="preserve">
+    <value>මගේ සමාජ කවය විසින් ජනනය කරන ලද එලාම්</value>
+  </data>
+  <data name="Incrementomidiametrodevigilancia" xml:space="preserve">
+    <value>මම මගේ නිරීක්ෂණ විෂ්කම්භය වැඩි කරමි</value>
+  </data>
+  <data name="Zonadevigilanciaadicional" xml:space="preserve">
+    <value>අතිරේක නිරීක්ෂණ කලාපයක්</value>
+  </data>
+  <data name="Renovable" xml:space="preserve">
+    <value>පුනර්ජනනීය</value>
+  </data>
+  <data name="SefinalizalasubscripcionporsolicituddelusuarioPROTECTORatravésdelaAPIdesdelaAPP" xml:space="preserve">
+    <value>APP වෙතින් API හරහා ආරක්ෂක පරිශීලකයාගේ ඉල්ලීම අනුව දායකත්වය අවසන් කරනු ලැබේ</value>
+  </data>
+  <data name="LblEsRenovable" xml:space="preserve">
+    <value>එය පුනර්ජනනීයද?</value>
+  </data>
+  <data name="LblObsSubs" xml:space="preserve">
+    <value>දායකත්ව ප්රකාශය:</value>
+  </data>
+  <data name="NingunaObservacion" xml:space="preserve">
+    <value>අදහස් නැත</value>
+  </data>
+  <data name="Subscripcionvigente" xml:space="preserve">
+    <value>වත්මන් දායකත්වය</value>
+  </data>
+  <data name="Actualmenteactivoenotrasuscripcion" xml:space="preserve">
+    <value>දැනට වෙනත් දායකත්වයක් මත ක්රියාකාරී</value>
+  </data>
+  <data name="LblRadioActual" xml:space="preserve">
+    <value>එලාම් ලබා ගැනීමට මගේ වර්තමාන අරය වන්නේ:</value>
+  </data>
+  <data name="LblPoderesRequeridosZV" xml:space="preserve">
+    <value>තෝරාගත් විශාල කිරීම සඳහා අවශ්ය බලතල</value>
+  </data>
+  <data name="OptTerminosCondiciones" xml:space="preserve">
+    <value>SOSpect නියමයන් සහ කොන්දේසි</value>
+  </data>
+  <data name="DebesAbrirLaApp" xml:space="preserve">
+    <value>SOSpect එය වසා ඇති විට පරිශීලක ස්ථානය වෙනස් දැන ගත නොහැක, මෙම ජංගම දුරකථන මෙහෙයුම් පද්ධති බැටරි සංරක්ෂණ ප්රතිපත්ති මගින් සිදු වේ, ඒ නිසා පරිශීලක එය ගමන් කර ඇති ප්රදේශයේ එලාම් පරීක්ෂා කිරීම සඳහා යෙදුම නිතර විවෘත කිරීම වැදගත් වන අතර නියමිත වේලාවට අසල එලාම් ලබා.</value>
+  </data>
+  <data name="InvitaMasPersonas" xml:space="preserve">
+    <value>පරිශීලකයාගේ ආරක්ෂාව වැඩි දියුණු කිරීම සඳහා ඔහු වටා සිටින අය, පවුලේ අය සහ අසල්වැසියන්, නොමිලේ ඇති යෙදුම බාගත කිරීම වැදගත්ය. අසල පරිශීලකයින් නොමැති නම්, පරිශීලකයා නියමිත වේලාවට අනතුරු ඇඟවීම හෝ ඔවුන්ගේ අනතුරු ඇඟවීම් නොඇසෙනු ඇත, යෙදුම බාගත කිරීමට පෙර අවදානම් තත්වය පවත්වා ගැනීම. එකිනෙකාට උදව් කිරීමට වැඩි පිරිසකට ආරාධනා කිරීම වැදගත්ය!</value>
+  </data>
+  <data name="Insertiondone" xml:space="preserve">
+    <value>ඇතුල් කිරීම සිදු කරන ලදී.</value>
+  </data>
+  <data name="AnerroroccurredwhilequalifyingthealarmCode1" xml:space="preserve">
+    <value>කේතය 1 සමඟ එලාම් ශ්රේණිගත කිරීමේදී දෝෂයක් ඇති විය</value>
+  </data>
+  <data name="AnerroroccurredwhilequalifyingthealarmCode2" xml:space="preserve">
+    <value>කේතය 2 සමඟ එලාම් ශ්රේණිගත කිරීමේදී දෝෂයක් ඇති විය</value>
+  </data>
+  <data name="AnerroroccurredwiththealarmqualificationmodelCode3" xml:space="preserve">
+    <value>කේතය 3 සමඟ එලාම් ශ්රේණිගත කිරීමේදී දෝෂයක් ඇති විය</value>
+  </data>
+  <data name="Userregistrationsuccessful" xml:space="preserve">
+    <value>ඔබේ පරිශීලකයා ලියාපදිංචි කර ඇත!</value>
+  </data>
+  <data name="Anerroroccurredwhileregisteringtheusercode1" xml:space="preserve">
+    <value>ඔබගේ පරිශීලකයා ලියාපදිංචි කිරීමේ කේතය 1 සමඟ දෝෂයක් ඇති විය</value>
+  </data>
+  <data name="Anerroroccurredwhileregisteringtheusercode2" xml:space="preserve">
+    <value>කේතය 2 ඔබගේ පරිශීලකයා ලියාපදිංචි කිරීමේදී දෝෂයක් ඇති විය</value>
+  </data>
+  <data name="Anerroroccurredwiththepeoplemodelforuserregistrationcode3" xml:space="preserve">
+    <value>කේතය 3 ඔබේ පරිශීලකයා ලියාපදිංචි කිරීමේදී දෝෂයක් ඇති විය</value>
+  </data>
+  <data name="Permisosolicitadoconexito" xml:space="preserve">
+    <value>සාර්ථකව අවසර ඉල්ලා සිටියා</value>
+  </data>
+  <data name="OcurriounerrorenelprocesodesolicitarpermisoalprotegidoCodigo1" xml:space="preserve">
+    <value>කේතය 1 සමඟ දෝෂයක් ආරක්ෂිත අවසර ඉල්ලීමේ ක්රියාවලියේදී සිදු විය</value>
+  </data>
+  <data name="Nofueposiblerealizarenviarlasolicituddepermisoalprotegidoporqueelmodelonoesvalido" xml:space="preserve">
+    <value>එය ආරක්ෂිත කිරීමට අවසර ඉල්ලීම යැවීමට නොහැකි විය, ආකෘතිය අවලංගු වේ</value>
+  </data>
+  <data name="AlertaEnUbicacion" xml:space="preserve">
+    <value>මෙම ස්ථානයේ SOSpect අනතුරු ඇඟවීමක් නිර්මාණය කිරීමට අවශ්යද?</value>
+  </data>
+  <data name="CrearEnUbicacionActual" xml:space="preserve">
+    <value>ඔබගේ වර්තමාන ස්ථානයේ SOSpect අනතුරු ඇඟවීමක් නිර්මාණය කිරීමට අවශ්යද?</value>
+  </data>
+  <data name="SeguroCerrarSesion" xml:space="preserve">
+    <value>ඔයාට ලොග් වෙන්න ෂුවර්ද?</value>
+  </data>
+  <data name="Tu" xml:space="preserve">
+    <value>ඔයා</value>
+  </data>
+  <data name="Anonimo" xml:space="preserve">
+    <value>නිර්නාමික</value>
+  </data>
+  <data name="AlarmaCerrada" xml:space="preserve">
+    <value>එලාම් එක වහලා</value>
+  </data>
+  <data name="LblSaldoPoderesInsuficiente" xml:space="preserve">
+    <value>ඔබේ බල තුලනය ප් රමාණවත් නොවේ</value>
+  </data>
+  <data name="LblComprarPoderes" xml:space="preserve">
+    <value>නීතිඥ බලතල මිලදී ගන්න</value>
+  </data>
+  <data name="LblSeguroRenovar" xml:space="preserve">
+    <value>මෙම දායකත්වය අලුත් කිරීම ගැන ඔබට විශ්වාසද?</value>
+  </data>
+  <data name="OptReportes" xml:space="preserve">
+    <value>වාර්තා</value>
+  </data>
+  <data name="LblReportesTitulo" xml:space="preserve">
+    <value>SOSpect වාර්තා</value>
+  </data>
+  <data name="LblReportesDescripcion" xml:space="preserve">
+    <value>අහිතකර තත්වයන් මඟහරවා ගැනීමෙන් ඔබ වෙනත් පරිශීලකයින්ට උපකාර කර ඇති ආකාරය තේරුම් ගැනීමට වාර්තා ඔබට අවස්ථාව ලබා දෙයි. මීට අමතරව, ඔබේ නගරයේ සිතියමේ භයානක ප්රදේශ හඳුනා ගැනීමට සහ කාලයත් සමඟ අපරාධවල පරිණාමය නිරීක්ෂණය කිරීමට ඒවා ඔබට ඉඩ සලසයි. එසේම, රටා විශ්ලේෂණය තුළින්, නිෂේධාත්මක සිදුවීම් සිදුවීමට පෙර පූර්ව අනතුරු ඇඟවීම් ජනනය කළ හැකිය. මූලික වාර්තාව නොමිලේ බව සැලකිල්ලට ගැනීම වැදගත්ය, අනෙක් වාර්තා වලට ඔවුන්ගේ පරම්පරාව සඳහා අවශ්ය පරිගණකමය පරිභෝජනය හේතුවෙන් පිරිවැයක් තිබිය හැකිය.</value>
+  </data>
+  <data name="OptReporteDeCalorEnZona" xml:space="preserve">
+    <value>තාප සිතියම් සමඟ වාර්තා කරන්න</value>
+  </data>
+  <data name="OptReporteEvolucionEnElTiempo" xml:space="preserve">
+    <value>කාලය අනුව අනතුරු ඇඟවීමේ පරිණාමය වාර්තාව</value>
+  </data>
+  <data name="OptReportesPredictivos" xml:space="preserve">
+    <value>පුරෝකථන වාර්තාකරණය</value>
+  </data>
+  <data name="OptReporteAnaliticoDeDescripcionesAlarmas" xml:space="preserve">
+    <value>අනතුරු ඇඟවීමේ කතාබස් පිළිබඳ විශ්ලේෂණාත්මක වාර්තා</value>
+  </data>
+  <data name="LblReporteCalorSospect" xml:space="preserve">
+    <value>SOSpect තාප සිතියම්</value>
+  </data>
+  <data name="LblReporteEnConstruccion" xml:space="preserve">
+    <value>ඉක්මනටම!! මෙම ක්රියාකාරීත්වය ඉදිවෙමින් පවතී!</value>
+  </data>
+  <data name="LblDescripcionMapaDeCalor" xml:space="preserve">
+    <value>මෙම වාර්තාවෙන්, ඔබේ ප්රදේශයේ තාප සිතියමකට ඔබට ප්රවේශය ලැබෙනු ඇත, එහිදී SOSpect එහි ක්රියාකාරිත්වය ආරම්භ කළ දා සිට ඔබට විවිධ මාස තෝරා ගත හැකිය. මෙම ක්රියාකාරීත්වය ඔබට උනන්දුවක් දක්වන සිතියමේ එක් එක් ප්රදේශයේ පරිණාමය නිරීක්ෂණය කිරීමට සහ තේරුම් ගැනීමට ඉඩ සලසයි.</value>
+  </data>
+  <data name="LblCostoReporte" xml:space="preserve">
+    <value>මෙම ක්රියාකාරීත්වය භාවිතා කිරීම ගණනය කිරීමේ පිරිවැයක් දරන අතර එය ඉහළ අගයක් නොවනු ඇතත් බලතල අවශ්ය බව මතක තබා ගන්න. කෙසේ වෙතත්, යෙදුමේ ඔබේ පළමු භාවිතයේදී අප ඔබට ලබා දෙන බලතල භාවිතා කරමින් ඔබට කිසිදු ගැටළුවකින් තොරව එය අත්පත් කර ගත හැකිය.</value>
+  </data>
+  <data name="LblReporteEvolucionAlarmas" xml:space="preserve">
+    <value>SOSpect හි තබා ඇති එලාම් වල පරිණාමය</value>
+  </data>
+  <data name="LblDescripcionEvolucionAlarmas" xml:space="preserve">
+    <value>මෙම වාර්තාවෙන්, ඔබේ ප්රදේශයේ කාලයත් සමඟ එක් එක් වර්ගයේ එලාම් වල ප්රවණතා දැන ගැනීමට ඔබට හැකි වනු ඇත. අනතුරුදායක ප්රවණතා නිරීක්ෂණය කිරීමට සහ විශ්ලේෂණය කිරීමට මෙන්ම අපරාධවල ඇති විය හැකි අඩුවීම් හඳුනා ගැනීමට ඔබට හැකි වනු ඇත.</value>
+  </data>
+  <data name="LblReportePredictivo" xml:space="preserve">
+    <value>SOSpect පුරෝකථන වාර්තා</value>
+  </data>
+  <data name="LblDescripcionReportesPredictivos" xml:space="preserve">
+    <value>SOSpect ප්රජාව ප්රමාණවත් දත්ත ජනනය කරන බැවින් සම්භාවිතාව මත පදනම් වූ සිදුවීම් අනාවැකි සහ විශ්ලේෂණ මෙවලම් කළ හැකිය. මෙම වාර්තා මඟින් අනතුරු ඇඟවීම් තරංග හෝ සාපරාධී ක්රියාකාරකම් වල වැඩිවීම් ළඟා වන විට දැන ගැනීමට ඔබට ඉඩ සලසයි, ඔබට, ඔබේ පවුලට සහ ඔබේ ප්රජාවට ඕනෑම අවදානමක් වළක්වා ගැනීම සඳහා අවශ්ය පූර්වාරක්ෂාවන් ගැනීමට ඔබට අවස්ථාව ලබා දෙනු ඇත.</value>
+  </data>
+  <data name="LblReporteAnalisisDeTextos" xml:space="preserve">
+    <value>SOSpect එලාම් චැට් විශ්ලේෂණ වාර්තාව</value>
+  </data>
+  <data name="LblDescripcionAnalisisTextos" xml:space="preserve">
+    <value>පරිශීලකයින් SOSpect හි අභ්යන්තර චැට් හරහා එලාම් විස්තර කිරීම සහ ඒවායේ පරිණාමය යාවත්කාලීන කිරීම සඳහා ස්තූතිවන්ත වන අතර, මෙම වාර්තාව ප්රජාවට වඩාත්ම බලපාන ටයිපොලොජි දෘශ්යමාන කිරීමට ඉඩ සලසයි. මෙය ඔබේ ප්රදේශයේ ආරක්ෂාව පිළිබඳ සංජානනය වැඩි දියුණු කිරීම සඳහා පියවර ගැනීමට අවස්ථාවක් සපයයි.</value>
+  </data>
+  <data name="LblRangoReporte" xml:space="preserve">
+    <value>මෙම වාර්තාව පසුගිය දින 30 ආවරණය කරයි</value>
+  </data>
+  <data name="AcercadeSOSpect" xml:space="preserve">
+    <value>SOSpect ගැන</value>
+  </data>
+  <data name="Porcentajedealarmasciertasfrenteafalsasenunradiodeunkilometroymedio" xml:space="preserve">
+    <value>කිලෝමීටර එකහමාරක අරයක් තුළ සත්ය එදිරිව ව්යාජ එලාම් වල ප්රතිශතය</value>
+  </data>
+  <data name="Promediodetiempoenminutosentrelanzamientodealarmaenmizonaylaprimeracalificacionodescripcion" xml:space="preserve">
+    <value>මගේ ප්රදේශයේ එලාම් දියත් කිරීම සහ පළමු ශ්රේණිගත කිරීම හෝ විස්තරය අතර මිනිත්තු වල සාමාන්ය කාලය</value>
+  </data>
+  <data name="Cantidadrealdepersonasenunradiodeunkilometroymedio" xml:space="preserve">
+    <value>කිලෝමීටර එකහමාරක අරය තුළ සිටින පුද්ගලයින්ගේ සැබෑ සංඛ්යාව</value>
+  </data>
+  <data name="Cantidadrealdepersonasenmiradioactual" xml:space="preserve">
+    <value>මගේ වර්තමාන අරය තුළ සිටින සැබෑ පුද්ගලයින් ගණන</value>
+  </data>
+  <data name="Miradioactualderecepcionyenviodealarmasenmetros" xml:space="preserve">
+    <value>මීටර් වලින් එලාම් ලබා ගැනීම සහ යැවීම ේ මගේ වර්තමාන අරය</value>
+  </data>
+  <data name="Cantidadrealdepersonasquerecibieronmisalarmas" xml:space="preserve">
+    <value>මගේ එලාම් ලබාගත් පුද්ගලයින්ගේ සැබෑ සංඛ් යාව</value>
+  </data>
+  <data name="Cantidaddenotificacionesdealarmaenviadasdemiparte" xml:space="preserve">
+    <value>මගෙන් එවන ලද එලාම් දැනුම්දීම් ගණන</value>
+  </data>
+  <data name="Personasquereportaronmiayudacomonegativaofalsa" xml:space="preserve">
+    <value>මගේ උපකාරය නිෂේධාත්මක හෝ අසත්ය ලෙස වාර්තා කළ අය</value>
+  </data>
+  <data name="Personasqueagradecieronmiayuda" xml:space="preserve">
+    <value>මගේ උපකාරය අගය කළ අය</value>
+  </data>
+  <data name="Poderesganadosporregalos" xml:space="preserve">
+    <value>තෑගි මගින් ලබාගත් බලතල</value>
+  </data>
+  <data name="LblParticipacionTpAlarma" xml:space="preserve">
+    <value>එලාම් වර්ගය මගින් සහභාගී වීම</value>
+  </data>
+  <data name="LblMetricBasics" xml:space="preserve">
+    <value>මූලික ප්රමිතික</value>
+  </data>
+  <data name="LblEfectiAlarmas" xml:space="preserve">
+    <value>අනතුරු ඇඟවීම් වල කාර්යක්ෂමතාව</value>
+  </data>
+  <data name="LblTotalAlarmas" xml:space="preserve">
+    <value>මුළු එලාම්</value>
+  </data>
+  <data name="LblAlarmasVerdaderas" xml:space="preserve">
+    <value>සැබෑ අනතුරු ඇඟවීම්</value>
+  </data>
+  <data name="LblAlarmasFalsas" xml:space="preserve">
+    <value>ව්යාජ අනතුරු ඇඟවීම්</value>
+  </data>
+  <data name="LblAlarmasEfectivas" xml:space="preserve">
+    <value>ඵලදායී එලාම් ප්රතිශතය</value>
+  </data>
+  <data name="LblMarcarLeidos" xml:space="preserve">
+    <value>කියවා ඇති පරිදි සියල්ල සලකුණු කරන්න</value>
+  </data>
+  <data name="LblSeMarcaronComoLeidos" xml:space="preserve">
+    <value>සියලුම පණිවුඩ කියවා ඇති පරිදි සලකුණු කර ඇත</value>
+  </data>
+  <data name="LabelNuevaVersion" xml:space="preserve">
+    <value>SOSpect හි නව අනුවාදයක් ඇති අතර එය දිගටම කරගෙන යාම අවශ්ය වේ</value>
+  </data>
+  <data name="OptReporteBasico" xml:space="preserve">
+    <value>මූලික වාර්තා - නොමිලේ!</value>
+  </data>
+  <data name="LblReporteBasicoSospect" xml:space="preserve">
+    <value>SOSpect මූලික වාර්තා</value>
+  </data>
+  <data name="LblReporteBasicoDescripcion" xml:space="preserve">
+    <value>SOSpect හි මූලික වාර්තා ඔබේ අනතුරු ඇඟවීමේ වාර්තා ඔබේ ප්රජාවට ඇති කර ඇති බලපෑම පිළිබඳ වටිනා තොරතුරු ඔබට සපයයි. ඊට අමතරව, එම ශ්රේණිගත කිරීම්වල එලාම් සහ අවංකභාවය නිවැරදිව ලකුණු කිරීමෙන් ඔබේ ප්රජාවට උපකාර කිරීමෙන් ලබාගත් බලතල ගණන ඔවුන් ඔබට පෙන්වයි. මෙම වාර්තා හරහා, පසුගිය මාසය තුළ ඔබේ ප්රදේශයේ සමස්ත හැසිරීම ඇගයීමට ලක් කළ හැකිය, ක්රියාවලියට සහභාගී වූ පරිශීලකයින් සංඛ්යාව සහ වැරදි මැදිහත්වීම් හේතුවෙන් සෘණ ලකුණු ලබා ගත් පරිශීලකයින් සංඛ්යාව ඇතුළුව.</value>
+  </data>
+  <data name="LblReporteBasicoDescripcionCorta" xml:space="preserve">
+    <value>SOSpect හි මූලික වාර්තා ඔබට වටිනා තොරතුරු සපයයි ... තව බලන්න...</value>
+  </data>
+  <data name="LblDescripcionRepTipoAlarma" xml:space="preserve">
+    <value>මෙම වාර්තාව ඔබේ වර්තමාන ස්ථානයේ සිට කිලෝමීටර එකහමාරක අරයක් තුළ නිතර නිතර අනතුරු ඇඟවීම් පිළිබඳ තොරතුරු ලබා දෙයි.</value>
+  </data>
+  <data name="LblDescripcionRepEfectAlarmas" xml:space="preserve">
+    <value>ඔබේ වර්තමාන ස්ථානයේ සිට කිලෝමීටර එකහමාරක අරයක් තුළ සැබෑ සහ ව්යාජ එලාම් අතර ඵලදායීතා සම්බන්ධතාවය පිළිබඳ තොරතුරු මෙම වාර්තාව ඔබට සපයයි.</value>
+  </data>
+  <data name="LblDescripcionRepMetricasBasicas" xml:space="preserve">
+    <value>මෙම වාර්තාව මඟින් ඔබගේ වර්තමාන ස්ථානයේ සිට කිලෝමීටර එකහමාරක අරය තුළ පරිශීලකයින්ගේ සංඛ්යාව මෙන්ම යෙදුම් එලාම් වල වර්තමාන අරය තුළ පරිශීලකයින් සංඛ්යාව පිළිබඳ දත්ත ඔබට සපයයි. ඊට අමතරව, එය ඔබේ උනන්දුව අමතර තොරතුරු කිහිපයක් ඇතුළත් වේ.</value>
+  </data>
+  <data name="OptVolumenAlarmas" xml:space="preserve">
+    <value>අසල එලාම් වර්ගය අනුව පරිමාව</value>
+  </data>
+  <data name="OptEfectividadAlarmas" xml:space="preserve">
+    <value>අසල එලාම් වල කාර්යක්ෂමතාව</value>
+  </data>
+  <data name="OptMetricasBasicas" xml:space="preserve">
+    <value>අසල එලාම් වල මූලික ප්රමිතික</value>
+  </data>
+  <data name="LblCredibilidadActual" xml:space="preserve">
+    <value>මගේ අනතුරු ඇඟවීම් වල විශ්වසනීයත්වය නම්:</value>
+  </data>
+  <data name="OptManualUsuarioSospect" xml:space="preserve">
+    <value>SOSpect පරිශීලක අත්පොත</value>
+  </data>
+  <data name="LblDescManualUsuario" xml:space="preserve">
+    <value>ඔබ සහ ඔබේ ආදරණීයයන් ආරක්ෂා කිරීම සඳහා නිර්මාණය කර ඇති නොමිලේ යෙදුමක් වන SOSpect හමුවන්න. අපි සංක්ෂිප්ත හා සවිස්තරාත්මක මාර්ගගත අත්පොතක් නිර්මාණය කර ඇති අතර එය ඔබට එය නිසි ලෙස භාවිතා කිරීමට උපකාරී වනු ඇත. මෙම අත්පොත සමඟ, ඔබට SOSpect වලින් උපරිම ප්රයෝජන ලබා ගත හැකි අතර එහි සියලු ආරක්ෂක විශේෂාංග වලින් ප්රයෝජන ගත හැකිය.</value>
+  </data>
+  <data name="SesionApple" xml:space="preserve">
+    <value>ඇපල් සමඟ ලියාපදිංචි වන්න</value>
+  </data>
+  <data name="LblCredibilidadAlarmaActual" xml:space="preserve">
+    <value>අනතුරු ඇඟවීමේ විශ්වසනීයත්වය:</value>
+  </data>
+  <data name="LblAccedeAlManual" xml:space="preserve">
+    <value>ඔබට අත්පොතට පිවිසිය හැකිය:</value>
+  </data>
+  <data name="LblRefrescarLista" xml:space="preserve">
+    <value>එලාම් ලැයිස්තුව නැවුම් කරන්න</value>
+  </data>
+  <data name="LblErrorCorreoDispositivo" xml:space="preserve">
+    <value>මෙම උපාංගය මත විද්යුත් තැපැල් යැවීමට නොහැකි විය</value>
+  </data>
+  <data name="LblErrorCorreo" xml:space="preserve">
+    <value>ඊ-තැපැල් යැවීමේදී දෝෂයක්:</value>
+  </data>
+  <data name="LblSeleccioneTipoAlarma" xml:space="preserve">
+    <value>කරුණාකර එලාම් වර්ගය තෝරන්න</value>
+  </data>
+  <data name="LblCompraFallida" xml:space="preserve">
+    <value>මිලදී ගැනීම සිදු කර නැත. කරුණාකර අන්තර්ජාල ප්රවේශය පරීක්ෂා කර නැවත උත්සාහ කරන්න</value>
+  </data>
+  <data name="LblSeleccionePuntoMapa" xml:space="preserve">
+    <value>ඔබ සිතියමේ නිරීක්ෂණ කලාපයක් තෝරා ගත යුතුය</value>
+  </data>
+  <data name="Cantidaddealarmascolocadasenlaszonasdevigilanciasuscritas" xml:space="preserve">
+    <value>දායක වූ නිරීක්ෂණ ප් රදේශවල තබන ලද අනතුරු ඇඟවීම් ගණන</value>
+  </data>
+  <data name="Cantidaddealarmascolocadaspormisprotegidos" xml:space="preserve">
+    <value>මගේ අනුගාමිකයන් විසින් තබන ලද එලාම් ගණන</value>
+  </data>
+  <data name="Credibilidadactualdelasalarmasqueenvioamicomunidad" xml:space="preserve">
+    <value>මම මගේ ප්රජාවට යවන එලාම් වල වර්තමාන විශ්වසනීයත්වය</value>
+  </data>
+  <data name="LblCompraExitosa" xml:space="preserve">
+    <value>සුභ පැතුම්! ඔබ දායකත්ව මිලදී ගැනීමට බලතල මිලදී ගත්තා. ඔබට සීනුවේ පැහැදිලි කිරීමේ පණිවිඩයක් හමුවනු ඇත!</value>
+  </data>
+  <data name="LblDebesHabilitarNotif" xml:space="preserve">
+    <value>ඔබ වැඩ කිරීමට SOSpect සඳහා දැනුම්දීම් යැවීම සක්රීය කළ යුතුය</value>
+  </data>
+  <data name="LblHabilitarNotifSettings" xml:space="preserve">
+    <value>මෙම යෙදුම දැනුම්දීම් සඳහා සහාය විය හැකිය, නමුත් ඔබ ඔබේ සැකසුම් තුළ මෙය සක්රීය කළ යුතුය.</value>
+  </data>
+  <data name="LblErrorHabilitandoUsoNotif" xml:space="preserve">
+    <value>තල්ලු දැනුම්දීම් භාවිතා කිරීම වළක්වන දෝෂයක් සිදු විය</value>
+  </data>
+  <data name="LblMostrarDireccionEscape" xml:space="preserve">
+    <value>මාක් පැනගිය අයගේ පලා යාමේ මාර්ගය</value>
+  </data>
+  <data name="LblProximamenteSOSpect" xml:space="preserve">
+    <value>SOSpect දී ඉක්මනින් එනවා!</value>
+  </data>
+  <data name="LblReportesProximos" xml:space="preserve">
+    <value>දත්ත විද්යාව සමඟ විශ්ලේෂණාත්මක හා පුරෝකථන වාර්තා!</value>
+  </data>
+  <data name="LblHolaBienvenido" xml:space="preserve">
+    <value>ආයුබෝවන්! SOSpect වෙත සාදරයෙන් පිළිගනිමු. 
+
+SOSpect යනු ආසන්න අවදානම් පිළිබඳ කාලෝචිත අනතුරු ඇඟවීම් ලබා දීමෙන් ඔබ සහ ඔබේ ආදරණීයයන් ආරක්ෂා කිරීම සඳහා නිර්මාණය කර ඇති නොමිලේ මෙවලමකි! ඔබට මුලදී බොහෝ එලාම් නොලැබෙනු ඇත, මන්ද SOSpect ස්ථාපනය කර ඇති බොහෝ අය තවමත් ඔබ අසල නොමැති බැවිනි. ඔබ අපට උත්සාහ කරන ලෙසත් යෙදුම අස්ථාපනය නොකරන ලෙසත් අපි ඉල්ලා සිටිමු. SOSpect යම් අවස්ථාවක දී ඔබේ ජීවිතය මෙන්ම ඔබේ පවුලේ හෝ ප්රජාවේ කෙනෙකුගේ ජීවිතය බේරා ගත හැකිය.
+
+සැකසුම් වල දක්නට ලැබෙන "වාර්තා" මෙනුවේ "මූලික වාර්තාව" කොටසේ, ඔබට අනතුරු ඇඟවීම් ලැබෙනු ඇති ඔබේ ආවරණ ප්රදේශය තුළ අසල ඇති පරිශීලකයින් සංඛ්යාව "මූලික ප්රමිතික" කොටසේ ඔබට දැක ගත හැකිය. එම සංඛ්යාව වැඩි කිරීමට අපට උදව් කරන්න, එය නොමිලේ වන අතර ඔබට වඩාත් ආරක්ෂිතව ජීවත් වීමට ඉඩ සලසයි!
+
+SOSpect ක්රියා කරන ආකාරය පිළිබඳ අදහසක් ලබා දෙන මෙම කෙටි හඳුන්වාදීමේ අත්පොත ප්රවේශමෙන් කියවීමට අපි ඔබට ආරාධනා කරමු. යෙදුම ස්ථාපනය කිරීමෙන් පසු එය එක් වරක් පමණක් ප්රදර්ශනය වන බව කරුණාවෙන් සලකන්න.
+
+SOSpect භාවිතා කිරීම සහ සෑම කෙනෙකුගේම ආරක්ෂාවට දායක වීම ගැන ස්තූතියි!
+
+දිගටම කරගෙන යාමට තිරය තට්ටු කරන්න...</value>
+  </data>
+</root>

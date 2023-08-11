@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="sospect.Views.SubscriptionValuesPage"
+             xmlns:fonts="clr-namespace:sospect.Resources.Fonts;assembly=sospect"
+             xmlns:helpers="clr-namespace:sospect.Helpers"
+             BackgroundColor="White"
+             Title="{helpers:TranslateExtension Text='LblValoresSubsc'}">
+    <Grid>
+        <Grid Padding="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid Margin="0, 10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Label Text="{helpers:TranslateExtension Text='LblSuscripcionesDisponibles'}" FontAttributes="Bold" TextColor="Black" FontSize="18" />
+            </Grid>
+                <CollectionView Grid.Row="1" BackgroundColor="White" ItemsSource="{Binding SubscriptionValues}" Margin="10">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame Margin="5" Padding="10" CornerRadius="10" HasShadow="True" BackgroundColor="#F0F0F0" VerticalOptions="Center">
+                            <Grid Margin="20,0" >
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="70"></RowDefinition>                                        
+                                    </Grid.RowDefinitions>
+                                    <Label Text="•" FontSize="28" TextColor="Black" VerticalTextAlignment="Center" HorizontalOptions="Start" />
+                                    <Label Grid.Column="1" TextColor="Black" Text="{Binding Texto}" FontSize="16" Margin="20,0,0,0" HorizontalOptions="Center" VerticalTextAlignment="Center" LineBreakMode="WordWrap" />
+                                </Grid>
+                            </Frame>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+        </Grid>
+        <Grid BackgroundColor="Black"
+                  Opacity="0.5"
+                  HorizontalOptions="FillAndExpand"
+                  VerticalOptions="FillAndExpand"
+                  IsVisible="{Binding IsRunning}">
+            <ActivityIndicator VerticalOptions="Center"
+                                   HorizontalOptions="Center"
+                                   HeightRequest="50"
+                                   WidthRequest="50"
+                                   Color="DarkBlue"
+                                   IsRunning="{Binding IsRunning}">
+            </ActivityIndicator>
+        </Grid>
+    </Grid>
+</ContentPage>

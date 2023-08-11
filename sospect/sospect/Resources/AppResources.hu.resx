@@ -1,0 +1,1090 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Bienvenido" xml:space="preserve">
+    <value>Üdvözöljük a SOSpect oldalán</value>
+  </data>
+  <data name="InicieSesion" xml:space="preserve">
+    <value>A folytatáshoz jelentkezzen be</value>
+  </data>
+  <data name="InicieSesionCon" xml:space="preserve">
+    <value>vagy jelentkezzen be ezzel</value>
+  </data>
+  <data name="SesionFacebook" xml:space="preserve">
+    <value>BEJELENTKEZÉS FACEBOOKKAL</value>
+  </data>
+  <data name="SesionGoogle" xml:space="preserve">
+    <value>BEJELENTKEZÉS GOOGLE-FIÓKKAL</value>
+  </data>
+  <data name="LabelAlerta" xml:space="preserve">
+    <value>Éber</value>
+  </data>
+  <data name="LabelCrimen" xml:space="preserve">
+    <value>Bűncselekmény</value>
+  </data>
+  <data name="LabelOK" xml:space="preserve">
+    <value>OKÉ</value>
+  </data>
+  <data name="LabelCancelar" xml:space="preserve">
+    <value>Érvénytelenít</value>
+  </data>
+  <data name="ReportarCrimen" xml:space="preserve">
+    <value>Bűncselekmény bejelentése</value>
+  </data>
+  <data name="LabelMapa" xml:space="preserve">
+    <value>Térkép</value>
+  </data>
+  <data name="LabelDescribir" xml:space="preserve">
+    <value>Leír</value>
+  </data>
+  <data name="DescripcionAlarma" xml:space="preserve">
+    <value>A riasztás leírása</value>
+  </data>
+  <data name="DescripcionSospechoso" xml:space="preserve">
+    <value>A gyanúsított leírása</value>
+  </data>
+  <data name="DescripcionVehiculo" xml:space="preserve">
+    <value>Jármű leírása</value>
+  </data>
+  <data name="DescripcionArma" xml:space="preserve">
+    <value>A fegyver leírása</value>
+  </data>
+  <data name="PuntuacionDescripcion" xml:space="preserve">
+    <value>Pontozás leírása</value>
+  </data>
+  <data name="LabelEditar" xml:space="preserve">
+    <value>Szerkeszt</value>
+  </data>
+  <data name="DescripcionesParaAlarma" xml:space="preserve">
+    <value>A riasztáshoz készült leírások</value>
+  </data>
+  <data name="EspacioPublicidad" xml:space="preserve">
+    <value>Hirdetési hely</value>
+  </data>
+  <data name="AlarmasRecientes" xml:space="preserve">
+    <value>Legutóbbi riasztások a leírás hozzáadásához</value>
+  </data>
+  <data name="ConfirmarAlarma" xml:space="preserve">
+    <value>Riasztás megerősítése</value>
+  </data>
+  <data name="LabelInformacion" xml:space="preserve">
+    <value>Információ</value>
+  </data>
+  <data name="LabelError" xml:space="preserve">
+    <value>Hiba</value>
+  </data>
+  <data name="LabelCancelado" xml:space="preserve">
+    <value>Visszavont</value>
+  </data>
+  <data name="LabelLoginCancelado" xml:space="preserve">
+    <value>Bejelentkezés megszakítva</value>
+  </data>
+  <data name="LabelFallo" xml:space="preserve">
+    <value>Kudarc</value>
+  </data>
+  <data name="RecibeAlarma" xml:space="preserve">
+    <value>Riasztást kapott a tartózkodási helye közelében, valódi?</value>
+  </data>
+  <data name="LabelConfirmo" xml:space="preserve">
+    <value>Megerősít</value>
+  </data>
+  <data name="LabelNoSeguro" xml:space="preserve">
+    <value>Nem vagyok benne biztos</value>
+  </data>
+  <data name="LabelEsFalsa" xml:space="preserve">
+    <value>Ez hamis</value>
+  </data>
+  <data name="LabelConfirmar" xml:space="preserve">
+    <value>Megerősít</value>
+  </data>
+  <data name="AdvertenciaCalificacion" xml:space="preserve">
+    <value>Ez az értékelés később nem módosítható. Befolyásolhatja jövőbeli hitelességét, ha a minősítések konszenzusa a szavazata ellen szól. Biztos vagy benne?</value>
+  </data>
+  <data name="LabelSi" xml:space="preserve">
+    <value>Igen</value>
+  </data>
+  <data name="LabelNo" xml:space="preserve">
+    <value>Nem</value>
+  </data>
+  <data name="AlarmaEnviada" xml:space="preserve">
+    <value>Riasztás elküldve!</value>
+  </data>
+  <data name="MsgTrasAlarmaEnviada" xml:space="preserve">
+    <value>Ha biztonságban van, kérjük, írja le a riasztást, ha nem, rejtse el telefonját, és kerülje el a veszélyt.</value>
+  </data>
+  <data name="notificacionurgente" xml:space="preserve">
+    <value>Sürgős értesítést küldünk a legközelebbi telefonokra a következő címre:</value>
+  </data>
+  <data name="LabelAlarma" xml:space="preserve">
+    <value>Riadó</value>
+  </data>
+  <data name="LabelMetros" xml:space="preserve">
+    <value>méter</value>
+  </data>
+  <data name="LabelTuUbicacion" xml:space="preserve">
+    <value>Az Ön tartózkodási helye</value>
+  </data>
+  <data name="LabelUsuario" xml:space="preserve">
+    <value>Felhasználó</value>
+  </data>
+  <data name="LabelTipoAlarma" xml:space="preserve">
+    <value>Riasztás típusa</value>
+  </data>
+  <data name="DireccionEscape" xml:space="preserve">
+    <value>Kérjük, adja meg a gyanúsított menekülési címét.</value>
+  </data>
+  <data name="DescripcionAlerta" xml:space="preserve">
+    <value>A figyelmeztető jelzés leírása</value>
+  </data>
+  <data name="DescripcionImplicado" xml:space="preserve">
+    <value>A figyelmeztető jelzésben érintett személy leírása</value>
+  </data>
+  <data name="DescripcionVehiculoImp" xml:space="preserve">
+    <value>Az érintett jármű (adott esetben)</value>
+  </data>
+  <data name="ArmaImplicada" xml:space="preserve">
+    <value>Az érintett fegyver (adott esetben)</value>
+  </data>
+  <data name="LabelRutaEscape" xml:space="preserve">
+    <value>Gyanús menekülési útvonal</value>
+  </data>
+  <data name="ObjetivoSospect" xml:space="preserve">
+    <value>A SOSpect célja, hogy lehetővé tegye a közösség számára, hogy figyelmeztessen és riasztásokat kapjon a felhasználó tartózkodási helyén lévő veszélyekről, hogy elkerülje a rá és szeretteire jelentett kockázatokat. A felhasználók tartózkodási helyét nem osztják meg és nem követik nyomon, biztosítva magánéletüket. A felhasználók veszélyjelzéseket helyezhetnek el, hogy segítsenek másoknak elkerülni a kockázatos helyzetek áldozatává válását.</value>
+  </data>
+  <data name="UbicacionImportante" xml:space="preserve">
+    <value>Fontos ismerni a felhasználó tartózkodási helyét, hogy figyelmeztethesse őt, ha valaki veszélyriasztást helyez el a tartózkodási helye közelében. A felhasználó tartózkodási helye azonban privát, és csak a térkép azon pontjai vannak megosztva, ahol a riasztások el vannak helyezve.</value>
+  </data>
+  <data name="GenteUnida" xml:space="preserve">
+    <value>A SOSpect segítségével a közösség összefoghat, hogy csökkentse a bűnözést és elkerülje a kockázatos helyzetek áldozatává válását, figyelmeztetve másokat is, hogy maradjanak biztonságban.</value>
+  </data>
+  <data name="contactenos" xml:space="preserve">
+    <value>Kapcsolat</value>
+  </data>
+  <data name="visitenos" xml:space="preserve">
+    <value>Látogasson el hozzánk a</value>
+  </data>
+  <data name="ZonaVigilancia" xml:space="preserve">
+    <value>Felügyeleti zóna előfizetés</value>
+  </data>
+  <data name="SeleccioneUbicacionVigilar" xml:space="preserve">
+    <value>Válassza ki a megtekinteni kívánt helyet</value>
+  </data>
+  <data name="SeleccionEnMapa" xml:space="preserve">
+    <value>Kiválasztás a térképen</value>
+  </data>
+  <data name="ExplicaZonaVigilancia" xml:space="preserve">
+    <value>A kiválasztott ponton elhelyezett összes riasztás értesítést kap, függetlenül attól, hogy ki helyezi el őket. Így tisztában lehet az adott ponton futó veszélyekkel. Ez ideális ahhoz, hogy tisztában legyen a veszélyekkel olyan helyeken, mint a gyermekek iskolája vagy egyeteme, vagy olyan területeken, ahol rokonai vagy szerettei dolgoznak.</value>
+  </data>
+  <data name="CrearZonaV" xml:space="preserve">
+    <value>Felügyeleti zóna létrehozása ezzel a hellyel</value>
+  </data>
+  <data name="LabelLatitud" xml:space="preserve">
+    <value>Szélesség</value>
+  </data>
+  <data name="LabelLongitud" xml:space="preserve">
+    <value>Hosszúság</value>
+  </data>
+  <data name="LabelIntroduccion" xml:space="preserve">
+    <value>Bevezetés</value>
+  </data>
+  <data name="AmpliacionRadio" xml:space="preserve">
+    <value>A riasztási sugár kiterjesztése</value>
+  </data>
+  <data name="TuRadioActual" xml:space="preserve">
+    <value>Az aktuális sugár:</value>
+  </data>
+  <data name="CrearNuevoRadio" xml:space="preserve">
+    <value>Előfizetésem létrehozása ehhez az új rádióhoz</value>
+  </data>
+  <data name="ExplicacionVigencias" xml:space="preserve">
+    <value>Minden előfizetés érvényes, kérjük, ellenőrizze az előfizetések árait a főmenü első opciójában</value>
+  </data>
+  <data name="VasARequerir" xml:space="preserve">
+    <value>Szükséged lesz rá</value>
+  </data>
+  <data name="xPoderesParaSubs" xml:space="preserve">
+    <value>Jogosítványok arra, hogy ezt a rádiót hozzáadja jelenlegi rádiójához</value>
+  </data>
+  <data name="Exito" xml:space="preserve">
+    <value>Siker</value>
+  </data>
+  <data name="SubscripcionCreada" xml:space="preserve">
+    <value>Az előfizetés sikeresen létrejött.</value>
+  </data>
+  <data name="MensajeError" xml:space="preserve">
+    <value>Hiba történt a kiszolgálóhoz való csatlakozáskor. Kérjük, próbálja újra.</value>
+  </data>
+  <data name="SeleccionaRuta" xml:space="preserve">
+    <value>Ki kell választania a gyanúsított menekülési útvonalát.</value>
+  </data>
+  <data name="AprobarSolicitudes" xml:space="preserve">
+    <value>Kérelmek jóváhagyása</value>
+  </data>
+  <data name="LabelAprobar" xml:space="preserve">
+    <value>Jóváhagy</value>
+  </data>
+  <data name="LabelRechazar" xml:space="preserve">
+    <value>Elutasít</value>
+  </data>
+  <data name="CompletarSubscripcion" xml:space="preserve">
+    <value>Teljes védett előfizetés</value>
+  </data>
+  <data name="CompletarSubsc" xml:space="preserve">
+    <value>Teljes előfizetés</value>
+  </data>
+  <data name="LblMensajes" xml:space="preserve">
+    <value>Üzenetek</value>
+  </data>
+  <data name="LblFechaMensaje" xml:space="preserve">
+    <value>Üzenet dátuma</value>
+  </data>
+  <data name="LblMenu" xml:space="preserve">
+    <value>KONFIGURÁCIÓ</value>
+  </data>
+  <data name="OptCompraPoderes" xml:space="preserve">
+    <value>Vásároljon erőket a funkciók feloldásához</value>
+  </data>
+  <data name="OptGestionarProtegidos" xml:space="preserve">
+    <value>Védett védők kezelése</value>
+  </data>
+  <data name="OptCrearZonas" xml:space="preserve">
+    <value>Megfigyelési körzetek létrehozása</value>
+  </data>
+  <data name="OptAumentarRadio" xml:space="preserve">
+    <value>A riasztás vételi sugarának növelése</value>
+  </data>
+  <data name="OptAcercaDe" xml:space="preserve">
+    <value>Az SOSpect alkalmazásról</value>
+  </data>
+  <data name="OptCerrarSesion" xml:space="preserve">
+    <value>Kijelentkezik</value>
+  </data>
+  <data name="LblProtectores" xml:space="preserve">
+    <value>Védelmezőim</value>
+  </data>
+  <data name="LblSuspender" xml:space="preserve">
+    <value>Ideiglenes felfüggesztés</value>
+  </data>
+  <data name="LblEliminarProtegido" xml:space="preserve">
+    <value>Védett eltávolítása</value>
+  </data>
+  <data name="LblSubscrProtegido" xml:space="preserve">
+    <value>Védett előfizetés</value>
+  </data>
+  <data name="LblIDUsuarioAProteger" xml:space="preserve">
+    <value>Adja meg a védeni kívánt felhasználói azonosítót. (Ez az érték a csatolni kívánt felhasználó SOSpect konfigurációs menüjének tetején található)</value>
+  </data>
+  <data name="LblRelacionProtegido" xml:space="preserve">
+    <value>Kapcsolatom ezzel a pártfogolttal:</value>
+  </data>
+  <data name="LblSolicitarPermiso" xml:space="preserve">
+    <value>Engedély kérése a felhasználótól</value>
+  </data>
+  <data name="LblCompleteCampos" xml:space="preserve">
+    <value>Kérjük, töltse ki az összes mezőt.</value>
+  </data>
+  <data name="LblProcesarSolicitud" xml:space="preserve">
+    <value>Hiba történt a kérelem feldolgozása során. Kérjük, próbálja újra.</value>
+  </data>
+  <data name="LblProtegidos" xml:space="preserve">
+    <value>Védenceim</value>
+  </data>
+  <data name="LblUsuarioProtegido" xml:space="preserve">
+    <value>Védett felhasználói azonosító</value>
+  </data>
+  <data name="LblFechaActivacion" xml:space="preserve">
+    <value>Aktiválás dátuma</value>
+  </data>
+  <data name="LblFechaFinalizacion" xml:space="preserve">
+    <value>Befejezés dátuma</value>
+  </data>
+  <data name="LblAccion" xml:space="preserve">
+    <value>Akció</value>
+  </data>
+  <data name="LblCantidadPoderes" xml:space="preserve">
+    <value>Hatáskörök száma</value>
+  </data>
+  <data name="LblPrecio" xml:space="preserve">
+    <value>Ár</value>
+  </data>
+  <data name="LblComprar" xml:space="preserve">
+    <value>Vesz</value>
+  </data>
+  <data name="LblValoresSubsc" xml:space="preserve">
+    <value>Előfizetési értékek</value>
+  </data>
+  <data name="LblTerminos" xml:space="preserve">
+    <value>A SOSSECT APP szolgáltatási feltételei</value>
+  </data>
+  <data name="LblAcepto" xml:space="preserve">
+    <value>Elfogadom a szerződést</value>
+  </data>
+  <data name="LblNoAcepto" xml:space="preserve">
+    <value>Nem fogadom el</value>
+  </data>
+  <data name="LblOpcionesProtegidos" xml:space="preserve">
+    <value>SOSpect App által védett</value>
+  </data>
+  <data name="LblExplicacionProtegidos" xml:space="preserve">
+    <value>Figyelmeztetéseket kaphat társadalmi körének tagjaitól, még akkor is, ha távol vannak tőled. Itt kezelheti ezt a funkciót</value>
+  </data>
+  <data name="OptIniciarTramite" xml:space="preserve">
+    <value>Indítsa el a védett hozzáadásának folyamatát</value>
+  </data>
+  <data name="OptAprobarSolicitud" xml:space="preserve">
+    <value>Védő kérésének jóváhagyása</value>
+  </data>
+  <data name="OptListarProtegidos" xml:space="preserve">
+    <value>Lásd védenceim listáját</value>
+  </data>
+  <data name="OptListarProtectores" xml:space="preserve">
+    <value>Lásd a védelmezőim listáját</value>
+  </data>
+  <data name="OptVolver" xml:space="preserve">
+    <value>Visszatérés</value>
+  </data>
+  <data name="LblPoderesSospect" xml:space="preserve">
+    <value>Az SOSpect App hatásköre</value>
+  </data>
+  <data name="LblOpcionesPoderes" xml:space="preserve">
+    <value>Üdvözöljük az energiagazdálkodási lehetőségben, mit szeretne tenni?</value>
+  </data>
+  <data name="LblSubscripcionesCosto" xml:space="preserve">
+    <value>Szeretném tudni, hogy milyen előfizetéseket vásárolhatok, és mennyibe kerülnek</value>
+  </data>
+  <data name="LblQuieroComprar" xml:space="preserve">
+    <value>Szuperképességeket szeretnék vásárolni előfizetések megszerzéséhez</value>
+  </data>
+  <data name="ExplicacionRadio" xml:space="preserve">
+    <value>Az alkalmazás összes felhasználójának alapértelmezett sugara 100 méter. Ezt a sugarat az alkalmazás lehetőségeivel bővítheti. Ezután válassza ki a kívánt sugarat:</value>
+  </data>
+  <data name="LblAsunto" xml:space="preserve">
+    <value>Rövid leírás</value>
+  </data>
+  <data name="LblCompraPoderes" xml:space="preserve">
+    <value>A hatáskörök megvásárlása</value>
+  </data>
+  <data name="OptCompletarTramite" xml:space="preserve">
+    <value>Védett hozzáadása teljes eljárása</value>
+  </data>
+  <data name="LabelHecho" xml:space="preserve">
+    <value>Befejezett</value>
+  </data>
+  <data name="LabelEscapoEnEstaDireccion" xml:space="preserve">
+    <value>Ebben az irányban menekült</value>
+  </data>
+  <data name="OptMisSubs" xml:space="preserve">
+    <value>Saját előfizetések</value>
+  </data>
+  <data name="LblMisSubscripciones" xml:space="preserve">
+    <value>Saját előfizetések</value>
+  </data>
+  <data name="LblidUsuario" xml:space="preserve">
+    <value>Felhasználói azonosító:</value>
+  </data>
+  <data name="LblTipo" xml:space="preserve">
+    <value>Előfizetés típusa:</value>
+  </data>
+  <data name="LblDescripcionPuntos" xml:space="preserve">
+    <value>Leírás:</value>
+  </data>
+  <data name="LblFechaFinPuntos" xml:space="preserve">
+    <value>Befejezés dátuma:</value>
+  </data>
+  <data name="LblPoderesPuntos" xml:space="preserve">
+    <value>Megújítási hatáskörök:</value>
+  </data>
+  <data name="LblRenovar" xml:space="preserve">
+    <value>Megújít</value>
+  </data>
+  <data name="LblCancelarSubscripcion" xml:space="preserve">
+    <value>Előfizetés lemondása</value>
+  </data>
+  <data name="LblSeguroDeCancelar" xml:space="preserve">
+    <value>Biztosan le szeretné mondani az előfizetést? Az elfogyasztott energiákat nem adják vissza.</value>
+  </data>
+  <data name="LblAceptar" xml:space="preserve">
+    <value>Elfogad</value>
+  </data>
+  <data name="Alarm_1" xml:space="preserve">
+    <value>Figyelmeztetés vagy veszély</value>
+  </data>
+  <data name="Alarm_2" xml:space="preserve">
+    <value>Bűncselekmény vagy elkövetett bűncselekmény</value>
+  </data>
+  <data name="Alarm_3" xml:space="preserve">
+    <value>Utcai verekedés</value>
+  </data>
+  <data name="Alarm_4" xml:space="preserve">
+    <value>Elveszett kisállat</value>
+  </data>
+  <data name="Alarm_5" xml:space="preserve">
+    <value>Elveszett személy</value>
+  </data>
+  <data name="Alarm_6" xml:space="preserve">
+    <value>Zavargások vagy tüntetések</value>
+  </data>
+  <data name="Alarm_7" xml:space="preserve">
+    <value>Kérjen vizuális kíséretet az utcára való kijáratnál</value>
+  </data>
+  <data name="Alarm_8" xml:space="preserve">
+    <value>Családon belüli erőszak</value>
+  </data>
+  <data name="Alarm_9" xml:space="preserve">
+    <value>A gyanúsított a tartózkodási helyére menekül</value>
+  </data>
+  <data name="LblCostoPoderes" xml:space="preserve">
+    <value>Csomag költsége</value>
+  </data>
+  <data name="LblSuscripcionesDisponibles" xml:space="preserve">
+    <value>Jelenleg elérhető előfizetések</value>
+  </data>
+  <data name="LblFamilia" xml:space="preserve">
+    <value>Család</value>
+  </data>
+  <data name="LblAmigo" xml:space="preserve">
+    <value>Barát</value>
+  </data>
+  <data name="LblCompanero" xml:space="preserve">
+    <value>Társ</value>
+  </data>
+  <data name="LblOtroSinDefinir" xml:space="preserve">
+    <value>Egyéb meghatározatlan</value>
+  </data>
+  <data name="LabelExito" xml:space="preserve">
+    <value>Siker</value>
+  </data>
+  <data name="LblSolicitudAprobada" xml:space="preserve">
+    <value>A kérelmet sikeresen jóváhagyták.</value>
+  </data>
+  <data name="MensajeErrorAprobando" xml:space="preserve">
+    <value>Hiba történt a kérelem jóváhagyásakor</value>
+  </data>
+  <data name="MensajeErrorRechazando" xml:space="preserve">
+    <value>Nem sikerült elutasítani a kérést.</value>
+  </data>
+  <data name="LblSolicitudRechazada" xml:space="preserve">
+    <value>A kérelmet sikeresen elutasították.</value>
+  </data>
+  <data name="LblUsuarioSolicitante" xml:space="preserve">
+    <value>Felhasználó kérése</value>
+  </data>
+  <data name="LblFechaSolicitud" xml:space="preserve">
+    <value>Alkalmazás dátuma</value>
+  </data>
+  <data name="LblAccionRealizar" xml:space="preserve">
+    <value>Meghozandó intézkedések</value>
+  </data>
+  <data name="LblSubscripcionCompletada" xml:space="preserve">
+    <value>Az előfizetés befejeződött</value>
+  </data>
+  <data name="LblSubscripcionFallida" xml:space="preserve">
+    <value>Az előfizetés sikertelen</value>
+  </data>
+  <data name="LblUsuarioAprobador" xml:space="preserve">
+    <value>Jóváhagyó felhasználó</value>
+  </data>
+  <data name="LblFechaAprobacion" xml:space="preserve">
+    <value>A jóváhagyás dátuma</value>
+  </data>
+  <data name="LblSubscrEliminada" xml:space="preserve">
+    <value>Leiratkozott</value>
+  </data>
+  <data name="LblSubsEliminadaExitosamente" xml:space="preserve">
+    <value>Az előfizetés sikeresen eltávolítva</value>
+  </data>
+  <data name="LblEliminarProtector" xml:space="preserve">
+    <value>Távolítsa el a védőt</value>
+  </data>
+  <data name="LblRenovacionAplicada" xml:space="preserve">
+    <value>Sikeresen megvalósított felújítás</value>
+  </data>
+  <data name="LblErrorRenovando" xml:space="preserve">
+    <value>Hiba történt a megújításkor, az újrapróbálkozáskor vagy az ügyfélszolgálatnak való jelentéskor, a "menüben"&gt;"Névjegy" opcióban elérhető kapcsolat</value>
+  </data>
+  <data name="LblCancelacionAplicada" xml:space="preserve">
+    <value>A lemondás sikeresen megtörtént</value>
+  </data>
+  <data name="LblErrorCancelando" xml:space="preserve">
+    <value>Hiba a megszakítás, az újrapróbálkozás vagy az ügyfélszolgálatnak való jelentés, a "menü"&gt;"Névjegy" opcióban elérhető kapcsolat</value>
+  </data>
+  <data name="LblZonaCreada" xml:space="preserve">
+    <value>A kért megfigyelési körzet kijelölése sikeresen megtörtént</value>
+  </data>
+  <data name="LblErrorZonaVigil" xml:space="preserve">
+    <value>Hiba történt az új kért zóna feliratkozásakor, újrapróbálkozáskor vagy jelentéskor az ügyfélszolgálatnak, kapcsolat elérhető a "menü"&gt;"Névjegy" opcióban</value>
+  </data>
+  <data name="LblSeleccionaNuevoRadio" xml:space="preserve">
+    <value>Válassza ki az új sugarat méterben</value>
+  </data>
+  <data name="LblUsuarioProtector" xml:space="preserve">
+    <value>Védő felhasználó</value>
+  </data>
+  <data name="LblSeguroEliminarProtegido" xml:space="preserve">
+    <value>Biztosan eltávolítja védencét? Az előfizetésben használt jogosultságok nem kerülnek visszaadásra.</value>
+  </data>
+  <data name="LblSuspenderProtectores" xml:space="preserve">
+    <value>Biztosan felfüggeszti a védőinek küldött értesítéseket 6 órára? Az összes védője felfüggeszti a riasztásokat, és az előfizetés befejezési ideje nem hosszabbodik meg emiatt. A védőt nem értesítik erről a műveletről.</value>
+  </data>
+  <data name="LblSuspensionRealizada" xml:space="preserve">
+    <value>A riasztások felfüggesztése az összes védőnek 6 órára sikeres volt.</value>
+  </data>
+  <data name="LabelSeguroEliminarProtector" xml:space="preserve">
+    <value>Biztosan eltávolítja a védőt? Az előfizetésben használt hatáskörök nem kerülnek visszaadásra, és a protektort értesítik erről a műveletről.</value>
+  </data>
+  <data name="LabelProtectorEliminado" xml:space="preserve">
+    <value>A kiválasztott védő törölve lett. A hatáskörök nem kerülnek vissza a védelmezőhöz. A védőt értesítik erről az intézkedésről</value>
+  </data>
+  <data name="LblConfirmacionRequerida" xml:space="preserve">
+    <value>Fontos! Megerősítés szükséges!</value>
+  </data>
+  <data name="LblNoHayRegistros" xml:space="preserve">
+    <value>Jelenleg nincsenek megjeleníthető naplók</value>
+  </data>
+  <data name="LblMiLogin" xml:space="preserve">
+    <value>A bejelentkezési adataim:</value>
+  </data>
+  <data name="LblSaldoPoderesEs" xml:space="preserve">
+    <value>Az erőmérlegem:</value>
+  </data>
+  <data name="LblUsuarioID" xml:space="preserve">
+    <value>A felhasználói azonosítóm</value>
+  </data>
+  <data name="LblNoHayRegistrosAqui" xml:space="preserve">
+    <value>Még senki sem írt semmit!</value>
+  </data>
+  <data name="LblAlertaReportadaPorMi" xml:space="preserve">
+    <value>Általam jelentett riasztás</value>
+  </data>
+  <data name="LblPara" xml:space="preserve">
+    <value>Üzenet címzettje:</value>
+  </data>
+  <data name="LblDe" xml:space="preserve">
+    <value>Az üzenet küldője:</value>
+  </data>
+  <data name="ConfiguraciondeSOSpect" xml:space="preserve">
+    <value>SOSpect konfiguráció</value>
+  </data>
+  <data name="LblExitoEnAceptacion" xml:space="preserve">
+    <value>A szerződés elfogadását tároljuk!</value>
+  </data>
+  <data name="LblFalloEnAceptacion" xml:space="preserve">
+    <value>A regisztráció nem sikerült. Kérjük, próbálja újra!</value>
+  </data>
+  <data name="LblDeclinacionAceptacion" xml:space="preserve">
+    <value>Szerződés elfogadása nélkül nem folytathatja!</value>
+  </data>
+  <data name="LblParaIniciar" xml:space="preserve">
+    <value>KEZDJÜK SOSpect!! A közeli riasztások frissítéséhez koppintson a kék frissítés gombra</value>
+  </data>
+  <data name="LblAlarmaNoGrave" xml:space="preserve">
+    <value>A sárga gombbal alacsony veszélyhelyzetre vonatkozó riasztásokat helyezhet el, és figyelmeztetheti közösségét vagy védelmezőit. Kiválaszthatja a riasztás típusát, és megjelölheti azt elkövetett bűncselekményként. Ez a gomb elindítja a riasztást a pontos tartózkodási helyen, ami akkor hasznos, ha segítségre van szüksége. A térképen is kiválaszthat egy pontot, hogy a tartózkodási hely veszélyeztetése nélkül keresse meg a riasztást.</value>
+  </data>
+  <data name="LblCrimenCometido" xml:space="preserve">
+    <value>A piros gomb elindít egy kategóriát: bűncselekmény elkövetett riasztás. A SOSpect ezekben az esetekben nem követeli meg a kategória hozzáadását az idő fontossága miatt. A riasztás automatikusan a pontos helyre kerül. A térképen kiválaszthat egy pontot a riasztás elhelyezéséhez, majd módosíthatja a kategóriát elkövetett bűncselekményre.</value>
+  </data>
+  <data name="LblDescripcionAlarmas" xml:space="preserve">
+    <value>Az alsó sáv "Leírás" opciójában megtalálja az Ön vagy mások által elhelyezett riasztások listáját. Ha Ön hozta létre a riasztást, hozzáadhat leírást. Ha a riasztást valaki más hozta létre, értékelheti annak valódiságát és kiegészítheti annak leírását. Légy óvatos! Ha hamis adatokat vagy helytelen értékeléseket adsz meg, felfüggeszthetjük a fiókodat. Ennek elkerülése érdekében gondosan olvassa el a feltételeket.</value>
+  </data>
+  <data name="LblDescripcionMensajes" xml:space="preserve">
+    <value>A jobb felső sarokban lévő csengőben elolvashatja üzeneteit, amelyek előfizetési értesítéseket és legutóbbi riasztásokat tartalmaznak. Ez a lista eltér a leírások opciótól, ahol közvetlenül megtalálhatja a legutóbbi riasztásokat.</value>
+  </data>
+  <data name="LblDescripcionMenu" xml:space="preserve">
+    <value>A bal felső sarokban található fogaskerékben találja a SOSpect konfigurációs beállításait. Vásárolhat áramot előfizetések vásárlásához és családja védelméhez, vagy bővítheti riasztási vételi sugarát. EMLÉKEZIK! Kezdetben 80 hatalmat adunk neked, így kezdettől fogva két előfizetést vásárolhatsz.</value>
+  </data>
+  <data name="LblRecomendaciones" xml:space="preserve">
+    <value>EGYÜTT LEGYŐZHETETLENEK VAGYUNK! A riasztás és a riasztások fogadásának alapvető funkciói 100 méteres körzetben ingyenesek, és amikor elkezdi, 2 előfizetést adunk Önnek. Hívja meg közösségét és családját, hogy használják ezt az ingyenes szolgáltatást a növekvő bűnözés elleni küzdelemben. Életeket menthet, vagy megmenthető, ha időben riasztást kap. Az elveszett emberekről vagy háziállatokról szóló riasztások hatótávolsága 10 kilométer, az erőszakos tüntetéseké pedig 1 kilométer</value>
+  </data>
+  <data name="LblPromocion" xml:space="preserve">
+    <value>Végül ne feledje, hogy meghatalmazást kap minden SOSpect-ben megadott igaz értékelésért, amikor a riasztások szavazása az elhelyezésüktől számított 90 perc elteltével lezárul. A legtöbb ember becsületes, és együtt meg fogjuk védeni egymást és a családunkat. ÜDVÖZÖLJÜK A SOSPECT-BEN!</value>
+  </data>
+  <data name="LblDescripcionMapa" xml:space="preserve">
+    <value>Bármikor kiválaszthatja a "MAP" opciót az alsó sáv bal oldalán, amely az SOSpect kiindulópontja. Innen megtekintheti a közeli riasztásokat. A tartózkodási helye a térkép közepén jelenik meg, a kör pedig azt a sugarat jelöli, amely hatással lehet Önre. Alapértelmezés szerint ez a sugár 100 méter, de a beállítások menüben módosíthatja.</value>
+  </data>
+  <data name="LblRecomendacionImportante" xml:space="preserve">
+    <value>Fontos, hogy rendszeresen nyissa meg az SOSpect-et, mielőtt elindulna otthonról, vagy amikor megérkezik egy helyre, hogy frissítse tartózkodási helyét. Így tudathatjuk Önnel, ha bármilyen kockázat áll fenn az Ön területén. Kérjük, vegye figyelembe, hogy amikor az alkalmazás be van zárva, az eszköz operációs rendszerei által előírt korlátozások miatt nem tudjuk meghatározni az Ön tartózkodási helyét. Ellenőrizze a tartózkodási helyére vonatkozó általános szerződési feltételeket.</value>
+  </data>
+  <data name="LblUsuarioBloqueado" xml:space="preserve">
+    <value>Felhasználó felfüggesztve negatív pontszám miatt</value>
+  </data>
+  <data name="LblMarcasNegativas" xml:space="preserve">
+    <value>A negatív pontszámaim száma</value>
+  </data>
+  <data name="LblCuentaSuspendida" xml:space="preserve">
+    <value>A fiók ideiglenesen fel van függesztve más felhasználók negatív pontszámai miatt</value>
+  </data>
+  <data name="LblTitleCuentaSuspendida" xml:space="preserve">
+    <value>A fiók ideiglenesen fel van függesztve</value>
+  </data>
+  <data name="LblFechaFinSuspension" xml:space="preserve">
+    <value>A felfüggesztés záró dátuma:</value>
+  </data>
+  <data name="LblTocaAqui" xml:space="preserve">
+    <value>Koppintson ide az induláshoz</value>
+  </data>
+  <data name="LblNoTienesConexion" xml:space="preserve">
+    <value>Nincs internetkapcsolat</value>
+  </data>
+  <data name="LblExplicacionSinConexion" xml:space="preserve">
+    <value>Az SOSpectbe való bejelentkezéshez nyilatkozata szükséges. Az internet nélkül nem tudhatjuk, hogy aktív-e.</value>
+  </data>
+  <data name="LblSinConexionDescripcion" xml:space="preserve">
+    <value>SOSpect fiókja állapotának lekéréséhez aktív internet szükséges.</value>
+  </data>
+  <data name="LblSinConexionQueHacer" xml:space="preserve">
+    <value>Kérjük, aktiválja az internetet, és indítsa újra az SOSpect alkalmazást</value>
+  </data>
+  <data name="SefinalizalasubscripcionporsolicituddelusuarioPROTEGIDOatravésdelaAPIdesdelaAPP" xml:space="preserve">
+    <value>Az előfizetés a PROTECTED felhasználó kérésével szűnik meg az APP API-ján keresztül</value>
+  </data>
+  <data name="Nopuederenovarsedebidoaquefuecancelada,requieresubscripciónnueva" xml:space="preserve">
+    <value>Nem újítható meg, mert törölték, új előfizetést igényel</value>
+  </data>
+  <data name="Alarmasgeneradaspormicirculosocial" xml:space="preserve">
+    <value>A társadalmi köröm által generált riasztások</value>
+  </data>
+  <data name="Incrementomidiametrodevigilancia" xml:space="preserve">
+    <value>Növelem a felügyeleti átmérőmet</value>
+  </data>
+  <data name="Zonadevigilanciaadicional" xml:space="preserve">
+    <value>Kiegészítő megfigyelési körzet</value>
+  </data>
+  <data name="Renovable" xml:space="preserve">
+    <value>Megújuló</value>
+  </data>
+  <data name="SefinalizalasubscripcionporsolicituddelusuarioPROTECTORatravésdelaAPIdesdelaAPP" xml:space="preserve">
+    <value>Az előfizetés megszűnik a PROTECTOR felhasználó kérésére az APP API-ján keresztül</value>
+  </data>
+  <data name="LblEsRenovable" xml:space="preserve">
+    <value>Megújítható?</value>
+  </data>
+  <data name="LblObsSubs" xml:space="preserve">
+    <value>Előfizetési megjegyzés:</value>
+  </data>
+  <data name="NingunaObservacion" xml:space="preserve">
+    <value>Nincs hozzászólás</value>
+  </data>
+  <data name="Subscripcionvigente" xml:space="preserve">
+    <value>Jelenlegi előfizetés</value>
+  </data>
+  <data name="Actualmenteactivoenotrasuscripcion" xml:space="preserve">
+    <value>Jelenleg aktív egy másik előfizetéssel</value>
+  </data>
+  <data name="LblRadioActual" xml:space="preserve">
+    <value>A riasztások fogadásának jelenlegi sugara:</value>
+  </data>
+  <data name="LblPoderesRequeridosZV" xml:space="preserve">
+    <value>A kiválasztott bővítéshez szükséges hatáskörök</value>
+  </data>
+  <data name="OptTerminosCondiciones" xml:space="preserve">
+    <value>SOSpect Általános Szerződési Feltételek</value>
+  </data>
+  <data name="DebesAbrirLaApp" xml:space="preserve">
+    <value>A SOSpect nem ismeri a felhasználó helyének változását, amikor zárva van, ez a mobiltelefonok operációs rendszereinek akkumulátorkímélő politikájával történik, ezért fontos, hogy a felhasználó gyakran nyissa meg az alkalmazást, hogy ellenőrizze a riasztásokat azon a területen, ahová költözött, és időben megkapja a közeli riasztásokat.</value>
+  </data>
+  <data name="InvitaMasPersonas" xml:space="preserve">
+    <value>A felhasználó biztonságának javítása érdekében fontos, hogy a körülötte lévők, a család és a szomszédok letöltsék az ingyenes alkalmazást. Ha nincsenek közeli felhasználók, előfordulhat, hogy a felhasználó nem kap időben riasztást, vagy riasztásai nem hallhatók, fenntartva a kockázati állapotot, mint az alkalmazás letöltése előtt. Fontos, hogy minél több embert hívjunk meg, hogy segítsenek egymásnak!</value>
+  </data>
+  <data name="Insertiondone" xml:space="preserve">
+    <value>A behelyezés megtörtént.</value>
+  </data>
+  <data name="AnerroroccurredwhilequalifyingthealarmCode1" xml:space="preserve">
+    <value>Hiba történt a riasztás 1-es kóddal történő értékelése közben</value>
+  </data>
+  <data name="AnerroroccurredwhilequalifyingthealarmCode2" xml:space="preserve">
+    <value>Hiba történt a riasztás 2-es kóddal történő értékelése közben</value>
+  </data>
+  <data name="AnerroroccurredwiththealarmqualificationmodelCode3" xml:space="preserve">
+    <value>Hiba történt a riasztás 3-as kóddal történő értékelése során</value>
+  </data>
+  <data name="Userregistrationsuccessful" xml:space="preserve">
+    <value>A felhasználó regisztrálva van!</value>
+  </data>
+  <data name="Anerroroccurredwhileregisteringtheusercode1" xml:space="preserve">
+    <value>Hiba történt a felhasználó regisztrálásakor használt 1-es kóddal</value>
+  </data>
+  <data name="Anerroroccurredwhileregisteringtheusercode2" xml:space="preserve">
+    <value>Hiba történt a felhasználó regisztrálásakor jelentkező 2-es kóddal</value>
+  </data>
+  <data name="Anerroroccurredwiththepeoplemodelforuserregistrationcode3" xml:space="preserve">
+    <value>Hiba történt a felhasználó regisztrálásakor jelentkező 3-as kóddal</value>
+  </data>
+  <data name="Permisosolicitadoconexito" xml:space="preserve">
+    <value>Sikeresen kért engedély</value>
+  </data>
+  <data name="OcurriounerrorenelprocesodesolicitarpermisoalprotegidoCodigo1" xml:space="preserve">
+    <value>Az 1-es kóddal kapcsolatos hiba történt a védett engedélykérés során</value>
+  </data>
+  <data name="Nofueposiblerealizarenviarlasolicituddepermisoalprotegidoporqueelmodelonoesvalido" xml:space="preserve">
+    <value>Az engedélykérelmet nem lehetett elküldeni a védettnek, a modell érvénytelen</value>
+  </data>
+  <data name="AlertaEnUbicacion" xml:space="preserve">
+    <value>SOSpect riasztást szeretne létrehozni ezen a helyen?</value>
+  </data>
+  <data name="CrearEnUbicacionActual" xml:space="preserve">
+    <value>SOSpect riasztást szeretne létrehozni az aktuális tartózkodási helyén?</value>
+  </data>
+  <data name="SeguroCerrarSesion" xml:space="preserve">
+    <value>Biztosan kijelentkezik?</value>
+  </data>
+  <data name="Tu" xml:space="preserve">
+    <value>Te</value>
+  </data>
+  <data name="Anonimo" xml:space="preserve">
+    <value>Névtelen</value>
+  </data>
+  <data name="AlarmaCerrada" xml:space="preserve">
+    <value>Riasztás zárva</value>
+  </data>
+  <data name="LblSaldoPoderesInsuficiente" xml:space="preserve">
+    <value>Az energiamérleg nem megfelelő</value>
+  </data>
+  <data name="LblComprarPoderes" xml:space="preserve">
+    <value>Meghatalmazás vásárlása</value>
+  </data>
+  <data name="LblSeguroRenovar" xml:space="preserve">
+    <value>Biztosan megújítja ezt az előfizetést?</value>
+  </data>
+  <data name="OptReportes" xml:space="preserve">
+    <value>Jelentések</value>
+  </data>
+  <data name="LblReportesTitulo" xml:space="preserve">
+    <value>SOSpect jelentések</value>
+  </data>
+  <data name="LblReportesDescripcion" xml:space="preserve">
+    <value>A jelentések lehetőséget adnak arra, hogy megértse, hogyan segített más felhasználóknak a kedvezőtlen helyzetek elkerülésével. Ezenkívül lehetővé teszik, hogy azonosítsa a veszélyes területeket a város térképén, és megfigyelje a bűnözés fejlődését az idő múlásával. A mintaelemzés révén korai figyelmeztetéseket is lehet generálni, mielőtt negatív események következnének be. Fontos megjegyezni, hogy az alapjelentés ingyenes, míg más jelentések költségekkel járhatnak a létrehozásukhoz szükséges számítási felhasználás miatt.</value>
+  </data>
+  <data name="OptReporteDeCalorEnZona" xml:space="preserve">
+    <value>Jelentés hőtérképekkel</value>
+  </data>
+  <data name="OptReporteEvolucionEnElTiempo" xml:space="preserve">
+    <value>Riasztások evolúciós jelentése idő szerint</value>
+  </data>
+  <data name="OptReportesPredictivos" xml:space="preserve">
+    <value>Prediktív jelentéskészítés</value>
+  </data>
+  <data name="OptReporteAnaliticoDeDescripcionesAlarmas" xml:space="preserve">
+    <value>Riasztási csevegések elemző jelentései</value>
+  </data>
+  <data name="LblReporteCalorSospect" xml:space="preserve">
+    <value>SOSpect hőtérképek</value>
+  </data>
+  <data name="LblReporteEnConstruccion" xml:space="preserve">
+    <value>Hamarosan!! Ez a funkció fejlesztés alatt áll!</value>
+  </data>
+  <data name="LblDescripcionMapaDeCalor" xml:space="preserve">
+    <value>Ebben a jelentésben hozzáférhet a terület hőtérképéhez, ahol kiválaszthatja a SOSpect működésének megkezdése óta eltelt különböző hónapokat. Ez a funkció lehetővé teszi, hogy megfigyelje és megértse a térkép minden olyan területének fejlődését, amely érdekli Önt.</value>
+  </data>
+  <data name="LblCostoReporte" xml:space="preserve">
+    <value>Ne feledje, hogy ennek a funkciónak a használata számítási költségekkel jár, és hatásköröket igényel, bár nem lesz nagy értékű. Azonban gond nélkül megszerezheti azokat a hatásköröket, amelyeket az alkalmazás első használatakor adunk Önnek.</value>
+  </data>
+  <data name="LblReporteEvolucionAlarmas" xml:space="preserve">
+    <value>Az SOSpect-ben elhelyezett riasztások fejlődése</value>
+  </data>
+  <data name="LblDescripcionEvolucionAlarmas" xml:space="preserve">
+    <value>Ebben a jelentésben megismerheti az egyes riasztástípusok trendjeit az idő múlásával az Ön területén. Ön képes lesz megfigyelni és elemezni a veszélyességi trendeket, valamint azonosítani a bűnözés lehetséges csökkenését.</value>
+  </data>
+  <data name="LblReportePredictivo" xml:space="preserve">
+    <value>SOSpect prediktív jelentések</value>
+  </data>
+  <data name="LblDescripcionReportesPredictivos" xml:space="preserve">
+    <value>Mivel a SOSpect közösség elegendő adatot generál, valószínűség alapú esemény-előrejelzések és elemző eszközök készíthetők. Ezek a jelentések lehetővé teszik, hogy értesüljön a riasztási hullámokról vagy a bűncselekmények számának növekedéséről, lehetőséget adva arra, hogy megtegye a szükséges óvintézkedéseket az Önre, családjára és közösségére jelentett kockázatok elkerülése érdekében.</value>
+  </data>
+  <data name="LblReporteAnalisisDeTextos" xml:space="preserve">
+    <value>SOSpect riasztási csevegéselemzési jelentés</value>
+  </data>
+  <data name="LblDescripcionAnalisisTextos" xml:space="preserve">
+    <value>Annak a ténynek köszönhetően, hogy a felhasználók leírják a riasztásokat és frissítik azok fejlődését a SOSpect belső csevegésén keresztül, ez a jelentés lehetővé teszi a közösséget leginkább érintő tipológiák megjelenítését. Ez lehetőséget nyújt arra, hogy lépéseket tegyen a biztonság észlelésének javítása érdekében az Ön területén.</value>
+  </data>
+  <data name="LblRangoReporte" xml:space="preserve">
+    <value>Ez a jelentés az elmúlt 30 napra terjed ki</value>
+  </data>
+  <data name="AcercadeSOSpect" xml:space="preserve">
+    <value>Az SOSpect-ről</value>
+  </data>
+  <data name="Porcentajedealarmasciertasfrenteafalsasenunradiodeunkilometroymedio" xml:space="preserve">
+    <value>Az igaz és a téves riasztások százalékos aránya másfél kilométeres körzetben</value>
+  </data>
+  <data name="Promediodetiempoenminutosentrelanzamientodealarmaenmizonaylaprimeracalificacionodescripcion" xml:space="preserve">
+    <value>Átlagos idő percben a riasztás indítása és az első értékelés vagy leírás között</value>
+  </data>
+  <data name="Cantidadrealdepersonasenunradiodeunkilometroymedio" xml:space="preserve">
+    <value>A másfél kilométeres körzetben tartózkodó személyek tényleges száma</value>
+  </data>
+  <data name="Cantidadrealdepersonasenmiradioactual" xml:space="preserve">
+    <value>Az aktuális sugarú körömben tartózkodó személyek tényleges száma</value>
+  </data>
+  <data name="Miradioactualderecepcionyenviodealarmasenmetros" xml:space="preserve">
+    <value>A riasztások fogadásának és küldésének jelenlegi sugara méterben</value>
+  </data>
+  <data name="Cantidadrealdepersonasquerecibieronmisalarmas" xml:space="preserve">
+    <value>Azoknak az embereknek a tényleges száma, akik megkapták a riasztásaimat</value>
+  </data>
+  <data name="Cantidaddenotificacionesdealarmaenviadasdemiparte" xml:space="preserve">
+    <value>Tőlem küldött riasztási értesítések száma</value>
+  </data>
+  <data name="Personasquereportaronmiayudacomonegativaofalsa" xml:space="preserve">
+    <value>Emberek, akik negatívnak vagy hamisnak jelentették a segítségemet</value>
+  </data>
+  <data name="Personasqueagradecieronmiayuda" xml:space="preserve">
+    <value>Emberek, akik értékelték a segítségemet</value>
+  </data>
+  <data name="Poderesganadosporregalos" xml:space="preserve">
+    <value>Ajándékok által szerzett erők</value>
+  </data>
+  <data name="LblParticipacionTpAlarma" xml:space="preserve">
+    <value>Részvétel riasztástípus szerint</value>
+  </data>
+  <data name="LblMetricBasics" xml:space="preserve">
+    <value>Alapszintű metrikák</value>
+  </data>
+  <data name="LblEfectiAlarmas" xml:space="preserve">
+    <value>A riasztások hatékonysága</value>
+  </data>
+  <data name="LblTotalAlarmas" xml:space="preserve">
+    <value>Összes riasztás</value>
+  </data>
+  <data name="LblAlarmasVerdaderas" xml:space="preserve">
+    <value>Valódi riasztások</value>
+  </data>
+  <data name="LblAlarmasFalsas" xml:space="preserve">
+    <value>Téves riasztások</value>
+  </data>
+  <data name="LblAlarmasEfectivas" xml:space="preserve">
+    <value>A hatékony riasztások százalékos aránya</value>
+  </data>
+  <data name="LblMarcarLeidos" xml:space="preserve">
+    <value>Összes megjelölése olvasottként</value>
+  </data>
+  <data name="LblSeMarcaronComoLeidos" xml:space="preserve">
+    <value>Minden üzenet olvasottként lett megjelölve</value>
+  </data>
+  <data name="LabelNuevaVersion" xml:space="preserve">
+    <value>Megjelent a SOSpect új verziója, és folytatni kell</value>
+  </data>
+  <data name="OptReporteBasico" xml:space="preserve">
+    <value>Alapvető jelentések - INGYENES!</value>
+  </data>
+  <data name="LblReporteBasicoSospect" xml:space="preserve">
+    <value>SOSpect Basic jelentések</value>
+  </data>
+  <data name="LblReporteBasicoDescripcion" xml:space="preserve">
+    <value>A SOSpect alapjelentései értékes információkkal szolgálnak arról, hogy a riasztási jelentések milyen hatással voltak a közösségére. Ezenkívül megmutatják, hogy hány erőt szereztél azzal, hogy segítetted a közösségedet azáltal, hogy pontosan pontozod a riasztásokat és az őszinteséget ezekben az értékelésekben. Ezekkel a jelentésekkel kiértékelheti a terület általános viselkedését az elmúlt hónapban, beleértve a folyamatban részt vevő felhasználók számát, valamint a helytelen elköteleződés miatt negatív pontszámot kapott felhasználók számát.</value>
+  </data>
+  <data name="LblReporteBasicoDescripcionCorta" xml:space="preserve">
+    <value>A SOSpect alapjelentései értékes információkat nyújtanak a... Többet látni...</value>
+  </data>
+  <data name="LblDescripcionRepTipoAlarma" xml:space="preserve">
+    <value>Ez a jelentés tájékoztatást nyújt a leggyakoribb riasztásokról az aktuális tartózkodási helyétől számított másfél kilométeres körzeten belül.</value>
+  </data>
+  <data name="LblDescripcionRepEfectAlarmas" xml:space="preserve">
+    <value>Ez a jelentés tájékoztatást nyújt a valós és a téves riasztások közötti hatékonysági kapcsolatról az aktuális tartózkodási helyétől számított másfél kilométeres körzetben.</value>
+  </data>
+  <data name="LblDescripcionRepMetricasBasicas" xml:space="preserve">
+    <value>Ez a jelentés adatokat szolgáltat az aktuális tartózkodási helyétől másfél kilométeres körzetben található felhasználók számáról, valamint az alkalmazásriasztások aktuális sugarú körzetében lévő felhasználók számáról. Ezenkívül számos további információt tartalmaz az Ön érdeklődésére.</value>
+  </data>
+  <data name="OptVolumenAlarmas" xml:space="preserve">
+    <value>Hangerő a közeli riasztások típusa szerint</value>
+  </data>
+  <data name="OptEfectividadAlarmas" xml:space="preserve">
+    <value>A közeli riasztások hatékonysága</value>
+  </data>
+  <data name="OptMetricasBasicas" xml:space="preserve">
+    <value>A közeli riasztások alapvető mérőszámai</value>
+  </data>
+  <data name="LblCredibilidadActual" xml:space="preserve">
+    <value>Riasztásaim hitelessége:</value>
+  </data>
+  <data name="OptManualUsuarioSospect" xml:space="preserve">
+    <value>SOSpect felhasználói kézikönyv</value>
+  </data>
+  <data name="LblDescManualUsuario" xml:space="preserve">
+    <value>Ismerje meg a SOSpect-et, egy ingyenes alkalmazást, amelyet arra terveztek, hogy megvédje Önt és szeretteit. Létrehoztunk egy tömör és részletes online kézikönyvet, amely segít a megfelelő használatban. Ezzel a kézikönyvvel a legtöbbet hozhatja ki az SOSpect-ből, és kihasználhatja az összes biztonsági funkcióját.</value>
+  </data>
+  <data name="SesionApple" xml:space="preserve">
+    <value>BEJELENTKEZÉS AZ APPLE-LEL</value>
+  </data>
+  <data name="LblCredibilidadAlarmaActual" xml:space="preserve">
+    <value>A riasztás hitelessége:</value>
+  </data>
+  <data name="LblAccedeAlManual" xml:space="preserve">
+    <value>A kézikönyvet a következő címen érheti el:</value>
+  </data>
+  <data name="LblRefrescarLista" xml:space="preserve">
+    <value>Riasztási lista frissítése</value>
+  </data>
+  <data name="LblErrorCorreoDispositivo" xml:space="preserve">
+    <value>Nem sikerült e-mailt küldeni ezen az eszközön</value>
+  </data>
+  <data name="LblErrorCorreo" xml:space="preserve">
+    <value>Hiba történt az e-mail küldésekor:</value>
+  </data>
+  <data name="LblSeleccioneTipoAlarma" xml:space="preserve">
+    <value>Kérjük, válassza ki a riasztás típusát</value>
+  </data>
+  <data name="LblCompraFallida" xml:space="preserve">
+    <value>A vásárlás nem történt meg. Kérjük, ellenőrizze az internet-hozzáférést, és próbálja újra</value>
+  </data>
+  <data name="LblSeleccionePuntoMapa" xml:space="preserve">
+    <value>Ki kell választania egy megfigyelési körzetet a térképen</value>
+  </data>
+  <data name="Cantidaddealarmascolocadasenlaszonasdevigilanciasuscritas" xml:space="preserve">
+    <value>A feliratkozott megfigyelési területeken elhelyezett riasztások száma</value>
+  </data>
+  <data name="Cantidaddealarmascolocadaspormisprotegidos" xml:space="preserve">
+    <value>A védenceim által elhelyezett riasztások száma</value>
+  </data>
+  <data name="Credibilidadactualdelasalarmasqueenvioamicomunidad" xml:space="preserve">
+    <value>A közösségemnek küldött riasztások jelenlegi hitelessége</value>
+  </data>
+  <data name="LblCompraExitosa" xml:space="preserve">
+    <value>Gratulálok! Megvásárolta az előfizetések megvásárlásához szükséges jogosultságokat. A harangban magyarázó üzenetet talál!</value>
+  </data>
+  <data name="LblDebesHabilitarNotif" xml:space="preserve">
+    <value>Az SOSpect működéséhez engedélyeznie kell az értesítések küldését</value>
+  </data>
+  <data name="LblHabilitarNotifSettings" xml:space="preserve">
+    <value>Ez az alkalmazás támogatja az értesítéseket, de ezt engedélyeznie kell a beállításokban.</value>
+  </data>
+  <data name="LblErrorHabilitandoUsoNotif" xml:space="preserve">
+    <value>Hiba történt, amely megakadályozta a leküldéses értesítések használatát</value>
+  </data>
+  <data name="LblMostrarDireccionEscape" xml:space="preserve">
+    <value>Mark szökevény menekülési útvonala</value>
+  </data>
+  <data name="LblProximamenteSOSpect" xml:space="preserve">
+    <value>Hamarosan az SOSpect!</value>
+  </data>
+  <data name="LblReportesProximos" xml:space="preserve">
+    <value>Analitikus és prediktív jelentések adattudománnyal!</value>
+  </data>
+  <data name="LblHolaBienvenido" xml:space="preserve">
+    <value>Üdvözlöm! Üdvözöljük a SOSpect-nél. 
+
+A SOSpect egy ingyenes eszköz, amelyet arra terveztek, hogy megvédje Önt és szeretteit azáltal, hogy időben figyelmeztet a közeli kockázatokra! Lehet, hogy először nem kap sok riasztást, mivel még nincs sok ember az Ön közelében, aki telepítette a SOSpect-et. Kérjük, hogy próbálja ki nekünk, és ne távolítsa el az alkalmazást. A SOSpect egy bizonyos ponton megmentheti az Ön életét, valamint a családjának vagy közösségének egyik tagjáét.
+
+A beállításokban található "Jelentések" menü "Alapjelentés" szakaszában az "Alapvető mutatók" részben láthatja a közeli felhasználók számát a lefedettségi területen, ahol riasztásokat kap. Segítsen nekünk növelni ezt a számot, ez ingyenes, és lehetővé teszi, hogy biztonságosabban éljen!
+
+Meghívjuk Önt, hogy figyelmesen olvassa el ezt a rövid bevezető kézikönyvet, amely képet ad a SOSpect működéséről. Kérjük, vegye figyelembe, hogy az alkalmazás telepítése után csak egyszer jelenik meg.
+
+Köszönjük, hogy az SOSpect-et használja, és hozzájárul mindenki biztonságához!
+
+Koppintson a képernyőre a folytatáshoz...</value>
+  </data>
+</root>

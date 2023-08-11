@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="sospect.Views.ManualDeUsuarioPage"
+             xmlns:fonts="clr-namespace:sospect.Resources.Fonts;assembly=sospect"
+             xmlns:helpers="clr-namespace:sospect.Helpers"
+             BackgroundColor="White"
+             Title="Manual del usuario SOSpect">
+    <ScrollView>
+        <StackLayout Padding="20">
+            <Label Text="{helpers:TranslateExtension Text='LblDescManualUsuario'}"
+                   FontSize="Small"
+                   TextColor="Black" 
+                   HorizontalOptions="Start" />
+
+            <Label Margin="0,20,0,0" FontSize="Small" TextColor="Black" Text="{helpers:TranslateExtension Text='LblAccedeAlManual'}" />
+
+            <Label Margin="0,20,0,0" FontSize="Small" TextColor="Blue"  TextDecorations="Underline"
+            Text="{Binding UrlManualUsuario}">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding OpenWebCommand}"/>
+                </Label.GestureRecognizers>
+            </Label>
+
+
+            <Label>
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span FontSize="Small" TextColor="Black" Text="{helpers:TranslateExtension Text='contactenos'}" FontAttributes="Italic"/>
+                        <Span FontSize="Small" TextColor="Blue" TextDecorations="Underline" Text=" soporte@wescot.com.co">
+                            <Span.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding SendEmailCommand}" />
+                            </Span.GestureRecognizers>
+                        </Span>
+                    </FormattedString>
+                </Label.FormattedText>
+                <Label.Margin>
+                    <OnPlatform x:TypeArguments="Thickness" iOS="0,30,0,30" Android="0,20,0,20"/>
+                </Label.Margin>
+                <Label.HorizontalOptions>
+                    <OnPlatform x:TypeArguments="LayoutOptions" iOS="StartAndExpand" Android="Start"/>
+                </Label.HorizontalOptions>
+            </Label>
+
+
+            <Label>
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span FontSize="Small" TextColor="Black" Text="{helpers:TranslateExtension Text='visitenos'}" FontAttributes="Italic"/>
+                        <Span FontSize="Small" TextColor="Black" Text=": ">
+                            <Span.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding OpenWebCommandWescot}" />
+                            </Span.GestureRecognizers>
+                        </Span>
+                        <Span FontSize="Small" TextColor="Blue" Text="www.wescotcorporation.com" TextDecorations="Underline">
+                            <Span.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding OpenWebCommandWescot}" />
+                            </Span.GestureRecognizers>
+                        </Span>
+                    </FormattedString>
+                </Label.FormattedText>
+                <Label.HorizontalOptions>
+                    <OnPlatform x:TypeArguments="LayoutOptions" iOS="StartAndExpand" Android="Start"/>
+                </Label.HorizontalOptions>
+            </Label>
+
+
+
+            <Image Source="icon.png"
+               Margin="0,30,0,0"
+               HorizontalOptions="Center">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding OpenSospectWebCommand}"/>
+                        </Image.GestureRecognizers>
+            </Image>
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:fonts="clr-namespace:sospect.Resources.Fonts;assembly=sospect"
+    xmlns:maps="clr-namespace:sospect.CustomRenderers"
+    xmlns:helpers="clr-namespace:sospect.Helpers"
+    x:Class="sospect.Views.HomePage">
+    <ContentPage.Content>
+        <Grid RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid BackgroundColor="LightGray" VerticalOptions="FillAndExpand" Grid.Row="0" HeightRequest="90">
+                <maps:AdBanner></maps:AdBanner>
+            </Grid>
+            <maps:CustomMap Grid.Row="1" x:Name="map"
+                  VerticalOptions="FillAndExpand"
+                  HorizontalOptions="FillAndExpand"
+                  IsShowingUser="False" />
+            <Grid Grid.Row="1" HorizontalOptions="End"
+                    VerticalOptions="End"
+                    Margin="0,0,20,10"
+                    IsVisible="{Binding ShowUIButtons}"
+                    TranslationY="-60">
+                <ImageButton x:Name="BotonRefrescar"
+                             HeightRequest="50"
+                             WidthRequest="50"
+                             CornerRadius="25"
+                             Padding="10"
+                             Clicked="RefreshButton_Clicked"
+                             BackgroundColor="DarkBlue">
+                    <ImageButton.Source>
+                        <FontImageSource FontFamily="{StaticResource IcoMoonFamily}" Glyph="{x:Static fonts:IconFont.Repeat}"></FontImageSource>
+                    </ImageButton.Source>
+                </ImageButton>
+                <Button x:Name="BotonContador"
+                    HeightRequest="50"
+                    WidthRequest="50"
+                    CornerRadius="25"
+                    Padding="10"
+                    TextColor="White"
+                    IsVisible="false"
+                    BackgroundColor="DarkBlue">
+                </Button>
+            </Grid>
+
+            <Grid Grid.Row="1" HorizontalOptions="FillAndExpand"
+                  ColumnSpacing="0"
+                  RowSpacing="0"
+                  VerticalOptions="Start">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="70"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="70"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Column="2"
+                      Grid.Row="1"
+                      IsVisible="{Binding ShowUIButtons}"
+                      VerticalOptions="Center" 
+                      HorizontalOptions="Center">
+                    <ImageButton Margin="0,10,20,10"
+                            HeightRequest="50"
+                            WidthRequest="50"
+                            CornerRadius="25"
+                            Padding="10"
+                            Clicked="AbrirMensajes_Clicked"
+                            BackgroundColor="#575757">
+                        <ImageButton.Source>
+                            <FontImageSource FontFamily="{StaticResource IcoMoonFamily}" Glyph="{x:Static fonts:IconFont.Bell}"></FontImageSource>
+                        </ImageButton.Source>
+                    </ImageButton>
+                    <Frame IsVisible="{Binding HayNotificaciones}" 
+                           BackgroundColor="Red" 
+                           Padding="0" 
+                           WidthRequest="20" 
+                           HeightRequest="20" 
+                           CornerRadius="10" 
+                           HorizontalOptions="End" 
+                           VerticalOptions="Start" 
+                           Margin="0,10,10,0">
+                        <Label Text="{Binding NumeroDeNotificaciones}" 
+                            FontSize="10"
+                            HorizontalOptions="CenterAndExpand" 
+                            VerticalOptions="CenterAndExpand"
+                            HorizontalTextAlignment="Center"
+                            VerticalTextAlignment="Center"
+                            TextColor="White"/>
+                    </Frame>
+                </Grid>
+
+                <ImageButton  Grid.Column="0"
+                              Grid.Row="1"
+                             Margin="20,10,0,10"
+                             HeightRequest="50"
+                             WidthRequest="50"
+                             CornerRadius="25"
+                             Padding="10"
+                             IsVisible="{Binding ShowUIButtons}"
+                             Clicked="AbrirMenu_Clicked"
+                             BackgroundColor="#575757">
+                    <ImageButton.Source>
+                        <FontImageSource FontFamily="{StaticResource IcoMoonFamily}" Glyph="{x:Static fonts:IconFont.Gear}"></FontImageSource>
+                    </ImageButton.Source>
+                </ImageButton>
+
+            </Grid>
+
+            <Grid HorizontalOptions="FillAndExpand"
+                  ColumnSpacing="0"
+                  RowSpacing="0"
+                  Grid.Row="1"
+                  IsVisible="{Binding ShowUIButtons}"
+                  VerticalOptions="End">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="70"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="70"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <ImageButton Grid.Column="2"
+                             Grid.Row="1"
+                         Margin="0,0,20,10"
+                         HeightRequest="50"
+                         WidthRequest="50"
+                         CornerRadius="25"
+                         Padding="10"
+                         Clicked="ReportarAlarma_Clicked"
+                         BackgroundColor="Orange">
+                    <ImageButton.Source>
+                        <FontImageSource FontFamily="{StaticResource IcoMoonFamily}" Glyph="{x:Static fonts:IconFont.UserSecret}"></FontImageSource>
+                    </ImageButton.Source>
+                </ImageButton>
+                <Label Grid.Column="2"
+                       Grid.Row="0"
+                       TextColor="Orange"
+                       FontSize="10"
+                       Text="{helpers:TranslateExtension Text='LabelAlerta'}"
+                       FontAttributes="Bold"
+                       Margin="0,0,20,0"
+                       VerticalOptions="Start"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center"></Label>
+
+                <ImageButton  Grid.Column="0"
+                              Grid.Row="1"
+                             Margin="20,0,0,10"
+                             HeightRequest="50"
+                             WidthRequest="50"
+                             CornerRadius="25"
+                             Padding="10"
+                             Clicked="ReportarCrimen_Clicked"
+                             BackgroundColor="Red">
+                    <ImageButton.Source>
+                        <FontImageSource FontFamily="{StaticResource IcoMoonFamily}" Glyph="{x:Static fonts:IconFont.UserSecret}"></FontImageSource>
+                    </ImageButton.Source>
+                </ImageButton>
+                <Label Grid.Column="0"
+                       Grid.Row="0"
+                       TextColor="Red"
+                       FontSize="10"
+                       Text="{helpers:TranslateExtension Text='LabelCrimen'}"
+                       FontAttributes="Bold"
+                       Margin="20,0,0,0"
+                       VerticalOptions="Start"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center"></Label>
+            </Grid>
+
+            <Grid BackgroundColor="Black"
+                  Opacity="0.5"
+                  HorizontalOptions="FillAndExpand"
+                  VerticalOptions="FillAndExpand"
+                  IsVisible="{Binding IsRunning}">
+                <ActivityIndicator VerticalOptions="Center"
+                                   HorizontalOptions="Center"
+                                   HeightRequest="50"
+                                   WidthRequest="50"
+                                   Color="DarkBlue"
+                                   IsRunning="{Binding IsRunning}">
+                </ActivityIndicator>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
+

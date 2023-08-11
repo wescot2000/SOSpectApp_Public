@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:fonts="clr-namespace:sospect.Resources.Fonts;assembly=sospect"
+    xmlns:helpers="clr-namespace:sospect.Helpers"
+    xmlns:ads="clr-namespace:sospect.CustomRenderers"
+    BackgroundColor="White"
+    x:Class="sospect.Views.ReportsPage"
+    Title="{helpers:TranslateExtension Text='LblReportesTitulo'}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+    <ScrollView>
+        <StackLayout Spacing="0" Padding="5">
+            
+            <Label Text="{helpers:TranslateExtension Text='LblReportesDescripcion'}" TextColor="Gray" FontSize="Small" HorizontalTextAlignment="Start" Margin="0,20,0,20"></Label>
+
+            <Frame Padding="5" BorderColor="Black" BackgroundColor="LightGray" Margin="0,20,0,0" HorizontalOptions="Center" HeightRequest="35" WidthRequest="380" CornerRadius="10">
+                <Frame.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding ReporteBasicoCommand}" NumberOfTapsRequired="1" />
+                </Frame.GestureRecognizers>
+                <Label Text="{helpers:TranslateExtension Text='OptReporteBasico'}" 
+                       TextColor="Black"
+                       LineBreakMode="WordWrap"
+                       HorizontalOptions="CenterAndExpand"
+                       VerticalOptions="CenterAndExpand"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center" />
+            </Frame>
+            
+            
+                <Label IsVisible="True" Text="{helpers:TranslateExtension Text='LblProximamenteSOSpect'}"  TextColor="Red" FontSize="Medium" HorizontalTextAlignment="Center" Margin="0,60,0,10"></Label>
+
+                <Label IsVisible="True" Text="{helpers:TranslateExtension Text='LblReportesProximos'}"  TextColor="Red" FontSize="Medium" HorizontalTextAlignment="Center" Margin="0,0,0,0"></Label>
+
+                
+            <Frame IsVisible="False" Padding="5" BorderColor="Black" BackgroundColor="LightGray" Margin="0,15,0,0" HorizontalOptions="Center" HeightRequest="35" WidthRequest="380" CornerRadius="10">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding ReporteCalorCommand}" NumberOfTapsRequired="1" />
+                </Frame.GestureRecognizers>
+                <Label Text="{helpers:TranslateExtension Text='OptReporteDeCalorEnZona'}" 
+                       TextColor="Black"
+                       LineBreakMode="WordWrap"
+                       HorizontalOptions="CenterAndExpand"
+                       VerticalOptions="CenterAndExpand"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center" />
+            </Frame>
+
+  
+            <Frame  IsVisible="False" Padding="5" BorderColor="Black" BackgroundColor="LightGray" Margin="0,15,0,0" HorizontalOptions="Center" HeightRequest="35" WidthRequest="380" CornerRadius="10">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding TimeEvoReportCommand}" NumberOfTapsRequired="1" />
+                </Frame.GestureRecognizers>
+                <Label Text="{helpers:TranslateExtension Text='OptReporteEvolucionEnElTiempo'}" 
+                       TextColor="Black"
+                       LineBreakMode="WordWrap"
+                       HorizontalOptions="CenterAndExpand"
+                       VerticalOptions="CenterAndExpand"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center" />
+            </Frame>
+
+            <Frame  IsVisible="False" Padding="5" BorderColor="Black" BackgroundColor="LightGray" Margin="0,15,0,0" HorizontalOptions="Center" HeightRequest="35" WidthRequest="380" CornerRadius="10">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding PreCogReportsCommand}" NumberOfTapsRequired="1" />
+                </Frame.GestureRecognizers>
+                <Label Text="{helpers:TranslateExtension Text='OptReportesPredictivos'}" 
+                       TextColor="Black"
+                       LineBreakMode="WordWrap"
+                       HorizontalOptions="CenterAndExpand"
+                       VerticalOptions="CenterAndExpand"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center" />
+            </Frame>
+
+            <Frame  IsVisible="False" Padding="5" BorderColor="Black" BackgroundColor="LightGray" Margin="0,15,0,0" HorizontalOptions="Center" HeightRequest="35" WidthRequest="380" CornerRadius="10">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding AnaliticaDeTextosCommand}" NumberOfTapsRequired="1" />
+                </Frame.GestureRecognizers>
+                <Label Text="{helpers:TranslateExtension Text='OptReporteAnaliticoDeDescripcionesAlarmas'}" 
+                       TextColor="Black"
+                       LineBreakMode="WordWrap"
+                       HorizontalOptions="CenterAndExpand"
+                       VerticalOptions="CenterAndExpand"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center" />
+            </Frame>
+                      
+        </StackLayout>
+    </ScrollView>
+        <Grid BackgroundColor="LightGray" Grid.Row="1" HeightRequest="90">
+            <ads:AdBanner></ads:AdBanner>
+        </Grid>
+    </Grid>
+</ContentPage>

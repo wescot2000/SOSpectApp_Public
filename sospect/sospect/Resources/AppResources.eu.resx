@@ -1,0 +1,1090 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Bienvenido" xml:space="preserve">
+    <value>Ongi etorri SOSpect-era</value>
+  </data>
+  <data name="InicieSesion" xml:space="preserve">
+    <value>Jarraitu ahal izateko saioa hasi</value>
+  </data>
+  <data name="InicieSesionCon" xml:space="preserve">
+    <value>edo saioa hasi</value>
+  </data>
+  <data name="SesionFacebook" xml:space="preserve">
+    <value>SAIOA HASI FACEBOOKEKIN</value>
+  </data>
+  <data name="SesionGoogle" xml:space="preserve">
+    <value>SAIOA HASI GOOGLEREKIN</value>
+  </data>
+  <data name="LabelAlerta" xml:space="preserve">
+    <value>Alerta</value>
+  </data>
+  <data name="LabelCrimen" xml:space="preserve">
+    <value>Krimena</value>
+  </data>
+  <data name="LabelOK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="LabelCancelar" xml:space="preserve">
+    <value>Ezeztatu</value>
+  </data>
+  <data name="ReportarCrimen" xml:space="preserve">
+    <value>Krimena erreportatzea</value>
+  </data>
+  <data name="LabelMapa" xml:space="preserve">
+    <value>Mapa</value>
+  </data>
+  <data name="LabelDescribir" xml:space="preserve">
+    <value>Deskribapena</value>
+  </data>
+  <data name="DescripcionAlarma" xml:space="preserve">
+    <value>Alarmaren deskribapena</value>
+  </data>
+  <data name="DescripcionSospechoso" xml:space="preserve">
+    <value>Susmagarriaren deskribapena</value>
+  </data>
+  <data name="DescripcionVehiculo" xml:space="preserve">
+    <value>Ibilgailuaren deskribapena</value>
+  </data>
+  <data name="DescripcionArma" xml:space="preserve">
+    <value>Armaren deskribapena</value>
+  </data>
+  <data name="PuntuacionDescripcion" xml:space="preserve">
+    <value>Deskribapen puntuazioa</value>
+  </data>
+  <data name="LabelEditar" xml:space="preserve">
+    <value>Editatu</value>
+  </data>
+  <data name="DescripcionesParaAlarma" xml:space="preserve">
+    <value>Alarma honetarako egindako deskribapenak</value>
+  </data>
+  <data name="EspacioPublicidad" xml:space="preserve">
+    <value>Publizitaterako gunea</value>
+  </data>
+  <data name="AlarmasRecientes" xml:space="preserve">
+    <value>Deskribapena gehitzeko azken alarmak</value>
+  </data>
+  <data name="ConfirmarAlarma" xml:space="preserve">
+    <value>Alarma baieztatu</value>
+  </data>
+  <data name="LabelInformacion" xml:space="preserve">
+    <value>Informazioa</value>
+  </data>
+  <data name="LabelError" xml:space="preserve">
+    <value>Errorea</value>
+  </data>
+  <data name="LabelCancelado" xml:space="preserve">
+    <value>Bertan behera</value>
+  </data>
+  <data name="LabelLoginCancelado" xml:space="preserve">
+    <value>Login bertan behera</value>
+  </data>
+  <data name="LabelFallo" xml:space="preserve">
+    <value>Fallo</value>
+  </data>
+  <data name="RecibeAlarma" xml:space="preserve">
+    <value>Alarma bat jaso zenuen, benetakoa den lekutik hurbil?</value>
+  </data>
+  <data name="LabelConfirmo" xml:space="preserve">
+    <value>Baieztatzea</value>
+  </data>
+  <data name="LabelNoSeguro" xml:space="preserve">
+    <value>Ez nago ziur</value>
+  </data>
+  <data name="LabelEsFalsa" xml:space="preserve">
+    <value>Faltsua da</value>
+  </data>
+  <data name="LabelConfirmar" xml:space="preserve">
+    <value>Baieztatu</value>
+  </data>
+  <data name="AdvertenciaCalificacion" xml:space="preserve">
+    <value>Kalifikazio hori ezingo da geroago aldatu. Zure etorkizuneko sinesgarritasunari eragin diezaioke, baldin eta kalifikazioen adostasuna zure botoaren kontrakoa bada. Seguru?</value>
+  </data>
+  <data name="LabelSi" xml:space="preserve">
+    <value>Bai</value>
+  </data>
+  <data name="LabelNo" xml:space="preserve">
+    <value>Ez</value>
+  </data>
+  <data name="AlarmaEnviada" xml:space="preserve">
+    <value>Bidalitako alarma!</value>
+  </data>
+  <data name="MsgTrasAlarmaEnviada" xml:space="preserve">
+    <value>Hau zure interesekoa bada, ezak, ezak, zure telefonoa eta atera arriskutik.</value>
+  </data>
+  <data name="notificacionurgente" xml:space="preserve">
+    <value>Premiazko jakinarazpen bat bidaliko zaie gertuen dauden telefonoei:</value>
+  </data>
+  <data name="LabelAlarma" xml:space="preserve">
+    <value>Alarma</value>
+  </data>
+  <data name="LabelMetros" xml:space="preserve">
+    <value>metroak</value>
+  </data>
+  <data name="LabelTuUbicacion" xml:space="preserve">
+    <value>Zure kokapena</value>
+  </data>
+  <data name="LabelUsuario" xml:space="preserve">
+    <value>Erabiltzailea</value>
+  </data>
+  <data name="LabelTipoAlarma" xml:space="preserve">
+    <value>Alarma mota</value>
+  </data>
+  <data name="DireccionEscape" xml:space="preserve">
+    <value>Mesedez, adierazi susmagarriaren ihes-helbidea.</value>
+  </data>
+  <data name="DescripcionAlerta" xml:space="preserve">
+    <value>Alertaren deskribapena</value>
+  </data>
+  <data name="DescripcionImplicado" xml:space="preserve">
+    <value>Alertan inplikatutakoaren deskribapena</value>
+  </data>
+  <data name="DescripcionVehiculoImp" xml:space="preserve">
+    <value>Inplikatutako ibilgailua (aplikatzen badu)</value>
+  </data>
+  <data name="ArmaImplicada" xml:space="preserve">
+    <value>Arma inplikatua (aplikatzen badu)</value>
+  </data>
+  <data name="LabelRutaEscape" xml:space="preserve">
+    <value>Ihes egiteko ibilbide susmagarria</value>
+  </data>
+  <data name="ObjetivoSospect" xml:space="preserve">
+    <value>SOSpect-en helburua da komunitateak erabiltzaile baten kokalekuan arrisku-alertak jaso eta ohartarazi ahal izatea, haientzat eta bere senideentzat arriskuak saihesteko. Erabiltzaileen kokapena ez da partekatzen eta ez da arakatzen, pribatutasuna bermatuz. Erabiltzaileek arrisku-alertak jar ditzakete beste batzuei arrisku-egoeren biktima izan ez daitezen laguntzeko.</value>
+  </data>
+  <data name="UbicacionImportante" xml:space="preserve">
+    <value>Garrantzitsua da erabiltzailearen kokapena ezagutzea, norbaitek bere kokalekutik gertu arrisku-alerta bat jartzen duen jakin ahal izateko. Hala ere, erabiltzailearen kokapena pribatua da eta alertak jartzen diren mapako puntuak baino ez dira partekatzen.</value>
+  </data>
+  <data name="GenteUnida" xml:space="preserve">
+    <value>SOSpect-ekin, komunitateak bat egin dezake kriminalitatea murrizteko eta arrisku-egoeren biktima ez izateko, eta gainerakoei ohartarazi die seguru egon daitezen.</value>
+  </data>
+  <data name="contactenos" xml:space="preserve">
+    <value>Jarri gurekin harremanetan</value>
+  </data>
+  <data name="visitenos" xml:space="preserve">
+    <value>Bisitatu iezaguzu</value>
+  </data>
+  <data name="ZonaVigilancia" xml:space="preserve">
+    <value>Zaintza-eremua harpidetzea</value>
+  </data>
+  <data name="SeleccioneUbicacionVigilar" xml:space="preserve">
+    <value>Zaindu beharreko kokapena hautatu</value>
+  </data>
+  <data name="SeleccionEnMapa" xml:space="preserve">
+    <value>Aukeratu mapan</value>
+  </data>
+  <data name="ExplicaZonaVigilancia" xml:space="preserve">
+    <value>Aukeratu behar duzun puntuan jartzen diren alarma guztiak jakinaraziko dizkizute, nork jarriko dituen kontuan hartu gabe. Horrela, puntu horretan dauden arriskuen zain egon ahal izango zara. Hori egokia da zure seme-alaben eskola edo unibertsitateetan edo zure senideek edo senideek lan egiten duten guneetan arriskuei adi egoteko.</value>
+  </data>
+  <data name="CrearZonaV" xml:space="preserve">
+    <value>Zaintza-eremua sortzea kokapen horrekin</value>
+  </data>
+  <data name="LabelLatitud" xml:space="preserve">
+    <value>Latitudea</value>
+  </data>
+  <data name="LabelLongitud" xml:space="preserve">
+    <value>Luzera</value>
+  </data>
+  <data name="LabelIntroduccion" xml:space="preserve">
+    <value>Sarrera</value>
+  </data>
+  <data name="AmpliacionRadio" xml:space="preserve">
+    <value>Alarma-erradioa zabaltzea</value>
+  </data>
+  <data name="TuRadioActual" xml:space="preserve">
+    <value>Zure gaur egungo irratia hauxe da:</value>
+  </data>
+  <data name="CrearNuevoRadio" xml:space="preserve">
+    <value>Irrati berri honetarako nire harpidetza sortzea</value>
+  </data>
+  <data name="ExplicacionVigencias" xml:space="preserve">
+    <value>Harpidetza guztiek indarraldia dute, mesedez, harpidetza-prezioak egiaztatu menu nagusiaren lehen aukeran</value>
+  </data>
+  <data name="VasARequerir" xml:space="preserve">
+    <value>Eskatuko duzu</value>
+  </data>
+  <data name="xPoderesParaSubs" xml:space="preserve">
+    <value>Irrati hau zure egungo irratiari gehitzeko ahalmenak</value>
+  </data>
+  <data name="Exito" xml:space="preserve">
+    <value>Arrakasta</value>
+  </data>
+  <data name="SubscripcionCreada" xml:space="preserve">
+    <value>Harpidetza zuzen sortu da.</value>
+  </data>
+  <data name="MensajeError" xml:space="preserve">
+    <value>Zerbitzarira konektatzean akats bat izan zen. Mesedez, saia zaitez berriro.</value>
+  </data>
+  <data name="SeleccionaRuta" xml:space="preserve">
+    <value>Susmagarriaren ihes-bidea aukeratu behar du.</value>
+  </data>
+  <data name="AprobarSolicitudes" xml:space="preserve">
+    <value>Eskaerak onartzea</value>
+  </data>
+  <data name="LabelAprobar" xml:space="preserve">
+    <value>Onartzea</value>
+  </data>
+  <data name="LabelRechazar" xml:space="preserve">
+    <value>Ezeztatu</value>
+  </data>
+  <data name="CompletarSubscripcion" xml:space="preserve">
+    <value>Babestuaren harpidetza osatu</value>
+  </data>
+  <data name="CompletarSubsc" xml:space="preserve">
+    <value>Harpidetza osatu</value>
+  </data>
+  <data name="LblMensajes" xml:space="preserve">
+    <value>Mezuak</value>
+  </data>
+  <data name="LblFechaMensaje" xml:space="preserve">
+    <value>Mezuaren data</value>
+  </data>
+  <data name="LblMenu" xml:space="preserve">
+    <value>KONFIGURAZIOA</value>
+  </data>
+  <data name="OptCompraPoderes" xml:space="preserve">
+    <value>Funtzioak desblokeatzeko botereak erostea</value>
+  </data>
+  <data name="OptGestionarProtegidos" xml:space="preserve">
+    <value>Nire babesle-babesleak kudeatzea</value>
+  </data>
+  <data name="OptCrearZonas" xml:space="preserve">
+    <value>Zaintza-eremuak sortzea</value>
+  </data>
+  <data name="OptAumentarRadio" xml:space="preserve">
+    <value>Alertak jasotzeko nire irratia handitu</value>
+  </data>
+  <data name="OptAcercaDe" xml:space="preserve">
+    <value>SOSpect aplikazioari buruz</value>
+  </data>
+  <data name="OptCerrarSesion" xml:space="preserve">
+    <value>Saioa itxi</value>
+  </data>
+  <data name="LblProtectores" xml:space="preserve">
+    <value>Nire babesleak</value>
+  </data>
+  <data name="LblSuspender" xml:space="preserve">
+    <value>Aldi baterako bertan behera uztea</value>
+  </data>
+  <data name="LblEliminarProtegido" xml:space="preserve">
+    <value>Babestutako ezabatzea</value>
+  </data>
+  <data name="LblSubscrProtegido" xml:space="preserve">
+    <value>Babestutako harpidetza</value>
+  </data>
+  <data name="LblIDUsuarioAProteger" xml:space="preserve">
+    <value>Sartu erabiltzailearen IDa babestu beharreko IDa. (Balio hori lotu nahi duen erabiltzailearen SOSpect-eko konfigurazio menuaren goialdean)</value>
+  </data>
+  <data name="LblRelacionProtegido" xml:space="preserve">
+    <value>Babestu honekin dudan harremana hauxe da:</value>
+  </data>
+  <data name="LblSolicitarPermiso" xml:space="preserve">
+    <value>Erabiltzaileari baimena eskatzea</value>
+  </data>
+  <data name="LblCompleteCampos" xml:space="preserve">
+    <value>Mesedez, osatu alor guztiak.</value>
+  </data>
+  <data name="LblProcesarSolicitud" xml:space="preserve">
+    <value>Akats bat egon zen eskaera prozesatu zenean. Mesedez, saia zaitez berriro.</value>
+  </data>
+  <data name="LblProtegidos" xml:space="preserve">
+    <value>Nire babestuak</value>
+  </data>
+  <data name="LblUsuarioProtegido" xml:space="preserve">
+    <value>Babestutako erabiltzailea</value>
+  </data>
+  <data name="LblFechaActivacion" xml:space="preserve">
+    <value>Aktibazio data</value>
+  </data>
+  <data name="LblFechaFinalizacion" xml:space="preserve">
+    <value>Amaiera data</value>
+  </data>
+  <data name="LblAccion" xml:space="preserve">
+    <value>Ekintza</value>
+  </data>
+  <data name="LblCantidadPoderes" xml:space="preserve">
+    <value>Botere kopurua</value>
+  </data>
+  <data name="LblPrecio" xml:space="preserve">
+    <value>Prezioa</value>
+  </data>
+  <data name="LblComprar" xml:space="preserve">
+    <value>Erosi</value>
+  </data>
+  <data name="LblValoresSubsc" xml:space="preserve">
+    <value>Azpiskripzio-balioak</value>
+  </data>
+  <data name="LblTerminos" xml:space="preserve">
+    <value>SOSpect APP zerbitzuaren baldintzak</value>
+  </data>
+  <data name="LblAcepto" xml:space="preserve">
+    <value>Kontratua onartzen dut</value>
+  </data>
+  <data name="LblNoAcepto" xml:space="preserve">
+    <value>Ez dut onartzen</value>
+  </data>
+  <data name="LblOpcionesProtegidos" xml:space="preserve">
+    <value>SOSpect App-en babesleak eta babestuak</value>
+  </data>
+  <data name="LblExplicacionProtegidos" xml:space="preserve">
+    <value>Zure gizarte-esparruko kideek egiten dituzten alertak jaso ditzakezu, nahiz eta zugandik urrun egon. Hemen administra dezakezu ezaugarri hau</value>
+  </data>
+  <data name="OptIniciarTramite" xml:space="preserve">
+    <value>Babestu bat gehitzeko tramitea hastea</value>
+  </data>
+  <data name="OptAprobarSolicitud" xml:space="preserve">
+    <value>Babesle baten eskaera onartzea</value>
+  </data>
+  <data name="OptListarProtegidos" xml:space="preserve">
+    <value>Ikusi nire babestuen zerrenda</value>
+  </data>
+  <data name="OptListarProtectores" xml:space="preserve">
+    <value>Nire babesleen zerrenda ikusi</value>
+  </data>
+  <data name="OptVolver" xml:space="preserve">
+    <value>Itzuli</value>
+  </data>
+  <data name="LblPoderesSospect" xml:space="preserve">
+    <value>SOSpect App-en botereak</value>
+  </data>
+  <data name="LblOpcionesPoderes" xml:space="preserve">
+    <value>Ongi etorri botereak erabiltzeko aukerara, zer egin nahi duzu?</value>
+  </data>
+  <data name="LblSubscripcionesCosto" xml:space="preserve">
+    <value>Zer harpidetza eros ditzakedan eta zer kostu duen jakin nahi dut</value>
+  </data>
+  <data name="LblQuieroComprar" xml:space="preserve">
+    <value>Super botereak erosi nahi ditut azpiskripzioak erosteko</value>
+  </data>
+  <data name="ExplicacionRadio" xml:space="preserve">
+    <value>Aplikazioaren erabiltzaile guztientzat lehenetsitako irratia 100 metrokoa da. Zuk zabaldu dezakezu irrati hori aplikazioaren botereak erabiliz. Hona hemen zuretzat nahi duzun irratia:</value>
+  </data>
+  <data name="LblAsunto" xml:space="preserve">
+    <value>Deskribapen laburra</value>
+  </data>
+  <data name="LblCompraPoderes" xml:space="preserve">
+    <value>Botereen erosketa</value>
+  </data>
+  <data name="OptCompletarTramite" xml:space="preserve">
+    <value>Babestu bat gehitzeko tramitea osatu</value>
+  </data>
+  <data name="LabelHecho" xml:space="preserve">
+    <value>Osatua</value>
+  </data>
+  <data name="LabelEscapoEnEstaDireccion" xml:space="preserve">
+    <value>Norabide horretan ihes egin zuen</value>
+  </data>
+  <data name="OptMisSubs" xml:space="preserve">
+    <value>Nire azpiskripzioak</value>
+  </data>
+  <data name="LblMisSubscripciones" xml:space="preserve">
+    <value>Nire Azpiskripzioak</value>
+  </data>
+  <data name="LblidUsuario" xml:space="preserve">
+    <value>II Erabiltzailea:</value>
+  </data>
+  <data name="LblTipo" xml:space="preserve">
+    <value>Azpiskripzio mota:</value>
+  </data>
+  <data name="LblDescripcionPuntos" xml:space="preserve">
+    <value>Deskribapena:</value>
+  </data>
+  <data name="LblFechaFinPuntos" xml:space="preserve">
+    <value>Amaiera data:</value>
+  </data>
+  <data name="LblPoderesPuntos" xml:space="preserve">
+    <value>Berritzeko ahalmenak:</value>
+  </data>
+  <data name="LblRenovar" xml:space="preserve">
+    <value>Berritu</value>
+  </data>
+  <data name="LblCancelarSubscripcion" xml:space="preserve">
+    <value>Harpidetza bertan behera utzi</value>
+  </data>
+  <data name="LblSeguroDeCancelar" xml:space="preserve">
+    <value>Harpidetza bertan behera utzi nahi duzun aseguru hau? Ez dira kontsumitutako botereak itzuliko.</value>
+  </data>
+  <data name="LblAceptar" xml:space="preserve">
+    <value>Onartzea</value>
+  </data>
+  <data name="Alarm_1" xml:space="preserve">
+    <value>Ohartarazpena edo arriskua</value>
+  </data>
+  <data name="Alarm_2" xml:space="preserve">
+    <value>Egindako delitua edo krimena</value>
+  </data>
+  <data name="Alarm_3" xml:space="preserve">
+    <value>Kaleko Riña</value>
+  </data>
+  <data name="Alarm_4" xml:space="preserve">
+    <value>Maskota galdua</value>
+  </data>
+  <data name="Alarm_5" xml:space="preserve">
+    <value>Pertsona galdua</value>
+  </data>
+  <data name="Alarm_6" xml:space="preserve">
+    <value>Istiluak edo protestak</value>
+  </data>
+  <data name="Alarm_7" xml:space="preserve">
+    <value>Kalera irten eta bisualki laguntzeko eskaera</value>
+  </data>
+  <data name="Alarm_8" xml:space="preserve">
+    <value>Familia barruko indarkeria</value>
+  </data>
+  <data name="Alarm_9" xml:space="preserve">
+    <value>Susmagarria zure kokalekura ihesi</value>
+  </data>
+  <data name="LblCostoPoderes" xml:space="preserve">
+    <value>Paketearen kostua</value>
+  </data>
+  <data name="LblSuscripcionesDisponibles" xml:space="preserve">
+    <value>Une honetan eskuragarri dauden harpidetzak</value>
+  </data>
+  <data name="LblFamilia" xml:space="preserve">
+    <value>Familia</value>
+  </data>
+  <data name="LblAmigo" xml:space="preserve">
+    <value>Laguna</value>
+  </data>
+  <data name="LblCompanero" xml:space="preserve">
+    <value>Lankidea</value>
+  </data>
+  <data name="LblOtroSinDefinir" xml:space="preserve">
+    <value>Zehaztu gabeko beste bat</value>
+  </data>
+  <data name="LabelExito" xml:space="preserve">
+    <value>Arrakasta</value>
+  </data>
+  <data name="LblSolicitudAprobada" xml:space="preserve">
+    <value>Arrakastaz onartutako eskaera.</value>
+  </data>
+  <data name="MensajeErrorAprobando" xml:space="preserve">
+    <value>Eskaera onartzean akatsa</value>
+  </data>
+  <data name="MensajeErrorRechazando" xml:space="preserve">
+    <value>Eskaerari uko egitean huts egitea.</value>
+  </data>
+  <data name="LblSolicitudRechazada" xml:space="preserve">
+    <value>Eskaera arrakastaz baztertua.</value>
+  </data>
+  <data name="LblUsuarioSolicitante" xml:space="preserve">
+    <value>Erabiltzaile eskatzailea</value>
+  </data>
+  <data name="LblFechaSolicitud" xml:space="preserve">
+    <value>Eskaeraren data</value>
+  </data>
+  <data name="LblAccionRealizar" xml:space="preserve">
+    <value>Egin beharreko ekintza</value>
+  </data>
+  <data name="LblSubscripcionCompletada" xml:space="preserve">
+    <value>Azpiskripzio osoa</value>
+  </data>
+  <data name="LblSubscripcionFallida" xml:space="preserve">
+    <value>Huts egindako azpiskripzioa</value>
+  </data>
+  <data name="LblUsuarioAprobador" xml:space="preserve">
+    <value>Erabiltzaile onartua</value>
+  </data>
+  <data name="LblFechaAprobacion" xml:space="preserve">
+    <value>Onarpen data</value>
+  </data>
+  <data name="LblSubscrEliminada" xml:space="preserve">
+    <value>Ezabatutako harpidetza</value>
+  </data>
+  <data name="LblSubsEliminadaExitosamente" xml:space="preserve">
+    <value>Arrakastaz ezabatutako harpidetza</value>
+  </data>
+  <data name="LblEliminarProtector" xml:space="preserve">
+    <value>Babeslea ezabatzea</value>
+  </data>
+  <data name="LblRenovacionAplicada" xml:space="preserve">
+    <value>Arrakastaz aplikatutako berrikuntza</value>
+  </data>
+  <data name="LblErrorRenovando" xml:space="preserve">
+    <value>Berritzean, itzultzean edo euskarrian informazioa ematean, kontaktu erabilgarria"menú" aukeran &gt;"</value>
+  </data>
+  <data name="LblCancelacionAplicada" xml:space="preserve">
+    <value>Bertan behera utzi zen arrakastaz</value>
+  </data>
+  <data name="LblErrorCancelando" xml:space="preserve">
+    <value>Akatsa, ezeztatzean, euskarrian informazioa ematean, kontaktu erabilgarria"menú" aukeran &gt;"</value>
+  </data>
+  <data name="LblZonaCreada" xml:space="preserve">
+    <value>Eskatutako zaintza-eremuaren azpiskripzioa arrakastaz egin da</value>
+  </data>
+  <data name="LblErrorZonaVigil" xml:space="preserve">
+    <value>Eskatutako gune berria, itzulia edo euskarriko txostena, kontaktu erabilgarria"menú" aukeran &gt;" Acerca de"</value>
+  </data>
+  <data name="LblSeleccionaNuevoRadio" xml:space="preserve">
+    <value>Aukeratu irrati berria metrotan</value>
+  </data>
+  <data name="LblUsuarioProtector" xml:space="preserve">
+    <value>Erabiltzaile babeslea</value>
+  </data>
+  <data name="LblSeguroEliminarProtegido" xml:space="preserve">
+    <value>Zure babesa kentzeko aseguru hau? Inskripzio honetan erabilitako ahalak ez dira itzuliko.</value>
+  </data>
+  <data name="LblSuspenderProtectores" xml:space="preserve">
+    <value>Ziur al zaude 6 orduz bertan behera utziko dituzula jakinarazpenak bere babesleei? Zure babesle guztiei alarmak etengo zaizkie, eta harpidetza amaitzen den denbora ez da luzatuko arrazoi horregatik. Babeslea ez da ekintza horren berri emango.</value>
+  </data>
+  <data name="LblSuspensionRealizada" xml:space="preserve">
+    <value>Zure babesle guztiei 6 orduz alarmak bertan behera uztea arrakastaz egin zen.</value>
+  </data>
+  <data name="LabelSeguroEliminarProtector" xml:space="preserve">
+    <value>Ziur al zaude zure babeslea kenduko duzula? Inskripzio honetan erabilitako ahalak ez dira itzuliko, eta babeslea ekintza horren berri emango zaio.</value>
+  </data>
+  <data name="LabelProtectorEliminado" xml:space="preserve">
+    <value>Hautatutako babeslea kanporatu egin da. Botereak ez dira babeslea izango. Babeslea ekintza horren berri emango zaio</value>
+  </data>
+  <data name="LblConfirmacionRequerida" xml:space="preserve">
+    <value>Garrantzitsua! Eskatutako baieztapena!</value>
+  </data>
+  <data name="LblNoHayRegistros" xml:space="preserve">
+    <value>Ez erregistrorik une honetan erakusteko</value>
+  </data>
+  <data name="LblMiLogin" xml:space="preserve">
+    <value>Nire login-a hauxe da:</value>
+  </data>
+  <data name="LblSaldoPoderesEs" xml:space="preserve">
+    <value>Nire botere-saldoa hauxe da:</value>
+  </data>
+  <data name="LblUsuarioID" xml:space="preserve">
+    <value>Nire erabiltzaile-IDa da</value>
+  </data>
+  <data name="LblNoHayRegistrosAqui" xml:space="preserve">
+    <value>Inork ez du oraindik ezer idatzi!</value>
+  </data>
+  <data name="LblAlertaReportadaPorMi" xml:space="preserve">
+    <value>Alerta erreportatua</value>
+  </data>
+  <data name="LblPara" xml:space="preserve">
+    <value>Mezuaren hartzailea:</value>
+  </data>
+  <data name="LblDe" xml:space="preserve">
+    <value>Mezuaren igorlea:</value>
+  </data>
+  <data name="ConfiguraciondeSOSpect" xml:space="preserve">
+    <value>SOSpect-en konfigurazioa</value>
+  </data>
+  <data name="LblExitoEnAceptacion" xml:space="preserve">
+    <value>Zure kontratu-onarpena gorde egin zen!</value>
+  </data>
+  <data name="LblFalloEnAceptacion" xml:space="preserve">
+    <value>Erregistro hutsa. Mesedez, berriz ere!</value>
+  </data>
+  <data name="LblDeclinacionAceptacion" xml:space="preserve">
+    <value>Kontraturik onartu gabe ezin duzu jarraitu!</value>
+  </data>
+  <data name="LblParaIniciar" xml:space="preserve">
+    <value>HASPECT!! Gertuko alertak eguneratzeko, freskatzeko botoi urdina ukitu</value>
+  </data>
+  <data name="LblAlarmaNoGrave" xml:space="preserve">
+    <value>Erabili botoi horia arrisku gutxiko alertak jartzeko eta zure komunitateari edo zure babesleei abisatzeko. Alerta mota aukeratu eta egindako krimen gisa markatu dezakezu. Botoi honek zure kokapen zehatzean botatzen du alerta, eta laguntza behar duzunean erabilgarria da. Mapan puntu bat ere aukera dezakezu, alerta kokatzeko, zure kokapena arriskuan jarri gabe.</value>
+  </data>
+  <data name="LblCrimenCometido" xml:space="preserve">
+    <value>Botoi gorriak kategoriako alarma aktibatzen du: egindako krimena. SOSpectek ez du kategoriarik behar, kasu horietan denborak duen garrantzia dela eta. Alarma automatikoki jartzen da zure kokaleku zehatzean. Mapan puntu bat ere aukera dezakezu alerta jartzeko eta gero egindako krimenaren kategoria aldatzeko.</value>
+  </data>
+  <data name="LblDescripcionAlarmas" xml:space="preserve">
+    <value>Beheko barraren 'Deskribapena' aukeran, zu edo beste batzuek jarritako alarma zerrenda bat aurkituko duzu. Alarma sortu baduzu, deskribapen bat erantsi ahal izango duzu. Alarma beste pertsona batek sortu badu, egiazkoa dela kalifikatu eta haren deskribapena osatu ahal izango duzu. Kontuz ibili! Informazio faltsua edo kalifikazio okerrak ematen badituzu, zure kontua eten egin daiteke. Arretaz aztertzen ditu hori saihesteko baldintzak eta baldintzak.</value>
+  </data>
+  <data name="LblDescripcionMensajes" xml:space="preserve">
+    <value>Goiko eskuineko izkineko kanpaian, zure mezuak irakur ditzakezu, harpidetza-jakinarazpenak eta berrikiko alarmak barne. Zerrenda hau desberdina da deskribapenen aukerarekin, eta bertan aurki ditzakezu oraintsuko alarmak zuzenean.</value>
+  </data>
+  <data name="LblDescripcionMenu" xml:space="preserve">
+    <value>Goiko ezkerreko izkinan, SOSpect-en konfigurazio aukerak aurkituko dituzu. Harpidetzak erosteko eta zure familia babesteko ahalak erosi ahal izango dituzu, edo alarmak jasotzeko zure irratia zabaldu. GOGOAN IZAN! Hasieran, 80 botere oparitzen dizkizugu, hasieratik bi harpidetza erosi ahal izateko.</value>
+  </data>
+  <data name="LblRecomendaciones" xml:space="preserve">
+    <value>ELKARREKIN GARA EZINEZTAEZINAK! Alertaren oinarrizko funtzioak eta 100 metroko erradioan alertak jasotzea doakoak dira, eta hasieran 2 harpidetza oparitzen dizkizugu. Gonbida ezazu zure komunitatea eta familia doako zerbitzu hau erabiltzera kriminalitatearen gorakadari aurre egiteko. Bizitzak salba ditzakezu edo garaiz alerta bat jasotzean salbatua izan. Galdutako pertsonen edo maskoten alertak 10 kilometrokoak dira, eta manifestazio bortitzek kilometro bateko irismena dute.</value>
+  </data>
+  <data name="LblPromocion" xml:space="preserve">
+    <value>Azkenik, gogoratu SOSpect-en kalifikazio egiazko bakoitzeko botere bat irabaziko duzula, alarma-bozketak itxi eta 90 minutura itxi ostean. Pertsona gehienak zintzoak gara, eta elkarrekin babestuko gara, baita gure familiak ere. ONGI ETORRI SOSPECT-era!</value>
+  </data>
+  <data name="LblDescripcionMapa" xml:space="preserve">
+    <value>Edozein unetan, "MAPA" aukera aukera dezakezu beheko barraren ezkerrean, SOSpect-en abiapuntua dena. Handik, gertuko alarmak ikusi ahal izango dituzu. Zure kokapena maparen erdian agertuko da, eta zirkuluak eragina izan dezakeen irratia irudikatzen du. Lehenetsita, irrati hau 100 metrokoa da, baina konfigurazio menuan alda dezakezu.</value>
+  </data>
+  <data name="LblRecomendacionImportante" xml:space="preserve">
+    <value>Garrantzitsua da aldian behin irekitzea, etxetik irten aurretik edo leku batera iristean, zure kokapena eguneratzeko. Horrela, zure inguruan arriskuren bat dagoen jakinaren gainean jarri ahal izango dizute. Kontuan izan aplikazioa itxita dagoenean ezin dugula zure kokapena lortu, gailuen sistema eragileek ezarritako murrizketen ondorioz. Aztertu zure kokapenarekin zerikusia duena, termino eta baldintzetan.</value>
+  </data>
+  <data name="LblUsuarioBloqueado" xml:space="preserve">
+    <value>Erabiltzailea bertan behera geratu da marka negatiboengatik</value>
+  </data>
+  <data name="LblMarcasNegativas" xml:space="preserve">
+    <value>Nire marka negatiboen kopurua</value>
+  </data>
+  <data name="LblCuentaSuspendida" xml:space="preserve">
+    <value>Beste erabiltzaile batzuen marka negatiboengatik aldi baterako etendako kontua</value>
+  </data>
+  <data name="LblTitleCuentaSuspendida" xml:space="preserve">
+    <value>Aldi baterako etendako kontua</value>
+  </data>
+  <data name="LblFechaFinSuspension" xml:space="preserve">
+    <value>Etenaldia amaitzeko data</value>
+  </data>
+  <data name="LblTocaAqui" xml:space="preserve">
+    <value>Jo hemen joateko</value>
+  </data>
+  <data name="LblNoTienesConexion" xml:space="preserve">
+    <value>Interneterako konexiorik gabe</value>
+  </data>
+  <data name="LblExplicacionSinConexion" xml:space="preserve">
+    <value>Zure kontu-egoera SOSpect-en sartzeko eskatzen da. Internetik gabe ezin dugu jakin aktibo dagoen.</value>
+  </data>
+  <data name="LblSinConexionDescripcion" xml:space="preserve">
+    <value>Internet aktiboa behar da SOSpect-eko zure kontuaren egoera berreskuratzeko.</value>
+  </data>
+  <data name="LblSinConexionQueHacer" xml:space="preserve">
+    <value>Mesedez, aktibatu zure internet eta berriz hasi SOSpect</value>
+  </data>
+  <data name="SefinalizalasubscripcionporsolicituddelusuarioPROTEGIDOatravésdelaAPIdesdelaAPP" xml:space="preserve">
+    <value>ERABILTZAILE BABESTUAK APParen bidez eskatuta amaitzen da harpidetza APPtik</value>
+  </data>
+  <data name="Nopuederenovarsedebidoaquefuecancelada,requieresubscripciónnueva" xml:space="preserve">
+    <value>Ezin da berritu bertan behera geratu zutelako, azpiskripzio berria behar du</value>
+  </data>
+  <data name="Alarmasgeneradaspormicirculosocial" xml:space="preserve">
+    <value>Nire gizarte-zirkuluak sortutako alarmak</value>
+  </data>
+  <data name="Incrementomidiametrodevigilancia" xml:space="preserve">
+    <value>Nire zaintza-diametroaren igoera</value>
+  </data>
+  <data name="Zonadevigilanciaadicional" xml:space="preserve">
+    <value>Zaintza-eremu gehigarria</value>
+  </data>
+  <data name="Renovable" xml:space="preserve">
+    <value>Berriztagarria</value>
+  </data>
+  <data name="SefinalizalasubscripcionporsolicituddelusuarioPROTECTORatravésdelaAPIdesdelaAPP" xml:space="preserve">
+    <value>Erabiltzaile BABESLEAK eskatuta amaitzen da, APPtik APIren bidez</value>
+  </data>
+  <data name="LblEsRenovable" xml:space="preserve">
+    <value>Berriztagarria da?</value>
+  </data>
+  <data name="LblObsSubs" xml:space="preserve">
+    <value>Oharpen-oharra:</value>
+  </data>
+  <data name="NingunaObservacion" xml:space="preserve">
+    <value>Oharpenik ez</value>
+  </data>
+  <data name="Subscripcionvigente" xml:space="preserve">
+    <value>Indarrean dagoen azpiskripzioa</value>
+  </data>
+  <data name="Actualmenteactivoenotrasuscripcion" xml:space="preserve">
+    <value>Gaur egun beste azpiskripzio batean aktibo</value>
+  </data>
+  <data name="LblRadioActual" xml:space="preserve">
+    <value>Alarmak jasotzeko nire egungo irratia hauxe da:</value>
+  </data>
+  <data name="LblPoderesRequeridosZV" xml:space="preserve">
+    <value>Hautatutako zabalkuntzarako behar diren ahalak</value>
+  </data>
+  <data name="OptTerminosCondiciones" xml:space="preserve">
+    <value>SOSpect-en baldintzak eta baldintzak</value>
+  </data>
+  <data name="DebesAbrirLaApp" xml:space="preserve">
+    <value>SOSpectek ezin du erabiltzailearen kokapen-aldaketak ezagutu itxita dagoenean, eta hori zelulen sistema eragileetako bateria kontserbatzeko politikengatik gertatzen da, eta, beraz, garrantzitsua da erabiltzaileak aplikazioa irekitzea, lekua hartu den gunean alarmak berrikusteko eta gertuko alarmak garaiz jasotzeko.</value>
+  </data>
+  <data name="InvitaMasPersonas" xml:space="preserve">
+    <value>Erabiltzailearen segurtasuna hobetzeko, garrantzitsua da ingurukoek, senideek eta bizilagunek, doakoa den aplikazioa deskargatzea. Hurbileko erabiltzailerik ez badago, erabiltzailea garaiz ez ohartaraziko dute, edo bere alertak ez dira entzungo, aplikazioa deskargatu aurretik zegoen bezala arrisku-egoera mantenduz. Garrantzitsua da pertsona gehiago gonbidatzea elkarri laguntzeko!</value>
+  </data>
+  <data name="Insertiondone" xml:space="preserve">
+    <value>Egindako laneratzea.</value>
+  </data>
+  <data name="AnerroroccurredwhilequalifyingthealarmCode1" xml:space="preserve">
+    <value>Akatsa gertatu zen alarma 1 kodearekin kalifikatzean</value>
+  </data>
+  <data name="AnerroroccurredwhilequalifyingthealarmCode2" xml:space="preserve">
+    <value>Akatsa gertatu zen alarma 2 kodearekin kalifikatzean</value>
+  </data>
+  <data name="AnerroroccurredwiththealarmqualificationmodelCode3" xml:space="preserve">
+    <value>Akatsa gertatu zen alarma 3 kodearekin kalifikatzean</value>
+  </data>
+  <data name="Userregistrationsuccessful" xml:space="preserve">
+    <value>Zure erabiltzailea erregistratu dute!</value>
+  </data>
+  <data name="Anerroroccurredwhileregisteringtheusercode1" xml:space="preserve">
+    <value>1. kodea zuen akats bat gertatu zen zure erabiltzailea erregistratzen</value>
+  </data>
+  <data name="Anerroroccurredwhileregisteringtheusercode2" xml:space="preserve">
+    <value>2. kodea duen akats bat gertatu zen zure erabiltzailea erregistratzen</value>
+  </data>
+  <data name="Anerroroccurredwiththepeoplemodelforuserregistrationcode3" xml:space="preserve">
+    <value>3. kodea zuen akats bat gertatu zen zure erabiltzailea erregistratzen</value>
+  </data>
+  <data name="Permisosolicitadoconexito" xml:space="preserve">
+    <value>Arrakastaz eskatutako baimena</value>
+  </data>
+  <data name="OcurriounerrorenelprocesodesolicitarpermisoalprotegidoCodigo1" xml:space="preserve">
+    <value>1 kodedun akats bat gertatu zen babestuari baimena eskatzeko prozesuan</value>
+  </data>
+  <data name="Nofueposiblerealizarenviarlasolicituddepermisoalprotegidoporqueelmodelonoesvalido" xml:space="preserve">
+    <value>Ezin izan zen babestuari baimen-eskaera bidali, eredua ez da baliozkoa</value>
+  </data>
+  <data name="AlertaEnUbicacion" xml:space="preserve">
+    <value>SOSpect alerta bat sortu nahi duzu kokaleku honetan?</value>
+  </data>
+  <data name="CrearEnUbicacionActual" xml:space="preserve">
+    <value>SOSpect alerta bat sortu nahi duzu zure egungo kokalekuan?</value>
+  </data>
+  <data name="SeguroCerrarSesion" xml:space="preserve">
+    <value>Saioa ixteko aseguru hau?</value>
+  </data>
+  <data name="Tu" xml:space="preserve">
+    <value>Zu</value>
+  </data>
+  <data name="Anonimo" xml:space="preserve">
+    <value>Anonimoa</value>
+  </data>
+  <data name="AlarmaCerrada" xml:space="preserve">
+    <value>Alarma itxita</value>
+  </data>
+  <data name="LblSaldoPoderesInsuficiente" xml:space="preserve">
+    <value>Zure botere saldoa ez da nahikoa</value>
+  </data>
+  <data name="LblComprarPoderes" xml:space="preserve">
+    <value>Botereak erosi</value>
+  </data>
+  <data name="LblSeguroRenovar" xml:space="preserve">
+    <value>Ziur al zaude harpidetza hau berrituko duzula?</value>
+  </data>
+  <data name="OptReportes" xml:space="preserve">
+    <value>Erreportariak</value>
+  </data>
+  <data name="LblReportesTitulo" xml:space="preserve">
+    <value>SOSpect-en erreportariak</value>
+  </data>
+  <data name="LblReportesDescripcion" xml:space="preserve">
+    <value>Erreportajeek beste erabiltzaile batzuei egoera txarrak saihesten nola lagundu diozun ulertzeko aukera ematen dizute. Gainera, zure hiriko mapan gune arriskutsuak identifikatzeko eta kriminalitateak denboran zehar izan duen bilakaera ikusteko aukera ematen dizute. Era berean, patroien azterketaren bidez, gertaera negatiboak gertatu baino lehen alerta aurreratuak sor daitezke. Garrantzitsua da azpimarratzea oinarrizko erreportaria doakoa dela, eta beste txosten batzuek, berriz, kostu bat izan dezaketela, sortzeko beharrezkoa den kontsumo konputazionala dela eta.</value>
+  </data>
+  <data name="OptReporteDeCalorEnZona" xml:space="preserve">
+    <value>Bero-mapekin erreportatzea</value>
+  </data>
+  <data name="OptReporteEvolucionEnElTiempo" xml:space="preserve">
+    <value>Alertak denboraren araberako bilakaeraren berri ematen du</value>
+  </data>
+  <data name="OptReportesPredictivos" xml:space="preserve">
+    <value>Iragarpen-erreportajeak</value>
+  </data>
+  <data name="OptReporteAnaliticoDeDescripcionesAlarmas" xml:space="preserve">
+    <value>Alarma-txaten erreportaje analitikoak</value>
+  </data>
+  <data name="LblReporteCalorSospect" xml:space="preserve">
+    <value>SOSpect beroaren mapak</value>
+  </data>
+  <data name="LblReporteEnConstruccion" xml:space="preserve">
+    <value>Laster!! Funtzionaltasun hau eraikuntza-prozesuan!</value>
+  </data>
+  <data name="LblDescripcionMapaDeCalor" xml:space="preserve">
+    <value>Erreportaje honetan, zure inguruko bero-mapa bat izango duzu, eta bertan, SOSpect-ek bere eragiketa hasi zuenetik hilabete batzuk aukeratu ahal izango dituzu. Funtzionaltasun horri esker, zure interesekoa den mapa-eremu bakoitzaren bilakaera ikusi eta ulertu ahal izango duzu.</value>
+  </data>
+  <data name="LblCostoReporte" xml:space="preserve">
+    <value>Kontuan izan funtzionaltasun hori erabiltzeak konputazio-kostua dakarrela eta botereak behar dituela, nahiz eta ez den balio handia izango. Hala ere, inolako arazorik gabe eskuratu ahal izango duzu, aplikazioaren lehen erabileran oparitzen dizkizugun botereak erabiliz.</value>
+  </data>
+  <data name="LblReporteEvolucionAlarmas" xml:space="preserve">
+    <value>SOSpect-en jarritako alarma-bilakaera</value>
+  </data>
+  <data name="LblDescripcionEvolucionAlarmas" xml:space="preserve">
+    <value>Txosten honetan, alarma-mota bakoitzak zure inguruan dituen joerak ezagutu ahal izango dituzu. Arriskutsutasun-joerak ikusi eta aztertu ahal izango dituzu, baita kriminalitatean izan daitezkeen murrizketak identifikatu ere.</value>
+  </data>
+  <data name="LblReportePredictivo" xml:space="preserve">
+    <value>SOSpect predikazio-erreportajeak</value>
+  </data>
+  <data name="LblDescripcionReportesPredictivos" xml:space="preserve">
+    <value>SOSpect-eko komunitateak datu nahikoak sortzen dituen heinean, probabilitateetan eta tresna analitikoetan oinarritutako ekitaldien iragarpenak egin ahal izango dira. Txosten horiei esker jakin ahal izango duzu noiz hurbiltzen diren delitu-jardueraren alertak edo gorakadak, eta aukera emango dizute zuretzat, zure familiarentzat eta zure komunitatearentzat edozein arrisku saihesteko behar diren neurriak hartzeko.</value>
+  </data>
+  <data name="LblReporteAnalisisDeTextos" xml:space="preserve">
+    <value>SOSpect alarma-txaten analisi-erreportajea</value>
+  </data>
+  <data name="LblDescripcionAnalisisTextos" xml:space="preserve">
+    <value>Erabiltzaileek alarmak deskribatzen dituztelako eta SOSpect-en barne-txat-aren bidez haien bilakaera eguneratzen dutelako, txosten horri esker, komunitateari gehien eragiten dioten tipologiak ikusi ahal izango dira. Horrek neurriak hartzeko aukera ematen du, zure zonaldean segurtasun pertzepzioa hobetzeko.</value>
+  </data>
+  <data name="LblRangoReporte" xml:space="preserve">
+    <value>Txosten honek azken 30 egunak hartzen ditu</value>
+  </data>
+  <data name="AcercadeSOSpect" xml:space="preserve">
+    <value>SOSpect-i buruz</value>
+  </data>
+  <data name="Porcentajedealarmasciertasfrenteafalsasenunradiodeunkilometroymedio" xml:space="preserve">
+    <value>Kilometro eta erdiko erradioan faltsuen aurrean benetako alarma-portzentajea</value>
+  </data>
+  <data name="Promediodetiempoenminutosentrelanzamientodealarmaenmizonaylaprimeracalificacionodescripcion" xml:space="preserve">
+    <value>Nire zonaldean alarma-jaurtiketaren eta lehen kalifikazioaren edo deskribapenaren arteko denbora batez besteko denbora</value>
+  </data>
+  <data name="Cantidadrealdepersonasenunradiodeunkilometroymedio" xml:space="preserve">
+    <value>Pertsona kopuru erreala kilometro eta erdiko erradioan</value>
+  </data>
+  <data name="Cantidadrealdepersonasenmiradioactual" xml:space="preserve">
+    <value>Pertsona kopuru erreala nire egungo irratian</value>
+  </data>
+  <data name="Miradioactualderecepcionyenviodealarmasenmetros" xml:space="preserve">
+    <value>Nire gaur egungo harrera-irratia eta alarmak metrotan bidaltzea</value>
+  </data>
+  <data name="Cantidadrealdepersonasquerecibieronmisalarmas" xml:space="preserve">
+    <value>Nire alarmak jaso zituzten pertsonen benetako kopurua</value>
+  </data>
+  <data name="Cantidaddenotificacionesdealarmaenviadasdemiparte" xml:space="preserve">
+    <value>Nire aldetik bidalitako alarma-jakinarazpenen kopurua</value>
+  </data>
+  <data name="Personasquereportaronmiayudacomonegativaofalsa" xml:space="preserve">
+    <value>Nire laguntza negatibo edo faltsu gisa eman zuten pertsonak</value>
+  </data>
+  <data name="Personasqueagradecieronmiayuda" xml:space="preserve">
+    <value>Nire laguntza eskertu zuten pertsonak</value>
+  </data>
+  <data name="Poderesganadosporregalos" xml:space="preserve">
+    <value>Oparien bidez irabazitako botereak</value>
+  </data>
+  <data name="LblParticipacionTpAlarma" xml:space="preserve">
+    <value>Alarma-motaren araberako parte-hartzea</value>
+  </data>
+  <data name="LblMetricBasics" xml:space="preserve">
+    <value>Oinarrizko metrika</value>
+  </data>
+  <data name="LblEfectiAlarmas" xml:space="preserve">
+    <value>Alarma-eraginkortasuna</value>
+  </data>
+  <data name="LblTotalAlarmas" xml:space="preserve">
+    <value>Alarmak, guztira</value>
+  </data>
+  <data name="LblAlarmasVerdaderas" xml:space="preserve">
+    <value>Benetako alarmak</value>
+  </data>
+  <data name="LblAlarmasFalsas" xml:space="preserve">
+    <value>Alarma faltsuak</value>
+  </data>
+  <data name="LblAlarmasEfectivas" xml:space="preserve">
+    <value>Alarma eraginkorren ehunekoa</value>
+  </data>
+  <data name="LblMarcarLeidos" xml:space="preserve">
+    <value>Guztiak irakurri bezala markatu</value>
+  </data>
+  <data name="LblSeMarcaronComoLeidos" xml:space="preserve">
+    <value>Mezu guztiak irakurri bezala markatu ziren</value>
+  </data>
+  <data name="LabelNuevaVersion" xml:space="preserve">
+    <value>SOSpect-en bertsio berri bat eta jarraitzeko beharrezkoa da</value>
+  </data>
+  <data name="OptReporteBasico" xml:space="preserve">
+    <value>Oinarrizko erreportariak - DOAKOAK!</value>
+  </data>
+  <data name="LblReporteBasicoSospect" xml:space="preserve">
+    <value>SOSpect-en oinarrizko erreportajeak</value>
+  </data>
+  <data name="LblReporteBasicoDescripcion" xml:space="preserve">
+    <value>SOSpect-en oinarrizko erreportaiek informazio baliotsua ematen dizute zure alarma-erreportajeek zure komunitatean izan duten eraginari buruz. Gainera, zure komunitateari alarmak eta kalifikazio horietan zintzotasuna zehatz-mehatz kalifikatuz lortzen diren botereen kopurua erakusten dizute. Erreportaje horien bidez, azken hilabetean zure zonaldearen portaera orokorra ere ebaluatzen duzu, prozesuan parte hartu zuten erabiltzaileen kopurua eta partaidetza okerren ondorioz marka negatiboak jaso zituzten erabiltzaileen kopurua barne.</value>
+  </data>
+  <data name="LblReporteBasicoDescripcionCorta" xml:space="preserve">
+    <value>SOSpect-en oinarrizko erreportaiek informazio baliotsua ematen dizute... Ikusi gehiago...</value>
+  </data>
+  <data name="LblDescripcionRepTipoAlarma" xml:space="preserve">
+    <value>Txosten honek kilometro eta erdiko erradio baten barruan ohikoenak diren alarmak ematen dizkizu, gaur egungo kokalekutik.</value>
+  </data>
+  <data name="LblDescripcionRepEfectAlarmas" xml:space="preserve">
+    <value>Txosten honek alarma errealen eta faltsuen arteko eraginkortasun-harremanari buruzko informazioa ematen dizu, zure egungo kokalekutik kilometro eta erdiko erradio baten barruan.</value>
+  </data>
+  <data name="LblDescripcionRepMetricasBasicas" xml:space="preserve">
+    <value>Txosten honek kilometro eta erdiko erradio baten barruko erabiltzaile kopuruari buruzko datuak ematen dizkizu, gaur egungo kokalekutik, bai eta aplikazioaren egungo alarma-irratiko erabiltzaile kopuruari buruzkoak ere. Gainera, zure interesekoa bada, baliteke beste gai hauek ere izatea: Zure interesekoa bada, baliteke beste gai hauek ere izatea: Euskal Musika 2019 Zer da</value>
+  </data>
+  <data name="OptVolumenAlarmas" xml:space="preserve">
+    <value>Hurbileko alarma-motaren araberako bolumena</value>
+  </data>
+  <data name="OptEfectividadAlarmas" xml:space="preserve">
+    <value>Hurbileko alarmak eraginkorrak</value>
+  </data>
+  <data name="OptMetricasBasicas" xml:space="preserve">
+    <value>Hurbileko alarma-metrikak</value>
+  </data>
+  <data name="LblCredibilidadActual" xml:space="preserve">
+    <value>Nire alarmak sinesgarritasuna hauxe da:</value>
+  </data>
+  <data name="OptManualUsuarioSospect" xml:space="preserve">
+    <value>SOSpect erabiltzailearen eskuliburua</value>
+  </data>
+  <data name="LblDescManualUsuario" xml:space="preserve">
+    <value>SOSpect aurkezten dizugu, zure eta zure senideen babesa emateko diseinatutako doako aplikazioa. Online eskuliburu zehatz eta xehatu bat sortu dugu, eta modu egokian erabiltzen lagunduko dizu. Eskuliburu honekin, SOSpect-en ahalik eta etekinik handiena atera eta segurtasun-funtzio guztiak aprobetxatu ahal izango dituzu.</value>
+  </data>
+  <data name="SesionApple" xml:space="preserve">
+    <value>SAIOA APPLEREKIN HASI</value>
+  </data>
+  <data name="LblCredibilidadAlarmaActual" xml:space="preserve">
+    <value>Alarmaren sinesgarritasuna:</value>
+  </data>
+  <data name="LblAccedeAlManual" xml:space="preserve">
+    <value>Eskuliburua eskura dezakezu:</value>
+  </data>
+  <data name="LblRefrescarLista" xml:space="preserve">
+    <value>Alarma-zerrenda freskatu</value>
+  </data>
+  <data name="LblErrorCorreoDispositivo" xml:space="preserve">
+    <value>Gailu honetan ezin izan zen posta elektronikorik bidali</value>
+  </data>
+  <data name="LblErrorCorreo" xml:space="preserve">
+    <value>Posta elektronikoa bidaltzean huts egitea:</value>
+  </data>
+  <data name="LblSeleccioneTipoAlarma" xml:space="preserve">
+    <value>Mesedez, aukeratu alarma-mota</value>
+  </data>
+  <data name="LblCompraFallida" xml:space="preserve">
+    <value>Ez zen erosketarik egin. Mesedez, interneterako sarbidea berrikustea eta berriro sartzea</value>
+  </data>
+  <data name="LblSeleccionePuntoMapa" xml:space="preserve">
+    <value>Zaintza-gune bat aukeratu behar duzu mapan</value>
+  </data>
+  <data name="Cantidaddealarmascolocadasenlaszonasdevigilanciasuscritas" xml:space="preserve">
+    <value>Harpidetutako zaintza-guneetan jarritako alarma-kopurua</value>
+  </data>
+  <data name="Cantidaddealarmascolocadaspormisprotegidos" xml:space="preserve">
+    <value>Nire babestuek jarritako alarma kopurua</value>
+  </data>
+  <data name="Credibilidadactualdelasalarmasqueenvioamicomunidad" xml:space="preserve">
+    <value>Nire komunitatera bidaltzen ditut alarmak gaur egungo sinesgarritasuna</value>
+  </data>
+  <data name="LblCompraExitosa" xml:space="preserve">
+    <value>Zorionak! Harpidetzak eskuratzeko botereak erosi zenian. Azalpen-mezu bat aurkituko duzu kanpaian!</value>
+  </data>
+  <data name="LblDebesHabilitarNotif" xml:space="preserve">
+    <value>Jakinarazpenen bidalketa gaitu behar duzu SOSpect-ek funtziona dezan</value>
+  </data>
+  <data name="LblHabilitarNotifSettings" xml:space="preserve">
+    <value>Aplikazio honek jakinarazpenak onar ditzake, baina hori bere konfigurazioan gaitu behar du.</value>
+  </data>
+  <data name="LblErrorHabilitandoUsoNotif" xml:space="preserve">
+    <value>Jakinarazpen automatikoak erabiltzea eragotzi zuen akats bat gertatu zen</value>
+  </data>
+  <data name="LblMostrarDireccionEscape" xml:space="preserve">
+    <value>Iheslariaren ihes-ibilbidea markatzea</value>
+  </data>
+  <data name="LblProximamenteSOSpect" xml:space="preserve">
+    <value>Laster SOSpect!-en!</value>
+  </data>
+  <data name="LblReportesProximos" xml:space="preserve">
+    <value>Datu-zientzia duten erreportaje analitikoak eta prediktiboak!</value>
+  </data>
+  <data name="LblHolaBienvenido" xml:space="preserve">
+    <value>Kaixo! Ongi etorri SOSpect-era. 
+
+SOSpect doako tresna bat da, zu eta zure senideak babesteko diseinatua, gertuko arriskuei buruzko alerta egokiak ematen dituzunean! Litekeena da hasieran alarma asko ez jasotzea, oraindik ez baitago zugandik gertu pertsona asko SOSpect instalatu duenik. Aukera bat eman diezagutela eta aplikazioa ez desinstatzeko eskatzen dizugu. SOSpectek zure bizitza salba dezake uneren batean, baita zure familia edo komunitateko norbaiten bizitza ere.
+
+Konfigurazioan dagoen "Reportes" menuaren "Oinarrizko Erreportaria" atalean, zure estaldura-eremuan gertu dauden erabiltzaileen kopurua ikusi ahal izango duzu "Oinarrizko Metricas" atalean, eta alarmak jasoko dituzu. Lagundu zenbaki hori handitzen, doan da eta modu seguruagoan bizitzeko aukera emango dizu!
+
+Sarrera-eskuliburu labur hau arretaz irakurtzera gonbidatzen zaitugu, SOSpect-ek nola funtzionatzen duen jakingo dizuna. Kontuan izan aplikazioa instalatu eta behin bakarrik erakutsiko dela.
+
+Eskerrik asko SOSpect erabiltzeagatik eta guztion segurtasunari laguntzeagatik!
+
+Pantaila jotzen du jarraitzeko...</value>
+  </data>
+</root>

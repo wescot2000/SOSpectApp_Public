@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="sospect.Views.SuspendedAccountPage"
+             xmlns:fonts="clr-namespace:sospect.Resources.Fonts;assembly=sospect"
+             xmlns:helpers="clr-namespace:sospect.Helpers"
+             BackgroundColor="White"
+             Title="{helpers:TranslateExtension Text='LblTitleCuentaSuspendida'}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Label
+            Grid.Row="0" Grid.Column="1"
+               Text="{helpers:TranslateExtension Text='LblCuentaSuspendida'}"
+               FontSize="Medium"
+               FontAttributes="Bold"
+               HorizontalOptions="CenterAndExpand"
+               VerticalOptions="CenterAndExpand" 
+               HorizontalTextAlignment="Center"
+               TextColor="Red"/>
+
+        <StackLayout Grid.Row="1" Grid.Column="1" VerticalOptions="Center">
+            <Label 
+                   Text="{helpers:TranslateExtension Text='LblFechaFinSuspension'}"
+                   FontSize="Small"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center" 
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"
+                   TextColor="Gray"/>
+            <Label Text="{Binding FechaFinSuspension}"
+                   FontSize="Small"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center" 
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"
+                   TextColor="Gray"></Label>
+        </StackLayout>
+    </Grid>
+</ContentPage>

@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<rg:PopupPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:rg="http://rotorgames.com"
+    xmlns:helpers="clr-namespace:sospect.Helpers"
+    xmlns:maps="clr-namespace:sospect.CustomRenderers"
+    CloseWhenBackgroundIsClicked="False"
+    HasSystemPadding="False"
+    x:Class="sospect.Popups.MinimapaPopUp">
+     <rg:PopupPage.Animation>
+        <rg:ScaleAnimation
+            DurationIn="400"
+            DurationOut="300"
+            EasingIn="SinOut"
+            EasingOut="SinIn"
+            HasBackgroundAnimation="True"
+            PositionIn="Center"
+            PositionOut="Center"
+            ScaleIn="1.2"
+            ScaleOut="0.8" />
+    </rg:PopupPage.Animation>
+    <Frame CornerRadius="10"
+           VerticalOptions="Center"
+           HorizontalOptions="Center"
+           WidthRequest="350"
+           Margin="10">
+        <StackLayout>
+            <maps:MiniMapa x:Name="miMiniMapa"
+                           HorizontalOptions="FillAndExpand"
+                            VerticalOptions="FillAndExpand"
+                            HeightRequest="320"
+                            MinimumHeightRequest="320"/>
+            <StackLayout Orientation="Horizontal">
+                <Button HorizontalOptions="FillAndExpand" FontSize="Large" Text="{helpers:TranslateExtension Text='LabelCancelar'}" Command="{Binding CancelarCommand}"/>
+                <Button HorizontalOptions="FillAndExpand"
+                        Text="{helpers:TranslateExtension Text='LabelHecho'}"
+                        FontSize="Large"
+                        Command="{Binding HechoDireccionCommand}"
+                        CommandParameter="{Binding Source={x:Reference miMiniMapa}}"/>
+            </StackLayout>
+        </StackLayout>
+    </Frame>
+</rg:PopupPage>
+

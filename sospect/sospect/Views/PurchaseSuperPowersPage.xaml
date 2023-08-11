@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+         xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+         x:Class="sospect.Views.PurchaseSuperPowersPage"
+         xmlns:fonts="clr-namespace:sospect.Resources.Fonts;assembly=sospect"
+         xmlns:helpers="clr-namespace:sospect.Helpers"
+         BackgroundColor="White"
+         Title="{helpers:TranslateExtension Text='LblCompraPoderes'}">
+    <ContentPage.Content>
+        <Grid>
+            <StackLayout>
+                <ListView x:Name="SuperPowersListView" BackgroundColor="White" ItemsSource="{Binding SuperPowers}" HasUnevenRows="True"  SelectionMode="None">
+                    <ListView.Header>
+                        <Grid Margin="0,20,0,0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Label Text="{helpers:TranslateExtension Text='LblCantidadPoderes'}" Grid.Column="0" TextColor="Gray" FontAttributes="Bold" FontSize="18" VerticalOptions="Center" HorizontalOptions="Center"/>
+                            <Label Text="{helpers:TranslateExtension Text='LblPrecio'}" Grid.Column="1" TextColor="Gray" FontAttributes="Bold" FontSize="18" VerticalOptions="Center" HorizontalOptions="Center"/>
+                            <Label Text="{helpers:TranslateExtension Text='LblAccion'}" Grid.Column="2" TextColor="Gray" FontAttributes="Bold" FontSize="18" VerticalOptions="Center" HorizontalOptions="Center"/>
+                        </Grid>
+                    </ListView.Header>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid Margin="0,15,15,5">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Label Text="{Binding cantidad_poderes}" Grid.Column="0" TextColor="Black" FontSize="16"  VerticalOptions="Center" HorizontalOptions="Center"/>
+                                    <Label Text="{Binding LocalizedPrice, StringFormat='{0}'}" Grid.Column="1" TextColor="Black" FontSize="16"  VerticalOptions="Center"/>
+                                    <Button BackgroundColor="LightGray" FontAttributes="Bold" TextColor="Black" CornerRadius="5" Text="{helpers:TranslateExtension Text='LblComprar'}"  Grid.Column="2" CommandParameter="{Binding .}" Command="{Binding Path=BindingContext.PurchaseCommand, Source={x:Reference SuperPowersListView}}"  VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <!--Button BackgroundColor="Gray" TextColor="Black" CornerRadius="5" Text="ConsumirCompra" Command="{Binding ConsumirCommand}"  VerticalOptions="Center" HorizontalOptions="Center" /-->
+            </StackLayout>
+            <Grid BackgroundColor="Black"
+                  Opacity="0.5"
+                  HorizontalOptions="FillAndExpand"
+                  VerticalOptions="FillAndExpand"
+                  IsVisible="{Binding IsRunning}">
+                <ActivityIndicator VerticalOptions="Center"
+                                   HorizontalOptions="Center"
+                                   HeightRequest="50"
+                                   WidthRequest="50"
+                                   Color="DarkBlue"
+                                   IsRunning="{Binding IsRunning}">
+                </ActivityIndicator>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

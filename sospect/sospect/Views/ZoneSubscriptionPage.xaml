@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="sospect.Views.ZoneSubscriptionPage"
+             xmlns:maps="clr-namespace:sospect.CustomRenderers"
+             xmlns:helpers="clr-namespace:sospect.Helpers"
+             BackgroundColor="White"
+             Title="{helpers:TranslateExtension Text='ZonaVigilancia'}">
+    <Grid>
+        <StackLayout Padding="20">
+            <Label Text="{helpers:TranslateExtension Text='SeleccioneUbicacionVigilar'}"
+               FontAttributes="Bold"
+                TextColor="Gray"
+               FontSize="18" />
+            <maps:MiniMapa x:Name="miMiniMapa"
+                           HorizontalOptions="FillAndExpand"
+                            VerticalOptions="FillAndExpand"
+                            HeightRequest="320"
+                            MinimumHeightRequest="320"/>
+            <Label Text="{helpers:TranslateExtension Text='ExplicaZonaVigilancia'}"
+                   TextColor="Gray"
+               FontSize="14" />
+            <Label x:Name="LatitudeLabel"
+               Text="{Binding LatitudeLabel}"
+                   TextColor="Gray"
+               FontSize="14" />
+            <Label x:Name="LongitudeLabel"
+               Text="{Binding LongitudeLabel}"
+                   TextColor="Gray"
+               FontSize="14" />
+
+            <Frame x:Name="CreateZoneButton" Padding="5" BorderColor="Black" BackgroundColor="LightGray" Margin="0,40,0,0" HorizontalOptions="Center" HeightRequest="35" WidthRequest="350" CornerRadius="10">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding CreateZoneCommand}" CommandParameter="{x:Reference miMiniMapa}" NumberOfTapsRequired="1" />
+                </Frame.GestureRecognizers>
+                <Label Text="{helpers:TranslateExtension Text='CrearZonaV'}" 
+                       TextColor="Black"
+                       LineBreakMode="WordWrap"
+                       HorizontalOptions="CenterAndExpand"
+                       VerticalOptions="CenterAndExpand"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center" />
+                </Frame>
+        </StackLayout>
+        <Grid BackgroundColor="Black"
+                  Opacity="0.5"
+                  HorizontalOptions="FillAndExpand"
+                  VerticalOptions="FillAndExpand"
+                  IsVisible="{Binding IsRunning}">
+            <ActivityIndicator VerticalOptions="Center"
+                                   HorizontalOptions="Center"
+                                   HeightRequest="50"
+                                   WidthRequest="50"
+                                   Color="DarkBlue"
+                                   IsRunning="{Binding IsRunning}">
+            </ActivityIndicator>
+        </Grid>
+    </Grid>
+</ContentPage>

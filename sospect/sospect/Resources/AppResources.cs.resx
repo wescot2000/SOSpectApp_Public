@@ -1,0 +1,1090 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Bienvenido" xml:space="preserve">
+    <value>Vítejte v SOSpect</value>
+  </data>
+  <data name="InicieSesion" xml:space="preserve">
+    <value>Chcete-li pokračovat, přihlaste se</value>
+  </data>
+  <data name="InicieSesionCon" xml:space="preserve">
+    <value>nebo se přihlaste pomocí</value>
+  </data>
+  <data name="SesionFacebook" xml:space="preserve">
+    <value>PŘIHLÁSIT SE PŘES FACEBOOK</value>
+  </data>
+  <data name="SesionGoogle" xml:space="preserve">
+    <value>PŘIHLÁSIT SE PŘES GOOGLE</value>
+  </data>
+  <data name="LabelAlerta" xml:space="preserve">
+    <value>Poplach</value>
+  </data>
+  <data name="LabelCrimen" xml:space="preserve">
+    <value>Zločin</value>
+  </data>
+  <data name="LabelOK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="LabelCancelar" xml:space="preserve">
+    <value>Zrušit</value>
+  </data>
+  <data name="ReportarCrimen" xml:space="preserve">
+    <value>Nahlásit trestný čin</value>
+  </data>
+  <data name="LabelMapa" xml:space="preserve">
+    <value>Mapa</value>
+  </data>
+  <data name="LabelDescribir" xml:space="preserve">
+    <value>Popsat</value>
+  </data>
+  <data name="DescripcionAlarma" xml:space="preserve">
+    <value>Popis alarmu</value>
+  </data>
+  <data name="DescripcionSospechoso" xml:space="preserve">
+    <value>Popis podezřelé osoby</value>
+  </data>
+  <data name="DescripcionVehiculo" xml:space="preserve">
+    <value>Popis vozidla</value>
+  </data>
+  <data name="DescripcionArma" xml:space="preserve">
+    <value>Popis zbraně</value>
+  </data>
+  <data name="PuntuacionDescripcion" xml:space="preserve">
+    <value>Popis bodování</value>
+  </data>
+  <data name="LabelEditar" xml:space="preserve">
+    <value>Upravit</value>
+  </data>
+  <data name="DescripcionesParaAlarma" xml:space="preserve">
+    <value>Popisy tohoto alarmu</value>
+  </data>
+  <data name="EspacioPublicidad" xml:space="preserve">
+    <value>Prostor pro reklamu</value>
+  </data>
+  <data name="AlarmasRecientes" xml:space="preserve">
+    <value>Nedávné alarmy pro přidání popisu</value>
+  </data>
+  <data name="ConfirmarAlarma" xml:space="preserve">
+    <value>Potvrdit poplach</value>
+  </data>
+  <data name="LabelInformacion" xml:space="preserve">
+    <value>Informace</value>
+  </data>
+  <data name="LabelError" xml:space="preserve">
+    <value>Chyba</value>
+  </data>
+  <data name="LabelCancelado" xml:space="preserve">
+    <value>Zrušený</value>
+  </data>
+  <data name="LabelLoginCancelado" xml:space="preserve">
+    <value>Přihlášení zrušeno</value>
+  </data>
+  <data name="LabelFallo" xml:space="preserve">
+    <value>Selhání</value>
+  </data>
+  <data name="RecibeAlarma" xml:space="preserve">
+    <value>Dostali jste alarm poblíž místa, kde jste, je to skutečné?</value>
+  </data>
+  <data name="LabelConfirmo" xml:space="preserve">
+    <value>Potvrdit</value>
+  </data>
+  <data name="LabelNoSeguro" xml:space="preserve">
+    <value>Nejsem si jistý</value>
+  </data>
+  <data name="LabelEsFalsa" xml:space="preserve">
+    <value>Není to pravda</value>
+  </data>
+  <data name="LabelConfirmar" xml:space="preserve">
+    <value>Potvrdit</value>
+  </data>
+  <data name="AdvertenciaCalificacion" xml:space="preserve">
+    <value>Toto hodnocení nelze později změnit. Mohlo by to ovlivnit vaši budoucí důvěryhodnost, pokud by konsensus ratingů byl proti vašemu hlasu. Opravdu?</value>
+  </data>
+  <data name="LabelSi" xml:space="preserve">
+    <value>Ano</value>
+  </data>
+  <data name="LabelNo" xml:space="preserve">
+    <value>Ne</value>
+  </data>
+  <data name="AlarmaEnviada" xml:space="preserve">
+    <value>Alarm odeslán!</value>
+  </data>
+  <data name="MsgTrasAlarmaEnviada" xml:space="preserve">
+    <value>Pokud jste v bezpečí, popište poplach, pokud ne, skryjte telefon a vyhněte se nebezpečí.</value>
+  </data>
+  <data name="notificacionurgente" xml:space="preserve">
+    <value>Naléhavé oznámení bude odesláno na nejbližší telefony na adrese:</value>
+  </data>
+  <data name="LabelAlarma" xml:space="preserve">
+    <value>Poplach</value>
+  </data>
+  <data name="LabelMetros" xml:space="preserve">
+    <value>metr</value>
+  </data>
+  <data name="LabelTuUbicacion" xml:space="preserve">
+    <value>Vaše poloha</value>
+  </data>
+  <data name="LabelUsuario" xml:space="preserve">
+    <value>Uživatel</value>
+  </data>
+  <data name="LabelTipoAlarma" xml:space="preserve">
+    <value>Typ alarmu</value>
+  </data>
+  <data name="DireccionEscape" xml:space="preserve">
+    <value>Uveďte prosím únikovou adresu podezřelého.</value>
+  </data>
+  <data name="DescripcionAlerta" xml:space="preserve">
+    <value>Popis záznamu</value>
+  </data>
+  <data name="DescripcionImplicado" xml:space="preserve">
+    <value>Popis osoby zapojené do záznamu</value>
+  </data>
+  <data name="DescripcionVehiculoImp" xml:space="preserve">
+    <value>Zapojené vozidlo (v příslušných případech)</value>
+  </data>
+  <data name="ArmaImplicada" xml:space="preserve">
+    <value>Použitá zbraň (Připadá-li v úvahu)</value>
+  </data>
+  <data name="LabelRutaEscape" xml:space="preserve">
+    <value>Podezřelá úniková cesta</value>
+  </data>
+  <data name="ObjetivoSospect" xml:space="preserve">
+    <value>SOSpect si klade za cíl umožnit komunitě upozorňovat a přijímat upozornění na nebezpečí v místě uživatele, aby se zabránilo rizikům pro ně a jejich blízké. Poloha uživatelů není sdílena ani sledována, což zajišťuje jejich soukromí. Uživatelé mohou umístit upozornění na nebezpečí, aby pomohli ostatním vyhnout se tomu, aby se stali oběťmi rizikových situací.</value>
+  </data>
+  <data name="UbicacionImportante" xml:space="preserve">
+    <value>Je důležité znát polohu uživatele, abyste ho mohli upozornit, pokud někdo umístí výstrahu nebezpečí v blízkosti jeho polohy. Poloha uživatele je však soukromá a jsou sdíleny pouze body na mapě, kde jsou umístěna upozornění.</value>
+  </data>
+  <data name="GenteUnida" xml:space="preserve">
+    <value>S SOSpect se může komunita spojit, aby snížila kriminalitu a vyhnula se obětem rizikových situací a upozornila ostatní, aby také zůstali v bezpečí.</value>
+  </data>
+  <data name="contactenos" xml:space="preserve">
+    <value>Kontaktujte nás</value>
+  </data>
+  <data name="visitenos" xml:space="preserve">
+    <value>Navštivte nás na</value>
+  </data>
+  <data name="ZonaVigilancia" xml:space="preserve">
+    <value>Předplatné Surveillance Zone</value>
+  </data>
+  <data name="SeleccioneUbicacionVigilar" xml:space="preserve">
+    <value>Vyberte místo, které chcete sledovat</value>
+  </data>
+  <data name="SeleccionEnMapa" xml:space="preserve">
+    <value>Vybrat na mapě</value>
+  </data>
+  <data name="ExplicaZonaVigilancia" xml:space="preserve">
+    <value>Všechny alarmy, které jsou umístěny v místě, které se chystáte vybrat, budou upozorněny bez ohledu na to, kdo je umístí. Tímto způsobem si můžete být vědomi nebezpečí, která v tomto okamžiku číhají. To je ideální pro povědomí o nebezpečích na místech, jako jsou školy nebo univerzity vašich dětí nebo oblasti, kde pracují vaši příbuzní nebo blízcí.</value>
+  </data>
+  <data name="CrearZonaV" xml:space="preserve">
+    <value>Vytvořte zónu dozoru s tímto umístěním</value>
+  </data>
+  <data name="LabelLatitud" xml:space="preserve">
+    <value>Zeměpisná šířka</value>
+  </data>
+  <data name="LabelLongitud" xml:space="preserve">
+    <value>Zeměpisná délka</value>
+  </data>
+  <data name="LabelIntroduccion" xml:space="preserve">
+    <value>Úvod</value>
+  </data>
+  <data name="AmpliacionRadio" xml:space="preserve">
+    <value>Rozšíření poloměru poplachu</value>
+  </data>
+  <data name="TuRadioActual" xml:space="preserve">
+    <value>Váš aktuální poloměr je:</value>
+  </data>
+  <data name="CrearNuevoRadio" xml:space="preserve">
+    <value>Vytvořit předplatné pro toto nové rádio</value>
+  </data>
+  <data name="ExplicacionVigencias" xml:space="preserve">
+    <value>Všechna předplatná mají platnost, ceny předplatného zkontrolujte v první možnosti hlavního menu</value>
+  </data>
+  <data name="VasARequerir" xml:space="preserve">
+    <value>Budete potřebovat</value>
+  </data>
+  <data name="xPoderesParaSubs" xml:space="preserve">
+    <value>Pravomoci přidat toto rádio do vašeho současného rádia</value>
+  </data>
+  <data name="Exito" xml:space="preserve">
+    <value>Úspěch</value>
+  </data>
+  <data name="SubscripcionCreada" xml:space="preserve">
+    <value>Předplatné bylo úspěšně vytvořeno.</value>
+  </data>
+  <data name="MensajeError" xml:space="preserve">
+    <value>Při připojování k serveru došlo k chybě. Zkuste to prosím znovu.</value>
+  </data>
+  <data name="SeleccionaRuta" xml:space="preserve">
+    <value>Musíte vybrat únikovou cestu podezřelého.</value>
+  </data>
+  <data name="AprobarSolicitudes" xml:space="preserve">
+    <value>Schválení žádostí</value>
+  </data>
+  <data name="LabelAprobar" xml:space="preserve">
+    <value>Schválit</value>
+  </data>
+  <data name="LabelRechazar" xml:space="preserve">
+    <value>Odmítat</value>
+  </data>
+  <data name="CompletarSubscripcion" xml:space="preserve">
+    <value>Kompletní chráněné předplatné</value>
+  </data>
+  <data name="CompletarSubsc" xml:space="preserve">
+    <value>Kompletní předplatné</value>
+  </data>
+  <data name="LblMensajes" xml:space="preserve">
+    <value>Zprávy</value>
+  </data>
+  <data name="LblFechaMensaje" xml:space="preserve">
+    <value>Datum zprávy</value>
+  </data>
+  <data name="LblMenu" xml:space="preserve">
+    <value>KONFIGURACE</value>
+  </data>
+  <data name="OptCompraPoderes" xml:space="preserve">
+    <value>Kupte si síly k odemknutí funkcí</value>
+  </data>
+  <data name="OptGestionarProtegidos" xml:space="preserve">
+    <value>Spravovat mé chráněné chrániče</value>
+  </data>
+  <data name="OptCrearZonas" xml:space="preserve">
+    <value>Vytvoření zón dozoru</value>
+  </data>
+  <data name="OptAumentarRadio" xml:space="preserve">
+    <value>Zvětšit rádius příjmu upozornění</value>
+  </data>
+  <data name="OptAcercaDe" xml:space="preserve">
+    <value>O aplikaci SOSpect</value>
+  </data>
+  <data name="OptCerrarSesion" xml:space="preserve">
+    <value>Odhlásit se</value>
+  </data>
+  <data name="LblProtectores" xml:space="preserve">
+    <value>Moji ochránci</value>
+  </data>
+  <data name="LblSuspender" xml:space="preserve">
+    <value>Dočasné pozastavení</value>
+  </data>
+  <data name="LblEliminarProtegido" xml:space="preserve">
+    <value>Odebrat chráněné</value>
+  </data>
+  <data name="LblSubscrProtegido" xml:space="preserve">
+    <value>Chráněné předplatné</value>
+  </data>
+  <data name="LblIDUsuarioAProteger" xml:space="preserve">
+    <value>Zadejte ID uživatele, které chcete chránit. (Tato hodnota je umístěna v horní části konfiguračního menu SOSpect uživatele, kterého chcete propojit)</value>
+  </data>
+  <data name="LblRelacionProtegido" xml:space="preserve">
+    <value>Můj vztah s tímto chráněncem je:</value>
+  </data>
+  <data name="LblSolicitarPermiso" xml:space="preserve">
+    <value>Vyžádání oprávnění od uživatele</value>
+  </data>
+  <data name="LblCompleteCampos" xml:space="preserve">
+    <value>Vyplňte prosím všechna pole.</value>
+  </data>
+  <data name="LblProcesarSolicitud" xml:space="preserve">
+    <value>Při zpracování požadavku došlo k chybě. Zkuste to prosím znovu.</value>
+  </data>
+  <data name="LblProtegidos" xml:space="preserve">
+    <value>Moji chráněnci</value>
+  </data>
+  <data name="LblUsuarioProtegido" xml:space="preserve">
+    <value>Chráněné ID uživatele</value>
+  </data>
+  <data name="LblFechaActivacion" xml:space="preserve">
+    <value>Datum aktivace</value>
+  </data>
+  <data name="LblFechaFinalizacion" xml:space="preserve">
+    <value>Datum ukončení</value>
+  </data>
+  <data name="LblAccion" xml:space="preserve">
+    <value>Akce</value>
+  </data>
+  <data name="LblCantidadPoderes" xml:space="preserve">
+    <value>Počet pravomocí</value>
+  </data>
+  <data name="LblPrecio" xml:space="preserve">
+    <value>Cena</value>
+  </data>
+  <data name="LblComprar" xml:space="preserve">
+    <value>Kupovat</value>
+  </data>
+  <data name="LblValoresSubsc" xml:space="preserve">
+    <value>Hodnoty předplatného</value>
+  </data>
+  <data name="LblTerminos" xml:space="preserve">
+    <value>Podmínky služby pro SOSpect APP</value>
+  </data>
+  <data name="LblAcepto" xml:space="preserve">
+    <value>Souhlasím se smlouvou</value>
+  </data>
+  <data name="LblNoAcepto" xml:space="preserve">
+    <value>Nesouhlasím</value>
+  </data>
+  <data name="LblOpcionesProtegidos" xml:space="preserve">
+    <value>Chráněno a chráněno aplikací SOSpect</value>
+  </data>
+  <data name="LblExplicacionProtegidos" xml:space="preserve">
+    <value>Můžete dostávat upozornění od členů vašeho sociálního kruhu, i když jsou od vás daleko. Zde můžete tuto funkci spravovat</value>
+  </data>
+  <data name="OptIniciarTramite" xml:space="preserve">
+    <value>Spusťte proces přidání chráněného</value>
+  </data>
+  <data name="OptAprobarSolicitud" xml:space="preserve">
+    <value>Schválení žádosti od ochránce</value>
+  </data>
+  <data name="OptListarProtegidos" xml:space="preserve">
+    <value>Podívejte se na seznam mých chráněnců</value>
+  </data>
+  <data name="OptListarProtectores" xml:space="preserve">
+    <value>Podívejte se na seznam mých chráničů</value>
+  </data>
+  <data name="OptVolver" xml:space="preserve">
+    <value>Vrátit</value>
+  </data>
+  <data name="LblPoderesSospect" xml:space="preserve">
+    <value>Pravomoci aplikace SOSpect</value>
+  </data>
+  <data name="LblOpcionesPoderes" xml:space="preserve">
+    <value>Vítejte ve volbě řízení spotřeby, co chcete dělat?</value>
+  </data>
+  <data name="LblSubscripcionesCosto" xml:space="preserve">
+    <value>Chci vědět, jaká předplatná si mohu koupit a jejich cenu</value>
+  </data>
+  <data name="LblQuieroComprar" xml:space="preserve">
+    <value>Chci si koupit superschopnosti, abych získal předplatné</value>
+  </data>
+  <data name="ExplicacionRadio" xml:space="preserve">
+    <value>Výchozí poloměr pro všechny uživatele aplikace je 100 metrů kolem. Tento poloměr můžete rozšířit pomocí pravomocí aplikace. Poté si vyberte požadovaný poloměr:</value>
+  </data>
+  <data name="LblAsunto" xml:space="preserve">
+    <value>Stručný popis</value>
+  </data>
+  <data name="LblCompraPoderes" xml:space="preserve">
+    <value>Nákup pravomocí</value>
+  </data>
+  <data name="OptCompletarTramite" xml:space="preserve">
+    <value>Dokončení postupu přidání chráněného</value>
+  </data>
+  <data name="LabelHecho" xml:space="preserve">
+    <value>Hotový</value>
+  </data>
+  <data name="LabelEscapoEnEstaDireccion" xml:space="preserve">
+    <value>Utekl tímto směrem</value>
+  </data>
+  <data name="OptMisSubs" xml:space="preserve">
+    <value>Moje předplatné</value>
+  </data>
+  <data name="LblMisSubscripciones" xml:space="preserve">
+    <value>Moje předplatné</value>
+  </data>
+  <data name="LblidUsuario" xml:space="preserve">
+    <value>ID uživatele:</value>
+  </data>
+  <data name="LblTipo" xml:space="preserve">
+    <value>Typ předplatného:</value>
+  </data>
+  <data name="LblDescripcionPuntos" xml:space="preserve">
+    <value>Popis:__________:</value>
+  </data>
+  <data name="LblFechaFinPuntos" xml:space="preserve">
+    <value>Datum ukončení:</value>
+  </data>
+  <data name="LblPoderesPuntos" xml:space="preserve">
+    <value>Pravomoci k obnovení:</value>
+  </data>
+  <data name="LblRenovar" xml:space="preserve">
+    <value>Obnovit</value>
+  </data>
+  <data name="LblCancelarSubscripcion" xml:space="preserve">
+    <value>Zrušit předplatné</value>
+  </data>
+  <data name="LblSeguroDeCancelar" xml:space="preserve">
+    <value>Opravdu chcete zrušit předplatné? Spotřebované síly se nevrátí.</value>
+  </data>
+  <data name="LblAceptar" xml:space="preserve">
+    <value>Přijmout</value>
+  </data>
+  <data name="Alarm_1" xml:space="preserve">
+    <value>Varování nebo nebezpečí</value>
+  </data>
+  <data name="Alarm_2" xml:space="preserve">
+    <value>Trestný čin nebo spáchaný trestný čin</value>
+  </data>
+  <data name="Alarm_3" xml:space="preserve">
+    <value>Pouliční rvačka</value>
+  </data>
+  <data name="Alarm_4" xml:space="preserve">
+    <value>Ztracený mazlíček</value>
+  </data>
+  <data name="Alarm_5" xml:space="preserve">
+    <value>Ztracená osoba</value>
+  </data>
+  <data name="Alarm_6" xml:space="preserve">
+    <value>Nepokoje nebo protesty</value>
+  </data>
+  <data name="Alarm_7" xml:space="preserve">
+    <value>Vyžádejte si vizuální doprovod výjezdem na ulici</value>
+  </data>
+  <data name="Alarm_8" xml:space="preserve">
+    <value>Domácí násilí</value>
+  </data>
+  <data name="Alarm_9" xml:space="preserve">
+    <value>Podezřelý prchající do oblasti vaší polohy</value>
+  </data>
+  <data name="LblCostoPoderes" xml:space="preserve">
+    <value>Cena balíčku</value>
+  </data>
+  <data name="LblSuscripcionesDisponibles" xml:space="preserve">
+    <value>Aktuálně dostupná předplatná</value>
+  </data>
+  <data name="LblFamilia" xml:space="preserve">
+    <value>Rodina</value>
+  </data>
+  <data name="LblAmigo" xml:space="preserve">
+    <value>Přítel</value>
+  </data>
+  <data name="LblCompanero" xml:space="preserve">
+    <value>Společník</value>
+  </data>
+  <data name="LblOtroSinDefinir" xml:space="preserve">
+    <value>Jiné nedefinované</value>
+  </data>
+  <data name="LabelExito" xml:space="preserve">
+    <value>Úspěch</value>
+  </data>
+  <data name="LblSolicitudAprobada" xml:space="preserve">
+    <value>Žádost byla úspěšně schválena.</value>
+  </data>
+  <data name="MensajeErrorAprobando" xml:space="preserve">
+    <value>Chyba při schvalování žádosti</value>
+  </data>
+  <data name="MensajeErrorRechazando" xml:space="preserve">
+    <value>Žádost se nepodařilo zamítnout.</value>
+  </data>
+  <data name="LblSolicitudRechazada" xml:space="preserve">
+    <value>Žádost byla úspěšně zamítnuta.</value>
+  </data>
+  <data name="LblUsuarioSolicitante" xml:space="preserve">
+    <value>Žádající uživatel</value>
+  </data>
+  <data name="LblFechaSolicitud" xml:space="preserve">
+    <value>Datum podání žádosti</value>
+  </data>
+  <data name="LblAccionRealizar" xml:space="preserve">
+    <value>Opatření, která je třeba přijmout</value>
+  </data>
+  <data name="LblSubscripcionCompletada" xml:space="preserve">
+    <value>Předplatné dokončeno</value>
+  </data>
+  <data name="LblSubscripcionFallida" xml:space="preserve">
+    <value>Předplatné se nezdařilo</value>
+  </data>
+  <data name="LblUsuarioAprobador" xml:space="preserve">
+    <value>Uživatel schvalovatele</value>
+  </data>
+  <data name="LblFechaAprobacion" xml:space="preserve">
+    <value>Datum schválení</value>
+  </data>
+  <data name="LblSubscrEliminada" xml:space="preserve">
+    <value>Nepronajmeme</value>
+  </data>
+  <data name="LblSubsEliminadaExitosamente" xml:space="preserve">
+    <value>Předplatné bylo úspěšně odebráno</value>
+  </data>
+  <data name="LblEliminarProtector" xml:space="preserve">
+    <value>Sejměte chránič</value>
+  </data>
+  <data name="LblRenovacionAplicada" xml:space="preserve">
+    <value>Úspěšně provedená renovace</value>
+  </data>
+  <data name="LblErrorRenovando" xml:space="preserve">
+    <value>Chyba obnovení, opakování nebo hlášení na podporu, kontakt je k dispozici v "menu"&gt; možnost "O aplikaci"</value>
+  </data>
+  <data name="LblCancelacionAplicada" xml:space="preserve">
+    <value>Zrušení proběhlo úspěšně</value>
+  </data>
+  <data name="LblErrorCancelando" xml:space="preserve">
+    <value>Zrušení chyby, opakování nebo hlášení na podporu, kontakt je k dispozici v "menu"&gt; možnost "O aplikaci"</value>
+  </data>
+  <data name="LblZonaCreada" xml:space="preserve">
+    <value>Přidělení požadovaného pásma dozoru bylo úspěšně provedeno</value>
+  </data>
+  <data name="LblErrorZonaVigil" xml:space="preserve">
+    <value>Chyba při přihlášení k odběru nové požadované zóny, opakování nebo hlášení podpory, kontakt je k dispozici ve volbě "menu"&gt;"O aplikaci"</value>
+  </data>
+  <data name="LblSeleccionaNuevoRadio" xml:space="preserve">
+    <value>Vyberte nový poloměr v metrech</value>
+  </data>
+  <data name="LblUsuarioProtector" xml:space="preserve">
+    <value>Ochranný uživatel</value>
+  </data>
+  <data name="LblSeguroEliminarProtegido" xml:space="preserve">
+    <value>Jste si jisti, že chcete svého chráněnce odstranit? Pravomoci použité v tomto předplatném nebudou vráceny.</value>
+  </data>
+  <data name="LblSuspenderProtectores" xml:space="preserve">
+    <value>Jste si jisti, že pozastavíte oznámení svým chráničům po dobu 6 hodin? Všechny vaše chrániče budou pozastaveny alarmy a čas ukončení předplatného nebude z tohoto důvodu prodloužen. Ochránce nebude o této akci informován.</value>
+  </data>
+  <data name="LblSuspensionRealizada" xml:space="preserve">
+    <value>Pozastavení alarmů všem vašim chráničům po dobu 6 hodin bylo úspěšné.</value>
+  </data>
+  <data name="LabelSeguroEliminarProtector" xml:space="preserve">
+    <value>Jste si jisti, že jste odstranili chránič? Pravomoci použité v tomto předplatném nebudou vráceny a ochránce bude o této akci informován.</value>
+  </data>
+  <data name="LabelProtectorEliminado" xml:space="preserve">
+    <value>Vybraný ochránce byl odstraněn. Pravomoci nebudou vráceny ochránci. Ochránce bude o této akci informován</value>
+  </data>
+  <data name="LblConfirmacionRequerida" xml:space="preserve">
+    <value>Důležitý! Potvrzení vyžadováno!</value>
+  </data>
+  <data name="LblNoHayRegistros" xml:space="preserve">
+    <value>V současné době nejsou k dispozici žádné protokoly, které by se měly zobrazit</value>
+  </data>
+  <data name="LblMiLogin" xml:space="preserve">
+    <value>Moje přihlašovací jméno je:</value>
+  </data>
+  <data name="LblSaldoPoderesEs" xml:space="preserve">
+    <value>Moje rovnováha výkonu je:</value>
+  </data>
+  <data name="LblUsuarioID" xml:space="preserve">
+    <value>Moje ID uživatele je</value>
+  </data>
+  <data name="LblNoHayRegistrosAqui" xml:space="preserve">
+    <value>Nikdo ještě nic nenapsal!</value>
+  </data>
+  <data name="LblAlertaReportadaPorMi" xml:space="preserve">
+    <value>Upozornění, které jsem nahlásil</value>
+  </data>
+  <data name="LblPara" xml:space="preserve">
+    <value>Příjemce zprávy:</value>
+  </data>
+  <data name="LblDe" xml:space="preserve">
+    <value>Odesílatel zprávy:</value>
+  </data>
+  <data name="ConfiguraciondeSOSpect" xml:space="preserve">
+    <value>Konfigurace SOSpect</value>
+  </data>
+  <data name="LblExitoEnAceptacion" xml:space="preserve">
+    <value>Vaše přijetí smlouvy je uloženo!</value>
+  </data>
+  <data name="LblFalloEnAceptacion" xml:space="preserve">
+    <value>Registrace se nezdařila. Zkuste to prosím znovu!</value>
+  </data>
+  <data name="LblDeclinacionAceptacion" xml:space="preserve">
+    <value>Bez přijetí smlouvy nemůžete pokračovat!</value>
+  </data>
+  <data name="LblParaIniciar" xml:space="preserve">
+    <value>ZAČNĚME SOSpect!! Chcete-li aktualizovat upozornění v okolí, klepněte na modré tlačítko obnovení</value>
+  </data>
+  <data name="LblAlarmaNoGrave" xml:space="preserve">
+    <value>Pomocí žlutého tlačítka můžete umístit upozornění na nízké nebezpečí a upozornit svou komunitu nebo ochránce. Můžete zvolit typ upozornění a označit jej jako spáchaný trestný čin. Toto tlačítko spustí upozornění ve vašem přesném umístění a je užitečné, když potřebujete pomoc. Můžete také vybrat bod na mapě a vyhledat výstrahu, aniž by byla ohrožena vaše poloha.</value>
+  </data>
+  <data name="LblCrimenCometido" xml:space="preserve">
+    <value>Červené tlačítko spustí kategorii: poplach spáchaný zločin. SOSpect nevyžaduje zahrnutí kategorie vzhledem k důležitosti času v těchto případech. Alarm se automaticky umístí na vaše přesné místo. Můžete také vybrat bod na mapě pro umístění upozornění a poté změnit kategorii na spáchaný trestný čin.</value>
+  </data>
+  <data name="LblDescripcionAlarmas" xml:space="preserve">
+    <value>Ve volbě "Popsat" ve spodní liště najdete seznam alarmů, které jste umístili vy nebo ostatní. Pokud jste budík vytvořili, můžete přidat popis. Pokud byl alarm vytvořen někým jiným, můžete ohodnotit jeho pravdivost a doplnit jeho popis. Dej si pozor! Pokud poskytnete nepravdivé informace nebo nesprávné hodnocení, může být váš účet pozastaven. Pečlivě si přečtěte smluvní podmínky, abyste tomu zabránili.</value>
+  </data>
+  <data name="LblDescripcionMensajes" xml:space="preserve">
+    <value>Ve zvonku v pravém horním rohu si můžete přečíst zprávy, které obsahují oznámení o odběru a nedávné alarmy. Tento seznam se liší od možnosti popisů, kde můžete přímo najít nedávné alarmy.</value>
+  </data>
+  <data name="LblDescripcionMenu" xml:space="preserve">
+    <value>Na ozubeném kole v levém horním rohu najdete možnosti konfigurace SOSpect. Můžete si koupit pravomoci k nákupu předplatného a chránit svou rodinu nebo rozšířit okruh příjmu alarmu. PAMATOVAT! Na začátku vám dáme 80 pravomocí, abyste si mohli od začátku zakoupit dvě předplatná.</value>
+  </data>
+  <data name="LblRecomendaciones" xml:space="preserve">
+    <value>SPOLEČNĚ JSME NEPORAZITELNÍ! Základní funkce upozorňování a přijímání upozornění v okruhu 100 metrů jsou zdarma a když začnete, dáme vám 2 odběry. Pozvěte svou komunitu a rodinu, aby využily tuto bezplatnou službu k boji proti rostoucí kriminalitě. Můžete zachránit životy nebo být zachráněni včasným obdržením upozornění. Upozornění na ztracené osoby nebo domácí zvířata mají rozsah 10 kilometrů a násilné demonstrace mají rozsah 1 kilometr</value>
+  </data>
+  <data name="LblPromocion" xml:space="preserve">
+    <value>Nakonec nezapomeňte, že získáte plnou moc za každé pravdivé hodnocení, které poskytnete v SOSpect, když hlasování alarmů skončí po 90 minutách od jejich umístění. Většina lidí je upřímná a společně budeme chránit sebe navzájem a naše rodiny. VÍTEJTE V SOSPECT!</value>
+  </data>
+  <data name="LblDescripcionMapa" xml:space="preserve">
+    <value>Kdykoliv můžete zvolit možnost "MAP" vlevo od spodní lišty, která je výchozím bodem SOSpect. Odtud můžete zobrazit blízké alarmy. Vaše poloha se zobrazí ve středu mapy a kruh představuje poloměr, který by vás mohl ovlivnit. Ve výchozím nastavení je tento poloměr 100 metrů, ale můžete jej upravit v nabídce nastavení.</value>
+  </data>
+  <data name="LblRecomendacionImportante" xml:space="preserve">
+    <value>Je důležité, abyste SOSpect otevírali pravidelně, před odchodem z domova nebo když dorazíte na místo, abyste aktualizovali svou polohu. Tímto způsobem vás můžeme informovat, pokud existuje nějaké riziko ve vaší oblasti. Vezměte prosím na vědomí, že když je aplikace zavřena, nemůžeme zjistit vaši polohu kvůli omezením uloženým operačními systémy zařízení. Informujte se o smluvních podmínkách týkajících se vaší polohy.</value>
+  </data>
+  <data name="LblUsuarioBloqueado" xml:space="preserve">
+    <value>Uživatel pozastaven pro negativní známky</value>
+  </data>
+  <data name="LblMarcasNegativas" xml:space="preserve">
+    <value>Můj počet záporných známek je</value>
+  </data>
+  <data name="LblCuentaSuspendida" xml:space="preserve">
+    <value>Účet byl dočasně pozastaven kvůli negativním známkám od ostatních uživatelů</value>
+  </data>
+  <data name="LblTitleCuentaSuspendida" xml:space="preserve">
+    <value>Dočasně pozastavený účet</value>
+  </data>
+  <data name="LblFechaFinSuspension" xml:space="preserve">
+    <value>Datum ukončení pozastavení je</value>
+  </data>
+  <data name="LblTocaAqui" xml:space="preserve">
+    <value>Klepněte sem pro přechod</value>
+  </data>
+  <data name="LblNoTienesConexion" xml:space="preserve">
+    <value>Žádné připojení k internetu</value>
+  </data>
+  <data name="LblExplicacionSinConexion" xml:space="preserve">
+    <value>Váš výpis je vyžadován pro přihlášení do SOSpect. Bez internetu nemůžeme vědět, zda je aktivní.</value>
+  </data>
+  <data name="LblSinConexionDescripcion" xml:space="preserve">
+    <value>K získání stavu vašeho SOSpect účtu je vyžadován aktivní internet.</value>
+  </data>
+  <data name="LblSinConexionQueHacer" xml:space="preserve">
+    <value>Aktivujte prosím svůj internet a restartujte SOSpect</value>
+  </data>
+  <data name="SefinalizalasubscripcionporsolicituddelusuarioPROTEGIDOatravésdelaAPIdesdelaAPP" xml:space="preserve">
+    <value>Předplatné je ukončeno na žádost CHRÁNĚNÉHO uživatele prostřednictvím API z APP</value>
+  </data>
+  <data name="Nopuederenovarsedebidoaquefuecancelada,requieresubscripciónnueva" xml:space="preserve">
+    <value>Nelze obnovit, protože byl zrušen, vyžaduje nové předplatné.</value>
+  </data>
+  <data name="Alarmasgeneradaspormicirculosocial" xml:space="preserve">
+    <value>Alarmy generované mým sociálním kruhem</value>
+  </data>
+  <data name="Incrementomidiametrodevigilancia" xml:space="preserve">
+    <value>Zvětšuji svůj sledovací průměr</value>
+  </data>
+  <data name="Zonadevigilanciaadicional" xml:space="preserve">
+    <value>Doplňkové pásmo dozoru</value>
+  </data>
+  <data name="Renovable" xml:space="preserve">
+    <value>Obnovitelný</value>
+  </data>
+  <data name="SefinalizalasubscripcionporsolicituddelusuarioPROTECTORatravésdelaAPIdesdelaAPP" xml:space="preserve">
+    <value>Předplatné je ukončeno na žádost uživatele PROTECTOR prostřednictvím API z APP</value>
+  </data>
+  <data name="LblEsRenovable" xml:space="preserve">
+    <value>Je obnovitelná?</value>
+  </data>
+  <data name="LblObsSubs" xml:space="preserve">
+    <value>Poznámka k předplatnému:</value>
+  </data>
+  <data name="NingunaObservacion" xml:space="preserve">
+    <value>Bez komentáře</value>
+  </data>
+  <data name="Subscripcionvigente" xml:space="preserve">
+    <value>Aktuální předplatné</value>
+  </data>
+  <data name="Actualmenteactivoenotrasuscripcion" xml:space="preserve">
+    <value>Aktuálně aktivní v jiném předplatném</value>
+  </data>
+  <data name="LblRadioActual" xml:space="preserve">
+    <value>Můj aktuální rádius pro příjem alarmů je:</value>
+  </data>
+  <data name="LblPoderesRequeridosZV" xml:space="preserve">
+    <value>Pravomoci požadované pro vybrané rozšíření</value>
+  </data>
+  <data name="OptTerminosCondiciones" xml:space="preserve">
+    <value>Obchodní podmínky SOSpect</value>
+  </data>
+  <data name="DebesAbrirLaApp" xml:space="preserve">
+    <value>SOSpect nemůže znát změny polohy uživatele, když je zavřený, to se děje podle zásad zachování baterie operačních systémů mobilních telefonů, takže je důležité, aby uživatel často otevíral aplikaci, aby zkontroloval alarmy v oblasti, do které se přestěhoval, a včas obdržel blízké alarmy.</value>
+  </data>
+  <data name="InvitaMasPersonas" xml:space="preserve">
+    <value>Pro zlepšení bezpečnosti uživatele je důležité, aby si lidé kolem něj, rodina a sousedé, stáhli aplikaci, která je zdarma. Pokud v okolí nejsou žádní uživatelé, uživatel nemusí být včas upozorněn nebo jejich výstrahy nemusí být vyslyšeny, a to při zachování rizikového stavu tak, jak byl před stažením aplikace. Je důležité pozvat více lidí, aby si navzájem pomohli!</value>
+  </data>
+  <data name="Insertiondone" xml:space="preserve">
+    <value>Vložení provedeno.</value>
+  </data>
+  <data name="AnerroroccurredwhilequalifyingthealarmCode1" xml:space="preserve">
+    <value>Při hodnocení alarmu kódem 1 došlo k chybě</value>
+  </data>
+  <data name="AnerroroccurredwhilequalifyingthealarmCode2" xml:space="preserve">
+    <value>Při hodnocení alarmu kódem 2 došlo k chybě</value>
+  </data>
+  <data name="AnerroroccurredwiththealarmqualificationmodelCode3" xml:space="preserve">
+    <value>Při hodnocení alarmu s kódem 3 došlo k chybě</value>
+  </data>
+  <data name="Userregistrationsuccessful" xml:space="preserve">
+    <value>Váš uživatel byl zaregistrován!</value>
+  </data>
+  <data name="Anerroroccurredwhileregisteringtheusercode1" xml:space="preserve">
+    <value>Došlo k chybě s kódem 1 při registraci uživatele</value>
+  </data>
+  <data name="Anerroroccurredwhileregisteringtheusercode2" xml:space="preserve">
+    <value>Došlo k chybě s kódem 2 registrujícím uživatele</value>
+  </data>
+  <data name="Anerroroccurredwiththepeoplemodelforuserregistrationcode3" xml:space="preserve">
+    <value>Došlo k chybě s kódem 3 registrujícím uživatele</value>
+  </data>
+  <data name="Permisosolicitadoconexito" xml:space="preserve">
+    <value>Úspěšně vyžádané oprávnění</value>
+  </data>
+  <data name="OcurriounerrorenelprocesodesolicitarpermisoalprotegidoCodigo1" xml:space="preserve">
+    <value>V procesu žádosti o povolení od chráněného došlo k chybě s kódem 1</value>
+  </data>
+  <data name="Nofueposiblerealizarenviarlasolicituddepermisoalprotegidoporqueelmodelonoesvalido" xml:space="preserve">
+    <value>Nebylo možné odeslat žádost o povolení chráněnému, model je neplatný</value>
+  </data>
+  <data name="AlertaEnUbicacion" xml:space="preserve">
+    <value>Chcete v tomto umístění vytvořit upozornění SOSpect?</value>
+  </data>
+  <data name="CrearEnUbicacionActual" xml:space="preserve">
+    <value>Chcete vytvořit upozornění SOSpect na svém aktuálním místě?</value>
+  </data>
+  <data name="SeguroCerrarSesion" xml:space="preserve">
+    <value>Jste si jisti, že se odhlásíte?</value>
+  </data>
+  <data name="Tu" xml:space="preserve">
+    <value>Ty</value>
+  </data>
+  <data name="Anonimo" xml:space="preserve">
+    <value>Anonymní</value>
+  </data>
+  <data name="AlarmaCerrada" xml:space="preserve">
+    <value>Alarm uzavřen</value>
+  </data>
+  <data name="LblSaldoPoderesInsuficiente" xml:space="preserve">
+    <value>Rovnováha výkonu je nedostatečná</value>
+  </data>
+  <data name="LblComprarPoderes" xml:space="preserve">
+    <value>Koupit plné moci</value>
+  </data>
+  <data name="LblSeguroRenovar" xml:space="preserve">
+    <value>Jste si jisti obnovením tohoto předplatného?</value>
+  </data>
+  <data name="OptReportes" xml:space="preserve">
+    <value>Zprávy</value>
+  </data>
+  <data name="LblReportesTitulo" xml:space="preserve">
+    <value>SOSpect zprávy</value>
+  </data>
+  <data name="LblReportesDescripcion" xml:space="preserve">
+    <value>Přehledy vám dávají příležitost pochopit, jak jste pomohli ostatním uživatelům tím, že jste se vyhnuli nepříznivým situacím. Kromě toho vám umožňují identifikovat nebezpečné oblasti na mapě vašeho města a sledovat vývoj kriminality v průběhu času. Prostřednictvím analýzy vzorů je také možné generovat včasná varování dříve, než dojde k negativním událostem. Je důležité si uvědomit, že základní sestava je zdarma, zatímco jiné zprávy mohou mít náklady kvůli výpočetní spotřebě nezbytné pro jejich generování.</value>
+  </data>
+  <data name="OptReporteDeCalorEnZona" xml:space="preserve">
+    <value>Zpráva s teplotními mapami</value>
+  </data>
+  <data name="OptReporteEvolucionEnElTiempo" xml:space="preserve">
+    <value>Zpráva o vývoji výstrah podle času</value>
+  </data>
+  <data name="OptReportesPredictivos" xml:space="preserve">
+    <value>Prediktivní reporty</value>
+  </data>
+  <data name="OptReporteAnaliticoDeDescripcionesAlarmas" xml:space="preserve">
+    <value>Analytické reporty alarmových chatů</value>
+  </data>
+  <data name="LblReporteCalorSospect" xml:space="preserve">
+    <value>SOSpect Teplotní mapy</value>
+  </data>
+  <data name="LblReporteEnConstruccion" xml:space="preserve">
+    <value>Brzy!! Tato funkce je ve výstavbě!</value>
+  </data>
+  <data name="LblDescripcionMapaDeCalor" xml:space="preserve">
+    <value>V tomto reportu budete mít přístup k tepelné mapě vaší oblasti, kde si můžete vybrat různé měsíce od zahájení provozu SOSpectu. Tato funkce vám umožní sledovat a pochopit vývoj každé oblasti mapy, která vás zajímá.</value>
+  </data>
+  <data name="LblCostoReporte" xml:space="preserve">
+    <value>Mějte na paměti, že použití této funkce nese výpočetní náklady a vyžaduje výkony, i když to nebude vysoká hodnota. Můžete ji však bez problémů získat pomocí pravomocí, které vám dáme při prvním použití aplikace.</value>
+  </data>
+  <data name="LblReporteEvolucionAlarmas" xml:space="preserve">
+    <value>Vývoj alarmů umístěných v SOSpect</value>
+  </data>
+  <data name="LblDescripcionEvolucionAlarmas" xml:space="preserve">
+    <value>V této zprávě budete mít možnost znát trendy každého typu alarmu v průběhu času ve vaší oblasti. Budete schopni sledovat a analyzovat trendy nebezpečnosti a identifikovat možné snížení kriminality.</value>
+  </data>
+  <data name="LblReportePredictivo" xml:space="preserve">
+    <value>Prediktivní zprávy SOSpect</value>
+  </data>
+  <data name="LblDescripcionReportesPredictivos" xml:space="preserve">
+    <value>Vzhledem k tomu, že komunita SOSpect generuje dostatek dat, lze vytvářet předpovědi událostí založené na pravděpodobnosti a analytické nástroje. Tyto zprávy vám umožní zjistit, kdy se blíží vlny varování nebo nárůst trestné činnosti, což vám umožní přijmout nezbytná opatření, abyste se vyhnuli jakémukoli riziku pro vás, vaši rodinu a vaši komunitu.</value>
+  </data>
+  <data name="LblReporteAnalisisDeTextos" xml:space="preserve">
+    <value>SOSpect alarm chat analýza reportu</value>
+  </data>
+  <data name="LblDescripcionAnalisisTextos" xml:space="preserve">
+    <value>Díky tomu, že uživatelé popisují alarmy a aktualizují svůj vývoj prostřednictvím interního chatu SOSpect, tato zpráva umožní vizualizovat typologie, které nejvíce ovlivňují komunitu. To poskytuje příležitost podniknout kroky ke zlepšení vnímání bezpečnosti ve vaší oblasti.</value>
+  </data>
+  <data name="LblRangoReporte" xml:space="preserve">
+    <value>Tato zpráva se týká posledních 30 dnů</value>
+  </data>
+  <data name="AcercadeSOSpect" xml:space="preserve">
+    <value>O společnosti SOSpect</value>
+  </data>
+  <data name="Porcentajedealarmasciertasfrenteafalsasenunradiodeunkilometroymedio" xml:space="preserve">
+    <value>Procento pravdivých versus falešných poplachů v okruhu jednoho a půl kilometru</value>
+  </data>
+  <data name="Promediodetiempoenminutosentrelanzamientodealarmaenmizonaylaprimeracalificacionodescripcion" xml:space="preserve">
+    <value>Průměrná doba v minutách mezi spuštěním alarmu v mé oblasti a prvním hodnocením nebo popisem</value>
+  </data>
+  <data name="Cantidadrealdepersonasenunradiodeunkilometroymedio" xml:space="preserve">
+    <value>Skutečný počet osob v okruhu kilometru a půl</value>
+  </data>
+  <data name="Cantidadrealdepersonasenmiradioactual" xml:space="preserve">
+    <value>Skutečný počet lidí v mém současném okruhu</value>
+  </data>
+  <data name="Miradioactualderecepcionyenviodealarmasenmetros" xml:space="preserve">
+    <value>Můj aktuální rádius příjmu a odesílání alarmů v měřičích</value>
+  </data>
+  <data name="Cantidadrealdepersonasquerecibieronmisalarmas" xml:space="preserve">
+    <value>Skutečný počet lidí, kteří přijali mé alarmy</value>
+  </data>
+  <data name="Cantidaddenotificacionesdealarmaenviadasdemiparte" xml:space="preserve">
+    <value>Počet upozornění na poplach zaslaných ode mě</value>
+  </data>
+  <data name="Personasquereportaronmiayudacomonegativaofalsa" xml:space="preserve">
+    <value>Lidé, kteří nahlásili mou pomoc jako negativní nebo nepravdivou</value>
+  </data>
+  <data name="Personasqueagradecieronmiayuda" xml:space="preserve">
+    <value>Lidé, kteří ocenili mou pomoc</value>
+  </data>
+  <data name="Poderesganadosporregalos" xml:space="preserve">
+    <value>Síly získané dary</value>
+  </data>
+  <data name="LblParticipacionTpAlarma" xml:space="preserve">
+    <value>Účast podle typu poplachu</value>
+  </data>
+  <data name="LblMetricBasics" xml:space="preserve">
+    <value>Základní metriky</value>
+  </data>
+  <data name="LblEfectiAlarmas" xml:space="preserve">
+    <value>Účinnost alarmů</value>
+  </data>
+  <data name="LblTotalAlarmas" xml:space="preserve">
+    <value>Totální alarmy</value>
+  </data>
+  <data name="LblAlarmasVerdaderas" xml:space="preserve">
+    <value>Skutečné poplachy</value>
+  </data>
+  <data name="LblAlarmasFalsas" xml:space="preserve">
+    <value>Plané poplachy</value>
+  </data>
+  <data name="LblAlarmasEfectivas" xml:space="preserve">
+    <value>Procento účinných alarmů</value>
+  </data>
+  <data name="LblMarcarLeidos" xml:space="preserve">
+    <value>Označit vše jako přečtené</value>
+  </data>
+  <data name="LblSeMarcaronComoLeidos" xml:space="preserve">
+    <value>Všechny zprávy byly označeny jako přečtené</value>
+  </data>
+  <data name="LabelNuevaVersion" xml:space="preserve">
+    <value>K dispozici je nová verze SOSpect a je nutné pokračovat</value>
+  </data>
+  <data name="OptReporteBasico" xml:space="preserve">
+    <value>Základní zprávy - ZDARMA!</value>
+  </data>
+  <data name="LblReporteBasicoSospect" xml:space="preserve">
+    <value>Základní sestavy SOSpect</value>
+  </data>
+  <data name="LblReporteBasicoDescripcion" xml:space="preserve">
+    <value>Základní zprávy SOSpect vám poskytnou cenné informace o dopadu vašich alarmových zpráv na vaši komunitu. Kromě toho vám ukazují počet pravomocí získaných tím, že pomáháte své komunitě přesným hodnocením alarmů a upřímnosti v těchto hodnoceních. Prostřednictvím těchto přehledů můžete také vyhodnotit celkové chování vaší oblasti za poslední měsíc, včetně počtu uživatelů, kteří se procesu zúčastnili, a počtu uživatelů, kteří obdrželi negativní známky kvůli nesprávným interakcím.</value>
+  </data>
+  <data name="LblReporteBasicoDescripcionCorta" xml:space="preserve">
+    <value>Základní zprávy SOSpect vám poskytnou cenné informace o... Zobrazit více...</value>
+  </data>
+  <data name="LblDescripcionRepTipoAlarma" xml:space="preserve">
+    <value>Tato sestava poskytuje informace o nejčastějších alarmech v okruhu jednoho a půl kilometru od vaší aktuální polohy.</value>
+  </data>
+  <data name="LblDescripcionRepEfectAlarmas" xml:space="preserve">
+    <value>Tato zpráva poskytuje informace o vztahu efektivity mezi skutečnými a falešnými poplachy v okruhu jednoho a půl kilometru od vaší aktuální polohy.</value>
+  </data>
+  <data name="LblDescripcionRepMetricasBasicas" xml:space="preserve">
+    <value>Tento přehled poskytuje údaje o počtu uživatelů v okruhu jednoho a půl kilometru od vaší aktuální polohy a také o počtu uživatelů v aktuálním okruhu alarmů aplikací. Kromě toho obsahuje několik dalších informací, které vás zajímají.</value>
+  </data>
+  <data name="OptVolumenAlarmas" xml:space="preserve">
+    <value>Hlasitost podle typu okolních alarmů</value>
+  </data>
+  <data name="OptEfectividadAlarmas" xml:space="preserve">
+    <value>Účinnost okolních alarmů</value>
+  </data>
+  <data name="OptMetricasBasicas" xml:space="preserve">
+    <value>Základní metriky blízkých alarmů</value>
+  </data>
+  <data name="LblCredibilidadActual" xml:space="preserve">
+    <value>Důvěryhodnost mých alarmů je:</value>
+  </data>
+  <data name="OptManualUsuarioSospect" xml:space="preserve">
+    <value>SOSpect Uživatelská příručka</value>
+  </data>
+  <data name="LblDescManualUsuario" xml:space="preserve">
+    <value>Seznamte se s SOSpect, bezplatnou aplikací navrženou tak, aby chránila vás a vaše blízké. Vytvořili jsme stručný a podrobný online manuál, který vám pomůže správně používat. S tímto manuálem můžete SOSpect využít na maximum a využít všech jeho bezpečnostních funkcí.</value>
+  </data>
+  <data name="SesionApple" xml:space="preserve">
+    <value>PŘIHLÁŠENÍ PŘES APPLE</value>
+  </data>
+  <data name="LblCredibilidadAlarmaActual" xml:space="preserve">
+    <value>Důvěryhodnost alarmu:</value>
+  </data>
+  <data name="LblAccedeAlManual" xml:space="preserve">
+    <value>Příručku můžete otevřít na adrese:</value>
+  </data>
+  <data name="LblRefrescarLista" xml:space="preserve">
+    <value>Obnovit seznam alarmů</value>
+  </data>
+  <data name="LblErrorCorreoDispositivo" xml:space="preserve">
+    <value>Na tomto zařízení nelze odeslat e-mail</value>
+  </data>
+  <data name="LblErrorCorreo" xml:space="preserve">
+    <value>Chyba při odesílání e-mailu:</value>
+  </data>
+  <data name="LblSeleccioneTipoAlarma" xml:space="preserve">
+    <value>Vyberte typ alarmu</value>
+  </data>
+  <data name="LblCompraFallida" xml:space="preserve">
+    <value>Nákup nebyl proveden. Zkontrolujte přístup k internetu a zkuste to znovu</value>
+  </data>
+  <data name="LblSeleccionePuntoMapa" xml:space="preserve">
+    <value>Na mapě musíte vybrat zónu dozoru</value>
+  </data>
+  <data name="Cantidaddealarmascolocadasenlaszonasdevigilanciasuscritas" xml:space="preserve">
+    <value>Počet poplachů umístěných v předplacených dozorových zónách</value>
+  </data>
+  <data name="Cantidaddealarmascolocadaspormisprotegidos" xml:space="preserve">
+    <value>Počet alarmů umístěných mými chráněnci</value>
+  </data>
+  <data name="Credibilidadactualdelasalarmasqueenvioamicomunidad" xml:space="preserve">
+    <value>Aktuální důvěryhodnost alarmů, které posílám své komunitě</value>
+  </data>
+  <data name="LblCompraExitosa" xml:space="preserve">
+    <value>Blahopřejeme! Zakoupili jste oprávnění k nákupu předplatných. Ve zvonku najdete vysvětlující zprávu!</value>
+  </data>
+  <data name="LblDebesHabilitarNotif" xml:space="preserve">
+    <value>Aby SOSpect fungoval, je nutné povolit odesílání oznámení</value>
+  </data>
+  <data name="LblHabilitarNotifSettings" xml:space="preserve">
+    <value>Tato aplikace může podporovat oznámení, ale musíte to povolit v nastavení.</value>
+  </data>
+  <data name="LblErrorHabilitandoUsoNotif" xml:space="preserve">
+    <value>Došlo k chybě, která zabránila použití nabízených oznámení</value>
+  </data>
+  <data name="LblMostrarDireccionEscape" xml:space="preserve">
+    <value>Úniková cesta Marka Fugitive</value>
+  </data>
+  <data name="LblProximamenteSOSpect" xml:space="preserve">
+    <value>Již brzy na SOSpect!</value>
+  </data>
+  <data name="LblReportesProximos" xml:space="preserve">
+    <value>Analytické a prediktivní reporty s datovou vědou!</value>
+  </data>
+  <data name="LblHolaBienvenido" xml:space="preserve">
+    <value>Dobrý den! Vítejte v SOSpect. 
+
+SOSpect je bezplatný nástroj určený k ochraně vás a vašich blízkých poskytováním včasných upozornění na rizika v okolí! Zpočátku nemusí být mnoho alarmů, protože ve vašem okolí ještě není mnoho lidí, kteří nainstalovali SOSpect. Žádáme vás, abyste nás vyzkoušeli a neodinstalujte aplikaci. SOSpect může v určitém okamžiku zachránit váš život, stejně jako život někoho z vaší rodiny nebo komunity.
+
+V části "Základní přehled" v nabídce "Přehledy", která se nachází v nastavení, můžete v sekci "Základní metriky" vidět počet blízkých uživatelů v oblasti pokrytí, kde budete dostávat alarmy. Pomozte nám toto číslo zvýšit, je to zdarma a umožní vám žít bezpečněji!
+
+Zveme vás, abyste si pozorně přečetli tento krátký úvodní manuál, který vám poskytne představu o tom, jak SOSpect funguje. Vezměte prosím na vědomí, že se zobrazí pouze jednou po instalaci aplikace.
+
+Děkujeme, že používáte SOSpect a přispíváte k bezpečnosti všech!
+
+Pokračujte klepnutím na obrazovku...</value>
+  </data>
+</root>

@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="sospect.Views.ConfirmationPage"
+             xmlns:helpers="clr-namespace:sospect.Helpers"
+             BackgroundColor="White">
+    <ContentPage.Content>
+        <Frame
+            Padding="20"
+            HasShadow="true"
+            CornerRadius="10"
+            BackgroundColor="White"
+            HorizontalOptions="Center"
+            VerticalOptions="Center">
+            <StackLayout>
+                <Label
+                    Text="{helpers:TranslateExtension Text='LblConfirmacionRequerida'}"
+                    TextColor="Black"
+                    FontAttributes="Bold"
+                    FontSize="Large"
+                    HorizontalOptions="Center"
+                    HorizontalTextAlignment="Center" />
+                <Label
+                    x:Name="ConfirmationMessageLabel"
+                    Text="Mensaje completo aquí"
+                    TextColor="Black"
+                    FontSize="18"
+                    HorizontalOptions="Center"
+                    HorizontalTextAlignment="Center" />
+                <StackLayout
+                    Orientation="Horizontal"
+                    HorizontalOptions="Center">
+                    <Button
+                        x:Name="YesButton"
+                        Text="{helpers:TranslateExtension Text='LabelSi'}"
+                        TextColor="Black"
+                        FontSize="Large"
+                        Margin="0,10,10,0"
+                        HorizontalOptions="Center" />
+                    <Button
+                        x:Name="NoButton"
+                        Text="{helpers:TranslateExtension Text='LabelNo'}"
+                        TextColor="Black"
+                        FontSize="Large"
+                        Margin="10,10,0,0"
+                        HorizontalOptions="Center" />
+                </StackLayout>
+            </StackLayout>
+        </Frame>
+    </ContentPage.Content>
+</ContentPage>

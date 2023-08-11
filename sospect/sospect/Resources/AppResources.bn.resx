@@ -1,0 +1,1090 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Bienvenido" xml:space="preserve">
+    <value>SOSPECT এ আপনাকে স্বাগতম</value>
+  </data>
+  <data name="InicieSesion" xml:space="preserve">
+    <value>অবিরত রাখতে লগ ইন করুন</value>
+  </data>
+  <data name="InicieSesionCon" xml:space="preserve">
+    <value>অথবা লগ ইন করুন</value>
+  </data>
+  <data name="SesionFacebook" xml:space="preserve">
+    <value>Facebook দিয়ে লগ ইন করুন</value>
+  </data>
+  <data name="SesionGoogle" xml:space="preserve">
+    <value>Google দিয়ে সাইন ইন করুন</value>
+  </data>
+  <data name="LabelAlerta" xml:space="preserve">
+    <value>সতর্কতা</value>
+  </data>
+  <data name="LabelCrimen" xml:space="preserve">
+    <value>অপরাধ</value>
+  </data>
+  <data name="LabelOK" xml:space="preserve">
+    <value>ঠিক আছে</value>
+  </data>
+  <data name="LabelCancelar" xml:space="preserve">
+    <value>বাতিল</value>
+  </data>
+  <data name="ReportarCrimen" xml:space="preserve">
+    <value>অপরাধের প্রতিবেদন</value>
+  </data>
+  <data name="LabelMapa" xml:space="preserve">
+    <value>মানচিত্র</value>
+  </data>
+  <data name="LabelDescribir" xml:space="preserve">
+    <value>বর্ণনা</value>
+  </data>
+  <data name="DescripcionAlarma" xml:space="preserve">
+    <value>অ্যালার্মের বিবরণ</value>
+  </data>
+  <data name="DescripcionSospechoso" xml:space="preserve">
+    <value>সন্দেহভাজনের বর্ণনা</value>
+  </data>
+  <data name="DescripcionVehiculo" xml:space="preserve">
+    <value>গাড়ির বিবরণ</value>
+  </data>
+  <data name="DescripcionArma" xml:space="preserve">
+    <value>অস্ত্রের বিবরণ</value>
+  </data>
+  <data name="PuntuacionDescripcion" xml:space="preserve">
+    <value>বর্ণনা স্কোর</value>
+  </data>
+  <data name="LabelEditar" xml:space="preserve">
+    <value>সম্পাদনা</value>
+  </data>
+  <data name="DescripcionesParaAlarma" xml:space="preserve">
+    <value>এই অ্যালার্মের জন্য তৈরি বিবরণ</value>
+  </data>
+  <data name="EspacioPublicidad" xml:space="preserve">
+    <value>বিজ্ঞাপনের জন্য স্থান</value>
+  </data>
+  <data name="AlarmasRecientes" xml:space="preserve">
+    <value>বিবরণ যোগ করতে সাম্প্রতিক অ্যালার্ম</value>
+  </data>
+  <data name="ConfirmarAlarma" xml:space="preserve">
+    <value>অ্যালার্ম নিশ্চিত করুন</value>
+  </data>
+  <data name="LabelInformacion" xml:space="preserve">
+    <value>তথ্য</value>
+  </data>
+  <data name="LabelError" xml:space="preserve">
+    <value>ত্রুটি</value>
+  </data>
+  <data name="LabelCancelado" xml:space="preserve">
+    <value>বাতিল</value>
+  </data>
+  <data name="LabelLoginCancelado" xml:space="preserve">
+    <value>লগইন বাতিল</value>
+  </data>
+  <data name="LabelFallo" xml:space="preserve">
+    <value>ব্যর্থতা</value>
+  </data>
+  <data name="RecibeAlarma" xml:space="preserve">
+    <value>আপনি যেখানে আছেন তার কাছাকাছি একটি অ্যালার্ম পেয়েছেন এটি কি বাস্তব?</value>
+  </data>
+  <data name="LabelConfirmo" xml:space="preserve">
+    <value>নিশ্চিত</value>
+  </data>
+  <data name="LabelNoSeguro" xml:space="preserve">
+    <value>আমি নিশ্চিত নই</value>
+  </data>
+  <data name="LabelEsFalsa" xml:space="preserve">
+    <value>এটা মিথ্যে</value>
+  </data>
+  <data name="LabelConfirmar" xml:space="preserve">
+    <value>নিশ্চিত</value>
+  </data>
+  <data name="AdvertenciaCalificacion" xml:space="preserve">
+    <value>এই যোগ্যতা পরে পরিবর্তন করা যাবে না। এটি আপনার ভবিষ্যতের বিশ্বাসযোগ্যতাকে প্রভাবিত করতে পারে যদি রেটিং ঐকমত্য আপনার ভোটের বিপরীত হয়। তুমি কি নিশ্চিত?</value>
+  </data>
+  <data name="LabelSi" xml:space="preserve">
+    <value>হ্যাঁ</value>
+  </data>
+  <data name="LabelNo" xml:space="preserve">
+    <value>না</value>
+  </data>
+  <data name="AlarmaEnviada" xml:space="preserve">
+    <value>অ্যালার্ম পাঠানো হয়েছে!</value>
+  </data>
+  <data name="MsgTrasAlarmaEnviada" xml:space="preserve">
+    <value>আপনি যদি নিরাপদ থাকেন তবে দয়া করে অ্যালার্মটি বর্ণনা করুন, যদি তা না হয় তবে আপনার ফোনটি লুকিয়ে রাখুন এবং বিপদ থেকে বেরিয়ে আসুন।</value>
+  </data>
+  <data name="notificacionurgente" xml:space="preserve">
+    <value>নিকটতম ফোনগুলিতে একটি জরুরী বিজ্ঞপ্তি জারি করা হবে:</value>
+  </data>
+  <data name="LabelAlarma" xml:space="preserve">
+    <value>এলার্ম</value>
+  </data>
+  <data name="LabelMetros" xml:space="preserve">
+    <value>মিটার</value>
+  </data>
+  <data name="LabelTuUbicacion" xml:space="preserve">
+    <value>আপনার অবস্থান</value>
+  </data>
+  <data name="LabelUsuario" xml:space="preserve">
+    <value>ব্যবহারকারী</value>
+  </data>
+  <data name="LabelTipoAlarma" xml:space="preserve">
+    <value>অ্যালার্ম ের ধরন</value>
+  </data>
+  <data name="DireccionEscape" xml:space="preserve">
+    <value>দয়া করে সন্দেহভাজনের পালানোর দিকটি নির্দেশ করুন।</value>
+  </data>
+  <data name="DescripcionAlerta" xml:space="preserve">
+    <value>সতর্কতার বিবরণ</value>
+  </data>
+  <data name="DescripcionImplicado" xml:space="preserve">
+    <value>সতর্কতার সাথে জড়িত ব্যক্তির বিবরণ</value>
+  </data>
+  <data name="DescripcionVehiculoImp" xml:space="preserve">
+    <value>জড়িত যানবাহন (যদি প্রযোজ্য হয়)</value>
+  </data>
+  <data name="ArmaImplicada" xml:space="preserve">
+    <value>অস্ত্র জড়িত (যদি প্রযোজ্য হয়)</value>
+  </data>
+  <data name="LabelRutaEscape" xml:space="preserve">
+    <value>সন্দেহজনক পালানোর পথ</value>
+  </data>
+  <data name="ObjetivoSospect" xml:space="preserve">
+    <value>SOSpect এর লক্ষ্য হল সম্প্রদায়কে ব্যবহারকারীর অবস্থানে বিপদসম্পর্কে সতর্ক করা এবং গ্রহণ করার অনুমতি দেওয়া, যাতে তারা এবং তাদের প্রিয়জনদের ঝুঁকি এড়ানো যায়। ব্যবহারকারীদের অবস্থান ভাগ করা বা ট্র্যাক করা হয় না, তাদের গোপনীয়তা নিশ্চিত করে। ব্যবহারকারীরা অন্যদের ঝুঁকিপূর্ণ পরিস্থিতির শিকার হওয়া এড়াতে সহায়তা করার জন্য বিপদ সতর্কতা স্থাপন করতে পারেন।</value>
+  </data>
+  <data name="UbicacionImportante" xml:space="preserve">
+    <value>ব্যবহারকারীর অবস্থান জানা গুরুত্বপূর্ণ যাতে কেউ তাদের অবস্থানের কাছাকাছি বিপদ সতর্কতা রাখলে আপনি তাদের সতর্ক করতে পারেন। যাইহোক, ব্যবহারকারীর অবস্থান ব্যক্তিগত এবং কেবলমাত্র মানচিত্রের পয়েন্টগুলি যেখানে সতর্কতা স্থাপন করা হয় তা ভাগ করা হয়।</value>
+  </data>
+  <data name="GenteUnida" xml:space="preserve">
+    <value>SOSpect-এর সাহায্যে, সম্প্রদায় অপরাধ হ্রাস করতে এবং ঝুঁকিপূর্ণ পরিস্থিতির শিকার হওয়া এড়াতে একত্রিত হতে পারে, অন্যদেরও সুরক্ষিত থাকার জন্য সতর্ক করতে পারে।</value>
+  </data>
+  <data name="contactenos" xml:space="preserve">
+    <value>আমাদের সাথে যোগাযোগ করুন</value>
+  </data>
+  <data name="visitenos" xml:space="preserve">
+    <value>আমাদের সাথে দেখা করুন</value>
+  </data>
+  <data name="ZonaVigilancia" xml:space="preserve">
+    <value>নজরদারি জোন সাবস্ক্রিপশন</value>
+  </data>
+  <data name="SeleccioneUbicacionVigilar" xml:space="preserve">
+    <value>দেখার জন্য অবস্থান নির্বাচন করুন</value>
+  </data>
+  <data name="SeleccionEnMapa" xml:space="preserve">
+    <value>মানচিত্রে নির্বাচন করুন</value>
+  </data>
+  <data name="ExplicaZonaVigilancia" xml:space="preserve">
+    <value>আপনি যে পয়েন্টটি নির্বাচন করতে যাচ্ছেন সেখানে স্থাপন করা সমস্ত অ্যালার্মগুলি কে স্থাপন করুক না কেন তা অবহিত করা হবে। এইভাবে, আপনি সেই মুহুর্তে চলমান বিপদগুলি সম্পর্কে সচেতন হতে পারেন। এটি আপনার বাচ্চাদের স্কুল বা বিশ্ববিদ্যালয় বা আপনার আত্মীয় বা প্রিয়জনদের কাজ করে এমন অঞ্চলে বিপদ সম্পর্কে সচেতন হওয়ার জন্য আদর্শ।</value>
+  </data>
+  <data name="CrearZonaV" xml:space="preserve">
+    <value>এই অবস্থানের সাথে নজরদারি অঞ্চল তৈরি করুন</value>
+  </data>
+  <data name="LabelLatitud" xml:space="preserve">
+    <value>অক্ষাংশ</value>
+  </data>
+  <data name="LabelLongitud" xml:space="preserve">
+    <value>দ্রাঘিমাংশ</value>
+  </data>
+  <data name="LabelIntroduccion" xml:space="preserve">
+    <value>ভূমিকা</value>
+  </data>
+  <data name="AmpliacionRadio" xml:space="preserve">
+    <value>অ্যালার্ম ব্যাসার্ধ সম্প্রসারণ</value>
+  </data>
+  <data name="TuRadioActual" xml:space="preserve">
+    <value>আপনার বর্তমান ব্যাসার্ধ হল:</value>
+  </data>
+  <data name="CrearNuevoRadio" xml:space="preserve">
+    <value>এই নতুন রেডিওর জন্য আমার সাবস্ক্রিপশন তৈরি করুন</value>
+  </data>
+  <data name="ExplicacionVigencias" xml:space="preserve">
+    <value>সমস্ত সাবস্ক্রিপশনগুলির একটি বৈধতা রয়েছে, দয়া করে প্রধান মেনুর প্রথম বিকল্পে সাবস্ক্রিপশনগুলির দামগুলি পরীক্ষা করুন</value>
+  </data>
+  <data name="VasARequerir" xml:space="preserve">
+    <value>আপনার প্রয়োজন হবে</value>
+  </data>
+  <data name="xPoderesParaSubs" xml:space="preserve">
+    <value>আপনার বর্তমান রেডিওতে এই রেডিও যোগ করার ক্ষমতা</value>
+  </data>
+  <data name="Exito" xml:space="preserve">
+    <value>সাফল্য</value>
+  </data>
+  <data name="MensajeError" xml:space="preserve">
+    <value>সার্ভারের সাথে সংযোগ করার সময় একটি ত্রুটি ঘটেছে। অনুগ্রহ করে আবার চেষ্টা করুন।</value>
+  </data>
+  <data name="SeleccionaRuta" xml:space="preserve">
+    <value>আপনাকে অবশ্যই সন্দেহভাজনের পালানোর পথ নির্বাচন করতে হবে।</value>
+  </data>
+  <data name="AprobarSolicitudes" xml:space="preserve">
+    <value>অনুরোধ গুলি অনুমোদন করুন</value>
+  </data>
+  <data name="LabelAprobar" xml:space="preserve">
+    <value>অনুমোদন</value>
+  </data>
+  <data name="LabelRechazar" xml:space="preserve">
+    <value>প্রত্যাখ্যান</value>
+  </data>
+  <data name="SubscripcionCreada" xml:space="preserve">
+    <value>সাবস্ক্রিপশনটি সফলভাবে তৈরি করা হয়েছে।</value>
+  </data>
+  <data name="CompletarSubscripcion" xml:space="preserve">
+    <value>সম্পূর্ণ সুরক্ষিত সাবস্ক্রিপশন</value>
+  </data>
+  <data name="CompletarSubsc" xml:space="preserve">
+    <value>সম্পূর্ণ সাবস্ক্রিপশন</value>
+  </data>
+  <data name="LblMensajes" xml:space="preserve">
+    <value>বার্তাগুলি</value>
+  </data>
+  <data name="LblFechaMensaje" xml:space="preserve">
+    <value>বার্তার তারিখ</value>
+  </data>
+  <data name="LblMenu" xml:space="preserve">
+    <value>কনফিগারেশন</value>
+  </data>
+  <data name="OptCompraPoderes" xml:space="preserve">
+    <value>বৈশিষ্ট্যগুলি আনলক করার ক্ষমতা কিনুন</value>
+  </data>
+  <data name="OptGestionarProtegidos" xml:space="preserve">
+    <value>আমার সুরক্ষিত-রক্ষকদের পরিচালনা করুন</value>
+  </data>
+  <data name="OptCrearZonas" xml:space="preserve">
+    <value>নজরদারি অঞ্চল তৈরি করুন</value>
+  </data>
+  <data name="OptAumentarRadio" xml:space="preserve">
+    <value>আমার সতর্কতা অভ্যর্থনা ব্যাসার্ধ বাড়ান</value>
+  </data>
+  <data name="OptAcercaDe" xml:space="preserve">
+    <value>এসওস্পেক্ট অ্যাপ্লিকেশন সম্পর্কে</value>
+  </data>
+  <data name="OptCerrarSesion" xml:space="preserve">
+    <value>লগ অফ করুন</value>
+  </data>
+  <data name="LblProtectores" xml:space="preserve">
+    <value>আমার রক্ষক</value>
+  </data>
+  <data name="LblSuspender" xml:space="preserve">
+    <value>সাময়িক বরখাস্ত</value>
+  </data>
+  <data name="LblEliminarProtegido" xml:space="preserve">
+    <value>সুরক্ষিত অপসারণ করুন</value>
+  </data>
+  <data name="LblSubscrProtegido" xml:space="preserve">
+    <value>সুরক্ষিত সাবস্ক্রিপশন</value>
+  </data>
+  <data name="LblIDUsuarioAProteger" xml:space="preserve">
+    <value>সুরক্ষিত করতে ব্যবহারকারী ID লিখুন। (আপনি যে ব্যবহারকারীকে লিঙ্ক করতে চান তার এসওস্পেক্ট সেটিংস মেনুতে এই মানটি শীর্ষে রয়েছে)</value>
+  </data>
+  <data name="LblRelacionProtegido" xml:space="preserve">
+    <value>এই শিষ্যের সাথে আমার সম্পর্ক হল:</value>
+  </data>
+  <data name="LblSolicitarPermiso" xml:space="preserve">
+    <value>ব্যবহারকারীর কাছ থেকে অনুমতির অনুরোধ করুন</value>
+  </data>
+  <data name="LblCompleteCampos" xml:space="preserve">
+    <value>দয়া করে সমস্ত ক্ষেত্র সম্পূর্ণ করুন।</value>
+  </data>
+  <data name="LblProcesarSolicitud" xml:space="preserve">
+    <value>অনুরোধটি প্রক্রিয়াকরণে একটি ত্রুটি ছিল। অনুগ্রহ করে আবার চেষ্টা করুন।</value>
+  </data>
+  <data name="LblProtegidos" xml:space="preserve">
+    <value>My Protégés</value>
+  </data>
+  <data name="LblUsuarioProtegido" xml:space="preserve">
+    <value>সুরক্ষিত ব্যবহারকারী ID</value>
+  </data>
+  <data name="LblFechaActivacion" xml:space="preserve">
+    <value>অ্যাক্টিভেশন তারিখ</value>
+  </data>
+  <data name="LblFechaFinalizacion" xml:space="preserve">
+    <value>সমাপ্তির তারিখ</value>
+  </data>
+  <data name="LblAccion" xml:space="preserve">
+    <value>ক্রিয়া</value>
+  </data>
+  <data name="LblCantidadPoderes" xml:space="preserve">
+    <value>ক্ষমতার সংখ্যা</value>
+  </data>
+  <data name="LblPrecio" xml:space="preserve">
+    <value>দাম</value>
+  </data>
+  <data name="LblComprar" xml:space="preserve">
+    <value>কিনুন</value>
+  </data>
+  <data name="LblValoresSubsc" xml:space="preserve">
+    <value>Subscription value</value>
+  </data>
+  <data name="LblTerminos" xml:space="preserve">
+    <value>SOSPECT APP-এর জন্য পরিষেবার শর্তাবলী</value>
+  </data>
+  <data name="LblAcepto" xml:space="preserve">
+    <value>আমি চুক্তি টি গ্রহণ করি</value>
+  </data>
+  <data name="LblNoAcepto" xml:space="preserve">
+    <value>আমি মেনে নিচ্ছি না</value>
+  </data>
+  <data name="LblOpcionesProtegidos" xml:space="preserve">
+    <value>SOSpect অ্যাপ দ্বারা সুরক্ষিত এবং সুরক্ষিত</value>
+  </data>
+  <data name="LblExplicacionProtegidos" xml:space="preserve">
+    <value>আপনি আপনার সামাজিক বৃত্তের সদস্যদের কাছ থেকে সতর্কতা পেতে পারেন এমনকি যদি তারা আপনার থেকে দূরে থাকে। এখানে আপনি এই বৈশিষ্ট্যটি পরিচালনা করতে পারেন</value>
+  </data>
+  <data name="OptIniciarTramite" xml:space="preserve">
+    <value>একটি সুরক্ষিত যোগ করার প্রক্রিয়া শুরু করুন</value>
+  </data>
+  <data name="OptAprobarSolicitud" xml:space="preserve">
+    <value>একজন রক্ষকের কাছ থেকে একটি অনুরোধ অনুমোদন করুন</value>
+  </data>
+  <data name="OptListarProtegidos" xml:space="preserve">
+    <value>আমার শিষ্যদের তালিকা দেখুন</value>
+  </data>
+  <data name="OptListarProtectores" xml:space="preserve">
+    <value>আমার রক্ষকদের তালিকা দেখুন</value>
+  </data>
+  <data name="OptVolver" xml:space="preserve">
+    <value>ফিরে</value>
+  </data>
+  <data name="LblPoderesSospect" xml:space="preserve">
+    <value>SOSPECT App এর ক্ষমতা</value>
+  </data>
+  <data name="LblOpcionesPoderes" xml:space="preserve">
+    <value>পাওয়ার ম্যানেজমেন্ট অপশনে আপনাকে স্বাগতম, আপনি কি করতে চান?</value>
+  </data>
+  <data name="LblSubscripcionesCosto" xml:space="preserve">
+    <value>আমি জানতে চাই আমি কি সাবস্ক্রিপশন কিনতে পারি এবং তাদের খরচ</value>
+  </data>
+  <data name="LblQuieroComprar" xml:space="preserve">
+    <value>আমি সাবস্ক্রিপশন অর্জনের জন্য সুপার পাওয়ার কিনতে চাই</value>
+  </data>
+  <data name="ExplicacionRadio" xml:space="preserve">
+    <value>অ্যাপ্লিকেশনটির সমস্ত ব্যবহারকারীদের জন্য ডিফল্ট ব্যাসার্ধ প্রায় 100 মিটার। আপনি অ্যাপ্লিকেশনটির শক্তি ব্যবহার করে সেই ব্যাসার্ধটি প্রসারিত করতে পারেন। তারপরে আপনি নিজের জন্য যে ব্যাসার্ধটি চান তা নির্বাচন করুন:</value>
+  </data>
+  <data name="LblAsunto" xml:space="preserve">
+    <value>সংক্ষিপ্ত বিবরণ</value>
+  </data>
+  <data name="LblCompraPoderes" xml:space="preserve">
+    <value>ক্ষমতা ক্রয়</value>
+  </data>
+  <data name="OptCompletarTramite" xml:space="preserve">
+    <value>একটি সুরক্ষিত যোগ করার সম্পূর্ণ পদ্ধতি</value>
+  </data>
+  <data name="LabelHecho" xml:space="preserve">
+    <value>সম্পূর্ণ</value>
+  </data>
+  <data name="LabelEscapoEnEstaDireccion" xml:space="preserve">
+    <value>তিনি এই দিকে পালিয়ে গিয়েছিলেন</value>
+  </data>
+  <data name="OptMisSubs" xml:space="preserve">
+    <value>আমার সাবস্ক্রিপশন</value>
+  </data>
+  <data name="LblMisSubscripciones" xml:space="preserve">
+    <value>আমার সাবস্ক্রিপশন</value>
+  </data>
+  <data name="LblidUsuario" xml:space="preserve">
+    <value>ইউজার আইডি:</value>
+  </data>
+  <data name="LblDescripcionPuntos" xml:space="preserve">
+    <value>বর্ণনা:</value>
+  </data>
+  <data name="LblFechaFinPuntos" xml:space="preserve">
+    <value>সমাপ্তির তারিখ:</value>
+  </data>
+  <data name="LblPoderesPuntos" xml:space="preserve">
+    <value>পুনর্নবীকরণের ক্ষমতা:</value>
+  </data>
+  <data name="LblRenovar" xml:space="preserve">
+    <value>পুনর্নবীকরণ</value>
+  </data>
+  <data name="LblCancelarSubscripcion" xml:space="preserve">
+    <value>সাবস্ক্রিপশন বাতিল করুন</value>
+  </data>
+  <data name="LblSeguroDeCancelar" xml:space="preserve">
+    <value>আপনি কি নিশ্চিত যে আপনি সাবস্ক্রিপশন বাতিল করতে চান? ব্যবহৃত ক্ষমতার কোনো প্রত্যাবর্তন করা হবে না।</value>
+  </data>
+  <data name="LblAceptar" xml:space="preserve">
+    <value>গ্রহণ</value>
+  </data>
+  <data name="LblTipo" xml:space="preserve">
+    <value>সাবস্ক্রিপশন প্রকার:</value>
+  </data>
+  <data name="Alarm_1" xml:space="preserve">
+    <value>সতর্কতা বা বিপদ</value>
+  </data>
+  <data name="Alarm_2" xml:space="preserve">
+    <value>সংঘটিত অপরাধ বা অপরাধ</value>
+  </data>
+  <data name="Alarm_3" xml:space="preserve">
+    <value>রাস্তায় ঝগড়া</value>
+  </data>
+  <data name="Alarm_4" xml:space="preserve">
+    <value>হারিয়ে যাওয়া পোষা প্রাণী</value>
+  </data>
+  <data name="Alarm_5" xml:space="preserve">
+    <value>হারিয়ে যাওয়া ব্যক্তি</value>
+  </data>
+  <data name="Alarm_6" xml:space="preserve">
+    <value>দাঙ্গা বা বিক্ষোভ</value>
+  </data>
+  <data name="Alarm_7" xml:space="preserve">
+    <value>রাস্তায় প্রস্থান ের মাধ্যমে ভিজ্যুয়াল সঙ্গীর অনুরোধ করুন</value>
+  </data>
+  <data name="Alarm_8" xml:space="preserve">
+    <value>গার্হস্থ্য সহিংসতা</value>
+  </data>
+  <data name="Alarm_9" xml:space="preserve">
+    <value>সন্দেহভাজন আপনার অবস্থান এলাকায় পালিয়ে যাচ্ছে</value>
+  </data>
+  <data name="LblCostoPoderes" xml:space="preserve">
+    <value>প্যাকেজ খরচ</value>
+  </data>
+  <data name="LblSuscripcionesDisponibles" xml:space="preserve">
+    <value>বর্তমানে সাবস্ক্রিপশন উপলব্ধ</value>
+  </data>
+  <data name="LblFamilia" xml:space="preserve">
+    <value>পরিবার</value>
+  </data>
+  <data name="LblAmigo" xml:space="preserve">
+    <value>বন্ধু</value>
+  </data>
+  <data name="LblCompanero" xml:space="preserve">
+    <value>সঙ্গী</value>
+  </data>
+  <data name="LblOtroSinDefinir" xml:space="preserve">
+    <value>অন্যান্য অনির্ধারিত</value>
+  </data>
+  <data name="LabelExito" xml:space="preserve">
+    <value>সাফল্য</value>
+  </data>
+  <data name="LblSolicitudAprobada" xml:space="preserve">
+    <value>অ্যাপ্লিকেশন সফলভাবে অনুমোদিত হয়েছে।</value>
+  </data>
+  <data name="MensajeErrorAprobando" xml:space="preserve">
+    <value>অনুরোধ অনুমোদনে ত্রুটি</value>
+  </data>
+  <data name="MensajeErrorRechazando" xml:space="preserve">
+    <value>অনুরোধ প্রত্যাখ্যান করতে ব্যর্থ হয়েছে।</value>
+  </data>
+  <data name="LblSolicitudRechazada" xml:space="preserve">
+    <value>আবেদন সফলভাবে প্রত্যাখ্যান করা হয়েছে।</value>
+  </data>
+  <data name="LblUsuarioSolicitante" xml:space="preserve">
+    <value>ব্যবহারকারীকে অনুরোধ করা</value>
+  </data>
+  <data name="LblFechaSolicitud" xml:space="preserve">
+    <value>আবেদনের তারিখ</value>
+  </data>
+  <data name="LblAccionRealizar" xml:space="preserve">
+    <value>ব্যবস্থা নেওয়া হবে</value>
+  </data>
+  <data name="LblSubscripcionCompletada" xml:space="preserve">
+    <value>সাবস্ক্রিপশন সম্পন্ন হয়েছে</value>
+  </data>
+  <data name="LblSubscripcionFallida" xml:space="preserve">
+    <value>সাবস্ক্রিপশন ব্যর্থ হয়েছে</value>
+  </data>
+  <data name="LblUsuarioAprobador" xml:space="preserve">
+    <value>Approver User</value>
+  </data>
+  <data name="LblFechaAprobacion" xml:space="preserve">
+    <value>অনুমোদনের তারিখ</value>
+  </data>
+  <data name="LblSubscrEliminada" xml:space="preserve">
+    <value>সাবস্ক্রাইব করা হয়নি</value>
+  </data>
+  <data name="LblSubsEliminadaExitosamente" xml:space="preserve">
+    <value>সাবস্ক্রিপশন সফলভাবে অপসারণ করা হয়েছে</value>
+  </data>
+  <data name="LblEliminarProtector" xml:space="preserve">
+    <value>রক্ষক অপসারণ করুন</value>
+  </data>
+  <data name="LblRenovacionAplicada" xml:space="preserve">
+    <value>সফলভাবে সংস্কার কাজ সম্পন্ন</value>
+  </data>
+  <data name="LblErrorRenovando" xml:space="preserve">
+    <value>ত্রুটি পুনর্নবীকরণ, পুনরায় চেষ্টা করা বা সমর্থনে রিপোর্ট করা, "মেনু" &gt; "সম্পর্কে" বিকল্পে উপলব্ধ যোগাযোগ</value>
+  </data>
+  <data name="LblCancelacionAplicada" xml:space="preserve">
+    <value>বাতিলকরণ সফলভাবে করা হয়েছে</value>
+  </data>
+  <data name="LblErrorCancelando" xml:space="preserve">
+    <value>ত্রুটি বাতিল, পুনরায় চেষ্টা করা বা সমর্থনে রিপোর্ট করা, "মেনু" &gt;"সম্পর্কে" বিকল্পে উপলব্ধ যোগাযোগ</value>
+  </data>
+  <data name="LblZonaCreada" xml:space="preserve">
+    <value>অনুরোধকৃত নজরদারি অঞ্চলের সাবস্ক্রিপশন সফলভাবে সম্পন্ন হয়েছে</value>
+  </data>
+  <data name="LblErrorZonaVigil" xml:space="preserve">
+    <value>নতুন অনুরোধকৃত অঞ্চলটি সাবস্ক্রাইব করতে ত্রুটি, সমর্থন করার জন্য পুনরায় চেষ্টা করুন বা রিপোর্ট করুন, "মেনু" &gt; "সম্পর্কে" বিকল্পে উপলব্ধ যোগাযোগ করুন</value>
+  </data>
+  <data name="LblSeleccionaNuevoRadio" xml:space="preserve">
+    <value>মিটারে নতুন ব্যাসার্ধ নির্বাচন করুন</value>
+  </data>
+  <data name="LblUsuarioProtector" xml:space="preserve">
+    <value>প্রতিরক্ষামূলক ব্যবহারকারী</value>
+  </data>
+  <data name="LblSeguroEliminarProtegido" xml:space="preserve">
+    <value>আপনি কি নিশ্চিত যে আপনার শিষ্যকে অপসারণ করবেন? এই সাবস্ক্রিপশনে ব্যবহৃত ক্ষমতাগুলি ফেরত দেওয়া হবে না।</value>
+  </data>
+  <data name="LblSuspenderProtectores" xml:space="preserve">
+    <value>আপনি কি 6 ঘন্টার জন্য আপনার প্রটেক্টরদের নোটিফিকেশন স্থগিত করার বিষয়ে নিশ্চিত? আপনার সমস্ত প্রটেক্টরগুলি স্থগিত অ্যালার্ম হবে এবং এই কারণে সাবস্ক্রিপশনের শেষ সময় বাড়ানো হবে না। রক্ষককে এই ক্রিয়া সম্পর্কে অবহিত করা হবে না।</value>
+  </data>
+  <data name="LblSuspensionRealizada" xml:space="preserve">
+    <value>6 ঘন্টার জন্য আপনার সমস্ত রক্ষকদের অ্যালার্ম স্থগিত করা সফল হয়েছিল।</value>
+  </data>
+  <data name="LabelSeguroEliminarProtector" xml:space="preserve">
+    <value>আপনি কি নিশ্চিত যে আপনার রক্ষককে অপসারণ করবেন? এই সাবস্ক্রিপশনে ব্যবহৃত ক্ষমতাগুলি ফেরত দেওয়া হবে না এবং রক্ষককে এই ক্রিয়াসম্পর্কে অবহিত করা হবে।</value>
+  </data>
+  <data name="LabelProtectorEliminado" xml:space="preserve">
+    <value>নির্বাচিত প্রটেক্টরটি মুছে ফেলা হয়েছে। রক্ষকের কাছে ক্ষমতা ফিরিয়ে দেওয়া হবে না। রক্ষককে এই ক্রিয়া সম্পর্কে অবহিত করা হবে</value>
+  </data>
+  <data name="LblConfirmacionRequerida" xml:space="preserve">
+    <value>গুরুত্বপূর্ণ! নিশ্চিতকরণ প্রয়োজন!</value>
+  </data>
+  <data name="LblNoHayRegistros" xml:space="preserve">
+    <value>এই মুহুর্তে প্রদর্শন করার জন্য কোনও লগ নেই</value>
+  </data>
+  <data name="LblMiLogin" xml:space="preserve">
+    <value>আমার লগইন হল:</value>
+  </data>
+  <data name="LblSaldoPoderesEs" xml:space="preserve">
+    <value>আমার ক্ষমতার ভারসাম্য হল:</value>
+  </data>
+  <data name="LblUsuarioID" xml:space="preserve">
+    <value>আমার ইউজার আইডি</value>
+  </data>
+  <data name="LblNoHayRegistrosAqui" xml:space="preserve">
+    <value>এখনো কেউ কিছু লেখেননি!</value>
+  </data>
+  <data name="LblAlertaReportadaPorMi" xml:space="preserve">
+    <value>আমার দ্বারা রিপোর্ট করা সতর্কতা</value>
+  </data>
+  <data name="LblPara" xml:space="preserve">
+    <value>বার্তা প্রাপক:</value>
+  </data>
+  <data name="LblDe" xml:space="preserve">
+    <value>বার্তার প্রেরক:</value>
+  </data>
+  <data name="ConfiguraciondeSOSpect" xml:space="preserve">
+    <value>SOSpect Configuration</value>
+  </data>
+  <data name="LblExitoEnAceptacion" xml:space="preserve">
+    <value>আপনার চুক্তি গ্রহণযোগ্যতা সংরক্ষণ করা হয়েছে!</value>
+  </data>
+  <data name="LblFalloEnAceptacion" xml:space="preserve">
+    <value>নিবন্ধন ব্যর্থ হয়েছে। দয়া করে পুনরায় চেষ্টা করুন!</value>
+  </data>
+  <data name="LblDeclinacionAceptacion" xml:space="preserve">
+    <value>একটি চুক্তি গ্রহণ না করে আপনি চালিয়ে যেতে পারবেন না!</value>
+  </data>
+  <data name="LblParaIniciar" xml:space="preserve">
+    <value>আসুন আমরা সাবধানে শুরু করি!! নিকটবর্তী সতর্কতাগুলি আপডেট করতে নীল রিফ্রেশ বোতামটি আলতো চাপুন</value>
+  </data>
+  <data name="LblAlarmaNoGrave" xml:space="preserve">
+    <value>নিম্ন-বিপজ্জনক সতর্কতা স্থাপন করতে এবং আপনার সম্প্রদায় বা রক্ষকদের সতর্ক করতে হলুদ বোতামটি ব্যবহার করুন। আপনি সতর্কতার ধরণটি চয়ন করতে পারেন এবং এটি সংঘটিত অপরাধ হিসাবে চিহ্নিত করতে পারেন। এই বোতামটি আপনার সঠিক অবস্থানে সতর্কতা চালু করে, যখন আপনার সাহায্যের প্রয়োজন হয় তখন এটি দরকারী। আপনার অবস্থানের সাথে আপস না করে সতর্কতাটি সনাক্ত করতে আপনি মানচিত্রে একটি পয়েন্টও নির্বাচন করতে পারেন।</value>
+  </data>
+  <data name="LblCrimenCometido" xml:space="preserve">
+    <value>লাল বোতামটি একটি বিভাগ ট্রিগার করে: অপরাধ সংঘটিত অ্যালার্ম। এই ক্ষেত্রে সময়ের গুরুত্বের কারণে SOSpect আপনাকে একটি বিভাগ অন্তর্ভুক্ত করার প্রয়োজন হয় না। অ্যালার্মটি স্বয়ংক্রিয়ভাবে আপনার সঠিক অবস্থানে স্থাপন করা হয়। আপনি সতর্কতাটি স্থাপন করতে মানচিত্রে একটি পয়েন্ট নির্বাচন করতে পারেন এবং তারপরে বিভাগটি সংঘটিত অপরাধে পরিবর্তন করতে পারেন।</value>
+  </data>
+  <data name="LblDescripcionAlarmas" xml:space="preserve">
+    <value>নীচের বারে 'বর্ণনা' বিকল্পটিতে, আপনি আপনার বা অন্যদের দ্বারা রাখা অ্যালার্মগুলির একটি তালিকা পাবেন। আপনি যদি অ্যালার্ম তৈরি করেন তবে আপনি একটি বিবরণ যুক্ত করতে পারেন। যদি অ্যালার্মটি অন্য কেউ তৈরি করে থাকে তবে আপনি এর সত্যতা রেট করতে পারেন এবং এর বিবরণের পরিপূরক করতে পারেন। সাবন্ধান হও! আপনি যদি মিথ্যা তথ্য বা ভুল রেটিং প্রদান করেন তবে আপনার অ্যাকাউন্ট স্থগিত করা হতে পারে। এটি এড়ানোর জন্য বিধি ও শর্তাবলী সাবধানে পর্যালোচনা করুন।</value>
+  </data>
+  <data name="LblDescripcionMensajes" xml:space="preserve">
+    <value>উপরের ডান কোণে বেলটিতে, আপনি আপনার বার্তাগুলি পড়তে পারেন, যার মধ্যে সাবস্ক্রিপশন বিজ্ঞপ্তি এবং সাম্প্রতিক অ্যালার্ম অন্তর্ভুক্ত রয়েছে। এই তালিকাটি বিবরণ বিকল্প থেকে আলাদা, যেখানে আপনি সরাসরি সাম্প্রতিক অ্যালার্মগুলি খুঁজে পেতে পারেন।</value>
+  </data>
+  <data name="LblDescripcionMenu" xml:space="preserve">
+    <value>উপরের বাম কোণে গিয়ারে আপনি এসওস্পেক্ট কনফিগারেশন বিকল্পগুলি পাবেন। আপনি সাবস্ক্রিপশন কিনতে এবং আপনার পরিবারকে সুরক্ষিত করতে বা আপনার অ্যালার্ম রিসেপশন ব্যাসার্ধ প্রসারিত করতে ক্ষমতা কিনতে পারেন। মনে! শুরুতে, আমরা আপনাকে 80 টি ক্ষমতা দিই যাতে আপনি শুরু থেকে দুটি সাবস্ক্রিপশন কিনতে পারেন।</value>
+  </data>
+  <data name="LblRecomendaciones" xml:space="preserve">
+    <value>একসাথে আমরা অপরাজেয়! 100 মিটার ব্যাসার্ধের মধ্যে সতর্কতা এবং সতর্কতা গ্রহণের মৌলিক ফাংশনগুলি বিনামূল্যে, এবং যখন আপনি শুরু করেন তখন আমরা আপনাকে 2 টি সাবস্ক্রিপশন দিই। ক্রমবর্ধমান অপরাধ মোকাবেলায় এই বিনামূল্যে পরিষেবাটি ব্যবহার করতে আপনার সম্প্রদায় এবং পরিবারকে আমন্ত্রণ জানান। আপনি সময়মতো একটি সতর্কতা পেয়ে জীবন বাঁচাতে পারেন বা রক্ষা পেতে পারেন। হারিয়ে যাওয়া ব্যক্তি বা পোষা প্রাণীর সতর্কতার পরিসীমা 10 কিলোমিটার এবং সহিংস বিক্ষোভের পরিসীমা 1 কিলোমিটার</value>
+  </data>
+  <data name="LblPromocion" xml:space="preserve">
+    <value>পরিশেষে, মনে রাখবেন যে আপনি এসওস্পেক্টে প্রদত্ত প্রতিটি সত্যবাদী রেটিংএর জন্য একটি পাওয়ার অফ অ্যাটর্নি উপার্জন করবেন, যখন অ্যালার্মগুলির ভোটতাদের স্থাপনের 90 মিনিট পরে বন্ধ হয়ে যায়। বেশিরভাগ মানুষ সৎ এবং একসাথে আমরা একে অপরকে এবং আমাদের পরিবারকে রক্ষা করব। সোস্পেক্টে স্বাগতম!</value>
+  </data>
+  <data name="LblDescripcionMapa" xml:space="preserve">
+    <value>যে কোনও সময়, আপনি নীচের বারের বাম দিকে "এমএপি" বিকল্পটি নির্বাচন করতে পারেন, যা এসওস্পেক্টের সূচনা পয়েন্ট। সেখান থেকে, আপনি নিকটবর্তী অ্যালার্ম গুলি দেখতে পারেন। আপনার অবস্থান মানচিত্রের কেন্দ্রে প্রদর্শিত হবে এবং বৃত্তটি আপনাকে প্রভাবিত করতে পারে এমন ব্যাসার্ধকে প্রতিনিধিত্ব করে। ডিফল্টরূপে, এই ব্যাসার্ধটি 100 মিটার, তবে আপনি এটি সেটিংস মেনুতে সংশোধন করতে পারেন।</value>
+  </data>
+  <data name="LblRecomendacionImportante" xml:space="preserve">
+    <value>এটি গুরুত্বপূর্ণ যে আপনি আপনার অবস্থান আপডেট করার জন্য বাড়ি ছাড়ার আগে বা কোনও জায়গায় পৌঁছানোর আগে পর্যায়ক্রমে এসওস্পেক্ট খুলুন। এইভাবে, আপনার অঞ্চলে কোনও ঝুঁকি আছে কিনা তা আমরা আপনাকে জানাতে পারি। অনুগ্রহ করে মনে রাখবেন যে অ্যাপটি বন্ধ হয়ে গেলে, ডিভাইস অপারেটিং সিস্টেমদ্বারা আরোপিত সীমাবদ্ধতার কারণে আমরা আপনার অবস্থান পেতে অক্ষম। আপনার অবস্থান সম্পর্কিত বিধি ও শর্তাবলী পরীক্ষা করুন।</value>
+  </data>
+  <data name="LblUsuarioBloqueado" xml:space="preserve">
+    <value>নেতিবাচক চিহ্নের জন্য ব্যবহারকারী বরখাস্ত</value>
+  </data>
+  <data name="LblMarcasNegativas" xml:space="preserve">
+    <value>আমার নেতিবাচক নম্বরের সংখ্যা</value>
+  </data>
+  <data name="LblCuentaSuspendida" xml:space="preserve">
+    <value>অন্যান্য ব্যবহারকারীদের নেতিবাচক চিহ্নের কারণে অ্যাকাউন্ট সাময়িকভাবে স্থগিত করা হয়েছে</value>
+  </data>
+  <data name="LblTitleCuentaSuspendida" xml:space="preserve">
+    <value>অ্যাকাউন্ট সাময়িকভাবে স্থগিত</value>
+  </data>
+  <data name="LblFechaFinSuspension" xml:space="preserve">
+    <value>সাসপেনশন সমাপ্তির তারিখ টি হল</value>
+  </data>
+  <data name="LblTocaAqui" xml:space="preserve">
+    <value>যেতে এখানে ট্যাপ করুন</value>
+  </data>
+  <data name="LblNoTienesConexion" xml:space="preserve">
+    <value>ইন্টারনেট সংযোগ নেই</value>
+  </data>
+  <data name="LblExplicacionSinConexion" xml:space="preserve">
+    <value>SOSPECT-এ লগ ইন করতে আপনার বিবৃতি প্রয়োজন। ইন্টারনেট ছাড়া আমরা জানতে পারি না যে এটি সক্রিয় কিনা।</value>
+  </data>
+  <data name="LblSinConexionDescripcion" xml:space="preserve">
+    <value>আপনার SOSPECT অ্যাকাউন্টের স্থিতি পুনরুদ্ধার করতে সক্রিয় ইন্টারনেট প্রয়োজন।</value>
+  </data>
+  <data name="LblSinConexionQueHacer" xml:space="preserve">
+    <value>অনুগ্রহ করে আপনার ইন্টারনেট সক্রিয় করুন এবং SOSPECT পুনরায় চালু করুন</value>
+  </data>
+  <data name="SefinalizalasubscripcionporsolicituddelusuarioPROTEGIDOatravésdelaAPIdesdelaAPP" xml:space="preserve">
+    <value>অ্যাপ্লিকেশন থেকে API-এর মাধ্যমে সুরক্ষিত ব্যবহারকারীর অনুরোধের মাধ্যমে সাবস্ক্রিপশনটি সমাপ্ত করা হয়</value>
+  </data>
+  <data name="Nopuederenovarsedebidoaquefuecancelada,requieresubscripciónnueva" xml:space="preserve">
+    <value>পুনর্নবীকরণ করা যাবে না কারণ এটি বাতিল করা হয়েছে, নতুন সাবস্ক্রিপশন প্রয়োজন</value>
+  </data>
+  <data name="Alarmasgeneradaspormicirculosocial" xml:space="preserve">
+    <value>আমার সামাজিক বৃত্ত দ্বারা সৃষ্ট অ্যালার্ম</value>
+  </data>
+  <data name="Incrementomidiametrodevigilancia" xml:space="preserve">
+    <value>আমি আমার নজরদারি ব্যাস বাড়াচ্ছি</value>
+  </data>
+  <data name="Zonadevigilanciaadicional" xml:space="preserve">
+    <value>অতিরিক্ত নজরদারি জোন</value>
+  </data>
+  <data name="Renovable" xml:space="preserve">
+    <value>পুনর্নবীকরণযোগ্য</value>
+  </data>
+  <data name="SefinalizalasubscripcionporsolicituddelusuarioPROTECTORatravésdelaAPIdesdelaAPP" xml:space="preserve">
+    <value>অ্যাপ্লিকেশন থেকে API-এর মাধ্যমে প্রটেক্টর ব্যবহারকারীর অনুরোধে সাবস্ক্রিপশনটি সমাপ্ত হয়</value>
+  </data>
+  <data name="LblEsRenovable" xml:space="preserve">
+    <value>এটা কি পুনর্নবীকরণযোগ্য?</value>
+  </data>
+  <data name="LblObsSubs" xml:space="preserve">
+    <value>সাবস্ক্রিপশন মন্তব্য:</value>
+  </data>
+  <data name="NingunaObservacion" xml:space="preserve">
+    <value>কোন মন্তব্য নেই</value>
+  </data>
+  <data name="Subscripcionvigente" xml:space="preserve">
+    <value>বর্তমান সাবস্ক্রিপশন</value>
+  </data>
+  <data name="Actualmenteactivoenotrasuscripcion" xml:space="preserve">
+    <value>বর্তমানে অন্য একটি সাবস্ক্রিপশনে সক্রিয়</value>
+  </data>
+  <data name="LblRadioActual" xml:space="preserve">
+    <value>অ্যালার্ম পাওয়ার জন্য আমার বর্তমান ব্যাসার্ধ হল:</value>
+  </data>
+  <data name="LblPoderesRequeridosZV" xml:space="preserve">
+    <value>নির্বাচিত সম্প্রসারণের জন্য প্রয়োজনীয় ক্ষমতা</value>
+  </data>
+  <data name="OptTerminosCondiciones" xml:space="preserve">
+    <value>SOSPECT বিধি ও শর্তাবলী</value>
+  </data>
+  <data name="DebesAbrirLaApp" xml:space="preserve">
+    <value>SOSpect ব্যবহারকারীর অবস্থানের পরিবর্তনগুলি জানতে পারে না যখন এটি বন্ধ থাকে, এটি সেল ফোনের অপারেটিং সিস্টেমের ব্যাটারি সংরক্ষণ নীতিগুলির দ্বারা ঘটে, তাই এটি গুরুত্বপূর্ণ যে ব্যবহারকারী প্রায়শই অ্যাপ্লিকেশনটি যে অঞ্চলে স্থানান্তরিত হয়েছে সেখানে অ্যালার্মগুলি পরীক্ষা করতে এবং সময়মতো নিকটবর্তী অ্যালার্মগুলি গ্রহণ করতে খোলে।</value>
+  </data>
+  <data name="InvitaMasPersonas" xml:space="preserve">
+    <value>ব্যবহারকারীর নিরাপত্তা উন্নত করার জন্য এটি গুরুত্বপূর্ণ যে তার আশেপাশের লোকেরা, পরিবার এবং প্রতিবেশীরা বিনামূল্যে অ্যাপ্লিকেশনটি ডাউনলোড করুন। যদি নিকটবর্তী কোনও ব্যবহারকারী না থাকে তবে ব্যবহারকারীকে সময়মতো সতর্ক করা যাবে না বা তাদের সতর্কতাগুলি শোনা নাও যেতে পারে, অ্যাপ্লিকেশনটি ডাউনলোড করার আগে ঝুঁকির অবস্থা বজায় রেখে। একে অপরকে সাহায্য করার জন্য আরও বেশি লোককে আমন্ত্রণ জানানো গুরুত্বপূর্ণ!</value>
+  </data>
+  <data name="Insertiondone" xml:space="preserve">
+    <value>সন্নিবেশ সম্পাদিত হয়েছে।</value>
+  </data>
+  <data name="AnerroroccurredwhilequalifyingthealarmCode1" xml:space="preserve">
+    <value>কোড 1 দিয়ে অ্যালার্ম রেটিং করার সময় একটি ত্রুটি ঘটেছে</value>
+  </data>
+  <data name="AnerroroccurredwhilequalifyingthealarmCode2" xml:space="preserve">
+    <value>কোড 2 দিয়ে অ্যালার্ম রেটিং করার সময় একটি ত্রুটি ঘটেছে</value>
+  </data>
+  <data name="AnerroroccurredwiththealarmqualificationmodelCode3" xml:space="preserve">
+    <value>কোড 3 দিয়ে অ্যালার্ম রেটিং করার সময় ত্রুটি ঘটেছে</value>
+  </data>
+  <data name="Userregistrationsuccessful" xml:space="preserve">
+    <value>আপনার ব্যবহারকারী নিবন্ধিত হয়েছে!</value>
+  </data>
+  <data name="Anerroroccurredwhileregisteringtheusercode1" xml:space="preserve">
+    <value>আপনার ব্যবহারকারীকে নিবন্ধন করার জন্য কোড 1 এর সাথে একটি ত্রুটি ঘটেছে</value>
+  </data>
+  <data name="Anerroroccurredwhileregisteringtheusercode2" xml:space="preserve">
+    <value>আপনার ব্যবহারকারীকে নিবন্ধন করার সময় কোড 2 এর সাথে একটি ত্রুটি ঘটেছে</value>
+  </data>
+  <data name="Anerroroccurredwiththepeoplemodelforuserregistrationcode3" xml:space="preserve">
+    <value>আপনার ব্যবহারকারীকে নিবন্ধন করার জন্য কোড 3 এর সাথে একটি ত্রুটি সংঘটিত হয়েছে</value>
+  </data>
+  <data name="Permisosolicitadoconexito" xml:space="preserve">
+    <value>সফলভাবে অনুমতির জন্য অনুরোধ করা হয়েছে</value>
+  </data>
+  <data name="OcurriounerrorenelprocesodesolicitarpermisoalprotegidoCodigo1" xml:space="preserve">
+    <value>সুরক্ষিত ব্যক্তির কাছ থেকে অনুমতির অনুরোধ করার প্রক্রিয়ায় কোড 1 সহ একটি ত্রুটি সংঘটিত হয়েছে</value>
+  </data>
+  <data name="Nofueposiblerealizarenviarlasolicituddepermisoalprotegidoporqueelmodelonoesvalido" xml:space="preserve">
+    <value>সুরক্ষিত ব্যক্তির কাছে অনুমতির অনুরোধ প্রেরণ করা সম্ভব হয়নি, মডেলটি অবৈধ</value>
+  </data>
+  <data name="AlertaEnUbicacion" xml:space="preserve">
+    <value>এই অবস্থানে একটি SOSpect সতর্কতা তৈরি করতে চান?</value>
+  </data>
+  <data name="CrearEnUbicacionActual" xml:space="preserve">
+    <value>আপনার বর্তমান অবস্থানে একটি SOSPECT সতর্কতা তৈরি করতে চান?</value>
+  </data>
+  <data name="SeguroCerrarSesion" xml:space="preserve">
+    <value>আপনি কি লগ আউট করার বিষয়ে নিশ্চিত?</value>
+  </data>
+  <data name="Tu" xml:space="preserve">
+    <value>আপনি</value>
+  </data>
+  <data name="Anonimo" xml:space="preserve">
+    <value>অনামী</value>
+  </data>
+  <data name="AlarmaCerrada" xml:space="preserve">
+    <value>অ্যালার্ম বন্ধ</value>
+  </data>
+  <data name="LblSaldoPoderesInsuficiente" xml:space="preserve">
+    <value>আপনার পাওয়ার ব্যালেন্স অপর্যাপ্ত</value>
+  </data>
+  <data name="LblComprarPoderes" xml:space="preserve">
+    <value>অ্যাটর্নির ক্ষমতা কিনুন</value>
+  </data>
+  <data name="LblSeguroRenovar" xml:space="preserve">
+    <value>আপনি কি এই সাবস্ক্রিপশন পুনর্নবীকরণ সম্পর্কে নিশ্চিত?</value>
+  </data>
+  <data name="OptReportes" xml:space="preserve">
+    <value>প্রতিবেদন</value>
+  </data>
+  <data name="LblReportesTitulo" xml:space="preserve">
+    <value>এসওস্পেক্ট রিপোর্ট</value>
+  </data>
+  <data name="LblReportesDescripcion" xml:space="preserve">
+    <value>প্রতিকূল পরিস্থিতি এড়াতে আপনি কীভাবে অন্যান্য ব্যবহারকারীদের সহায়তা করেছেন তা বোঝার সুযোগ দেয় প্রতিবেদনগুলি। উপরন্তু, তারা আপনাকে আপনার শহরের মানচিত্রে বিপজ্জনক অঞ্চলগুলি সনাক্ত করতে এবং সময়ের সাথে সাথে অপরাধের বিবর্তন পর্যবেক্ষণ করতে দেয়। এছাড়াও, প্যাটার্ন বিশ্লেষণের মাধ্যমে, নেতিবাচক ঘটনা ঘটার আগে প্রাথমিক সতর্কতা তৈরি করা সম্ভব। এটি লক্ষ করা গুরুত্বপূর্ণ যে মৌলিক প্রতিবেদনটি বিনামূল্যে, যখন অন্যান্য প্রতিবেদনগুলি তাদের প্রজন্মের জন্য প্রয়োজনীয় গণনামূলক ব্যবহারের কারণে ব্যয় হতে পারে।</value>
+  </data>
+  <data name="OptReporteDeCalorEnZona" xml:space="preserve">
+    <value>তাপ মানচিত্র সহ রিপোর্ট করুন</value>
+  </data>
+  <data name="OptReporteEvolucionEnElTiempo" xml:space="preserve">
+    <value>সময় অনুযায়ী সতর্ক বিবর্তন প্রতিবেদন</value>
+  </data>
+  <data name="OptReportesPredictivos" xml:space="preserve">
+    <value>ভবিষ্যদ্বাণীমূলক প্রতিবেদন</value>
+  </data>
+  <data name="OptReporteAnaliticoDeDescripcionesAlarmas" xml:space="preserve">
+    <value>অ্যালার্ম চ্যাটের বিশ্লেষণমূলক প্রতিবেদন</value>
+  </data>
+  <data name="LblReporteCalorSospect" xml:space="preserve">
+    <value>SOSPECT তাপ মানচিত্র</value>
+  </data>
+  <data name="LblReporteEnConstruccion" xml:space="preserve">
+    <value>শীঘ্র!! এই কার্যকারিতা নির্মাণাধীন!</value>
+  </data>
+  <data name="LblDescripcionMapaDeCalor" xml:space="preserve">
+    <value>এই প্রতিবেদনে, আপনার কাছে আপনার অঞ্চলের একটি তাপ মানচিত্রে অ্যাক্সেস থাকবে, যেখানে আপনি এসওস্পেক্ট তার অপারেশন শুরু করার পর থেকে বিভিন্ন মাস নির্বাচন করতে পারেন। এই কার্যকারিতাটি আপনাকে মানচিত্রের প্রতিটি অঞ্চলের বিবর্তন পর্যবেক্ষণ এবং বোঝার অনুমতি দেবে যা আপনার আগ্রহের বিষয়।</value>
+  </data>
+  <data name="LblCostoReporte" xml:space="preserve">
+    <value>মনে রাখবেন যে এই কার্যকারিতাটির ব্যবহার একটি গণনামূলক ব্যয় বহন করে এবং শক্তি প্রয়োজন যদিও এটি একটি উচ্চ মান হবে না। যাইহোক, অ্যাপ্লিকেশনটির প্রথম ব্যবহারে আমরা আপনাকে যে ক্ষমতা গুলি দিই তা ব্যবহার করে আপনি কোনও সমস্যা ছাড়াই এটি অর্জন করতে পারেন।</value>
+  </data>
+  <data name="LblReporteEvolucionAlarmas" xml:space="preserve">
+    <value>এসওস্পেক্টে রাখা অ্যালার্মগুলির বিবর্তন</value>
+  </data>
+  <data name="LblDescripcionEvolucionAlarmas" xml:space="preserve">
+    <value>এই প্রতিবেদনে, আপনি আপনার অঞ্চলে সময়ের সাথে সাথে প্রতিটি ধরণের অ্যালার্মের প্রবণতা জানতে সক্ষম হবেন। আপনি বিপজ্জনক প্রবণতা পর্যবেক্ষণ এবং বিশ্লেষণ করতে সক্ষম হবেন, পাশাপাশি অপরাধের সম্ভাব্য হ্রাস সনাক্ত করতে সক্ষম হবেন।</value>
+  </data>
+  <data name="LblReportePredictivo" xml:space="preserve">
+    <value>এসওস্পেক্ট ভবিষ্যদ্বাণীমূলক প্রতিবেদন</value>
+  </data>
+  <data name="LblDescripcionReportesPredictivos" xml:space="preserve">
+    <value>যেহেতু এসওস্পেক্ট সম্প্রদায় পর্যাপ্ত ডেটা তৈরি করে, সম্ভাব্যতা-ভিত্তিক ইভেন্টের ভবিষ্যদ্বাণী এবং বিশ্লেষণমূলক সরঞ্জাম তৈরি করা যেতে পারে। এই প্রতিবেদনগুলি আপনাকে জানতে দেবে যে কখন সতর্কতার ঢেউ বা অপরাধমূলক ক্রিয়াকলাপ বৃদ্ধি পাচ্ছে, আপনাকে আপনার, আপনার পরিবার এবং আপনার সম্প্রদায়ের কোনও ঝুঁকি এড়াতে প্রয়োজনীয় সতর্কতা অবলম্বনের সুযোগ দেবে।</value>
+  </data>
+  <data name="LblReporteAnalisisDeTextos" xml:space="preserve">
+    <value>SOSPECT অ্যালার্ম চ্যাট বিশ্লেষণ প্রতিবেদন</value>
+  </data>
+  <data name="LblDescripcionAnalisisTextos" xml:space="preserve">
+    <value>ব্যবহারকারীরা অ্যালার্মগুলি বর্ণনা করে এবং এসওস্পেক্টের অভ্যন্তরীণ চ্যাটের মাধ্যমে তাদের বিবর্তন আপডেট করে, এই প্রতিবেদনটি সম্প্রদায়কে সবচেয়ে বেশি প্রভাবিত করে এমন টাইপোলজিগুলি কল্পনা করার অনুমতি দেবে। এটি আপনার অঞ্চলে সুরক্ষার উপলব্ধি উন্নত করার জন্য পদক্ষেপ নেওয়ার সুযোগ সরবরাহ করে।</value>
+  </data>
+  <data name="LblRangoReporte" xml:space="preserve">
+    <value>এই প্রতিবেদনটি গত 30 দিন জুড়ে রয়েছে</value>
+  </data>
+  <data name="AcercadeSOSpect" xml:space="preserve">
+    <value>SOSPECT সম্পর্কে</value>
+  </data>
+  <data name="Porcentajedealarmasciertasfrenteafalsasenunradiodeunkilometroymedio" xml:space="preserve">
+    <value>দেড় কিলোমিটার ব্যাসার্ধের মধ্যে সত্য বনাম মিথ্যা অ্যালার্মের শতাংশ</value>
+  </data>
+  <data name="Promediodetiempoenminutosentrelanzamientodealarmaenmizonaylaprimeracalificacionodescripcion" xml:space="preserve">
+    <value>আমার অঞ্চলে অ্যালার্ম লঞ্চ এবং প্রথম রেটিং বা বিবরণের মধ্যে মিনিটের গড় সময়</value>
+  </data>
+  <data name="Cantidadrealdepersonasenunradiodeunkilometroymedio" xml:space="preserve">
+    <value>দেড় কিলোমিটার ব্যাসার্ধের মধ্যে মানুষের প্রকৃত সংখ্যা</value>
+  </data>
+  <data name="Cantidadrealdepersonasenmiradioactual" xml:space="preserve">
+    <value>আমার বর্তমান ব্যাসার্ধের মানুষের প্রকৃত সংখ্যা</value>
+  </data>
+  <data name="Miradioactualderecepcionyenviodealarmasenmetros" xml:space="preserve">
+    <value>মিটারে অ্যালার্ম গ্রহণ এবং প্রেরণের আমার বর্তমান ব্যাসার্ধ</value>
+  </data>
+  <data name="Cantidadrealdepersonasquerecibieronmisalarmas" xml:space="preserve">
+    <value>আমার অ্যালার্ম প্রাপ্ত লোকের প্রকৃত সংখ্যা</value>
+  </data>
+  <data name="Cantidaddenotificacionesdealarmaenviadasdemiparte" xml:space="preserve">
+    <value>আমার কাছ থেকে পাঠানো অ্যালার্ম নোটিফিকেশনের সংখ্যা</value>
+  </data>
+  <data name="Personasquereportaronmiayudacomonegativaofalsa" xml:space="preserve">
+    <value>যারা আমার সাহায্যকে নেতিবাচক বা মিথ্যা হিসাবে রিপোর্ট করেছেন</value>
+  </data>
+  <data name="Personasqueagradecieronmiayuda" xml:space="preserve">
+    <value>যারা আমার সাহায্যের প্রশংসা করেছেন</value>
+  </data>
+  <data name="Poderesganadosporregalos" xml:space="preserve">
+    <value>উপহার ের মাধ্যমে অর্জিত ক্ষমতা</value>
+  </data>
+  <data name="LblParticipacionTpAlarma" xml:space="preserve">
+    <value>অ্যালার্ম টাইপ অনুযায়ী অংশগ্রহণ</value>
+  </data>
+  <data name="LblMetricBasics" xml:space="preserve">
+    <value>Basic metrics</value>
+  </data>
+  <data name="LblEfectiAlarmas" xml:space="preserve">
+    <value>অ্যালার্মের কার্যকারিতা</value>
+  </data>
+  <data name="LblTotalAlarmas" xml:space="preserve">
+    <value>মোট অ্যালার্ম</value>
+  </data>
+  <data name="LblAlarmasVerdaderas" xml:space="preserve">
+    <value>True alarm</value>
+  </data>
+  <data name="LblAlarmasFalsas" xml:space="preserve">
+    <value>False alarms</value>
+  </data>
+  <data name="LblAlarmasEfectivas" xml:space="preserve">
+    <value>কার্যকর অ্যালার্মের শতাংশ</value>
+  </data>
+  <data name="LblMarcarLeidos" xml:space="preserve">
+    <value>সব কিছু পড়ার মতো চিহ্নিত করুন</value>
+  </data>
+  <data name="LblSeMarcaronComoLeidos" xml:space="preserve">
+    <value>সমস্ত বার্তা পড়া হিসাবে চিহ্নিত করা হয়েছে</value>
+  </data>
+  <data name="LabelNuevaVersion" xml:space="preserve">
+    <value>এসওস্পেক্টের একটি নতুন সংস্করণ রয়েছে এবং এটি চালিয়ে যাওয়া প্রয়োজন</value>
+  </data>
+  <data name="OptReporteBasico" xml:space="preserve">
+    <value>বেসিক রিপোর্ট - বিনামূল্যে!</value>
+  </data>
+  <data name="LblReporteBasicoSospect" xml:space="preserve">
+    <value>এসওস্পেক্ট বেসিক রিপোর্ট</value>
+  </data>
+  <data name="LblReporteBasicoDescripcion" xml:space="preserve">
+    <value>SOSPECT এর মৌলিক প্রতিবেদনগুলি আপনাকে আপনার সম্প্রদায়ের উপর আপনার অ্যালার্ম রিপোর্টগুলির প্রভাব সম্পর্কে মূল্যবান তথ্য সরবরাহ করে। উপরন্তু, তারা আপনাকে সেই রেটিংগুলিতে অ্যালার্ম এবং সততা সঠিকভাবে স্কোর করে আপনার সম্প্রদায়কে সহায়তা করে অর্জিত শক্তির সংখ্যা দেখায়। এই প্রতিবেদনগুলির মাধ্যমে, আপনি গত মাসে আপনার এলাকার সামগ্রিক আচরণও মূল্যায়ন করতে পারেন, যার মধ্যে প্রক্রিয়াটিতে অংশগ্রহণকারী ব্যবহারকারীর সংখ্যা এবং ভুল ব্যস্ততার কারণে নেতিবাচক নম্বর প্রাপ্ত ব্যবহারকারীদের সংখ্যা অন্তর্ভুক্ত রয়েছে।</value>
+  </data>
+  <data name="LblReporteBasicoDescripcionCorta" xml:space="preserve">
+    <value>SOSPECT এর মৌলিক প্রতিবেদনগুলি আপনাকে মূল্যবান তথ্য সরবরাহ করে ... আরও দেখুন...</value>
+  </data>
+  <data name="LblDescripcionRepTipoAlarma" xml:space="preserve">
+    <value>এই প্রতিবেদনটি আপনাকে আপনার বর্তমান অবস্থান থেকে দেড় কিলোমিটার ব্যাসার্ধের মধ্যে সর্বাধিক ঘন ঘন অ্যালার্ম সম্পর্কে তথ্য দেয়।</value>
+  </data>
+  <data name="LblDescripcionRepEfectAlarmas" xml:space="preserve">
+    <value>এই প্রতিবেদনটি আপনাকে আপনার বর্তমান অবস্থান থেকে দেড় কিলোমিটার ব্যাসার্ধের মধ্যে বাস্তব এবং মিথ্যা অ্যালার্মগুলির মধ্যে কার্যকারিতা সম্পর্কসম্পর্কে তথ্য সরবরাহ করে।</value>
+  </data>
+  <data name="LblDescripcionRepMetricasBasicas" xml:space="preserve">
+    <value>এই প্রতিবেদনটি আপনাকে আপনার বর্তমান অবস্থানের দেড় কিলোমিটার ব্যাসার্ধের মধ্যে ব্যবহারকারীর সংখ্যা এবং আপনার অ্যাপ অ্যালার্মের বর্তমান ব্যাসার্ধের ব্যবহারকারীদের সংখ্যা সম্পর্কে তথ্য সরবরাহ করে। উপরন্তু, এটি আপনার আগ্রহের বেশ কয়েকটি অতিরিক্ত তথ্য অন্তর্ভুক্ত করে।</value>
+  </data>
+  <data name="OptVolumenAlarmas" xml:space="preserve">
+    <value>নিকটবর্তী অ্যালার্মের ধরণ অনুসারে ভলিউম</value>
+  </data>
+  <data name="OptEfectividadAlarmas" xml:space="preserve">
+    <value>নিকটবর্তী অ্যালার্মগুলির কার্যকারিতা</value>
+  </data>
+  <data name="OptMetricasBasicas" xml:space="preserve">
+    <value>নিকটবর্তী অ্যালার্মগুলির মৌলিক মেট্রিক্স</value>
+  </data>
+  <data name="LblCredibilidadActual" xml:space="preserve">
+    <value>আমার অ্যালার্মের বিশ্বাসযোগ্যতা হল:</value>
+  </data>
+  <data name="OptManualUsuarioSospect" xml:space="preserve">
+    <value>SOSpect User Manual</value>
+  </data>
+  <data name="LblDescManualUsuario" xml:space="preserve">
+    <value>SoSpect এর সাথে দেখা করুন, একটি বিনামূল্যে অ্যাপ্লিকেশন যা আপনাকে এবং আপনার প্রিয়জনদের রক্ষা করার জন্য ডিজাইন করা হয়েছে। আমরা একটি সংক্ষিপ্ত এবং বিস্তারিত অনলাইন ম্যানুয়াল তৈরি করেছি যা আপনাকে এটি সঠিকভাবে ব্যবহার করতে সহায়তা করবে। এই ম্যানুয়ালের সাহায্যে, আপনি SOSpect থেকে সর্বাধিক সুবিধা পেতে পারেন এবং এর সমস্ত সুরক্ষা বৈশিষ্ট্যগুলির সুবিধা নিতে পারেন।</value>
+  </data>
+  <data name="SesionApple" xml:space="preserve">
+    <value>অ্যাপল দিয়ে সাইন ইন করুন</value>
+  </data>
+  <data name="LblCredibilidadAlarmaActual" xml:space="preserve">
+    <value>অ্যালার্মের বিশ্বাসযোগ্যতা:</value>
+  </data>
+  <data name="LblAccedeAlManual" xml:space="preserve">
+    <value>আপনি ম্যানুয়ালটি অ্যাক্সেস করতে পারেন:</value>
+  </data>
+  <data name="LblRefrescarLista" xml:space="preserve">
+    <value>অ্যালার্ম তালিকা রিফ্রেশ করুন</value>
+  </data>
+  <data name="LblErrorCorreoDispositivo" xml:space="preserve">
+    <value>এই ডিভাইসে ইমেল প্রেরণ করা যায়নি</value>
+  </data>
+  <data name="LblErrorCorreo" xml:space="preserve">
+    <value>ই-মেইল পাঠাতে ত্রুটি:</value>
+  </data>
+  <data name="LblSeleccioneTipoAlarma" xml:space="preserve">
+    <value>দয়া করে অ্যালার্মের ধরণ নির্বাচন করুন</value>
+  </data>
+  <data name="LblCompraFallida" xml:space="preserve">
+    <value>কেনাকাটা করা হয়নি। দয়া করে ইন্টারনেট অ্যাক্সেস পরীক্ষা করুন এবং পুনরায় চেষ্টা করুন</value>
+  </data>
+  <data name="LblSeleccionePuntoMapa" xml:space="preserve">
+    <value>আপনাকে অবশ্যই মানচিত্রে একটি নজরদারি অঞ্চল নির্বাচন করতে হবে</value>
+  </data>
+  <data name="Cantidaddealarmascolocadasenlaszonasdevigilanciasuscritas" xml:space="preserve">
+    <value>সাবস্ক্রাইব করা নজরদারি এলাকায় লাগানো অ্যালার্মের সংখ্যা</value>
+  </data>
+  <data name="Cantidaddealarmascolocadaspormisprotegidos" xml:space="preserve">
+    <value>আমার শিষ্যদের দ্বারা স্থাপন করা অ্যালার্মের সংখ্যা</value>
+  </data>
+  <data name="Credibilidadactualdelasalarmasqueenvioamicomunidad" xml:space="preserve">
+    <value>আমি আমার সম্প্রদায়কে যে অ্যালার্ম গুলি প্রেরণ করি তার বর্তমান বিশ্বাসযোগ্যতা</value>
+  </data>
+  <data name="LblCompraExitosa" xml:space="preserve">
+    <value>অভিনন্দন! আপনি সাবস্ক্রিপশন কেনার ক্ষমতা কিনেছেন। আপনি বেলের মধ্যে একটি ব্যাখ্যামূলক বার্তা পাবেন!</value>
+  </data>
+  <data name="LblDebesHabilitarNotif" xml:space="preserve">
+    <value>কাজ করার জন্য আপনাকে অবশ্যই SOস্পেক্টের জন্য বিজ্ঞপ্তি প্রেরণ সক্ষম করতে হবে</value>
+  </data>
+  <data name="LblHabilitarNotifSettings" xml:space="preserve">
+    <value>এই অ্যাপ্লিকেশনটি বিজ্ঞপ্তিগুলি সমর্থন করতে পারে তবে আপনাকে আপনার সেটিংসে এটি সক্ষম করতে হবে।</value>
+  </data>
+  <data name="LblErrorHabilitandoUsoNotif" xml:space="preserve">
+    <value>একটি ত্রুটি ঘটেছে যা পুশ নোটিফিকেশনগুলির ব্যবহার কে বাধা দেয়</value>
+  </data>
+  <data name="LblMostrarDireccionEscape" xml:space="preserve">
+    <value>পলাতক মার্কের পালানোর পথ</value>
+  </data>
+  <data name="LblProximamenteSOSpect" xml:space="preserve">
+    <value>শীঘ্রই আসছে এসওস্পেক্টে!</value>
+  </data>
+  <data name="LblReportesProximos" xml:space="preserve">
+    <value>ডেটা সায়েন্স সহ বিশ্লেষণাত্মক এবং ভবিষ্যদ্বাণীমূলক প্রতিবেদন!</value>
+  </data>
+  <data name="LblHolaBienvenido" xml:space="preserve">
+    <value>নমস্কার! এসওস্পেক্টে আপনাকে স্বাগতম। 
+
+SOSpect একটি বিনামূল্যে সরঞ্জাম যা নিকটবর্তী ঝুঁকি সম্পর্কে সময়মত সতর্কতা প্রদান করে আপনাকে এবং আপনার প্রিয়জনদের রক্ষা করার জন্য ডিজাইন করা হয়েছে! আপনি প্রথমে অনেকগুলি অ্যালার্ম নাও পেতে পারেন, কারণ আপনার আশেপাশে এখনও অনেক লোক নেই যারা এসওস্পেক্ট ইনস্টল করেছেন। আমরা আপনাকে অনুরোধ করছি যে আপনি আমাদের চেষ্টা করুন এবং অ্যাপ্লিকেশনটি আনইনস্টল করবেন না। SOSPECT কোনও সময়ে আপনার জীবন বাঁচাতে পারে, পাশাপাশি আপনার পরিবার বা সম্প্রদায়ের কারও জীবনও বাঁচাতে পারে।
+
+সেটিংসে পাওয়া "প্রতিবেদন" মেনুর "বেসিক রিপোর্ট" বিভাগে, আপনি "বেসিক মেট্রিক্স" বিভাগে আপনার কভারেজ এলাকার মধ্যে নিকটবর্তী ব্যবহারকারীদের সংখ্যা দেখতে পারেন, যেখানে আপনি অ্যালার্ম পাবেন। আমাদের সেই সংখ্যা বাড়াতে সহায়তা করুন, এটি বিনামূল্যে এবং আপনাকে আরও নিরাপদে বাঁচতে দেবে!
+
+আমরা আপনাকে এই সংক্ষিপ্ত সূচনা ম্যানুয়ালটি মনোযোগ সহকারে পড়ার জন্য আমন্ত্রণ জানাই, যা আপনাকে এসওস্পেক্ট কীভাবে কাজ করে সে সম্পর্কে একটি ধারণা দেবে। দয়া করে মনে রাখবেন যে অ্যাপ্লিকেশনটি ইনস্টল হওয়ার পরে এটি কেবল একবার প্রদর্শিত হবে।
+
+এসওস্পেক্ট ব্যবহার করার জন্য এবং প্রত্যেকের সুরক্ষায় অবদান রাখার জন্য আপনাকে ধন্যবাদ!
+
+অবিরত রাখতে স্ক্রিনটি ট্যাপ করুন...</value>
+  </data>
+</root>

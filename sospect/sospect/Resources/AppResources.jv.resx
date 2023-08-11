@@ -1,0 +1,1090 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AlarmasRecientes" xml:space="preserve">
+    <value>Weker anyar kanggo nambah katrangan</value>
+  </data>
+  <data name="Bienvenido" xml:space="preserve">
+    <value>Sugeng rawuh ing SOSpect</value>
+  </data>
+  <data name="ConfirmarAlarma" xml:space="preserve">
+    <value>konfirmasi weker</value>
+  </data>
+  <data name="DescripcionAlarma" xml:space="preserve">
+    <value>katrangan weker</value>
+  </data>
+  <data name="DescripcionArma" xml:space="preserve">
+    <value>katrangan gegaman</value>
+  </data>
+  <data name="DescripcionesParaAlarma" xml:space="preserve">
+    <value>Katrangan digawe kanggo weker iki</value>
+  </data>
+  <data name="DescripcionSospechoso" xml:space="preserve">
+    <value>Katrangan saka tersangka</value>
+  </data>
+  <data name="DescripcionVehiculo" xml:space="preserve">
+    <value>Katrangan Kendaraan</value>
+  </data>
+  <data name="EspacioPublicidad" xml:space="preserve">
+    <value>papan kanggo iklan</value>
+  </data>
+  <data name="InicieSesion" xml:space="preserve">
+    <value>Mlebu kanggo nerusake</value>
+  </data>
+  <data name="InicieSesionCon" xml:space="preserve">
+    <value>utawa login karo</value>
+  </data>
+  <data name="LabelAlerta" xml:space="preserve">
+    <value>Tandha</value>
+  </data>
+  <data name="LabelCancelar" xml:space="preserve">
+    <value>Batal</value>
+  </data>
+  <data name="LabelCrimen" xml:space="preserve">
+    <value>Kadurjanan</value>
+  </data>
+  <data name="LabelDescribir" xml:space="preserve">
+    <value>Nggambarake</value>
+  </data>
+  <data name="LabelEditar" xml:space="preserve">
+    <value>Sunting</value>
+  </data>
+  <data name="LabelMapa" xml:space="preserve">
+    <value>peta</value>
+  </data>
+  <data name="LabelOK" xml:space="preserve">
+    <value>nggih</value>
+  </data>
+  <data name="PuntuacionDescripcion" xml:space="preserve">
+    <value>gambaran skor</value>
+  </data>
+  <data name="ReportarCrimen" xml:space="preserve">
+    <value>laporan angkara</value>
+  </data>
+  <data name="SesionFacebook" xml:space="preserve">
+    <value>Mlebet nganggo FACEBOOK</value>
+  </data>
+  <data name="SesionGoogle" xml:space="preserve">
+    <value>Mlebet nganggo GOOGLE</value>
+  </data>
+  <data name="LabelCancelado" xml:space="preserve">
+    <value>dibatalake</value>
+  </data>
+  <data name="LabelConfirmar" xml:space="preserve">
+    <value>Konfirmasi</value>
+  </data>
+  <data name="LabelConfirmo" xml:space="preserve">
+    <value>Aku konfirmasi</value>
+  </data>
+  <data name="LabelError" xml:space="preserve">
+    <value>Kesalahan</value>
+  </data>
+  <data name="LabelEsFalsa" xml:space="preserve">
+    <value>Iku palsu</value>
+  </data>
+  <data name="LabelFallo" xml:space="preserve">
+    <value>Gagal</value>
+  </data>
+  <data name="LabelInformacion" xml:space="preserve">
+    <value>Informasi</value>
+  </data>
+  <data name="LabelLoginCancelado" xml:space="preserve">
+    <value>mlebu dibatalake</value>
+  </data>
+  <data name="LabelNo" xml:space="preserve">
+    <value>Ora</value>
+  </data>
+  <data name="LabelNoSeguro" xml:space="preserve">
+    <value>Aku ora yakin</value>
+  </data>
+  <data name="LabelSi" xml:space="preserve">
+    <value>Ya</value>
+  </data>
+  <data name="MsgTrasAlarmaEnviada" xml:space="preserve">
+    <value>Yen sampeyan aman, mangga jelasake weker kasebut, yen ora, ndhelikake telpon lan metu saka bebaya.</value>
+  </data>
+  <data name="RecibeAlarma" xml:space="preserve">
+    <value>Sampeyan nampa weker ing cedhak panggonan sampeyan. Apa nyata?</value>
+  </data>
+  <data name="AdvertenciaCalificacion" xml:space="preserve">
+    <value>Rating iki ora bisa diganti mengko. Bisa mengaruhi kredibilitas sampeyan ing mangsa ngarep yen konsensus rating kasebut bertentangan karo swara sampeyan. Sampeyan yakin?</value>
+  </data>
+  <data name="AlarmaEnviada" xml:space="preserve">
+    <value>Weker dikirim!</value>
+  </data>
+  <data name="LabelAlarma" xml:space="preserve">
+    <value>Weker</value>
+  </data>
+  <data name="LabelMetros" xml:space="preserve">
+    <value>meter</value>
+  </data>
+  <data name="LabelTuUbicacion" xml:space="preserve">
+    <value>lokasi sampeyan</value>
+  </data>
+  <data name="LabelUsuario" xml:space="preserve">
+    <value>panganggo</value>
+  </data>
+  <data name="notificacionurgente" xml:space="preserve">
+    <value>Kabar cepet bakal diluncurake menyang telpon sing paling cedhak ing:</value>
+  </data>
+  <data name="ArmaImplicada" xml:space="preserve">
+    <value>Senjata sing melu (yen ana)</value>
+  </data>
+  <data name="DescripcionAlerta" xml:space="preserve">
+    <value>Katrangan Tandha</value>
+  </data>
+  <data name="DescripcionImplicado" xml:space="preserve">
+    <value>Katrangan saka wong sing melu ing tandha</value>
+  </data>
+  <data name="DescripcionVehiculoImp" xml:space="preserve">
+    <value>Kendaraan sing melu (yen ana)</value>
+  </data>
+  <data name="DireccionEscape" xml:space="preserve">
+    <value>Mangga nunjukake arah uwal saka tersangka.</value>
+  </data>
+  <data name="LabelTipoAlarma" xml:space="preserve">
+    <value>jinis weker</value>
+  </data>
+  <data name="LabelRutaEscape" xml:space="preserve">
+    <value>dalan uwal curiga</value>
+  </data>
+  <data name="AmpliacionRadio" xml:space="preserve">
+    <value>Expansion saka radio weker</value>
+  </data>
+  <data name="AprobarSolicitudes" xml:space="preserve">
+    <value>nyetujoni panjalukan</value>
+  </data>
+  <data name="CompletarSubsc" xml:space="preserve">
+    <value>langganan lengkap</value>
+  </data>
+  <data name="CompletarSubscripcion" xml:space="preserve">
+    <value>Langganan sing dilindhungi lengkap</value>
+  </data>
+  <data name="contactenos" xml:space="preserve">
+    <value>Hubungi Kita</value>
+  </data>
+  <data name="CrearNuevoRadio" xml:space="preserve">
+    <value>Gawe langgananku kanggo radio anyar iki</value>
+  </data>
+  <data name="CrearZonaV" xml:space="preserve">
+    <value>Nggawe zona ndjogo karo lokasi iki</value>
+  </data>
+  <data name="Exito" xml:space="preserve">
+    <value>Sukses</value>
+  </data>
+  <data name="ExplicacionVigencias" xml:space="preserve">
+    <value>Kabeh lengganan bener, priksa rega langganan ing pilihan pisanan ing menu utama</value>
+  </data>
+  <data name="ExplicaZonaVigilancia" xml:space="preserve">
+    <value>Kabeh weker sing diselehake ing titik sing arep sampeyan pilih bakal diwenehi kabar kanggo sampeyan preduli saka sing manggonake. Mangkono, sampeyan bisa ngerti bebaya sing ana ing wektu kasebut. Iki cocog kanggo ngerti bebaya ing papan kayata sekolah utawa universitas anak utawa wilayah sing kerja kulawarga utawa wong sing ditresnani.</value>
+  </data>
+  <data name="GenteUnida" xml:space="preserve">
+    <value>Kanthi SOSpect, komunitas bisa bebarengan kanggo nyuda kejahatan lan supaya ora dadi korban saka kahanan sing beboyo, menehi tandha wong liya supaya tetep aman.</value>
+  </data>
+  <data name="LabelAprobar" xml:space="preserve">
+    <value>Sarujuk</value>
+  </data>
+  <data name="LabelIntroduccion" xml:space="preserve">
+    <value>Pambuka</value>
+  </data>
+  <data name="LabelLatitud" xml:space="preserve">
+    <value>Lintang</value>
+  </data>
+  <data name="LabelLongitud" xml:space="preserve">
+    <value>dawa</value>
+  </data>
+  <data name="LabelRechazar" xml:space="preserve">
+    <value>nolak</value>
+  </data>
+  <data name="LblAccion" xml:space="preserve">
+    <value>Tumindak</value>
+  </data>
+  <data name="LblAcepto" xml:space="preserve">
+    <value>Aku nampa kontrak</value>
+  </data>
+  <data name="LblCantidadPoderes" xml:space="preserve">
+    <value>jumlah kakuwasan</value>
+  </data>
+  <data name="LblCompleteCampos" xml:space="preserve">
+    <value>Mangga ngrampungake kabeh kolom.</value>
+  </data>
+  <data name="LblComprar" xml:space="preserve">
+    <value>tuku</value>
+  </data>
+  <data name="LblEliminarProtegido" xml:space="preserve">
+    <value>mbusak dilindhungi</value>
+  </data>
+  <data name="LblExplicacionProtegidos" xml:space="preserve">
+    <value>Sampeyan bisa nampa tandha sing diluncurake dening anggota bunder sosial sanajan adoh saka sampeyan. Ing kene sampeyan bisa ngatur fitur iki</value>
+  </data>
+  <data name="LblFechaActivacion" xml:space="preserve">
+    <value>Tanggal aktivasi</value>
+  </data>
+  <data name="LblFechaFinalizacion" xml:space="preserve">
+    <value>tanggal rampung</value>
+  </data>
+  <data name="LblFechaMensaje" xml:space="preserve">
+    <value>tanggal pesen</value>
+  </data>
+  <data name="LblIDUsuarioAProteger" xml:space="preserve">
+    <value>Ketik ID pangguna kanggo nglindhungi. (Nilai kasebut ana ing sisih ndhuwur menu setelan SOSpect kanggo pangguna sing pengin disambungake)</value>
+  </data>
+  <data name="LblMensajes" xml:space="preserve">
+    <value>Pesen</value>
+  </data>
+  <data name="LblMenu" xml:space="preserve">
+    <value>SETTING</value>
+  </data>
+  <data name="LblNoAcepto" xml:space="preserve">
+    <value>Aku ora nampa</value>
+  </data>
+  <data name="LblOpcionesPoderes" xml:space="preserve">
+    <value>Sugeng rawuh ing pilihan manajemen daya, apa sing arep sampeyan lakoni?</value>
+  </data>
+  <data name="LblOpcionesProtegidos" xml:space="preserve">
+    <value>Dilindhungi lan nglindhungi Aplikasi SOSpect</value>
+  </data>
+  <data name="LblPoderesSospect" xml:space="preserve">
+    <value>SOSpect App Powers</value>
+  </data>
+  <data name="LblPrecio" xml:space="preserve">
+    <value>regane</value>
+  </data>
+  <data name="LblProcesarSolicitud" xml:space="preserve">
+    <value>Ana kesalahan pangolahan panjalukan. Mangga nyoba maneh.</value>
+  </data>
+  <data name="LblProtectores" xml:space="preserve">
+    <value>pangayomanku</value>
+  </data>
+  <data name="LblProtegidos" xml:space="preserve">
+    <value>Anak didik kula</value>
+  </data>
+  <data name="LblQuieroComprar" xml:space="preserve">
+    <value>Aku pengin tuku super power kanggo tuku langganan</value>
+  </data>
+  <data name="LblRelacionProtegido" xml:space="preserve">
+    <value>Hubunganku karo anak didik iki yaiku:</value>
+  </data>
+  <data name="LblSolicitarPermiso" xml:space="preserve">
+    <value>Nyuwun ijin pangguna</value>
+  </data>
+  <data name="LblSubscripcionesCosto" xml:space="preserve">
+    <value>Aku pengin ngerti apa langgananku bisa tuku lan biaya</value>
+  </data>
+  <data name="LblSubscrProtegido" xml:space="preserve">
+    <value>langganan dilindhungi</value>
+  </data>
+  <data name="LblSuspender" xml:space="preserve">
+    <value>nundha sementara</value>
+  </data>
+  <data name="LblTerminos" xml:space="preserve">
+    <value>Katentuan Pangginaan supados langkung Service kanggo SOSpect APP</value>
+  </data>
+  <data name="LblUsuarioProtegido" xml:space="preserve">
+    <value>id panganggo sing dilindhungi</value>
+  </data>
+  <data name="LblValoresSubsc" xml:space="preserve">
+    <value>Nilai langganan</value>
+  </data>
+  <data name="MensajeError" xml:space="preserve">
+    <value>Ana kesalahan nalika nyambungake menyang server. Mangga nyoba maneh.</value>
+  </data>
+  <data name="ObjetivoSospect" xml:space="preserve">
+    <value>SOSpect nduweni tujuan kanggo ngidini masyarakat menehi tandha lan nampa tandha bebaya ing lokasi pangguna, supaya ora ana risiko kanggo dheweke lan wong sing ditresnani. Lokasi pangguna ora dienggo bareng utawa dilacak, njamin privasi. Pangguna bisa menehi tandha bebaya kanggo mbantu wong liya supaya ora dadi korban ing kahanan sing beboyo.</value>
+  </data>
+  <data name="OptAcercaDe" xml:space="preserve">
+    <value>Babagan aplikasi SOSpect</value>
+  </data>
+  <data name="OptAprobarSolicitud" xml:space="preserve">
+    <value>Nyetujoni panyuwunan pelindung</value>
+  </data>
+  <data name="UbicacionImportante" xml:space="preserve">
+    <value>Penting kanggo ngerti lokasi pangguna supaya bisa menehi tandha yen ana wong sing menehi tandha bebaya ing cedhak lokasi kasebut. Nanging, lokasi pangguna pribadi lan mung titik ing peta ing ngendi tandha diselehake sing dituduhake.</value>
+  </data>
+  <data name="OptListarProtegidos" xml:space="preserve">
+    <value>Deleng dhaptar anak didikku</value>
+  </data>
+  <data name="OptIniciarTramite" xml:space="preserve">
+    <value>Miwiti proses nambah protégé</value>
+  </data>
+  <data name="OptCerrarSesion" xml:space="preserve">
+    <value>Mlebu metu</value>
+  </data>
+  <data name="OptAumentarRadio" xml:space="preserve">
+    <value>Tambah radius resepsi waspada</value>
+  </data>
+  <data name="OptCrearZonas" xml:space="preserve">
+    <value>Nggawe zona ndjogo</value>
+  </data>
+  <data name="OptGestionarProtegidos" xml:space="preserve">
+    <value>Ngatur protégés-protektorku</value>
+  </data>
+  <data name="OptCompraPoderes" xml:space="preserve">
+    <value>Tuku kekuwatan kanggo mbukak kunci fitur</value>
+  </data>
+  <data name="SeleccionaRuta" xml:space="preserve">
+    <value>Sampeyan kudu milih rute uwal tersangka.</value>
+  </data>
+  <data name="SubscripcionCreada" xml:space="preserve">
+    <value>Langganan wis kasil digawe.</value>
+  </data>
+  <data name="xPoderesParaSubs" xml:space="preserve">
+    <value>kakuwasan kanggo nambah radius iki kanggo radius saiki</value>
+  </data>
+  <data name="VasARequerir" xml:space="preserve">
+    <value>sampeyan bakal mbutuhake</value>
+  </data>
+  <data name="TuRadioActual" xml:space="preserve">
+    <value>Radius sampeyan saiki yaiku:</value>
+  </data>
+  <data name="SeleccionEnMapa" xml:space="preserve">
+    <value>pilih ing peta</value>
+  </data>
+  <data name="SeleccioneUbicacionVigilar" xml:space="preserve">
+    <value>Pilih lokasi kanggo ngawasi</value>
+  </data>
+  <data name="ZonaVigilancia" xml:space="preserve">
+    <value>Langganan Zona Pengawasan</value>
+  </data>
+  <data name="visitenos" xml:space="preserve">
+    <value>ngunjungi kita ing</value>
+  </data>
+  <data name="OptListarProtectores" xml:space="preserve">
+    <value>Deleng dhaptar pelindungku</value>
+  </data>
+  <data name="OptVolver" xml:space="preserve">
+    <value>wangsul</value>
+  </data>
+  <data name="OptCompletarTramite" xml:space="preserve">
+    <value>Rampungake proses kanggo nambah protégé</value>
+  </data>
+  <data name="LabelEscapoEnEstaDireccion" xml:space="preserve">
+    <value>oncat ing arah iki</value>
+  </data>
+  <data name="LblCompraPoderes" xml:space="preserve">
+    <value>tuku daya</value>
+  </data>
+  <data name="LabelHecho" xml:space="preserve">
+    <value>kapenuhan</value>
+  </data>
+  <data name="LblAsunto" xml:space="preserve">
+    <value>Katrangan singkat</value>
+  </data>
+  <data name="ExplicacionRadio" xml:space="preserve">
+    <value>Radius standar kanggo kabeh pangguna aplikasi yaiku 100 meter ing kabeh arah. Sampeyan bisa nggedhekake radius kasebut kanthi nggunakake kekuwatan app. Banjur pilih radius sing dikarepake dhewe:</value>
+  </data>
+  <data name="OptMisSubs" xml:space="preserve">
+    <value>langgananku</value>
+  </data>
+  <data name="LblAceptar" xml:space="preserve">
+    <value>Nampa</value>
+  </data>
+  <data name="LblCancelarSubscripcion" xml:space="preserve">
+    <value>Batal langganan</value>
+  </data>
+  <data name="LblDescripcionPuntos" xml:space="preserve">
+    <value>katrangan:</value>
+  </data>
+  <data name="LblFechaFinPuntos" xml:space="preserve">
+    <value>Tanggal rampung:</value>
+  </data>
+  <data name="LblidUsuario" xml:space="preserve">
+    <value>ID pangguna:</value>
+  </data>
+  <data name="LblMisSubscripciones" xml:space="preserve">
+    <value>Langganan Kula</value>
+  </data>
+  <data name="LblPoderesPuntos" xml:space="preserve">
+    <value>Daya nganyari maneh:</value>
+  </data>
+  <data name="LblRenovar" xml:space="preserve">
+    <value>gawe anyar</value>
+  </data>
+  <data name="LblSeguroDeCancelar" xml:space="preserve">
+    <value>Apa sampeyan yakin pengin mbatalake langganan? Kekuwatan sing dikonsumsi ora bakal dibalekake.</value>
+  </data>
+  <data name="LblTipo" xml:space="preserve">
+    <value>Tipe langganan:</value>
+  </data>
+  <data name="Alarm_1" xml:space="preserve">
+    <value>bebaya</value>
+  </data>
+  <data name="Alarm_2" xml:space="preserve">
+    <value>Pelanggaran utawa kejahatan sing ditindakake</value>
+  </data>
+  <data name="Alarm_3" xml:space="preserve">
+    <value>gelut dalan</value>
+  </data>
+  <data name="Alarm_4" xml:space="preserve">
+    <value>pet ilang</value>
+  </data>
+  <data name="Alarm_5" xml:space="preserve">
+    <value>Wong ilang</value>
+  </data>
+  <data name="Alarm_6" xml:space="preserve">
+    <value>Kerusuhan utawa protes</value>
+  </data>
+  <data name="Alarm_7" xml:space="preserve">
+    <value>Nyuwun iringan visual kanggo metu menyang dalan</value>
+  </data>
+  <data name="Alarm_8" xml:space="preserve">
+    <value>Kekerasan Rumah Tangga</value>
+  </data>
+  <data name="Alarm_9" xml:space="preserve">
+    <value>Suspect ngungsi menyang wilayah lokasi sampeyan</value>
+  </data>
+  <data name="LblCostoPoderes" xml:space="preserve">
+    <value>biaya paket</value>
+  </data>
+  <data name="LblSuscripcionesDisponibles" xml:space="preserve">
+    <value>Langganan kasedhiya saiki</value>
+  </data>
+  <data name="LblAmigo" xml:space="preserve">
+    <value>kanca</value>
+  </data>
+  <data name="LblCompanero" xml:space="preserve">
+    <value>Sobat</value>
+  </data>
+  <data name="LblFamilia" xml:space="preserve">
+    <value>kulawarga</value>
+  </data>
+  <data name="LblOtroSinDefinir" xml:space="preserve">
+    <value>Liyane undefined</value>
+  </data>
+  <data name="LabelExito" xml:space="preserve">
+    <value>Sukses</value>
+  </data>
+  <data name="LblSolicitudAprobada" xml:space="preserve">
+    <value>Aplikasi kasil disetujoni.</value>
+  </data>
+  <data name="LblSolicitudRechazada" xml:space="preserve">
+    <value>Panjaluk kasil ditolak.</value>
+  </data>
+  <data name="MensajeErrorAprobando" xml:space="preserve">
+    <value>Gagal nyetujoni panyuwunan</value>
+  </data>
+  <data name="MensajeErrorRechazando" xml:space="preserve">
+    <value>Gagal nolak panjaluk kasebut.</value>
+  </data>
+  <data name="LblAccionRealizar" xml:space="preserve">
+    <value>tumindak kanggo njupuk</value>
+  </data>
+  <data name="LblFechaSolicitud" xml:space="preserve">
+    <value>Tanggal aplikasi</value>
+  </data>
+  <data name="LblUsuarioSolicitante" xml:space="preserve">
+    <value>Panjaluk pangguna</value>
+  </data>
+  <data name="LblSubscripcionCompletada" xml:space="preserve">
+    <value>Langganan rampung</value>
+  </data>
+  <data name="LblSubscripcionFallida" xml:space="preserve">
+    <value>langganan gagal</value>
+  </data>
+  <data name="LblFechaAprobacion" xml:space="preserve">
+    <value>Tanggal persetujuan</value>
+  </data>
+  <data name="LblUsuarioAprobador" xml:space="preserve">
+    <value>Pangguna sing disetujoni</value>
+  </data>
+  <data name="LblSubsEliminadaExitosamente" xml:space="preserve">
+    <value>Langganan kasil dibusak</value>
+  </data>
+  <data name="LblSubscrEliminada" xml:space="preserve">
+    <value>ora langganan</value>
+  </data>
+  <data name="LblEliminarProtector" xml:space="preserve">
+    <value>mbusak protector</value>
+  </data>
+  <data name="LblCancelacionAplicada" xml:space="preserve">
+    <value>Pembatalan sukses</value>
+  </data>
+  <data name="LblErrorCancelando" xml:space="preserve">
+    <value>Gagal mbatalake, nyoba maneh utawa laporan kanggo ndhukung, kontak kasedhiya ing pilihan "menu"&gt; "Babagan"</value>
+  </data>
+  <data name="LblErrorRenovando" xml:space="preserve">
+    <value>Gagal gawe anyar, nyoba maneh utawa laporan kanggo ndhukung, kontak kasedhiya ing pilihan "menu"&gt; "Babagan"</value>
+  </data>
+  <data name="LblRenovacionAplicada" xml:space="preserve">
+    <value>Pembaruan ditrapake kanthi sukses</value>
+  </data>
+  <data name="LblErrorZonaVigil" xml:space="preserve">
+    <value>Kesalahan nalika langganan zona anyar sing dijaluk, coba maneh utawa lapor menyang dhukungan, hubungi kasedhiya ing pilihan "menu"&gt; "Babagan"</value>
+  </data>
+  <data name="LblZonaCreada" xml:space="preserve">
+    <value>Langganan zona pengawasan sing dijaluk wis kasil rampung</value>
+  </data>
+  <data name="LblSeleccionaNuevoRadio" xml:space="preserve">
+    <value>Pilih radius anyar ing meter</value>
+  </data>
+  <data name="LblUsuarioProtector" xml:space="preserve">
+    <value>pangguna protèktif</value>
+  </data>
+  <data name="LblSeguroEliminarProtegido" xml:space="preserve">
+    <value>Apa sampeyan yakin bakal mbusak protégé sampeyan? Kekuwatan sing digunakake ing langganan iki ora bakal dibalekake.</value>
+  </data>
+  <data name="LblSuspenderProtectores" xml:space="preserve">
+    <value>Apa sampeyan yakin bakal nundha kabar menyang pelindung sampeyan sajrone 6 jam? Kabeh pelindung sampeyan bakal dilereni saka weker lan wektu pungkasan langganan ora bakal ditambah amarga alasan iki. Proteksi ora bakal diwenehi kabar babagan tumindak iki.</value>
+  </data>
+  <data name="LblSuspensionRealizada" xml:space="preserve">
+    <value>Penundaan weker kanggo kabeh pelindung sampeyan sajrone 6 jam ditindakake kanthi sukses.</value>
+  </data>
+  <data name="LabelSeguroEliminarProtector" xml:space="preserve">
+    <value>Apa sampeyan yakin mbusak saver sampeyan? Kekuwatan sing digunakake ing langganan iki ora bakal bali lan pelindung bakal dilaporake babagan tumindak iki.</value>
+  </data>
+  <data name="LabelProtectorEliminado" xml:space="preserve">
+    <value>Proteksi sing dipilih wis dibusak. Kekuwatan ora bakal bali menyang pelindung. Protektor bakal diwenehi kabar babagan tumindak iki</value>
+  </data>
+  <data name="LblConfirmacionRequerida" xml:space="preserve">
+    <value>Penting! Konfirmasi dibutuhake!</value>
+  </data>
+  <data name="LblNoHayRegistros" xml:space="preserve">
+    <value>Ora ana cathetan kanggo ditampilake ing wektu iki</value>
+  </data>
+  <data name="LblSaldoPoderesEs" xml:space="preserve">
+    <value>Imbangan kekuwatanku yaiku:</value>
+  </data>
+  <data name="LblMiLogin" xml:space="preserve">
+    <value>Login kula punika:</value>
+  </data>
+  <data name="LblUsuarioID" xml:space="preserve">
+    <value>IDku pangguna punika</value>
+  </data>
+  <data name="LblNoHayRegistrosAqui" xml:space="preserve">
+    <value>Durung ana sing nulis apa-apa!</value>
+  </data>
+  <data name="LblAlertaReportadaPorMi" xml:space="preserve">
+    <value>Tandha kacarita dening kula</value>
+  </data>
+  <data name="LblPara" xml:space="preserve">
+    <value>Penerima pesen:</value>
+  </data>
+  <data name="LblDe" xml:space="preserve">
+    <value>Pengirim pesen:</value>
+  </data>
+  <data name="ConfiguraciondeSOSpect" xml:space="preserve">
+    <value>Konfigurasi SOSpect</value>
+  </data>
+  <data name="LblExitoEnAceptacion" xml:space="preserve">
+    <value>Persetujuan kontrak sampeyan wis disimpen!</value>
+  </data>
+  <data name="LblFalloEnAceptacion" xml:space="preserve">
+    <value>Ndaftar gagal. Mangga coba maneh!</value>
+  </data>
+  <data name="LblDeclinacionAceptacion" xml:space="preserve">
+    <value>Tanpa nampa kontrak sampeyan ora bisa nerusake!</value>
+  </data>
+  <data name="LblParaIniciar" xml:space="preserve">
+    <value>AYO MULAI SOSpect!! Kanggo refresh tandha ing cedhak, tutul tombol refresh biru</value>
+  </data>
+  <data name="LblAlarmaNoGrave" xml:space="preserve">
+    <value>Gunakake tombol kuning kanggo menehi tandha babagan bebaya sing sithik lan menehi kabar marang komunitas utawa pelindung sampeyan. Sampeyan bisa milih jinis tandha lan menehi tandha minangka tindak pidana. Tombol iki mbukak tandha ing lokasi sing tepat, kasedhiya nalika sampeyan butuh pitulung. Sampeyan uga bisa milih titik ing peta kanggo nyelehake tandha tanpa kompromi lokasi sampeyan.</value>
+  </data>
+  <data name="LblCrimenCometido" xml:space="preserve">
+    <value>Tombol abang ngaktifake weker kategori: tindak pidana. SOSpect ora mbutuhake sampeyan nyakup kategori amarga pentinge wektu ing kasus kasebut. Weker diselehake kanthi otomatis ing lokasi sing tepat. Sampeyan uga bisa milih titik ing peta kanggo nyeleh tandha lan banjur ngganti kategori kanggo tindak pidana.</value>
+  </data>
+  <data name="LblDescripcionAlarmas" xml:space="preserve">
+    <value>Ing pilihan 'Njlèntrèhaké' ing garis ngisor, sampeyan bakal nemokake dhaptar weker sing diselehake dening sampeyan utawa wong liya. Yen sampeyan nggawe weker, sampeyan bisa nambah katrangan. Yen weker digawe dening wong liya, sampeyan bakal bisa nemtokake kabeneran lan nglengkapi katrangane. Ati-ati! Yen sampeyan menehi informasi palsu utawa rating sing salah, akun sampeyan bisa ditundha. Mangga deleng syarat lan kahanan kasebut kanthi teliti kanggo ngindhari iki.</value>
+  </data>
+  <data name="LblDescripcionMensajes" xml:space="preserve">
+    <value>Ing lonceng ing pojok tengen ndhuwur, sampeyan bisa maca pesen, sing kalebu kabar langganan lan weker paling anyar. Dhaptar iki beda karo pilihan katrangan, ing ngendi sampeyan bisa nemokake weker anyar kanthi langsung.</value>
+  </data>
+  <data name="LblDescripcionMenu" xml:space="preserve">
+    <value>Ing gear ing pojok kiwa ndhuwur sampeyan bakal nemokake opsi konfigurasi SOSpect. Sampeyan bisa tuku daya kanggo tuku langganan lan nglindhungi kulawarga utawa nggedhekake radius resepsi weker. ELING! Nalika sampeyan miwiti, kita menehi 80 daya supaya sampeyan bisa tuku loro lengganan saka wiwitan.</value>
+  </data>
+  <data name="LblRecomendaciones" xml:space="preserve">
+    <value>BEBAS KITA INVINCIBLE! Fungsi dhasar kanggo menehi tandha lan nampa tandha ing radius 100 meter gratis, lan nalika sampeyan miwiti, sampeyan bakal menehi 2 langganan. Ajak komunitas lan kulawarga sampeyan nggunakake layanan gratis iki kanggo nglawan kejahatan sing saya mundhak. Sampeyan bisa nylametake nyawa utawa disimpen kanthi nampa tandha ing wektu. Tandha kanggo wong sing ilang utawa kewan duwe jarak 10 kilometer, lan demonstrasi kekerasan duwe jarak 1 kilometer.</value>
+  </data>
+  <data name="LblPromocion" xml:space="preserve">
+    <value>Pungkasan, elinga yen sampeyan bakal entuk kekuwatan kanggo saben rating sing bener sing diwenehake ing SOSpect, nalika voting weker ditutup sawise 90 menit saka panggonane. Umume kita jujur ​​lan bebarengan kita bakal nglindhungi saben liyane lan kulawarga. Sugeng rawuh ing SOSPECT!</value>
+  </data>
+  <data name="LblDescripcionMapa" xml:space="preserve">
+    <value>Sawayah-wayah, sampeyan bisa milih pilihan "MAP" ing sisih kiwa garis ngisor, yaiku titik wiwitan SOSpect. Saka ing kono, sampeyan bisa ndeleng weker sing cedhak. Lokasi sampeyan bakal katon ing tengah peta, lan bunder kasebut nuduhake radius sing bisa mengaruhi sampeyan. Kanthi gawan, radius iki 100 meter, nanging sampeyan bisa ngowahi ing menu konfigurasi.</value>
+  </data>
+  <data name="LblRecomendacionImportante" xml:space="preserve">
+    <value>Penting yen sampeyan mbukak SOSpect kanthi periodik, sadurunge ninggalake omah utawa tekan ngendi wae, kanggo nganyari lokasi sampeyan. Kanthi cara iki, kita bisa ngandhani yen ana risiko ing wilayah sampeyan. Elinga yen nalika app ditutup, kita ora bisa njupuk lokasi sampeyan amarga watesan sing ditindakake dening sistem operasi piranti. Priksa syarat lan kahanan sing ana gandhengane karo lokasi sampeyan.</value>
+  </data>
+  <data name="LblUsuarioBloqueado" xml:space="preserve">
+    <value>Pangguna ditundha amarga tandha negatif</value>
+  </data>
+  <data name="LblMarcasNegativas" xml:space="preserve">
+    <value>Jumlah tandha negatifku yaiku</value>
+  </data>
+  <data name="LblCuentaSuspendida" xml:space="preserve">
+    <value>Akun ditundha kanggo sementara amarga ana tandha negatif saka pangguna liyane</value>
+  </data>
+  <data name="LblTitleCuentaSuspendida" xml:space="preserve">
+    <value>Akun ditundha kanggo sementara</value>
+  </data>
+  <data name="LblFechaFinSuspension" xml:space="preserve">
+    <value>Tanggal pungkasan penundaan yaiku</value>
+  </data>
+  <data name="LblTocaAqui" xml:space="preserve">
+    <value>tutul kene kanggo pindhah</value>
+  </data>
+  <data name="LblNoTienesConexion" xml:space="preserve">
+    <value>Ora ana sambungan internet</value>
+  </data>
+  <data name="LblExplicacionSinConexion" xml:space="preserve">
+    <value>Pranyatan akun sampeyan dibutuhake kanggo ngetik SOSpect. Tanpa internet kita ora bisa ngerti yen iku aktif.</value>
+  </data>
+  <data name="LblSinConexionDescripcion" xml:space="preserve">
+    <value>Internet aktif dibutuhake kanggo njupuk status akun ing SOSpect.</value>
+  </data>
+  <data name="LblSinConexionQueHacer" xml:space="preserve">
+    <value>Mangga ngaktifake internet lan miwiti maneh SOSpect</value>
+  </data>
+  <data name="SefinalizalasubscripcionporsolicituddelusuarioPROTEGIDOatravésdelaAPIdesdelaAPP" xml:space="preserve">
+    <value>Langganan diakhiri kanthi panyuwunan pangguna sing dilindungi liwat API saka APP</value>
+  </data>
+  <data name="Nopuederenovarsedebidoaquefuecancelada,requieresubscripciónnueva" xml:space="preserve">
+    <value>Ora bisa gawe anyar amarga pembatalan, mbutuhake langganan anyar</value>
+  </data>
+  <data name="Alarmasgeneradaspormicirculosocial" xml:space="preserve">
+    <value>Weker digawe dening bunder sosial sandi</value>
+  </data>
+  <data name="Incrementomidiametrodevigilancia" xml:space="preserve">
+    <value>Aku nambah diameteripun ndjogo sandi</value>
+  </data>
+  <data name="Zonadevigilanciaadicional" xml:space="preserve">
+    <value>Zona pengawasan tambahan</value>
+  </data>
+  <data name="Renovable" xml:space="preserve">
+    <value>dianyari</value>
+  </data>
+  <data name="SefinalizalasubscripcionporsolicituddelusuarioPROTECTORatravésdelaAPIdesdelaAPP" xml:space="preserve">
+    <value>Langganan diakhiri kanthi panyuwunan pangguna PROTECTOR liwat API saka APP</value>
+  </data>
+  <data name="LblEsRenovable" xml:space="preserve">
+    <value>iku bisa dianyari?</value>
+  </data>
+  <data name="LblObsSubs" xml:space="preserve">
+    <value>Langganan Observasi:</value>
+  </data>
+  <data name="NingunaObservacion" xml:space="preserve">
+    <value>ora pengamatan</value>
+  </data>
+  <data name="Subscripcionvigente" xml:space="preserve">
+    <value>langganan saiki</value>
+  </data>
+  <data name="Actualmenteactivoenotrasuscripcion" xml:space="preserve">
+    <value>Saiki aktif ing langganan liyane</value>
+  </data>
+  <data name="LblRadioActual" xml:space="preserve">
+    <value>Radiusku saiki kanggo nampa weker yaiku:</value>
+  </data>
+  <data name="LblPoderesRequeridosZV" xml:space="preserve">
+    <value>Daya sing dibutuhake kanggo ekstensi sing dipilih</value>
+  </data>
+  <data name="OptTerminosCondiciones" xml:space="preserve">
+    <value>Syarat lan Ketentuan SOSpect</value>
+  </data>
+  <data name="DebesAbrirLaApp" xml:space="preserve">
+    <value>SOSpect ora bisa ngerti owah-owahan lokasi pangguna nalika ditutup, iki kedadeyan amarga kabijakan konservasi baterei sistem operasi seluler, sing penting pangguna mbukak aplikasi kanthi kerep kanggo mriksa weker ing wilayah sing wis pindhah lan nampa weker cedhak ing wektu.</value>
+  </data>
+  <data name="InvitaMasPersonas" xml:space="preserve">
+    <value>Kanggo nambah safety pangguna, iku penting kanggo wong-wong ing saubengé, kulawarga lan tanggi, download free aplikasi. Yen ora ana pangguna sing cedhak, pangguna bisa uga ora diwenehi tandha ing wektu utawa tandha-tandha kasebut ora bisa dirungokake, tetep status risiko kaya sadurunge ngundhuh app. Penting kanggo ngajak luwih akeh wong kanggo mbantu saben liyane!</value>
+  </data>
+  <data name="Insertiondone" xml:space="preserve">
+    <value>Selipan rampung.</value>
+  </data>
+  <data name="AnerroroccurredwiththealarmqualificationmodelCode3" xml:space="preserve">
+    <value>Kesalahan kedadeyan nalika weker cocog karo kode 3</value>
+  </data>
+  <data name="AnerroroccurredwhilequalifyingthealarmCode2" xml:space="preserve">
+    <value>Kesalahan kedadeyan nalika menehi weker kanthi kode 2</value>
+  </data>
+  <data name="AnerroroccurredwhilequalifyingthealarmCode1" xml:space="preserve">
+    <value>Kesalahan kedadeyan nalika weker cocog karo kode 1</value>
+  </data>
+  <data name="Userregistrationsuccessful" xml:space="preserve">
+    <value>Panganggo sampeyan wis kadhaptar!</value>
+  </data>
+  <data name="Anerroroccurredwiththepeoplemodelforuserregistrationcode3" xml:space="preserve">
+    <value>Ana kesalahan nalika kode 3 ndhaptar pangguna sampeyan</value>
+  </data>
+  <data name="Anerroroccurredwhileregisteringtheusercode1" xml:space="preserve">
+    <value>Ana kesalahan nalika kode 1 ndhaptar pangguna sampeyan</value>
+  </data>
+  <data name="Anerroroccurredwhileregisteringtheusercode2" xml:space="preserve">
+    <value>Ana kesalahan nalika kode 2 ndhaptar pangguna sampeyan</value>
+  </data>
+  <data name="Nofueposiblerealizarenviarlasolicituddepermisoalprotegidoporqueelmodelonoesvalido" xml:space="preserve">
+    <value>Ora bisa ngirim panjalukan ijin menyang protégé, model kasebut ora sah</value>
+  </data>
+  <data name="OcurriounerrorenelprocesodesolicitarpermisoalprotegidoCodigo1" xml:space="preserve">
+    <value>Kesalahan karo kode 1 dumadi nalika proses njaluk ijin saka sing dilindhungi</value>
+  </data>
+  <data name="Permisosolicitadoconexito" xml:space="preserve">
+    <value>Idin dijaluk kasil</value>
+  </data>
+  <data name="AlertaEnUbicacion" xml:space="preserve">
+    <value>Apa sampeyan pengin nggawe tandha SOSpect ing lokasi iki?</value>
+  </data>
+  <data name="CrearEnUbicacionActual" xml:space="preserve">
+    <value>Apa sampeyan pengin nggawe tandha SOSpect ing lokasi sampeyan saiki?</value>
+  </data>
+  <data name="SeguroCerrarSesion" xml:space="preserve">
+    <value>Apa sampeyan yakin arep metu?</value>
+  </data>
+  <data name="Tu" xml:space="preserve">
+    <value>Sampeyan</value>
+  </data>
+  <data name="Anonimo" xml:space="preserve">
+    <value>Anonim</value>
+  </data>
+  <data name="AlarmaCerrada" xml:space="preserve">
+    <value>weker ditutup</value>
+  </data>
+  <data name="LblSaldoPoderesInsuficiente" xml:space="preserve">
+    <value>Imbangan kekuwatan sampeyan ora cukup</value>
+  </data>
+  <data name="LblComprarPoderes" xml:space="preserve">
+    <value>tuku daya</value>
+  </data>
+  <data name="LblSeguroRenovar" xml:space="preserve">
+    <value>Apa sampeyan yakin bakal nganyarake langganan iki?</value>
+  </data>
+  <data name="OptReportes" xml:space="preserve">
+    <value>laporan</value>
+  </data>
+  <data name="LblReportesTitulo" xml:space="preserve">
+    <value>Laporan SOSpect</value>
+  </data>
+  <data name="LblReportesDescripcion" xml:space="preserve">
+    <value>Laporan menehi sampeyan kesempatan kanggo mangerteni carane sampeyan wis nulungi pangguna liyane kanthi nyegah wong-wong mau saka bebaya. Kajaba iku, ngidini sampeyan ngenali wilayah sing mbebayani ing peta kutha sampeyan lan mirsani evolusi kejahatan liwat wektu. Uga, liwat analisis pola, sampeyan bisa nggawe bebaya awal sadurunge kedadeyan negatif. Wigati dimangerteni manawa laporan dhasar gratis, dene laporan liyane bisa uga duwe biaya amarga konsumsi komputasi sing dibutuhake kanggo generasi kasebut.</value>
+  </data>
+  <data name="OptReporteDeCalorEnZona" xml:space="preserve">
+    <value>Laporan nganggo peta panas</value>
+  </data>
+  <data name="OptReporteEvolucionEnElTiempo" xml:space="preserve">
+    <value>Laporan evolusi tandha kanthi wektu</value>
+  </data>
+  <data name="OptReportesPredictivos" xml:space="preserve">
+    <value>laporan prediktif</value>
+  </data>
+  <data name="OptReporteAnaliticoDeDescripcionesAlarmas" xml:space="preserve">
+    <value>Laporan analitis saka obrolan weker</value>
+  </data>
+  <data name="LblReporteCalorSospect" xml:space="preserve">
+    <value>Peta panas SOSpect</value>
+  </data>
+  <data name="LblReporteEnConstruccion" xml:space="preserve">
+    <value>enggal!! Fungsi iki lagi dibangun!</value>
+  </data>
+  <data name="LblDescripcionMapaDeCalor" xml:space="preserve">
+    <value>Ing laporan iki, sampeyan bakal duwe akses menyang peta panas wilayah sampeyan, ing ngendi sampeyan bisa milih sawetara wulan wiwit SOSpect miwiti operasi. Fungsi iki bakal ngidini sampeyan mirsani lan ngerti evolusi saben area peta sing sampeyan minati.</value>
+  </data>
+  <data name="LblCostoReporte" xml:space="preserve">
+    <value>Elinga yen panggunaan fungsi iki mbutuhake biaya komputasi lan mbutuhake kekuwatan, sanajan ora bakal dadi rega sing dhuwur. Nanging, sampeyan bakal bisa entuk tanpa masalah nggunakake kekuwatan sing diwenehake nalika sampeyan nggunakake aplikasi kasebut.</value>
+  </data>
+  <data name="LblReporteEvolucionAlarmas" xml:space="preserve">
+    <value>Évolusi weker diselehake ing SOSpect</value>
+  </data>
+  <data name="LblDescripcionEvolucionAlarmas" xml:space="preserve">
+    <value>Ing laporan iki, sampeyan bakal bisa ndeleng tren saben jinis weker saka wektu ing wilayah sampeyan. Sampeyan bakal bisa mirsani lan nganalisa tren bebaya, uga ngenali kamungkinan sudo ing angkara.</value>
+  </data>
+  <data name="LblReportePredictivo" xml:space="preserve">
+    <value>Laporan prediktif SOSpect</value>
+  </data>
+  <data name="LblDescripcionReportesPredictivos" xml:space="preserve">
+    <value>Minangka komunitas ing SOSpect ngasilake data sing cukup, prediksi acara adhedhasar kemungkinan lan alat analitis bisa digawe. Laporan kasebut bakal menehi sampeyan ngerti yen gelombang tandha utawa mundhak kegiatan kriminal wis cedhak, menehi sampeyan kesempatan kanggo njupuk pancegahan sing dibutuhake supaya ora ana risiko kanggo sampeyan, kulawarga lan komunitas sampeyan.</value>
+  </data>
+  <data name="LblReporteAnalisisDeTextos" xml:space="preserve">
+    <value>Laporan analisis obrolan weker SOSpect</value>
+  </data>
+  <data name="LblDescripcionAnalisisTextos" xml:space="preserve">
+    <value>Thanks kanggo kasunyatan manawa pangguna nggambarake weker lan nganyari evolusi liwat obrolan SOSpect internal, laporan iki bakal ngidini nggambarake tipologi sing paling mengaruhi komunitas. Iki menehi kesempatan kanggo tumindak kanthi tujuan ningkatake persepsi keamanan ing wilayah sampeyan.</value>
+  </data>
+  <data name="LblRangoReporte" xml:space="preserve">
+    <value>Laporan iki nyakup 30 dina pungkasan</value>
+  </data>
+  <data name="AcercadeSOSpect" xml:space="preserve">
+    <value>Babagan SOSpect</value>
+  </data>
+  <data name="Porcentajedealarmasciertasfrenteafalsasenunradiodeunkilometroymedio" xml:space="preserve">
+    <value>Persentase weker bener vs palsu ing radius mil</value>
+  </data>
+  <data name="Promediodetiempoenminutosentrelanzamientodealarmaenmizonaylaprimeracalificacionodescripcion" xml:space="preserve">
+    <value>Rata-rata wektu ing sawetara menit antarane ngluncurake weker ing wilayahku lan rating utawa katrangan pisanan</value>
+  </data>
+  <data name="Cantidadrealdepersonasenunradiodeunkilometroymedio" xml:space="preserve">
+    <value>Jumlah nyata wong ing radius mil</value>
+  </data>
+  <data name="Cantidadrealdepersonasenmiradioactual" xml:space="preserve">
+    <value>Jumlah nyata wong ing radiusku saiki</value>
+  </data>
+  <data name="Miradioactualderecepcionyenviodealarmasenmetros" xml:space="preserve">
+    <value>Radius saiki kanggo nampa lan ngirim weker ing meter</value>
+  </data>
+  <data name="Cantidadrealdepersonasquerecibieronmisalarmas" xml:space="preserve">
+    <value>Jumlah nyata wong sing nampa tandha sandi</value>
+  </data>
+  <data name="Cantidaddenotificacionesdealarmaenviadasdemiparte" xml:space="preserve">
+    <value>Jumlah kabar weker sing dikirim saka aku</value>
+  </data>
+  <data name="Personasquereportaronmiayudacomonegativaofalsa" xml:space="preserve">
+    <value>Wong sing nglaporake bantuanku minangka negatif utawa palsu</value>
+  </data>
+  <data name="Personasqueagradecieronmiayuda" xml:space="preserve">
+    <value>Wong sing ngormati bantuanku</value>
+  </data>
+  <data name="Poderesganadosporregalos" xml:space="preserve">
+    <value>Powers gained saka peparingé</value>
+  </data>
+  <data name="LblParticipacionTpAlarma" xml:space="preserve">
+    <value>Partisipasi miturut jinis weker</value>
+  </data>
+  <data name="LblMetricBasics" xml:space="preserve">
+    <value>metrik dhasar</value>
+  </data>
+  <data name="LblEfectiAlarmas" xml:space="preserve">
+    <value>efektifitas weker</value>
+  </data>
+  <data name="LblAlarmasEfectivas" xml:space="preserve">
+    <value>Weker efektif persentasi</value>
+  </data>
+  <data name="LblAlarmasFalsas" xml:space="preserve">
+    <value>weker palsu</value>
+  </data>
+  <data name="LblAlarmasVerdaderas" xml:space="preserve">
+    <value>weker bener</value>
+  </data>
+  <data name="LblTotalAlarmas" xml:space="preserve">
+    <value>weker total</value>
+  </data>
+  <data name="LblMarcarLeidos" xml:space="preserve">
+    <value>Tandhani kabeh minangka diwaca</value>
+  </data>
+  <data name="LblSeMarcaronComoLeidos" xml:space="preserve">
+    <value>Kabeh pesen wis ditandhani wis diwaca.</value>
+  </data>
+  <data name="LabelNuevaVersion" xml:space="preserve">
+    <value>Ana versi anyar saka SOSpect lan dibutuhake kanggo nerusake</value>
+  </data>
+  <data name="OptReporteBasico" xml:space="preserve">
+    <value>Laporan dhasar - GRATIS!</value>
+  </data>
+  <data name="LblReporteBasicoSospect" xml:space="preserve">
+    <value>Laporan SOSpect dhasar</value>
+  </data>
+  <data name="LblReporteBasicoDescripcion" xml:space="preserve">
+    <value>Laporan dhasar SOSpect nyedhiyakake informasi penting babagan pengaruh laporan weker sampeyan ing komunitas sampeyan. Kajaba iku, padha nuduhake jumlah daya-up sing dipikolehi kanthi mbantu komunitas sampeyan kanthi menehi rating weker kanthi akurat lan kejujuran kanggo menehi rating. Nggunakake laporan kasebut, sampeyan uga bisa netepake prilaku sakabehe wilayah sampeyan sajrone sasi kepungkur, kalebu jumlah pangguna sing melu proses kasebut lan jumlah pangguna sing nampa tandha negatif amarga partisipasi sing salah.</value>
+  </data>
+  <data name="LblReporteBasicoDescripcionCorta" xml:space="preserve">
+    <value>Laporan dhasar SOSpect nyedhiyakake informasi penting babagan... Waca liyane...</value>
+  </data>
+  <data name="LblDescripcionRepTipoAlarma" xml:space="preserve">
+    <value>Laporan iki menehi informasi babagan weker sing paling kerep ing radius mil saka lokasi sampeyan saiki.</value>
+  </data>
+  <data name="LblDescripcionRepEfectAlarmas" xml:space="preserve">
+    <value>Laporan iki menehi informasi babagan rasio efektifitas antarane weker sing bener lan salah ing radius mil saka lokasi sampeyan saiki.</value>
+  </data>
+  <data name="LblDescripcionRepMetricasBasicas" xml:space="preserve">
+    <value>Laporan iki menehi data babagan jumlah pangguna ing radius mil saka lokasi sampeyan saiki, uga jumlah pangguna ing radius weker app saiki. Kajaba iku, kalebu sawetara informasi tambahan kanggo kapentingan sampeyan.</value>
+  </data>
+  <data name="OptMetricasBasicas" xml:space="preserve">
+    <value>Metrik weker dhasar dhasar</value>
+  </data>
+  <data name="OptEfectividadAlarmas" xml:space="preserve">
+    <value>Efektivitas weker sing cedhak</value>
+  </data>
+  <data name="OptVolumenAlarmas" xml:space="preserve">
+    <value>Volume miturut jinis weker sing cedhak</value>
+  </data>
+  <data name="LblCredibilidadAlarmaActual" xml:space="preserve">
+    <value>Kredibilitas weker:</value>
+  </data>
+  <data name="SesionApple" xml:space="preserve">
+    <value>LOGIN WITH APPLE</value>
+  </data>
+  <data name="LblDescManualUsuario" xml:space="preserve">
+    <value>Kita nampilake SOSpect, aplikasi gratis sing dirancang kanggo menehi perlindungan kanggo sampeyan lan wong sing dikasihi. Kita wis nggawe manual online sing ringkes lan rinci sing bakal mbantu sampeyan nggunakake kanthi bener. Kanthi manual iki, sampeyan bakal bisa ngoptimalake SOSpect lan njupuk kauntungan saka kabeh fitur keamanan.</value>
+  </data>
+  <data name="OptManualUsuarioSospect" xml:space="preserve">
+    <value>Manual pangguna SOSpect</value>
+  </data>
+  <data name="LblCredibilidadActual" xml:space="preserve">
+    <value>Kredibilitas wekerku yaiku:</value>
+  </data>
+  <data name="LblAccedeAlManual" xml:space="preserve">
+    <value>Sampeyan bisa ngakses manual ing:</value>
+  </data>
+  <data name="LblRefrescarLista" xml:space="preserve">
+    <value>Refresh dhaptar weker</value>
+  </data>
+  <data name="LblErrorCorreoDispositivo" xml:space="preserve">
+    <value>Ora bisa ngirim email ing piranti iki</value>
+  </data>
+  <data name="LblErrorCorreo" xml:space="preserve">
+    <value>Kesalahan ngirim email:</value>
+  </data>
+  <data name="LblSeleccioneTipoAlarma" xml:space="preserve">
+    <value>Mangga pilih jinis weker</value>
+  </data>
+  <data name="LblCompraFallida" xml:space="preserve">
+    <value>Tuku ora digawe. Mangga priksa akses internet lan coba maneh</value>
+  </data>
+  <data name="LblSeleccionePuntoMapa" xml:space="preserve">
+    <value>Sampeyan kudu milih area ndjogo ing peta</value>
+  </data>
+  <data name="Cantidaddealarmascolocadasenlaszonasdevigilanciasuscritas" xml:space="preserve">
+    <value>Jumlah weker sing diselehake ing zona ndjogo langganan</value>
+  </data>
+  <data name="Cantidaddealarmascolocadaspormisprotegidos" xml:space="preserve">
+    <value>Jumlah weker sing diselehake dening anak didikku</value>
+  </data>
+  <data name="Credibilidadactualdelasalarmasqueenvioamicomunidad" xml:space="preserve">
+    <value>Kapercayan saiki weker sing dakkirim menyang komunitasku</value>
+  </data>
+  <data name="LblCompraExitosa" xml:space="preserve">
+    <value>Sugeng rawuh! Sampeyan tuku daya kanggo tuku langganan. Sampeyan bakal nemokake pesen panjelasan ing lonceng!</value>
+  </data>
+  <data name="LblDebesHabilitarNotif" xml:space="preserve">
+    <value>Sampeyan kudu ngaktifake ngirim kabar supaya SOSpect bisa digunakake</value>
+  </data>
+  <data name="LblHabilitarNotifSettings" xml:space="preserve">
+    <value>Aplikasi iki bisa ndhukung kabar, nanging sampeyan kudu ngaktifake iki ing setelan sampeyan.</value>
+  </data>
+  <data name="LblErrorHabilitandoUsoNotif" xml:space="preserve">
+    <value>Ana kesalahan sing nyegah panggunaan kabar push</value>
+  </data>
+  <data name="LblMostrarDireccionEscape" xml:space="preserve">
+    <value>Tandhani rute uwal buronan</value>
+  </data>
+  <data name="LblReportesProximos" xml:space="preserve">
+    <value>Laporan analitis lan prediktif kanthi ilmu data!</value>
+  </data>
+  <data name="LblProximamenteSOSpect" xml:space="preserve">
+    <value>Rawuh ing SOSpect!</value>
+  </data>
+  <data name="LblHolaBienvenido" xml:space="preserve">
+    <value>Hello! Sugeng rawuh ing SOSpect.
+
+SOSpect minangka alat gratis sing dirancang kanggo nglindhungi sampeyan lan wong sing dikasihi kanthi menehi tandha pas wektune babagan bebaya sing cedhak! Sampeyan bisa uga ora entuk akeh weker ing wiwitan, amarga durung akeh wong ing cedhak sampeyan sing wis nginstal SOSpect. Dijaluk sampeyan menehi kasempatan lan aja instal app kasebut. SOSpect bisa nylametake urip sampeyan ing sawetara titik, uga wong liya ing kulawarga utawa komunitas sampeyan.
+
+Ing bagean "Laporan Dasar" saka menu "Laporan" sing ditemokake ing konfigurasi, sampeyan bakal bisa ndeleng ing bagean "Metrik Dasar" jumlah pangguna sing cedhak ing area jangkoan sampeyan, ing ngendi sampeyan bakal nampa weker. Tulung kita nambah nomer kasebut, gratis lan ngidini sampeyan urip kanthi aman!
+
+Sampeyan ngajak sampeyan maca manual pambuka singkat iki kanthi ati-ati, sing bakal menehi ide babagan cara kerja SOSpect. Elinga yen mung bakal ditampilake sapisan sawise instalasi app.
+
+Matur nuwun kanggo nggunakake SOSpect lan kontribusi kanggo safety everyone!
+
+Tutul layar kanggo nerusake...</value>
+  </data>
+</root>

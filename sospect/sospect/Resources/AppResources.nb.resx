@@ -1,0 +1,1090 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Bienvenido" xml:space="preserve">
+    <value>Velkommen til SOSpect</value>
+  </data>
+  <data name="InicieSesion" xml:space="preserve">
+    <value>Logg inn for å fortsette</value>
+  </data>
+  <data name="InicieSesionCon" xml:space="preserve">
+    <value>eller logg inn med</value>
+  </data>
+  <data name="SesionFacebook" xml:space="preserve">
+    <value>LOGG INN MED FACEBOOK</value>
+  </data>
+  <data name="SesionGoogle" xml:space="preserve">
+    <value>LOGG PÅ MED GOOGLE</value>
+  </data>
+  <data name="LabelAlerta" xml:space="preserve">
+    <value>Varsel</value>
+  </data>
+  <data name="LabelCrimen" xml:space="preserve">
+    <value>Forbrytelse</value>
+  </data>
+  <data name="LabelOK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="LabelCancelar" xml:space="preserve">
+    <value>Annullere</value>
+  </data>
+  <data name="ReportarCrimen" xml:space="preserve">
+    <value>Anmeld kriminalitet</value>
+  </data>
+  <data name="LabelMapa" xml:space="preserve">
+    <value>Kart</value>
+  </data>
+  <data name="LabelDescribir" xml:space="preserve">
+    <value>Beskrive</value>
+  </data>
+  <data name="DescripcionAlarma" xml:space="preserve">
+    <value>Beskrivelse av alarmen</value>
+  </data>
+  <data name="DescripcionSospechoso" xml:space="preserve">
+    <value>Beskrivelse av den mistenkte</value>
+  </data>
+  <data name="DescripcionVehiculo" xml:space="preserve">
+    <value>Beskrivelse av kjøretøyet</value>
+  </data>
+  <data name="DescripcionArma" xml:space="preserve">
+    <value>Beskrivelse av våpenet</value>
+  </data>
+  <data name="PuntuacionDescripcion" xml:space="preserve">
+    <value>Beskrivelse av scoring</value>
+  </data>
+  <data name="LabelEditar" xml:space="preserve">
+    <value>Redigere</value>
+  </data>
+  <data name="DescripcionesParaAlarma" xml:space="preserve">
+    <value>Beskrivelser laget for denne alarmen</value>
+  </data>
+  <data name="EspacioPublicidad" xml:space="preserve">
+    <value>Plass til reklame</value>
+  </data>
+  <data name="AlarmasRecientes" xml:space="preserve">
+    <value>Nylige alarmer for å legge til beskrivelse</value>
+  </data>
+  <data name="ConfirmarAlarma" xml:space="preserve">
+    <value>Bekreft alarm</value>
+  </data>
+  <data name="LabelInformacion" xml:space="preserve">
+    <value>Informasjon</value>
+  </data>
+  <data name="LabelError" xml:space="preserve">
+    <value>Feil</value>
+  </data>
+  <data name="LabelCancelado" xml:space="preserve">
+    <value>Avbrutt</value>
+  </data>
+  <data name="LabelLoginCancelado" xml:space="preserve">
+    <value>Innlogging kansellert</value>
+  </data>
+  <data name="LabelFallo" xml:space="preserve">
+    <value>Fiasko</value>
+  </data>
+  <data name="RecibeAlarma" xml:space="preserve">
+    <value>Du fikk en alarm i nærheten av der du er, er den ekte?</value>
+  </data>
+  <data name="LabelConfirmo" xml:space="preserve">
+    <value>Bekrefte</value>
+  </data>
+  <data name="LabelNoSeguro" xml:space="preserve">
+    <value>Jeg er ikke sikker</value>
+  </data>
+  <data name="LabelEsFalsa" xml:space="preserve">
+    <value>Det er usant</value>
+  </data>
+  <data name="LabelConfirmar" xml:space="preserve">
+    <value>Bekrefte</value>
+  </data>
+  <data name="AdvertenciaCalificacion" xml:space="preserve">
+    <value>Denne vurderingen kan ikke endres senere. Det kan påvirke din fremtidige troverdighet hvis konsensus av rangeringer er mot din stemme. Er du sikker?</value>
+  </data>
+  <data name="LabelSi" xml:space="preserve">
+    <value>Ja</value>
+  </data>
+  <data name="LabelNo" xml:space="preserve">
+    <value>Nei</value>
+  </data>
+  <data name="AlarmaEnviada" xml:space="preserve">
+    <value>Alarm sendt!</value>
+  </data>
+  <data name="MsgTrasAlarmaEnviada" xml:space="preserve">
+    <value>Hvis du er trygg, vennligst beskriv alarmen, hvis ikke, skjul telefonen og kom deg ut av fare.</value>
+  </data>
+  <data name="notificacionurgente" xml:space="preserve">
+    <value>Et hastevarsel vil bli sendt til de nærmeste telefonene på:</value>
+  </data>
+  <data name="LabelAlarma" xml:space="preserve">
+    <value>Alarm</value>
+  </data>
+  <data name="LabelMetros" xml:space="preserve">
+    <value>meter</value>
+  </data>
+  <data name="LabelTuUbicacion" xml:space="preserve">
+    <value>Posisjonen din</value>
+  </data>
+  <data name="LabelUsuario" xml:space="preserve">
+    <value>Bruker</value>
+  </data>
+  <data name="LabelTipoAlarma" xml:space="preserve">
+    <value>Type alarm</value>
+  </data>
+  <data name="DireccionEscape" xml:space="preserve">
+    <value>Oppgi den mistenktes rømningsadresse.</value>
+  </data>
+  <data name="DescripcionAlerta" xml:space="preserve">
+    <value>Beskrivelse av varselet</value>
+  </data>
+  <data name="DescripcionImplicado" xml:space="preserve">
+    <value>Beskrivelse av personen som er involvert i varselet</value>
+  </data>
+  <data name="DescripcionVehiculoImp" xml:space="preserve">
+    <value>Involvert kjøretøy (hvis aktuelt)</value>
+  </data>
+  <data name="ArmaImplicada" xml:space="preserve">
+    <value>Våpen involvert (Hvis aktuelt)</value>
+  </data>
+  <data name="LabelRutaEscape" xml:space="preserve">
+    <value>Mistenkelig rømningsvei</value>
+  </data>
+  <data name="ObjetivoSospect" xml:space="preserve">
+    <value>SOSpect har som mål å la samfunnet varsle og motta varsler om farer på brukerens plassering, for å unngå risiko for dem og deres kjære. Plasseringen av brukere blir ikke delt eller sporet, noe som sikrer deres personvern. Brukere kan plassere farevarsler for å hjelpe andre med å unngå å bli offer for risikable situasjoner.</value>
+  </data>
+  <data name="UbicacionImportante" xml:space="preserve">
+    <value>Det er viktig å vite brukerens plassering, slik at du kan varsle dem hvis noen plasserer et farevarsel i nærheten av deres plassering. Brukerens plassering er imidlertid privat, og bare punktene på kartet der varsler er plassert, deles.</value>
+  </data>
+  <data name="GenteUnida" xml:space="preserve">
+    <value>Med SOSpect kan samfunnet komme sammen for å redusere kriminalitet og unngå å bli offer for risikable situasjoner, og varsle andre om å holde seg trygge også.</value>
+  </data>
+  <data name="contactenos" xml:space="preserve">
+    <value>Kontakt oss</value>
+  </data>
+  <data name="visitenos" xml:space="preserve">
+    <value>Besøk oss på</value>
+  </data>
+  <data name="ZonaVigilancia" xml:space="preserve">
+    <value>Abonnement på overvåkingssone</value>
+  </data>
+  <data name="SeleccioneUbicacionVigilar" xml:space="preserve">
+    <value>Velg stedet du vil se på</value>
+  </data>
+  <data name="SeleccionEnMapa" xml:space="preserve">
+    <value>Velg på kart</value>
+  </data>
+  <data name="ExplicaZonaVigilancia" xml:space="preserve">
+    <value>Alle alarmer som er plassert på det punktet du skal velge, vil bli varslet uansett hvem som plasserer dem. På den måten kan du være klar over farene som løper på det tidspunktet. Dette er ideelt for å være oppmerksom på farer på steder som barnas skoler eller universiteter eller områder der dine slektninger eller kjære jobber.</value>
+  </data>
+  <data name="CrearZonaV" xml:space="preserve">
+    <value>Opprett overvåkingssone med denne plasseringen</value>
+  </data>
+  <data name="LabelLatitud" xml:space="preserve">
+    <value>Breddegrad</value>
+  </data>
+  <data name="LabelLongitud" xml:space="preserve">
+    <value>Lengdegrad</value>
+  </data>
+  <data name="LabelIntroduccion" xml:space="preserve">
+    <value>Introduksjon</value>
+  </data>
+  <data name="AmpliacionRadio" xml:space="preserve">
+    <value>Utvidelse av alarmradius</value>
+  </data>
+  <data name="TuRadioActual" xml:space="preserve">
+    <value>Din nåværende radius er:</value>
+  </data>
+  <data name="CrearNuevoRadio" xml:space="preserve">
+    <value>Opprett abonnementet mitt på denne nye radioen</value>
+  </data>
+  <data name="ExplicacionVigencias" xml:space="preserve">
+    <value>Alle abonnementer har gyldighet, vennligst sjekk prisene på abonnementer i det første alternativet i hovedmenyen</value>
+  </data>
+  <data name="VasARequerir" xml:space="preserve">
+    <value>Du trenger</value>
+  </data>
+  <data name="xPoderesParaSubs" xml:space="preserve">
+    <value>Krefter til å legge denne radioen til din nåværende radio</value>
+  </data>
+  <data name="Exito" xml:space="preserve">
+    <value>Suksess</value>
+  </data>
+  <data name="SubscripcionCreada" xml:space="preserve">
+    <value>Abonnementet er opprettet.</value>
+  </data>
+  <data name="MensajeError" xml:space="preserve">
+    <value>Det oppstod en feil under tilkobling til serveren. Prøv på nytt.</value>
+  </data>
+  <data name="SeleccionaRuta" xml:space="preserve">
+    <value>Du må velge den mistenktes rømningsvei.</value>
+  </data>
+  <data name="AprobarSolicitudes" xml:space="preserve">
+    <value>Godkjenn forespørsler</value>
+  </data>
+  <data name="LabelAprobar" xml:space="preserve">
+    <value>Godkjenne</value>
+  </data>
+  <data name="LabelRechazar" xml:space="preserve">
+    <value>Vrake</value>
+  </data>
+  <data name="CompletarSubscripcion" xml:space="preserve">
+    <value>Komplett beskyttet abonnement</value>
+  </data>
+  <data name="CompletarSubsc" xml:space="preserve">
+    <value>Komplett abonnement</value>
+  </data>
+  <data name="LblMensajes" xml:space="preserve">
+    <value>Meldinger</value>
+  </data>
+  <data name="LblFechaMensaje" xml:space="preserve">
+    <value>Dato for melding</value>
+  </data>
+  <data name="LblMenu" xml:space="preserve">
+    <value>KONFIGURASJON</value>
+  </data>
+  <data name="OptCompraPoderes" xml:space="preserve">
+    <value>Kjøp krefter for å låse opp funksjoner</value>
+  </data>
+  <data name="OptGestionarProtegidos" xml:space="preserve">
+    <value>Administrer beskytterne mine</value>
+  </data>
+  <data name="OptCrearZonas" xml:space="preserve">
+    <value>Opprette overvåkingssoner</value>
+  </data>
+  <data name="OptAumentarRadio" xml:space="preserve">
+    <value>Øk min varslingsmottaksradius</value>
+  </data>
+  <data name="OptAcercaDe" xml:space="preserve">
+    <value>Om SOSpect-applikasjonen</value>
+  </data>
+  <data name="OptCerrarSesion" xml:space="preserve">
+    <value>Logg av</value>
+  </data>
+  <data name="LblProtectores" xml:space="preserve">
+    <value>Mine beskyttere</value>
+  </data>
+  <data name="LblSuspender" xml:space="preserve">
+    <value>Midlertidig avbrytelse</value>
+  </data>
+  <data name="LblEliminarProtegido" xml:space="preserve">
+    <value>Fjern beskyttet</value>
+  </data>
+  <data name="LblSubscrProtegido" xml:space="preserve">
+    <value>Beskyttet abonnement</value>
+  </data>
+  <data name="LblIDUsuarioAProteger" xml:space="preserve">
+    <value>Skriv inn bruker-ID-en du vil beskytte. (Denne verdien er plassert øverst på SOSpect-konfigurasjonsmenyen til brukeren du vil koble)</value>
+  </data>
+  <data name="LblRelacionProtegido" xml:space="preserve">
+    <value>Mitt forhold til denne protesjéen er:</value>
+  </data>
+  <data name="LblSolicitarPermiso" xml:space="preserve">
+    <value>Be om tillatelse fra bruker</value>
+  </data>
+  <data name="LblCompleteCampos" xml:space="preserve">
+    <value>Fyll ut alle feltene.</value>
+  </data>
+  <data name="LblProcesarSolicitud" xml:space="preserve">
+    <value>Det oppstod en feil under behandling av forespørselen. Prøv på nytt.</value>
+  </data>
+  <data name="LblProtegidos" xml:space="preserve">
+    <value>Mine protesjeer</value>
+  </data>
+  <data name="LblUsuarioProtegido" xml:space="preserve">
+    <value>Beskyttet bruker-ID</value>
+  </data>
+  <data name="LblFechaActivacion" xml:space="preserve">
+    <value>Dato for aktivering</value>
+  </data>
+  <data name="LblFechaFinalizacion" xml:space="preserve">
+    <value>Sluttdato</value>
+  </data>
+  <data name="LblAccion" xml:space="preserve">
+    <value>Handling</value>
+  </data>
+  <data name="LblCantidadPoderes" xml:space="preserve">
+    <value>Antall krefter</value>
+  </data>
+  <data name="LblPrecio" xml:space="preserve">
+    <value>Pris</value>
+  </data>
+  <data name="LblComprar" xml:space="preserve">
+    <value>Kjøpe</value>
+  </data>
+  <data name="LblValoresSubsc" xml:space="preserve">
+    <value>Verdier for abonnement</value>
+  </data>
+  <data name="LblTerminos" xml:space="preserve">
+    <value>Vilkår for bruk av SOSpect APP</value>
+  </data>
+  <data name="LblAcepto" xml:space="preserve">
+    <value>Jeg aksepterer kontrakten</value>
+  </data>
+  <data name="LblNoAcepto" xml:space="preserve">
+    <value>Jeg aksepterer ikke</value>
+  </data>
+  <data name="LblOpcionesProtegidos" xml:space="preserve">
+    <value>Beskyttet og beskyttet av SOSpect App</value>
+  </data>
+  <data name="LblExplicacionProtegidos" xml:space="preserve">
+    <value>Du kan motta varsler fra medlemmer av din sosiale sirkel selv om de er langt borte fra deg. Her kan du administrere denne funksjonen</value>
+  </data>
+  <data name="OptIniciarTramite" xml:space="preserve">
+    <value>Start prosessen med å legge til en beskyttet</value>
+  </data>
+  <data name="OptAprobarSolicitud" xml:space="preserve">
+    <value>Godkjenn en forespørsel fra en beskytter</value>
+  </data>
+  <data name="OptListarProtegidos" xml:space="preserve">
+    <value>Se listen over mine protesjeer</value>
+  </data>
+  <data name="OptListarProtectores" xml:space="preserve">
+    <value>Se listen over mine beskyttere</value>
+  </data>
+  <data name="OptVolver" xml:space="preserve">
+    <value>Retur</value>
+  </data>
+  <data name="LblPoderesSospect" xml:space="preserve">
+    <value>Kreftene til SOSpect-appen</value>
+  </data>
+  <data name="LblOpcionesPoderes" xml:space="preserve">
+    <value>Velkommen til strømstyringsalternativet, hva vil du gjøre?</value>
+  </data>
+  <data name="LblSubscripcionesCosto" xml:space="preserve">
+    <value>Jeg vil vite hvilke abonnementer jeg kan kjøpe og kostnadene deres</value>
+  </data>
+  <data name="LblQuieroComprar" xml:space="preserve">
+    <value>Jeg vil kjøpe superkrefter for å skaffe meg abonnement</value>
+  </data>
+  <data name="ExplicacionRadio" xml:space="preserve">
+    <value>Standard radius for alle brukere av applikasjonen er 100 meter rundt. Du kan utvide den radiusen ved hjelp av appens krefter. Velg deretter radiusen du vil ha for deg selv:</value>
+  </data>
+  <data name="LblAsunto" xml:space="preserve">
+    <value>Kort beskrivelse</value>
+  </data>
+  <data name="LblCompraPoderes" xml:space="preserve">
+    <value>Kjøp av krefter</value>
+  </data>
+  <data name="OptCompletarTramite" xml:space="preserve">
+    <value>Fullfør fremgangsmåten for å legge til en beskyttet</value>
+  </data>
+  <data name="LabelHecho" xml:space="preserve">
+    <value>Fullført</value>
+  </data>
+  <data name="LabelEscapoEnEstaDireccion" xml:space="preserve">
+    <value>Han rømte i denne retningen</value>
+  </data>
+  <data name="OptMisSubs" xml:space="preserve">
+    <value>Mine abonnementer</value>
+  </data>
+  <data name="LblMisSubscripciones" xml:space="preserve">
+    <value>Mine abonnementer</value>
+  </data>
+  <data name="LblidUsuario" xml:space="preserve">
+    <value>Bruker-ID:</value>
+  </data>
+  <data name="LblTipo" xml:space="preserve">
+    <value>Type abonnement:</value>
+  </data>
+  <data name="LblDescripcionPuntos" xml:space="preserve">
+    <value>Beskrivelse:</value>
+  </data>
+  <data name="LblFechaFinPuntos" xml:space="preserve">
+    <value>Sluttdato:</value>
+  </data>
+  <data name="LblPoderesPuntos" xml:space="preserve">
+    <value>Fornyelsesfullmakter:</value>
+  </data>
+  <data name="LblRenovar" xml:space="preserve">
+    <value>Fornye</value>
+  </data>
+  <data name="LblCancelarSubscripcion" xml:space="preserve">
+    <value>Avbryte abonnement</value>
+  </data>
+  <data name="LblSeguroDeCancelar" xml:space="preserve">
+    <value>Er du sikker på at du vil si opp abonnementet? Ingen retur av forbrukte krefter vil bli gjort.</value>
+  </data>
+  <data name="LblAceptar" xml:space="preserve">
+    <value>Godta</value>
+  </data>
+  <data name="Alarm_1" xml:space="preserve">
+    <value>Advarsel eller fare</value>
+  </data>
+  <data name="Alarm_2" xml:space="preserve">
+    <value>Forbrytelse eller forbrytelse begått</value>
+  </data>
+  <data name="Alarm_3" xml:space="preserve">
+    <value>Gateslagsmål</value>
+  </data>
+  <data name="Alarm_4" xml:space="preserve">
+    <value>Mistet kjæledyr</value>
+  </data>
+  <data name="Alarm_5" xml:space="preserve">
+    <value>Tapt person</value>
+  </data>
+  <data name="Alarm_6" xml:space="preserve">
+    <value>Opptøyer eller protester</value>
+  </data>
+  <data name="Alarm_7" xml:space="preserve">
+    <value>Be om visuelt akkompagnement ved utgang til gaten</value>
+  </data>
+  <data name="Alarm_8" xml:space="preserve">
+    <value>Vold i nære relasjoner</value>
+  </data>
+  <data name="Alarm_9" xml:space="preserve">
+    <value>Mistenker å flykte til ditt stedsområde</value>
+  </data>
+  <data name="LblCostoPoderes" xml:space="preserve">
+    <value>Pakke kostnad</value>
+  </data>
+  <data name="LblSuscripcionesDisponibles" xml:space="preserve">
+    <value>Abonnementer som er tilgjengelige for øyeblikket</value>
+  </data>
+  <data name="LblFamilia" xml:space="preserve">
+    <value>Familie</value>
+  </data>
+  <data name="LblAmigo" xml:space="preserve">
+    <value>Venn</value>
+  </data>
+  <data name="LblCompanero" xml:space="preserve">
+    <value>Ledsager</value>
+  </data>
+  <data name="LblOtroSinDefinir" xml:space="preserve">
+    <value>Annet udefinert</value>
+  </data>
+  <data name="LabelExito" xml:space="preserve">
+    <value>Suksess</value>
+  </data>
+  <data name="LblSolicitudAprobada" xml:space="preserve">
+    <value>Søknaden er godkjent.</value>
+  </data>
+  <data name="MensajeErrorAprobando" xml:space="preserve">
+    <value>Feil under godkjenning av forespørsel</value>
+  </data>
+  <data name="MensajeErrorRechazando" xml:space="preserve">
+    <value>Kunne ikke avvise forespørselen.</value>
+  </data>
+  <data name="LblSolicitudRechazada" xml:space="preserve">
+    <value>Søknaden ble avslått.</value>
+  </data>
+  <data name="LblUsuarioSolicitante" xml:space="preserve">
+    <value>Forespørsel om bruker</value>
+  </data>
+  <data name="LblFechaSolicitud" xml:space="preserve">
+    <value>Søknadsdato</value>
+  </data>
+  <data name="LblAccionRealizar" xml:space="preserve">
+    <value>Tiltak som må iverksettes</value>
+  </data>
+  <data name="LblSubscripcionCompletada" xml:space="preserve">
+    <value>Abonnementet er fullført</value>
+  </data>
+  <data name="LblSubscripcionFallida" xml:space="preserve">
+    <value>Abonnementet mislyktes</value>
+  </data>
+  <data name="LblUsuarioAprobador" xml:space="preserve">
+    <value>Godkjenner bruker</value>
+  </data>
+  <data name="LblFechaAprobacion" xml:space="preserve">
+    <value>Dato for godkjenning</value>
+  </data>
+  <data name="LblSubscrEliminada" xml:space="preserve">
+    <value>Avsluttet abonnement</value>
+  </data>
+  <data name="LblSubsEliminadaExitosamente" xml:space="preserve">
+    <value>Abonnementet ble fjernet</value>
+  </data>
+  <data name="LblEliminarProtector" xml:space="preserve">
+    <value>Fjern beskytteren</value>
+  </data>
+  <data name="LblRenovacionAplicada" xml:space="preserve">
+    <value>Vellykket renovering</value>
+  </data>
+  <data name="LblErrorRenovando" xml:space="preserve">
+    <value>Feil ved fornyelse, forsøk på nytt eller rapportering til støtte, kontakt tilgjengelig i "meny"&gt;"Om" -alternativet</value>
+  </data>
+  <data name="LblCancelacionAplicada" xml:space="preserve">
+    <value>Kanselleringen ble gjort vellykket</value>
+  </data>
+  <data name="LblErrorCancelando" xml:space="preserve">
+    <value>Feil ved kansellering, nytt forsøk eller rapportering til støtte, kontakt tilgjengelig i "meny"&gt;"Om" alternativet</value>
+  </data>
+  <data name="LblZonaCreada" xml:space="preserve">
+    <value>Abonnementet på den forespurte overvåkingssonen har blitt vellykket utført</value>
+  </data>
+  <data name="LblErrorZonaVigil" xml:space="preserve">
+    <value>Feil ved å abonnere på den nye forespurte sonen, prøv på nytt eller rapporter til støtte, kontakt tilgjengelig i alternativet "meny"&gt;"Om"</value>
+  </data>
+  <data name="LblSeleccionaNuevoRadio" xml:space="preserve">
+    <value>Velg den nye radiusen i meter</value>
+  </data>
+  <data name="LblUsuarioProtector" xml:space="preserve">
+    <value>Beskyttende bruker</value>
+  </data>
+  <data name="LblSeguroEliminarProtegido" xml:space="preserve">
+    <value>Er du sikker på å fjerne protesjéen din? Kreftene som brukes i dette abonnementet vil ikke bli returnert.</value>
+  </data>
+  <data name="LblSuspenderProtectores" xml:space="preserve">
+    <value>Er du sikker på å suspendere varsler til beskytterne dine i 6 timer? Alle dine beskyttere vil bli suspendert alarmer og sluttiden for abonnementet vil ikke bli forlenget av denne grunn. Beskytteren vil ikke bli varslet om denne handlingen.</value>
+  </data>
+  <data name="LblSuspensionRealizada" xml:space="preserve">
+    <value>Suspensjonen av alarmer til alle beskytterne dine i 6 timer var vellykket.</value>
+  </data>
+  <data name="LabelSeguroEliminarProtector" xml:space="preserve">
+    <value>Er du sikker på å fjerne beskytteren din? Kreftene som brukes i dette abonnementet vil ikke bli returnert, og beskytteren vil bli varslet om denne handlingen.</value>
+  </data>
+  <data name="LabelProtectorEliminado" xml:space="preserve">
+    <value>Den valgte beskytteren er slettet. Fullmaktene vil ikke bli returnert til beskytteren. Beskytteren vil bli varslet om denne handlingen</value>
+  </data>
+  <data name="LblConfirmacionRequerida" xml:space="preserve">
+    <value>Viktig! Bekreftelse kreves!</value>
+  </data>
+  <data name="LblNoHayRegistros" xml:space="preserve">
+    <value>Det er ingen logger å vise for øyeblikket</value>
+  </data>
+  <data name="LblMiLogin" xml:space="preserve">
+    <value>Min pålogging er:</value>
+  </data>
+  <data name="LblSaldoPoderesEs" xml:space="preserve">
+    <value>Min maktbalanse er:</value>
+  </data>
+  <data name="LblUsuarioID" xml:space="preserve">
+    <value>Min bruker-ID er</value>
+  </data>
+  <data name="LblNoHayRegistrosAqui" xml:space="preserve">
+    <value>Ingen har skrevet noe ennå!</value>
+  </data>
+  <data name="LblAlertaReportadaPorMi" xml:space="preserve">
+    <value>Varsel rapportert av meg</value>
+  </data>
+  <data name="LblPara" xml:space="preserve">
+    <value>Mottaker av melding:</value>
+  </data>
+  <data name="LblDe" xml:space="preserve">
+    <value>Avsender av meldingen:</value>
+  </data>
+  <data name="ConfiguraciondeSOSpect" xml:space="preserve">
+    <value>SOSpect-konfigurasjon</value>
+  </data>
+  <data name="LblExitoEnAceptacion" xml:space="preserve">
+    <value>Din kontraktsaksept er lagret!</value>
+  </data>
+  <data name="LblFalloEnAceptacion" xml:space="preserve">
+    <value>Registreringen mislyktes. Prøv på nytt!</value>
+  </data>
+  <data name="LblDeclinacionAceptacion" xml:space="preserve">
+    <value>Uten å akseptere en kontrakt kan du ikke fortsette!</value>
+  </data>
+  <data name="LblParaIniciar" xml:space="preserve">
+    <value>LA OSS STARTE I SOSpect! For å oppdatere varsler i nærheten, trykk på den blå oppdateringsknappen</value>
+  </data>
+  <data name="LblAlarmaNoGrave" xml:space="preserve">
+    <value>Bruk den gule knappen til å plassere varsler om lav fare og varsle samfunnet eller beskytterne. Du kan velge type varsel og merke det som en forbrytelse begått. Denne knappen starter varselet på din nøyaktige plassering, og er nyttig når du trenger hjelp. Du kan også velge et punkt på kartet for å finne varselet uten at det går ut over posisjonen din.</value>
+  </data>
+  <data name="LblCrimenCometido" xml:space="preserve">
+    <value>Den røde knappen utløser en kategori: kriminalitet begått alarm. SOSpect krever ikke at du inkluderer en kategori på grunn av viktigheten av tid i disse tilfellene. Alarmen plasseres automatisk på din nøyaktige plassering. Du kan også velge et punkt på kartet for å plassere varselet og deretter endre kategorien til begått kriminalitet.</value>
+  </data>
+  <data name="LblDescripcionAlarmas" xml:space="preserve">
+    <value>I alternativet 'Beskriv' i den nederste linjen finner du en liste over alarmer plassert av deg eller andre. Hvis du opprettet alarmen, kan du legge til en beskrivelse. Hvis alarmen ble opprettet av noen andre, kan du vurdere sannheten og utfylle beskrivelsen. Vær forsiktig! Hvis du oppgir falsk informasjon eller feil vurderinger, kan kontoen din bli suspendert. Gå nøye gjennom vilkårene og betingelsene for å unngå dette.</value>
+  </data>
+  <data name="LblDescripcionMensajes" xml:space="preserve">
+    <value>I klokken øverst til høyre kan du lese meldingene dine, som inkluderer abonnementsvarsler og nylige alarmer. Denne listen er forskjellig fra beskrivelsesalternativet, der du kan finne nylige alarmer direkte.</value>
+  </data>
+  <data name="LblDescripcionMenu" xml:space="preserve">
+    <value>I giret i øvre venstre hjørne finner du SOSpect-konfigurasjonsalternativene. Du kan kjøpe krefter til å kjøpe abonnementer og beskytte familien din eller utvide alarmmottaksradiusen. HUSKE! I starten gir vi deg 80 krefter, slik at du kan kjøpe to abonnementer fra starten.</value>
+  </data>
+  <data name="LblRecomendaciones" xml:space="preserve">
+    <value>SAMMEN ER VI UOVERVINNELIGE! De grunnleggende funksjonene for å varsle og motta varsler innenfor en radius på 100 meter er gratis, og når du starter gir vi deg 2 abonnementer. Inviter lokalsamfunnet og familien til å bruke denne gratistjenesten til å bekjempe økende kriminalitet. Du kan redde liv eller bli reddet ved å motta et varsel i tide. Varsler om tapte mennesker eller kjæledyr har en rekkevidde på 10 kilometer, og voldelige demonstrasjoner har en rekkevidde på 1 kilometer</value>
+  </data>
+  <data name="LblPromocion" xml:space="preserve">
+    <value>Til slutt, husk at du vil tjene en fullmakt for hver sannferdig vurdering du gir i SOSpect, når stemmegivningen av alarmene lukkes etter 90 minutter fra plasseringen. De fleste er ærlige og sammen skal vi beskytte hverandre og våre familier. VELKOMMEN TIL SOSPECT!</value>
+  </data>
+  <data name="LblDescripcionMapa" xml:space="preserve">
+    <value>Når som helst kan du velge alternativet "MAP" til venstre for den nederste linjen, som er utgangspunktet for SOSpect. Derfra kan du se alarmer i nærheten. Posisjonen din vises midt på kartet, og sirkelen representerer radiusen som kan påvirke deg. Som standard er denne radiusen 100 meter, men du kan endre den i innstillingsmenyen.</value>
+  </data>
+  <data name="LblRecomendacionImportante" xml:space="preserve">
+    <value>Det er viktig at du åpner SOSpect med jevne mellomrom, før du reiser hjemmefra eller når du ankommer et sted, for å oppdatere posisjonen din. På denne måten kan vi gi deg beskjed hvis det er noen risiko i ditt område. Vær oppmerksom på at når appen er lukket, kan vi ikke hente posisjonen din på grunn av begrensninger pålagt av enhetens operativsystemer. Sjekk vilkårene og betingelsene knyttet til posisjonen din.</value>
+  </data>
+  <data name="LblUsuarioBloqueado" xml:space="preserve">
+    <value>Bruker suspendert for negative karakterer</value>
+  </data>
+  <data name="LblMarcasNegativas" xml:space="preserve">
+    <value>Mitt antall negative karakterer er</value>
+  </data>
+  <data name="LblCuentaSuspendida" xml:space="preserve">
+    <value>Kontoen er midlertidig suspendert på grunn av negative merker fra andre brukere</value>
+  </data>
+  <data name="LblTitleCuentaSuspendida" xml:space="preserve">
+    <value>Konto midlertidig suspendert</value>
+  </data>
+  <data name="LblFechaFinSuspension" xml:space="preserve">
+    <value>Suspensjonens sluttdato er</value>
+  </data>
+  <data name="LblTocaAqui" xml:space="preserve">
+    <value>Trykk her for å gå</value>
+  </data>
+  <data name="LblNoTienesConexion" xml:space="preserve">
+    <value>Ingen internettforbindelse</value>
+  </data>
+  <data name="LblExplicacionSinConexion" xml:space="preserve">
+    <value>Kontoutskriften din er nødvendig for å logge inn på SOSpect. Uten internett kan vi ikke vite om det er aktivt.</value>
+  </data>
+  <data name="LblSinConexionDescripcion" xml:space="preserve">
+    <value>Aktivt internett er nødvendig for å hente SOSpect-kontostatusen din.</value>
+  </data>
+  <data name="LblSinConexionQueHacer" xml:space="preserve">
+    <value>Aktiver internett og start SOSpect på nytt</value>
+  </data>
+  <data name="SefinalizalasubscripcionporsolicituddelusuarioPROTEGIDOatravésdelaAPIdesdelaAPP" xml:space="preserve">
+    <value>Abonnementet avsluttes på forespørsel fra PROTECT-brukeren gjennom API-en fra APPen</value>
+  </data>
+  <data name="Nopuederenovarsedebidoaquefuecancelada,requieresubscripciónnueva" xml:space="preserve">
+    <value>Kan ikke fornyes fordi den ble kansellert, krever nytt abonnement</value>
+  </data>
+  <data name="Alarmasgeneradaspormicirculosocial" xml:space="preserve">
+    <value>Alarmer generert av min omgangskrets</value>
+  </data>
+  <data name="Incrementomidiametrodevigilancia" xml:space="preserve">
+    <value>Jeg øker overvåkingsdiameteren</value>
+  </data>
+  <data name="Zonadevigilanciaadicional" xml:space="preserve">
+    <value>Ekstra overvåkingssone</value>
+  </data>
+  <data name="Renovable" xml:space="preserve">
+    <value>Fornybar</value>
+  </data>
+  <data name="SefinalizalasubscripcionporsolicituddelusuarioPROTECTORatravésdelaAPIdesdelaAPP" xml:space="preserve">
+    <value>Abonnementet avsluttes på forespørsel fra PROTECTOR-brukeren gjennom API fra APPen</value>
+  </data>
+  <data name="LblEsRenovable" xml:space="preserve">
+    <value>Er det fornybart?</value>
+  </data>
+  <data name="LblObsSubs" xml:space="preserve">
+    <value>Merknad om abonnement:</value>
+  </data>
+  <data name="NingunaObservacion" xml:space="preserve">
+    <value>Ingen kommentarer</value>
+  </data>
+  <data name="Subscripcionvigente" xml:space="preserve">
+    <value>Gjeldende abonnement</value>
+  </data>
+  <data name="Actualmenteactivoenotrasuscripcion" xml:space="preserve">
+    <value>For øyeblikket aktiv på et annet abonnement</value>
+  </data>
+  <data name="LblRadioActual" xml:space="preserve">
+    <value>Min nåværende radius for å motta alarmer er:</value>
+  </data>
+  <data name="LblPoderesRequeridosZV" xml:space="preserve">
+    <value>Fullmakter som kreves for den valgte utvidelsen</value>
+  </data>
+  <data name="OptTerminosCondiciones" xml:space="preserve">
+    <value>SOSpect Vilkår og betingelser</value>
+  </data>
+  <data name="DebesAbrirLaApp" xml:space="preserve">
+    <value>SOSpect kan ikke vite endringene i plasseringen av brukeren når den er lukket, dette skjer ved batteribevaringspolitikken til operativsystemene til mobiltelefonene, så det er viktig at brukeren ofte åpner applikasjonen for å sjekke alarmer i området som den har flyttet til og motta nærliggende alarmer i tide.</value>
+  </data>
+  <data name="InvitaMasPersonas" xml:space="preserve">
+    <value>For å forbedre brukerens sikkerhet er det viktig at de rundt ham, familie og naboer, laster ned applikasjonen som er gratis. Hvis det ikke er noen brukere i nærheten, kan det hende at brukeren ikke blir varslet i tide, eller at varslene deres ikke høres, og opprettholder risikotilstanden som den var før du lastet ned applikasjonen. Det er viktig å invitere flere til å hjelpe hverandre!</value>
+  </data>
+  <data name="Insertiondone" xml:space="preserve">
+    <value>Innsetting utført.</value>
+  </data>
+  <data name="AnerroroccurredwhilequalifyingthealarmCode1" xml:space="preserve">
+    <value>Det oppstod en feil under klassifisering av alarmen med kode 1</value>
+  </data>
+  <data name="AnerroroccurredwhilequalifyingthealarmCode2" xml:space="preserve">
+    <value>Det oppstod en feil under klassifisering av alarmen med kode 2</value>
+  </data>
+  <data name="AnerroroccurredwiththealarmqualificationmodelCode3" xml:space="preserve">
+    <value>Det oppstod en feil under klassifisering av alarm med kode 3</value>
+  </data>
+  <data name="Userregistrationsuccessful" xml:space="preserve">
+    <value>Din bruker er registrert!</value>
+  </data>
+  <data name="Anerroroccurredwhileregisteringtheusercode1" xml:space="preserve">
+    <value>Det oppstod en feil med kode 1 som registrerte brukeren din</value>
+  </data>
+  <data name="Anerroroccurredwhileregisteringtheusercode2" xml:space="preserve">
+    <value>Det oppstod en feil med kode 2 som registrerte brukeren din</value>
+  </data>
+  <data name="Anerroroccurredwiththepeoplemodelforuserregistrationcode3" xml:space="preserve">
+    <value>Det oppstod en feil med kode 3 som registrerte brukeren din</value>
+  </data>
+  <data name="Permisosolicitadoconexito" xml:space="preserve">
+    <value>Har bedt om tillatelse</value>
+  </data>
+  <data name="OcurriounerrorenelprocesodesolicitarpermisoalprotegidoCodigo1" xml:space="preserve">
+    <value>Det oppstod en feil med kode 1 i prosessen med å be om tillatelse fra den beskyttede</value>
+  </data>
+  <data name="Nofueposiblerealizarenviarlasolicituddepermisoalprotegidoporqueelmodelonoesvalido" xml:space="preserve">
+    <value>Det var ikke mulig å sende tillatelsesforespørselen til den beskyttede, modellen er ugyldig</value>
+  </data>
+  <data name="AlertaEnUbicacion" xml:space="preserve">
+    <value>Vil du opprette et SOSpect-varsel på dette stedet?</value>
+  </data>
+  <data name="CrearEnUbicacionActual" xml:space="preserve">
+    <value>Vil du opprette et SOSpect-varsel der du befinner deg?</value>
+  </data>
+  <data name="SeguroCerrarSesion" xml:space="preserve">
+    <value>Er du sikker på å logge ut?</value>
+  </data>
+  <data name="Tu" xml:space="preserve">
+    <value>Du</value>
+  </data>
+  <data name="Anonimo" xml:space="preserve">
+    <value>Anonym</value>
+  </data>
+  <data name="AlarmaCerrada" xml:space="preserve">
+    <value>Alarmen stengt</value>
+  </data>
+  <data name="LblSaldoPoderesInsuficiente" xml:space="preserve">
+    <value>Din maktbalanse er utilstrekkelig</value>
+  </data>
+  <data name="LblComprarPoderes" xml:space="preserve">
+    <value>Kjøp fullmakter</value>
+  </data>
+  <data name="LblSeguroRenovar" xml:space="preserve">
+    <value>Er du sikker på å fornye dette abonnementet?</value>
+  </data>
+  <data name="OptReportes" xml:space="preserve">
+    <value>Rapporter</value>
+  </data>
+  <data name="LblReportesTitulo" xml:space="preserve">
+    <value>SOSpect-rapporter</value>
+  </data>
+  <data name="LblReportesDescripcion" xml:space="preserve">
+    <value>Rapporter gir deg muligheten til å forstå hvordan du har hjulpet andre brukere ved å unngå uheldige situasjoner. I tillegg lar de deg identifisere farlige områder på kartet over byen din og observere utviklingen av kriminalitet over tid. Gjennom mønsteranalyse er det også mulig å generere tidlige varsler før negative hendelser oppstår. Det er viktig å merke seg at grunnrapporten er gratis, mens andre rapporter kan ha en kostnad på grunn av beregningsforbruket som er nødvendig for deres generasjon.</value>
+  </data>
+  <data name="OptReporteDeCalorEnZona" xml:space="preserve">
+    <value>Rapport med varmekart</value>
+  </data>
+  <data name="OptReporteEvolucionEnElTiempo" xml:space="preserve">
+    <value>Varslingsrapport etter tid</value>
+  </data>
+  <data name="OptReportesPredictivos" xml:space="preserve">
+    <value>Prediktiv rapportering</value>
+  </data>
+  <data name="OptReporteAnaliticoDeDescripcionesAlarmas" xml:space="preserve">
+    <value>Analytiske rapporter om alarmchatter</value>
+  </data>
+  <data name="LblReporteCalorSospect" xml:space="preserve">
+    <value>SOSpect varmekart</value>
+  </data>
+  <data name="LblReporteEnConstruccion" xml:space="preserve">
+    <value>Snart!! Denne funksjonaliteten er under bygging!</value>
+  </data>
+  <data name="LblDescripcionMapaDeCalor" xml:space="preserve">
+    <value>I denne rapporten vil du ha tilgang til et varmekart over ditt område, hvor du kan velge forskjellige måneder siden SOSpect startet sin drift. Denne funksjonaliteten lar deg observere og forstå utviklingen av hvert område av kartet som er av interesse for deg.</value>
+  </data>
+  <data name="LblCostoReporte" xml:space="preserve">
+    <value>Husk at bruken av denne funksjonaliteten har en beregningskostnad og krever krefter, selv om det ikke vil være en høy verdi. Du kan imidlertid skaffe deg det uten problemer ved å bruke kreftene vi gir deg i din første bruk av applikasjonen.</value>
+  </data>
+  <data name="LblReporteEvolucionAlarmas" xml:space="preserve">
+    <value>Utvikling av alarmer plassert i SOSpect</value>
+  </data>
+  <data name="LblDescripcionEvolucionAlarmas" xml:space="preserve">
+    <value>I denne rapporten vil du kunne kjenne trendene for hver type alarm over tid i ditt område. Du vil kunne observere og analysere farlighetstrender, samt identifisere mulige reduksjoner i kriminalitet.</value>
+  </data>
+  <data name="LblReportePredictivo" xml:space="preserve">
+    <value>SOSpect prediktive rapporter</value>
+  </data>
+  <data name="LblDescripcionReportesPredictivos" xml:space="preserve">
+    <value>Etter hvert som SOSpect-fellesskapet genererer nok data, kan sannsynlighetsbaserte hendelsesforutsigelser og analyseverktøy lages. Disse rapportene vil gi deg mulighet til å vite når bølger av varsler eller økning i kriminell aktivitet nærmer seg, og gir deg muligheten til å ta de nødvendige forholdsregler for å unngå risiko for deg, din familie og ditt samfunn.</value>
+  </data>
+  <data name="LblReporteAnalisisDeTextos" xml:space="preserve">
+    <value>SOSpect alarm chat analyse rapport</value>
+  </data>
+  <data name="LblDescripcionAnalisisTextos" xml:space="preserve">
+    <value>Takket være det faktum at brukerne beskriver alarmene og oppdaterer utviklingen gjennom den interne chatten til SOSpect, vil denne rapporten tillate å visualisere typologiene som mest påvirker samfunnet. Dette gir en mulighet til å iverksette tiltak for å forbedre oppfatningen av sikkerhet i ditt område.</value>
+  </data>
+  <data name="LblRangoReporte" xml:space="preserve">
+    <value>Denne rapporten dekker de siste 30 dagene</value>
+  </data>
+  <data name="AcercadeSOSpect" xml:space="preserve">
+    <value>Om SOSpect</value>
+  </data>
+  <data name="Porcentajedealarmasciertasfrenteafalsasenunradiodeunkilometroymedio" xml:space="preserve">
+    <value>Prosentandel av sanne versus falske alarmer innenfor en radius på halvannen kilometer</value>
+  </data>
+  <data name="Promediodetiempoenminutosentrelanzamientodealarmaenmizonaylaprimeracalificacionodescripcion" xml:space="preserve">
+    <value>Gjennomsnittlig tid i minutter mellom alarmstart i mitt område og første vurdering eller beskrivelse</value>
+  </data>
+  <data name="Cantidadrealdepersonasenunradiodeunkilometroymedio" xml:space="preserve">
+    <value>Faktisk antall personer innenfor en og en halv kilometer radius</value>
+  </data>
+  <data name="Cantidadrealdepersonasenmiradioactual" xml:space="preserve">
+    <value>Faktisk antall personer i min nåværende radius</value>
+  </data>
+  <data name="Miradioactualderecepcionyenviodealarmasenmetros" xml:space="preserve">
+    <value>Min nåværende radius for å motta og sende alarmer i meter</value>
+  </data>
+  <data name="Cantidadrealdepersonasquerecibieronmisalarmas" xml:space="preserve">
+    <value>Faktisk antall personer som mottok alarmene mine</value>
+  </data>
+  <data name="Cantidaddenotificacionesdealarmaenviadasdemiparte" xml:space="preserve">
+    <value>Antall alarmvarsler sendt fra meg</value>
+  </data>
+  <data name="Personasquereportaronmiayudacomonegativaofalsa" xml:space="preserve">
+    <value>Folk som rapporterte min hjelp som negativ eller falsk</value>
+  </data>
+  <data name="Personasqueagradecieronmiayuda" xml:space="preserve">
+    <value>Folk som satte pris på min hjelp</value>
+  </data>
+  <data name="Poderesganadosporregalos" xml:space="preserve">
+    <value>Krefter vunnet av gaver</value>
+  </data>
+  <data name="LblParticipacionTpAlarma" xml:space="preserve">
+    <value>Deltakelse etter alarmtype</value>
+  </data>
+  <data name="LblMetricBasics" xml:space="preserve">
+    <value>Grunnleggende beregninger</value>
+  </data>
+  <data name="LblEfectiAlarmas" xml:space="preserve">
+    <value>Effektivitet av alarmer</value>
+  </data>
+  <data name="LblTotalAlarmas" xml:space="preserve">
+    <value>Totalt antall alarmer</value>
+  </data>
+  <data name="LblAlarmasVerdaderas" xml:space="preserve">
+    <value>Ekte alarmer</value>
+  </data>
+  <data name="LblAlarmasFalsas" xml:space="preserve">
+    <value>Falske alarmer</value>
+  </data>
+  <data name="LblAlarmasEfectivas" xml:space="preserve">
+    <value>Prosentandel av effektive alarmer</value>
+  </data>
+  <data name="LblMarcarLeidos" xml:space="preserve">
+    <value>Merk alt som lest</value>
+  </data>
+  <data name="LblSeMarcaronComoLeidos" xml:space="preserve">
+    <value>Alle meldinger ble merket som lest</value>
+  </data>
+  <data name="LabelNuevaVersion" xml:space="preserve">
+    <value>Det er en ny versjon av SOSpect, og den kreves for å fortsette</value>
+  </data>
+  <data name="OptReporteBasico" xml:space="preserve">
+    <value>Grunnleggende rapporter - GRATIS!</value>
+  </data>
+  <data name="LblReporteBasicoSospect" xml:space="preserve">
+    <value>SOSpect grunnleggende rapporter</value>
+  </data>
+  <data name="LblReporteBasicoDescripcion" xml:space="preserve">
+    <value>SOSpects grunnleggende rapporter gir deg verdifull informasjon om hvilken innvirkning alarmrapportene dine har hatt på samfunnet ditt. I tillegg viser de deg antall krefter du har oppnådd ved å hjelpe samfunnet ditt ved å nøyaktig score alarmer og ærlighet i disse vurderingene. Gjennom disse rapportene kan du også evaluere den generelle atferden til området ditt i løpet av den siste måneden, inkludert antall brukere som deltok i prosessen og antall brukere som mottok negative karakterer på grunn av feil engasjement.</value>
+  </data>
+  <data name="LblReporteBasicoDescripcionCorta" xml:space="preserve">
+    <value>SOSpects grunnleggende rapporter gir deg verdifull informasjon om... Se mer...</value>
+  </data>
+  <data name="LblDescripcionRepTipoAlarma" xml:space="preserve">
+    <value>Denne rapporten gir deg informasjon om de hyppigste alarmene innenfor en radius på halvannen kilometer fra din nåværende posisjon.</value>
+  </data>
+  <data name="LblDescripcionRepEfectAlarmas" xml:space="preserve">
+    <value>Denne rapporten gir deg informasjon om effektivitetsforholdet mellom ekte og falske alarmer innenfor en radius på halvannen kilometer fra din nåværende posisjon.</value>
+  </data>
+  <data name="LblDescripcionRepMetricasBasicas" xml:space="preserve">
+    <value>Denne rapporten gir deg data om antall brukere innenfor en og en halv kilometer radius av din nåværende posisjon, samt antall brukere i din nåværende radius av appalarmer. I tillegg inneholder den flere tilleggsinformasjon av interesse.</value>
+  </data>
+  <data name="OptVolumenAlarmas" xml:space="preserve">
+    <value>Volum etter type alarmer i nærheten</value>
+  </data>
+  <data name="OptEfectividadAlarmas" xml:space="preserve">
+    <value>Effektiviteten til alarmer i nærheten</value>
+  </data>
+  <data name="OptMetricasBasicas" xml:space="preserve">
+    <value>Grunnleggende beregninger av alarmer i nærheten</value>
+  </data>
+  <data name="LblCredibilidadActual" xml:space="preserve">
+    <value>Troverdigheten til mine alarmer er:</value>
+  </data>
+  <data name="OptManualUsuarioSospect" xml:space="preserve">
+    <value>SOSpect brukerhåndbok</value>
+  </data>
+  <data name="LblDescManualUsuario" xml:space="preserve">
+    <value>Møt SOSpect, en gratis app designet for å beskytte deg og dine kjære. Vi har laget en kortfattet og detaljert online manual som vil hjelpe deg med å bruke den riktig. Med denne håndboken kan du få mest mulig ut av SOSpect og dra nytte av alle sikkerhetsfunksjonene.</value>
+  </data>
+  <data name="SesionApple" xml:space="preserve">
+    <value>LOGG PÅ MED APPLE</value>
+  </data>
+  <data name="LblCredibilidadAlarmaActual" xml:space="preserve">
+    <value>Troverdighet av alarmen:</value>
+  </data>
+  <data name="LblAccedeAlManual" xml:space="preserve">
+    <value>Du får tilgang til håndboken på:</value>
+  </data>
+  <data name="LblRefrescarLista" xml:space="preserve">
+    <value>Oppdater alarmlisten</value>
+  </data>
+  <data name="LblErrorCorreoDispositivo" xml:space="preserve">
+    <value>Kunne ikke sende e-post på denne enheten</value>
+  </data>
+  <data name="LblErrorCorreo" xml:space="preserve">
+    <value>Feil ved sending av e-post:</value>
+  </data>
+  <data name="LblSeleccioneTipoAlarma" xml:space="preserve">
+    <value>Velg type alarm</value>
+  </data>
+  <data name="LblCompraFallida" xml:space="preserve">
+    <value>Kjøpet ble ikke gjort. Vennligst sjekk internettilgang og prøv på nytt</value>
+  </data>
+  <data name="LblSeleccionePuntoMapa" xml:space="preserve">
+    <value>Du må velge en overvåkingssone på kartet</value>
+  </data>
+  <data name="Cantidaddealarmascolocadasenlaszonasdevigilanciasuscritas" xml:space="preserve">
+    <value>Antall alarmer plassert i abonnerte overvåkingsområder</value>
+  </data>
+  <data name="Cantidaddealarmascolocadaspormisprotegidos" xml:space="preserve">
+    <value>Antall alarmer plassert av mine protesjeer</value>
+  </data>
+  <data name="Credibilidadactualdelasalarmasqueenvioamicomunidad" xml:space="preserve">
+    <value>Nåværende troverdighet av alarmene jeg sender til samfunnet mitt</value>
+  </data>
+  <data name="LblCompraExitosa" xml:space="preserve">
+    <value>Gratulerer! Du kjøpte fullmakter til å kjøpe abonnementer. Du finner en forklarende melding i klokken!</value>
+  </data>
+  <data name="LblDebesHabilitarNotif" xml:space="preserve">
+    <value>Du må aktivere sending av varsler for at SOSpect skal fungere</value>
+  </data>
+  <data name="LblHabilitarNotifSettings" xml:space="preserve">
+    <value>Denne appen kan støtte varsler, men du må aktivere dette i innstillingene dine.</value>
+  </data>
+  <data name="LblErrorHabilitandoUsoNotif" xml:space="preserve">
+    <value>Det oppstod en feil som forhindret bruk av push-varslinger</value>
+  </data>
+  <data name="LblMostrarDireccionEscape" xml:space="preserve">
+    <value>Fugitive's Escape Route</value>
+  </data>
+  <data name="LblProximamenteSOSpect" xml:space="preserve">
+    <value>Kommer snart på SOSpect!</value>
+  </data>
+  <data name="LblReportesProximos" xml:space="preserve">
+    <value>Analytiske og prediktive rapporter med data science!</value>
+  </data>
+  <data name="LblHolaBienvenido" xml:space="preserve">
+    <value>Hei! Velkommen til SOSpect. 
+
+SOSpect er et gratis verktøy designet for å beskytte deg og dine kjære ved å gi rettidige varsler om nærliggende risikoer! Du får kanskje ikke mange alarmer i begynnelsen, da det ikke er mange mennesker i nærheten av deg ennå som har installert SOSpect. Vi ber om at du prøver oss og ikke avinstallerer applikasjonen. SOSpect kan redde livet ditt på et tidspunkt, så vel som livet til noen i familien eller samfunnet.
+
+I delen "Grunnleggende rapport" i "Rapporter" -menyen som du finner i innstillingene, kan du se i delen "Grunnleggende beregninger" antall brukere i nærheten innenfor dekningsområdet ditt, hvor du vil motta alarmer. Hjelp oss å øke det antallet, det er gratis og vil tillate deg å leve tryggere!
+
+Vi inviterer deg til å lese nøye gjennom denne korte introduksjonshåndboken, som vil gi deg en ide om hvordan SOSpect fungerer. Vær oppmerksom på at den bare vises én gang etter at appen er installert.
+
+Takk for at du bruker SOSpect og for at du bidrar til alles sikkerhet!
+
+Trykk på skjermen for å fortsette...</value>
+  </data>
+</root>

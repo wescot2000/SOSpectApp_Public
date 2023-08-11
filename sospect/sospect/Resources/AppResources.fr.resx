@@ -1,0 +1,1090 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Bienvenido" xml:space="preserve">
+    <value>Bienvenue chez SOSpect</value>
+  </data>
+  <data name="InicieSesion" xml:space="preserve">
+    <value>Connectez-vous pour continuer</value>
+  </data>
+  <data name="InicieSesionCon" xml:space="preserve">
+    <value>ou connectez-vous avec</value>
+  </data>
+  <data name="SesionFacebook" xml:space="preserve">
+    <value>CONNECTEZ-VOUS AVEC FACEBOOK</value>
+  </data>
+  <data name="SesionGoogle" xml:space="preserve">
+    <value>SE CONNECTER AVEC GOOGLE</value>
+  </data>
+  <data name="LabelAlerta" xml:space="preserve">
+    <value>Alerte</value>
+  </data>
+  <data name="LabelCrimen" xml:space="preserve">
+    <value>Crime</value>
+  </data>
+  <data name="LabelOK" xml:space="preserve">
+    <value>D’ACCORD</value>
+  </data>
+  <data name="LabelCancelar" xml:space="preserve">
+    <value>Annuler</value>
+  </data>
+  <data name="ReportarCrimen" xml:space="preserve">
+    <value>Signaler un crime</value>
+  </data>
+  <data name="LabelMapa" xml:space="preserve">
+    <value>Carte</value>
+  </data>
+  <data name="LabelDescribir" xml:space="preserve">
+    <value>Décrire</value>
+  </data>
+  <data name="DescripcionAlarma" xml:space="preserve">
+    <value>Description de l’alarme</value>
+  </data>
+  <data name="DescripcionSospechoso" xml:space="preserve">
+    <value>Description du suspect</value>
+  </data>
+  <data name="DescripcionVehiculo" xml:space="preserve">
+    <value>Description du véhicule</value>
+  </data>
+  <data name="DescripcionArma" xml:space="preserve">
+    <value>Description de l’arme</value>
+  </data>
+  <data name="PuntuacionDescripcion" xml:space="preserve">
+    <value>Score de description</value>
+  </data>
+  <data name="LabelEditar" xml:space="preserve">
+    <value>Éditer</value>
+  </data>
+  <data name="DescripcionesParaAlarma" xml:space="preserve">
+    <value>Descriptions faites pour cette alarme</value>
+  </data>
+  <data name="EspacioPublicidad" xml:space="preserve">
+    <value>Espace pour la publicité</value>
+  </data>
+  <data name="AlarmasRecientes" xml:space="preserve">
+    <value>Alarmes récentes pour ajouter une description</value>
+  </data>
+  <data name="ConfirmarAlarma" xml:space="preserve">
+    <value>Confirmer l’alarme</value>
+  </data>
+  <data name="LabelInformacion" xml:space="preserve">
+    <value>Information</value>
+  </data>
+  <data name="LabelError" xml:space="preserve">
+    <value>Erreur</value>
+  </data>
+  <data name="LabelCancelado" xml:space="preserve">
+    <value>Annulé</value>
+  </data>
+  <data name="LabelLoginCancelado" xml:space="preserve">
+    <value>Connexion annulée</value>
+  </data>
+  <data name="LabelFallo" xml:space="preserve">
+    <value>Échec</value>
+  </data>
+  <data name="RecibeAlarma" xml:space="preserve">
+    <value>Vous avez reçu une alarme près de chez vous Est-ce réel?</value>
+  </data>
+  <data name="LabelConfirmo" xml:space="preserve">
+    <value>Confirmer</value>
+  </data>
+  <data name="LabelNoSeguro" xml:space="preserve">
+    <value>Je ne suis pas sûr</value>
+  </data>
+  <data name="LabelEsFalsa" xml:space="preserve">
+    <value>C’est faux</value>
+  </data>
+  <data name="LabelConfirmar" xml:space="preserve">
+    <value>Confirmer</value>
+  </data>
+  <data name="AdvertenciaCalificacion" xml:space="preserve">
+    <value>Cette qualification ne peut pas être modifiée ultérieurement. Cela pourrait affecter votre crédibilité future si le consensus des notations est contraire à votre vote. Es-tu sûr?</value>
+  </data>
+  <data name="LabelSi" xml:space="preserve">
+    <value>Oui</value>
+  </data>
+  <data name="LabelNo" xml:space="preserve">
+    <value>Non</value>
+  </data>
+  <data name="AlarmaEnviada" xml:space="preserve">
+    <value>Alarme envoyée!</value>
+  </data>
+  <data name="MsgTrasAlarmaEnviada" xml:space="preserve">
+    <value>Si vous êtes en sécurité, veuillez décrire l’alarme, sinon, cachez votre téléphone et mettez-vous hors de danger.</value>
+  </data>
+  <data name="notificacionurgente" xml:space="preserve">
+    <value>Une notification urgente sera envoyée aux téléphones les plus proches à l’adresse suivante :</value>
+  </data>
+  <data name="LabelAlarma" xml:space="preserve">
+    <value>Alarme</value>
+  </data>
+  <data name="LabelMetros" xml:space="preserve">
+    <value>mètre</value>
+  </data>
+  <data name="LabelTuUbicacion" xml:space="preserve">
+    <value>Votre emplacement</value>
+  </data>
+  <data name="LabelUsuario" xml:space="preserve">
+    <value>Utilisateur</value>
+  </data>
+  <data name="LabelTipoAlarma" xml:space="preserve">
+    <value>Type d’alarme</value>
+  </data>
+  <data name="DireccionEscape" xml:space="preserve">
+    <value>Veuillez indiquer la direction de fuite du suspect.</value>
+  </data>
+  <data name="DescripcionAlerta" xml:space="preserve">
+    <value>Description de l’alerte</value>
+  </data>
+  <data name="DescripcionImplicado" xml:space="preserve">
+    <value>Description de la personne visée par l’alerte</value>
+  </data>
+  <data name="DescripcionVehiculoImp" xml:space="preserve">
+    <value>Véhicule impliqué (le cas échéant)</value>
+  </data>
+  <data name="ArmaImplicada" xml:space="preserve">
+    <value>Arme impliquée (le cas échéant)</value>
+  </data>
+  <data name="LabelRutaEscape" xml:space="preserve">
+    <value>Itinéraire d’évacuation suspect</value>
+  </data>
+  <data name="ObjetivoSospect" xml:space="preserve">
+    <value>SOSpect a pour objectif de permettre à la communauté d’alerter et de recevoir des alertes de dangers à l’emplacement d’un utilisateur, afin d’éviter des risques pour lui et ses proches. L’emplacement des utilisateurs n’est pas partagé ou suivi, ce qui garantit leur confidentialité. Les utilisateurs peuvent placer des alertes de danger pour aider les autres à éviter d’être victimes de situations à risque.</value>
+  </data>
+  <data name="UbicacionImportante" xml:space="preserve">
+    <value>Il est important de connaître l’emplacement de l’utilisateur afin de pouvoir l’alerter si quelqu’un place une alerte de danger près de son emplacement. Cependant, l’emplacement de l’utilisateur est privé et seuls les points de la carte où les alertes sont placées sont partagés.</value>
+  </data>
+  <data name="GenteUnida" xml:space="preserve">
+    <value>Avec SOSpect, la communauté peut s’unir pour réduire la criminalité et éviter d’être victime de situations à risque, alertant les autres pour rester en sécurité aussi.</value>
+  </data>
+  <data name="contactenos" xml:space="preserve">
+    <value>Contactez-nous</value>
+  </data>
+  <data name="visitenos" xml:space="preserve">
+    <value>Visitez-nous à</value>
+  </data>
+  <data name="ZonaVigilancia" xml:space="preserve">
+    <value>Abonnement à la zone de surveillance</value>
+  </data>
+  <data name="SeleccioneUbicacionVigilar" xml:space="preserve">
+    <value>Sélectionnez l’emplacement à surveiller</value>
+  </data>
+  <data name="SeleccionEnMapa" xml:space="preserve">
+    <value>Sélectionner sur la carte</value>
+  </data>
+  <data name="ExplicaZonaVigilancia" xml:space="preserve">
+    <value>Toutes les alarmes placées au point que vous allez sélectionner seront notifiées, peu importe qui les place. De cette façon, vous pouvez être conscient des dangers qui courent à ce moment-là. Ceci est idéal pour être conscient des dangers dans des endroits tels que les écoles ou les universités de vos enfants ou les zones où vos proches travaillent.</value>
+  </data>
+  <data name="CrearZonaV" xml:space="preserve">
+    <value>Créer une zone de surveillance avec cet emplacement</value>
+  </data>
+  <data name="LabelLatitud" xml:space="preserve">
+    <value>Latitude</value>
+  </data>
+  <data name="LabelLongitud" xml:space="preserve">
+    <value>Longitude</value>
+  </data>
+  <data name="LabelIntroduccion" xml:space="preserve">
+    <value>Introduction</value>
+  </data>
+  <data name="AmpliacionRadio" xml:space="preserve">
+    <value>Extension du rayon d’alarme</value>
+  </data>
+  <data name="TuRadioActual" xml:space="preserve">
+    <value>Votre rayon actuel est :</value>
+  </data>
+  <data name="CrearNuevoRadio" xml:space="preserve">
+    <value>Créer mon abonnement pour cette nouvelle radio</value>
+  </data>
+  <data name="ExplicacionVigencias" xml:space="preserve">
+    <value>Tous les abonnements ont une validité, veuillez vérifier les prix des abonnements dans la première option du menu principal</value>
+  </data>
+  <data name="VasARequerir" xml:space="preserve">
+    <value>Vous aurez besoin</value>
+  </data>
+  <data name="xPoderesParaSubs" xml:space="preserve">
+    <value>Pouvoirs d’ajouter cette radio à votre radio actuelle</value>
+  </data>
+  <data name="Exito" xml:space="preserve">
+    <value>Succès</value>
+  </data>
+  <data name="MensajeError" xml:space="preserve">
+    <value>Une erreur s’est produite lors de la connexion au serveur. Veuillez réessayer.</value>
+  </data>
+  <data name="SeleccionaRuta" xml:space="preserve">
+    <value>Vous devez sélectionner l’itinéraire d’évacuation du suspect.</value>
+  </data>
+  <data name="AprobarSolicitudes" xml:space="preserve">
+    <value>Approuver les demandes</value>
+  </data>
+  <data name="LabelAprobar" xml:space="preserve">
+    <value>Approuver</value>
+  </data>
+  <data name="LabelRechazar" xml:space="preserve">
+    <value>Rejeter</value>
+  </data>
+  <data name="SubscripcionCreada" xml:space="preserve">
+    <value>L’abonnement a été créé avec succès.</value>
+  </data>
+  <data name="CompletarSubscripcion" xml:space="preserve">
+    <value>Abonnement protégé complet</value>
+  </data>
+  <data name="CompletarSubsc" xml:space="preserve">
+    <value>Abonnement complet</value>
+  </data>
+  <data name="LblMensajes" xml:space="preserve">
+    <value>Messages</value>
+  </data>
+  <data name="LblFechaMensaje" xml:space="preserve">
+    <value>Date du message</value>
+  </data>
+  <data name="LblMenu" xml:space="preserve">
+    <value>CONFIGURATION</value>
+  </data>
+  <data name="OptCompraPoderes" xml:space="preserve">
+    <value>Achetez des pouvoirs pour débloquer des fonctionnalités</value>
+  </data>
+  <data name="OptGestionarProtegidos" xml:space="preserve">
+    <value>Gérer mes protecteurs-protégés</value>
+  </data>
+  <data name="OptCrearZonas" xml:space="preserve">
+    <value>Créer des zones de surveillance</value>
+  </data>
+  <data name="OptAumentarRadio" xml:space="preserve">
+    <value>Augmenter mon rayon de réception d’alerte</value>
+  </data>
+  <data name="OptAcercaDe" xml:space="preserve">
+    <value>A propos de l’application SOSpect</value>
+  </data>
+  <data name="OptCerrarSesion" xml:space="preserve">
+    <value>Se déconnecter</value>
+  </data>
+  <data name="LblProtectores" xml:space="preserve">
+    <value>Mes protecteurs</value>
+  </data>
+  <data name="LblSuspender" xml:space="preserve">
+    <value>Suspendre temporairement</value>
+  </data>
+  <data name="LblEliminarProtegido" xml:space="preserve">
+    <value>Supprimer protégé</value>
+  </data>
+  <data name="LblSubscrProtegido" xml:space="preserve">
+    <value>Abonnement protégé</value>
+  </data>
+  <data name="LblIDUsuarioAProteger" xml:space="preserve">
+    <value>Entrez l’ID utilisateur à protéger. (Cette valeur se trouve en haut du menu des paramètres SOSpect de l’utilisateur que vous souhaitez associer)</value>
+  </data>
+  <data name="LblRelacionProtegido" xml:space="preserve">
+    <value>Ma relation avec ce protégé est :</value>
+  </data>
+  <data name="LblSolicitarPermiso" xml:space="preserve">
+    <value>Demander l’autorisation de l’utilisateur</value>
+  </data>
+  <data name="LblCompleteCampos" xml:space="preserve">
+    <value>Veuillez remplir tous les champs.</value>
+  </data>
+  <data name="LblProcesarSolicitud" xml:space="preserve">
+    <value>Une erreur s’est produite lors du traitement de la demande. Veuillez réessayer.</value>
+  </data>
+  <data name="LblProtegidos" xml:space="preserve">
+    <value>Mes protégés</value>
+  </data>
+  <data name="LblUsuarioProtegido" xml:space="preserve">
+    <value>ID utilisateur protégé</value>
+  </data>
+  <data name="LblFechaActivacion" xml:space="preserve">
+    <value>Date d’activation</value>
+  </data>
+  <data name="LblFechaFinalizacion" xml:space="preserve">
+    <value>Date de clôture</value>
+  </data>
+  <data name="LblAccion" xml:space="preserve">
+    <value>Action</value>
+  </data>
+  <data name="LblCantidadPoderes" xml:space="preserve">
+    <value>Nombre de pouvoirs</value>
+  </data>
+  <data name="LblPrecio" xml:space="preserve">
+    <value>Prix</value>
+  </data>
+  <data name="LblComprar" xml:space="preserve">
+    <value>Acheter</value>
+  </data>
+  <data name="LblValoresSubsc" xml:space="preserve">
+    <value>Valeurs d’abonnement</value>
+  </data>
+  <data name="LblTerminos" xml:space="preserve">
+    <value>Conditions d’utilisation de SOSpect APP</value>
+  </data>
+  <data name="LblAcepto" xml:space="preserve">
+    <value>J’accepte le contrat</value>
+  </data>
+  <data name="LblNoAcepto" xml:space="preserve">
+    <value>Je n’accepte pas</value>
+  </data>
+  <data name="LblOpcionesProtegidos" xml:space="preserve">
+    <value>Protégé et protégé par l’application SOSpect</value>
+  </data>
+  <data name="LblExplicacionProtegidos" xml:space="preserve">
+    <value>Vous pouvez recevoir des alertes de membres de votre cercle social même s’ils sont loin de vous. Ici, vous pouvez gérer cette fonctionnalité</value>
+  </data>
+  <data name="OptIniciarTramite" xml:space="preserve">
+    <value>Démarrer le processus d’ajout d’un</value>
+  </data>
+  <data name="OptAprobarSolicitud" xml:space="preserve">
+    <value>Approuver une demande d’un protecteur</value>
+  </data>
+  <data name="OptListarProtegidos" xml:space="preserve">
+    <value>Voir la liste de mes protégés</value>
+  </data>
+  <data name="OptListarProtectores" xml:space="preserve">
+    <value>Voir la liste de mes protecteurs</value>
+  </data>
+  <data name="OptVolver" xml:space="preserve">
+    <value>Rendre</value>
+  </data>
+  <data name="LblPoderesSospect" xml:space="preserve">
+    <value>Pouvoirs de l’application SOSpect</value>
+  </data>
+  <data name="LblOpcionesPoderes" xml:space="preserve">
+    <value>Bienvenue dans l’option de gestion de l’alimentation, que voulez-vous faire?</value>
+  </data>
+  <data name="LblSubscripcionesCosto" xml:space="preserve">
+    <value>Je veux savoir quels abonnements je peux acheter et leur coût</value>
+  </data>
+  <data name="LblQuieroComprar" xml:space="preserve">
+    <value>Je veux acheter des super pouvoirs pour acquérir des abonnements</value>
+  </data>
+  <data name="ExplicacionRadio" xml:space="preserve">
+    <value>Le rayon par défaut pour tous les utilisateurs de l’application est de 100 mètres autour. Vous pouvez étendre ce rayon en utilisant les pouvoirs de l’application. Sélectionnez ensuite le rayon que vous souhaitez pour vous-même:</value>
+  </data>
+  <data name="LblAsunto" xml:space="preserve">
+    <value>Brève description</value>
+  </data>
+  <data name="LblCompraPoderes" xml:space="preserve">
+    <value>Achat de pouvoirs</value>
+  </data>
+  <data name="OptCompletarTramite" xml:space="preserve">
+    <value>Procédure complète pour ajouter un</value>
+  </data>
+  <data name="LabelHecho" xml:space="preserve">
+    <value>Terminé</value>
+  </data>
+  <data name="LabelEscapoEnEstaDireccion" xml:space="preserve">
+    <value>Il s’est échappé dans cette direction</value>
+  </data>
+  <data name="OptMisSubs" xml:space="preserve">
+    <value>Mes abonnements</value>
+  </data>
+  <data name="LblMisSubscripciones" xml:space="preserve">
+    <value>Mes abonnements</value>
+  </data>
+  <data name="LblidUsuario" xml:space="preserve">
+    <value>Identifiant:</value>
+  </data>
+  <data name="LblDescripcionPuntos" xml:space="preserve">
+    <value>Description:</value>
+  </data>
+  <data name="LblFechaFinPuntos" xml:space="preserve">
+    <value>Date de clôture :</value>
+  </data>
+  <data name="LblPoderesPuntos" xml:space="preserve">
+    <value>Pouvoirs de renouvellement :</value>
+  </data>
+  <data name="LblRenovar" xml:space="preserve">
+    <value>Renouveler</value>
+  </data>
+  <data name="LblCancelarSubscripcion" xml:space="preserve">
+    <value>Annuler l’abonnement</value>
+  </data>
+  <data name="LblSeguroDeCancelar" xml:space="preserve">
+    <value>Voulez-vous vraiment annuler l’abonnement ? Aucun retour des pouvoirs consommés ne sera effectué.</value>
+  </data>
+  <data name="LblAceptar" xml:space="preserve">
+    <value>Accepter</value>
+  </data>
+  <data name="LblTipo" xml:space="preserve">
+    <value>Type d’abonnement :</value>
+  </data>
+  <data name="Alarm_1" xml:space="preserve">
+    <value>Avertissement ou danger</value>
+  </data>
+  <data name="Alarm_2" xml:space="preserve">
+    <value>Crime ou crime commis</value>
+  </data>
+  <data name="Alarm_3" xml:space="preserve">
+    <value>Bagarre de rue</value>
+  </data>
+  <data name="Alarm_4" xml:space="preserve">
+    <value>Animal perdu</value>
+  </data>
+  <data name="Alarm_5" xml:space="preserve">
+    <value>Personne perdue</value>
+  </data>
+  <data name="Alarm_6" xml:space="preserve">
+    <value>Émeutes ou manifestations</value>
+  </data>
+  <data name="Alarm_7" xml:space="preserve">
+    <value>Demande d’accompagnement visuel par sortie rue</value>
+  </data>
+  <data name="Alarm_8" xml:space="preserve">
+    <value>Violence domestique</value>
+  </data>
+  <data name="Alarm_9" xml:space="preserve">
+    <value>Suspect fuyant vers votre zone de localisation</value>
+  </data>
+  <data name="LblCostoPoderes" xml:space="preserve">
+    <value>Coût du forfait</value>
+  </data>
+  <data name="LblSuscripcionesDisponibles" xml:space="preserve">
+    <value>Abonnements actuellement disponibles</value>
+  </data>
+  <data name="LblFamilia" xml:space="preserve">
+    <value>Famille</value>
+  </data>
+  <data name="LblAmigo" xml:space="preserve">
+    <value>Ami</value>
+  </data>
+  <data name="LblCompanero" xml:space="preserve">
+    <value>Compagnon</value>
+  </data>
+  <data name="LblOtroSinDefinir" xml:space="preserve">
+    <value>Autres non définis</value>
+  </data>
+  <data name="LabelExito" xml:space="preserve">
+    <value>Succès</value>
+  </data>
+  <data name="LblSolicitudAprobada" xml:space="preserve">
+    <value>Demande approuvée avec succès.</value>
+  </data>
+  <data name="MensajeErrorAprobando" xml:space="preserve">
+    <value>Erreur lors de l’approbation de la demande</value>
+  </data>
+  <data name="MensajeErrorRechazando" xml:space="preserve">
+    <value>Echec du rejet de la demande.</value>
+  </data>
+  <data name="LblSolicitudRechazada" xml:space="preserve">
+    <value>Demande rejetée avec succès.</value>
+  </data>
+  <data name="LblUsuarioSolicitante" xml:space="preserve">
+    <value>Utilisateur demandeur</value>
+  </data>
+  <data name="LblFechaSolicitud" xml:space="preserve">
+    <value>Date d’application</value>
+  </data>
+  <data name="LblAccionRealizar" xml:space="preserve">
+    <value>Mesures à prendre</value>
+  </data>
+  <data name="LblSubscripcionCompletada" xml:space="preserve">
+    <value>Abonnement terminé</value>
+  </data>
+  <data name="LblSubscripcionFallida" xml:space="preserve">
+    <value>Echec de l’abonnement</value>
+  </data>
+  <data name="LblUsuarioAprobador" xml:space="preserve">
+    <value>Utilisateur approbateur</value>
+  </data>
+  <data name="LblFechaAprobacion" xml:space="preserve">
+    <value>Date d’approbation</value>
+  </data>
+  <data name="LblSubscrEliminada" xml:space="preserve">
+    <value>Désabonné</value>
+  </data>
+  <data name="LblSubsEliminadaExitosamente" xml:space="preserve">
+    <value>Abonnement supprimé avec succès</value>
+  </data>
+  <data name="LblEliminarProtector" xml:space="preserve">
+    <value>Retirer le protecteur</value>
+  </data>
+  <data name="LblRenovacionAplicada" xml:space="preserve">
+    <value>Rénovation mise en œuvre avec succès</value>
+  </data>
+  <data name="LblErrorRenovando" xml:space="preserve">
+    <value>Erreur lors du renouvellement, de la nouvelle tentative ou du signalement au support, contact disponible dans l’option « menu"&gt;"À propos »</value>
+  </data>
+  <data name="LblCancelacionAplicada" xml:space="preserve">
+    <value>L’annulation a été faite avec succès</value>
+  </data>
+  <data name="LblErrorCancelando" xml:space="preserve">
+    <value>Erreur lors de l’annulation, de la nouvelle tentative ou du signalement au support, contact disponible dans l’option « menu"&gt;"À propos »</value>
+  </data>
+  <data name="LblZonaCreada" xml:space="preserve">
+    <value>L’abonnement de la zone de surveillance demandée a été réalisé avec succès</value>
+  </data>
+  <data name="LblErrorZonaVigil" xml:space="preserve">
+    <value>Erreur lors de l’inscription de la nouvelle zone demandée, nouvelle tentative ou rapport au support, contact disponible dans l’option « menu"&gt;"À propos »</value>
+  </data>
+  <data name="LblSeleccionaNuevoRadio" xml:space="preserve">
+    <value>Sélectionnez le nouveau rayon en mètres</value>
+  </data>
+  <data name="LblUsuarioProtector" xml:space="preserve">
+    <value>Utilisateur protecteur</value>
+  </data>
+  <data name="LblSeguroEliminarProtegido" xml:space="preserve">
+    <value>Êtes-vous sûr de retirer votre protégé? Les pouvoirs utilisés dans cet abonnement ne seront pas restitués.</value>
+  </data>
+  <data name="LblSuspenderProtectores" xml:space="preserve">
+    <value>Êtes-vous sûr de suspendre les notifications à vos protecteurs pendant 6 heures ? Tous vos protecteurs seront suspendus alarmes et l’heure de fin de l’abonnement ne sera pas prolongée pour cette raison. Le logiciel de protection ne sera pas informé de cette action.</value>
+  </data>
+  <data name="LblSuspensionRealizada" xml:space="preserve">
+    <value>La suspension des alarmes de tous vos protecteurs pendant 6 heures a été couronnée de succès.</value>
+  </data>
+  <data name="LabelSeguroEliminarProtector" xml:space="preserve">
+    <value>Êtes-vous sûr de retirer votre protecteur? Les pouvoirs utilisés dans cet abonnement ne seront pas retournés et le protecteur sera informé de cette action.</value>
+  </data>
+  <data name="LabelProtectorEliminado" xml:space="preserve">
+    <value>Le logiciel de protection sélectionné a été supprimé. Les pouvoirs ne seront pas rendus au protecteur. Le protecteur sera informé de cette action</value>
+  </data>
+  <data name="LblConfirmacionRequerida" xml:space="preserve">
+    <value>Important! Confirmation requise!</value>
+  </data>
+  <data name="LblNoHayRegistros" xml:space="preserve">
+    <value>Il n’y a pas de journaux à afficher pour le moment</value>
+  </data>
+  <data name="LblMiLogin" xml:space="preserve">
+    <value>Mon identifiant est :</value>
+  </data>
+  <data name="LblSaldoPoderesEs" xml:space="preserve">
+    <value>Mon bilan de force est le suivant :</value>
+  </data>
+  <data name="LblUsuarioID" xml:space="preserve">
+    <value>Mon nom d’utilisateur est</value>
+  </data>
+  <data name="LblNoHayRegistrosAqui" xml:space="preserve">
+    <value>Personne n’a encore rien écrit !</value>
+  </data>
+  <data name="LblAlertaReportadaPorMi" xml:space="preserve">
+    <value>Alerte signalée par moi</value>
+  </data>
+  <data name="LblPara" xml:space="preserve">
+    <value>Destinataire du message :</value>
+  </data>
+  <data name="LblDe" xml:space="preserve">
+    <value>Expéditeur du message :</value>
+  </data>
+  <data name="ConfiguraciondeSOSpect" xml:space="preserve">
+    <value>SOSpect Configuration</value>
+  </data>
+  <data name="LblExitoEnAceptacion" xml:space="preserve">
+    <value>Votre acceptation de contrat est stockée!</value>
+  </data>
+  <data name="LblFalloEnAceptacion" xml:space="preserve">
+    <value>L’enregistrement a échoué. S’il vous plaît réessayer!</value>
+  </data>
+  <data name="LblDeclinacionAceptacion" xml:space="preserve">
+    <value>Sans accepter un contrat, vous ne pouvez pas continuer!</value>
+  </data>
+  <data name="LblParaIniciar" xml:space="preserve">
+    <value>COMMENÇONS DANS SOSpect!! Pour mettre à jour les alertes à proximité, appuyez sur le bouton bleu d’actualisation</value>
+  </data>
+  <data name="LblAlarmaNoGrave" xml:space="preserve">
+    <value>Utilisez le bouton jaune pour placer des alertes à faible risque et alerter votre communauté ou vos protecteurs. Vous pouvez choisir le type d’alerte et le marquer comme un crime commis. Ce bouton lance l’alerte à votre emplacement exact, étant utile lorsque vous avez besoin d’aide. Vous pouvez également sélectionner un point sur la carte pour localiser l’alerte sans compromettre votre position.</value>
+  </data>
+  <data name="LblCrimenCometido" xml:space="preserve">
+    <value>Le bouton rouge déclenche une catégorie : crime commis alarme. SOSpect ne vous oblige pas à inclure une catégorie en raison de l’importance du temps dans ces cas. L’alarme est automatiquement placée à votre emplacement exact. Vous pouvez également sélectionner un point sur la carte pour placer l’alerte, puis changer la catégorie en crime commis.</value>
+  </data>
+  <data name="LblDescripcionAlarmas" xml:space="preserve">
+    <value>Dans l’option « Décrire » de la barre inférieure, vous trouverez une liste d’alarmes placées par vous ou d’autres. Si vous avez créé l’alarme, vous pouvez ajouter une description. Si l’alarme a été créée par quelqu’un d’autre, vous pouvez évaluer sa véracité et compléter sa description. Fais attention! Si vous fournissez de fausses informations ou des évaluations incorrectes, votre compte peut être suspendu. Lisez attentivement les termes et conditions pour éviter cela.</value>
+  </data>
+  <data name="LblDescripcionMensajes" xml:space="preserve">
+    <value>Dans la cloche dans le coin supérieur droit, vous pouvez lire vos messages, qui incluent des notifications d’abonnement et des alarmes récentes. Cette liste est différente de l’option de descriptions, où vous pouvez trouver directement les alarmes récentes.</value>
+  </data>
+  <data name="LblDescripcionMenu" xml:space="preserve">
+    <value>Dans l’engrenage dans le coin supérieur gauche, vous trouverez les options de configuration SOSpect. Vous pouvez acheter des pouvoirs pour acheter des abonnements et protéger votre famille ou étendre votre rayon de réception d’alarme. SE SOUVENIR! Au début, nous vous donnons 80 pouvoirs afin que vous puissiez acheter deux abonnements dès le départ.</value>
+  </data>
+  <data name="LblRecomendaciones" xml:space="preserve">
+    <value>ENSEMBLE, NOUS SOMMES INVINCIBLES! Les fonctions de base d’alerte et de réception d’alertes dans un rayon de 100 mètres sont gratuites, et lorsque vous commencez, nous vous donnons 2 abonnements. Invitez votre communauté et votre famille à utiliser ce service gratuit pour lutter contre la hausse de la criminalité. Vous pouvez sauver des vies ou être sauvé en recevant une alerte à temps. Les alertes de personnes perdues ou d’animaux de compagnie ont une portée de 10 kilomètres, et les manifestations violentes ont une portée de 1 kilomètre</value>
+  </data>
+  <data name="LblPromocion" xml:space="preserve">
+    <value>Enfin, n’oubliez pas que vous gagnerez une procuration pour chaque note véridique que vous fournissez dans SOSpect, lorsque le vote des alarmes se termine 90 minutes après leur placement. La plupart des gens sont honnêtes et ensemble, nous nous protégerons les uns les autres et nos familles. BIENVENUE CHEZ SOSPECT !</value>
+  </data>
+  <data name="LblDescripcionMapa" xml:space="preserve">
+    <value>A tout moment, vous pouvez sélectionner l’option « MAP » à gauche de la barre inférieure, qui est le point de départ de SOSpect. De là, vous pouvez voir les alarmes à proximité. Votre position apparaîtra au centre de la carte et le cercle représente le rayon qui pourrait vous affecter. Par défaut, ce rayon est de 100 mètres, mais vous pouvez le modifier dans le menu des paramètres.</value>
+  </data>
+  <data name="LblRecomendacionImportante" xml:space="preserve">
+    <value>Il est important que vous ouvriez SOSpect périodiquement, avant de quitter la maison ou lorsque vous arrivez à un endroit, pour mettre à jour votre emplacement. De cette façon, nous pouvons vous informer s’il y a un risque dans votre région. Veuillez noter que lorsque l’application est fermée, nous ne sommes pas en mesure d’obtenir votre position en raison des restrictions imposées par les systèmes d’exploitation des appareils. Vérifiez les termes et conditions liés à votre emplacement.</value>
+  </data>
+  <data name="LblUsuarioBloqueado" xml:space="preserve">
+    <value>Utilisateur suspendu pour notes négatives</value>
+  </data>
+  <data name="LblMarcasNegativas" xml:space="preserve">
+    <value>Mon nombre de notes négatives est de</value>
+  </data>
+  <data name="LblCuentaSuspendida" xml:space="preserve">
+    <value>Compte temporairement suspendu en raison de marques négatives d’autres utilisateurs</value>
+  </data>
+  <data name="LblTitleCuentaSuspendida" xml:space="preserve">
+    <value>Compte temporairement suspendu</value>
+  </data>
+  <data name="LblFechaFinSuspension" xml:space="preserve">
+    <value>La date de fin de suspension est</value>
+  </data>
+  <data name="LblTocaAqui" xml:space="preserve">
+    <value>Appuyez ici pour aller</value>
+  </data>
+  <data name="LblNoTienesConexion" xml:space="preserve">
+    <value>Pas de connexion Internet</value>
+  </data>
+  <data name="LblExplicacionSinConexion" xml:space="preserve">
+    <value>Votre relevé est nécessaire pour vous connecter à SOSpect. Sans Internet, nous ne pouvons pas savoir s’il est actif.</value>
+  </data>
+  <data name="LblSinConexionDescripcion" xml:space="preserve">
+    <value>Un accès Internet actif est nécessaire pour récupérer le statut de votre compte SOSpect.</value>
+  </data>
+  <data name="LblSinConexionQueHacer" xml:space="preserve">
+    <value>Veuillez activer votre internet et redémarrer SOSpect</value>
+  </data>
+  <data name="SefinalizalasubscripcionporsolicituddelusuarioPROTEGIDOatravésdelaAPIdesdelaAPP" xml:space="preserve">
+    <value>L’abonnement est résilié à la demande de l’utilisateur PROTÉGÉ via l’API de l’APP</value>
+  </data>
+  <data name="Nopuederenovarsedebidoaquefuecancelada,requieresubscripciónnueva" xml:space="preserve">
+    <value>Ne peut pas être renouvelé car il a été annulé, nécessite un nouvel abonnement</value>
+  </data>
+  <data name="Alarmasgeneradaspormicirculosocial" xml:space="preserve">
+    <value>Alarmes générées par mon cercle social</value>
+  </data>
+  <data name="Incrementomidiametrodevigilancia" xml:space="preserve">
+    <value>J’augmente mon diamètre de surveillance</value>
+  </data>
+  <data name="Zonadevigilanciaadicional" xml:space="preserve">
+    <value>Zone de surveillance supplémentaire</value>
+  </data>
+  <data name="Renovable" xml:space="preserve">
+    <value>Renouvelable</value>
+  </data>
+  <data name="SefinalizalasubscripcionporsolicituddelusuarioPROTECTORatravésdelaAPIdesdelaAPP" xml:space="preserve">
+    <value>L’abonnement est résilié à la demande de l’utilisateur PROTECTOR via l’API de l’APP</value>
+  </data>
+  <data name="LblEsRenovable" xml:space="preserve">
+    <value>Est-il renouvelable?</value>
+  </data>
+  <data name="LblObsSubs" xml:space="preserve">
+    <value>Remarque d’abonnement :</value>
+  </data>
+  <data name="NingunaObservacion" xml:space="preserve">
+    <value>Aucun commentaire</value>
+  </data>
+  <data name="Subscripcionvigente" xml:space="preserve">
+    <value>Abonnement en cours</value>
+  </data>
+  <data name="Actualmenteactivoenotrasuscripcion" xml:space="preserve">
+    <value>Actuellement actif sur un autre abonnement</value>
+  </data>
+  <data name="LblRadioActual" xml:space="preserve">
+    <value>Mon rayon actuel pour recevoir les alarmes est :</value>
+  </data>
+  <data name="LblPoderesRequeridosZV" xml:space="preserve">
+    <value>Compétences requises pour l’élargissement sélectionné</value>
+  </data>
+  <data name="OptTerminosCondiciones" xml:space="preserve">
+    <value>Conditions générales SOSpect</value>
+  </data>
+  <data name="DebesAbrirLaApp" xml:space="preserve">
+    <value>SOSpect ne peut pas connaître les changements d’emplacement de l’utilisateur lorsqu’il est fermé, cela se produit par les politiques de conservation de la batterie des systèmes d’exploitation des téléphones portables, il est donc important que l’utilisateur ouvre fréquemment l’application pour vérifier les alarmes dans la zone où il s’est déplacé et recevoir les alarmes à proximité à temps.</value>
+  </data>
+  <data name="InvitaMasPersonas" xml:space="preserve">
+    <value>Pour améliorer la sécurité de l’utilisateur, il est important que son entourage, sa famille et ses voisins, téléchargent gratuitement l’application. S’il n’y a pas d’utilisateurs à proximité, l’utilisateur peut ne pas être alerté à temps ou ses alertes peuvent ne pas être entendues, maintenant l’état de risque tel qu’il était avant le téléchargement de l’application. Il est important d’inviter plus de gens à s’entraider!</value>
+  </data>
+  <data name="Insertiondone" xml:space="preserve">
+    <value>Insertion effectuée.</value>
+  </data>
+  <data name="AnerroroccurredwhilequalifyingthealarmCode1" xml:space="preserve">
+    <value>Une erreur s’est produite lors de l’évaluation de l’alarme avec le code 1</value>
+  </data>
+  <data name="AnerroroccurredwhilequalifyingthealarmCode2" xml:space="preserve">
+    <value>Une erreur s’est produite lors de l’évaluation de l’alarme avec le code 2</value>
+  </data>
+  <data name="AnerroroccurredwiththealarmqualificationmodelCode3" xml:space="preserve">
+    <value>Une erreur s’est produite lors de l’évaluation de l’alarme avec le code 3</value>
+  </data>
+  <data name="Userregistrationsuccessful" xml:space="preserve">
+    <value>Votre utilisateur a été enregistré !</value>
+  </data>
+  <data name="Anerroroccurredwhileregisteringtheusercode1" xml:space="preserve">
+    <value>Une erreur s’est produite lors de l’enregistrement du code 1 de votre utilisateur</value>
+  </data>
+  <data name="Anerroroccurredwhileregisteringtheusercode2" xml:space="preserve">
+    <value>Une erreur s’est produite lors de l’enregistrement du code 2 de votre utilisateur</value>
+  </data>
+  <data name="Anerroroccurredwiththepeoplemodelforuserregistrationcode3" xml:space="preserve">
+    <value>Une erreur s’est produite lors de l’enregistrement du code 3 de votre utilisateur</value>
+  </data>
+  <data name="Permisosolicitadoconexito" xml:space="preserve">
+    <value>Autorisation demandée avec succès</value>
+  </data>
+  <data name="OcurriounerrorenelprocesodesolicitarpermisoalprotegidoCodigo1" xml:space="preserve">
+    <value>Une erreur avec le code 1 s’est produite lors de la demande d’autorisation du protégé</value>
+  </data>
+  <data name="Nofueposiblerealizarenviarlasolicituddepermisoalprotegidoporqueelmodelonoesvalido" xml:space="preserve">
+    <value>Il n’a pas été possible d’envoyer la demande d’autorisation au protégé, le modèle n’est pas valide</value>
+  </data>
+  <data name="AlertaEnUbicacion" xml:space="preserve">
+    <value>Vous souhaitez créer une alerte SOSpect à cet emplacement ?</value>
+  </data>
+  <data name="CrearEnUbicacionActual" xml:space="preserve">
+    <value>Vous souhaitez créer une alerte SOSpect à votre emplacement actuel ?</value>
+  </data>
+  <data name="SeguroCerrarSesion" xml:space="preserve">
+    <value>Êtes-vous sûr de vous déconnecter ?</value>
+  </data>
+  <data name="Tu" xml:space="preserve">
+    <value>Vous</value>
+  </data>
+  <data name="Anonimo" xml:space="preserve">
+    <value>Anonyme</value>
+  </data>
+  <data name="AlarmaCerrada" xml:space="preserve">
+    <value>Alarme fermée</value>
+  </data>
+  <data name="LblSaldoPoderesInsuficiente" xml:space="preserve">
+    <value>Votre rapport de force est insuffisant</value>
+  </data>
+  <data name="LblComprarPoderes" xml:space="preserve">
+    <value>Acheter des procurations</value>
+  </data>
+  <data name="LblSeguroRenovar" xml:space="preserve">
+    <value>Êtes-vous sûr de renouveler cet abonnement ?</value>
+  </data>
+  <data name="OptReportes" xml:space="preserve">
+    <value>Rapports</value>
+  </data>
+  <data name="LblReportesTitulo" xml:space="preserve">
+    <value>Rapports SOSpect</value>
+  </data>
+  <data name="LblReportesDescripcion" xml:space="preserve">
+    <value>Les rapports vous donnent l’occasion de comprendre comment vous avez aidé d’autres utilisateurs en évitant les situations défavorables. De plus, ils vous permettent d’identifier les zones dangereuses sur la carte de votre ville et d’observer l’évolution de la criminalité au fil du temps. En outre, grâce à l’analyse des modèles, il est possible de générer des alertes précoces avant que des événements négatifs ne se produisent. Il est important de noter que le rapport de base est gratuit, tandis que d’autres rapports peuvent avoir un coût en raison de la consommation de calcul nécessaire à leur génération.</value>
+  </data>
+  <data name="OptReporteDeCalorEnZona" xml:space="preserve">
+    <value>Rapport avec cartes thermiques</value>
+  </data>
+  <data name="OptReporteEvolucionEnElTiempo" xml:space="preserve">
+    <value>Rapport d’évolution des alertes par heure</value>
+  </data>
+  <data name="OptReportesPredictivos" xml:space="preserve">
+    <value>Rapports prédictifs</value>
+  </data>
+  <data name="OptReporteAnaliticoDeDescripcionesAlarmas" xml:space="preserve">
+    <value>Rapports analytiques de chats d’alarme</value>
+  </data>
+  <data name="LblReporteCalorSospect" xml:space="preserve">
+    <value>Cartes thermiques SOSpect</value>
+  </data>
+  <data name="LblReporteEnConstruccion" xml:space="preserve">
+    <value>Bientôt!! Cette fonctionnalité est en cours de construction !</value>
+  </data>
+  <data name="LblDescripcionMapaDeCalor" xml:space="preserve">
+    <value>Dans ce rapport, vous aurez accès à une carte thermique de votre région, où vous pourrez sélectionner différents mois depuis le début de l’exploitation de SOSpect. Cette fonctionnalité vous permettra d’observer et de comprendre l’évolution de chaque zone de la carte qui vous intéresse.</value>
+  </data>
+  <data name="LblCostoReporte" xml:space="preserve">
+    <value>Gardez à l’esprit que l’utilisation de cette fonctionnalité entraîne un coût de calcul et nécessite des puissances, bien qu’elle ne soit pas d’une valeur élevée. Cependant, vous pouvez l’acquérir sans aucun problème en utilisant les pouvoirs que nous vous donnons lors de votre première utilisation de l’application.</value>
+  </data>
+  <data name="LblReporteEvolucionAlarmas" xml:space="preserve">
+    <value>Evolution des alarmes placées dans SOSpect</value>
+  </data>
+  <data name="LblDescripcionEvolucionAlarmas" xml:space="preserve">
+    <value>Dans ce rapport, vous serez en mesure de connaître les tendances de chaque type d’alarme au fil du temps dans votre région. Vous serez en mesure d’observer et d’analyser les tendances de dangerosité, ainsi que d’identifier les diminutions possibles de la criminalité.</value>
+  </data>
+  <data name="LblReportePredictivo" xml:space="preserve">
+    <value>Rapports prédictifs SOSpect</value>
+  </data>
+  <data name="LblDescripcionReportesPredictivos" xml:space="preserve">
+    <value>Au fur et à mesure que la communauté SOSpect génère suffisamment de données, des prédictions d’événements basées sur les probabilités et des outils analytiques peuvent être créés. Ces rapports vous permettront de savoir quand des vagues d’alertes ou une augmentation de l’activité criminelle approchent, vous donnant l’occasion de prendre les précautions nécessaires pour éviter tout risque pour vous, votre famille et votre communauté.</value>
+  </data>
+  <data name="LblReporteAnalisisDeTextos" xml:space="preserve">
+    <value>Rapport d’analyse du chat d’alarme SOSpect</value>
+  </data>
+  <data name="LblDescripcionAnalisisTextos" xml:space="preserve">
+    <value>Grâce au fait que les utilisateurs décrivent les alarmes et mettent à jour leur évolution grâce au chat interne de SOSpect, ce rapport permettra de visualiser les typologies qui touchent le plus la communauté. C’est l’occasion de prendre des mesures pour améliorer la perception de la sécurité dans votre région.</value>
+  </data>
+  <data name="LblRangoReporte" xml:space="preserve">
+    <value>Ce rapport couvre les 30 derniers jours</value>
+  </data>
+  <data name="AcercadeSOSpect" xml:space="preserve">
+    <value>À propos de SOSpect</value>
+  </data>
+  <data name="Porcentajedealarmasciertasfrenteafalsasenunradiodeunkilometroymedio" xml:space="preserve">
+    <value>Pourcentage d’alarmes vraies ou fausses dans un rayon d’un kilomètre et demi</value>
+  </data>
+  <data name="Promediodetiempoenminutosentrelanzamientodealarmaenmizonaylaprimeracalificacionodescripcion" xml:space="preserve">
+    <value>Temps moyen en minutes entre le lancement de l’alarme dans ma région et la première évaluation ou description</value>
+  </data>
+  <data name="Cantidadrealdepersonasenunradiodeunkilometroymedio" xml:space="preserve">
+    <value>Nombre réel de personnes dans un rayon d’un kilomètre et demi</value>
+  </data>
+  <data name="Cantidadrealdepersonasenmiradioactual" xml:space="preserve">
+    <value>Nombre réel de personnes dans mon rayon actuel</value>
+  </data>
+  <data name="Miradioactualderecepcionyenviodealarmasenmetros" xml:space="preserve">
+    <value>Mon rayon actuel de réception et d’envoi des alarmes en mètres</value>
+  </data>
+  <data name="Cantidadrealdepersonasquerecibieronmisalarmas" xml:space="preserve">
+    <value>Nombre réel de personnes qui ont reçu mes alarmes</value>
+  </data>
+  <data name="Cantidaddenotificacionesdealarmaenviadasdemiparte" xml:space="preserve">
+    <value>Nombre de notifications d’alarme envoyées par moi</value>
+  </data>
+  <data name="Personasquereportaronmiayudacomonegativaofalsa" xml:space="preserve">
+    <value>Les personnes qui ont signalé mon aide comme négative ou fausse</value>
+  </data>
+  <data name="Personasqueagradecieronmiayuda" xml:space="preserve">
+    <value>Les gens qui ont apprécié mon aide</value>
+  </data>
+  <data name="Poderesganadosporregalos" xml:space="preserve">
+    <value>Pouvoirs acquis par les dons</value>
+  </data>
+  <data name="LblParticipacionTpAlarma" xml:space="preserve">
+    <value>Participation par type d’alarme</value>
+  </data>
+  <data name="LblMetricBasics" xml:space="preserve">
+    <value>Métriques de base</value>
+  </data>
+  <data name="LblEfectiAlarmas" xml:space="preserve">
+    <value>Efficacité des alarmes</value>
+  </data>
+  <data name="LblTotalAlarmas" xml:space="preserve">
+    <value>Nombre total d’alarmes</value>
+  </data>
+  <data name="LblAlarmasVerdaderas" xml:space="preserve">
+    <value>De vraies alarmes</value>
+  </data>
+  <data name="LblAlarmasFalsas" xml:space="preserve">
+    <value>Fausses alarmes</value>
+  </data>
+  <data name="LblAlarmasEfectivas" xml:space="preserve">
+    <value>Pourcentage d’alarmes efficaces</value>
+  </data>
+  <data name="LblMarcarLeidos" xml:space="preserve">
+    <value>Marquer tout comme lu</value>
+  </data>
+  <data name="LblSeMarcaronComoLeidos" xml:space="preserve">
+    <value>Tous les messages ont été marqués comme lus</value>
+  </data>
+  <data name="LabelNuevaVersion" xml:space="preserve">
+    <value>Il existe une nouvelle version de SOSpect et il est nécessaire de continuer</value>
+  </data>
+  <data name="OptReporteBasico" xml:space="preserve">
+    <value>Rapports de base - GRATUIT!</value>
+  </data>
+  <data name="LblReporteBasicoSospect" xml:space="preserve">
+    <value>Rapports de base SOSpect</value>
+  </data>
+  <data name="LblReporteBasicoDescripcion" xml:space="preserve">
+    <value>Les rapports de base de SOSpect vous fournissent des informations précieuses sur l’impact de vos rapports d’alarme sur votre communauté. En outre, ils vous montrent le nombre de pouvoirs gagnés en aidant votre communauté en notant avec précision les alarmes et l’honnêteté dans ces évaluations. Grâce à ces rapports, vous pouvez également évaluer le comportement global de votre région au cours du mois écoulé, y compris le nombre d’utilisateurs qui ont participé au processus et le nombre d’utilisateurs qui ont reçu des notes négatives en raison d’engagements incorrects.</value>
+  </data>
+  <data name="LblReporteBasicoDescripcionCorta" xml:space="preserve">
+    <value>Les rapports de base de SOSpect vous fournissent des informations précieuses sur... Voir plus...</value>
+  </data>
+  <data name="LblDescripcionRepTipoAlarma" xml:space="preserve">
+    <value>Ce rapport vous donne des informations sur les alarmes les plus fréquentes dans un rayon d’un kilomètre et demi de votre emplacement actuel.</value>
+  </data>
+  <data name="LblDescripcionRepEfectAlarmas" xml:space="preserve">
+    <value>Ce rapport vous fournit des informations sur la relation d’efficacité entre les alarmes réelles et fausses dans un rayon d’un kilomètre et demi de votre emplacement actuel.</value>
+  </data>
+  <data name="LblDescripcionRepMetricasBasicas" xml:space="preserve">
+    <value>Ce rapport vous fournit des données sur le nombre d’utilisateurs dans un rayon d’un kilomètre et demi de votre emplacement actuel, ainsi que sur le nombre d’utilisateurs dans votre rayon actuel d’alarmes d’application. En outre, il comprend plusieurs informations supplémentaires de votre intérêt.</value>
+  </data>
+  <data name="OptVolumenAlarmas" xml:space="preserve">
+    <value>Volume par type d’alarmes à proximité</value>
+  </data>
+  <data name="OptEfectividadAlarmas" xml:space="preserve">
+    <value>Efficacité des alarmes à proximité</value>
+  </data>
+  <data name="OptMetricasBasicas" xml:space="preserve">
+    <value>Mesures de base des alarmes à proximité</value>
+  </data>
+  <data name="LblCredibilidadActual" xml:space="preserve">
+    <value>La crédibilité de mes alarmes est :</value>
+  </data>
+  <data name="OptManualUsuarioSospect" xml:space="preserve">
+    <value>Manuel de l’utilisateur SOSpect</value>
+  </data>
+  <data name="LblDescManualUsuario" xml:space="preserve">
+    <value>Découvrez SOSpect, une application gratuite conçue pour vous protéger, vous et vos proches. Nous avons créé un manuel en ligne concis et détaillé qui vous aidera à l’utiliser correctement. Avec ce manuel, vous pouvez tirer le meilleur parti de SOSpect et profiter de toutes ses fonctionnalités de sécurité.</value>
+  </data>
+  <data name="SesionApple" xml:space="preserve">
+    <value>CONNECTEZ-VOUS AVEC APPLE</value>
+  </data>
+  <data name="LblCredibilidadAlarmaActual" xml:space="preserve">
+    <value>Crédibilité de l’alarme :</value>
+  </data>
+  <data name="LblAccedeAlManual" xml:space="preserve">
+    <value>Vous pouvez accéder au manuel à l’adresse suivante :</value>
+  </data>
+  <data name="LblRefrescarLista" xml:space="preserve">
+    <value>Actualiser la liste des alarmes</value>
+  </data>
+  <data name="LblErrorCorreoDispositivo" xml:space="preserve">
+    <value>Impossible d’envoyer des e-mails sur cet appareil</value>
+  </data>
+  <data name="LblErrorCorreo" xml:space="preserve">
+    <value>Erreur lors de l’envoi d’un e-mail :</value>
+  </data>
+  <data name="LblSeleccioneTipoAlarma" xml:space="preserve">
+    <value>Veuillez sélectionner le type d’alarme</value>
+  </data>
+  <data name="LblCompraFallida" xml:space="preserve">
+    <value>L’achat n’a pas été effectué. Veuillez vérifier l’accès à Internet et réessayer</value>
+  </data>
+  <data name="LblSeleccionePuntoMapa" xml:space="preserve">
+    <value>Vous devez sélectionner une zone de surveillance sur la carte</value>
+  </data>
+  <data name="Cantidaddealarmascolocadasenlaszonasdevigilanciasuscritas" xml:space="preserve">
+    <value>Nombre d’alarmes placées dans les zones de surveillance souscrites</value>
+  </data>
+  <data name="Cantidaddealarmascolocadaspormisprotegidos" xml:space="preserve">
+    <value>Nombre d’alarmes placées par mes protégés</value>
+  </data>
+  <data name="Credibilidadactualdelasalarmasqueenvioamicomunidad" xml:space="preserve">
+    <value>Crédibilité actuelle des alarmes que j’envoie à ma communauté</value>
+  </data>
+  <data name="LblCompraExitosa" xml:space="preserve">
+    <value>Félicitations! Vous avez acheté des pouvoirs pour acheter des abonnements. Vous trouverez un message explicatif dans la cloche!</value>
+  </data>
+  <data name="LblDebesHabilitarNotif" xml:space="preserve">
+    <value>Vous devez activer l’envoi de notifications pour que SOSpect fonctionne</value>
+  </data>
+  <data name="LblHabilitarNotifSettings" xml:space="preserve">
+    <value>Cette application peut prendre en charge les notifications, mais vous devez l’activer dans vos paramètres.</value>
+  </data>
+  <data name="LblErrorHabilitandoUsoNotif" xml:space="preserve">
+    <value>Une erreur s’est produite qui a empêché l’utilisation des notifications push</value>
+  </data>
+  <data name="LblMostrarDireccionEscape" xml:space="preserve">
+    <value>L’itinéraire d’évasion de Mark Fugitive</value>
+  </data>
+  <data name="LblProximamenteSOSpect" xml:space="preserve">
+    <value>Bientôt disponible chez SOSpect!</value>
+  </data>
+  <data name="LblReportesProximos" xml:space="preserve">
+    <value>Rapports analytiques et prédictifs avec la science des données !</value>
+  </data>
+  <data name="LblHolaBienvenido" xml:space="preserve">
+    <value>Bonjour! Bienvenue chez SOSpect. 
+
+SOSpect est un outil gratuit conçu pour vous protéger, vous et vos proches, en fournissant des alertes opportunes sur les risques à proximité! Il se peut que vous n’obteniez pas beaucoup d’alarmes au début, car il n’y a pas encore beaucoup de gens près de chez vous qui ont installé SOSpect. Nous vous demandons de nous essayer et de ne pas désinstaller l’application. SOSpect peut vous sauver la vie à un moment donné, ainsi que celle d’un membre de votre famille ou de votre communauté.
+
+Dans la section « Rapport de base » du menu « Rapports » situé dans les paramètres, vous pouvez voir dans la section « Mesures de base » le nombre d’utilisateurs à proximité dans votre zone de couverture, où vous recevrez des alarmes. Aidez-nous à augmenter ce nombre, c’est gratuit et vous permettra de vivre en toute sécurité!
+
+Nous vous invitons à lire attentivement ce petit manuel d’introduction, qui vous donnera une idée du fonctionnement de SOSpect. Veuillez noter qu’il ne sera affiché qu’une seule fois après l’installation de l’application.
+
+Merci d’utiliser SOSpect et de contribuer à la sécurité de tous!
+
+Appuyez sur l’écran pour continuer...</value>
+  </data>
+</root>
