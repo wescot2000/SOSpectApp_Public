@@ -12,6 +12,7 @@ using sospect.Utils;
 using sospect.Helpers;
 using sospect.AuthHelpers;
 using System.Linq;
+using System.Collections.Generic;
 
 namespace sospect.ViewModels
 {
@@ -60,18 +61,31 @@ namespace sospect.ViewModels
             };
 
             IsRunning = true;
-            ResponseMessage response = await ApiService.AprobarSolicitudAsync(requestModel);
-            IsRunning = false;
-
-            if (response.IsSuccess)
+            try
             {
-                await Application.Current.MainPage.DisplayAlert(LabelExito, LblSolicitudAprobada, LabelOK);
-                Solicitudes.Remove(solicitud);
-                OnPropertyChanged(nameof(IsListEmpty));
+                ResponseMessage response = await ApiService.AprobarSolicitudAsync(requestModel);
+                if (response.IsSuccess)
+                {
+                    await Application.Current.MainPage.DisplayAlert(LabelExito, LblSolicitudAprobada, LabelOK);
+                    Solicitudes.Remove(solicitud);
+                    OnPropertyChanged(nameof(IsListEmpty));
+                }
+                else
+                {
+                    await Application.Current.MainPage.DisplayAlert(LabelError, MensajeErrorAprobando, LabelOK);
+                }
             }
-            else
+            catch (System.Exception ex)
             {
-                await Application.Current.MainPage.DisplayAlert(LabelError, MensajeErrorAprobando, LabelOK);
+                var properties = new Dictionary<string, string> {
+                        { "Object", "AprobarRechazarSolicitudModel" },
+                        { "Method", "AprobarSolicitudAsync" }
+                    };
+                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
+            }
+            finally
+            {
+                IsRunning = false;
             }
         }
 
@@ -91,34 +105,60 @@ namespace sospect.ViewModels
             };
 
             IsRunning = true;
-            ResponseMessage response = await ApiService.RechazarSolicitudAsync(requestModel);
-            IsRunning = false;
-
-            if (response.IsSuccess)
+            try
             {
-                await Application.Current.MainPage.DisplayAlert(LabelExito, LblSolicitudRechazada, LabelOK);
-                Solicitudes.Remove(solicitud);
-                OnPropertyChanged(nameof(IsListEmpty));
+                ResponseMessage response = await ApiService.RechazarSolicitudAsync(requestModel);
+                if (response.IsSuccess)
+                {
+                    await Application.Current.MainPage.DisplayAlert(LabelExito, LblSolicitudRechazada, LabelOK);
+                    Solicitudes.Remove(solicitud);
+                    OnPropertyChanged(nameof(IsListEmpty));
+                }
+                else
+                {
+                    await Application.Current.MainPage.DisplayAlert(LabelError, MensajeErrorRechazando, LabelOK);
+                }
             }
-            else
+            catch (System.Exception ex)
             {
-                await Application.Current.MainPage.DisplayAlert(LabelError, MensajeErrorRechazando, LabelOK);
+                var properties = new Dictionary<string, string> {
+                        { "Object", "AprobarRechazarSolicitudModel" },
+                        { "Method", "RechazarSolicitudAsync" }
+                    };
+                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
+            }
+            finally
+            {
+                IsRunning = false;
             }
         }
 
         private async Task CargarSolicitudes()
         {
             IsRunning = true;
-            ApiResponse response = await ApiService.ObtenerSolicitudesPendientes(App.persona.user_id_thirdparty);
-            IsRunning = false;
-
-            if (response.IsSuccess)
+            try
             {
-                foreach (var solicitud in response.Data)
+                ApiResponse response = await ApiService.ObtenerSolicitudesPendientes(App.persona.user_id_thirdparty);
+                if (response.IsSuccess)
                 {
-                    Solicitudes.Add(solicitud);
+                    foreach (var solicitud in response.Data)
+                    {
+                        Solicitudes.Add(solicitud);
+                    }
+                    OnPropertyChanged(nameof(IsListEmpty));
                 }
-                OnPropertyChanged(nameof(IsListEmpty));
+            }
+            catch (System.Exception ex)
+            {
+                var properties = new Dictionary<string, string> {
+                        { "Object", "AprobarRechazarSolicitudModel" },
+                        { "Method", "ObtenerSolicitudesPendientes" }
+                    };
+                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
+            }
+            finally
+            {
+                IsRunning = false;
             }
         }
     }

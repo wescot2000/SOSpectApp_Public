@@ -3,11 +3,10 @@ namespace sospect
 {
     public static class AppConfiguration
     {
-        //Ambiente productivo
-        //internal static string ApiHost = "https://rewqrewqrewqrwe:81";
+        public static bool IsDevelopment = false; // Cambia a 'false' para producción o basado en alguna condición
 
-        //Ambiente desarrollo
-        internal static string ApiHost = "https://rewqrewqrewrewq.com";
+        internal static string ApiHost = IsDevelopment ? "https://www.wescot.com.co:81" : "https://www.wescotcorp.com";
+
         internal static string Login = "/Personas/LoginUser";
         internal static string RegisterUser = "/Personas/RegisterUser";
         internal static string RegistrarAlarma = "/Alarma/InsertarAlarma";
@@ -50,6 +49,8 @@ namespace sospect
         internal static string ListaMetricasBasicas = "/Reportes/ListaMetricasBasicas";
         internal static string ObtenerPromedioEfectivoAlarmas = "/Reportes/ObtenerPromedioEfectivoAlarmas";
         internal static string MarcarTodosComoLeidos = "/Mensajes/MarcarTodosComoLeidos";
+        internal static string CerrarAlarma = "/Alarma/CerrarAlarma";
+        internal static string AsignarAlarma = "/Alarma/AsignarAlarma";
 
     }
 }

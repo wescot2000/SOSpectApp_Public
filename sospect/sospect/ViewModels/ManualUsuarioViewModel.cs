@@ -77,11 +77,21 @@ namespace sospect.ViewModels
             {
                 // Email no es compatible en este dispositivo
                 await Application.Current.MainPage.DisplayAlert(LabelError, LblErrorCorreoDispositivo, LabelOK);
+                var properties = new Dictionary<string, string> {
+                        { "Object", "ManualUsuarioViewModel" },
+                        { "Method", "SendEmail-FeatureNotSupportedException" }
+                    };
+                Microsoft.AppCenter.Crashes.Crashes.TrackError(fbsEx, properties);
             }
             catch (Exception ex)
             {
                 // Algun otro error ocurrió
                 await Application.Current.MainPage.DisplayAlert(LabelError, LblErrorCorreo + ex.Message, LabelOK);
+                var properties = new Dictionary<string, string> {
+                        { "Object", "ManualUsuarioViewModel" },
+                        { "Method", "SendEmail" }
+                    };
+                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
             }
         }
 

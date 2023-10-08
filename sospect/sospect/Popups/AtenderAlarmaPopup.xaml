@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<rg:PopupPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:rg="http://rotorgames.com"
+    xmlns:helpers="clr-namespace:sospect.Helpers"
+    BackgroundColor="Transparent"
+    HasSystemPadding="False"
+    x:Class="sospect.Popups.AtenderAlarmaPopup">
+
+    <rg:PopupPage.Animation>
+        <rg:ScaleAnimation
+            DurationIn="400"
+            DurationOut="300"
+            EasingIn="SinOut"
+            EasingOut="SinIn"
+            HasBackgroundAnimation="True"
+            PositionIn="Center"
+            PositionOut="Center"
+            ScaleIn="1.2"
+            ScaleOut="0.8" />
+    </rg:PopupPage.Animation>
+
+    <Grid>
+        <BoxView Color="#66000000" AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All" />
+
+        <Frame CornerRadius="10"
+               VerticalOptions="Center"
+               HorizontalOptions="Center"
+               BackgroundColor="White"
+               WidthRequest="350"
+               Margin="10">
+            <StackLayout Spacing="10" Padding="15">
+
+                <!-- Título -->
+                <Label Text="{helpers:TranslateExtension Text='LblEstasSeguroAtender'}" 
+                       TextColor="Black" 
+                       FontAttributes="Bold" 
+                       FontSize="Medium"
+                       HorizontalTextAlignment="Center" />
+
+                <!-- Advertencia -->
+                <Label Text="{helpers:TranslateExtension Text='LblAccionSinDeshacer'}" 
+                       TextColor="Gray" 
+                       FontSize="Small"
+                       HorizontalTextAlignment="Center" />
+
+                <!-- Botones -->
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Padding="10">
+                    <Frame Padding="5" BorderColor="Black" BackgroundColor="LightGray" HorizontalOptions="Center" HeightRequest="35" WidthRequest="150" CornerRadius="10">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding CancelarCommand}" NumberOfTapsRequired="1" />
+                        </Frame.GestureRecognizers>
+                        <Label Text="{helpers:TranslateExtension Text='LabelCancelar'}" 
+                            TextColor="Black"
+                            HorizontalOptions="CenterAndExpand"
+                            VerticalOptions="CenterAndExpand"
+                            HorizontalTextAlignment="Center"
+                            VerticalTextAlignment="Center" />
+                    </Frame>
+
+                    <Frame Padding="5" BorderColor="Black" BackgroundColor="LightGray" HorizontalOptions="Center" HeightRequest="35" WidthRequest="250" CornerRadius="10">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding ConfirmarAtencionCommand}" NumberOfTapsRequired="1" />
+                        </Frame.GestureRecognizers>
+                        <Label Text="{helpers:TranslateExtension Text='LblConfirmoAtencion'}" 
+                            TextColor="Black"
+                            HorizontalOptions="CenterAndExpand"
+                            VerticalOptions="CenterAndExpand"
+                            HorizontalTextAlignment="Center"
+                            VerticalTextAlignment="Center" />
+                    </Frame>
+                </StackLayout>
+
+            </StackLayout>
+        </Frame>
+    </Grid>
+</rg:PopupPage>

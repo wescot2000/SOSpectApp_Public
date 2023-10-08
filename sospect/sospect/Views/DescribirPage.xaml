@@ -15,6 +15,7 @@
             <converters:FlagPropietarioAlarmaToTextConverter x:Key="FlagPropietarioAlarmaToTextConverter" />
             <converters:MultiBoolToVisibilityConverter x:Key="MultiBoolToVisibilityConverter" />
             <converters:BooleanNegatorConverter x:Key="BooleanNegatorConverter" />
+            <converters:VisibilityConverter x:Key="VisibilityConverter" />
         </ResourceDictionary>
     </ContentPage.Resources>
     <ContentPage.Content>
@@ -40,12 +41,16 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <Grid>
+                            <Grid >
                                 <Grid.RowDefinitions>
-                                    <RowDefinition Height="*"></RowDefinition>
-                                    <RowDefinition Height="*"></RowDefinition>
-                                    <RowDefinition Height="*"></RowDefinition>
-                                    <RowDefinition Height="*"></RowDefinition>
+                                    <RowDefinition Height="Auto"></RowDefinition>
+                                    <RowDefinition Height="Auto"></RowDefinition>
+                                    <RowDefinition Height="Auto"></RowDefinition>
+                                    <RowDefinition Height="Auto"></RowDefinition>
+                                    <RowDefinition Height="Auto"></RowDefinition>
+                                    <RowDefinition Height="Auto"></RowDefinition>
+                                    <RowDefinition Height="Auto"></RowDefinition>
+                                    <RowDefinition Height="Auto"></RowDefinition>
                                 </Grid.RowDefinitions>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="*"></ColumnDefinition>
@@ -55,16 +60,19 @@
                                     <ColumnDefinition Width="35"></ColumnDefinition>
                                 </Grid.ColumnDefinitions>
                                 <Label Grid.Column="0"
+                                       Grid.ColumnSpan="2"
                                        Grid.Row="0"
                                        Text="{Binding descripciontipoalarma}"
                                        FontAttributes="Bold"
                                        TextColor="Black"
                                        FontSize="Small"
+                                       Margin="0,10,0,0"
                                        VerticalTextAlignment="Center"
                                        VerticalOptions="Center"
                                        HorizontalOptions="Start"
                                        HorizontalTextAlignment="Start"></Label>
                                 <Label Grid.Column="0"
+                                        Grid.ColumnSpan="2"
                                        Grid.Row="1"
                                        FontSize="Small"
                                        Text="{Binding fecha_alarma}"
@@ -75,6 +83,7 @@
                                        HorizontalOptions="Start"
                                        HorizontalTextAlignment="Start"></Label>
                                 <Label Grid.Column="0"
+                                        Grid.ColumnSpan="2"
                                        Grid.Row="2"
                                        FontSize="Small"
                                        Text="{Binding CredibilidadAlarma}"
@@ -85,6 +94,7 @@
                                        HorizontalOptions="Start"
                                        HorizontalTextAlignment="Start"></Label>
                                 <Label Grid.Column="0"
+                                        Grid.ColumnSpan="2"
                                        Grid.Row="3"
                                        TextColor="DarkGray"
                                        FontSize="Small"
@@ -96,7 +106,8 @@
                                        HorizontalOptions="Start"
                                        HorizontalTextAlignment="Start"
                                        Margin="0,0,10,0"></Label>
-                                <Label Grid.Column="1"
+                                <Label Grid.Column="2"
+                                       Grid.ColumnSpan="3"
                                        Grid.Row="3"
                                        Text="{helpers:TranslateExtension Text='AlarmaCerrada'}"
                                        TextColor="DarkGray"
@@ -108,12 +119,14 @@
                                        HorizontalOptions="Start"
                                        HorizontalTextAlignment="Start"
                                        IsVisible="{Binding EsAlarmaActiva, Converter={StaticResource BooleanNegatorConverter}}"></Label>
-                                <ImageButton Grid.Column="1"
-                                             Grid.Row="0"
-                                             Grid.RowSpan="3"
+                                <ImageButton Grid.Column="3"
+                                             Grid.Row="1"
+                                             Grid.RowSpan="5"
                                              BackgroundColor="Red"
                                              Command="{Binding BindingContext.ConfirmarAlarmaCommand,Source={x:Reference DescribirAlarmaList}}"
                                              CommandParameter="{Binding .}"
+                                             HeightRequest="25"
+                                             WidthRequest="10"
                                              VerticalOptions="Center">
                                     <ImageButton.IsVisible>
                                         <MultiBinding Converter="{StaticResource MultiBoolToVisibilityConverter}">
@@ -128,9 +141,11 @@
                                                          ></FontImageSource>
                                     </ImageButton.Source>
                                 </ImageButton>
-                                <ImageButton Grid.Column="2"
-                                             Grid.Row="0"
-                                             Grid.RowSpan="3"
+                                <ImageButton Grid.Column="4"
+                                             Grid.Row="1"
+                                             Grid.RowSpan="5"
+                                             HeightRequest="25"
+                                             WidthRequest="10"
                                              BackgroundColor="Transparent"
                                              Command="{Binding BindingContext.DescribirAlarmaCommand,
                                              Source={x:Reference DescribirAlarmaList}}"
@@ -148,6 +163,8 @@
                                              Grid.Row="0"
                                              Grid.RowSpan="3"
                                              BackgroundColor="Transparent"
+                                             HeightRequest="25"
+                                             WidthRequest="10"
                                              Command="{Binding BindingContext.VerDetallesAlarmaCommand, Source={x:Reference DescribirAlarmaList}}" CommandParameter="{Binding .}"
                                              VerticalOptions="Center">
                                     <ImageButton.Source>
@@ -161,6 +178,8 @@
                                              Grid.Row="0"
                                              Grid.RowSpan="3"
                                              BackgroundColor="Transparent"
+                                             HeightRequest="25"
+                                             WidthRequest="10"
                                              Command="{Binding BindingContext.VerAlarmaEnMapaCommand, Source={x:Reference DescribirAlarmaList}}" CommandParameter="{Binding .}"
                                              VerticalOptions="Center">
                                     <ImageButton.Source>
@@ -170,6 +189,91 @@
                                                          ></FontImageSource>
                                     </ImageButton.Source>
                                 </ImageButton>
+                                <Label Grid.Column="0"
+                                       Grid.Row="5"
+                                       TextColor="DarkGray"
+                                       FontSize="Small"
+                                       FontAttributes="Bold"
+                                       LineBreakMode="TailTruncation"
+                                       Text="{helpers:TranslateExtension Text='LblAlarmaConCaptura'}"
+                                       VerticalTextAlignment="Center"
+                                       VerticalOptions="Center"
+                                       HorizontalOptions="Start"
+                                       HorizontalTextAlignment="Start"
+                                       IsVisible="{Binding Flag_hubo_captura}">
+                                </Label>
+                                <Label Grid.Column="0"
+                                       Grid.ColumnSpan="5"
+                                       Grid.Row="6"
+                                       TextColor="DarkGray"
+                                       FontSize="Small"
+                                       FontAttributes="Bold"
+                                       LineBreakMode="TailTruncation"
+                                       Text="{helpers:TranslateExtension Text='LblAgentesAtendiendo'}"
+                                       VerticalTextAlignment="Center"
+                                       VerticalOptions="Center"
+                                       HorizontalOptions="Start"
+                                       HorizontalTextAlignment="Start"
+                                       IsVisible="{Binding flag_alarma_siendo_atendida}">
+                                </Label>
+                                <Label Grid.Column="4"
+                                       Grid.Row="6"
+                                       TextColor="DarkGray"
+                                       FontSize="Small"
+                                       FontAttributes="Bold"
+                                       LineBreakMode="TailTruncation"
+                                       Text="{Binding cantidad_agentes_atendiendo}"
+                                       VerticalTextAlignment="Center"
+                                       VerticalOptions="Center"
+                                       HorizontalOptions="Start"
+                                       HorizontalTextAlignment="Start"
+                                       IsVisible="{Binding flag_alarma_siendo_atendida}">
+                                </Label>
+
+                                <Frame Grid.Column="0"
+                                       Grid.Row="7" 
+                                       Padding="5" 
+                                       BorderColor="Black" 
+                                       IsVisible="{Binding ., Converter={StaticResource VisibilityConverter}}" 
+                                       BackgroundColor="LightGray" 
+                                       Margin="0,0,0,10" 
+                                       HorizontalOptions="Center" 
+                                       HeightRequest="25" 
+                                       WidthRequest="100" 
+                                       CornerRadius="10">
+                                    <Frame.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding BindingContext.CerrarAlarmaCommand,Source={x:Reference DescribirAlarmaList}}" CommandParameter="{Binding .}" NumberOfTapsRequired="1" />
+                                    </Frame.GestureRecognizers>
+                                    <Label Text="{helpers:TranslateExtension Text='LblCerrarAlarma'}" 
+                                           TextColor="Black"
+                                           LineBreakMode="WordWrap"
+                                           HorizontalOptions="CenterAndExpand"
+                                           VerticalOptions="CenterAndExpand"
+                                           HorizontalTextAlignment="Center"
+                                           VerticalTextAlignment="Center" />
+                                </Frame>
+                                <Frame Grid.Column="1" 
+                                       Grid.Row="7" 
+                                       Padding="5" 
+                                       BorderColor="Black" 
+                                       BackgroundColor="LightGray" 
+                                       Margin="0,0,0,10" 
+                                       IsVisible="{Binding flag_es_policia}" 
+                                       HorizontalOptions="Center"
+                                       HeightRequest="25" 
+                                       WidthRequest="100" 
+                                       CornerRadius="10">
+                                    <Frame.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding BindingContext.AtenderAlarmaCommand,Source={x:Reference DescribirAlarmaList}}" CommandParameter="{Binding .}" NumberOfTapsRequired="1" />
+                                    </Frame.GestureRecognizers>
+                                    <Label Text="{helpers:TranslateExtension Text='LblAtenderAlarma'}" 
+                                           TextColor="Black"
+                                           LineBreakMode="WordWrap"
+                                           HorizontalOptions="CenterAndExpand"
+                                           VerticalOptions="CenterAndExpand"
+                                           HorizontalTextAlignment="Center"
+                                           VerticalTextAlignment="Center"/>
+                                </Frame>
                             </Grid>
                         </ViewCell>
                     </DataTemplate>

@@ -83,6 +83,11 @@ namespace sospect.ViewModels
                 var LabelError = TranslateExtension.Translate("LabelError");
                 var LabelOK = TranslateExtension.Translate("LabelOK");
                 await Application.Current.MainPage.DisplayAlert(LabelError, ex.Message, LabelOK);
+                var properties = new Dictionary<string, string> {
+                        { "Object", "CompleteSubscriptionPageViewModel" },
+                        { "Method", "ObtenerValoresDeSubscripcion" }
+                    };
+                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
             }
             finally
             {
@@ -102,6 +107,11 @@ namespace sospect.ViewModels
                 var saldoPoderesInsuficiente = TranslateExtension.Translate("LblSaldoPoderesInsuficiente");
                 var comprarPoderes = TranslateExtension.Translate("LblComprarPoderes");
                 var cancelar = TranslateExtension.Translate("LabelCancelar");
+                var LabelError = TranslateExtension.Translate("LabelError");
+                var LabelExito = TranslateExtension.Translate("LabelExito");
+                var LabelOK = TranslateExtension.Translate("LabelOK");
+                var LblSubscripcionFallida = TranslateExtension.Translate("LblSubscripcionFallida");
+                var LblSubscripcionCompletada = TranslateExtension.Translate("LblSubscripcionCompletada");
 
                 if (_parametros.SaldoPoderes < _poderesRequeridos)
                 {
@@ -120,39 +130,59 @@ namespace sospect.ViewModels
                 };
 
                 IsRunning = true;
-                var response = await ApiService.CompletarSubscripcion(request);
-                IsRunning = false;
-
-                var LabelError = TranslateExtension.Translate("LabelError");
-                var LabelExito = TranslateExtension.Translate("LabelExito");
-                var LabelOK = TranslateExtension.Translate("LabelOK");
-                var LblSubscripcionFallida = TranslateExtension.Translate("LblSubscripcionFallida");
-                var LblSubscripcionCompletada = TranslateExtension.Translate("LblSubscripcionCompletada");
-                if (response.IsSuccess)
+                try
                 {
-                    await Application.Current.MainPage.DisplayAlert(LabelExito, LblSubscripcionCompletada, LabelOK);
-                    MessagingCenter.Send(this, "DatosActualizados");
-                    await Application.Current.MainPage.Navigation.PopToRootAsync();
+                    var response = await ApiService.CompletarSubscripcion(request);
+                    if (response.IsSuccess)
+                    {
+                        await Application.Current.MainPage.DisplayAlert(LabelExito, LblSubscripcionCompletada, LabelOK);
+                        MessagingCenter.Send(this, "DatosActualizados");
+                        await Application.Current.MainPage.Navigation.PopToRootAsync();
+                    }
+                    else
+                    {
+                        await Application.Current.MainPage.DisplayAlert(LabelError, LblSubscripcionFallida, LabelOK);
+                    }
                 }
-                else
+                catch (Exception ex)
                 {
-                    await Application.Current.MainPage.DisplayAlert(LabelError, LblSubscripcionFallida, LabelOK);
+                    var properties = new Dictionary<string, string> {
+                        { "Object", "CompleteSubscriptionPageViewModel" },
+                        { "Method", "CompletarSubscripcion" }
+                    };
+                    Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
                 }
+                finally
+                {
+                    IsRunning = false;
+                }               
             }
         }
 
         public async Task LoadApprovedSubscriptions()
         {
             IsRunning = true;
-            var response = await ApiService.ObtenerSolicitudesAprobadas();
-            IsRunning = false;
-
-            if (response.IsSuccess)
+            try
             {
-                ApprovedSubscriptions = new ObservableCollection<ApprovedSubscription>(response.Data);
-                IsListEmpty = ApprovedSubscriptions.Count == 0;
+                var response = await ApiService.ObtenerSolicitudesAprobadas();
+                if (response.IsSuccess)
+                {
+                    ApprovedSubscriptions = new ObservableCollection<ApprovedSubscription>(response.Data);
+                    IsListEmpty = ApprovedSubscriptions.Count == 0;
+                }
             }
-            
+            catch (Exception ex)
+            {
+                var properties = new Dictionary<string, string> {
+                        { "Object", "CompleteSubscriptionPageViewModel" },
+                        { "Method", "ObtenerSolicitudesAprobadas" }
+                    };
+                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
+            }
+            finally
+            {
+                IsRunning = false;
+            }
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
@@ -21,7 +22,7 @@ namespace sospect.ViewModels
     public class LoginViewModel : BaseViewModel
     {
         internal string authenticationUrl = AppConfiguration.ApiHost + "/mobileauth/";
-        //const string authenticationUrl = "https://trewtrewtrew:81/mobileauth/";
+        //const string authenticationUrl = "https://www.wescot.com.co:81/mobileauth/";
         //const string authenticationUrl = "https://localhost:7079/mobileauth/";
 
         public ICommand GoogleCommand { get; }
@@ -112,7 +113,7 @@ namespace sospect.ViewModels
                 IsRunning = false;
             }
 
-            catch (OperationCanceledException)
+            catch (OperationCanceledException exOCE)
             {
                 var okText = TranslateExtension.Translate("LabelOK");
                 var CanceladoText = TranslateExtension.Translate("LabelCancelado");
@@ -120,6 +121,11 @@ namespace sospect.ViewModels
                 IsRunning = false;
                 Console.WriteLine("Login canceled.");
                 await App.Current.MainPage.DisplayAlert(CanceladoText, LoginCanceladoText, okText);
+                var properties = new Dictionary<string, string> {
+                        { "Object", "LoginViewModel" },
+                        { "Method", "OnAuthenticate-OperationCanceledException" }
+                    };
+                Microsoft.AppCenter.Crashes.Crashes.TrackError(exOCE, properties);
             }
             catch (Exception ex)
             {
@@ -128,7 +134,11 @@ namespace sospect.ViewModels
                 IsRunning = false;
                 Console.WriteLine($"{ex.Message}");
                 await App.Current.MainPage.DisplayAlert(FalloText, $"{ex.Message}", okText);
-
+                var properties = new Dictionary<string, string> {
+                        { "Object", "LoginViewModel" },
+                        { "Method", "OnAuthenticate" }
+                    };
+                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
 
                 if (Device.RuntimePlatform == Device.iOS)
                 {

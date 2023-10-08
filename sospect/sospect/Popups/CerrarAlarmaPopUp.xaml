@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<rg:PopupPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:rg="http://rotorgames.com"
+    BackgroundColor="Transparent"
+    xmlns:helpers="clr-namespace:sospect.Helpers"
+    HasSystemPadding="False"
+    x:Class="sospect.Popups.CerrarAlarmaPopUp">
+    <rg:PopupPage.Animation>
+        <rg:ScaleAnimation
+            DurationIn="400"
+            DurationOut="300"
+            EasingIn="SinOut"
+            EasingOut="SinIn"
+            HasBackgroundAnimation="True"
+            PositionIn="Center"
+            PositionOut="Center"
+            ScaleIn="1.2"
+            ScaleOut="0.8" />
+    </rg:PopupPage.Animation>
+    <Grid>
+        <BoxView Color="#66000000" AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All" />
+        <Frame CornerRadius="10"
+               VerticalOptions="Center"
+               HorizontalOptions="Center"
+               BackgroundColor="White"
+               WidthRequest="350"
+               Margin="10">
+            <ScrollView>
+                <StackLayout>
+                    <!-- Título -->
+                    <Label Text="{helpers:TranslateExtension Text='LblEstasSeguroCerrar'}" 
+                           TextColor="Black" 
+                           FontAttributes="Bold" 
+                           FontSize="Medium"
+                           HorizontalTextAlignment="Center"/>
+
+                    <Label Text="{helpers:TranslateExtension Text='LblAccionSinDeshacer'}" 
+                           TextColor="Gray" 
+                           FontSize="Small" />
+                    <!-- Descripción de cierre -->
+                    <Label Text="{helpers:TranslateExtension Text='LblDescripcionCierre'}" 
+                           TextColor="Gray" 
+                           FontSize="Small" />
+
+                    <!-- Entrada de texto con contador -->
+                    <Frame BorderColor="Gray" Padding="0" CornerRadius="5" HasShadow="False">
+                        <Editor x:Name="DescripcionEditor"
+                                BackgroundColor="White" 
+                                TextColor="Black" 
+                                MaxLength="450" 
+                                Text="{Binding DescripcionCierre}" 
+                                HeightRequest="100"/>
+                    </Frame>
+                    <Label Text="{Binding Path=Text.Length, Source={x:Reference DescripcionEditor}, StringFormat='{0}/450'}" 
+                           FontSize="Small"
+                           TextColor="Gray" 
+                           HorizontalOptions="End" />
+
+                    <!-- Switches/Flags -->
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="{helpers:TranslateExtension Text='LblEraFalsaAlarma'}" 
+                               VerticalOptions="Center" 
+                               FontSize="Small"
+                               TextColor="Gray"/>
+                        <Switch x:Name="FalsaAlarmaSwitch" HorizontalOptions="EndAndExpand" IsToggled="{Binding FlagEsFalsaAlarma}" Margin="0,0,5,0" Toggled="OnFalsaAlarmaToggled"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="{helpers:TranslateExtension Text='LblHuboCaptura'}" 
+                               FontSize="Small"
+                               VerticalOptions="Center" 
+                               TextColor="Gray"/>
+                        <Switch x:Name="CapturaSwitch" HorizontalOptions="EndAndExpand" IsToggled="{Binding FlagHuboCaptura}" Margin="0,0,5,0" Toggled="OnHuboCapturaToggled"/>
+                    </StackLayout>
+
+                    <!-- Botones -->
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Padding="10">
+                        <Frame Padding="5" BorderColor="Black" BackgroundColor="LightGray" HorizontalOptions="Center" HeightRequest="35" WidthRequest="150" CornerRadius="10">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding CancelarCommand}" NumberOfTapsRequired="1" />
+                            </Frame.GestureRecognizers>
+                            <Label Text="{helpers:TranslateExtension Text='LabelCancelar'}" 
+                                TextColor="Black"
+                                HorizontalOptions="CenterAndExpand"
+                                VerticalOptions="CenterAndExpand"
+                                HorizontalTextAlignment="Center"
+                                VerticalTextAlignment="Center" />
+                        </Frame>
+
+                        <Frame Padding="5" BorderColor="Black" BackgroundColor="LightGray" HorizontalOptions="Center" HeightRequest="35" WidthRequest="150" CornerRadius="10">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding ConfirmarCierreCommand}" NumberOfTapsRequired="1" />
+                            </Frame.GestureRecognizers>
+                            <Label Text="{helpers:TranslateExtension Text='LblConfirmarCierre'}" 
+                                TextColor="Black"
+                                HorizontalOptions="CenterAndExpand"
+                                VerticalOptions="CenterAndExpand"
+                                HorizontalTextAlignment="Center"
+                                VerticalTextAlignment="Center" />
+                        </Frame>
+                    </StackLayout>
+
+                </StackLayout>
+            </ScrollView>
+        </Frame>
+    </Grid>
+</rg:PopupPage>

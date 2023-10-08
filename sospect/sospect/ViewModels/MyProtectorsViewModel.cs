@@ -39,18 +39,38 @@ namespace sospect.ViewModels
         }
         private async Task LoadProtectorsAsync()
         {
+            var LabelOK = TranslateExtension.Translate("LabelOK");
+            var LabelInformacion = TranslateExtension.Translate("LabelInformacion");
+            var MensajeError = TranslateExtension.Translate("MensajeError");
             IsRunning = true;
-            var response = await ApiService.ObtenerProtectores(App.persona.user_id_thirdparty, IdiomUtil.ObtenerCodigoDeIdioma());
-            IsRunning = false;
-
-            if (response.isSuccess)
+            try
             {
-                foreach (var protector in response.data)
+                var response = await ApiService.ObtenerProtectores(App.persona.user_id_thirdparty, IdiomUtil.ObtenerCodigoDeIdioma());
+                if (response.isSuccess)
                 {
-                    Protectors.Add(protector);
-                    IsListEmpty = Protectors.Count == 0;
+                    foreach (var protector in response.data)
+                    {
+                        Protectors.Add(protector);
+                        IsListEmpty = Protectors.Count == 0;
+                    }
                 }
             }
+            catch (Exception ex)
+            {
+                await App.Current.MainPage.DisplayAlert(LabelInformacion, MensajeError, LabelOK);
+                var properties = new Dictionary<string, string> {
+                        { "Object", "MyProtectorsViewModel" },
+                        { "Method", "ObtenerProtectores" }
+                    };
+                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
+            }
+            finally
+            {
+                IsRunning = false;
+            }
+            
+
+            
         }
         private void OnProtectorsChanged(object sender, NotifyCollectionChangedEventArgs e)
         {
@@ -65,6 +85,7 @@ namespace sospect.ViewModels
             var LabelOK = TranslateExtension.Translate("LabelOK");
             var LabelInformacion = TranslateExtension.Translate("LabelInformacion");
             var LblSuspensionRealizada = TranslateExtension.Translate("LblSuspensionRealizada");
+            var MensajeError = TranslateExtension.Translate("MensajeError");
 
             var confirmationPage = new ConfirmationPage(LblSuspenderProtectores);
             confirmationPage.ConfirmationResult += async (sender, confirmed) =>
@@ -78,13 +99,29 @@ namespace sospect.ViewModels
                         Idioma = IdiomUtil.ObtenerCodigoDeIdioma()
                     };
                     IsRunning = true;
-                    var response = await ApiService.SuspenderPermisoAProtector(request);
-                    IsRunning = false;
-
-                    if (response.IsSuccess)
+                    try
                     {
-                        await App.Current.MainPage.DisplayAlert(LabelInformacion, LblSuspensionRealizada, LabelOK);
+                        var response = await ApiService.SuspenderPermisoAProtector(request);
+                        
 
+                        if (response.IsSuccess)
+                        {
+                            await App.Current.MainPage.DisplayAlert(LabelInformacion, LblSuspensionRealizada, LabelOK);
+
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        await App.Current.MainPage.DisplayAlert(LabelInformacion, MensajeError, LabelOK);
+                        var properties = new Dictionary<string, string> {
+                        { "Object", "MyProtectorsViewModel" },
+                        { "Method", "SuspendProtectorAsync" }
+                        };
+                        Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
+                    }
+                    finally
+                    {
+                        IsRunning = false;
                     }
                 }
                 await App.Current.MainPage.Navigation.PopModalAsync();
@@ -100,6 +137,7 @@ namespace sospect.ViewModels
             var LabelInformacion = TranslateExtension.Translate("LabelInformacion");
             var LabelSeguroEliminarProtector = TranslateExtension.Translate("LabelSeguroEliminarProtector");
             var LabelProtectorEliminado = TranslateExtension.Translate("LabelProtectorEliminado");
+            var MensajeError = TranslateExtension.Translate("MensajeError");
 
             var confirmationPage = new ConfirmationPage(LabelSeguroEliminarProtector);
             confirmationPage.ConfirmationResult += async (sender, confirmed) =>
@@ -114,16 +152,32 @@ namespace sospect.ViewModels
                     };
 
                     IsRunning = true;
-                    var response = await ApiService.EliminarProtector(request);
-                    IsRunning = false;
-
-                    if (response.IsSuccess)
+                    try
                     {
-                        // Actualizar la interfaz de usuario, si es necesario
-                        Protectors.Remove(protector);
-                        await App.Current.MainPage.DisplayAlert(LabelInformacion, LabelProtectorEliminado, LabelOK);
+                        var response = await ApiService.EliminarProtector(request);
+                        
+                        if (response.IsSuccess)
+                        {
+                            // Actualizar la interfaz de usuario, si es necesario
+                            Protectors.Remove(protector);
+                            await App.Current.MainPage.DisplayAlert(LabelInformacion, LabelProtectorEliminado, LabelOK);
 
+                        }
                     }
+                    catch (Exception ex)
+                    {
+                        await App.Current.MainPage.DisplayAlert(LabelInformacion, MensajeError, LabelOK);
+                        var properties = new Dictionary<string, string> {
+                        { "Object", "MyProtectorsViewModel" },
+                        { "Method", "EliminarProtector" }
+                        };
+                        Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
+                    }
+                    finally
+                    {
+                        IsRunning = false;
+                    }
+                    
                 }
                 await App.Current.MainPage.Navigation.PopModalAsync();
             };

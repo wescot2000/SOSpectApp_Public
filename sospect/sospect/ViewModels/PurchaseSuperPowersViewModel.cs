@@ -30,6 +30,9 @@ namespace sospect.ViewModels
 
         public PurchaseSuperPowersViewModel()
         {
+            var LabelOK = TranslateExtension.Translate("LabelOK");
+            var LabelInformacion = TranslateExtension.Translate("LabelInformacion");
+            var MensajeError = TranslateExtension.Translate("MensajeError");
             PurchaseCommand = new Command<SuperPower>(async (superPower) =>
             {
                 if (IsPurchaseProcessing)
@@ -38,9 +41,25 @@ namespace sospect.ViewModels
                 }
 
                 IsPurchaseProcessing = true;
-                await PurchaseSuperPowerAsync(superPower);
-                IsPurchaseProcessing = false;
-            });
+                try
+                {
+                    await PurchaseSuperPowerAsync(superPower);
+                }
+                catch (Exception ex)
+                {
+                    await App.Current.MainPage.DisplayAlert(LabelInformacion, MensajeError, LabelOK);
+                    var properties = new Dictionary<string, string> {
+                        { "Object", "PurchaseSuperPowersViewModel" },
+                        { "Method", "PurchaseSuperPowerAsync" }
+                    };
+                    Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
+                }
+                finally
+                {
+                    IsPurchaseProcessing = false;
+                }
+                
+            }, (superPower) => !IsPurchaseProcessing);
 
             ConsumirCommand = new Command(async () =>
             {
@@ -50,9 +69,24 @@ namespace sospect.ViewModels
                 }
 
                 IsPurchaseProcessing = true;
-                await ConsumirPowerAsync();
-                IsPurchaseProcessing = false;
-            });
+                try
+                {
+                    await ConsumirPowerAsync();
+                }
+                catch (Exception ex)
+                {
+                    await App.Current.MainPage.DisplayAlert(LabelInformacion, MensajeError, LabelOK);
+                    var properties = new Dictionary<string, string> {
+                        { "Object", "PurchaseSuperPowersViewModel" },
+                        { "Method", "ConsumirPowerAsync" }
+                    };
+                    Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
+                }
+                finally
+                {
+                    IsPurchaseProcessing = false;
+                }
+            }, () => !IsPurchaseProcessing);
 
             SuperPowers = new ObservableCollection<SuperPower>();
             _ = Task.Run(async () => await GetSuperPowersAndRequestDetailsAsync());
@@ -61,54 +95,74 @@ namespace sospect.ViewModels
         public async Task ConsumirPowerAsync()
         {
             var connected = await CrossInAppBilling.Current.ConnectAsync();
-            await CrossInAppBilling.Current.ConsumePurchaseAsync("11", "trewtrewtrewt");
-            await CrossInAppBilling.Current.ConsumePurchaseAsync("11", "trewtrewtrewtrewtrewt");
+            //await CrossInAppBilling.Current.ConsumePurchaseAsync("11", "iaicfcfdlnjljbacflocfjdd.AO-J1OyeQiOlK-L87XrdRNYfNmQ5W9tWXxuPCBOY1rzK35CapD-Z9RnDVuvCNXh0SYlT6mA4imKAeEvJRytK7pOCu_AuAUSCM56nzPpfthsIrqhOE0teQcg");
+            //await CrossInAppBilling.Current.ConsumePurchaseAsync("11", "okkmbcbeokhjgoedbelikbgk.AO-J1OxY9PiH6obwd0bdPBdACzPDsi9XzFKFQXc5xaXpQUesriaIBFNXgdeNBXbuOGrTJQ435LM05haOBD6a5mk3Gfb-2APb3PLmZFhf2vKAIHpFd3lFDu4");
             await CrossInAppBilling.Current.DisconnectAsync();
         }
             public async Task GetSuperPowersAndRequestDetailsAsync()
         {
+            var LabelOK = TranslateExtension.Translate("LabelOK");
+            var LabelInformacion = TranslateExtension.Translate("LabelInformacion");
+            var MensajeError = TranslateExtension.Translate("MensajeError");
             IsRunning = true;
-            var superPowersResponse = await ApiService.ObtenerValoresPoderes();
-            IsRunning = false;
-
-            if (superPowersResponse != null)
+            try
             {
-                List<string> identifiers = new List<string>();
-                foreach (var superPower in superPowersResponse)
-                {
-                    identifiers.Add(superPower.ProductId);
-                }
+                var superPowersResponse = await ApiService.ObtenerValoresPoderes();
+                
 
-                var connected = await CrossInAppBilling.Current.ConnectAsync();
-                if (!connected)
+                if (superPowersResponse != null)
                 {
-                    //No se pudo conectar al servicio de facturación
-                    //Puede ser que no esté disponible, o que el usuario esté bloqueado temporalmente, etc.
-                    return;
-                }
-                //string[] productids = new string[] { "11","12","13","14","15","16","17"};
-                var products = await CrossInAppBilling.Current.GetProductInfoAsync(ItemType.InAppPurchaseConsumable, identifiers.ToArray());
-
-                foreach (var product in products)
-                {
-                    // Aquí, buscarías el poder correspondiente en la respuesta de la base de datos usando product.ProductId como identificador,
-                    // luego crearías un nuevo objeto SuperPower usando los datos de la base de datos y el precio localizado de la tienda.
-                    var correspondingPower = superPowersResponse.FirstOrDefault(p => p.ProductId == product.ProductId);
-                    if (correspondingPower != null)
+                    List<string> identifiers = new List<string>();
+                    foreach (var superPower in superPowersResponse)
                     {
-                        SuperPowers.Add(new SuperPower
-                        {
-                            ProductId = correspondingPower.ProductId,
-                            cantidad_poderes = correspondingPower.cantidad_poderes,
-                            valor_usd = correspondingPower.valor_usd,
-                            LocalizedPrice = product.LocalizedPrice
-                        });
+                        identifiers.Add(superPower.ProductId);
                     }
-                }
 
-                // Recuerda siempre desconectarte del servicio de facturación después de utilizarlo
-                await CrossInAppBilling.Current.DisconnectAsync();
+                    var connected = await CrossInAppBilling.Current.ConnectAsync();
+                    if (!connected)
+                    {
+                        //No se pudo conectar al servicio de facturación
+                        //Puede ser que no esté disponible, o que el usuario esté bloqueado temporalmente, etc.
+                        return;
+                    }
+                    //string[] productids = new string[] { "11","12","13","14","15","16","17"};
+                    var products = await CrossInAppBilling.Current.GetProductInfoAsync(ItemType.InAppPurchaseConsumable, identifiers.ToArray());
+
+                    foreach (var product in products)
+                    {
+                        // Aquí, buscarías el poder correspondiente en la respuesta de la base de datos usando product.ProductId como identificador,
+                        // luego crearías un nuevo objeto SuperPower usando los datos de la base de datos y el precio localizado de la tienda.
+                        var correspondingPower = superPowersResponse.FirstOrDefault(p => p.ProductId == product.ProductId);
+                        if (correspondingPower != null)
+                        {
+                            SuperPowers.Add(new SuperPower
+                            {
+                                ProductId = correspondingPower.ProductId,
+                                cantidad_poderes = correspondingPower.cantidad_poderes,
+                                valor_usd = correspondingPower.valor_usd,
+                                LocalizedPrice = product.LocalizedPrice
+                            });
+                        }
+                    }
+
+                    // Recuerda siempre desconectarte del servicio de facturación después de utilizarlo
+                    await CrossInAppBilling.Current.DisconnectAsync();
+                }
             }
+            catch (Exception ex)
+            {
+                await App.Current.MainPage.DisplayAlert(LabelInformacion, MensajeError, LabelOK);
+                var properties = new Dictionary<string, string> {
+                        { "Object", "PurchaseSuperPowersViewModel" },
+                        { "Method", "ConsumirPowerAsync" }
+                    };
+                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
+            }
+            finally
+            {
+                IsRunning = false;
+            }
+            
         }
 
 
@@ -212,6 +266,11 @@ namespace sospect.ViewModels
             catch (Exception ex)
             {
                 await App.Current.MainPage.DisplayAlert(LabelError, ex.Message, LabelOK);
+                var properties = new Dictionary<string, string> {
+                        { "Object", "PurchaseSuperPowersViewModel" },
+                        { "Method", "PurchaseSuperPowerAsync" }
+                    };
+                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
             }
             
         }

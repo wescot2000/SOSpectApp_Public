@@ -53,18 +53,33 @@ namespace sospect.ViewModels
         private async Task LoadRelationshipTypes()
         {
             IsRunning = true;
-            var relationshipTypes = await ApiService.ObtenerTiposRelaciones();
-            IsRunning = false;
-
-            if (relationshipTypes != null)
+            try
             {
-                foreach (RelationshipType relationshipType in relationshipTypes)
-                {
-                    RelationshipTypes.Add(relationshipType);
-                }
+                var relationshipTypes = await ApiService.ObtenerTiposRelaciones();
+                
 
-                // Establecer el primer elemento de la lista como el valor predeterminado del Picker
-                SelectedRelationshipType = RelationshipTypes.FirstOrDefault(rt => rt.TiporelacionId == 183);
+                if (relationshipTypes != null)
+                {
+                    foreach (RelationshipType relationshipType in relationshipTypes)
+                    {
+                        RelationshipTypes.Add(relationshipType);
+                    }
+
+                    // Establecer el primer elemento de la lista como el valor predeterminado del Picker
+                    SelectedRelationshipType = RelationshipTypes.FirstOrDefault(rt => rt.TiporelacionId == 183);
+                }
+            }
+            catch (Exception ex)
+            {
+                var properties = new Dictionary<string, string> {
+                        { "Object", "ProtectedSubscriptionPageViewModel" },
+                        { "Method", "ObtenerTiposRelaciones" }
+                        };
+                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
+            }
+            finally
+            {
+                IsRunning = false;
             }
         }
 
@@ -77,6 +92,9 @@ namespace sospect.ViewModels
             var LblCompleteCampos = TranslateExtension.Translate("LblCompleteCampos");
             var LabelOK = TranslateExtension.Translate("LabelOK");
             var LblProcesarSolicitud = TranslateExtension.Translate("LblProcesarSolicitud");
+            var LabelInformacion = TranslateExtension.Translate("LabelInformacion");
+            var LblSuspensionRealizada = TranslateExtension.Translate("LblSuspensionRealizada");
+            var MensajeError = TranslateExtension.Translate("MensajeError");
 
             if (string.IsNullOrEmpty(UserId) || SelectedRelationshipType == null)
             {
@@ -94,28 +112,45 @@ namespace sospect.ViewModels
             };
 
             IsRunning = true;
-            ResponseMessage response = await ApiService.RequestPermissionAsync(requestPermissionModel);
-            IsRunning = false;
+            try
+            {
+                ResponseMessage response = await ApiService.RequestPermissionAsync(requestPermissionModel);
+                
 
-            if (response.IsSuccess)
-            {
-                var mensajeSalida = "";
-                try
+                if (response.IsSuccess)
                 {
-                    mensajeSalida = response.Message == null ? null : TranslateExtension.Translate(response.Message.Replace(" ", ""));
+                    var mensajeSalida = "";
+                    try
+                    {
+                        mensajeSalida = response.Message == null ? null : TranslateExtension.Translate(response.Message.Replace(" ", ""));
+                    }
+                    catch (Exception)
+                    {
+                        mensajeSalida = response.Message;
+                    }
+                    IsResultVisible = true;
+                    await App.Current.MainPage.Navigation.PopAsync();
+                    await Application.Current.MainPage.DisplayAlert(LabelExito, mensajeSalida, LabelOK);
                 }
-                catch (Exception)
+                else
                 {
-                    mensajeSalida = response.Message;
+                    await Application.Current.MainPage.DisplayAlert(LabelError, LblProcesarSolicitud, LabelOK);
                 }
-                IsResultVisible = true;
-                await App.Current.MainPage.Navigation.PopAsync();
-                await Application.Current.MainPage.DisplayAlert(LabelExito, mensajeSalida, LabelOK);
             }
-            else
+            catch (Exception ex)
             {
-                await Application.Current.MainPage.DisplayAlert(LabelError, LblProcesarSolicitud, LabelOK);
+                await App.Current.MainPage.DisplayAlert(LabelInformacion, MensajeError, LabelOK);
+                var properties = new Dictionary<string, string> {
+                        { "Object", "ProtectedSubscriptionPageViewModel" },
+                        { "Method", "RequestPermissionAsync" }
+                        };
+                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
             }
+            finally
+            {
+                IsRunning = false;
+            }
+            
         }
     }
 }

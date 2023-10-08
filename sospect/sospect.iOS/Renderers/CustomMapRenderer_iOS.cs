@@ -63,6 +63,81 @@ namespace sospect.iOS.Renderers
             }
         }
 
+        public UIImage ResizeImage(UIImage sourceImage, float width, float height)
+        {
+            UIGraphics.BeginImageContext(new CGSize(width, height));
+            sourceImage.Draw(new CGRect(0, 0, width, height));
+            var resultImage = UIGraphics.GetImageFromCurrentImageContext();
+            UIGraphics.EndImageContext();
+            return resultImage;
+        }
+
+        public UIImage OverlayImages(UIImage baseImage, UIImage overlayImage, CGPoint position)
+        {
+            UIGraphics.BeginImageContext(baseImage.Size);
+            baseImage.Draw(new CGRect(0, 0, baseImage.Size.Width, baseImage.Size.Height));
+            var overlayRect = new CGRect(position.X, position.Y, overlayImage.Size.Width, overlayImage.Size.Height);
+            overlayImage.Draw(overlayRect);
+            var resultImage = UIGraphics.GetImageFromCurrentImageContext();
+            UIGraphics.EndImageContext();
+            return resultImage;
+        }
+
+
+
+        private UIImage CreateCustomMarker(string iconImageName, int cantidadInteracciones, bool isBeingAttended, bool estadoAlarma)
+        {
+            UIImage pinImage = UIImage.FromFile(iconImageName);
+
+            if (isBeingAttended)
+            {
+                string policeIconName = estadoAlarma ? "man_officer_police_icon.png" : "man_officer_police_icon_grey.png";
+                UIImage policeImage = UIImage.FromFile(policeIconName);
+
+                // Redimensiona la imagen del ícono de policía
+                var resizedPoliceIcon = ResizeImage(policeImage, 30, 30);  // Asume que quieres que el ícono de la policía tenga un tamaño de 30x30.
+
+                // Coloca la imagen redimensionada del ícono de policía en la imagen principal
+                pinImage = OverlayImages(pinImage, resizedPoliceIcon, new CGPoint(pinImage.Size.Width - resizedPoliceIcon.Size.Width - 0, -4));
+            }
+
+            if (cantidadInteracciones > 0)
+            {
+                // Crea el badge de notificaciones en una nueva imagen
+                var badgeDiameter = 40.0f;
+                UIGraphics.BeginImageContext(new CGSize(badgeDiameter, badgeDiameter));
+                var context = UIGraphics.GetCurrentContext();
+
+                UIColor badgeColor = estadoAlarma ? UIColor.Red : UIColor.Gray; 
+                context.SetFillColor(badgeColor.CGColor);
+                context.FillEllipseInRect(new CGRect(0, 0, badgeDiameter, badgeDiameter));
+
+                context.SetFillColor(UIColor.White.CGColor);
+                var attributes = new UIStringAttributes
+                {
+                    Font = UIFont.SystemFontOfSize(30.0f),
+                    ForegroundColor = UIColor.White,
+                    ParagraphStyle = new NSMutableParagraphStyle { Alignment = UITextAlignment.Center }
+                };
+                NSString interaccionesString = new NSString(cantidadInteracciones.ToString());
+                var size = interaccionesString.GetSizeUsingAttributes(attributes);
+                interaccionesString.DrawString(new CGRect((badgeDiameter - size.Width) / 2, (badgeDiameter - size.Height) / 2, size.Width, size.Height), attributes);
+
+                UIImage badgeImage = UIGraphics.GetImageFromCurrentImageContext();
+                UIGraphics.EndImageContext();
+
+                // Redimensiona el badge de notificaciones
+                var resizedBadge = ResizeImage(badgeImage, 20, 20); // Asume que quieres que el badge tenga un tamaño de 20x20.
+
+                // Coloca el badge redimensionado en la imagen principal
+                pinImage = OverlayImages(pinImage, resizedBadge, new CGPoint(1, 0)); // Asume que quieres que el badge esté en la posición (10,10)
+            }
+
+
+            return pinImage;
+        }
+
+
         MKAnnotationView GetViewForAnnotation(MKMapView mapView, IMKAnnotation annotation)
         {
             MKAnnotationView annotationView = null;
@@ -77,43 +152,69 @@ namespace sospect.iOS.Renderers
             }
 
             annotationView = mapView.DequeueReusableAnnotation(customPin.Id);
+
             if (annotationView == null)
             {
                 annotationView = new CustomMKAnnotationView(annotation, customPin.Id);
 
-                switch (customPin.TipoAlarma)
+                UIImage finalImage;
+
+                var imagenSeleccionada = "user_location.png"; // Imagen por defecto
+
+                if (customPin.AlarmaCercana != null)
                 {
-                    case 1:
-                        annotationView.Image = UIImage.FromFile("WarningPin.png");
-                        break;
-                    case 2:
-                        annotationView.Image = UIImage.FromFile("DangerPin.png");
-                        break;
-                    case 3:
-                        annotationView.Image = UIImage.FromFile("AmarilloPleitoCallejero.png");
-                        break;
-                    case 4:
-                        annotationView.Image = UIImage.FromFile("VerdeAzulMascotaPerdida.png");
-                        break;
-                    case 5:
-                        annotationView.Image = UIImage.FromFile("AzulPersonaPerdida.png");
-                        break;
-                    case 6:
-                        annotationView.Image = UIImage.FromFile("NegroDisturbiosProtestas.png");
-                        break;
-                    case 7:
-                        annotationView.Image = UIImage.FromFile("VerdeAcompanamientoVisual.png");
-                        break;
-                    case 8:
-                        annotationView.Image = UIImage.FromFile("PurpuraViolenciaIntrafamiliar.png");
-                        break;
-                    case 9:
-                        annotationView.Image = UIImage.FromFile("DireccionEscapeSospechoso.png");
-                        break;
-                    default:
-                        annotationView.Image = UIImage.FromFile("user_location.png");
-                        break;
+                    if (customPin.AlarmaCercana.estado_alarma)
+                    {
+                        switch (customPin.TipoAlarma)
+                        {
+                            case 1:
+                                imagenSeleccionada = "WarningPin.png";
+                                break;
+                            case 2:
+                                imagenSeleccionada = "DangerPin.png";
+                                break;
+                            case 3:
+                                imagenSeleccionada = "AmarilloPleitoCallejero.png";
+                                break;
+                            case 4:
+                                imagenSeleccionada = "VerdeAzulMascotaPerdida.png";
+                                break;
+                            case 5:
+                                imagenSeleccionada = "AzulPersonaPerdida.png";
+                                break;
+                            case 6:
+                                imagenSeleccionada = "NegroDisturbiosProtestas.png";
+                                break;
+                            case 7:
+                                imagenSeleccionada = "VerdeAcompanamientoVisual.png";
+                                break;
+                            case 8:
+                                imagenSeleccionada = "PurpuraViolenciaIntrafamiliar.png";
+                                break;
+                            case 9:
+                                imagenSeleccionada = "DireccionEscapeSospechoso.png";
+                                break;
+                        }
+                    }
+                    else
+                    {
+                        if (customPin.TipoAlarma == 9)
+                        {
+                            imagenSeleccionada = "DireccionEscapeSospechosoCerrada.png";
+                        }
+                        else if (customPin.TipoAlarma >= 1 && customPin.TipoAlarma <= 9)
+                        {
+                            imagenSeleccionada = "ClosedAlarmPin.png";
+                        }
+                    }
+                    finalImage = CreateCustomMarker(imagenSeleccionada, customPin.AlarmaCercana.cantidad_interacciones, customPin.AlarmaCercana.flag_alarma_siendo_atendida, customPin.AlarmaCercana.estado_alarma);
                 }
+                else
+                {
+                    finalImage = UIImage.FromFile(imagenSeleccionada);
+                }
+
+                annotationView.Image = finalImage;
 
                 annotationView.CalloutOffset = new CGPoint(0, 0);
                 ((CustomMKAnnotationView)annotationView).Id = customPin.Id;

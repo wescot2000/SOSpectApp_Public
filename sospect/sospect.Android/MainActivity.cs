@@ -12,7 +12,6 @@ using sospect.Droid.Services;
 using Firebase.Iid;
 using sospect.Interfaces;
 using Xamarin.Forms;
-using Android.BillingClient.Api;
 using Plugin.InAppBilling;
 using Android.Widget;
 using Firebase;
@@ -37,7 +36,6 @@ namespace sospect.Droid
         const int RequestLocationId = 0;
         internal static readonly string CHANNEL_ID = "SOSPectChannel";
         internal static readonly int NOTIFICATION_ID = 100;
-        private BillingClient _billingClient;
 
         #region Nueva implementacion Notificaciones push
 
@@ -101,7 +99,7 @@ namespace sospect.Droid
             base.OnCreate(savedInstanceState);
 
 
-            AppCenter.Start("rewqrewqrewqrewqrewqr",
+            AppCenter.Start("9af016bc-f990-45dc-9ba6-1b05c60d2695",
                    typeof(Analytics), typeof(Crashes));
 
             // Iniciar la conexión con Google Play Billing

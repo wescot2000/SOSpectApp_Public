@@ -4,6 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:rg="http://rotorgames.com"
     xmlns:helpers="clr-namespace:sospect.Helpers"
+    xmlns:converters="clr-namespace:sospect.Converters"
     HasSystemPadding="False"
     CloseWhenBackgroundIsClicked="False"
     x:Class="sospect.Popups.LanzarAlarmaPopup">
@@ -63,6 +64,7 @@
                     BackgroundColor="#1465bb"
                     VerticalOptions="Center"
                     Command="{Binding RegistrarAlarmaCommand}"
+                    IsEnabled="{Binding IsRunning, Converter={StaticResource InverseBooleanConverter}}"
                     TextColor="White"/>
             <Button Grid.Column="1"
                     Grid.Row="3"

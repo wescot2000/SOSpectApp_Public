@@ -50,14 +50,30 @@ namespace sospect.ViewModels
         private async Task LoadProtectedUsersAsync()
         {
             IsRunning = true;
-            var users = await ApiService.GetProtectedUsersAsync();
-            IsRunning = false;
-
-            if (users.Any())
+            try
             {
-                ProtectedUsers = new ObservableCollection<ProtectedUserData>(users);
-                IsListEmpty = ProtectedUsers.Count == 0;
+                var users = await ApiService.GetProtectedUsersAsync();
+                
+
+                if (users.Any())
+                {
+                    ProtectedUsers = new ObservableCollection<ProtectedUserData>(users);
+                    IsListEmpty = ProtectedUsers.Count == 0;
+                }
             }
+            catch (Exception ex)
+            {
+                var properties = new Dictionary<string, string> {
+                        { "Object", "ProtectedUsersViewModel" },
+                        { "Method", "LoadProtectedUsersAsync" }
+                        };
+                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
+            }
+            finally
+            {
+                IsRunning = false;
+            }
+            
         }
 
         private async void DeleteProtectedUserAsync(ProtectedUserData user)
@@ -82,13 +98,29 @@ namespace sospect.ViewModels
                     if (user != null)
                     {
                         IsRunning = true;
-                        ResponseMessage response = await ApiService.DeleteProtectedUserAsync(eliminarProtegidoRequest);
-                        IsRunning = false;
-                        if (response.IsSuccess)
+                        try
                         {
-                            await App.Current.MainPage.DisplayAlert(LblSubscrEliminada, LblSubsEliminadaExitosamente, LabelOK);
-                            ProtectedUsers.Remove(user);
+                            ResponseMessage response = await ApiService.DeleteProtectedUserAsync(eliminarProtegidoRequest);
+                            
+                            if (response.IsSuccess)
+                            {
+                                await App.Current.MainPage.DisplayAlert(LblSubscrEliminada, LblSubsEliminadaExitosamente, LabelOK);
+                                ProtectedUsers.Remove(user);
+                            }
                         }
+                        catch (Exception ex)
+                        {
+                            var properties = new Dictionary<string, string> {
+                                    { "Object", "ProtectedUsersViewModel" },
+                                    { "Method", "DeleteProtectedUserAsync" }
+                                };
+                            Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
+                        }
+                        finally
+                        {
+                            IsRunning = false;
+                        }
+                        
                     }
                 }
                 await App.Current.MainPage.Navigation.PopModalAsync();

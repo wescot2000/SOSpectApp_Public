@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using Newtonsoft.Json;
 using Rg.Plugins.Popup.Services;
+using sospect.Helpers;
 using sospect.Models;
 using sospect.Popups;
 using sospect.Services;
@@ -57,6 +58,9 @@ namespace sospect.ViewModels
         private async void OnDescribirPositivoAlarmaCommand(DetalleDescripcionAlarma obj)
         {
             string calificacionRealizar = obj.CalificacionOtrasDescripciones == "Apagado" ? "Positivo" : obj.CalificacionOtrasDescripciones == "Positivo" ? "Apagado" : "Positivo";
+            var LabelOK = TranslateExtension.Translate("LabelOK");
+            var LabelInformacion = TranslateExtension.Translate("LabelInformacion");
+            var MensajeError = TranslateExtension.Translate("MensajeError");
 
             CalificacionDescripcionAlarma calificacion = new CalificacionDescripcionAlarma()
             {
@@ -66,16 +70,31 @@ namespace sospect.ViewModels
             };
 
             IsRunning = true;
-            RespuestaCalificacionDescripcion response = await ApiService.CalificarDescripcionAlarma(calificacion);
-            IsRunning = false;
-
-            if (response != null)
+            try
             {
-                Device.BeginInvokeOnMainThread(() =>
+                RespuestaCalificacionDescripcion response = await ApiService.CalificarDescripcionAlarma(calificacion);
+                if (response != null)
                 {
-                    obj.CalificacionOtrasDescripciones = calificacionRealizar;
-                    obj.CalificacionDescripcion = response.Calificaciondescripcion;
-                });
+                    Device.BeginInvokeOnMainThread(() =>
+                    {
+                        obj.CalificacionOtrasDescripciones = calificacionRealizar;
+                        obj.CalificacionDescripcion = response.Calificaciondescripcion;
+                    });
+                }
+            }
+            catch (Exception ex)
+            {
+                await App.Current.MainPage.DisplayAlert(LabelInformacion, MensajeError, LabelOK);
+                var properties = new Dictionary<string, string> {
+                        { "Object", "DetalleDescripcionAlarmaViewModel" },
+                        { "Method", "CalificarDescripcionAlarma-Positivo" }
+                    };
+                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
+
+            }
+            finally
+            {
+                IsRunning = false;
             }
         }
 
@@ -84,6 +103,9 @@ namespace sospect.ViewModels
         private async void OnDescribirNegativoAlarmaCommand(DetalleDescripcionAlarma obj)
         {
             string calificacionRealizar = obj.CalificacionOtrasDescripciones == "Apagado" ? "Negativo" : obj.CalificacionOtrasDescripciones == "Negativo" ? "Apagado" : "Negativo";
+            var LabelOK = TranslateExtension.Translate("LabelOK");
+            var LabelInformacion = TranslateExtension.Translate("LabelInformacion");
+            var MensajeError = TranslateExtension.Translate("MensajeError");
 
             CalificacionDescripcionAlarma calificacion = new CalificacionDescripcionAlarma()
             {
@@ -93,33 +115,69 @@ namespace sospect.ViewModels
             };
 
             IsRunning = true;
-            RespuestaCalificacionDescripcion response = await ApiService.CalificarDescripcionAlarma(calificacion);
-            IsRunning = false;
-
-            if (response != null)
+            try
             {
-                Device.BeginInvokeOnMainThread(() =>
+                RespuestaCalificacionDescripcion response = await ApiService.CalificarDescripcionAlarma(calificacion);
+                if (response != null)
                 {
-                    obj.CalificacionOtrasDescripciones = calificacionRealizar;
-                    obj.CalificacionDescripcion = response.Calificaciondescripcion;
-                });
+                    Device.BeginInvokeOnMainThread(() =>
+                    {
+                        obj.CalificacionOtrasDescripciones = calificacionRealizar;
+                        obj.CalificacionDescripcion = response.Calificaciondescripcion;
+                    });
+                }
             }
+            catch (Exception ex)
+            {
+                await App.Current.MainPage.DisplayAlert(LabelInformacion, MensajeError, LabelOK);
+                var properties = new Dictionary<string, string> {
+                        { "Object", "DetalleDescripcionAlarmaViewModel" },
+                        { "Method", "CalificarDescripcionAlarma-Negativo" }
+                    };
+                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
+            }
+            finally
+            {
+                IsRunning = false;
+            }
+            
+
+            
         }
 
         private async Task CargarListadoDetalleDescripcionesAlarma(AlarmaCercana alarmaCercana)
         {
+            var LabelOK = TranslateExtension.Translate("LabelOK");
+            var LabelInformacion = TranslateExtension.Translate("LabelInformacion");
+            var MensajeError = TranslateExtension.Translate("MensajeError");
             IsRunning = true;
-            List<DetalleDescripcionAlarma> response = await ApiService.ListarDescripcionesAlarma(alarmaCercana);
-            if (response.Any())
+            try
             {
-                ListadoDescripcionesAlarmas = new ObservableCollection<DetalleDescripcionAlarma>(response);
-                EmptyState = false;
+                List<DetalleDescripcionAlarma> response = await ApiService.ListarDescripcionesAlarma(alarmaCercana);
+                if (response.Any())
+                {
+                    ListadoDescripcionesAlarmas = new ObservableCollection<DetalleDescripcionAlarma>(response);
+                    EmptyState = false;
+                }
+                else
+                {
+                    EmptyState = true;
+                }
             }
-            else
+            catch (Exception ex)
             {
-                EmptyState = true;
+                await App.Current.MainPage.DisplayAlert(LabelInformacion, MensajeError, LabelOK);
+                var properties = new Dictionary<string, string> {
+                        { "Object", "DetalleDescripcionAlarmaViewModel" },
+                        { "Method", "CalificarDescripcionAlarma-Negativo" }
+                    };
+                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
             }
-            IsRunning = false;
+            finally
+            {
+                IsRunning = false;
+            }
+            
         }
     }
 }

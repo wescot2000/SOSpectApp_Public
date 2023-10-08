@@ -77,6 +77,8 @@ namespace sospect.ViewModels
             var LabelInformacion = TranslateExtension.Translate("LabelInformacion");
             var LabelOK = TranslateExtension.Translate("LabelOK");
             var Insertiondone = TranslateExtension.Translate("Insertiondone");
+            var MensajeError = TranslateExtension.Translate("MensajeError");
+            
 
             PropertyChanged += OnPropertyChanged;
 
@@ -94,17 +96,35 @@ namespace sospect.ViewModels
                 if (IsRunning) return;
                 // Validar los campos del formulario
                 IsRunning = true;
-                ResponseMessage response = await ApiService.ActualizarDescripcionAlarma(DescripcionAlarma);
-                IsRunning = false;
-                await App.Current.MainPage.DisplayAlert(LabelInformacion, Insertiondone, LabelOK);
-
-                if (Rg.Plugins.Popup.Services.PopupNavigation.Instance.PopupStack.Any())
+                try
                 {
-                    // Cerrar el PopUpPage
-                    await App.Current.MainPage.Navigation.PopPopupAsync();
+                    ResponseMessage response = await ApiService.ActualizarDescripcionAlarma(DescripcionAlarma);
+
+                    await App.Current.MainPage.DisplayAlert(LabelInformacion, Insertiondone, LabelOK);
+
+                    if (Rg.Plugins.Popup.Services.PopupNavigation.Instance.PopupStack.Any())
+                    {
+                        // Cerrar el PopUpPage
+                        await App.Current.MainPage.Navigation.PopPopupAsync();
+                    }
+                    //Actualizar lista de descripcion mandandole un mensaje
+                    MessagingCenter.Send<object>("valor", "RegistroActualizado");
                 }
-                //Actualizar lista de descripcion mandandole un mensaje
-                MessagingCenter.Send<object>("valor", "RegistroActualizado");
+                catch (Exception ex)
+                {
+                    await App.Current.MainPage.DisplayAlert(LabelInformacion, MensajeError, LabelOK);
+                    var properties = new Dictionary<string, string> {
+                        { "Object", "DescribirAlarmaPopUpViewModel" },
+                        { "Method", "ActualizarDescripcionAlarma" }
+                    };
+                    Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
+                }
+                finally
+                {
+                    IsRunning = false;
+                }
+                
+                
             }, () => !IsRunning);
         }
 
@@ -118,34 +138,53 @@ namespace sospect.ViewModels
 
         private async Task CargarTiposAlarma(AlarmaCercana alarmaCercana = null, DescribirAlarma describirAlarma = null)
         {
+            var LabelInformacion = TranslateExtension.Translate("LabelInformacion");
+            var LabelOK = TranslateExtension.Translate("LabelOK");
+            var MensajeError = TranslateExtension.Translate("MensajeError");
+
             IsRunning = true;
-            // Obtener los IDs de los tipos de alarma desde la base de datos
-            var idsTiposAlarma = await ApiService.ObtenerIdsTiposAlarma();
-            IsRunning = false;
-
-            // Crear una nueva lista de objetos TipoAlarma con la propiedad DescripcionTraducida asignada
-            var tiposAlarma = idsTiposAlarma.Select(id => new TipoAlarma { TipoalarmaId = id }).ToList();
-
-            // Asignar la lista de objetos TipoAlarma a la propiedad TiposAlarma
-            TiposAlarma = new ObservableCollection<TipoAlarma>(tiposAlarma);
-
-            if (alarmaCercana != null)
+            try
             {
-                if (alarmaCercana.tipoalarma_id == 9)
+                // Obtener los IDs de los tipos de alarma desde la base de datos
+                var idsTiposAlarma = await ApiService.ObtenerIdsTiposAlarma();
+                var tiposAlarma = idsTiposAlarma.Select(id => new TipoAlarma { TipoalarmaId = id }).ToList();
+
+                // Asignar la lista de objetos TipoAlarma a la propiedad TiposAlarma
+                TiposAlarma = new ObservableCollection<TipoAlarma>(tiposAlarma);
+
+                if (alarmaCercana != null)
                 {
-                    TipoAlarmaSeleccionado = new TipoAlarmaEspecial(AppResources.Alarm_9, 9);
-                    PickerEnabled = false;
+                    if (alarmaCercana.tipoalarma_id == 9)
+                    {
+                        TipoAlarmaSeleccionado = new TipoAlarmaEspecial(AppResources.Alarm_9, 9);
+                        PickerEnabled = false;
+                    }
+                    else
+                    {
+                        TipoAlarmaSeleccionado = TiposAlarma.Where(x => x.TipoalarmaId == alarmaCercana.tipoalarma_id).First();
+                        PickerEnabled = true;
+                    }
                 }
                 else
                 {
-                    TipoAlarmaSeleccionado = TiposAlarma.Where(x => x.TipoalarmaId == alarmaCercana.tipoalarma_id).First();
-                    PickerEnabled = true;
+                    TipoAlarmaSeleccionado = TiposAlarma.Where(x => x.TipoalarmaId == describirAlarma.p_tipoalarma_id).First();
                 }
             }
-            else
+            catch (Exception ex)
             {
-                TipoAlarmaSeleccionado = TiposAlarma.Where(x => x.TipoalarmaId == describirAlarma.p_tipoalarma_id).First();
+                await App.Current.MainPage.DisplayAlert(LabelInformacion, MensajeError, LabelOK);
+                var properties = new Dictionary<string, string> {
+                        { "Object", "DescribirAlarmaPopUpViewModel" },
+                        { "Method", "ObtenerIdsTiposAlarma" }
+                    };
+                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
+
             }
+            finally
+            {
+                IsRunning = false;
+            }
+            
         }
 
 
@@ -163,6 +202,7 @@ namespace sospect.ViewModels
             var LabelInformacion = TranslateExtension.Translate("LabelInformacion");
             var Insertiondone = TranslateExtension.Translate("Insertiondone");
             var LabelOK = TranslateExtension.Translate("LabelOK");
+            var MensajeError = TranslateExtension.Translate("MensajeError");
 
             // Asignación de la acción que se ejecutará al pulsar el botón de cancelar en el PopUpPage
             CancelarCommand = new Command(async () =>
@@ -205,20 +245,32 @@ namespace sospect.ViewModels
                 // Indicar que la operación está en curso.
                 IsRunning = true;
                 // Validar los campos del formulario
-                DescripcionAlarma.p_tipoalarma_id = TipoAlarmaSeleccionado.TipoalarmaId;
-                DescripcionAlarma.idioma_descripcion = IdiomUtil.ObtenerCodigoDeIdioma();
-
-                
-                ResponseMessage response = await ApiService.DescribirAlarma(DescripcionAlarma);
-                IsRunning = false;
-                await App.Current.MainPage.DisplayAlert(LabelInformacion, Insertiondone, LabelOK);
-
-                if (Rg.Plugins.Popup.Services.PopupNavigation.Instance.PopupStack.Any())
+                try
                 {
-                    // Cerrar el PopUpPage
-                    await App.Current.MainPage.Navigation.PopPopupAsync();
+                    DescripcionAlarma.p_tipoalarma_id = TipoAlarmaSeleccionado.TipoalarmaId;
+                    DescripcionAlarma.idioma_descripcion = IdiomUtil.ObtenerCodigoDeIdioma();
+                    ResponseMessage response = await ApiService.DescribirAlarma(DescripcionAlarma);
+                    await App.Current.MainPage.DisplayAlert(LabelInformacion, Insertiondone, LabelOK);
+                    if (Rg.Plugins.Popup.Services.PopupNavigation.Instance.PopupStack.Any())
+                    {
+                        // Cerrar el PopUpPage
+                        await App.Current.MainPage.Navigation.PopPopupAsync();
+                    }
                 }
+                catch (Exception ex)
+                {
+                    await App.Current.MainPage.DisplayAlert(LabelInformacion, MensajeError, LabelOK);
+                    var properties = new Dictionary<string, string> {
+                        { "Object", "DescribirAlarmaPopUpViewModel" },
+                        { "Method", "DescribirAlarma" }
+                    };
+                    Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
 
+                }
+                finally
+                {
+                    IsRunning = false;
+                }
 
             }, () => !IsRunning);
         }

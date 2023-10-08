@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows.Input;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using sospect.Helpers;
 using sospect.Models;
 using sospect.Resources;
 using sospect.Services;
@@ -45,6 +47,10 @@ namespace sospect.ViewModels
 
         private async void LoadMessageDetail(long mensajeID)
         {
+            var LabelOK = TranslateExtension.Translate("LabelOK");
+            var LabelInformacion = TranslateExtension.Translate("LabelInformacion");
+            var MensajeError = TranslateExtension.Translate("MensajeError");
+
             DetalleMensajeRequest request = new DetalleMensajeRequest()
             {
                 IdiomaDispositivo = IdiomUtil.ObtenerCodigoDeIdioma(),
@@ -53,11 +59,25 @@ namespace sospect.ViewModels
             };
 
             IsRunning = true;
-            DetalleMensaje = await ApiService.ObtenerDetalleMensajes(request);
-            IsRunning = false;
-
-            OnPropertyChanged(nameof(ToLabel));
-            OnPropertyChanged(nameof(FromLabel));
+            try
+            {
+                DetalleMensaje = await ApiService.ObtenerDetalleMensajes(request);
+                OnPropertyChanged(nameof(ToLabel));
+                OnPropertyChanged(nameof(FromLabel));
+            }
+            catch (Exception ex)
+            {
+                await App.Current.MainPage.DisplayAlert(LabelInformacion, MensajeError, LabelOK);
+                var properties = new Dictionary<string, string> {
+                        { "Object", "DetalleMensajeViewModel" },
+                        { "Method", "ObtenerDetalleMensajes" }
+                    };
+                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
+            }
+            finally
+            {
+                IsRunning = false;
+            }       
         }
     }
 }

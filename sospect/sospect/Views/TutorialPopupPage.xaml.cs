@@ -15,6 +15,7 @@ namespace sospect.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class TutorialPopupPage : PopupPage
     {
+        public event EventHandler TutorialCompleted;
         public TutorialPopupPage()
         {
             InitializeComponent();
@@ -40,6 +41,10 @@ namespace sospect.Views
         private async void OnClose(object sender, System.EventArgs e)
         {
             await PopupNavigation.Instance.PopAsync();
+        }
+        public void CompleteTutorial()
+        {
+            TutorialCompleted?.Invoke(this, EventArgs.Empty);
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Newtonsoft.Json;
@@ -119,6 +120,11 @@ namespace sospect.ViewModels
             catch (Exception ex)
             {
                 ParametrosUsuario parametros = JsonConvert.DeserializeObject<ParametrosUsuario>(Preferences.Get("ParametrosUsuario", ""));
+                var properties = new Dictionary<string, string> {
+                        { "Object", "MenuPageViewModel" },
+                        { "Method", "InicializarParametrosUsuarioAsync" }
+                    };
+                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
             }
         }
 

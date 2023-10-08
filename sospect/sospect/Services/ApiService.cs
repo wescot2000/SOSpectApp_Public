@@ -12,6 +12,7 @@ using sospect.Utils;
 using System.Linq;
 using System.Text;
 using System.Diagnostics;
+using System.Net.Security;
 
 namespace sospect.Services
 {
@@ -46,6 +47,11 @@ namespace sospect.Services
             }
             catch (Exception ex)
             {
+                var properties = new Dictionary<string, string> {
+                        { "Object", "ApiService" },
+                        { "Method", "RegisterUser" }
+                    };
+                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
                 return new ResponseMessage() { IsSuccess = false, Data = "", Message = ex.Message };
             }
 
@@ -88,6 +94,11 @@ namespace sospect.Services
             }
             catch (Exception ex)
             {
+                var properties = new Dictionary<string, string> {
+                        { "Object", "ApiService" },
+                        { "Method", "InsertarAlarma" }
+                    };
+                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
                 return new ResponseMessage() { IsSuccess = false, Data = "", Message = ex.Message };
             }
         }
@@ -129,6 +140,11 @@ namespace sospect.Services
             }
             catch (Exception ex)
             {
+                var properties = new Dictionary<string, string> {
+                        { "Object", "ApiService" },
+                        { "Method", "ActualizarUbicacion" }
+                    };
+                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
                 List<AlarmaCercana> responseError = new List<AlarmaCercana>();
                 return responseError;
             }
@@ -172,6 +188,11 @@ namespace sospect.Services
             }
             catch (Exception ex)
             {
+                var properties = new Dictionary<string, string> {
+                        { "Object", "ApiService" },
+                        { "Method", "DescribirAlarma" }
+                    };
+                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
                 return new ResponseMessage() { IsSuccess = false, Data = "", Message = ex.Message };
             }
         }
@@ -213,6 +234,11 @@ namespace sospect.Services
             }
             catch (Exception ex)
             {
+                var properties = new Dictionary<string, string> {
+                        { "Object", "ApiService" },
+                        { "Method", "ActualizarDescripcionAlarma" }
+                    };
+                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
                 return new ResponseMessage() { IsSuccess = false, Data = "", Message = ex.Message };
             }
         }
@@ -252,6 +278,11 @@ namespace sospect.Services
             }
             catch (Exception ex)
             {
+                var properties = new Dictionary<string, string> {
+                        { "Object", "ApiService" },
+                        { "Method", "ListarDescripcionesAlarma" }
+                    };
+                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
                 return null;
             }
         }
@@ -293,6 +324,11 @@ namespace sospect.Services
             }
             catch (Exception ex)
             {
+                var properties = new Dictionary<string, string> {
+                        { "Object", "ApiService" },
+                        { "Method", "CalificarDescripcionAlarma" }
+                    };
+                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
                 return null;
             }
         }
@@ -341,6 +377,11 @@ namespace sospect.Services
             }
             catch (Exception ex)
             {
+                var properties = new Dictionary<string, string> {
+                        { "Object", "ApiService" },
+                        { "Method", "CalificarAlarma" }
+                    };
+                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
                 return new ResponseMessage() { IsSuccess = false, Data = "", Message = ex.Message };
             }
         }
@@ -383,6 +424,11 @@ namespace sospect.Services
             }
             catch (Exception ex)
             {
+                var properties = new Dictionary<string, string> {
+                        { "Object", "ApiService" },
+                        { "Method", "ObtenerIdsTiposAlarma" }
+                    };
+                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
                 return null;
             }
         }
@@ -422,6 +468,11 @@ namespace sospect.Services
             }
             catch (Exception ex)
             {
+                var properties = new Dictionary<string, string> {
+                        { "Object", "ApiService" },
+                        { "Method", "ObtenerReportBasParticipacionTipoAlarma" }
+                    };
+                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
                 return null;
             }
         }
@@ -461,6 +512,11 @@ namespace sospect.Services
             }
             catch (Exception ex)
             {
+                var properties = new Dictionary<string, string> {
+                        { "Object", "ApiService" },
+                        { "Method", "ObtenerReportBasMetricasSueltas" }
+                    };
+                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
                 return null;
             }
         }
@@ -500,10 +556,53 @@ namespace sospect.Services
             }
             catch (Exception ex)
             {
+                var properties = new Dictionary<string, string> {
+                        { "Object", "ApiService" },
+                        { "Method", "ObtenerPromedioEfectivoAlarmas" }
+                    };
+                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
                 return null;
             }
         }
 
+        //public static async Task<List<TipoAlarma>> ObtenerTiposAlarma()
+        //{
+        //    try
+        //    {
+        //        using (var client = new JWTHttpClient(new HttpClientHandler()
+        //        {
+        //            ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) =>
+        //            {
+        //                //bypass
+        //                return true;
+        //            },
+        //        }
+        //    , false))
+        //        {
+        //            client.DefaultRequestHeaders.Accept.Clear();
+        //            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+        //
+        //            //GET Method
+        //            string url = AppConfiguration.ApiHost + AppConfiguration.ListarTiposAlarma + "?idioma=" + IdiomUtil.ObtenerCodigoDeIdioma();
+        //
+        //            HttpResponseMessage response = await client.GetAPIAsync(url);
+        //            if (response.IsSuccessStatusCode)
+        //            {
+        //                List<TipoAlarma> responseMessage = JsonConvert.DeserializeObject<List<TipoAlarma>>(JObject.Parse(await response.Content.ReadAsStringAsync())["data"].ToString());
+        //                return responseMessage;
+        //            }
+        //            else
+        //            {
+        //                List<TipoAlarma> EmptyList = new List<TipoAlarma>();
+        //                return EmptyList;
+        //            }
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        return null;
+        //    }
+        //}
 
         public static async Task<List<Mensajes>> ObtenerMensajes()
         {
@@ -540,6 +639,11 @@ namespace sospect.Services
             }
             catch (Exception ex)
             {
+                var properties = new Dictionary<string, string> {
+                        { "Object", "ApiService" },
+                        { "Method", "ObtenerMensajes" }
+                    };
+                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
                 return null;
             }
         }
@@ -580,6 +684,11 @@ namespace sospect.Services
             }
             catch (Exception ex)
             {
+                var properties = new Dictionary<string, string> {
+                        { "Object", "ApiService" },
+                        { "Method", "ObtenerDetalleMensajes" }
+                    };
+                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
                 return new DetalleMensajes() { };
             }
         }
@@ -613,6 +722,11 @@ namespace sospect.Services
             }
             catch (Exception ex)
             {
+                var properties = new Dictionary<string, string> {
+                        { "Object", "ApiService" },
+                        { "Method", "MarcaTodosLeidos" }
+                    };
+                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
                 return false;
             }
         }
@@ -651,6 +765,11 @@ namespace sospect.Services
             }
             catch (Exception ex)
             {
+                var properties = new Dictionary<string, string> {
+                        { "Object", "ApiService" },
+                        { "Method", "ObtenerValoresPoderes" }
+                    };
+                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
                 return null;
             }
         }
@@ -689,6 +808,11 @@ namespace sospect.Services
             }
             catch (Exception ex)
             {
+                var properties = new Dictionary<string, string> {
+                        { "Object", "ApiService" },
+                        { "Method", "ObtenerValoresDeSubscripcion" }
+                    };
+                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
                 return null;
             }
         }
@@ -719,6 +843,11 @@ namespace sospect.Services
             }
             catch (Exception ex)
             {
+                var properties = new Dictionary<string, string> {
+                        { "Object", "ApiService" },
+                        { "Method", "ComprarSuperPoder" }
+                    };
+                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
                 // Manejar excepciones aquí
                 return false;
             }
@@ -757,6 +886,11 @@ namespace sospect.Services
             }
             catch (Exception ex)
             {
+                var properties = new Dictionary<string, string> {
+                        { "Object", "ApiService" },
+                        { "Method", "ObtenerTiposRelaciones" }
+                    };
+                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
                 return null;
             }
         }
@@ -798,6 +932,11 @@ namespace sospect.Services
             }
             catch (Exception ex)
             {
+                var properties = new Dictionary<string, string> {
+                        { "Object", "ApiService" },
+                        { "Method", "RequestPermissionAsync" }
+                    };
+                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
                 return new ResponseMessage() { IsSuccess = false, Data = "", Message = ex.Message };
             }
         }
@@ -835,6 +974,11 @@ namespace sospect.Services
             }
             catch (Exception ex)
             {
+                var properties = new Dictionary<string, string> {
+                        { "Object", "ApiService" },
+                        { "Method", "ObtenerSolicitudesPendientes" }
+                    };
+                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
                 return null;
             }
 
@@ -875,6 +1019,11 @@ namespace sospect.Services
             }
             catch (Exception ex)
             {
+                var properties = new Dictionary<string, string> {
+                        { "Object", "ApiService" },
+                        { "Method", "AprobarSolicitudAsync" }
+                    };
+                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
                 return new ResponseMessage() { IsSuccess = false, Data = "", Message = ex.Message };
             }
         }
@@ -914,6 +1063,11 @@ namespace sospect.Services
             }
             catch (Exception ex)
             {
+                var properties = new Dictionary<string, string> {
+                        { "Object", "ApiService" },
+                        { "Method", "RechazarSolicitudAsync" }
+                    };
+                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
                 return new ResponseMessage() { IsSuccess = false, Data = "", Message = ex.Message };
             }
         }
@@ -952,6 +1106,11 @@ namespace sospect.Services
             }
             catch (Exception ex)
             {
+                var properties = new Dictionary<string, string> {
+                        { "Object", "ApiService" },
+                        { "Method", "ObtenerSolicitudesAprobadas" }
+                    };
+                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
                 return new ApprovedSubscriptionResponse { IsSuccess = false, Data = null, Message = ex.Message };
             }
         }
@@ -993,6 +1152,11 @@ namespace sospect.Services
             }
             catch (Exception ex)
             {
+                var properties = new Dictionary<string, string> {
+                        { "Object", "ApiService" },
+                        { "Method", "CompletarSubscripcion" }
+                    };
+                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
                 return new ResponseMessage() { IsSuccess = false, Data = "", Message = ex.Message };
             }
         }
@@ -1032,6 +1196,11 @@ namespace sospect.Services
             }
             catch (Exception ex)
             {
+                var properties = new Dictionary<string, string> {
+                        { "Object", "ApiService" },
+                        { "Method", "GetProtectedUsersAsync" }
+                    };
+                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
                 return null;
             }
         }
@@ -1073,6 +1242,11 @@ namespace sospect.Services
             }
             catch (Exception ex)
             {
+                var properties = new Dictionary<string, string> {
+                        { "Object", "ApiService" },
+                        { "Method", "DeleteProtectedUserAsync" }
+                    };
+                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
                 return new ResponseMessage { IsSuccess = false, Message = $"Error: {ex.Message}" };
             }
         }
@@ -1110,6 +1284,11 @@ namespace sospect.Services
             }
             catch (Exception ex)
             {
+                var properties = new Dictionary<string, string> {
+                        { "Object", "ApiService" },
+                        { "Method", "ObtenerProtectores" }
+                    };
+                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
                 return new ProtectorResponse { isSuccess = false, data = null, message = ex.Message };
             }
         }
@@ -1150,6 +1329,11 @@ namespace sospect.Services
             }
             catch (Exception ex)
             {
+                var properties = new Dictionary<string, string> {
+                        { "Object", "ApiService" },
+                        { "Method", "SuspenderPermisoAProtector" }
+                    };
+                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
                 return new ResponseMessage() { IsSuccess = false, Data = "", Message = ex.Message };
             }
         }
@@ -1190,6 +1374,11 @@ namespace sospect.Services
             }
             catch (Exception ex)
             {
+                var properties = new Dictionary<string, string> {
+                        { "Object", "ApiService" },
+                        { "Method", "EliminarProtector" }
+                    };
+                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
                 return new ResponseMessage { IsSuccess = false, Message = $"Error: {ex.Message}" };
             }
         }
@@ -1229,6 +1418,11 @@ namespace sospect.Services
             }
             catch (Exception ex)
             {
+                var properties = new Dictionary<string, string> {
+                        { "Object", "ApiService" },
+                        { "Method", "ObtenerMisSubscripciones" }
+                    };
+                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
                 return null;
             }
         }
@@ -1270,6 +1464,11 @@ namespace sospect.Services
             }
             catch (Exception ex)
             {
+                var properties = new Dictionary<string, string> {
+                        { "Object", "ApiService" },
+                        { "Method", "RenovarSubscripcion" }
+                    };
+                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
                 return new ResponseMessage() { IsSuccess = false, Data = "", Message = ex.Message };
             }
         }
@@ -1311,6 +1510,11 @@ namespace sospect.Services
             }
             catch (Exception ex)
             {
+                var properties = new Dictionary<string, string> {
+                        { "Object", "ApiService" },
+                        { "Method", "CancelarSubscripcion" }
+                    };
+                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
                 return new ResponseMessage() { IsSuccess = false, Data = "", Message = ex.Message };
             }
         }
@@ -1352,6 +1556,11 @@ namespace sospect.Services
             }
             catch (Exception ex)
             {
+                var properties = new Dictionary<string, string> {
+                        { "Object", "ApiService" },
+                        { "Method", "NuevaZonaVigilancia" }
+                    };
+                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
                 return new ResponseMessage() { IsSuccess = false, Data = "", Message = ex.Message };
             }
         }
@@ -1390,6 +1599,11 @@ namespace sospect.Services
             }
             catch (Exception ex)
             {
+                var properties = new Dictionary<string, string> {
+                        { "Object", "ApiService" },
+                        { "Method", "ObtenerRadiosDisponibles" }
+                    };
+                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
                 return null;
             }
         }
@@ -1431,6 +1645,11 @@ namespace sospect.Services
             }
             catch (Exception ex)
             {
+                var properties = new Dictionary<string, string> {
+                        { "Object", "ApiService" },
+                        { "Method", "SubscribirNuevoRadio" }
+                    };
+                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
                 return new ResponseMessage() { IsSuccess = false, Data = "", Message = ex.Message };
             }
         }
@@ -1470,6 +1689,11 @@ namespace sospect.Services
             }
             catch (Exception ex)
             {
+                var properties = new Dictionary<string, string> {
+                        { "Object", "ApiService" },
+                        { "Method", "ObtenerParametrosDeUsuario" }
+                    };
+                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
                 return string.Empty;
             }
         }
@@ -1508,6 +1732,11 @@ namespace sospect.Services
             }
             catch (Exception ex)
             {
+                var properties = new Dictionary<string, string> {
+                        { "Object", "ApiService" },
+                        { "Method", "ObtenerContratoUsuario" }
+                    };
+                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
                 return string.Empty;
             }
         }
@@ -1548,6 +1777,11 @@ namespace sospect.Services
             }
             catch (Exception ex)
             {
+                var properties = new Dictionary<string, string> {
+                        { "Object", "ApiService" },
+                        { "Method", "AceptarContratoDeUsuario" }
+                    };
+                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
                 return new ResponseMessage() { IsSuccess = false, Data = "", Message = ex.Message };
             }
         }
@@ -1586,6 +1820,11 @@ namespace sospect.Services
             }
             catch (Exception ex)
             {
+                var properties = new Dictionary<string, string> {
+                        { "Object", "ApiService" },
+                        { "Method", "ObtenerAlarma" }
+                    };
+                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
                 return new List<AlarmaCercana>();
             }
         }
@@ -1624,9 +1863,100 @@ namespace sospect.Services
             }
             catch (Exception ex)
             {
+                var properties = new Dictionary<string, string> {
+                        { "Object", "ApiService" },
+                        { "Method", "VerificarVersion" }
+                    };
+                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
                 return new VersionVerificada();
+            }
+        }
+        public static async Task<ResponseMessage> CerrarAlarma(CerrarAlarmaRequest cerraralarmaRequest)
+        {
+            try
+            {
+                using (var client = new JWTHttpClient(new HttpClientHandler()
+                {
+                    ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) =>
+                    {
+                        // bypass
+                            return true;
+                    },
+                }, false))
+                {
+                    client.DefaultRequestHeaders.Accept.Clear();
+                    client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+                    //POST Method
+                    string url = AppConfiguration.ApiHost + AppConfiguration.CerrarAlarma;
+
+                    StringContent content = new StringContent(JsonConvert.SerializeObject(cerraralarmaRequest), System.Text.Encoding.UTF8, "application/json");
+
+                    HttpResponseMessage response = await client.PostAPIAsync(url, content);
+                    if (response.IsSuccessStatusCode)
+                    {
+                        ResponseMessage responseMessage = JsonConvert.DeserializeObject<ResponseMessage>(await response.Content.ReadAsStringAsync());
+                        return responseMessage;
+                    }
+                    else
+                    {
+                        return new ResponseMessage() { IsSuccess = false, Data = "", Message = "" }; ;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                var properties = new Dictionary<string, string> {
+                        { "Object", "ApiService" },
+                        { "Method", "CerrarAlarma" }
+                    };
+                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
+                return new ResponseMessage() { IsSuccess = false, Data = "", Message = ex.Message };
+            }
+        }
+
+        public static async Task<ResponseMessage> AtenderAlarma(AtenderAlarmaRequest atenderalarmaRequest)
+        {
+            try
+            {
+                using (var client = new JWTHttpClient(new HttpClientHandler()
+                {
+                    ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) =>
+                    {
+                        //bypass 
+                        return true;
+                    },
+                }, false))
+                {
+                    client.DefaultRequestHeaders.Accept.Clear();
+                    client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+                    //POST Method
+                    string url = AppConfiguration.ApiHost + AppConfiguration.AsignarAlarma;
+
+                    StringContent content = new StringContent(JsonConvert.SerializeObject(atenderalarmaRequest), System.Text.Encoding.UTF8, "application/json");
+
+                    HttpResponseMessage response = await client.PostAPIAsync(url, content);
+                    if (response.IsSuccessStatusCode)
+                    {
+                        ResponseMessage responseMessage = JsonConvert.DeserializeObject<ResponseMessage>(await response.Content.ReadAsStringAsync());
+                        return responseMessage;
+                    }
+                    else
+                    {
+                        return new ResponseMessage() { IsSuccess = false, Data = "", Message = "" }; ;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                var properties = new Dictionary<string, string> {
+                        { "Object", "ApiService" },
+                        { "Method", "AtenderAlarma" }
+                    };
+                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
+                return new ResponseMessage() { IsSuccess = false, Data = "", Message = ex.Message };
             }
         }
     }
 }
-

@@ -71,6 +71,54 @@
                     <TapGestureRecognizer Command="{Binding OpenSospectWebCommand}"/>
                 </Image.GestureRecognizers>
             </Image>
+
+            <Label Text="{helpers:TranslateExtension Text='LblCreditos'}"
+                   FontSize="Large"
+                   TextColor="Black" 
+                   FontAttributes="Bold"
+                   HorizontalOptions="Start" />
+            <Label Margin="0,20,0,0" FontSize="Small" FontAttributes="Bold" TextColor="Black" Text="{helpers:TranslateExtension Text='LblIconoPolicia'}" />
+            <Label>
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span FontSize="Small" TextColor="Black" Text="{helpers:TranslateExtension Text='LblOrigenIcono'}" FontAttributes="Italic"/>
+                        <Span FontSize="Small" TextColor="Black" Text=": ">
+                            <Span.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding OpenWebCommandIconfinder}" />
+                            </Span.GestureRecognizers>
+                        </Span>
+                        <Span FontSize="Small" TextColor="Blue" Text="www.iconfinder.com" TextDecorations="Underline">
+                            <Span.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding OpenWebCommandIconfinder}" />
+                            </Span.GestureRecognizers>
+                        </Span>
+                    </FormattedString>
+                </Label.FormattedText>
+                <Label.HorizontalOptions>
+                    <OnPlatform x:TypeArguments="LayoutOptions" iOS="StartAndExpand" Android="Start"/>
+                </Label.HorizontalOptions>
+            </Label>
+            <Label Margin="0,20,0,0" FontSize="Small" FontAttributes="Bold" TextColor="Black" Text="{helpers:TranslateExtension Text='LblOtrosIconos'}" />
+            <Label>
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span FontSize="Small" TextColor="Black" Text="{helpers:TranslateExtension Text='LblOrigenOtrosIconos'}" FontAttributes="Italic"/>
+                        <Span FontSize="Small" TextColor="Black" Text=": ">
+                            <Span.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding OpenWebCommandDibuRome}" />
+                            </Span.GestureRecognizers>
+                        </Span>
+                        <Span FontSize="Small" TextColor="Blue" Text="www.iconfinder.com" TextDecorations="Underline">
+                            <Span.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding OpenWebCommandDibuRome}" />
+                            </Span.GestureRecognizers>
+                        </Span>
+                    </FormattedString>
+                </Label.FormattedText>
+                <Label.HorizontalOptions>
+                    <OnPlatform x:TypeArguments="LayoutOptions" iOS="StartAndExpand" Android="Start"/>
+                </Label.HorizontalOptions>
+            </Label>
         </StackLayout>
     </ScrollView>
 </ContentPage>

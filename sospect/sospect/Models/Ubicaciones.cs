@@ -7,6 +7,7 @@ namespace sospect.Models
         public double latitud { get; set; }
         public double longitud { get; set; }
         public string Idioma { get; set; }
+        public string PantallaOrigen { get; set; }
     }
 }
 

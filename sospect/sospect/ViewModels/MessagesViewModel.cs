@@ -11,6 +11,7 @@ using sospect.Services;
 using System.Linq;
 using System.Windows.Input;
 using Xamarin.Forms;
+using sospect.Helpers;
 
 namespace sospect.ViewModels
 {
@@ -50,36 +51,73 @@ namespace sospect.ViewModels
         public async Task<List<Mensajes>> GetMessagesAsync()
         {
             IsRunning = true;
-            var response = await ApiService.ObtenerMensajes();
-            if (response is List<Mensajes> lstMensajes && lstMensajes.Any())
+            try
             {
-                EmptyState = false;
-                return lstMensajes;
+                var response = await ApiService.ObtenerMensajes();
+                if (response is List<Mensajes> lstMensajes && lstMensajes.Any())
+                {
+                    EmptyState = false;
+                    return lstMensajes;
+                }
+                else
+                {
+                    EmptyState = true;
+                    return new List<Mensajes>();
+                }
             }
-            else
+            catch (Exception ex)
             {
-                EmptyState = true;
+                var properties = new Dictionary<string, string> {
+                        { "Object", "MessagesViewModel" },
+                        { "Method", "ObtenerMensajes" }
+                    };
+                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
                 return new List<Mensajes>();
             }
+            finally
+            {
+                IsRunning = false;
+            }
+            
         }
 
         private async Task MarkAllAsRead()
         {
+            var LabelOK = TranslateExtension.Translate("LabelOK");
+            var LabelInformacion = TranslateExtension.Translate("LabelInformacion");
+            var MensajeError = TranslateExtension.Translate("MensajeError");
+
             IsRunning = true;
             MarcarMensajesLeidosRequest request = new MarcarMensajesLeidosRequest
             {
                 PUserIdThirdparty = App.persona.user_id_thirdparty
             };
-            var response = await ApiService.MarcaTodosLeidos(request);
-            if (response)
+            try
             {
-                foreach (var message in Messages)
+                var response = await ApiService.MarcaTodosLeidos(request);
+                if (response)
                 {
-                    message.estado = false;
+                    foreach (var message in Messages)
+                    {
+                        message.estado = false;
+                    }
+                    MessagingCenter.Send(this, "MarkAllAsReadSuccess");
                 }
-                MessagingCenter.Send(this, "MarkAllAsReadSuccess");
             }
-            IsRunning = false;
+            catch (Exception ex)
+            {
+                await App.Current.MainPage.DisplayAlert(LabelInformacion, MensajeError, LabelOK);
+                var properties = new Dictionary<string, string> {
+                        { "Object", "MessagesViewModel" },
+                        { "Method", "MarcaTodosLeidos" }
+                    };
+                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
+            }
+            finally
+            {
+                IsRunning = false;
+            }
+            
         }
     }
 }

@@ -33,7 +33,21 @@
                                     </Grid.ColumnDefinitions>
                                     <Label Text="{Binding cantidad_poderes}" Grid.Column="0" TextColor="Black" FontSize="16"  VerticalOptions="Center" HorizontalOptions="Center"/>
                                     <Label Text="{Binding LocalizedPrice, StringFormat='{0}'}" Grid.Column="1" TextColor="Black" FontSize="16"  VerticalOptions="Center"/>
-                                    <Button BackgroundColor="LightGray" FontAttributes="Bold" TextColor="Black" CornerRadius="5" Text="{helpers:TranslateExtension Text='LblComprar'}"  Grid.Column="2" CommandParameter="{Binding .}" Command="{Binding Path=BindingContext.PurchaseCommand, Source={x:Reference SuperPowersListView}}"  VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
+
+                                    <!--Button BackgroundColor="LightGray" FontAttributes="Bold" TextColor="Black" CornerRadius="5" Text="{helpers:TranslateExtension Text='LblComprar'}"  Grid.Column="2" CommandParameter="{Binding .}" Command="{Binding Path=BindingContext.PurchaseCommand, Source={x:Reference SuperPowersListView}}"  VerticalOptions="Center" HorizontalOptions="FillAndExpand" /-->
+
+                                    <Frame Grid.Column="2" Padding="5" BorderColor="Black" BackgroundColor="LightGray" Margin="0,0,0,0"  VerticalOptions="Center" HorizontalOptions="FillAndExpand" HeightRequest="35" WidthRequest="100" CornerRadius="10">
+                                    <Frame.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding Path=BindingContext.PurchaseCommand, Source={x:Reference SuperPowersListView}}"  CommandParameter="{Binding .}" NumberOfTapsRequired="1" />
+                                    </Frame.GestureRecognizers>
+                                    <Label Text="{helpers:TranslateExtension Text='LblComprar'}" 
+                                           TextColor="Black"
+                                           LineBreakMode="WordWrap"
+                                           HorizontalOptions="CenterAndExpand"
+                                           VerticalOptions="CenterAndExpand"
+                                           HorizontalTextAlignment="Center"
+                                           VerticalTextAlignment="Center" />
+                                </Frame>
                                 </Grid>
                             </ViewCell>
                         </DataTemplate>

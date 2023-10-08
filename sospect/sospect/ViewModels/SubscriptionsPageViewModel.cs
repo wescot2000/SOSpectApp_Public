@@ -52,18 +52,32 @@ namespace sospect.ViewModels
         private async Task LoadSubscriptions()
         {
             IsRunning = true;
-            var misSubscripciones = await ApiService.ObtenerMisSubscripciones();
-
-            foreach (var subscription in misSubscripciones)
+            try
             {
-                subscription.descripcion_tipo = TranslateExtension.Translate(subscription.descripcion_tipo?.Replace(" ", ""));
-                subscription.texto_renovable = TranslateExtension.Translate(subscription.texto_renovable?.Replace(" ", ""));
-                subscription.observ_subscripcion = subscription.observ_subscripcion == null ? null : TranslateExtension.Translate(subscription.observ_subscripcion.Replace(" ", ""));
+                var misSubscripciones = await ApiService.ObtenerMisSubscripciones();
 
-                Subscriptions.Add(subscription);
-                IsListEmpty = Subscriptions.Count == 0;
+                foreach (var subscription in misSubscripciones)
+                {
+                    subscription.descripcion_tipo = TranslateExtension.Translate(subscription.descripcion_tipo?.Replace(" ", ""));
+                    subscription.texto_renovable = TranslateExtension.Translate(subscription.texto_renovable?.Replace(" ", ""));
+                    subscription.observ_subscripcion = subscription.observ_subscripcion == null ? null : TranslateExtension.Translate(subscription.observ_subscripcion.Replace(" ", ""));
+
+                    Subscriptions.Add(subscription);
+                    IsListEmpty = Subscriptions.Count == 0;
+                }
             }
-            IsRunning = false;
+            catch (Exception ex)
+            {
+                var properties = new Dictionary<string, string> {
+                        { "Object", "SubscriptionsPageViewModel" },
+                        { "Method", "ObtenerMisSubscripciones" }
+                    };
+                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
+            }
+            finally
+            {
+                IsRunning = false;
+            }
         }
 
         private async void ShowCancelConfirmation(MisSubscripciones subscription)
@@ -83,6 +97,12 @@ namespace sospect.ViewModels
             var saldoPoderesInsuficiente = TranslateExtension.Translate("LblSaldoPoderesInsuficiente");
             var comprarPoderes = TranslateExtension.Translate("LblComprarPoderes");
             var cancelar = TranslateExtension.Translate("LabelCancelar");
+            var LabelError = TranslateExtension.Translate("LabelError");
+            var LblErrorRenovando = TranslateExtension.Translate("LblErrorRenovando");
+            var LabelOK = TranslateExtension.Translate("LabelOK");
+            var LblRenovacionAplicada = TranslateExtension.Translate("LblRenovacionAplicada");
+            var LabelInformacion = TranslateExtension.Translate("LabelInformacion");
+            var MensajeError = TranslateExtension.Translate("MensajeError");
 
             if (_parametros.SaldoPoderes < subscription.poderes_renovacion)
             {
@@ -113,22 +133,36 @@ namespace sospect.ViewModels
             };
 
             IsRunning = true;
-            var response = await ApiService.RenovarSubscripcion(renovarSubscripcionRequest);
-            var LabelError = TranslateExtension.Translate("LabelError");
-            var LblErrorRenovando = TranslateExtension.Translate("LblErrorRenovando");
-            var LabelOK = TranslateExtension.Translate("LabelOK");
-            var LblRenovacionAplicada = TranslateExtension.Translate("LblRenovacionAplicada");
-            IsRunning = false;
+            try
+            {
+                var response = await ApiService.RenovarSubscripcion(renovarSubscripcionRequest);
 
-            if (response.IsSuccess)
-            {
-                await Application.Current.MainPage.DisplayAlert(LabelOK, LblRenovacionAplicada, LabelOK);
-                await Application.Current.MainPage.Navigation.PushAsync(new MenuPage());
+                
+
+                if (response.IsSuccess)
+                {
+                    await Application.Current.MainPage.DisplayAlert(LabelOK, LblRenovacionAplicada, LabelOK);
+                    await Application.Current.MainPage.Navigation.PushAsync(new MenuPage());
+                }
+                else
+                {
+                    await Application.Current.MainPage.DisplayAlert(LabelError, LblErrorRenovando, LabelOK);
+                }
             }
-            else
+            catch (Exception ex)
             {
-                await Application.Current.MainPage.DisplayAlert(LabelError, LblErrorRenovando, LabelOK);
+                await App.Current.MainPage.DisplayAlert(LabelInformacion, MensajeError, LabelOK);
+                var properties = new Dictionary<string, string> {
+                        { "Object", "SubscriptionsPageViewModel" },
+                        { "Method", "RenovarSubscripcion" }
+                    };
+                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
             }
+            finally
+            {
+                IsRunning = false;
+            }
+            
         }
 
         public async void CancelSubscription(MisSubscripciones subscription)
@@ -137,6 +171,13 @@ namespace sospect.ViewModels
             var LblSeguroDeCancelar = TranslateExtension.Translate("LblSeguroDeCancelar");
             var LblAceptar = TranslateExtension.Translate("LblAceptar");
             var LabelCancelar = TranslateExtension.Translate("LabelCancelar");
+            var LabelError = TranslateExtension.Translate("LabelError");
+            var LblErrorCancelando = TranslateExtension.Translate("LblErrorCancelando");
+            var LabelOK = TranslateExtension.Translate("LabelOK");
+            var LblCancelacionAplicada = TranslateExtension.Translate("LblCancelacionAplicada");
+            var LabelInformacion = TranslateExtension.Translate("LabelInformacion");
+            var MensajeError = TranslateExtension.Translate("MensajeError");
+
             var answer = await Application.Current.MainPage.DisplayAlert(LblCancelarSubscripcion, LblSeguroDeCancelar, LblAceptar, LabelCancelar);
 
             if (!answer)
@@ -151,22 +192,35 @@ namespace sospect.ViewModels
             };
 
             IsRunning = true;
-            var response = await ApiService.CancelarSubscripcion(cancelarSubscripcionRequest);
-            var LabelError = TranslateExtension.Translate("LabelError");
-            var LblErrorCancelando = TranslateExtension.Translate("LblErrorCancelando");
-            var LabelOK = TranslateExtension.Translate("LabelOK");
-            var LblCancelacionAplicada = TranslateExtension.Translate("LblCancelacionAplicada");
-            IsRunning = false;
-            if (response.IsSuccess)
+            try
             {
-                await Application.Current.MainPage.DisplayAlert(LabelOK, LblCancelacionAplicada, LabelOK);
-                //await Application.Current.MainPage.Navigation.PushAsync(new HomePage());
-                Subscriptions.Remove(subscription);
+                var response = await ApiService.CancelarSubscripcion(cancelarSubscripcionRequest);
+
+                if (response.IsSuccess)
+                {
+                    await Application.Current.MainPage.DisplayAlert(LabelOK, LblCancelacionAplicada, LabelOK);
+                    //await Application.Current.MainPage.Navigation.PushAsync(new HomePage());
+                    Subscriptions.Remove(subscription);
+                }
+                else
+                {
+                    await Application.Current.MainPage.DisplayAlert(LabelError, LblErrorCancelando, LabelOK);
+                }
             }
-            else
+            catch (Exception ex)
             {
-                await Application.Current.MainPage.DisplayAlert(LabelError, LblErrorCancelando, LabelOK);
+                await App.Current.MainPage.DisplayAlert(LabelInformacion, MensajeError, LabelOK);
+                var properties = new Dictionary<string, string> {
+                        { "Object", "SubscriptionsPageViewModel" },
+                        { "Method", "CancelarSubscripcion" }
+                    };
+                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
             }
+            finally
+            {
+                IsRunning = false;
+            }
+            
         }
 
     }

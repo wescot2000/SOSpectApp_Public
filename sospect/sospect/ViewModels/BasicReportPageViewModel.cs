@@ -155,12 +155,24 @@ namespace sospect.ViewModels
             apiCallsInProgress++;
 
             IsRunning = true;
-            var metricasBasicasReporte = await ApiService.ObtenerReportBasMetricasSueltas();
-            IsRunning = false;
-
-            MetricasBasicasReporte = new ObservableCollection<MetricasBasicasReporte>(metricasBasicasReporte);
-
-            apiCallsInProgress--;
+            try
+            {
+                var metricasBasicasReporte = await ApiService.ObtenerReportBasMetricasSueltas();
+                MetricasBasicasReporte = new ObservableCollection<MetricasBasicasReporte>(metricasBasicasReporte);          
+            }
+            catch (Exception ex)
+            {
+                var properties = new Dictionary<string, string> {
+                        { "Object", "BasicReportPageViewModel" },
+                        { "Method", "ObtenerReportBasMetricasSueltas" }
+                    };
+                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
+            }
+            finally
+            {
+                apiCallsInProgress--;
+                IsRunning = false;
+            }
         }
 
         private async Task CargarPromedioEfectivoAlarmas()
@@ -173,12 +185,25 @@ namespace sospect.ViewModels
             apiCallsInProgress++;
 
             IsRunning = true;
-            var efectividadAlarmas = await ApiService.ObtenerPromedioEfectivoAlarmas();
-            IsRunning = false;
-
-            EfectividadAlarmas = efectividadAlarmas;
-
-            apiCallsInProgress--;
+            try
+            {
+                var efectividadAlarmas = await ApiService.ObtenerPromedioEfectivoAlarmas();
+                EfectividadAlarmas = efectividadAlarmas;
+            }
+            catch (Exception ex)
+            {
+                var properties = new Dictionary<string, string> {
+                        { "Object", "BasicReportPageViewModel" },
+                        { "Method", "ObtenerPromedioEfectivoAlarmas" }
+                    };
+                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
+            }
+            finally
+            {
+                IsRunning = false;
+                apiCallsInProgress--;
+            }
+            
         }
 
         private async Task CargarTiposAlarmaReporte()
@@ -191,21 +216,33 @@ namespace sospect.ViewModels
             apiCallsInProgress++;
 
             IsRunning = true;
-            var tiposAlarmaReporte = await ApiService.ObtenerReportBasParticipacionTipoAlarma();
-            IsRunning = false;
+            try
+            {
+                var tiposAlarmaReporte = await ApiService.ObtenerReportBasParticipacionTipoAlarma();
+                int index = 0;
+                TiposAlarmaReporte = new ObservableCollection<TipoAlarmaReporteConColor>(
+                    tiposAlarmaReporte.Select(tipo => new TipoAlarmaReporteConColor
+                    {
+                        TipoAlarma = tipo,
+                        Color = GenerateColor(index++, tiposAlarmaReporte.Count)
+                    }));
 
-            int index = 0;
-            TiposAlarmaReporte = new ObservableCollection<TipoAlarmaReporteConColor>(
-                tiposAlarmaReporte.Select(tipo => new TipoAlarmaReporteConColor
-                {
-                    TipoAlarma = tipo,
-                    Color = GenerateColor(index++, tiposAlarmaReporte.Count)
-                }));
-
-            // Ahora que los datos están cargados, creamos la gráfica
-            CreateChart();
-
-            apiCallsInProgress--;
+                // Ahora que los datos están cargados, creamos la gráfica
+                CreateChart();
+            }
+            catch (Exception ex)
+            {
+                var properties = new Dictionary<string, string> {
+                        { "Object", "BasicReportPageViewModel" },
+                        { "Method", "ObtenerReportBasParticipacionTipoAlarma" }
+                    };
+                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
+            }
+            finally
+            {
+                IsRunning = false;
+                apiCallsInProgress--;
+            }            
         }
 
         private SKColor GenerateColor(int index, int total)

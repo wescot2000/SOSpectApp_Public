@@ -1,10 +1,13 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using GalaSoft.MvvmLight.Command;
 using Rg.Plugins.Popup.Services;
+using Sharpnado.MaterialFrame;
 using sospect.Extensions;
 using sospect.Helpers;
 using sospect.Models;
@@ -16,6 +19,9 @@ namespace sospect.ViewModels
 {
     public class LanzarAlarmaViewModel : BaseViewModel
     {
+
+        private readonly SemaphoreSlim _semaphore = new SemaphoreSlim(1, 1);
+
         private ObservableCollection<TipoAlarma> _TiposAlarma;
         public ObservableCollection<TipoAlarma> TiposAlarma
         {
@@ -35,6 +41,13 @@ namespace sospect.ViewModels
         {
             get => this._latitude;
             set => this.SetValue(ref this._latitude, value);
+        }
+
+        private bool _isInitialized = false;
+        public bool IsInitialized
+        {
+            get => _isInitialized;
+            set => this.SetValue(ref _isInitialized, value);
         }
 
         private double _longitude;
@@ -69,49 +82,94 @@ namespace sospect.ViewModels
             _ = CargarTiposAlarma(tipoAlarma);
         }
 
-        bool IsBusy = false;
+        private const int MaxRetries = 5;
+
         private async Task CargarTiposAlarma(int tipoAlarmaId)
         {
-            if (IsBusy)
+            var LabelOK = TranslateExtension.Translate("LabelOK");
+            var LabelError = TranslateExtension.Translate("LabelError");
+            var LblHabilitaInternetReintenta = TranslateExtension.Translate("LblHabilitaInternetReintenta");
+
+            if (IsRunning)
             {
                 return;
             }
 
-            IsBusy = true;
-
-            IsRunning = true;
-            var idsTiposAlarma = await ApiService.ObtenerIdsTiposAlarma();
-            IsRunning = false;
-
-            var tiposAlarma = idsTiposAlarma.Select(id => new TipoAlarma { TipoalarmaId = id }).ToList();
-
-            TiposAlarma = new ObservableCollection<TipoAlarma>(tiposAlarma);
-            if (TiposAlarma.Any())
+            Device.BeginInvokeOnMainThread(() =>
             {
-                TipoAlarmaSeleccionado = TiposAlarma.Where(x => x.TipoalarmaId == tipoAlarmaId).First();
+                IsRunning = true;
+            });
+
+            List<int> idsTiposAlarma = null;
+
+            for (int retry = 0; retry < MaxRetries; retry++)
+            {
+                try
+                {
+                    idsTiposAlarma = await ApiService.ObtenerIdsTiposAlarma();
+                    break;
+                }
+                catch
+                {
+                    if (retry == MaxRetries - 1)
+                    {
+                        Device.BeginInvokeOnMainThread(async () =>
+                        {
+                            await App.Current.MainPage.DisplayAlert(LabelError, LblHabilitaInternetReintenta, LabelOK);
+                        });
+                        IsRunning = false;
+                        return;
+                    }
+
+                    await Task.Delay(2000);
+                }
             }
 
-            IsBusy = false;
+            if (idsTiposAlarma == null || !idsTiposAlarma.Any())
+            {
+                Device.BeginInvokeOnMainThread(async () =>
+                {
+                    await App.Current.MainPage.DisplayAlert(LabelError, LblHabilitaInternetReintenta, LabelOK);
+                });
+                IsRunning = false;
+                return;
+            }
 
+            var tiposAlarma = idsTiposAlarma.Select(id => new TipoAlarma { TipoalarmaId = id }).ToList();
+            TiposAlarma = new ObservableCollection<TipoAlarma>(tiposAlarma);
+
+            if (TiposAlarma.Any())
+            {
+                TipoAlarmaSeleccionado = TiposAlarma.FirstOrDefault(x => x.TipoalarmaId == tipoAlarmaId);
+            }
+
+            IsInitialized = true;
+
+            Device.BeginInvokeOnMainThread(() =>
+            {
+                IsRunning = false;
+            });
         }
 
 
 
         public async Task RegistrarAlarma()
         {
-            if (IsBusy)
+            if (!IsInitialized)
             {
                 return;
             }
 
-            IsBusy = true;
+
+            await _semaphore.WaitAsync();
 
             var AlarmaEnviada = TranslateExtension.Translate("AlarmaEnviada");
             var MsgTrasAlarmaEnviada = TranslateExtension.Translate("MsgTrasAlarmaEnviada");
             var LabelOK = TranslateExtension.Translate("LabelOK");
             var LabelError = TranslateExtension.Translate("LabelError");
             var LblSeleccioneTipoAlarma = TranslateExtension.Translate("LblSeleccioneTipoAlarma");
-            
+            var LabelInformacion = TranslateExtension.Translate("LabelInformacion");
+            var MensajeError = TranslateExtension.Translate("MensajeError");
 
             Alarma alarma = new Alarma()
             {
@@ -124,28 +182,43 @@ namespace sospect.ViewModels
                 idioma_dispositivo = IdiomUtil.ObtenerCodigoDeIdioma()
             };
 
-            if (alarma.p_tipoalarma_id == 0)
+            if (TipoAlarmaSeleccionado == null || alarma.p_tipoalarma_id == 0)
             {
                 await App.Current.MainPage.DisplayAlert(LabelError, LblSeleccioneTipoAlarma, LabelOK);
                 return;
             }
 
-            IsRunning = true;
-            ResponseMessage response = await ApiService.InsertarAlarma(alarma);
-            IsRunning = false;
-
-            if (response.IsSuccess)
+            
+            try
             {
-                if (PopupNavigation.Instance.PopupStack.Count > 0)
+                IsRunning = true;
+                ResponseMessage response = await ApiService.InsertarAlarma(alarma);
+                if (response.IsSuccess)
                 {
-                    await PopupNavigation.Instance.PopAsync();
+                    if (PopupNavigation.Instance.PopupStack.Count > 0)
+                    {
+                        await PopupNavigation.Instance.PopAsync();
+                    }
+                    await App.Current.MainPage.DisplayAlert(AlarmaEnviada, MsgTrasAlarmaEnviada, LabelOK);
+                    IsTimeRunning = false;
+                    MessagingCenter.Send<object, string>(this, "Refrescar", "");
                 }
-                await App.Current.MainPage.DisplayAlert(AlarmaEnviada, MsgTrasAlarmaEnviada, LabelOK);
-                IsTimeRunning = false;
-                MessagingCenter.Send<object, string>(this, "Refrescar", "");
             }
-
-            IsBusy = false;
+            catch (Exception ex)
+            {
+                await App.Current.MainPage.DisplayAlert(LabelInformacion, MensajeError, LabelOK);
+                var properties = new Dictionary<string, string> {
+                        { "Object", "DetalleMensajeViewModel" },
+                        { "Method", "ObtenerDetalleMensajes" }
+                    };
+                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
+            }
+            finally
+            {
+                IsRunning = false;
+                _semaphore.Release(); // Libera el semáforo para que otros puedan usarlo.
+            }
+            
         }
 
         public ICommand RegistrarAlarmaCommand { get; }

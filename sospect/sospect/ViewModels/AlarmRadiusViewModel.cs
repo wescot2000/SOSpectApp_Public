@@ -14,6 +14,7 @@ using sospect.Utils;
 using System.Threading.Tasks;
 using Xamarin.Essentials;
 using sospect.Views;
+using System.Collections.Generic;
 
 namespace sospect.ViewModels
 {
@@ -93,15 +94,28 @@ namespace sospect.ViewModels
         private async void LoadAvailableRadios()
         {
             IsRunning = true;
-            var radios = await ApiService.ObtenerRadiosDisponibles();
-            IsRunning = false;
-
-            AvailableRadios = new ObservableCollection<RadiosDisponiblesResponse>(radios);
-
-            if (radios.Count > 0)
+            try
             {
-                NewRadius = radios.FirstOrDefault();
+                var radios = await ApiService.ObtenerRadiosDisponibles();
+                AvailableRadios = new ObservableCollection<RadiosDisponiblesResponse>(radios);
+
+                if (radios.Count > 0)
+                {
+                    NewRadius = radios.FirstOrDefault();
+                }
             }
+            catch (Exception ex)
+            {
+                var properties = new Dictionary<string, string> {
+                        { "Object", "AlarmRadiusViewModel" },
+                        { "Method", "ObtenerRadiosDisponibles" }
+                    };
+                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
+            }
+            finally
+            {
+                IsRunning = false;
+            }           
         }
 
         private async void CreateSubscription()
@@ -111,6 +125,7 @@ namespace sospect.ViewModels
             var saldoPoderesInsuficiente = TranslateExtension.Translate("LblSaldoPoderesInsuficiente");
             var comprarPoderes = TranslateExtension.Translate("LblComprarPoderes");
             var cancelar = TranslateExtension.Translate("LabelCancelar");
+            
 
             if (PoderesActualesUsuario < requiredPowers)
             {
@@ -129,27 +144,45 @@ namespace sospect.ViewModels
                 idioma = IdiomUtil.ObtenerCodigoDeIdioma()
             };
 
+            ParametrosUsuario parametros = JsonConvert.DeserializeObject<ParametrosUsuario>(Preferences.Get("ParametrosUsuario", ""));
+
             IsRunning = true;
-            var response = await ApiService.SubscribirNuevoRadio(requestData);
-            IsRunning = false;
-
-            var exito = TranslateExtension.Translate("Exito");
-            var subscreada = TranslateExtension.Translate("SubscripcionCreada");
-            var LabelOk = TranslateExtension.Translate("LabelOK");
-            var labelerror = TranslateExtension.Translate("LabelError");
-            var MensajeError = TranslateExtension.Translate("MensajeError");
-
-
-            if (response.IsSuccess)
+            try
             {
-                await Application.Current.MainPage.DisplayAlert(exito, subscreada, LabelOk);
-                MessagingCenter.Send(this, "DatosActualizados");
-                await Application.Current.MainPage.Navigation.PopToRootAsync();
+                var exito = TranslateExtension.Translate("Exito");
+                var subscreada = TranslateExtension.Translate("SubscripcionCreada");
+                var LabelOk = TranslateExtension.Translate("LabelOK");
+                var labelerror = TranslateExtension.Translate("LabelError");
+                var MensajeError = TranslateExtension.Translate("MensajeError");
+
+                var response = await ApiService.SubscribirNuevoRadio(requestData);
+                if (response.IsSuccess)
+                {
+                    parametros.radio_alarmas_mts_actual = roundedRadius;
+                    Preferences.Set("ParametrosUsuario", JsonConvert.SerializeObject(parametros));
+                    await Application.Current.MainPage.DisplayAlert(exito, subscreada, LabelOk);
+                    MessagingCenter.Send(this, "DatosActualizados");
+                    await Application.Current.MainPage.Navigation.PopToRootAsync();
+                }
+                else
+                {
+                    await Application.Current.MainPage.DisplayAlert(labelerror, MensajeError, LabelOk);
+                }
             }
-            else
+            catch (Exception ex)
             {
-                await Application.Current.MainPage.DisplayAlert(labelerror, MensajeError, LabelOk);
+                var properties = new Dictionary<string, string> {
+                        { "Object", "AlarmRadiusViewModel" },
+                        { "Method", "SubscribirNuevoRadio" }
+                    };
+                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
+
             }
+            finally
+            {
+                IsRunning = false;
+            }
+                       
         }
 
         public int CalculateRequiredPowers(RadiosDisponiblesResponse newRadius)

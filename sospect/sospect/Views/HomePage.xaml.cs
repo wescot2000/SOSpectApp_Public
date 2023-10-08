@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Net.NetworkInformation;
 using System.Threading;
@@ -29,6 +30,13 @@ namespace sospect.Views
         Persona persona;
         private Location _lastLocation;
         private DateTime _lastLocationFetchTime;
+        private TutorialPopupPage tutorialPage8;
+        private bool _locationUpdateTimer;
+        private bool _shouldTimerRun = true;
+
+
+        Circle currentCircle;
+
 
         public HomePage(ObservableCollection<AlarmaCercana> alarma)
         {
@@ -45,6 +53,7 @@ namespace sospect.Views
                 if (alarma != null && alarma.Any())
                 {
                     map.CustomPins = new List<CustomPin>();
+                    ParametrosUsuario parametros = JsonConvert.DeserializeObject<ParametrosUsuario>(Preferences.Get("ParametrosUsuario", ""));
 
                     foreach (var item in alarma)
                     {
@@ -66,7 +75,7 @@ namespace sospect.Views
                         {
                             map.CustomPins.Add(AlarmaPin);
                             map.Pins.Add(AlarmaPin);
-                            map.MoveToRegion(MapSpan.FromCenterAndRadius(new Position((double)item.latitud_alarma, (double)item.longitud_alarma), new Distance(100)));
+                            map.MoveToRegion(MapSpan.FromCenterAndRadius(new Position((double)item.latitud_alarma, (double)item.longitud_alarma), new Distance(parametros.radio_alarmas_mts_actual)));
                         });
                     }
                 }
@@ -74,6 +83,11 @@ namespace sospect.Views
             catch (Exception ex)
             {
                 App.Current.MainPage.DisplayAlert("Error", ex.Message, "Ok");
+                var properties = new Dictionary<string, string> {
+                        { "Object", "HomePage" },
+                        { "Method", "PintarAlarma" }
+                    };
+                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
             }
             
         }
@@ -106,6 +120,7 @@ namespace sospect.Views
             MessagingCenter.Subscribe<IBackgroundService, List<AlarmaCercana>>(this, "", (sender, arg) =>
             {
                 PintarAlarmasEnMapa(arg);
+                ActualizarUbicacionEnMapa();
             });
 
             BindingContext = new HomeViewModel(true);
@@ -122,9 +137,10 @@ namespace sospect.Views
         private void PintarAlarmasEnMapa(List<AlarmaCercana> arg)
         {
             Dictionary<long, CustomPin> pins = new Dictionary<long, CustomPin>();
+            ParametrosUsuario parametros = JsonConvert.DeserializeObject<ParametrosUsuario>(Preferences.Get("ParametrosUsuario", ""));
             map.CustomPins = new List<CustomPin>();
 
-            map.CustomPins.Clear();
+            map.CustomPins.Clear(); 
             map.Pins.Clear();
 
             map.MapElements.Clear();
@@ -163,11 +179,15 @@ namespace sospect.Views
                     var pin1 = pin.Value.Position;
                     var pin2 = pins[pin.Value.AlarmaCercana.alarma_id_padre.Value].Position;
 
+                    // Determinar el color basado en el estado de la alarma
+                    var lineColor = pin.Value.AlarmaCercana.estado_alarma ? Color.Red : Color.Gray;
+
+
                     Device.BeginInvokeOnMainThread(() =>
                     {
                         var polyline = new Xamarin.Forms.Maps.Polyline
                         {
-                            StrokeColor = Color.Red,
+                            StrokeColor = lineColor,
                             StrokeWidth = 4
                         };
                         polyline.Geopath.Add(pin1);
@@ -178,37 +198,7 @@ namespace sospect.Views
                 }
             }
 
-            if (App.ubicacionActual != null)
-            {
-                var LabelUsuario = TranslateExtension.Translate("LabelUsuario");
-                var LabelTuUbicacion = TranslateExtension.Translate("LabelTuUbicacion");
-                CustomPin UserPin = new CustomPin()
-                {
-                    MarkerId = "User",
-                    Id = "User",
-                    Label = LabelUsuario,
-                    Type = PinType.Generic,
-                    Address = LabelTuUbicacion,
-                    Position = new Position(App.ubicacionActual.latitud, App.ubicacionActual.longitud)
-                };
-
-                map.MapElements.Add(new Circle()
-                {
-                    FillColor = Color.FromRgba(255, 255, 0, 0.1),
-                    Radius = new Distance(100),
-                    Center = UserPin.Position,
-                    StrokeWidth = 3,
-                    StrokeColor = Color.Blue
-                });
-
-                Device.BeginInvokeOnMainThread(() =>
-                {
-                    map.CustomPins.Add(UserPin);
-                    map.Pins.Add(UserPin);
-                    map.MoveToRegion(MapSpan.FromCenterAndRadius(new Position(App.ubicacionActual.latitud, App.ubicacionActual.longitud), new Distance(100)));
-                });
-
-            }
+         
             App.CustomPins = map.CustomPins;
         }
 
@@ -216,11 +206,76 @@ namespace sospect.Views
         {
             base.OnDisappearing();
             MessagingCenter.Unsubscribe<object, CustomPin>(this, "InfoWindowClicked");
+            _shouldTimerRun = false;
+
         }
 
         protected async override void OnAppearing()
         {
             base.OnAppearing();
+            _shouldTimerRun = true;
+
+            var LabelError = TranslateExtension.Translate("LabelError");
+            var LabelOK = TranslateExtension.Translate("LabelOK");
+            var MensajeError = TranslateExtension.Translate("MensajeError");
+
+            HomeViewModel vm = null;
+            if (BindingContext is HomeViewModel viewModel)
+            {
+                vm = viewModel;
+                var isInitialized = await HomeViewModel.InicializarParametrosUsuarioAsync();
+
+                if (!isInitialized)
+                {
+                    await Application.Current.MainPage.DisplayAlert(LabelError, MensajeError, LabelOK);
+                    return; // Salimos del metod OnAppearing si no podemos obtener los parámetros.
+                }
+            }
+
+            // Verificar primero los términos y condiciones.
+            ParametrosUsuario parametros = null;
+            try
+            {
+                parametros = JsonConvert.DeserializeObject<ParametrosUsuario>(Preferences.Get("ParametrosUsuario", ""));
+
+                if (parametros.FlagUsuarioDebeFirmarCto)
+                {
+                    Application.Current.MainPage = new NavigationPage(new TermsAndConditionsPage()) { BarBackgroundColor = Color.Black };
+                    return; // Terminar la ejecución aquí si el usuario necesita aceptar los términos y condiciones.
+                }
+            }
+            catch (Exception ex)
+            {
+                Application.Current.MainPage = new NavigationPage(new InternetRequiredForApp()) { BarBackgroundColor = Color.Black };
+                var properties = new Dictionary<string, string> {
+                    { "Object", "HomePage" },
+                    { "Method", "OnAppearing-Parametros" }
+                };
+                Debug.WriteLine($"Error al verificar los términos y condiciones: {ex.Message}");
+                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
+                return; // Terminar la ejecución aquí debido al error.
+            }
+
+            Device.StartTimer(TimeSpan.FromSeconds(15), () =>
+            {
+                if (!_shouldTimerRun) return false;
+                try
+                {
+                    CheckAndUpdateLocation();
+                }
+                catch (Exception ex)
+                {
+                    var properties = new Dictionary<string, string> {
+                        { "Object", "HomePage" },
+                        { "Method", "OnAppearing" }
+                    };
+                    Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
+                }
+                
+                return true; // retorna true para que el timer siga ejecutándose
+            });
+
+
 
             //Xamarin.Essentials.Preferences.Set("HasSeenTutorial", false);
 
@@ -229,7 +284,7 @@ namespace sospect.Views
             {
                 var LblHolaBienvenido = TranslateExtension.Translate("LblHolaBienvenido");
                 var tutorialPage = new TutorialPopupPage();
-                var viewModel = new TutorialPopupPageViewModel
+                var tutorialVM = new TutorialPopupPageViewModel
                 {
                     TutorialText = LblHolaBienvenido,
                     FrameTopMargin = 230,
@@ -242,12 +297,12 @@ namespace sospect.Views
                     FrameHorizontalOptions = LayoutOptions.Center,
                     FrameVerticalOptions = LayoutOptions.Start
                 };
-                tutorialPage.BindingContext = viewModel;
+                tutorialPage.BindingContext = tutorialVM;
                 tutorialPage.OnPopupClosed += ShowCeroTutorialPopup;
                 await PopupNavigation.Instance.PushAsync(tutorialPage);
             }
 
-            if (BindingContext is HomeViewModel vm && !vm.ShowUIButtons)
+            if (vm != null && !vm.ShowUIButtons)
             {
                 return;
             }
@@ -276,42 +331,181 @@ namespace sospect.Views
                 {
                     App.persona = JsonConvert.DeserializeObject<Persona>(Preferences.Get("User", ""));
                 }
-
+      
                 await ObtenerPines();
-                await HomeViewModel.InicializarParametrosUsuarioAsync();
                 _lastLocation = currentLocation;
                 _lastLocationFetchTime = DateTime.Now;
+
                 try
                 {
-                    ParametrosUsuario parametros = JsonConvert.DeserializeObject<ParametrosUsuario>(Preferences.Get("ParametrosUsuario", ""));
-
-                    if (parametros.FlagUsuarioDebeFirmarCto)
-                    {
-                        Application.Current.MainPage = new NavigationPage(new TermsAndConditionsPage()) { BarBackgroundColor = Color.Black };
-                        return;
-                    }
-
                     if (parametros.FlagBloqueoUsuario)
                     {
                         var LblUsuarioBloqueado = TranslateExtension.Translate("LblUsuarioBloqueado");
-                        var LabelError = TranslateExtension.Translate("LabelError");
-                        var LabelOK = TranslateExtension.Translate("LabelOK");
                         Application.Current.MainPage.DisplayAlert(LabelError, LblUsuarioBloqueado, LabelOK);
                         Application.Current.MainPage = new NavigationPage(new SuspendedAccountPage()) { BarBackgroundColor = Color.Black };
                         return;
                     }
                 }
-                catch (Exception)
+                catch (Exception ex)
                 {
-                    Application.Current.MainPage = new NavigationPage(new InternetRequiredForApp()) { BarBackgroundColor = Color.Black };
+                Application.Current.MainPage = new NavigationPage(new InternetRequiredForApp()) { BarBackgroundColor = Color.Black };
+                    var properties = new Dictionary<string, string> {
+                        { "Object", "HomePage" },
+                        { "Method", "OnAppearing-Parametros" }
+                    };
+                    Debug.WriteLine($"Error al actualizar ubicación en el mapa: {ex.Message}");
+                    Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
                 }
-
-               
-
-
             }
 
         }
+
+        private void CheckAndUpdateLocation()
+        {
+            Task.Run(async () =>
+            {
+                var currentLocation = await GetCurrentLocation();
+
+                // Si _lastLocation es null, simplemente actualiza sin verificar la distancia
+                if (_lastLocation == null)
+                {
+                    UpdateLocationAndFetchData(currentLocation);
+                    return;
+                }
+
+                if (Location.CalculateDistance(currentLocation, _lastLocation, DistanceUnits.Kilometers) > 0.07 ||
+                    DateTime.Now - _lastLocationFetchTime > TimeSpan.FromMinutes(30))
+                {
+                    UpdateLocationAndFetchData(currentLocation);
+                }
+            });
+        }
+
+        private async void UpdateLocationAndFetchData(Location currentLocation)
+        {
+            if (App.persona is null)
+            {
+                App.persona = JsonConvert.DeserializeObject<Persona>(Preferences.Get("User", ""));
+            }
+
+            await ObtenerPines();
+            ActualizarUbicacionEnMapa();
+            await HomeViewModel.InicializarParametrosUsuarioAsync();
+
+            // Vuelve al hilo principal para hacer actualizaciones en la UI
+            Device.BeginInvokeOnMainThread(() =>
+            {
+                _lastLocation = currentLocation;
+                _lastLocationFetchTime = DateTime.Now;
+            });
+        }
+
+        private void ActualizarUbicacionEnMapa()
+        {
+            ParametrosUsuario parametros = JsonConvert.DeserializeObject<ParametrosUsuario>(Preferences.Get("ParametrosUsuario", ""));
+            try
+            {
+                if (App.ubicacionActual == null || App.ubicacionActual.latitud == null || App.ubicacionActual.longitud == null)
+                {
+                    Device.BeginInvokeOnMainThread(async () =>
+                    {
+                        bool result = await App.Current.MainPage.DisplayAlert("Ubicación no disponible", "Verifica que tu GPS esté activo.", "Reintentar", "Reiniciar App");
+
+                        if (result)
+                        {
+                            ActualizarUbicacionEnMapa();  // El usuario eligió "Reintentar"
+                        }
+                        else
+                        {
+                            Application.Current.MainPage = new MainPage();  // Reiniciar la aplicación
+                        }
+
+                    });
+                    return; 
+                }
+                if (App.ubicacionActual != null)
+                {
+                    var LabelUsuario = TranslateExtension.Translate("LabelUsuario");
+                    var LabelTuUbicacion = TranslateExtension.Translate("LabelTuUbicacion");
+                    CustomPin UserPin = new CustomPin()
+                    {
+                        MarkerId = "User",
+                        Id = "User",
+                        Label = LabelUsuario,
+                        Type = PinType.Generic,
+                        Address = LabelTuUbicacion,
+                        Position = new Position(App.ubicacionActual.latitud, App.ubicacionActual.longitud)
+                    };
+
+                    Device.BeginInvokeOnMainThread(() =>
+                    {
+                        // Si currentCircle no es null, lo removemos del mapa
+                        if (currentCircle != null)
+                        {
+                            map.MapElements.Remove(currentCircle);
+                        }
+
+                        // Creamos el nuevo círculo y lo asignamos a currentCircle
+                        var center = new Position(App.ubicacionActual.latitud, App.ubicacionActual.longitud);
+                        var valorRadio = parametros != null && parametros.radio_alarmas_mts_actual != 0
+                             ? parametros.radio_alarmas_mts_actual
+                             : 100;
+                        var radius = new Distance(valorRadio);
+
+
+                        DrawUserCircle(center);
+                        map.CustomPins.Add(UserPin);
+                        map.Pins.Add(UserPin);
+                        map.MoveToRegion(MapSpan.FromCenterAndRadius(center, radius));
+                    });
+                }
+            }
+            catch (Exception ex)
+            {
+                var properties = new Dictionary<string, string> {
+                        { "Object", "HomePage" },
+                        { "Method", "ActualizarUbicacionEnMapa" }
+                    };
+                Debug.WriteLine($"Error al actualizar ubicación en el mapa: {ex.Message}");
+                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
+            }
+            
+        }
+
+
+        //private async void HandleTutorialCompleted(object sender, EventArgs e)
+        //{
+        //    tutorialPage8.TutorialCompleted -= HandleTutorialCompleted;
+        //    try
+        //    {
+        //        ParametrosUsuario parametros = JsonConvert.DeserializeObject<ParametrosUsuario>(Preferences.Get("ParametrosUsuario", ""));
+
+        //        if (parametros.FlagUsuarioDebeFirmarCto)
+        //        {
+        //            Application.Current.MainPage = new NavigationPage(new TermsAndConditionsPage()) { BarBackgroundColor = Color.Black };
+        //            return;
+        //        }
+
+        //        if (parametros.FlagBloqueoUsuario)
+        //        {
+        //            var LblUsuarioBloqueado = TranslateExtension.Translate("LblUsuarioBloqueado");
+        //            var LabelError = TranslateExtension.Translate("LabelError");
+        //            var LabelOK = TranslateExtension.Translate("LabelOK");
+        //            Application.Current.MainPage.DisplayAlert(LabelError, LblUsuarioBloqueado, LabelOK);
+        //            Application.Current.MainPage = new NavigationPage(new SuspendedAccountPage()) { BarBackgroundColor = Color.Black };
+        //            return;
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        Application.Current.MainPage = new NavigationPage(new InternetRequiredForApp()) { BarBackgroundColor = Color.Black };
+        //        var properties = new Dictionary<string, string> {
+        //                { "Object", "HomePage" },
+        //                { "Method", "HandleTutorialCompleted" }
+        //            };
+        //        Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties); 
+        //    }
+        //}
 
         private async void ShowCeroTutorialPopup()
         {
@@ -517,7 +711,11 @@ namespace sospect.Views
         private async void ShowNinethTutorialPopup()
         {
             var LblPromocion = TranslateExtension.Translate("LblPromocion");
-            var tutorialPage8 = new TutorialPopupPage();
+            tutorialPage8 = new TutorialPopupPage();
+
+            tutorialPage8.OnPopupClosed += HandleLastTutorialClosed;
+            //tutorialPage8.TutorialCompleted += HandleTutorialCompleted;
+
             var viewModel8 = new TutorialPopupPageViewModel
             {
                 TutorialText = LblPromocion,
@@ -538,11 +736,27 @@ namespace sospect.Views
             Xamarin.Essentials.Preferences.Set("HasSeenTutorial", true);
         }
 
+        private void HandleLastTutorialClosed()
+        {
+            tutorialPage8.OnPopupClosed -= HandleLastTutorialClosed;
+            // Esto se llama cuando el último tutorial se cierra
+            CompleteTutorial();
+        }
+
+        private void CompleteTutorial()
+        {
+            // Aquí invocas al evento TutorialCompleted de la página del tutorial
+            tutorialPage8.CompleteTutorial();  // Aquí asumí que "tutorialPage8" está disponible a nivel de clase, pero puede que necesites ajustarlo.
+        }
+
+
+
         async Task<Location> GetCurrentLocation()
         {
             try
             {
                 var request = new GeolocationRequest(GeolocationAccuracy.High, TimeSpan.FromSeconds(10));
+                ParametrosUsuario parametros = JsonConvert.DeserializeObject<ParametrosUsuario>(Preferences.Get("ParametrosUsuario", ""));
                 cts = new CancellationTokenSource();
 
                 bool gpsStatus = DependencyService.Get<ILocationSettings>().IsGpsAvailable();
@@ -552,7 +766,7 @@ namespace sospect.Views
 
                     if (location != null)
                     {
-                        map.MoveToRegion(MapSpan.FromCenterAndRadius(new Position(location.Latitude, location.Longitude), new Distance(100)));
+                        map.MoveToRegion(MapSpan.FromCenterAndRadius(new Position(location.Latitude, location.Longitude), new Distance(parametros.radio_alarmas_mts_actual)));
                         App.ubicacionActual.latitud = location.Latitude;
                         App.ubicacionActual.longitud = location.Longitude;
 
@@ -570,7 +784,11 @@ namespace sospect.Views
 
                     if (location != null)
                     {
-                        map.MoveToRegion(MapSpan.FromCenterAndRadius(new Position(location.Latitude, location.Longitude), new Distance(100)));
+
+                        var center = new Position(location.Latitude, location.Longitude);
+                        var radius = new Distance(parametros.radio_alarmas_mts_actual);
+                        DrawUserCircle(center);
+                        map.MoveToRegion(MapSpan.FromCenterAndRadius(center, radius));
                         App.ubicacionActual.latitud = location.Latitude;
                         App.ubicacionActual.longitud = location.Longitude;
                         return location;
@@ -582,21 +800,40 @@ namespace sospect.Views
             catch (FeatureNotSupportedException fnsEx)
             {
                 // Handle not supported on device exception
+                var properties = new Dictionary<string, string> {
+                        { "Object", "HomePage-GetCurrentLocation" },
+                        { "Method", "FeatureNotSupportedException" }
+                    };
+                Microsoft.AppCenter.Crashes.Crashes.TrackError(fnsEx, properties);
                 return null;
             }
             catch (FeatureNotEnabledException fneEx)
             {
                 // Handle not enabled on device exception
+                var properties = new Dictionary<string, string> {
+                        { "Object", "HomePage-GetCurrentLocation" },
+                        { "Method", "FeatureNotEnabledException" }
+                    };
+                Microsoft.AppCenter.Crashes.Crashes.TrackError(fneEx, properties);
                 return null;
             }
             catch (PermissionException pEx)
             {
-                // Handle permission exception
+                var properties = new Dictionary<string, string> {
+                        { "Object", "HomePage-GetCurrentLocation" },
+                        { "Method", "PermissionException" }
+                    };
+                Microsoft.AppCenter.Crashes.Crashes.TrackError(pEx, properties);
                 return null;
             }
             catch (Exception ex)
             {
                 // Unable to get location
+                var properties = new Dictionary<string, string> {
+                        { "Object", "HomePage-GetCurrentLocation" },
+                        { "Method", "FinalCatch" }
+                    };
+                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
                 return null;
             }
         }
@@ -664,24 +901,70 @@ namespace sospect.Views
             {
                 vm.IsRunning = true;
 
-                if (App.ubicacionActual != null)
+                try
                 {
-                    App.ubicacionActual.p_user_id_thirdparty = App.persona.user_id_thirdparty;
-                    List<AlarmaCercana> alarmasCercanas = await ApiService.ActualizarUbicacion(App.ubicacionActual);
-                    PintarAlarmasEnMapa(alarmasCercanas);
+                    if (App.ubicacionActual != null)
+                    {
+                        App.ubicacionActual.p_user_id_thirdparty = App.persona.user_id_thirdparty;
+                        App.ubicacionActual.PantallaOrigen = "HomePage";
+                        List<AlarmaCercana> alarmasCercanas = await ApiService.ActualizarUbicacion(App.ubicacionActual);
+                        PintarAlarmasEnMapa(alarmasCercanas);
+                        ActualizarUbicacionEnMapa();
+                    }
+                    else
+                    {
+                        App.ubicacionActual = await LocationUtils.ObtenerUbicacionActual();
+                        App.ubicacionActual.p_user_id_thirdparty = App.persona.user_id_thirdparty;
+                        App.ubicacionActual.PantallaOrigen = "HomePage";
+                        List<AlarmaCercana> alarmasCercanas = await ApiService.ActualizarUbicacion(App.ubicacionActual);
+                        PintarAlarmasEnMapa(alarmasCercanas);
+                        ActualizarUbicacionEnMapa();
+                    }
+
                 }
-                else
+                catch (Exception ex)
                 {
-                    App.ubicacionActual = await LocationUtils.ObtenerUbicacionActual();
-                    App.ubicacionActual.p_user_id_thirdparty = App.persona.user_id_thirdparty;
-                    List<AlarmaCercana> alarmasCercanas = await ApiService.ActualizarUbicacion(App.ubicacionActual);
-                    PintarAlarmasEnMapa(alarmasCercanas);
+                    Debug.WriteLine($"Error al obtener pines: {ex.Message}");
+                    var properties = new Dictionary<string, string> {
+                        { "Object", "HomePage" },
+                        { "Method", "ObtenerPines" }
+                    };
+                    Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
+                    
                 }
+                
 
                 vm.IsRunning = false;
             }
 
         }
+
+        private void DrawUserCircle(Position center)
+        {
+            ParametrosUsuario parametros = JsonConvert.DeserializeObject<ParametrosUsuario>(Preferences.Get("ParametrosUsuario", ""));
+            // Si currentCircle no es null, lo removemos del mapa
+            if (currentCircle != null)
+            {
+                map.MapElements.Remove(currentCircle);
+            }
+
+            var valorRadio = parametros != null && parametros.radio_alarmas_mts_actual != 0
+                 ? parametros.radio_alarmas_mts_actual
+                 : 100;
+
+            currentCircle = new Circle()
+            {
+                FillColor = Color.FromRgba(255, 255, 0, 0.1),
+                Radius = new Distance(valorRadio),
+                Center = center,
+                StrokeWidth = 3,
+                StrokeColor = Color.Blue
+            };
+            map.MapElements.Add(currentCircle);
+        }
+
+
+
 
         async void ReportarCrimen_Clicked(System.Object sender, System.EventArgs e)
         {

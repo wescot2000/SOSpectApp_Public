@@ -1,4 +1,5 @@
-﻿using System.Collections.ObjectModel;
+﻿using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
@@ -26,16 +27,31 @@ namespace sospect.ViewModels
         private async void LoadSubscriptionValuesAsync()
         {
             IsRunning = true;
-            var response = await ApiService.ObtenerValoresDeSubscripcion();
-            IsRunning = false;
-
-            if (response != null)
+            try
             {
-                foreach (var value in response)
+                var response = await ApiService.ObtenerValoresDeSubscripcion();
+                
+                if (response != null)
                 {
-                    SubscriptionValues.Add(value);
+                    foreach (var value in response)
+                    {
+                        SubscriptionValues.Add(value);
+                    }
                 }
             }
+            catch (System.Exception ex)
+            {
+                var properties = new Dictionary<string, string> {
+                        { "Object", "SubscriptionValuesPageViewModel" },
+                        { "Method", "ObtenerValoresDeSubscripcion" }
+                    };
+                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
+            }
+            finally
+            {
+                IsRunning = false;
+            }
+            
         }
     }
 }

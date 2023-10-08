@@ -3,6 +3,7 @@ using sospect.Models;
 using sospect.Services;
 using sospect.Utils;
 using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 using Xamarin.Essentials;
@@ -13,47 +14,10 @@ namespace sospect.ViewModels
     {
         public HomeViewModel(bool CargarParametros)
         {
-            try
-            {
-                if (CargarParametros)
-                {
-                    ShowUIButtons = true;
-                    if (JsonConvert.DeserializeObject<ParametrosUsuario>(Preferences.Get("ParametrosUsuario", "")) != null)
-                    {
-                        ParametrosUsuario parametros = JsonConvert.DeserializeObject<ParametrosUsuario>(Preferences.Get("ParametrosUsuario", ""));
-                        NumeroDeNotificaciones = parametros?.MensajesParaUsuario ?? 0;
-                    }
-                    else
-                    {
-                        Task.Run(async () =>
-                        {
-                            IsRunning = true;
-                            if (await InicializarParametrosUsuarioAsync())
-                            {
-                                ParametrosUsuario parametros = JsonConvert.DeserializeObject<ParametrosUsuario>(Preferences.Get("ParametrosUsuario", ""));
-                                NumeroDeNotificaciones = parametros?.MensajesParaUsuario ?? 0;
-                            }
-                            else
-                            {
-                                NumeroDeNotificaciones = 0;
-                            }
-                            IsRunning = false;
-                        });
-                    }
-                }
-                else
-                {
-                    ShowUIButtons = false;
-                    IsRunning = false;
-                }
-            }
-            catch (Exception ex)
-            {
-                App.Current.MainPage.DisplayAlert("Error", ex.Message, "Ok");
-            }
-
-           
+            ShowUIButtons = CargarParametros;
+            IsRunning = CargarParametros;
         }
+
 
         public static async Task<bool> InicializarParametrosUsuarioAsync()
         {
@@ -82,9 +46,45 @@ namespace sospect.ViewModels
             }
             catch (Exception ex)
             {
+                var properties = new Dictionary<string, string> {
+                        { "Object", "HomeViewModel" },
+                        { "Method", "ObtenerParametrosDeUsuario" }
+                    };
+                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
                 return false;
             }
         }
+
+        public async Task InicializarDatosUsuarioAsync()
+        {
+            try
+            {
+                if (ShowUIButtons)
+                {
+                    var parametrosGuardados = Preferences.Get("ParametrosUsuario", "");
+                    if (!string.IsNullOrEmpty(parametrosGuardados))
+                    {
+                        ParametrosUsuario parametros = JsonConvert.DeserializeObject<ParametrosUsuario>(parametrosGuardados);
+                        NumeroDeNotificaciones = parametros?.MensajesParaUsuario ?? 0;
+                    }
+                    else
+                    {
+                        NumeroDeNotificaciones = 0;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                App.Current.MainPage.DisplayAlert("Error", ex.Message, "Ok");
+                var properties = new Dictionary<string, string>
+                                    {
+                                        { "Object", "HomeViewModel" },
+                                        { "Method", "InicializarDatosUsuario" }
+                                    };
+                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
+            }
+        }
+
 
         private int _numeroDeNotificaciones;
         public int NumeroDeNotificaciones
@@ -109,14 +109,14 @@ namespace sospect.ViewModels
             }
         }
 
-        private bool _ShowUIButtons;
+        private bool _showUIButtons;
         public bool ShowUIButtons
         {
-            get { return _ShowUIButtons; }
+            get { return _showUIButtons; }
             set
             {
-                _ShowUIButtons = value;
-                OnPropertyChanged(nameof(_ShowUIButtons));
+                _showUIButtons = value;
+                OnPropertyChanged(nameof(ShowUIButtons));
             }
         }
     }

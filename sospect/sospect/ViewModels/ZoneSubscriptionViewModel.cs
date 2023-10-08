@@ -50,6 +50,11 @@ namespace sospect.ViewModels
                 var LabelError = TranslateExtension.Translate("LabelError");
                 var LabelOK = TranslateExtension.Translate("LabelOK");
                 await Application.Current.MainPage.DisplayAlert(LabelError, ex.Message, LabelOK);
+                var properties = new Dictionary<string, string> {
+                        { "Object", "ZoneSubscriptionViewModel" },
+                        { "Method", "ObtenerValoresDeSubscripcion" }
+                    };
+                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
             }
             finally
             {
@@ -64,6 +69,8 @@ namespace sospect.ViewModels
             var LabelOK = TranslateExtension.Translate("LabelOK");
             var LblZonaCreada = TranslateExtension.Translate("LblZonaCreada");
             var LblSeleccionePuntoMapa = TranslateExtension.Translate("LblSeleccionePuntoMapa");
+            var LabelInformacion = TranslateExtension.Translate("LabelInformacion");
+            var MensajeError = TranslateExtension.Translate("MensajeError");
 
             if (miniMap.CustomPins.Any())
             {
@@ -71,6 +78,7 @@ namespace sospect.ViewModels
                 var saldoPoderesInsuficiente = TranslateExtension.Translate("LblSaldoPoderesInsuficiente");
                 var comprarPoderes = TranslateExtension.Translate("LblComprarPoderes");
                 var cancelar = TranslateExtension.Translate("LabelCancelar");
+
                 
 
                 if (_parametros.SaldoPoderes < _poderesRequeridos)
@@ -91,19 +99,35 @@ namespace sospect.ViewModels
                     idioma = IdiomUtil.ObtenerCodigoDeIdioma()
                 };
                 IsRunning = true;
-                var response = await ApiService.NuevaZonaVigilancia(nuevaZonaVRequest);
-                IsRunning = false;
-
-                if (response.IsSuccess)
+                try
                 {
-                    await Application.Current.MainPage.DisplayAlert(LabelOK, LblZonaCreada, LabelOK);
-                    MessagingCenter.Send(this, "DatosActualizados");
-                    await Application.Current.MainPage.Navigation.PopToRootAsync();
+                    var response = await ApiService.NuevaZonaVigilancia(nuevaZonaVRequest);
+                    
+                    if (response.IsSuccess)
+                    {
+                        await Application.Current.MainPage.DisplayAlert(LabelOK, LblZonaCreada, LabelOK);
+                        MessagingCenter.Send(this, "DatosActualizados");
+                        await Application.Current.MainPage.Navigation.PopToRootAsync();
+                    }
+                    else
+                    {
+                        await Application.Current.MainPage.DisplayAlert(LabelError, LblErrorZonaVigil, LabelOK);
+                    }
                 }
-                else
+                catch (Exception ex)
                 {
-                    await Application.Current.MainPage.DisplayAlert(LabelError, LblErrorZonaVigil, LabelOK);
+                    await App.Current.MainPage.DisplayAlert(LabelInformacion, MensajeError, LabelOK);
+                    var properties = new Dictionary<string, string> {
+                        { "Object", "TermsAndConditionsViewModel" },
+                        { "Method", "NuevaZonaVigilancia" }
+                    };
+                    Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
                 }
+                finally
+                {
+                    IsRunning = false;
+                }
+                
             }
             else
             {

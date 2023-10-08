@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Windows.Input;
@@ -45,7 +46,19 @@ namespace sospect.ViewModels
         private async void LoadTermsAndConditionsAsync()
         {
             IsRunning = true;
-            TermsAndConditionsText = await ApiService.ObtenerContratoUsuario();
+            try
+            {
+                TermsAndConditionsText = await ApiService.ObtenerContratoUsuario();
+            }
+            catch (Exception ex)
+            {
+                var properties = new Dictionary<string, string> {
+                        { "Object", "TermsAndConditionsViewModel" },
+                        { "Method", "ObtenerContratoUsuario" }
+                    };
+                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
+            }
+            
             IsRunning = false;
         }
 
@@ -56,26 +69,41 @@ namespace sospect.ViewModels
             var LabelInformacion = TranslateExtension.Translate("LabelInformacion");
             var LabelError = TranslateExtension.Translate("LabelError");
             var LabelOK = TranslateExtension.Translate("LabelOK");
+            var MensajeError = TranslateExtension.Translate("MensajeError");
 
             IsRunning = true;
-
-            var response = await ApiService.AceptarContratoDeUsuario(new AcceptContractRequest()
+            try
             {
-                PIpAceptacion = InternetUtil.GetPublicIpAddress(),
-                PUserIdThirdparty = App.persona.user_id_thirdparty
-            });
+                var response = await ApiService.AceptarContratoDeUsuario(new AcceptContractRequest()
+                {
+                    PIpAceptacion = InternetUtil.GetPublicIpAddress(),
+                    PUserIdThirdparty = App.persona.user_id_thirdparty
+                });
 
-            IsRunning = false;
-
-            if (response.IsSuccess)
-            {
-                await App.Current.MainPage.DisplayAlert(LabelInformacion, LblExitoEnAceptacion, LabelOK);
-                App.Current.MainPage = new NavigationPage(new SospectTabs()) { BarBackgroundColor = Color.Black };
+                if (response.IsSuccess)
+                {
+                    await App.Current.MainPage.DisplayAlert(LabelInformacion, LblExitoEnAceptacion, LabelOK);
+                    App.Current.MainPage = new NavigationPage(new SospectTabs()) { BarBackgroundColor = Color.Black };
+                }
+                else
+                {
+                    await App.Current.MainPage.DisplayAlert(LabelError, LblFalloEnAceptacion, LabelOK);
+                }
             }
-            else
+            catch (Exception ex)
             {
-                await App.Current.MainPage.DisplayAlert(LabelError, LblFalloEnAceptacion, LabelOK);
+                await App.Current.MainPage.DisplayAlert(LabelInformacion, MensajeError, LabelOK);
+                var properties = new Dictionary<string, string> {
+                        { "Object", "TermsAndConditionsViewModel" },
+                        { "Method", "AceptarContratoDeUsuario" }
+                    };
+                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
             }
+            finally
+            {
+                IsRunning = false;
+            }
+            
         }
 
         private async void DeclineTerms()

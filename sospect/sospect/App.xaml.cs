@@ -99,6 +99,11 @@ namespace sospect
             {
                 // si hay una excepción (posiblemente debido a problemas de red), simplemente continúa
                 MainPage = new NavigationPage(new SospectTabs()) { BarBackgroundColor = Color.Black };
+                var properties = new Dictionary<string, string> {
+                        { "Object", "App" },
+                        { "Method", "SetupMainPageAsync" }
+                    };
+                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
             }
         }
 

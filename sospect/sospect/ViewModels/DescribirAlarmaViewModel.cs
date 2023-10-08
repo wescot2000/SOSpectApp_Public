@@ -88,6 +88,8 @@ namespace sospect.ViewModels
         public ICommand VerDetallesAlarmaCommand => new Command<AlarmaCercana>(OnVerDetallesAlarmaCommand);
         public ICommand ConfirmarAlarmaCommand => new Command<AlarmaCercana>(OnConfirmarAlarmaCommand);
         public ICommand VerAlarmaEnMapaCommand => new Command<AlarmaCercana>(OnVerAlarmaEnMapaCommand);
+        public ICommand CerrarAlarmaCommand => new Command<AlarmaCercana>(OnCerrarAlarmaCommand);
+        public ICommand AtenderAlarmaCommand => new Command<AlarmaCercana>(OnAtenderAlarmaCommand);
 
         private void OnVerAlarmaEnMapaCommand(AlarmaCercana Alarma)
         {
@@ -131,7 +133,7 @@ namespace sospect.ViewModels
             var LabelOK = TranslateExtension.Translate("LabelOK");
             var LabelInformacion = TranslateExtension.Translate("LabelInformacion");
             var AdvertenciaCalificacion = TranslateExtension.Translate("AdvertenciaCalificacion");
-
+            var MensajeError = TranslateExtension.Translate("MensajeError");
 
             var action = await App.Current.MainPage.DisplayActionSheet(RecibeAlarma, null, null, LabelConfirmo, LabelNoSeguro, LabelEsFalsa);
 
@@ -144,36 +146,49 @@ namespace sospect.ViewModels
 
             ResponseMessage? responseMessage = null;
             bool respuesta;
-            switch (action)
+            try
             {
-                case var a when a == LabelConfirmo:
-                    calificacionAlarma.VeracidadAlarma = true;
+                switch (action)
+                {
+                    case var a when a == LabelConfirmo:
+                        calificacionAlarma.VeracidadAlarma = true;
 
-                    respuesta = await App.Current.MainPage.DisplayAlert(LabelConfirmar, AdvertenciaCalificacion, LabelSi, LabelNo);
+                        respuesta = await App.Current.MainPage.DisplayAlert(LabelConfirmar, AdvertenciaCalificacion, LabelSi, LabelNo);
 
-                    if (respuesta)
-                    {
-                        responseMessage = await ApiService.CalificarAlarma(calificacionAlarma);
-                    }
-                    break;
-                case var a when a == LabelNoSeguro:
-                    break;
-                case var a when a == LabelEsFalsa:
-                    calificacionAlarma.VeracidadAlarma = false;
+                        if (respuesta)
+                        {
+                            responseMessage = await ApiService.CalificarAlarma(calificacionAlarma);
+                        }
+                        break;
+                    case var a when a == LabelNoSeguro:
+                        break;
+                    case var a when a == LabelEsFalsa:
+                        calificacionAlarma.VeracidadAlarma = false;
 
 
-                    respuesta = await App.Current.MainPage.DisplayAlert(LabelConfirmar, AdvertenciaCalificacion, LabelSi, LabelNo);
+                        respuesta = await App.Current.MainPage.DisplayAlert(LabelConfirmar, AdvertenciaCalificacion, LabelSi, LabelNo);
 
-                    if (respuesta)
-                    {
-                        IsRunning = true;
-                        responseMessage = await ApiService.CalificarAlarma(calificacionAlarma);
-                        IsRunning = false;
-                    }
-                    break;
-                default:
-                    break;
+                        if (respuesta)
+                        {
+                            IsRunning = true;
+                            responseMessage = await ApiService.CalificarAlarma(calificacionAlarma);
+                            IsRunning = false;
+                        }
+                        break;
+                    default:
+                        break;
+                }
             }
+            catch (Exception ex)
+            {
+                await App.Current.MainPage.DisplayAlert(LabelInformacion, MensajeError, LabelOK);
+                var properties = new Dictionary<string, string> {
+                        { "Object", "DescribirAlarmaViewModel" },
+                        { "Method", "CalificarAlarma" }
+                    };
+                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
+            }
+            
 
             if (responseMessage != null)
             {
@@ -219,29 +234,77 @@ namespace sospect.ViewModels
             IsNavigating = true;
 
             await PopupNavigation.Instance.PushAsync(new Popups.DescribirAlarmaPopUp(alarmaCercana));
+            
+            IsNavigating = false;
+        }
+
+        private async void OnCerrarAlarmaCommand(AlarmaCercana alarmaCercana)
+        {
+            if (IsNavigating)
+            {
+                return;
+            }
+            IsNavigating = true;
+
+            await PopupNavigation.Instance.PushAsync(new Popups.CerrarAlarmaPopUp(alarmaCercana));
+
+            IsNavigating = false;
+        }
+
+        private async void OnAtenderAlarmaCommand(AlarmaCercana alarmaCercana)
+        {
+            if (IsNavigating)
+            {
+                return;
+            }
+            IsNavigating = true;
+
+            await PopupNavigation.Instance.PushAsync(new Popups.AtenderAlarmaPopup(alarmaCercana));
             IsNavigating = false;
         }
 
         internal async Task ObtenerAlarmas()
         {
+            var LabelOK = TranslateExtension.Translate("LabelOK");
+            var LabelInformacion = TranslateExtension.Translate("LabelInformacion");
+            var LblHabilitaGPSReintenta = TranslateExtension.Translate("LblHabilitaGPSReintenta");
+            var MensajeError = TranslateExtension.Translate("MensajeError");
+
             IsRunning = true;
-            ListadoAlarmas = new ObservableCollection<AlarmaCercana>(await ApiService.ActualizarUbicacion(App.ubicacionActual));
 
-            foreach (var alarma in ListadoAlarmas)
+            if (App.ubicacionActual != null)
             {
-                alarma.CalcularCredibilidad();
-            }
+                try
+                {
+                    App.ubicacionActual.PantallaOrigen = "DescribirAlarma";
+                    ListadoAlarmas = new ObservableCollection<AlarmaCercana>(await ApiService.ActualizarUbicacion(App.ubicacionActual));
 
-            if (!ListadoAlarmas.Any())
-            {
-                EmptyState = true;
+                    foreach (var alarma in ListadoAlarmas)
+                    {
+                        alarma.CalcularCredibilidad();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Debug.WriteLine($"Error: {ex.Message}");
+                    await App.Current.MainPage.DisplayAlert(LabelInformacion, MensajeError, LabelOK);
+                    var properties = new Dictionary<string, string> {
+                        { "Object", "DescribirAlarmaViewModel" },
+                        { "Method", "CalificarAlarma" }
+                    };
+                    Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
+                }
             }
             else
             {
-                EmptyState = false;
+                await App.Current.MainPage.DisplayAlert(LabelInformacion, LblHabilitaGPSReintenta, LabelOK);
             }
+
+            EmptyState = ListadoAlarmas == null || !ListadoAlarmas.Any();
+
             IsRunning = false;
         }
+
 
         private ObservableCollection<AlarmaCercana> _ListadoAlarmas;
         public ObservableCollection<AlarmaCercana> ListadoAlarmas
