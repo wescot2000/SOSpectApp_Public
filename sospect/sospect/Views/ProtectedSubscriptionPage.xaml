@@ -1,62 +1,171 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="sospect.Views.ProtectedSubscriptionPage"
              xmlns:fonts="clr-namespace:sospect.Resources.Fonts;assembly=sospect"
              xmlns:helpers="clr-namespace:sospect.Helpers"
-             BackgroundColor="White"
+             BackgroundColor="#F8F9FA"
              Title="{helpers:TranslateExtension Text='LblSubscrProtegido'}">
-    <ContentPage.Content>
-        <Grid>
-            <StackLayout Padding="20">
-                <Label TextColor="Gray" FontSize="Medium" Text="{helpers:TranslateExtension Text='LblIDUsuarioAProteger'}" />
-                <Frame BorderColor="Gray" Padding="0" CornerRadius="5" HasShadow="False">
-                    <Entry x:Name="UserIdEntry" BackgroundColor="White" TextColor="Black" Text="{Binding UserId}" />
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="CardStyle" TargetType="Frame">
+                <Setter Property="BackgroundColor" Value="White"/>
+                <Setter Property="CornerRadius" Value="12"/>
+                <Setter Property="HasShadow" Value="True"/>
+                <Setter Property="Padding" Value="20"/>
+                <Setter Property="Margin" Value="16,8"/>
+                <Setter Property="BorderColor" Value="Transparent"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Grid>
+        <ScrollView>
+            <StackLayout Spacing="0" Padding="0,8">
+
+                <!-- Header -->
+                <Frame Style="{StaticResource CardStyle}" Margin="16,8,16,16">
+                    <StackLayout Spacing="12">
+                        <Label Text="{x:Static fonts:IconFont.Shield}"
+                               FontFamily="{StaticResource IcoMoonFamily}"
+                               FontSize="40"
+                               TextColor="#4A90E2"
+                               HorizontalOptions="Center"/>
+                        <Label Text="{helpers:TranslateExtension Text='LblSubscrProtegido'}"
+                               FontSize="20"
+                               FontAttributes="Bold"
+                               TextColor="#2C3E50"
+                               HorizontalTextAlignment="Center"/>
+                    </StackLayout>
                 </Frame>
 
-
-                <Label BackgroundColor="White" TextColor="Gray" Margin="0,30,0,0" Text="{helpers:TranslateExtension Text='LblRelacionProtegido'}" />
-
-                <Frame BorderColor="Gray" Padding="0" CornerRadius="5" HasShadow="False">
-                    <Grid>
-                        <Picker x:Name="RelationshipPicker" BackgroundColor="White" TextColor="Black" 
-                                ItemsSource="{Binding RelationshipTypes}" 
-                                ItemDisplayBinding="{Binding TranslatedDescription}" 
-                                SelectedItem="{Binding SelectedRelationshipType}" 
-                                SelectedIndexChanged="OnRelationshipPickerSelectedIndexChanged" />
-                        <Image Source="dropdown_icon.png" HorizontalOptions="End" HeightRequest="15" WidthRequest="15" Margin="0,0,10,0" VerticalOptions="Center"/>
-                    </Grid>
-                </Frame>
-                
-                <Frame Padding="5" BorderColor="Black" BackgroundColor="LightGray" Margin="0,40,0,0" HorizontalOptions="Center" HeightRequest="35" WidthRequest="380" CornerRadius="10">
-                <Frame.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding RequestPermissionCommand}" NumberOfTapsRequired="1" />
-                </Frame.GestureRecognizers>
-                <Label Text="{helpers:TranslateExtension Text='LblSolicitarPermiso'}" 
-                       TextColor="Black"
-                       LineBreakMode="WordWrap"
-                       HorizontalOptions="CenterAndExpand"
-                       VerticalOptions="CenterAndExpand"
-                       HorizontalTextAlignment="Center"
-                       VerticalTextAlignment="Center" />
+                <!-- ID del Usuario a Proteger -->
+                <Frame Style="{StaticResource CardStyle}">
+                    <StackLayout Spacing="12">
+                        <Label Text="{helpers:TranslateExtension Text='LblIDUsuarioAProteger'}" 
+                               TextColor="#7F8C8D" 
+                               FontSize="14"
+                               FontAttributes="Bold"/>
+                        <Frame BorderColor="#E0E0E0" 
+                               Padding="12" 
+                               CornerRadius="8" 
+                               HasShadow="False"
+                               BackgroundColor="White">
+                            <Entry x:Name="UserIdEntry" 
+                                   BackgroundColor="Transparent" 
+                                   TextColor="#2C3E50" 
+                                   Text="{Binding UserId}"
+                                   Placeholder="ID del usuario"
+                                   PlaceholderColor="#BDC3C7"/>
+                        </Frame>
+                    </StackLayout>
                 </Frame>
 
-                <Label x:Name="ResultLabel" TextColor="Black" Text="{Binding ResultText}" IsVisible="{Binding IsResultVisible}" />
+                <!-- Relación con el Protegido -->
+                <Frame Style="{StaticResource CardStyle}">
+                    <StackLayout Spacing="12">
+                        <Label Text="{helpers:TranslateExtension Text='LblRelacionProtegido'}" 
+                           TextColor="#7F8C8D" 
+                           FontSize="14"
+                           FontAttributes="Bold"/>
+                                    <Frame BorderColor="#E0E0E0" 
+                           Padding="0" 
+                           CornerRadius="8" 
+                           HasShadow="False"
+                           BackgroundColor="White">
+                                        <Frame.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="OnRelationshipFrameTapped"/>
+                                        </Frame.GestureRecognizers>
+                                        <Grid Padding="12" ColumnDefinitions="*,Auto">
+                                            <Label Grid.Column="0"
+                                   Text="{Binding SelectedRelationshipType.TranslatedDescription}"
+                                   TextColor="#2C3E50"
+                                   FontSize="15"
+                                   VerticalOptions="Center"/>
+                                            <Label Grid.Column="1"
+                                   Text="{x:Static fonts:IconFont.ChevronDown}"
+                                   FontFamily="{StaticResource IcoMoonFamily}"
+                                   FontSize="16"
+                                   TextColor="#7F8C8D"
+                                   VerticalOptions="Center"/>
+                                        </Grid>
+                                    </Frame>
+                                </StackLayout>
+                            </Frame>
+
+                <!-- Botón Solicitar Permiso -->
+                <Frame Style="{StaticResource CardStyle}"
+                       Margin="16,24,16,8"
+                       Padding="0"
+                       IsEnabled="{Binding IsRunning, Converter={StaticResource InverseBooleanConverter}}">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding RequestPermissionCommand}"/>
+                    </Frame.GestureRecognizers>
+                    <Frame BackgroundColor="#4A90E2"
+                           Padding="16"
+                           CornerRadius="10"
+                           HasShadow="False"
+                           BorderColor="Transparent"
+                           HeightRequest="60"
+                           IsEnabled="{Binding IsRunning, Converter={StaticResource InverseBooleanConverter}}">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0"
+                                   Text="{x:Static fonts:IconFont.Check}"
+                                   FontFamily="{StaticResource IcoMoonFamily}"
+                                   FontSize="20"
+                                   TextColor="White"
+                                   VerticalOptions="Center"
+                                   Margin="0,0,12,0"/>
+                            <Label Grid.Column="1"
+                                   Text="{helpers:TranslateExtension Text='LblSolicitarPermiso'}" 
+                                   TextColor="White"
+                                   FontSize="16"
+                                   FontAttributes="Bold"
+                                   VerticalOptions="Center"
+                                   HorizontalOptions="Start"/>
+                        </Grid>
+                    </Frame>
+                </Frame>
+
+                <!-- Resultado (si existe) -->
+                <Frame Style="{StaticResource CardStyle}"
+                       BackgroundColor="#E8F5E9"
+                       IsVisible="{Binding IsResultVisible}">
+                    <StackLayout Spacing="12">
+                        <Label Text="{x:Static fonts:IconFont.Info}"
+                               FontFamily="{StaticResource IcoMoonFamily}"
+                               FontSize="24"
+                               TextColor="#27AE60"
+                               HorizontalOptions="Center"/>
+                        <Label x:Name="ResultLabel" 
+                               Text="{Binding ResultText}" 
+                               TextColor="#2C3E50"
+                               FontSize="15"
+                               HorizontalTextAlignment="Center"
+                               LineBreakMode="WordWrap"/>
+                    </StackLayout>
+                </Frame>
 
             </StackLayout>
-            <Grid BackgroundColor="Black"
-                  Opacity="0.5"
-                  HorizontalOptions="FillAndExpand"
-                  VerticalOptions="FillAndExpand"
-                  IsVisible="{Binding IsRunning}">
-                <ActivityIndicator VerticalOptions="Center"
-                                   HorizontalOptions="Center"
-                                   HeightRequest="50"
-                                   WidthRequest="50"
-                                   Color="DarkBlue"
-                                   IsRunning="{Binding IsRunning}">
-                </ActivityIndicator>
-            </Grid>
+        </ScrollView>
+
+        <!-- Indicador de carga -->
+        <Grid BackgroundColor="Black"
+              Opacity="0.5"
+              HorizontalOptions="FillAndExpand"
+              VerticalOptions="FillAndExpand"
+              IsVisible="{Binding IsRunning}">
+            <ActivityIndicator VerticalOptions="Center"
+                               HorizontalOptions="Center"
+                               HeightRequest="50"
+                               WidthRequest="50"
+                               Color="#4A90E2"
+                               IsRunning="{Binding IsRunning}"/>
         </Grid>
-    </ContentPage.Content>
+    </Grid>
 </ContentPage>

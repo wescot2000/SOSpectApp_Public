@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:fonts="clr-namespace:sospect.Resources.Fonts;assembly=sospect"
              x:Class="sospect.MainPage">
+
     <ContentPage.Resources>
         <ResourceDictionary>
             <OnPlatform x:Key="FontAwesomeFamily" x:TypeArguments="x:String">
@@ -11,7 +11,9 @@
             </OnPlatform>
         </ResourceDictionary>
     </ContentPage.Resources>
+
     <StackLayout>
+        <!-- Página vacía - la navegación se maneja en App.xaml.cs -->
     </StackLayout>
 
 </ContentPage>

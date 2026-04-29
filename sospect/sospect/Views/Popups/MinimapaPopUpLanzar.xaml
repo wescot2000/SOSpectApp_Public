@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+    MinimapaPopUpLanzar.xaml
+    Creado: 2026-03-21 — Minimapa de ruta de escape para el flujo de LANZAMIENTO de alarma.
+    Idéntico en diseño a MinimapaPopUp, pero acepta LanzarAlarmaViewModel como BindingContext.
+    Los comandos CancelarMinimapaCommand y HechoDireccionCommand están definidos en LanzarAlarmaViewModel.
+-->
+<toolkit:Popup
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    xmlns:helpers="clr-namespace:sospect.Helpers"
+    xmlns:maps="clr-namespace:sospect.CustomRenderers"
+    xmlns:fonts="clr-namespace:sospect.Resources.Fonts;assembly=sospect"
+    CanBeDismissedByTappingOutsideOfPopup="False"
+    x:Class="sospect.Views.Popups.MinimapaPopUpLanzar">
+
+    <!-- CRÍTICO: Frame con tamaño apropiado, sin ScrollView -->
+    <Frame CornerRadius="16"
+           BackgroundColor="White"
+           VerticalOptions="Center"
+           HorizontalOptions="Center"
+           WidthRequest="380"
+           HasShadow="True"
+           Padding="0"
+           BorderColor="Transparent">
+
+        <!-- Grid con filas fijas -->
+        <Grid RowDefinitions="Auto,320,Auto"
+              RowSpacing="0">
+
+            <!-- Fila 0: Header con instrucciones -->
+            <Frame Grid.Row="0"
+                   BackgroundColor="#F8F9FA"
+                   CornerRadius="0"
+                   HasShadow="False"
+                   Padding="20,16"
+                   BorderColor="Transparent">
+                <Grid ColumnSpacing="12">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Frame Grid.Column="0"
+                           WidthRequest="36"
+                           HeightRequest="36"
+                           CornerRadius="18"
+                           BackgroundColor="#E3F2FD"
+                           HasShadow="False"
+                           Padding="0"
+                           VerticalOptions="Start"
+                           BorderColor="Transparent">
+                        <Label Text="{x:Static fonts:IconFont.MapPin}"
+                               FontFamily="{StaticResource IcoMoonFamily}"
+                               FontSize="18"
+                               TextColor="#4A90E2"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center"/>
+                    </Frame>
+
+                    <Label Grid.Column="1"
+                           Text="{helpers:TranslateExtension Text='SeleccionaRuta'}"
+                           FontSize="15"
+                           FontAttributes="Bold"
+                           TextColor="#2C3E50"
+                           LineBreakMode="WordWrap"
+                           VerticalOptions="Center"/>
+                </Grid>
+            </Frame>
+
+            <!-- Fila 1: MAPA - SIN ScrollView, altura fija 320 -->
+            <Grid Grid.Row="1"
+                  BackgroundColor="White">
+                <maps:MiniMapa x:Name="miMiniMapa"
+                               HorizontalOptions="FillAndExpand"
+                               VerticalOptions="FillAndExpand"
+                               InputTransparent="False"/>
+            </Grid>
+
+            <!-- Fila 2: Botones de acción -->
+            <Grid Grid.Row="2"
+                  ColumnDefinitions="*,*"
+                  ColumnSpacing="12"
+                  Padding="16"
+                  BackgroundColor="White">
+
+                <!-- Botón Cancelar -->
+                <Frame Grid.Column="0"
+                       BackgroundColor="#E0E0E0"
+                       CornerRadius="12"
+                       HasShadow="False"
+                       Padding="0"
+                       HeightRequest="50"
+                       BorderColor="Transparent">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding CancelarMinimapaCommand}" />
+                    </Frame.GestureRecognizers>
+                    <Label Text="{helpers:TranslateExtension Text='LabelCancelar'}"
+                           FontSize="15"
+                           FontAttributes="Bold"
+                           TextColor="#5A5A5A"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"/>
+                </Frame>
+
+                <!-- Botón Hecho -->
+                <Frame Grid.Column="1"
+                       BackgroundColor="#27AE60"
+                       CornerRadius="12"
+                       HasShadow="False"
+                       Padding="0"
+                       HeightRequest="50"
+                       BorderColor="Transparent">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding HechoDireccionCommand}"
+                                              CommandParameter="{x:Reference miMiniMapa}" />
+                    </Frame.GestureRecognizers>
+                    <Grid ColumnSpacing="8" Padding="12,0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Label Grid.Column="0"
+                               Text="{x:Static fonts:IconFont.Check}"
+                               FontFamily="{StaticResource IcoMoonFamily}"
+                               FontSize="18"
+                               TextColor="White"
+                               VerticalOptions="Center"/>
+
+                        <Label Grid.Column="1"
+                               Text="{helpers:TranslateExtension Text='LabelHecho'}"
+                               FontSize="15"
+                               FontAttributes="Bold"
+                               TextColor="White"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center"/>
+                    </Grid>
+                </Frame>
+            </Grid>
+        </Grid>
+    </Frame>
+</toolkit:Popup>

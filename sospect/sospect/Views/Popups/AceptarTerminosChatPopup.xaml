@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<toolkit:Popup
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    xmlns:helpers="clr-namespace:sospect.Helpers"
+    x:Class="sospect.Views.Popups.AceptarTerminosChatPopup"
+    CanBeDismissedByTappingOutsideOfPopup="False">
+
+    <Frame BackgroundColor="White"
+           CornerRadius="16"
+           Padding="0"
+           HasShadow="True"
+           WidthRequest="380"
+           MaximumWidthRequest="380">
+
+        <StackLayout Spacing="0">
+            <!-- Header -->
+            <Frame BackgroundColor="#2196F3"
+                   CornerRadius="16"
+                   Padding="20,15"
+                   HasShadow="False">
+                <Label Text="{helpers:TranslateExtension Text='ChatTerminosCondiciones'}"
+                       TextColor="White"
+                       FontSize="18"
+                       FontAttributes="Bold"
+                       HorizontalTextAlignment="Center"/>
+            </Frame>
+
+            <!-- Scrollable Content -->
+            <ScrollView MaximumHeightRequest="450"
+                        Padding="20,15">
+                <StackLayout Spacing="15">
+
+                    <!-- Mensaje introductorio -->
+                    <Label Text="Para iniciar este chat privado con el proveedor, debes aceptar TODOS los términos a continuación:"
+                           TextColor="#D32F2F"
+                           FontSize="14"
+                           FontAttributes="Bold"
+                           LineBreakMode="WordWrap"
+                           HorizontalTextAlignment="Center"/>
+
+                    <!-- Frame con los 4 checkboxes individuales (NON-NEGOTIABLE según manual) -->
+                    <Frame BackgroundColor="#FFF9C4"
+                           BorderColor="#FFC107"
+                           CornerRadius="8"
+                           Padding="15"
+                           HasShadow="False">
+                        <StackLayout Spacing="15">
+
+                            <!-- Checkbox 1: Relación Directa -->
+                            <StackLayout Spacing="8">
+                                <StackLayout Orientation="Horizontal" Spacing="10">
+                                    <CheckBox x:Name="Check1"
+                                              Color="#4CAF50"
+                                              CheckedChanged="OnCheckboxChanged"/>
+                                    <Label Text="Relación Directa"
+                                           FontAttributes="Bold"
+                                           FontSize="14"
+                                           TextColor="#333"
+                                           VerticalOptions="Center"/>
+                                </StackLayout>
+                                <Label Text="{helpers:TranslateExtension Text='ChatTerminoInteresado1'}"
+                                       FontSize="12"
+                                       TextColor="#555"
+                                       LineBreakMode="WordWrap"
+                                       Margin="35,0,0,0"/>
+                            </StackLayout>
+
+                            <BoxView HeightRequest="1" BackgroundColor="#E0E0E0"/>
+
+                            <!-- Checkbox 2: Pagos -->
+                            <StackLayout Spacing="8">
+                                <StackLayout Orientation="Horizontal" Spacing="10">
+                                    <CheckBox x:Name="Check2"
+                                              Color="#4CAF50"
+                                              CheckedChanged="OnCheckboxChanged"/>
+                                    <Label Text="Pagos"
+                                           FontAttributes="Bold"
+                                           FontSize="14"
+                                           TextColor="#333"
+                                           VerticalOptions="Center"/>
+                                </StackLayout>
+                                <Label Text="{helpers:TranslateExtension Text='ChatTerminoInteresado2'}"
+                                       FontSize="12"
+                                       TextColor="#555"
+                                       LineBreakMode="WordWrap"
+                                       Margin="35,0,0,0"/>
+                            </StackLayout>
+
+                            <BoxView HeightRequest="1" BackgroundColor="#E0E0E0"/>
+
+                            <!-- Checkbox 3: Riesgos -->
+                            <StackLayout Spacing="8">
+                                <StackLayout Orientation="Horizontal" Spacing="10">
+                                    <CheckBox x:Name="Check3"
+                                              Color="#4CAF50"
+                                              CheckedChanged="OnCheckboxChanged"/>
+                                    <Label Text="Riesgos"
+                                           FontAttributes="Bold"
+                                           FontSize="14"
+                                           TextColor="#333"
+                                           VerticalOptions="Center"/>
+                                </StackLayout>
+                                <Label Text="{helpers:TranslateExtension Text='ChatTerminoInteresado3'}"
+                                       FontSize="12"
+                                       TextColor="#555"
+                                       LineBreakMode="WordWrap"
+                                       Margin="35,0,0,0"/>
+                            </StackLayout>
+
+                            <BoxView HeightRequest="1" BackgroundColor="#E0E0E0"/>
+
+                            <!-- Checkbox 4: Exoneración de SOSpect -->
+                            <StackLayout Spacing="8">
+                                <StackLayout Orientation="Horizontal" Spacing="10">
+                                    <CheckBox x:Name="Check4"
+                                              Color="#4CAF50"
+                                              CheckedChanged="OnCheckboxChanged"/>
+                                    <Label Text="Exoneración de SOSpect"
+                                           FontAttributes="Bold"
+                                           FontSize="14"
+                                           TextColor="#333"
+                                           VerticalOptions="Center"/>
+                                </StackLayout>
+                                <Label Text="{helpers:TranslateExtension Text='ChatTerminoInteresado4'}"
+                                       FontSize="12"
+                                       TextColor="#555"
+                                       LineBreakMode="WordWrap"
+                                       Margin="35,0,0,0"/>
+                            </StackLayout>
+
+                        </StackLayout>
+                    </Frame>
+
+                    <!-- Contador de términos aceptados -->
+                    <Label x:Name="LblContador"
+                           Text="0 de 4 términos aceptados"
+                           TextColor="#FF5722"
+                           FontSize="13"
+                           FontAttributes="Bold"
+                           HorizontalTextAlignment="Center"/>
+
+                </StackLayout>
+            </ScrollView>
+
+            <!-- Buttons Footer -->
+            <Frame BackgroundColor="#F5F5F5"
+                   CornerRadius="16"
+                   Padding="15"
+                   HasShadow="False">
+                <Grid ColumnDefinitions="*,*" ColumnSpacing="10">
+                    <!-- Botón Cancelar -->
+                    <Button Grid.Column="0"
+                            Text="{helpers:TranslateExtension Text='LabelCancelar'}"
+                            BackgroundColor="#9E9E9E"
+                            TextColor="White"
+                            CornerRadius="8"
+                            FontSize="15"
+                            Clicked="OnCancelarClicked"/>
+
+                    <!-- Botón Continuar -->
+                    <Button Grid.Column="1"
+                            x:Name="BtnContinuar"
+                            Text="{helpers:TranslateExtension Text='LabelContinuar'}"
+                            BackgroundColor="#4CAF50"
+                            TextColor="White"
+                            CornerRadius="8"
+                            FontSize="15"
+                            FontAttributes="Bold"
+                            IsEnabled="False"
+                            Clicked="OnContinuarClicked"/>
+                </Grid>
+            </Frame>
+
+        </StackLayout>
+    </Frame>
+</toolkit:Popup>

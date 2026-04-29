@@ -1,99 +1,278 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <ContentPage
-    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:fonts="clr-namespace:sospect.Resources.Fonts;assembly=sospect"
     xmlns:helpers="clr-namespace:sospect.Helpers"
-    xmlns:ads="clr-namespace:sospect.CustomRenderers"
-    BackgroundColor="White"
+    xmlns:admob="clr-namespace:Plugin.AdMob;assembly=Plugin.AdMob"
+    BackgroundColor="#F8F9FA"
     x:Class="sospect.Views.ReportsPage"
     Title="{helpers:TranslateExtension Text='LblReportesTitulo'}">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="ReportHeaderCardStyle" TargetType="Frame">
+                <Setter Property="BackgroundColor" Value="White" />
+                <Setter Property="HasShadow" Value="True" />
+                <Setter Property="CornerRadius" Value="16" />
+                <Setter Property="Padding" Value="20" />
+                <Setter Property="Margin" Value="16,16,16,8" />
+                <Setter Property="BorderColor" Value="Transparent" />
+            </Style>
+
+            <Style x:Key="ReportMenuItemStyle" TargetType="Frame">
+                <Setter Property="BackgroundColor" Value="White" />
+                <Setter Property="HasShadow" Value="True" />
+                <Setter Property="CornerRadius" Value="12" />
+                <Setter Property="Padding" Value="16" />
+                <Setter Property="Margin" Value="16,6" />
+                <Setter Property="BorderColor" Value="Transparent" />
+                <Setter Property="MinimumHeightRequest" Value="70" />
+            </Style>
+
+            <Style x:Key="ReportIconStyle" TargetType="Label">
+                <Setter Property="FontFamily" Value="{StaticResource IcoMoonFamily}" />
+                <Setter Property="FontSize" Value="28" />
+                <Setter Property="TextColor" Value="#3498DB" />
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="WidthRequest" Value="50" />
+            </Style>
+
+            <Style x:Key="ReportTextStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="16" />
+                <Setter Property="TextColor" Value="#2C3E50" />
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="LineBreakMode" Value="WordWrap" />
+                <Setter Property="MaxLines" Value="2" />
+            </Style>
+
+            <Style x:Key="ComingSoonLabelStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="18" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="TextColor" Value="#E74C3C" />
+                <Setter Property="HorizontalTextAlignment" Value="Center" />
+                <Setter Property="Margin" Value="16,20" />
+            </Style>
+
+            <Style x:Key="ComingSoonSubLabelStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="14" />
+                <Setter Property="TextColor" Value="#7F8C8D" />
+                <Setter Property="HorizontalTextAlignment" Value="Center" />
+                <Setter Property="Margin" Value="16,0,16,20" />
+            </Style>
+
+            <Style x:Key="HeaderTitleStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="20" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="TextColor" Value="#2C3E50" />
+                <Setter Property="HorizontalTextAlignment" Value="Center" />
+                <Setter Property="Margin" Value="0,0,0,8" />
+            </Style>
+
+            <Style x:Key="HeaderDescStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="14" />
+                <Setter Property="TextColor" Value="#7F8C8D" />
+                <Setter Property="HorizontalTextAlignment" Value="Start" />
+                <Setter Property="LineBreakMode" Value="WordWrap" />
+                <Setter Property="Margin" Value="0,0,0,0" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
-    <ScrollView>
-        <StackLayout Spacing="0" Padding="5">
-            
-            <Label Text="{helpers:TranslateExtension Text='LblReportesDescripcion'}" TextColor="Gray" FontSize="Small" HorizontalTextAlignment="Start" Margin="0,20,0,20"></Label>
 
-            <Frame Padding="5" BorderColor="Black" BackgroundColor="LightGray" Margin="0,20,0,0" HorizontalOptions="Center" HeightRequest="35" WidthRequest="380" CornerRadius="10">
-                <Frame.GestureRecognizers>
-                <TapGestureRecognizer Command="{Binding ReporteBasicoCommand}" NumberOfTapsRequired="1" />
-                </Frame.GestureRecognizers>
-                <Label Text="{helpers:TranslateExtension Text='OptReporteBasico'}" 
-                       TextColor="Black"
-                       LineBreakMode="WordWrap"
-                       HorizontalOptions="CenterAndExpand"
-                       VerticalOptions="CenterAndExpand"
-                       HorizontalTextAlignment="Center"
-                       VerticalTextAlignment="Center" />
-            </Frame>
-            
-            
-                <Label IsVisible="True" Text="{helpers:TranslateExtension Text='LblProximamenteSOSpect'}"  TextColor="Red" FontSize="Medium" HorizontalTextAlignment="Center" Margin="0,60,0,10"></Label>
+        <ScrollView Grid.Row="0" BackgroundColor="#F8F9FA">
+            <StackLayout Spacing="0">
 
-                <Label IsVisible="True" Text="{helpers:TranslateExtension Text='LblReportesProximos'}"  TextColor="Red" FontSize="Medium" HorizontalTextAlignment="Center" Margin="0,0,0,0"></Label>
+                <!-- Header Card -->
+                <Frame Style="{StaticResource ReportHeaderCardStyle}">
+                    <StackLayout Spacing="8">
+                        <Label Text="{helpers:TranslateExtension Text='LblReportesTitulo'}" 
+                               Style="{StaticResource HeaderTitleStyle}" />
+                        <Label Text="{helpers:TranslateExtension Text='LblReportesDescripcion'}" 
+                               Style="{StaticResource HeaderDescStyle}" />
+                    </StackLayout>
+                </Frame>
 
-                
-            <Frame IsVisible="False" Padding="5" BorderColor="Black" BackgroundColor="LightGray" Margin="0,15,0,0" HorizontalOptions="Center" HeightRequest="35" WidthRequest="380" CornerRadius="10">
-                <Frame.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding ReporteCalorCommand}" NumberOfTapsRequired="1" />
-                </Frame.GestureRecognizers>
-                <Label Text="{helpers:TranslateExtension Text='OptReporteDeCalorEnZona'}" 
-                       TextColor="Black"
-                       LineBreakMode="WordWrap"
-                       HorizontalOptions="CenterAndExpand"
-                       VerticalOptions="CenterAndExpand"
-                       HorizontalTextAlignment="Center"
-                       VerticalTextAlignment="Center" />
-            </Frame>
+                <!-- ActivityIndicator mientras carga el dashboard (solo visible al entrar a la pantalla) -->
+                <ActivityIndicator IsVisible="{Binding CargandoDashboard}"
+                                   IsRunning="{Binding CargandoDashboard}"
+                                   Color="#4CAF50"
+                                   HorizontalOptions="Center"
+                                   Margin="0,8"/>
 
-  
-            <Frame  IsVisible="False" Padding="5" BorderColor="Black" BackgroundColor="LightGray" Margin="0,15,0,0" HorizontalOptions="Center" HeightRequest="35" WidthRequest="380" CornerRadius="10">
-                <Frame.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding TimeEvoReportCommand}" NumberOfTapsRequired="1" />
-                </Frame.GestureRecognizers>
-                <Label Text="{helpers:TranslateExtension Text='OptReporteEvolucionEnElTiempo'}" 
-                       TextColor="Black"
-                       LineBreakMode="WordWrap"
-                       HorizontalOptions="CenterAndExpand"
-                       VerticalOptions="CenterAndExpand"
-                       HorizontalTextAlignment="Center"
-                       VerticalTextAlignment="Center" />
-            </Frame>
+                <!-- Reportes Disponibles -->
+                <StackLayout Spacing="0" Margin="0,8,0,16">
 
-            <Frame  IsVisible="False" Padding="5" BorderColor="Black" BackgroundColor="LightGray" Margin="0,15,0,0" HorizontalOptions="Center" HeightRequest="35" WidthRequest="380" CornerRadius="10">
-                <Frame.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding PreCogReportsCommand}" NumberOfTapsRequired="1" />
-                </Frame.GestureRecognizers>
-                <Label Text="{helpers:TranslateExtension Text='OptReportesPredictivos'}" 
-                       TextColor="Black"
-                       LineBreakMode="WordWrap"
-                       HorizontalOptions="CenterAndExpand"
-                       VerticalOptions="CenterAndExpand"
-                       HorizontalTextAlignment="Center"
-                       VerticalTextAlignment="Center" />
-            </Frame>
+                    <!-- Reporte de mi emprendimiento (visible solo para emprendedores) -->
+                    <Frame Style="{StaticResource ReportMenuItemStyle}"
+                           IsVisible="{Binding TieneEmprendimiento}">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding DashboardEmprendedorCommand}" />
+                        </Frame.GestureRecognizers>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="60" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0"
+                                   Text="&#x1F4CA;"
+                                   FontSize="28"
+                                   VerticalOptions="Center"
+                                   HorizontalOptions="Center"
+                                   WidthRequest="50" />
+                            <Label Grid.Column="1"
+                                   Text="{helpers:TranslateExtension Text='OptDashboardMiEmprendimiento'}"
+                                   Style="{StaticResource ReportTextStyle}"
+                                   Margin="8,0,0,0" />
+                        </Grid>
+                    </Frame>
 
-            <Frame  IsVisible="False" Padding="5" BorderColor="Black" BackgroundColor="LightGray" Margin="0,15,0,0" HorizontalOptions="Center" HeightRequest="35" WidthRequest="380" CornerRadius="10">
-                <Frame.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding AnaliticaDeTextosCommand}" NumberOfTapsRequired="1" />
-                </Frame.GestureRecognizers>
-                <Label Text="{helpers:TranslateExtension Text='OptReporteAnaliticoDeDescripcionesAlarmas'}" 
-                       TextColor="Black"
-                       LineBreakMode="WordWrap"
-                       HorizontalOptions="CenterAndExpand"
-                       VerticalOptions="CenterAndExpand"
-                       HorizontalTextAlignment="Center"
-                       VerticalTextAlignment="Center" />
-            </Frame>
-                      
-        </StackLayout>
-    </ScrollView>
+                    <!-- Ranking Políticos Locales -->
+                    <Frame Style="{StaticResource ReportMenuItemStyle}">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding RankingPoliticosCommand}" />
+                        </Frame.GestureRecognizers>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="60" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0"
+                                   Text="{x:Static fonts:IconFont.RankingStar}"
+                                   Style="{StaticResource ReportIconStyle}" />
+                            <Label Grid.Column="1"
+                                   Text="{helpers:TranslateExtension Text='OptRankingPoliticosLocales'}"
+                                   Style="{StaticResource ReportTextStyle}"
+                                   Margin="8,0,0,0" />
+                        </Grid>
+                    </Frame>
+
+                    <!-- Reporte Básico -->
+                    <Frame Style="{StaticResource ReportMenuItemStyle}">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding ReporteBasicoCommand}" />
+                        </Frame.GestureRecognizers>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="60" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0"
+                                   Text="{x:Static fonts:IconFont.UserSecret}"
+                                   Style="{StaticResource ReportIconStyle}" />
+                            <Label Grid.Column="1"
+                                   Text="{helpers:TranslateExtension Text='OptReporteBasico'}"
+                                   Style="{StaticResource ReportTextStyle}"
+                                   Margin="8,0,0,0" />
+                        </Grid>
+                    </Frame>
+
+                </StackLayout>
+
+                <!-- Sección Próximamente -->
+                <StackLayout Spacing="0" Margin="0,20,0,0">
+                    <Label Text="{helpers:TranslateExtension Text='LblProximamenteSOSpect'}" 
+                           Style="{StaticResource ComingSoonLabelStyle}" />
+                    <Label Text="{helpers:TranslateExtension Text='LblReportesProximos'}" 
+                           Style="{StaticResource ComingSoonSubLabelStyle}" />
+
+                    <!-- Reportes Próximamente (ocultos) -->
+                    <StackLayout Spacing="0" IsVisible="False">
+
+                        <!-- Reporte de Calor -->
+                        <Frame Style="{StaticResource ReportMenuItemStyle}" Opacity="0.6">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding ReporteCalorCommand}" />
+                            </Frame.GestureRecognizers>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="60" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.Column="0" 
+                                       Text="{x:Static fonts:IconFont.Globe}"
+                                       Style="{StaticResource ReportIconStyle}" />
+                                <Label Grid.Column="1" 
+                                       Text="{helpers:TranslateExtension Text='OptReporteDeCalorEnZona'}"
+                                       Style="{StaticResource ReportTextStyle}"
+                                       Margin="8,0,0,0" />
+                            </Grid>
+                        </Frame>
+
+                        <!-- Reporte Evolución en el Tiempo -->
+                        <Frame Style="{StaticResource ReportMenuItemStyle}" Opacity="0.6">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding TimeEvoReportCommand}" />
+                            </Frame.GestureRecognizers>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="60" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.Column="0" 
+                                       Text="{x:Static fonts:IconFont.Clock}"
+                                       Style="{StaticResource ReportIconStyle}" />
+                                <Label Grid.Column="1" 
+                                       Text="{helpers:TranslateExtension Text='OptReporteEvolucionEnElTiempo'}"
+                                       Style="{StaticResource ReportTextStyle}"
+                                       Margin="8,0,0,0" />
+                            </Grid>
+                        </Frame>
+
+                        <!-- Reportes Predictivos -->
+                        <Frame Style="{StaticResource ReportMenuItemStyle}" Opacity="0.6">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding PreCogReportsCommand}" />
+                            </Frame.GestureRecognizers>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="60" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.Column="0" 
+                                       Text="{x:Static fonts:IconFont.Gear}"
+                                       Style="{StaticResource ReportIconStyle}" />
+                                <Label Grid.Column="1" 
+                                       Text="{helpers:TranslateExtension Text='OptReportesPredictivos'}"
+                                       Style="{StaticResource ReportTextStyle}"
+                                       Margin="8,0,0,0" />
+                            </Grid>
+                        </Frame>
+
+                        <!-- Analítica de Textos -->
+                        <Frame Style="{StaticResource ReportMenuItemStyle}" Opacity="0.6">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding AnaliticaDeTextosCommand}" />
+                            </Frame.GestureRecognizers>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="60" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.Column="0" 
+                                       Text="{x:Static fonts:IconFont.File}"
+                                       Style="{StaticResource ReportIconStyle}" />
+                                <Label Grid.Column="1" 
+                                       Text="{helpers:TranslateExtension Text='OptReporteAnaliticoDeDescripcionesAlarmas'}"
+                                       Style="{StaticResource ReportTextStyle}"
+                                       Margin="8,0,0,0" />
+                            </Grid>
+                        </Frame>
+                    </StackLayout>
+                </StackLayout>
+
+            </StackLayout>
+        </ScrollView>
+
+        <!-- Banner publicitario -->
         <Grid BackgroundColor="LightGray" Grid.Row="1" HeightRequest="90">
-            <ads:AdBanner></ads:AdBanner>
+            <admob:BannerAd AdSize="LargeBanner" />
         </Grid>
     </Grid>
 </ContentPage>

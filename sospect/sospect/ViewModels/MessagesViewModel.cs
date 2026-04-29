@@ -10,8 +10,9 @@ using sospect.Models;
 using sospect.Services;
 using System.Linq;
 using System.Windows.Input;
-using Xamarin.Forms;
+using Microsoft.Maui.Controls;
 using sospect.Helpers;
+using sospect.Interfaces;
 
 namespace sospect.ViewModels
 {
@@ -67,11 +68,7 @@ namespace sospect.ViewModels
             }
             catch (Exception ex)
             {
-                var properties = new Dictionary<string, string> {
-                        { "Object", "MessagesViewModel" },
-                        { "Method", "ObtenerMensajes" }
-                    };
-                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
+                CrashlyticsHelper.LogError(ex, "MessagesViewModel", "GetMessagesAsync");
                 return new List<Mensajes>();
             }
             finally
@@ -83,9 +80,9 @@ namespace sospect.ViewModels
 
         private async Task MarkAllAsRead()
         {
-            var LabelOK = TranslateExtension.Translate("LabelOK");
-            var LabelInformacion = TranslateExtension.Translate("LabelInformacion");
-            var MensajeError = TranslateExtension.Translate("MensajeError");
+            var LabelOK = await TranslateExtension.TranslateAsync("LabelOK");
+            var LabelInformacion = await TranslateExtension.TranslateAsync("LabelInformacion");
+            var MensajeError = await TranslateExtension.TranslateAsync("MensajeError");
 
             IsRunning = true;
             MarcarMensajesLeidosRequest request = new MarcarMensajesLeidosRequest
@@ -106,12 +103,8 @@ namespace sospect.ViewModels
             }
             catch (Exception ex)
             {
-                await App.Current.MainPage.DisplayAlert(LabelInformacion, MensajeError, LabelOK);
-                var properties = new Dictionary<string, string> {
-                        { "Object", "MessagesViewModel" },
-                        { "Method", "MarcaTodosLeidos" }
-                    };
-                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
+                await ModernAlerts.ShowWarning(LabelInformacion, MensajeError);
+                CrashlyticsHelper.LogError(ex, "MessagesViewModel", "MarkAllAsRead");
             }
             finally
             {

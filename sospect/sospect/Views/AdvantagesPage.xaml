@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="sospect.Views.AdvantagesPage"
+             xmlns:fonts="clr-namespace:sospect.Resources.Fonts;assembly=sospect"
+             xmlns:helpers="clr-namespace:sospect.Helpers"
+             BackgroundColor="#F8F9FA"
+             Title="{helpers:TranslateExtension Text='LabelTitleVentajas'}">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="HeaderStyle" TargetType="Frame">
+                <Setter Property="BackgroundColor" Value="#27AE60" />
+                <Setter Property="BorderColor" Value="Transparent" />
+                <Setter Property="CornerRadius" Value="16" />
+                <Setter Property="Padding" Value="20" />
+                <Setter Property="Margin" Value="20,20,20,16" />
+                <Setter Property="HasShadow" Value="True" />
+            </Style>
+
+            <Style x:Key="AdvantageCardStyle" TargetType="Frame">
+                <Setter Property="BackgroundColor" Value="White" />
+                <Setter Property="BorderColor" Value="Transparent" />
+                <Setter Property="CornerRadius" Value="12" />
+                <Setter Property="Padding" Value="16" />
+                <Setter Property="Margin" Value="20,8" />
+                <Setter Property="HasShadow" Value="True" />
+            </Style>
+
+            <Style x:Key="FooterCardStyle" TargetType="Frame">
+                <Setter Property="BackgroundColor" Value="#E8F4FD" />
+                <Setter Property="BorderColor" Value="Transparent" />
+                <Setter Property="CornerRadius" Value="12" />
+                <Setter Property="Padding" Value="16" />
+                <Setter Property="Margin" Value="20,16,20,20" />
+                <Setter Property="HasShadow" Value="False" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ScrollView>
+        <StackLayout Spacing="0">
+
+            <!-- Header -->
+            <Frame Style="{StaticResource HeaderStyle}">
+                <Grid ColumnSpacing="15">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Label Grid.Column="0"
+                           FontFamily="{StaticResource IcoMoonFamily}"
+                           Text="{x:Static fonts:IconFont.Award}"
+                           FontSize="40"
+                           TextColor="White"
+                           VerticalOptions="Center" />
+
+                    <Label Grid.Column="1"
+                           Text="{helpers:TranslateExtension Text='LabelVentajasRedC'}"
+                           TextColor="White"
+                           FontSize="22"
+                           FontAttributes="Bold"
+                           VerticalOptions="Center"
+                           LineBreakMode="WordWrap" />
+                </Grid>
+            </Frame>
+
+            <!-- Ventaja 1: Usuarios Confiables -->
+            <Frame Style="{StaticResource AdvantageCardStyle}">
+                <Grid ColumnSpacing="15">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Frame Grid.Column="0"
+                           BackgroundColor="#E8F4FD"
+                           WidthRequest="50"
+                           HeightRequest="50"
+                           CornerRadius="25"
+                           HasShadow="False"
+                           BorderColor="Transparent"
+                           Padding="0"
+                           VerticalOptions="Start">
+                        <Label Text="{x:Static fonts:IconFont.Users}"
+                               FontFamily="{StaticResource IcoMoonFamily}"
+                               FontSize="24"
+                               TextColor="#3498DB"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center" />
+                    </Frame>
+
+                    <StackLayout Grid.Column="1" Spacing="8">
+                        <Label Text="{helpers:TranslateExtension Text='LabelV1UsuariosConfiables'}" 
+                               TextColor="#2C3E50"
+                               FontSize="16"
+                               FontAttributes="Bold" />
+                        <Label Text="{helpers:TranslateExtension Text='LabelV1UsuariosConfiablesDesc'}" 
+                               TextColor="#7F8C8D"
+                               FontSize="14"
+                               LineBreakMode="WordWrap" />
+                    </StackLayout>
+                </Grid>
+            </Frame>
+
+            <!-- Ventaja 2: Alertas Prioritarias -->
+            <Frame Style="{StaticResource AdvantageCardStyle}">
+                <Grid ColumnSpacing="15">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Frame Grid.Column="0"
+                           BackgroundColor="#FFF3CD"
+                           WidthRequest="50"
+                           HeightRequest="50"
+                           CornerRadius="25"
+                           HasShadow="False"
+                           BorderColor="Transparent"
+                           Padding="0"
+                           VerticalOptions="Start">
+                        <Label Text="{x:Static fonts:IconFont.Bell}"
+                               FontFamily="{StaticResource IcoMoonFamily}"
+                               FontSize="24"
+                               TextColor="#F39C12"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center" />
+                    </Frame>
+
+                    <StackLayout Grid.Column="1" Spacing="8">
+                        <Label Text="{helpers:TranslateExtension Text='LabelV2AlertasPrioritarias'}" 
+                               TextColor="#2C3E50"
+                               FontSize="16"
+                               FontAttributes="Bold" />
+                        <Label Text="{helpers:TranslateExtension Text='LabelV2AlertasPrioritariasDesc'}" 
+                               TextColor="#7F8C8D"
+                               FontSize="14"
+                               LineBreakMode="WordWrap" />
+                    </StackLayout>
+                </Grid>
+            </Frame>
+
+            <!-- Ventaja 3: Recompensas -->
+            <Frame Style="{StaticResource AdvantageCardStyle}">
+                <Grid ColumnSpacing="15">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Frame Grid.Column="0"
+                           BackgroundColor="#F8E8FF"
+                           WidthRequest="50"
+                           HeightRequest="50"
+                           CornerRadius="25"
+                           HasShadow="False"
+                           BorderColor="Transparent"
+                           Padding="0"
+                           VerticalOptions="Start">
+                        <Label Text="{x:Static fonts:IconFont.Star}"
+                               FontFamily="{StaticResource IcoMoonFamily}"
+                               FontSize="24"
+                               TextColor="#9B59B6"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center" />
+                    </Frame>
+
+                    <StackLayout Grid.Column="1" Spacing="8">
+                        <Label Text="{helpers:TranslateExtension Text='LabelV3RecompensasConfiabilidad'}" 
+                               TextColor="#2C3E50"
+                               FontSize="16"
+                               FontAttributes="Bold" />
+                        <Label Text="{helpers:TranslateExtension Text='LabelV3RecompensasConfiabilidadDesc'}" 
+                               TextColor="#7F8C8D"
+                               FontSize="14"
+                               LineBreakMode="WordWrap" />
+                    </StackLayout>
+                </Grid>
+            </Frame>
+
+            <!-- Más Ventajas -->
+            <Frame Style="{StaticResource AdvantageCardStyle}">
+                <Grid ColumnSpacing="15">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Frame Grid.Column="0"
+                           BackgroundColor="#E8FFF0"
+                           WidthRequest="50"
+                           HeightRequest="50"
+                           CornerRadius="25"
+                           HasShadow="False"
+                           BorderColor="Transparent"
+                           Padding="0"
+                           VerticalOptions="Start">
+                        <Label Text="{x:Static fonts:IconFont.Gift}"
+                               FontFamily="{StaticResource IcoMoonFamily}"
+                               FontSize="24"
+                               TextColor="#27AE60"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center" />
+                    </Frame>
+
+                    <StackLayout Grid.Column="1" Spacing="8">
+                        <Label Text="{helpers:TranslateExtension Text='LabelMasVentajas'}" 
+                               TextColor="#2C3E50"
+                               FontSize="16"
+                               FontAttributes="Bold" />
+                        <Label Text="{helpers:TranslateExtension Text='LabelMasVentajasDesc'}" 
+                               TextColor="#7F8C8D"
+                               FontSize="14"
+                               LineBreakMode="WordWrap" />
+                    </StackLayout>
+                </Grid>
+            </Frame>
+
+            <!-- Footer con objetivo -->
+            <Frame Style="{StaticResource FooterCardStyle}">
+                <Grid ColumnSpacing="12">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Label Grid.Column="0"
+                           FontFamily="{StaticResource IcoMoonFamily}"
+                           Text="{x:Static fonts:IconFont.Heart}"
+                           FontSize="22"
+                           TextColor="#3498DB"
+                           VerticalOptions="Start"
+                           Margin="0,2,0,0" />
+
+                    <Label Grid.Column="1"
+                           Text="{helpers:TranslateExtension Text='LabelObjetivoVentajas'}"
+                           TextColor="#2C3E50"
+                           FontSize="14"
+                           LineBreakMode="WordWrap"
+                           VerticalOptions="Center" />
+                </Grid>
+            </Frame>
+
+            <BoxView HeightRequest="20" Color="Transparent" />
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<toolkit:Popup
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    xmlns:helpers="clr-namespace:sospect.Helpers"
+    xmlns:converters="clr-namespace:sospect.Converters"
+    xmlns:models="clr-namespace:sospect.Models"
+    CanBeDismissedByTappingOutsideOfPopup="False"
+    x:Class="sospect.Views.Popups.FiltroAlarmasPopup"
+    x:Name="popup">
+
+    <toolkit:Popup.Resources>
+        <ResourceDictionary>
+            <converters:ImageResourceConverter x:Key="ImageResourceConverter"/>
+        </ResourceDictionary>
+    </toolkit:Popup.Resources>
+
+    <Frame CornerRadius="15"
+           VerticalOptions="Center"
+           HorizontalOptions="Center"
+           BackgroundColor="White"
+           Padding="0"
+           HasShadow="True"
+           WidthRequest="450"
+           MaximumHeightRequest="650">
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <!-- Header -->
+            <Border Grid.Row="0"
+                    BackgroundColor="#1465bb"
+                    StrokeThickness="0"
+                    Padding="20,15">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="15,15,0,0"/>
+                </Border.StrokeShape>
+                <StackLayout Spacing="5">
+                    <Label Text="{helpers:TranslateExtension Text='FiltrarTiposDeAlarma'}"
+                           TextColor="White"
+                           FontSize="18"
+                           FontAttributes="Bold"
+                           HorizontalTextAlignment="Center"/>
+                    <Label Text="{helpers:TranslateExtension Text='AfectaMapaYParaTi'}"
+                           TextColor="White"
+                           Opacity="0.8"
+                           FontSize="12"
+                           HorizontalTextAlignment="Center"/>
+                    <Label Text="{helpers:TranslateExtension Text='InfoPorcentajesBasadosUltimos30Dias'}"
+                           TextColor="White"
+                           Opacity="0.7"
+                           FontSize="10"
+                           Margin="10,5,10,0"
+                           HorizontalTextAlignment="Center"
+                           LineBreakMode="WordWrap"/>
+                </StackLayout>
+            </Border>
+
+            <!-- Nota Importante -->
+            <Border Grid.Row="1"
+                    BackgroundColor="#FFF3CD"
+                    StrokeThickness="0"
+                    Padding="15,10"
+                    Margin="15,15,15,0">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="8"/>
+                </Border.StrokeShape>
+                <Label Text="{helpers:TranslateExtension Text='SiguiendoNoSeFiltrado'}"
+                       TextColor="#856404"
+                       FontSize="11"
+                       HorizontalTextAlignment="Center"/>
+            </Border>
+
+            <!-- Tipos Característicos (Fijos) -->
+            <StackLayout Grid.Row="2" Padding="15,15,15,5" Spacing="10">
+                <Label Text="{helpers:TranslateExtension Text='TiposCaracteristicosSOSpect'}"
+                       FontSize="14"
+                       FontAttributes="Bold"
+                       TextColor="#1465bb"/>
+
+                <Grid x:Name="GridTiposCaracteristicos"
+                      ColumnDefinitions="*,*"
+                      RowDefinitions="Auto"
+                      ColumnSpacing="10">
+                    <!-- Se pobla dinámicamente con Crimen y Advertencia -->
+                </Grid>
+            </StackLayout>
+
+            <!-- Otros Tipos (Ordenados por Porcentaje) -->
+            <StackLayout Grid.Row="3" Padding="15,10" Spacing="10">
+                <Label Text="{helpers:TranslateExtension Text='OtrosTiposOrdenadosPopularidad'}"
+                       FontSize="14"
+                       FontAttributes="Bold"
+                       TextColor="#1465bb"/>
+
+                <ScrollView MaximumHeightRequest="280">
+                    <Grid x:Name="GridOtrosTipos"
+                          ColumnDefinitions="*,*"
+                          RowDefinitions="Auto"
+                          ColumnSpacing="10"
+                          RowSpacing="10">
+                        <!-- Se pobla dinámicamente con otros tipos ordenados por popularidad -->
+                    </Grid>
+                </ScrollView>
+            </StackLayout>
+
+            <!-- Botones -->
+            <Grid Grid.Row="4"
+                  ColumnDefinitions="*,*"
+                  ColumnSpacing="10"
+                  Padding="15"
+                  BackgroundColor="#F8F9FA">
+                <Button Grid.Column="0"
+                        Text="{helpers:TranslateExtension Text='Cancelar'}"
+                        BackgroundColor="#6C757D"
+                        TextColor="White"
+                        CornerRadius="8"
+                        FontAttributes="Bold"
+                        Clicked="OnCancelarClicked"/>
+                <Button Grid.Column="1"
+                        Text="{helpers:TranslateExtension Text='Aplicar'}"
+                        BackgroundColor="#1465bb"
+                        TextColor="White"
+                        CornerRadius="8"
+                        FontAttributes="Bold"
+                        Clicked="OnAplicarClicked"/>
+            </Grid>
+        </Grid>
+    </Frame>
+</toolkit:Popup>

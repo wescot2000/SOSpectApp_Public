@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:helpers="clr-namespace:sospect.Helpers"
+    BackgroundColor="#F8F9FA"
+    x:Class="sospect.Views.DashboardEmprendedorPage"
+    Title="{helpers:TranslateExtension Text='LblDashboardEmprendedorTitulo'}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <ScrollView Grid.Row="0" BackgroundColor="#F8F9FA">
+            <StackLayout Spacing="0" Padding="16,16,16,24">
+
+                <!-- ActivityIndicator mientras carga -->
+                <ActivityIndicator IsVisible="{Binding CargandoDashboard}"
+                                   IsRunning="{Binding CargandoDashboard}"
+                                   Color="#4CAF50"
+                                   HorizontalOptions="Center"
+                                   Margin="0,32"/>
+
+                <!-- Estado vacío: emprendimiento activo pero sin métricas aún -->
+                <StackLayout IsVisible="{Binding SinDatosEmprendimiento}"
+                             VerticalOptions="Center"
+                             HorizontalOptions="Center"
+                             Padding="32,48"
+                             Spacing="12">
+                    <Label Text="📊"
+                           FontSize="64"
+                           HorizontalOptions="Center"/>
+                    <Label Text="{helpers:TranslateExtension Text='LblDashboardSinDatosTitulo'}"
+                           FontSize="18"
+                           FontAttributes="Bold"
+                           TextColor="#2C3E50"
+                           HorizontalTextAlignment="Center"/>
+                    <Label Text="{helpers:TranslateExtension Text='LblDashboardSinDatosDescripcion'}"
+                           FontSize="14"
+                           TextColor="#7F8C8D"
+                           HorizontalTextAlignment="Center"
+                           LineBreakMode="WordWrap"/>
+                </StackLayout>
+
+                <!-- Contenido del dashboard (solo con datos) -->
+                <Frame IsVisible="{Binding TieneDatosDashboard}"
+                       BackgroundColor="White"
+                       HasShadow="True"
+                       CornerRadius="16"
+                       Padding="16"
+                       Margin="0,0,0,16"
+                       BorderColor="Transparent">
+                    <StackLayout Spacing="12">
+
+                        <!-- Encabezado: nombre + puesto -->
+                        <Grid ColumnDefinitions="*,Auto">
+                            <StackLayout Grid.Column="0" Spacing="2">
+                                <Label Text="{helpers:TranslateExtension Text='LblDashboardMiEmprendimiento'}"
+                                       FontSize="13"
+                                       TextColor="#888"/>
+                                <Label Text="{Binding NombreEmprendimiento}"
+                                       FontSize="18"
+                                       FontAttributes="Bold"
+                                       TextColor="#2C3E50"
+                                       LineBreakMode="TailTruncation"/>
+                            </StackLayout>
+                            <Label Grid.Column="1"
+                                   Text="{Binding PuestoEnPaisTexto}"
+                                   FontSize="12"
+                                   TextColor="#4CAF50"
+                                   FontAttributes="Bold"
+                                   VerticalOptions="Center"
+                                   HorizontalOptions="End"/>
+                        </Grid>
+
+                        <!-- Métricas en 2×2 -->
+                        <Grid ColumnDefinitions="*,*" RowDefinitions="Auto,Auto" ColumnSpacing="8" RowSpacing="8">
+
+                            <!-- Tiempo respuesta -->
+                            <Frame Grid.Row="0" Grid.Column="0"
+                                   BackgroundColor="#F3F8FF"
+                                   BorderColor="#E3F2FD"
+                                   CornerRadius="10"
+                                   Padding="12,10"
+                                   HasShadow="False">
+                                <StackLayout Spacing="2">
+                                    <Label Text="&#x23F1;"
+                                           FontSize="20"
+                                           HorizontalOptions="Center"/>
+                                    <Label Text="{Binding TiempoRespuesta}"
+                                           FontSize="18"
+                                           FontAttributes="Bold"
+                                           TextColor="#1565C0"
+                                           HorizontalTextAlignment="Center"/>
+                                    <Label Text="{helpers:TranslateExtension Text='LblTiempoRespuesta'}"
+                                           FontSize="11"
+                                           TextColor="#888"
+                                           HorizontalTextAlignment="Center"/>
+                                </StackLayout>
+                            </Frame>
+
+                            <!-- Satisfacción -->
+                            <Frame Grid.Row="0" Grid.Column="1"
+                                   BackgroundColor="#F3FFF5"
+                                   BorderColor="#E8F5E9"
+                                   CornerRadius="10"
+                                   Padding="12,10"
+                                   HasShadow="False">
+                                <StackLayout Spacing="2">
+                                    <Label Text="&#x1F60A;"
+                                           FontSize="20"
+                                           HorizontalOptions="Center"/>
+                                    <Label Text="{Binding Satisfaccion}"
+                                           FontSize="18"
+                                           FontAttributes="Bold"
+                                           TextColor="#2E7D32"
+                                           HorizontalTextAlignment="Center"/>
+                                    <Label Text="{helpers:TranslateExtension Text='LblSatisfaccion'}"
+                                           FontSize="11"
+                                           TextColor="#888"
+                                           HorizontalTextAlignment="Center"/>
+                                </StackLayout>
+                            </Frame>
+
+                            <!-- Chats este mes -->
+                            <Frame Grid.Row="1" Grid.Column="0"
+                                   BackgroundColor="#FFFBF0"
+                                   BorderColor="#FFF3E0"
+                                   CornerRadius="10"
+                                   Padding="12,10"
+                                   HasShadow="False">
+                                <StackLayout Spacing="2">
+                                    <Label Text="&#x1F4AC;"
+                                           FontSize="20"
+                                           HorizontalOptions="Center"/>
+                                    <Label Text="{Binding ChatsMes}"
+                                           FontSize="18"
+                                           FontAttributes="Bold"
+                                           TextColor="#E65100"
+                                           HorizontalTextAlignment="Center"/>
+                                    <Label Text="{helpers:TranslateExtension Text='LblChatsMes'}"
+                                           FontSize="11"
+                                           TextColor="#888"
+                                           HorizontalTextAlignment="Center"/>
+                                </StackLayout>
+                            </Frame>
+
+                            <!-- Transacciones exitosas -->
+                            <Frame Grid.Row="1" Grid.Column="1"
+                                   BackgroundColor="#FFF5F8"
+                                   BorderColor="#FCE4EC"
+                                   CornerRadius="10"
+                                   Padding="12,10"
+                                   HasShadow="False">
+                                <StackLayout Spacing="2">
+                                    <Label Text="&#x2705;"
+                                           FontSize="20"
+                                           HorizontalOptions="Center"/>
+                                    <Label Text="{Binding Transacciones}"
+                                           FontSize="18"
+                                           FontAttributes="Bold"
+                                           TextColor="#C62828"
+                                           HorizontalTextAlignment="Center"/>
+                                    <Label Text="{helpers:TranslateExtension Text='LblTransacciones'}"
+                                           FontSize="11"
+                                           TextColor="#888"
+                                           HorizontalTextAlignment="Center"/>
+                                </StackLayout>
+                            </Frame>
+                        </Grid>
+
+                        <!-- Comparativo en tu país -->
+                        <Label Text="{helpers:TranslateExtension Text='LblComparativoEnPais'}"
+                               FontSize="13"
+                               FontAttributes="Bold"
+                               TextColor="#555"
+                               Margin="0,4,0,0"/>
+
+                        <!-- Tú -->
+                        <StackLayout Spacing="4">
+                            <Label Text="{helpers:TranslateExtension Text='LblTuPuntaje'}"
+                                   FontSize="12"
+                                   TextColor="#666"/>
+                            <Grid ColumnDefinitions="*,Auto">
+                                <ProgressBar Grid.Column="0"
+                                             Progress="{Binding ReputacionPropiaProgress}"
+                                             ProgressColor="#1565C0"
+                                             VerticalOptions="Center"/>
+                                <Label Grid.Column="1"
+                                       Text="{Binding ReputacionPropia, StringFormat='{0:F1} &#x2B50;'}"
+                                       FontSize="12"
+                                       TextColor="#1565C0"
+                                       Margin="8,0,0,0"
+                                       VerticalOptions="Center"/>
+                            </Grid>
+                        </StackLayout>
+
+                        <!-- Mejor del país -->
+                        <StackLayout Spacing="4">
+                            <Label Text="{helpers:TranslateExtension Text='LblMejorEmprendedor'}"
+                                   FontSize="12"
+                                   TextColor="#666"/>
+                            <Grid ColumnDefinitions="*,Auto">
+                                <ProgressBar Grid.Column="0"
+                                             Progress="{Binding ReputacionMejorProgress}"
+                                             ProgressColor="#4CAF50"
+                                             VerticalOptions="Center"/>
+                                <Label Grid.Column="1"
+                                       Text="{Binding ReputacionMejorTexto}"
+                                       FontSize="12"
+                                       TextColor="#4CAF50"
+                                       Margin="8,0,0,0"
+                                       VerticalOptions="Center"/>
+                            </Grid>
+                        </StackLayout>
+
+                        <!-- Con más oportunidad de mejora -->
+                        <StackLayout Spacing="4">
+                            <Label Text="{helpers:TranslateExtension Text='LblPeorEmprendedor'}"
+                                   FontSize="12"
+                                   TextColor="#666"/>
+                            <Grid ColumnDefinitions="*,Auto">
+                                <ProgressBar Grid.Column="0"
+                                             Progress="{Binding ReputacionPeorProgress}"
+                                             ProgressColor="#FF9800"
+                                             VerticalOptions="Center"/>
+                                <Label Grid.Column="1"
+                                       Text="{Binding ReputacionPeorTexto}"
+                                       FontSize="12"
+                                       TextColor="#FF9800"
+                                       Margin="8,0,0,0"
+                                       VerticalOptions="Center"/>
+                            </Grid>
+                        </StackLayout>
+
+                    </StackLayout>
+                </Frame>
+
+            </StackLayout>
+        </ScrollView>
+    </Grid>
+
+</ContentPage>

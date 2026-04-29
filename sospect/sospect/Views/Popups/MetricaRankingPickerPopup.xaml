@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<toolkit:Popup
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    xmlns:helpers="clr-namespace:sospect.Helpers"
+    xmlns:fonts="clr-namespace:sospect.Resources.Fonts;assembly=sospect"
+    CanBeDismissedByTappingOutsideOfPopup="True"
+    x:Class="sospect.Views.Popups.MetricaRankingPickerPopup"
+    x:Name="popup">
+
+    <Frame CornerRadius="15"
+           VerticalOptions="Center"
+           HorizontalOptions="Center"
+           BackgroundColor="White"
+           Padding="0"
+           HasShadow="True"
+           WidthRequest="380">
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <!-- Header -->
+            <Border Grid.Row="0"
+                    BackgroundColor="#1465bb"
+                    StrokeThickness="0"
+                    Padding="20,15">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="15,15,0,0"/>
+                </Border.StrokeShape>
+                <Label Text="{helpers:TranslateExtension Text='LblSeleccionaMetrica'}"
+                       TextColor="White"
+                       FontSize="18"
+                       FontAttributes="Bold"
+                       HorizontalTextAlignment="Center"/>
+            </Border>
+
+            <!-- Lista de métricas -->
+            <StackLayout Grid.Row="1"
+                         x:Name="StackMetricas"
+                         Spacing="0"
+                         Padding="12,12,12,4">
+                <!-- Se pobla dinámicamente -->
+            </StackLayout>
+
+            <!-- Botón Cancelar -->
+            <Border Grid.Row="2"
+                    BackgroundColor="#F8F9FA"
+                    StrokeThickness="0"
+                    Padding="15">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="0,0,15,15"/>
+                </Border.StrokeShape>
+                <Button Text="{helpers:TranslateExtension Text='LabelCancelar'}"
+                        BackgroundColor="#1465bb"
+                        TextColor="White"
+                        FontSize="16"
+                        FontAttributes="Bold"
+                        CornerRadius="8"
+                        Clicked="OnCancelTapped"/>
+            </Border>
+        </Grid>
+    </Frame>
+</toolkit:Popup>

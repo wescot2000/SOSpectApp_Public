@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace sospect.AppConstants
 {
@@ -8,8 +8,8 @@ namespace sospect.AppConstants
 
         // OAuth
         // For Google login, configure at https://console.developers.google.com/
-        public static string iOSClientId = "rewqrewqrewqrewq.apps.googleusercontent.com";
-        public static string AndroidClientId = "rewqrewqrewqrewqrw.apps.googleusercontent.com";
+        public static string iOSClientId = "<IOS_CLIENT_ID>.apps.googleusercontent.com";
+        public static string AndroidClientId = "<ANDROID_CLIENT_ID>.apps.googleusercontent.com";
 
         // These values do not need changing
         public static string Scope = "https://www.googleapis.com/auth/userinfo.email";
@@ -18,17 +18,14 @@ namespace sospect.AppConstants
         public static string UserInfoUrl = "https://www.googleapis.com/oauth2/v2/userinfo";
 
         // Set these to reversed iOS/Android client ids, with :/oauth2redirect appended
-        public static string iOSRedirectUrl = "com.googleusercontent.apps.rewqrewqrewqrewqrw:/oauth2redirect";
-        public static string AndroidRedirectUrl = "com.googleusercontent.apps.rewqrewqrewqrewqrew:/oauth2redirect";
+        public static string iOSRedirectUrl = "com.googleusercontent.apps.<IOS_CLIENT_ID>:/oauth2redirect";
+        public static string AndroidRedirectUrl = "com.googleusercontent.apps.<ANDROID_CLIENT_ID>:/oauth2redirect";
 
         //project id for android gcm
-        //Desarrollo
-        public const string GoogleConsoleProjectId = "sospecttest-rewqrewq";
-        //Produccion
-        //public const string GoogleConsoleProjectId = "sospect";
+        public const string GoogleConsoleProjectId = "<GOOGLE_PROJECT_ID>";
 
-        //Producción
-        public const string ListenConnectionString = "Endpoint=sb://Sospect.servicebus.windows.net/;SharedAccessKeyName=DefaultListenSharedAccessSignature;SharedAccessKey=rewqrewqrewqr";
-        public const string NotificationHubName = "SospectApp";
+        //Notification Hub - configure via Azure Service Bus
+        public const string ListenConnectionString = "Endpoint=sb://<NAMESPACE>.servicebus.windows.net/;SharedAccessKeyName=<KEY_NAME>;SharedAccessKey=<KEY>";
+        public const string NotificationHubName = "<HUB_NAME>";
     }
 }

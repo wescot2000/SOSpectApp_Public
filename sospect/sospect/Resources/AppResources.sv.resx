@@ -249,18 +249,6 @@
   <data name="DireccionEscape" xml:space="preserve">
     <value>Ange den misstänktes flyktadress.</value>
   </data>
-  <data name="DescripcionAlerta" xml:space="preserve">
-    <value>Beskrivning av registreringen</value>
-  </data>
-  <data name="DescripcionImplicado" xml:space="preserve">
-    <value>Beskrivning av den person som berörs av registreringen</value>
-  </data>
-  <data name="DescripcionVehiculoImp" xml:space="preserve">
-    <value>Fordon som berörs (om tillämpligt)</value>
-  </data>
-  <data name="ArmaImplicada" xml:space="preserve">
-    <value>Vapen (om tillämpligt)</value>
-  </data>
   <data name="LabelRutaEscape" xml:space="preserve">
     <value>Misstänkt flyktväg</value>
   </data>
@@ -660,9 +648,6 @@
   <data name="LblSaldoPoderesEs" xml:space="preserve">
     <value>Min maktbalans är:</value>
   </data>
-  <data name="LblUsuarioID" xml:space="preserve">
-    <value>Mitt användar-ID är</value>
-  </data>
   <data name="LblAlertaReportadaPorMi" xml:space="preserve">
     <value>Varning rapporterad av mig</value>
   </data>
@@ -690,23 +675,14 @@
   <data name="LblAlarmaNoGrave" xml:space="preserve">
     <value>Använd den gula knappen för att placera varningar om låg risk och varna ditt samhälle eller skydd. Du kan välja typ av varning och markera den som ett brott som begåtts. Den här knappen startar varningen på din exakta plats och är användbar när du behöver hjälp. Du kan också välja en punkt på kartan för att hitta aviseringen utan att äventyra din plats.</value>
   </data>
-  <data name="LblCrimenCometido" xml:space="preserve">
-    <value>Den röda knappen utlöser en kategori: brottslarm. SOSpect kräver inte att du inkluderar en kategori på grund av vikten av tid i dessa fall. Larmet placeras automatiskt på din exakta plats. Du kan också välja en punkt på kartan för att placera varningen och sedan ändra kategorin till brott som begåtts.</value>
-  </data>
   <data name="LblDescripcionAlarmas" xml:space="preserve">
     <value>I alternativet "Beskriv" i det nedre fältet hittar du en lista över larm som du eller andra har placerat. Om du skapade alarmet kan du lägga till en beskrivning. Om larmet skapades av någon annan kan du betygsätta dess sanning och komplettera dess beskrivning. Var försiktig! Om du lämnar falsk information eller felaktiga betyg kan ditt konto stängas av. Läs noga igenom villkoren för att undvika detta.</value>
   </data>
   <data name="LblDescripcionMensajes" xml:space="preserve">
     <value>I klockan i det övre högra hörnet kan du läsa dina meddelanden, som inkluderar prenumerationsaviseringar och senaste larm. Den här listan skiljer sig från beskrivningsalternativet, där du kan hitta senaste larm direkt.</value>
   </data>
-  <data name="LblDescripcionMenu" xml:space="preserve">
-    <value>I växeln i det övre vänstra hörnet hittar du SOSpect-konfigurationsalternativen. Du kan köpa befogenheter för att köpa prenumerationer och skydda din familj eller utöka din larmmottagningsradie. KOMMA IHÅG! I början ger vi dig 80 krafter så att du kan köpa två prenumerationer från början.</value>
-  </data>
   <data name="LblRecomendaciones" xml:space="preserve">
     <value>TILLSAMMANS ÄR VI OÖVERVINNERLIGA! De grundläggande funktionerna för att varna och ta emot varningar inom en radie av 100 meter är gratis, och när du börjar ger vi dig 2 prenumerationer. Bjud in ditt samhälle och din familj att använda denna kostnadsfria tjänst för att bekämpa ökande brottslighet. Du kan rädda liv eller bli räddad genom att få en varning i tid. Varningar om förlorade människor eller husdjur har en räckvidd på 10 kilometer, och våldsamma demonstrationer har en räckvidd på 1 kilometer</value>
-  </data>
-  <data name="LblPromocion" xml:space="preserve">
-    <value>Slutligen, kom ihåg att du kommer att tjäna en fullmakt för varje sanningsenlig betyg du tillhandahåller i SOSpect, när omröstningen av larmen stängs efter 90 minuter från deras placering. De flesta människor är ärliga och tillsammans kommer vi att skydda varandra och våra familjer. VÄLKOMMEN TILL SOSPECT!</value>
   </data>
   <data name="LblDescripcionMapa" xml:space="preserve">
     <value>Du kan när som helst välja alternativet "MAP" till vänster om det nedre fältet, vilket är startpunkten för SOSpect. Därifrån kan du se larm i närheten. Din plats visas i mitten av kartan och cirkeln representerar radien som kan påverka dig. Som standard är denna radie 100 meter, men du kan ändra den i inställningsmenyn.</value>
@@ -1171,7 +1147,1938 @@ Tryck på skärmen för att fortsätta...</value>
   <data name="Capturasrealizadasenunkilometroymedioalaredondademiubicacion" xml:space="preserve">
     <value>Fångar gjorda på en och en halv kilometer runt min plats</value>
   </data>
+  <data name="LblErrorConexion" xml:space="preserve">
+    <value>Fel vid anslutning</value>
+  </data>
+  <data name="LblCierreSesion" xml:space="preserve">
+    <value>Utloggning</value>
+  </data>
+  <data name="LblSinConexionDetalle" xml:space="preserve">
+    <value>Offline, aktivera anslutningen och starta om appen</value>
+</data>
+  <data name="CmdGuardarConfiguracion" xml:space="preserve">
+    <value>Spara ändringar</value>
+  </data>
+  <data name="LblCantDiasNotifApagada" xml:space="preserve">
+    <value>Antal dagar jag vill stänga av mina anmälningar i egenskap av behörig myndighet</value>
+  </data>
+  <data name="LblNotifAlarmasCercanas" xml:space="preserve">
+    <value>Få aviseringar om larm i närheten</value>
+  </data>
+  <data name="LblNotifAlarmasProtegidos" xml:space="preserve">
+    <value>Ta emot meddelanden om larm som placerats av skyddade</value>
+  </data>
+  <data name="LblNotifAlarmasZonas" xml:space="preserve">
+    <value>Ta emot meddelanden om larm som placerats i övervakningszoner</value>
+  </data>
+  <data name="LblNotifAlarmasAutoridadComp" xml:space="preserve">
+    <value>Ta emot larmmeddelanden i egenskap av behörig myndighet</value>
+  </data>
+  <data name="LblDescripcionConfNotificaciones" xml:space="preserve">
+    <value>Detta är dina nuvarande aviseringsinställningar, stäng av eller på dem efter eget tycke för att göra din upplevelse på SOSpect bättre och bättre!</value>
+  </data>
+  <data name="LblConfNotifGuardadas" xml:space="preserve">
+    <value>De nya inställningarna har sparats</value>
+  </data>
+  <data name="LblConfNotifNoSeGuarda" xml:space="preserve">
+    <value>Det gick inte att spara inställningarna. Försök igen.</value>
+  </data>
+  <data name="LblConfigNotificaciones" xml:space="preserve">
+    <value>Konfigurera SOSpect-meddelanden</value>
+  </data>
+  <data name="LblFechaApagadoAutomaticoNotif" xml:space="preserve">
+    <value>Datum för avstängning av polismeddelande:</value>
+  </data>
+  <data name="LblTiempoParaActivacionAutomatica" xml:space="preserve">
+    <value>Återstående tid för automatisk aktivering:</value>
+  </data>
+  <data name="LblCamposIncompletos" xml:space="preserve">
+    <value>Vänligen fyll i alla fält korrekt.</value>
+  </data>
+  <data name="LblNoAplicable" xml:space="preserve">
+    <value>Ej tillämpligt</value>
+  </data>
+  <data name="LblTiempoExpirado" xml:space="preserve">
+    <value>Tiden har gått ut</value>
+  </data>
+  <data name="LblCopiado" xml:space="preserve">
+    <value>Kopieras</value>
+  </data>
+  <data name="LblUsuarioCopiado" xml:space="preserve">
+    <value>Användar-ID kopierat till Urklipp</value>
+  </data>
   <data name="LblCondicionesCierreAlarma" xml:space="preserve">
-    <value>Du kan bara stänga larmet om du skapade det eller om det inte bevakas</value>
+    <value>Ange orsaken till stängningen. Den kommer att stängas om du är skaparen och den inte är i givakt.</value>
+  </data>
+  <data name="LabelCheckConnection" xml:space="preserve">
+    <value>Det gick inte att verifiera versionen av SOSpect på grund av fel i internetanslutningen. Kontrollera anslutningen.</value>
+  </data>
+  <data name="TocaParaAgregarInfo" xml:space="preserve">
+    <value>Tryck här för att lägga till information</value>
+  </data>
+  <data name="DescripcionAlerta" xml:space="preserve">
+    <value>Aviseringsbeskrivning (valfritt)</value>
+  </data>
+  <data name="DescripcionImplicado" xml:space="preserve">
+    <value>Beskrivning av den person som berörs av registreringen (frivillig uppgift)</value>
+  </data>
+  <data name="DescripcionVehiculoImp" xml:space="preserve">
+    <value>Fordon som berörs (valfritt)</value>
+  </data>
+  <data name="ArmaImplicada" xml:space="preserve">
+    <value>Vapen inblandat (valfritt)</value>
+  </data>
+  <data name="TocaAlarmaARevisar" xml:space="preserve">
+    <value>Tryck på alarmet som du vill kontrollera</value>
+  </data>
+  <data name="TocaAquiParaDescribir" xml:space="preserve">
+    <value>Tryck här för att lägga till beskrivning eller interaktion</value>
+  </data>
+  <data name="MostrarAlarmaEnMapa" xml:space="preserve">
+    <value>Visa larm på karta</value>
+  </data>
+  <data name="EsAlarmaVerdadera" xml:space="preserve">
+    <value>Är larmet sant?</value>
+  </data>
+  <data name="BorraDatosYCierraSesion" xml:space="preserve">
+    <value>Rensa mina data och logga ut</value>
+  </data>
+  <data name="ElValorNoCorrespondeAsuID" xml:space="preserve">
+    <value>Det inmatade värdet motsvarar inte ditt användar-ID</value>
+  </data>
+  <data name="SeEliminaronTodosSusDatos" xml:space="preserve">
+    <value>Alla dina uppgifter har raderats, den här sessionen kommer att loggas ut</value>
+  </data>
+  <data name="FailureDeletingData" xml:space="preserve">
+    <value>Det gick inte att ta bort användardata, inga data har tagits bort.</value>
+  </data>
+  <data name="LblAtencion" xml:space="preserve">
+    <value>UPPMÄRKSAMHET!</value>
+  </data>
+  <data name="AdverBorradoDatos" xml:space="preserve">
+    <value>Varning: Denna åtgärd kommer att permanent radera alla dina data, inklusive köp och prenumerationer på SOSpect. Hämtning av köp är endast möjlig genom en detaljerad begäran till soporte@wescot.com.co, med förbehåll för verifiering.</value>
+  </data>
+  <data name="ConfirmarBorradoDatosUsuario" xml:space="preserve">
+    <value>För att bekräfta raderingen av dina data, ange sedan ditt användar-ID (finns högst upp i inställningsmenyn) och tryck på OK. Detta kommer att radera dina data och automatiskt logga ut dig.</value>
+  </data>
+  <data name="ColoqueSuIDUsuario" xml:space="preserve">
+    <value>Ange ditt användar-ID här</value>
+  </data>
+  <data name="AccionNoPermitida" xml:space="preserve">
+    <value>Otillåtet handlande</value>
+  </data>
+  <data name="SoloAutoridadCompetente" xml:space="preserve">
+    <value>Endast den behöriga myndigheten kan reagera på larmet om det är aktivt.</value>
+  </data>
+  <data name="SoloCreadorConfirmaAlarma" xml:space="preserve">
+    <value>Du kan inte bekräfta alarmet om du är skaparen eller om det inte är aktivt.</value>
+  </data>
+  <data name="SoloCreadorCierraAlarma" xml:space="preserve">
+    <value>Larmet kan endast stängas av dess skapare, myndigheter eller om det är aktivt.</value>
+  </data>
+  <data name="IrAConfiguracion" xml:space="preserve">
+    <value>Gå till inställningar</value>
+  </data>
+  <data name="LblIgnorar" xml:space="preserve">
+    <value>Bortse från</value>
+  </data>
+  <data name="LblImportante" xml:space="preserve">
+    <value>Viktig!</value>
+  </data>
+  <data name="SinNotifPodriasEstarEnRiesgo" xml:space="preserve">
+    <value>Ignorera riskvarningar? Utan aviseringar kan du missa viktiga meddelanden.</value>
+  </data>
+  <data name="LblCierreSesionDetalle" xml:space="preserve">
+    <value>Du har loggats ut genom att logga in på en annan enhet eller aktivera aviseringar.</value>
+  </data>
+  <data name="LblAlarmaActiva" xml:space="preserve">
+    <value>Aktivt larm</value>
+  </data>
+  <data name="LblDescripcion" xml:space="preserve">
+    <value>Beskrivning:</value>
+  </data>
+  <data name="LblHistorialAlertas" xml:space="preserve">
+    <value>Radiovarningshistorik 3 km.</value>
+  </data>
+  <data name="LblTituloHistorialAlertas" xml:space="preserve">
+    <value>Larmhistorik för de senaste 30 dagarna i radie 3 km.</value>
+  </data>
+  <data name="LblVolverAtras" xml:space="preserve">
+    <value>Tillbaka till toppen</value>
+  </data>
+  <data name="LblTocaAgregarDescripcion" xml:space="preserve">
+    <value>Tryck här för att lägga till beskrivning (valfritt)</value>
+  </data>
+  <data name="LabelSessionExpired" xml:space="preserve">
+    <value>Din session har gått ut. Logga in igen.</value>
+  </data>
+  <data name="LabelAlarmaDeRedConfianza" xml:space="preserve">
+    <value>Larm skapat av betrodd nätverksanvändare</value>
+  </data>
+  <data name="LabelEscritoRedConfianza" xml:space="preserve">
+    <value>Skriven av en betrodd nätverksanvändare</value>
+  </data>
+  <data name="LabelPertenecesRedConfianza" xml:space="preserve">
+    <value>Du tillhör det betrodda nätverket för SOSpect!</value>
+  </data>
+  <data name="LabelVentajasRedC" xml:space="preserve">
+    <value>Fördelar med att vara med i det betrodda nätverket</value>
+  </data>
+  <data name="LabelV1UsuariosConfiables" xml:space="preserve">
+    <value>1. Identifiering och verifiering av betrodda användare:</value>
+  </data>
+  <data name="LabelV1UsuariosConfiablesDesc" xml:space="preserve">
+    <value>Mekanismer för att identifiera och verifiera användare som konsekvent tillhandahåller korrekt och användbar information. Detta säkerställer att de data som delas inom nätverket är av hög kvalitet och tillförlitliga.</value>
+  </data>
+  <data name="LabelV2AlertasPrioritarias" xml:space="preserve">
+    <value>2. Prioriterad varning:</value>
+  </data>
+  <data name="LabelV2AlertasPrioritariasDesc" xml:space="preserve">
+    <value>Aviseringar som genereras av verifierade användare i det betrodda nätverket har högre synlighet och prioritet. Detta innebär att de kommer att sticka ut på plattformen, vilket möjliggör ett snabbare och mer effektivt svar från samhället och myndigheterna.</value>
+  </data>
+  <data name="LabelV3RecompensasConfiabilidad" xml:space="preserve">
+    <value>3. Belöningar för tillförlitlighet:</value>
+  </data>
+  <data name="LabelV3RecompensasConfiabilidadDesc" xml:space="preserve">
+    <value>Uppmuntra betrodda användare med belöningar i appen, till exempel ytterligare "krafter" eller premiumfunktioner. Detta motiverar inte bara användarna att behålla sin pålitlighetsstatus, utan berikar också deras upplevelse på plattformen.</value>
+  </data>
+  <data name="LabelMasVentajas" xml:space="preserve">
+    <value>Fler fördelar:</value>
+  </data>
+  <data name="LabelMasVentajasDesc" xml:space="preserve">
+    <value>Larm som genereras av betrodda nätverksanvändare visas med en grön ram i larmlistan och ett tecken som indikerar att larmet kommer från en verifierad användare. Dessutom är nålen på kartan markerad i grönt, vilket signalerar att det är ett verifierat larm. Kommentarer från betrodda nätverksanvändare markeras också med en grön skylt som anger deras betrodda härkomst.</value>
+  </data>
+  <data name="LabelObjetivoVentajas" xml:space="preserve">
+    <value>Medlemmar i det betrodda nätverket förväntas vara personer som befinner sig långt borta från brott, så deras larm anses vara tillförlitliga och bör tas på större allvar. Detta bidrar till ett säkrare samhälle och effektivare svar på larm.</value>
+  </data>
+  <data name="LabelTitleVentajas" xml:space="preserve">
+    <value>Fördelar</value>
+  </data>
+  <data name="LabelTitleDatosBasicos" xml:space="preserve">
+    <value>Lägg till grunddata</value>
+  </data>
+  <data name="LabelInstruccionesDatosBasicos" xml:space="preserve">
+    <value>Ange dina grundläggande uppgifter för att gå med i SOSpect Trusted Network. Gör detta bara om du känner en nätverksmedlem som kan lägga till dig. Se till att du anger riktig och korrekt information, eftersom du inte kommer att kunna ändra den efter att ha lagts till i det betrodda nätverket.</value>
+  </data>
+  <data name="LabelNombres" xml:space="preserve">
+    <value>Namn:</value>
+  </data>
+  <data name="LabelApellidos" xml:space="preserve">
+    <value>Efternamn:</value>
+  </data>
+  <data name="LabelNumeroMovil" xml:space="preserve">
+    <value>Mobilnummer:</value>
+  </data>
+  <data name="LabelEmail" xml:space="preserve">
+    <value>E-post:</value>
+  </data>
+  <data name="LabelPais" xml:space="preserve">
+    <value>Land:</value>
+  </data>
+  <data name="LabelDocumentoIdentificacion" xml:space="preserve">
+    <value>Nationell identitetshandling:</value>
+  </data>
+  <data name="LabelGuardarDatosBasicos" xml:space="preserve">
+    <value>Spara eller uppdatera data</value>
+  </data>
+  <data name="LabelValidacionNombres" xml:space="preserve">
+    <value>Ogiltiga namn, endast bokstäver är tillåtna.</value>
+  </data>
+  <data name="LabelValidacionApellidos" xml:space="preserve">
+    <value>Ogiltiga efternamn, endast bokstäver är tillåtna.</value>
+  </data>
+  <data name="LabelValidacionCelular" xml:space="preserve">
+    <value>Ogiltigt mobilnummer, endast nummer är tillåtna.</value>
+  </data>
+  <data name="LabelValidacionEmail" xml:space="preserve">
+    <value>Ogiltig e-postadress.</value>
+  </data>
+  <data name="LabelValidacionPais" xml:space="preserve">
+    <value>Ogiltigt land, endast bokstäver tillåtna.</value>
+  </data>
+  <data name="LabelValidacionDocumento" xml:space="preserve">
+    <value>Ogiltigt ID, endast alfanumeriska tecken, punkter och bindestreck tillåts.</value>
+  </data>
+  <data name="LabelAgregarUsuarioRedTitle" xml:space="preserve">
+    <value>Lägg till användare i det betrodda nätverket</value>
+  </data>
+  <data name="LabelEscribaIDUsuario" xml:space="preserve">
+    <value>Ange ID:t för den användare som ska skyddas här:</value>
+  </data>
+  <data name="LabelConsultarDisponibilidad" xml:space="preserve">
+    <value>Visa tillgänglighet</value>
+  </data>
+  <data name="LabelAgregarUsuario" xml:space="preserve">
+    <value>Lägg till användare</value>
+  </data>
+  <data name="LabelDesventajasTitle" xml:space="preserve">
+    <value>Nackdelar</value>
+  </data>
+  <data name="LabelDesventajasSubTitle" xml:space="preserve">
+    <value>Nackdelar med att tillhöra Trust Network</value>
+  </data>
+  <data name="LabelDV1Investigacion" xml:space="preserve">
+    <value>1. Oansvarig larmutredning:</value>
+  </data>
+  <data name="LabelDV1InvestigacionDesc" xml:space="preserve">
+    <value>I de fall där de behöriga myndigheterna kräver det kan larm undersökas om det misstänks att de har placerats på ett oansvarigt eller lögnaktigt sätt som påverkar andra medborgare.</value>
+  </data>
+  <data name="LabelDV2Requisitos" xml:space="preserve">
+    <value>2. Krav för SOSpect-verifiering:</value>
+  </data>
+  <data name="LabelDV2RequisitosDesc" xml:space="preserve">
+    <value>SOSpect kommer att kontrollera att begäran om utredning har tillräckliga grunder innan information lämnas in. Dessutom kommer leverans av information att nekas i fall som rör regeringar eller myndigheter kopplade till diktaturer, illegala grupper, maffior eller liknande, för att skydda användaren som skapat larmet.</value>
+  </data>
+  <data name="LabelDV3ImplicacionAgregador" xml:space="preserve">
+    <value>3. Involvering av aggregatoranvändaren:</value>
+  </data>
+  <data name="LabelDV3ImplicacionAgregadorDesc" xml:space="preserve">
+    <value>I en eventuell undersökning kan den användare som lade till skaparen av larmet i det betrodda nätverket krävas av de behöriga myndigheterna att samarbeta i utredningen, med samma förbehåll som nämns ovan.</value>
+  </data>
+  <data name="LabelDV4BorradoInformacion" xml:space="preserve">
+    <value>4. Radering av information:</value>
+  </data>
+  <data name="LabelDV4BorradoInformacionDesc" xml:space="preserve">
+    <value>När användare bestämmer sig för att radera sin information från SOSpect och avinstallera applikationen, kommer SOSpect att radera den efter 90 kalenderdagar, efter att ha verifierat att inga klagomål har gjorts av de behöriga myndigheterna i samband med de larm som placerats av användaren.</value>
+  </data>
+  <data name="LabelDV5Responsabilidad" xml:space="preserve">
+    <value>5. Potentiellt ansvar:</value>
+  </data>
+  <data name="LabelDV5ResponsabilidadDesc" xml:space="preserve">
+    <value>Att vara en del av det betrodda nätverket kommer med ett extra ansvar, eftersom medlemmar endast förväntas lägga till betrodda användare. Om någon som inte uppfyller dessa standarder läggs till kan det få negativa konsekvenser.</value>
+  </data>
+  <data name="LabelListarRedConfianzaTitle" xml:space="preserve">
+    <value>Lista betrott nätverk</value>
+  </data>
+  <data name="LabelNoHayUsuarioEnRed" xml:space="preserve">
+    <value>Inga betrodda användare i nätverket</value>
+  </data>
+  <data name="LabelTitleMasInformacion" xml:space="preserve">
+    <value>Lära sig mer</value>
+  </data>
+  <data name="LabelQueEsRedConfianza" xml:space="preserve">
+    <value>Vad är Trust Network?</value>
+  </data>
+  <data name="LabelQueEsRedConfianzaDesc" xml:space="preserve">
+    <value>"Network of Trust" i SOSpect är en funktion som är utformad för att tillåta användare att skapa en cirkel av betrodda personer i appen. Genom att lägga till personer som du känner och litar på kommer dina varningar och meddelanden att behandlas med högre prioritet och synlighet. Huvudmålet är att förbättra effektiviteten och tillförlitligheten hos de larm som utfärdas via applikationen, vilket säkerställer att varningar från verifierade användare får nödvändig uppmärksamhet.</value>
+  </data>
+  <data name="LabelFuncionamientoRed" xml:space="preserve">
+    <value>Så här fungerar förtroendenätverket</value>
+  </data>
+  <data name="Label1IdentificacionUsuarios" xml:space="preserve">
+    <value>1. Identifiering av betrodda användare:</value>
+  </data>
+  <data name="Label1IdentificacionUsuariosDesc" xml:space="preserve">
+    <value>Du kan lägga till personer som du känner och litar på i ditt betrodda nätverk. Detta säkerställer att dina varningar betraktas som verifierade i appen, markerade i grönt och med ökad synlighet.</value>
+  </data>
+  <data name="Label2Privacidad" xml:space="preserve">
+    <value>2. Sekretess för varningar:</value>
+  </data>
+  <data name="Label2PrivacidadDesc" xml:space="preserve">
+    <value>Trots att betrodda nätverksvarningar prioriteras förblir alla larm anonyma. Användarnas identiteter och personuppgifter kommer inte att exponeras för andra användare, vilket garanterar integritet samtidigt som varningarnas effektivitet förbättras.</value>
+  </data>
+  <data name="Label3ComposicionRed" xml:space="preserve">
+    <value>3. Nätverkets sammansättning:</value>
+  </data>
+  <data name="Label3ComposicionRedDesc" xml:space="preserve">
+    <value>Nätverket förväntas bestå av personer som befinner sig långt från kriminell verksamhet. Inkluderingen av användare i detta nätverk bör hanteras försiktigt och se till att endast betrodda personer läggs till.</value>
+  </data>
+  <data name="Label4DatosInalterables" xml:space="preserve">
+    <value>4. Oföränderlighet av data:</value>
+  </data>
+  <data name="Label4DatosInalterablesDesc" xml:space="preserve">
+    <value>När en användare har lagts till i det betrodda nätverket kommer de inte att kunna ändra sina grundläggande data eller tas bort från nätverket. Den här regeln implementeras för att upprätthålla nätverkets integritet och tillförlitlighet.</value>
+  </data>
+  <data name="LabelRecomendacionesRed" xml:space="preserve">
+    <value>Rekommendationer för att lägga till användare i det betrodda nätverket</value>
+  </data>
+  <data name="Label1VerificaIdentidad" xml:space="preserve">
+    <value>1. Verifiera identitet:</value>
+  </data>
+  <data name="Label1VerificaIdentidadDesc" xml:space="preserve">
+    <value>Innan du lägger till någon i ditt betrodda nätverk bör du se till att du känner till och verifierar användarens identitet. Eftersom dina larm kommer att få särskild behandling är det viktigt att du har fullt förtroende för sanningshalten i den information som tillhandahålls.</value>
+  </data>
+  <data name="Label2RevisaInfo" xml:space="preserve">
+    <value>2. Granska den grundläggande informationen:</value>
+  </data>
+  <data name="Label2RevisaInfoDesc" xml:space="preserve">
+    <value>Det är viktigt att se till att användarens grundläggande uppgifter, såsom namn, mobilnummer, e-post och nationell identitetshandling, är korrekta och uppdaterade.</value>
+  </data>
+  <data name="Label3ResponsabilidadAgregador" xml:space="preserve">
+    <value>3. Aggregatorns ansvar:</value>
+  </data>
+  <data name="Label3ResponsabilidadAgregadorDesc" xml:space="preserve">
+    <value>När du lägger till en användare i det betrodda nätverket tar du ansvar för att se till att användarens data är korrekta. Detta är viktigt för att upprätthålla nätverkets integritet och säkerställa att verifierade larm är av hög kvalitet och tillförlitlighet.</value>
+  </data>
+  <data name="LabelRecomendacionesAdicionales" xml:space="preserve">
+    <value>Ytterligare varningar och rekommendationer</value>
+  </data>
+  <data name="Label1InvestigacionAlarmas" xml:space="preserve">
+    <value>1. Undersökning av larm:</value>
+  </data>
+  <data name="Label1InvestigacionAlarmasDesc" xml:space="preserve">
+    <value>Om så krävs av de behöriga myndigheterna kan ett larm som placerats av en betrodd nätverksanvändare undersökas. SOSpect kommer att vidta åtgärder för att verifiera legitimiteten i begäran innan någon information överlämnas och kommer att neka sådan överlämning i fall som involverar regeringar eller enheter associerade med diktaturer, illegala grupper, maffior eller liknande.</value>
+  </data>
+  <data name="Label2ImplicacionesAgregador" xml:space="preserve">
+    <value>2. Konsekvenser för aggregatoranvändaren:</value>
+  </data>
+  <data name="Label2ImplicacionesAgregadorDesc" xml:space="preserve">
+    <value>I händelse av en utredning kan den användare som lagt till skaparen av larmet krävas att samarbeta, alltid under samma rättsliga skydd.</value>
+  </data>
+  <data name="Label3EliminacionDatos" xml:space="preserve">
+    <value>3. Process för radering av uppgifter:</value>
+  </data>
+  <data name="Label3EliminacionDatosDesc" xml:space="preserve">
+    <value>Om en användare bestämmer sig för att radera sin information och avinstallera applikationen kommer SOSpect att fortsätta med raderingen av data efter 90 dagar, förutsatt att inga klagomål har uppstått från de behöriga myndigheterna relaterade till de larm som utfärdats av användaren.</value>
+  </data>
+  <data name="LabelTitleRedConfianza" xml:space="preserve">
+    <value>Nätverk av förtroende</value>
+  </data>
+  <data name="LabelBienvenidoRedConfianza" xml:space="preserve">
+    <value>Välkommen till förtroendets nätverk. Här kan du lägga till personer du känner och litar på, vilket gör att deras larm kan betraktas som verifierade, markeras i grönt och ges större betydelse. Kom ihåg att alla larm kommer att förbli anonyma och att ingens data kommer att exponeras.
+
+Larm från personer som inte är en del av ditt betrodda nätverk visas i grått. Nätverket förväntas bestå av pålitliga personer som befinner sig långt från kriminell verksamhet.
+
+De användare du lägger till måste ange sina grundläggande uppgifter genom att gå in i SOSpect-menyn och fylla i den information som krävs. Som aggregator är det ditt ansvar att se till att dessa uppgifter är sanningsenliga. När en användare har lagts till kommer den inte att kunna ändra sina data eller tas bort från nätverket.</value>
+  </data>
+  <data name="LabelQuieroSaberMas" xml:space="preserve">
+    <value>JAG VILL VETA MER</value>
+  </data>
+  <data name="LabelVentajasRed" xml:space="preserve">
+    <value>FÖRDELAR MED DET BETRODDA NÄTVERKET</value>
+  </data>
+  <data name="LabelDesventajasRed" xml:space="preserve">
+    <value>NACKDELAR MED DET BETRODDA NÄTVERKET</value>
+  </data>
+  <data name="LabelAgregarDatosBasicos" xml:space="preserve">
+    <value>Lägga till eller ändra grunddata som ska ingå</value>
+  </data>
+  <data name="LabelAgregarUsuarioARed" xml:space="preserve">
+    <value>Lägga till en användare i det betrodda nätverket</value>
+  </data>
+  <data name="LabelListarUsuariosRed" xml:space="preserve">
+    <value>Lista betrodda nätverksanvändare som jag har lagt till</value>
+  </data>
+  <data name="Ellídernotieneelindicadordereddeconfianzaestablecidoenverdadero" xml:space="preserve">
+    <value>Ledaren har inte indikatorn för förtroendenätverk inställd på true</value>
+  </data>
+  <data name="Unoomáscamposobligatoriossonnulos" xml:space="preserve">
+    <value>Ett eller flera obligatoriska fält är null</value>
+  </data>
+  <data name="Elnuevousuarioyaperteneceaunareddeconfianza" xml:space="preserve">
+    <value>Den nya användaren tillhör redan ett betrott nätverk</value>
+  </data>
+  <data name="Usuarioagregadoalareddeconfianzaconéxito" xml:space="preserve">
+    <value>Användaren har lagts till i det betrodda nätverket</value>
+  </data>
+  <data name="NoseencontróningúnusuarioconelIDdeusuariodetercerosproporcionado" xml:space="preserve">
+    <value>Ingen användare hittades med det angivna användar-ID:t från tredje part</value>
+  </data>
+  <data name="Elusuarioyaespartedelareddeconfianza" xml:space="preserve">
+    <value>Användaren är redan en del av det betrodda nätverket</value>
+  </data>
+  <data name="Lainformaciónpersonaldelusuarioqueseagregaráalareddeconfianzaestáincompleta" xml:space="preserve">
+    <value>Användarens personliga information som ska läggas till i det betrodda nätverket är ofullständig</value>
+  </data>
+  <data name="Lainformaciónpersonaldelusuarioqueseagregaráalareddeconfianzaestácompletayelusuarioaúnnoformapartedelareddeconfianza" xml:space="preserve">
+    <value>Användarens personliga information som ska läggas till i det betrodda nätverket är fullständig och användaren är ännu inte en del av det betrodda nätverket</value>
+  </data>
+  <data name="Elusuarioyaformapartedelareddeconfianzaysuinformaciónnopuedemodificarse" xml:space="preserve">
+    <value>Användaren är redan en del av det betrodda nätverket och deras information kan inte ändras</value>
+  </data>
+  <data name="Informacióndelusuarioactualizadaexitosamente" xml:space="preserve">
+    <value>Användarinformationen har uppdaterats</value>
+  </data>
+  <data name="LabelGuardadoRedConfianza" xml:space="preserve">
+    <value>Gjord! Du kan bara uppdatera data innan du ansluter till ett betrott nätverk</value>
+  </data>
+  <data name="Userinformationupdatedsuccessfully" xml:space="preserve">
+    <value>Användarinformationen har uppdaterats</value>
+  </data>
+  <data name="Anerroroccurredwhileupdatinguserinformation" xml:space="preserve">
+    <value>Ett fel uppstod vid uppdatering av användarinformation</value>
+  </data>
+  <data name="Invalidmodelstateforuserinformation" xml:space="preserve">
+    <value>Ogiltig modellstatus för användarinformation</value>
+  </data>
+  <data name="Userinformationretrievedsuccessfully" xml:space="preserve">
+    <value>Användarinformation har hämtats</value>
+  </data>
+  <data name="NouserfoundwiththeprovidedthirdpartyuserID" xml:space="preserve">
+    <value>Ingen användare hittades med det angivna användar-ID:t</value>
+  </data>
+  <data name="Usersinthetrustnetworkretrievedsuccessfully" xml:space="preserve">
+    <value>Betrodda nätverksanvändare har återställts</value>
+  </data>
+  <data name="Anerroroccurredwhileretrievingusersinthetrustnetwork" xml:space="preserve">
+    <value>Det gick inte att hämta användare i det betrodda nätverket</value>
+  </data>
+  <data name="Useraddedtothetrustnetworksuccessfully" xml:space="preserve">
+    <value>Användaren har lagts till i det betrodda nätverket</value>
+  </data>
+  <data name="Anerroroccurredwhileaddingtheusertothetrustnetwork" xml:space="preserve">
+    <value>Ett fel uppstod när användaren lades till i det betrodda nätverket</value>
+  </data>
+  <data name="LabelRestriccionApple" xml:space="preserve">
+    <value>För Apple® iPhone® är det inte tillåtet att rapportera larmtyperna "Brott eller brott begånget", "Gatuslagsmål", "Upplopp eller protester" och "Våld i hemmet" förrän det finns en överenskommelse med behöriga myndigheter.</value>
+  </data>
+  <data name="LblQueAccionRealizar" xml:space="preserve">
+    <value>Vad vill du göra?</value>
+  </data>
+  <data name="LblVerEnMapa" xml:space="preserve">
+    <value>Visa på karta</value>
+  </data>
+  <data name="LblIrAlPunto" xml:space="preserve">
+    <value>Gå till den här punkten</value>
+  </data>
+  <data name="LblElegirApp" xml:space="preserve">
+    <value>Välj app</value>
+  </data>
+  <data name="LblMapas" xml:space="preserve">
+    <value>Kartor</value>
+  </data>
+  <data name="LblAnuncioPublicitario" xml:space="preserve">
+    <value>Lägg till en annons</value>
+  </data>
+  <data name="LblErrorInicializandoParametros" xml:space="preserve">
+    <value>Det gick inte att initiera användarparametrar. Kontrollera din anslutning.</value>
+  </data>
+  <data name="LblMensajeCompraPoderes" xml:space="preserve">
+    <value>Det är inte obligatoriskt att köpa befogenheter för att använda SOSpect. De flesta av funktionerna är gratis. Dessutom kan du få makt genom att rösta sanningsenligt på ditt samhälles larm.</value>
+  </data>
+  <data name="LblCargandoTiposAlarma" xml:space="preserve">
+    <value>Laddar larmtyper...</value>
+  </data>
+  <data name="LabelTocarParaDetalles" xml:space="preserve">
+    <value>Tryck för mer information</value>
+  </data>
+  <data name="LabelChat" xml:space="preserve">
+    <value>💬 Chatta</value>
+  </data>
+  <data name="LblLeeTerminosDetenidamente" xml:space="preserve">
+    <value>Läs villkoren noggrant</value>
+  </data>
+  <data name="LblVisualizacionSoloLectura" xml:space="preserve">
+    <value>Du visar termer i skrivskyddat läge</value>
+  </data>
+  <data name="LblProcesando" xml:space="preserve">
+    <value>Bearbetning...</value>
+  </data>
+  <data name="LabelSinAccesoAChat" xml:space="preserve">
+    <value>Chatten är inte tillgänglig just nu</value>
+  </data>
+  <data name="LabelUbicacionNoDisponible" xml:space="preserve">
+    <value>Plats ej tillgänglig</value>
+  </data>
+  <data name="LabelVerificaGPS" xml:space="preserve">
+    <value>Kontrollera att din GPS är aktiv</value>
+  </data>
+  <data name="LabelReintentar" xml:space="preserve">
+    <value>Igen</value>
+  </data>
+  <data name="LabelReiniciarApp" xml:space="preserve">
+    <value>Starta om appen</value>
+  </data>
+  <data name="LabelGPSRequerido" xml:space="preserve">
+    <value>GPS krävs</value>
+  </data>
+  <data name="LabelHabilitarUbicacion" xml:space="preserve">
+    <value>Aktivera plats i enhetens inställningar</value>
+  </data>
+  <data name="LabelIrAConfiguracion" xml:space="preserve">
+    <value>Gå till inställningar</value>
+  </data>
+  <data name="MsgTrasAlarmaSinRiesgo" xml:space="preserve">
+    <value>Om du har tid, beskriv larmet, det kommer att vara användbart för dina grannar!</value>
+  </data>
+  <data name="LabelSiguiente" xml:space="preserve">
+    <value>Följande</value>
+  </data>
+  <data name="LabelAnterior" xml:space="preserve">
+    <value>Föregående</value>
+  </data>
+  <data name="LabelOmitir" xml:space="preserve">
+    <value>Utelämna</value>
+  </data>
+  <data name="LabelFinalizar" xml:space="preserve">
+    <value>Ände</value>
+  </data>
+  <data name="LabelConfirmarOmitir" xml:space="preserve">
+    <value>Hoppa över handledning</value>
+  </data>
+  <data name="LabelMensajeOmitir" xml:space="preserve">
+    <value>Är du säker på att du vill hoppa över handledningen? Du kan titta på den igen genom att logga ut och logga in igen.</value>
+  </data>
+  <data name="LabelMensajeVolverVerTutorial" xml:space="preserve">
+    <value>Om du vill titta på den här handledningen igen loggar du bara ut och loggar in i appen igen.</value>
+  </data>
+  <data name="LabelFelicitaciones" xml:space="preserve">
+    <value>Grattis!</value>
+  </data>
+  <data name="LabelTutorialCompletado" xml:space="preserve">
+    <value>Du har slutfört SOSpect handledningen. Nu är du redo att använda appen på ett säkert sätt!</value>
+  </data>
+  <data name="LblDescripcionInicial" xml:space="preserve">
+    <value>Välkommen till SOSpect, din app för samhällssäkerhet. Vi visar dig hur det fungerar steg för steg.</value>
+  </data>
+  <data name="LblDescripcionAlarmaNoGrave" xml:space="preserve">
+    <value>Använd den orange knappen för att rapportera misstänkta situationer som kräver uppmärksamhet men som inte är nödsituationer.</value>
+  </data>
+  <data name="LblDescripcionCrimenCometido" xml:space="preserve">
+    <value>Den röda knappen är till för att anmäla brott som pågår eller precis har inträffat. Använd endast i allvarliga situationer.</value>
+  </data>
+  <data name="LblDescripcionCompletaAlarmas" xml:space="preserve">
+    <value>I det här avsnittet kan du visa och beskriva närliggande larm för att hjälpa andra användare i samhället.</value>
+  </data>
+  <data name="LabelParaQueSirveSospect" xml:space="preserve">
+    <value>Vad är SOSpect?</value>
+  </data>
+  <data name="LblAspectosBasicos" xml:space="preserve">
+    <value>Grundfraser</value>
+  </data>
+  <data name="LblEnviaUnaAlerta" xml:space="preserve">
+    <value>Skicka en notis!</value>
+  </data>
+  <data name="LblCrimenCometido" xml:space="preserve">
+    <value>Den röda knappen aktiverar ett larm av kategorin: brott begånget. SOSpect kräver inte att du inkluderar en kategori på grund av vikten av tid i dessa fall. Larmet placeras automatiskt på din exakta plats. Du kan också välja en punkt på kartan för att placera larmet och sedan ändra kategorin till brott som begåtts. (Ej tillgängligt på Apple för länder utan ett aktivt avtal)</value>
+  </data>
+  <data name="LblReportaUnCrimen" xml:space="preserve">
+    <value>Anmäl ett brott!</value>
+  </data>
+  <data name="LblExplicaLoSucedido" xml:space="preserve">
+    <value>Förklara vad som hände!</value>
+  </data>
+  <data name="LblRevisaTusNotificaciones" xml:space="preserve">
+    <value>Kolla dina notifikationer!</value>
+  </data>
+  <data name="LblAdministraTusConfiguraciones" xml:space="preserve">
+    <value>Hantera dina inställningar!</value>
+  </data>
+  <data name="LblPorSiFueraPoco" xml:space="preserve">
+    <value>... Och som om det inte vore nog...</value>
+  </data>
+  <data name="LblMuyImportante" xml:space="preserve">
+    <value>Mycket viktigt!</value>
+  </data>
+  <data name="LblParaFinalizar" xml:space="preserve">
+    <value>Och slutligen...</value>
+  </data>
+  <data name="LblQueAppUsar" xml:space="preserve">
+    <value>Vilken app vill du använda?</value>
+  </data>
+  <data name="LblDescripcionMenu" xml:space="preserve">
+    <value>I kugghjulet i det övre vänstra hörnet hittar du konfigurationsalternativen för SOSpect. Du kan köpa strömmar för att köpa abonnemang och skydda din familj eller utöka din larmmottagningsradie.</value>
+  </data>
+  <data name="LblPromocion" xml:space="preserve">
+    <value>VIKTIG! När du börjar ger vi dig 100 befogenheter så att du kan köpa två prenumerationer från början.
+
+Slutligen, kom ihåg att du kommer att få en fullmakt för varje sanningsenlig bedömning du ger i SOSpect, när larmomröstningarna stänger efter 90 minuter från deras placering. De flesta människor är ärliga och tillsammans kommer vi att skydda varandra och våra familjer. VÄLKOMMEN TILL SOSPECT!</value>
+  </data>
+  <data name="LabelErrorReiniciar" xml:space="preserve">
+    <value>Ett oväntat fel uppstod. Starta om SOSpect. Om felet kvarstår, kontakta soporte@wescot.com.co</value>
+  </data>
+  <data name="LblLeyenda" xml:space="preserve">
+    <value>Rapport om larmtyp</value>
+  </data>
+  <data name="LabelDescribirAlarma" xml:space="preserve">
+    <value>Beskriv larm</value>
+  </data>
+  <data name="LblErrorNavegador" xml:space="preserve">
+    <value>Det gick inte att öppna webbläsaren</value>
+  </data>
+  <data name="LblErrorManual" xml:space="preserve">
+    <value>Fel vid öppning av manualen</value>
+  </data>
+  <data name="LblErrorSitioWeb" xml:space="preserve">
+    <value>Fel vid öppning av webbplatsen</value>
+  </data>
+  <data name="LabelMoreOptions" xml:space="preserve">
+    <value>Fler alternativ</value>
+  </data>
+  <data name="LblAgregarMedia" xml:space="preserve">
+    <value>Lägg till foto eller video</value>
+  </data>
+  <data name="LblTomarFoto" xml:space="preserve">
+    <value>Ta ett foto</value>
+  </data>
+  <data name="LblSeleccionarFoto" xml:space="preserve">
+    <value>Välj foto från din kamerarulle</value>
+  </data>
+  <data name="LblSeleccionarVideo" xml:space="preserve">
+    <value>Välj video</value>
+  </data>
+  <data name="LblPermisoCamaraNecesario" xml:space="preserve">
+    <value>Kameratillstånd krävs för att ta bilder</value>
+  </data>
+  <data name="LblCamaraNoDisponible" xml:space="preserve">
+    <value>Kameran finns inte tillgänglig på denna enhet</value>
+  </data>
+  <data name="LblCamaraNoCompatible" xml:space="preserve">
+    <value>Kameran är inte kompatibel med denna enhet</value>
+  </data>
+  <data name="LblTomarFotoAlarma" xml:space="preserve">
+    <value>Ta ett foto för larm</value>
+  </data>
+  <data name="LblSeleccionarFotoAlarma" xml:space="preserve">
+    <value>Välj foto för larm</value>
+  </data>
+  <data name="LblSeleccionarVideoAlarma" xml:space="preserve">
+    <value>Välj video för larm</value>
+  </data>
+  <data name="LblErrorCapturarFoto" xml:space="preserve">
+    <value>Kunde inte ta bilden</value>
+  </data>
+  <data name="LblErrorSeleccionarFoto" xml:space="preserve">
+    <value>Kunde inte välja foto</value>
+  </data>
+  <data name="LblErrorSeleccionarVideo" xml:space="preserve">
+    <value>Video kunde inte väljas</value>
+  </data>
+  <data name="LblLimiteAlcanzado" xml:space="preserve">
+    <value>Gräns uppnådd</value>
+  </data>
+  <data name="LblSoloPuedesAgregar" xml:space="preserve">
+    <value>Du kan bara summera till</value>
+  </data>
+  <data name="LblFotosVideosPorAlarma" xml:space="preserve">
+    <value>Foton/videor av Alarm</value>
+  </data>
+  <data name="LblArchivoMuyGrande" xml:space="preserve">
+    <value>Mycket stor fil</value>
+  </data>
+  <data name="LblTamanoMaximo100MB" xml:space="preserve">
+    <value>Filen är för stor. Maxstorlek: 100MB</value>
+  </data>
+  <data name="LblArchivoNoSeGuardo" xml:space="preserve">
+    <value>Filen sparades inte korrekt</value>
+  </data>
+  <data name="LblErrorProcesarArchivo" xml:space="preserve">
+    <value>Filen kunde inte behandlas</value>
+  </data>
+  <data name="LblCerrarCamara" xml:space="preserve">
+    <value>Stänga</value>
+  </data>
+  <data name="LblCapturarFoto" xml:space="preserve">
+    <value>Fånga</value>
+  </data>
+  <data name="LblGuardandoAlarma" xml:space="preserve">
+    <value>Sparar alarm...</value>
+  </data>
+  <data name="LblProcesandoFoto" xml:space="preserve">
+    <value>Framkallar foto...</value>
+  </data>
+  <data name="LblSeleccionarOrigen" xml:space="preserve">
+    <value>Välj källan till fotot</value>
+  </data>
+  <data name="LblSeleccioneAppNavegacion" xml:space="preserve">
+    <value>Välj den navigationsapp du vill använda:</value>
+  </data>
+  <data name="LblLongPressForVideo" xml:space="preserve">
+    <value>Tryck och håll in för att spela in video</value>
+  </data>
+  <data name="LblTomarFotoOVideo" xml:space="preserve">
+    <value>Ta foto eller video</value>
+  </data>
+  <data name="LblSeleccionarTipoMedia" xml:space="preserve">
+    <value>Välj medietyp</value>
+  </data>
+  <data name="LblGrabarVideo" xml:space="preserve">
+    <value>Spela in video</value>
+  </data>
+  <data name="LblSospechosoCorto" xml:space="preserve">
+    <value>Misstänksam:</value>
+  </data>
+  <data name="LblVehiculoCorto" xml:space="preserve">
+    <value>Fordon:</value>
+  </data>
+  <data name="LblArmasCorto" xml:space="preserve">
+    <value>Vapen:</value>
+  </data>
+  <data name="LblPlaceholderDescripcionCierre" xml:space="preserve">
+    <value>Beskriv kort när larmet stängdes...</value>
+  </data>
+  <data name="LblDescripcionFalsaAlarma" xml:space="preserve">
+    <value>Alarmet var inte verkligt eller så var det ett misstag</value>
+  </data>
+  <data name="LblDescripcionCaptura" xml:space="preserve">
+    <value>Blev misstänkta gripna?</value>
+  </data>
+  <data name="LblCerrandoAlarma" xml:space="preserve">
+    <value>Stänger alarmet...</value>
+  </data>
+  <data name="ParaTi" xml:space="preserve">
+    <value>Till dig</value>
+  </data>
+  <data name="SiguiendoEnTuRadio" xml:space="preserve">
+    <value>Följa/I ditt område</value>
+  </data>
+  <data name="Advertencia" xml:space="preserve">
+    <value>Varning</value>
+  </data>
+  <data name="Crimen" xml:space="preserve">
+    <value>Brott</value>
+  </data>
+  <data name="Riña" xml:space="preserve">
+    <value>Kamp</value>
+  </data>
+  <data name="Mascota" xml:space="preserve">
+    <value>Maskot</value>
+  </data>
+  <data name="Persona" xml:space="preserve">
+    <value>Person</value>
+  </data>
+  <data name="Disturbios" xml:space="preserve">
+    <value>Upplopp</value>
+  </data>
+  <data name="Acompañamiento" xml:space="preserve">
+    <value>Ackompanjemang</value>
+  </data>
+  <data name="Intrafamiliar" xml:space="preserve">
+    <value>Familjeinomjording</value>
+  </data>
+  <data name="Persecución" xml:space="preserve">
+    <value>Förföljelse</value>
+  </data>
+  <data name="Eventos" xml:space="preserve">
+    <value>Evenemang</value>
+  </data>
+  <data name="Compravotos" xml:space="preserve">
+    <value>Köp röster</value>
+  </data>
+  <data name="Votaciónforzada" xml:space="preserve">
+    <value>Tvångsröstning</value>
+  </data>
+  <data name="Ciudadana" xml:space="preserve">
+    <value>Medborgare</value>
+  </data>
+  <data name="Compradevotos" xml:space="preserve">
+    <value>Röstköp</value>
+  </data>
+  <data name="Votaciónforzadaporgruposarmados" xml:space="preserve">
+    <value>Tvångsröstning av väpnade grupper</value>
+  </data>
+  <data name="FiltrarTiposDeAlarma" xml:space="preserve">
+    <value>Typer av filterlarm</value>
+  </data>
+  <data name="AfectaMapaYParaTi" xml:space="preserve">
+    <value>Effekter: Karta och 'För dig'</value>
+  </data>
+  <data name="SiguiendoNoSeFiltrado" xml:space="preserve">
+    <value>⚠️ 'Följ/I ditt område' filtreras INTE (kritisk prioritet)</value>
+  </data>
+  <data name="TiposCaracteristicosSOSpect" xml:space="preserve">
+    <value>Karaktäristiska typer av SOSpect</value>
+  </data>
+  <data name="OtrosTiposOrdenadosPopularidad" xml:space="preserve">
+    <value>Andra typer (sorterade efter popularitet)</value>
+  </data>
+  <data name="Cancelar" xml:space="preserve">
+    <value>Annullera</value>
+  </data>
+  <data name="Aplicar" xml:space="preserve">
+    <value>Ansök</value>
+  </data>
+  <data name="ErrorCargandoTiposIntenteNuevamente" xml:space="preserve">
+    <value>Larmtyper kunde inte laddas. Försök igen, tack.</value>
+  </data>
+  <data name="ErrorCargandoTiposVerifiqueConexion" xml:space="preserve">
+    <value>Felladdningslarmtyper. Kolla din anslutning.</value>
+  </data>
+  <data name="InfoPorcentajesBasadosUltimos30Dias" xml:space="preserve">
+    <value>⚠️ Procentandelar och antal baserat på larm rapporterade under de senaste 30 dagarna. De representerar inte larm som för närvarande är synliga på kartan.</value>
+  </data>
+  <data name="PromoWarningImmutable" xml:space="preserve">
+    <value>Kolla din annons noggrant, du kommer inte kunna ändra den efter att du startat den</value>
+  </data>
+  <data name="PromoWarningNoCancellation" xml:space="preserve">
+    <value>Är du säker på att lansera den? Kan inte raderas efteråt</value>
+  </data>
+  <data name="PromoInsufficientBalance" xml:space="preserve">
+    <value>Brist {0} krafter</value>
+  </data>
+  <data name="PromoSaldoActual" xml:space="preserve">
+    <value>NUVARANDE BALANS: {0} KRAFTER</value>
+  </data>
+  <data name="PromoCostoActual" xml:space="preserve">
+    <value>Nuvarande kostnad: {0} krafter</value>
+  </data>
+  <data name="PromoSaldoDespues" xml:space="preserve">
+    <value>Balans efter: {0} krafter</value>
+  </data>
+  <data name="PromoLanzarPromocion" xml:space="preserve">
+    <value>LANSERINGSKAMPANJ</value>
+  </data>
+  <data name="PromoComprarPoderes" xml:space="preserve">
+    <value>KÖPKRAFTER</value>
+  </data>
+  <data name="PromoContenidoPromocional" xml:space="preserve">
+    <value>MARKNADSFÖRINGSINNEHÅLL</value>
+  </data>
+  <data name="PromoDescribePromocion" xml:space="preserve">
+    <value>Beskriv din befordran eller erbjudande...</value>
+  </data>
+  <data name="PromoMultimedia" xml:space="preserve">
+    <value>MULTIMEDIA (1 inkluderad, upp till totalt 10)</value>
+  </data>
+  <data name="PromoItemIncluido" xml:space="preserve">
+    <value>✓ Inkluderad</value>
+  </data>
+  <data name="PromoItemCosto" xml:space="preserve">
+    <value>+{0} krafter</value>
+  </data>
+  <data name="PromoLogoOpcional" xml:space="preserve">
+    <value>LOGOTYP (Valfritt)</value>
+  </data>
+  <data name="PromoAgregarLogo" xml:space="preserve">
+    <value>Lägg till logotyp (+{0} krafter)</value>
+  </data>
+  <data name="PromoAlcanceGeografico" xml:space="preserve">
+    <value>GEOGRAFISKT OMFÅNG</value>
+  </data>
+  <data name="PromoRadioMetros" xml:space="preserve">
+    <value>Radie: {0} meter</value>
+  </data>
+  <data name="PromoDuracion" xml:space="preserve">
+    <value>VARAKTIGHET</value>
+  </data>
+  <data name="PromoDuracionDias" xml:space="preserve">
+    <value>Varaktighet: {0} dagar</value>
+  </data>
+  <data name="PromoOpcionesContacto" xml:space="preserve">
+    <value>KONTAKTALTERNATIV</value>
+  </data>
+  <data name="PromoHabilitarChatPrivado" xml:space="preserve">
+    <value>Aktivera privat chatt (+{0} krafter)</value>
+  </data>
+  <data name="PromoPermitirDomicilio" xml:space="preserve">
+    <value>Tillåt hemorder (+{0} krafter)</value>
+  </data>
+  <data name="PromoNotificacionesPush" xml:space="preserve">
+    <value>PUSHNOTISER (Valfritt)</value>
+  </data>
+  <data name="PromoEnviarPush" xml:space="preserve">
+    <value>Skicka pushnotiser</value>
+  </data>
+  <data name="PromoUsuariosDisponibles" xml:space="preserve">
+    <value>Användare tillgängliga i {0}m: {1}</value>
+  </data>
+  <data name="PromoNotificarA" xml:space="preserve">
+    <value>Meddela {0} användare</value>
+  </data>
+  <data name="PromoTextoPush" xml:space="preserve">
+    <value>Skriv in texten till pushnotisen:</value>
+  </data>
+  <data name="PromoCostoTotal" xml:space="preserve">
+    <value>TOTAL KOSTNAD: {0} KRAFTER</value>
+  </data>
+  <data name="PromoGuidance" xml:space="preserve">
+    <value>Lägg till logotyp och kontaktuppgifter för att göra din kampanj mer seriös</value>
+  </data>
+  <data name="PromoErrorCreando" xml:space="preserve">
+    <value>Fel-skapande befordran</value>
+  </data>
+  <data name="PromoExitoCreada" xml:space="preserve">
+    <value>Framgångsrikt skapad promotion</value>
+  </data>
+  <data name="PromoNecesitasPoderes" xml:space="preserve">
+    <value>Du behöver minst {0} krafter för denna befordran</value>
+  </data>
+  <data name="ChatPendingAcceptance" xml:space="preserve">
+    <value>Väntar på att villkoren ska accepteras av båda parter</value>
+  </data>
+  <data name="ChatAcceptTerms" xml:space="preserve">
+    <value>Acceptera villkor</value>
+  </data>
+  <data name="ChatProveedor" xml:space="preserve">
+    <value>Leverantör:</value>
+  </data>
+  <data name="ChatUsted" xml:space="preserve">
+    <value>Du:</value>
+  </data>
+  <data name="ChatAceptado" xml:space="preserve">
+    <value>✅ Godkänt</value>
+  </data>
+  <data name="ChatPendiente" xml:space="preserve">
+    <value>⏳ Väntar</value>
+  </data>
+  <data name="PromotionalAlarmHeader" xml:space="preserve">
+    <value>Lokal marknadsföring</value>
+  </data>
+  <data name="DeliveryAvailable" xml:space="preserve">
+    <value>🚚 Hemleverans finns tillgänglig</value>
+  </data>
+  <data name="ChatVerEnMapa" xml:space="preserve">
+    <value>Vy på karta</value>
+  </data>
+  <data name="ChatEnviarMensaje" xml:space="preserve">
+    <value>Skicka meddelande</value>
+  </data>
+  <data name="ChatAdjuntarImagen" xml:space="preserve">
+    <value>Bifoga bild</value>
+  </data>
+  <data name="ChatEscribeMensaje" xml:space="preserve">
+    <value>Skriv ett meddelande...</value>
+  </data>
+  <data name="ChatNoActivo" xml:space="preserve">
+    <value>Chatten är inte aktiv. Båda parter måste först godkänna villkoren.</value>
+  </data>
+  <data name="ChatErrorEnviandoMensaje" xml:space="preserve">
+    <value>Felmeddelandet</value>
+  </data>
+  <data name="ChatMensajeEnviado" xml:space="preserve">
+    <value>Meddelande skickat</value>
+  </data>
+  <data name="ChatTerminosAceptados" xml:space="preserve">
+    <value>Godkända villkor. Chatten är nu aktiv.</value>
+  </data>
+  <data name="ChatErrorAceptandoTerminos" xml:space="preserve">
+    <value>Fel som accepterar villkor</value>
+  </data>
+  <data name="PromoPublicadoNoEditable" xml:space="preserve">
+    <value>Publicerad - Ej redigerbar</value>
+  </data>
+  <data name="PromoInsuficiente" xml:space="preserve">
+    <value>Otillräckligt</value>
+  </data>
+  <data name="PromoRecomendado" xml:space="preserve">
+    <value>Rekommenderas ⭐</value>
+  </data>
+  <data name="PromoSinTerminosNoContacto" xml:space="preserve">
+    <value>Om du inte godkänner villkoren kan du inte aktivera kontakt- eller hemleveransalternativ</value>
+  </data>
+  <data name="PromoTerminosRequeridos" xml:space="preserve">
+    <value>Du måste acceptera villkoren för att möjliggöra kontakt eller hemleverans</value>
+  </data>
+  <data name="PromoTerminosCondiciones" xml:space="preserve">
+    <value>Chattens villkor</value>
+  </data>
+  <data name="PromoAceptoTerminos" xml:space="preserve">
+    <value>Jag går med på att ta emot meddelanden från potentiella kunder</value>
+  </data>
+  <data name="PromoTerminosObligatorios" xml:space="preserve">
+    <value>(krävs för kontakt/adress)</value>
+  </data>
+  <data name="PromoTerminosExplicacion" xml:space="preserve">
+    <value>Genom att acceptera kan du ta emot privata meddelanden från personer som är intresserade av din kampanj via appens integrerade chatt.</value>
+  </data>
+  <data name="LabelAlarmas" xml:space="preserve">
+    <value>Larm</value>
+  </data>
+  <data name="LabelAlarmasAgrupadas" xml:space="preserve">
+    <value>Grupperade larm</value>
+  </data>
+  <data name="Alarm_10" xml:space="preserve">
+    <value>Evenemang</value>
+  </data>
+  <data name="Alarm_11" xml:space="preserve">
+    <value>Röstköp</value>
+  </data>
+  <data name="Alarm_12" xml:space="preserve">
+    <value>Tvångsröstning av väpnade grupper</value>
+  </data>
+  <data name="Alarm_13" xml:space="preserve">
+    <value>Lokal marknadsföring</value>
+  </data>
+  <data name="Promoción" xml:space="preserve">
+    <value>Befordran</value>
+  </data>
+  <data name="LblLimiteAlarmasFeed" xml:space="preserve">
+    <value>Gräns för larm i den initiala matningen</value>
+  </data>
+  <data name="LblDescripcionLimiteAlarmasFeed" xml:space="preserve">
+    <value>Välj hur många alarm du vill ladda upp när du öppnar appen. Ett mindre antal förbättrar prestandan.</value>
+  </data>
+  <data name="OptConfNotif" xml:space="preserve">
+    <value>Inställning av parametrar och notifikationer</value>
+  </data>
+  <data name="PromoFormTitle" xml:space="preserve">
+    <value>Skapa lokal marknadsföring</value>
+  </data>
+  <data name="PromoAlcance" xml:space="preserve">
+    <value>3. OMFATTNING OCH VARAKTIGHET</value>
+  </data>
+  <data name="PromoCaracteristicasOpcionales" xml:space="preserve">
+    <value>4. VALFRIA FUNKTIONER</value>
+  </data>
+  <data name="PromoEnviarNotificaciones" xml:space="preserve">
+    <value>Skicka till {0} användare</value>
+  </data>
+  <data name="PromoCostoNotificaciones" xml:space="preserve">
+    <value>(+{0} krafter per 50 användare)</value>
+  </data>
+  <data name="PromoConfirmacionFinal" xml:space="preserve">
+    <value>6. BEKRÄFTELSE</value>
+  </data>
+  <data name="PromoConfirmarLanzamiento" xml:space="preserve">
+    <value>Är du säker på att lansera den? Kan inte raderas efteråt</value>
+  </data>
+  <data name="PromoCreandoAlarma" xml:space="preserve">
+    <value>Skapar befordran...</value>
+  </data>
+  <data name="PromoCreacionExitosa" xml:space="preserve">
+    <value>Marknadsföringen publicerades framgångsrikt!</value>
+  </data>
+  <data name="PromoErrorCreacion" xml:space="preserve">
+    <value>Fel-skapande befordran</value>
+  </data>
+  <data name="PromoDescripcionVacia" xml:space="preserve">
+    <value>Du måste lägga till en beskrivning för din befordran</value>
+  </data>
+  <data name="PromoTerminoProveedor1" xml:space="preserve">
+    <value>Jag samtycker till att jag är ensam ansvarig för produkten eller tjänsten som erbjuds, dess leverans, kvalitet, efterlevnad och eventuella avtal som ingås med användaren.</value>
+  </data>
+  <data name="PromoTerminoProveedor2" xml:space="preserve">
+    <value>Jag godkänner att all betalning, betalningsmedel eller indrivning sker direkt mellan köparen och mig, och att SOSpect inte agerar som mellanhand och inte ansvarar för dessa avtal.</value>
+  </data>
+  <data name="PromoTerminoProveedor3" xml:space="preserve">
+    <value>Jag håller med om att adresser, leveranser eller hemservice är mitt eget ansvar, inklusive säkerhet, punktlighet och efterlevnad.</value>
+  </data>
+  <data name="PromoTerminoProveedor4" xml:space="preserve">
+    <value>Jag håller med om att SOSpect endast fungerar som ett kontaktmedel och är undantaget från ansvar för transaktionen, produkten eller tjänsten.</value>
+  </data>
+  <data name="PromoTerminoInteresado1" xml:space="preserve">
+    <value>Jag instämmer i att produkten eller tjänsten erbjuds direkt av leverantören och att SOSpect inte garanterar dess kvalitet, tillgänglighet eller prestanda.</value>
+  </data>
+  <data name="PromoTerminoInteresado2" xml:space="preserve">
+    <value>Jag samtycker till att all betalning görs direkt till leverantören och att SOSpect inte ingriper eller svarar på pengar, överföringar eller ekonomiska avtal.</value>
+  </data>
+  <data name="PromoTerminoInteresado3" xml:space="preserve">
+    <value>Jag går med på att ta på mig de normala riskerna vid en transaktion mellan individer, inklusive verifiering av identitet, produktkvalitet och säkerhet vid mötet.</value>
+  </data>
+  <data name="PromoTerminoInteresado4" xml:space="preserve">
+    <value>Jag håller med om att SOSpect inte är ansvarigt för resultatet av denna interaktion eller för de överenskommelser som nåddes.</value>
+  </data>
+  <data name="PromoEjemplo" xml:space="preserve">
+    <value>Exempel: "🍕 2x1 Pizza i familjestorlek – Endast idag från kl. 17 till 21 – Kom och njut med hela familjen"</value>
+  </data>
+  <data name="PromoUsuariosPotenciales" xml:space="preserve">
+    <value>Potentiella användare inom radio: {0}</value>
+  </data>
+  <data name="PromoAgregarMultimedia" xml:space="preserve">
+    <value>Lägg till foto/video</value>
+  </data>
+  <data name="PromoAgregarLogoImagen" xml:space="preserve">
+    <value>Lägg till logotyp</value>
+  </data>
+  <data name="PromoLimiteMultimedia" xml:space="preserve">
+    <value>Du kan bara lägga till upp till 10 foton/videor</value>
+  </data>
+  <data name="PromoAgregarFotoVideo" xml:space="preserve">
+    <value>Lägg till foto/video ({0}/10)</value>
+  </data>
+  <data name="PromoPoderesInsuficientes" xml:space="preserve">
+    <value>Otillräckliga befogenheter</value>
+  </data>
+  <data name="PromoConfirmarLanzar" xml:space="preserve">
+    <value>Är du säker på att starta denna kampanj?
+
+Kostnad: {0} krafter
+Varaktighet: {1} dagar
+Radie: {2} meter
+
+{3}</value>
+  </data>
+  <data name="PromoSiLanzar" xml:space="preserve">
+    <value>Ja, start</value>
+  </data>
+  <data name="LabelErrorDesconocido" xml:space="preserve">
+    <value>Okänt fel</value>
+  </data>
+  <data name="LabelVideo" xml:space="preserve">
+    <value>Video</value>
+  </data>
+  <data name="LabelFoto" xml:space="preserve">
+    <value>Foto</value>
+  </data>
+  <data name="LabelCargando" xml:space="preserve">
+    <value>Laddar...</value>
+  </data>
+  <data name="PromocionLocal" xml:space="preserve">
+    <value>Lokal marknadsföring</value>
+  </data>
+  <data name="PromoCaracteresRestantes" xml:space="preserve">
+    <value>{0} återstående karaktärer</value>
+  </data>
+  <data name="PromoPlaceholderTextoPush" xml:space="preserve">
+    <value>Exempel: 🍕 2x1 pizza idag! Endast till klockan 20</value>
+  </data>
+  <data name="ChatTerminosCondiciones" xml:space="preserve">
+    <value>Chattens villkor</value>
+  </data>
+  <data name="ChatNoDisponible" xml:space="preserve">
+    <value>Chatten är inte tillgänglig</value>
+  </data>
+  <data name="DebesAceptarTerminos" xml:space="preserve">
+    <value>Du måste godkänna villkoren för att kunna chatta med leverantören.</value>
+  </data>
+  <data name="ChatAceptoTerminosInteresado" xml:space="preserve">
+    <value>Jag accepterar villkoren för chatten</value>
+  </data>
+  <data name="ChatTerminoInteresado1" xml:space="preserve">
+    <value>Jag håller med om att produkten eller tjänsten erbjuds direkt av leverantören och att SOSpect inte garanterar, validerar eller går i god för detta.</value>
+  </data>
+  <data name="ChatTerminoInteresado2" xml:space="preserve">
+    <value>Jag samtycker till att all betalning görs direkt till leverantören och att SOSpect inte ingriper eller svarar på pengar, överföringar eller ekonomiska avtal.</value>
+  </data>
+  <data name="ChatTerminoInteresado3" xml:space="preserve">
+    <value>Jag går med på att ta på mig de normala riskerna vid en transaktion mellan individer, inklusive möjliga betalningsinställelser.</value>
+  </data>
+  <data name="ChatTerminoInteresado4" xml:space="preserve">
+    <value>Jag håller med om att SOSpect inte är ansvarigt för resultatet av denna interaktion eller för de överenskommelser som nåddes.</value>
+  </data>
+  <data name="PromoPrioridadNotificaciones" xml:space="preserve">
+    <value>i️ Om du väljer färre användare än det totala antalet som finns inom radien, kommer användare med en uppdaterad och aktiv app att prioriteras för att maximera effektiviteten i din kampanj. Resten kommer att väljas slumpmässigt.</value>
+  </data>
+  <data name="AppName" xml:space="preserve">
+    <value>SOSpect</value>
+  </data>
+  <data name="LblNuevaAlarmaCerca" xml:space="preserve">
+    <value>Nytt larm nära dig</value>
+  </data>
+  <data name="BtnVerAlarma" xml:space="preserve">
+    <value>Visa larm</value>
+  </data>
+  <data name="PromoEditarLogo" xml:space="preserve">
+    <value>Byt logotyp</value>
+  </data>
+  <data name="PromoUsandoLogoGuardado" xml:space="preserve">
+    <value>Användning av Saved Startup-logotypen</value>
+  </data>
+  <data name="PromoLogoSeGuardara" xml:space="preserve">
+    <value>Denna logotyp kommer att sparas och användas i framtida kampanjer</value>
+  </data>
+  <data name="ChatRecordatorioProveedorAcepto" xml:space="preserve">
+    <value>Du har redan accepterat villkoren för denna befordran på {0}</value>
+  </data>
+  <data name="ChatRecordatorioInteresadoAcepto" xml:space="preserve">
+    <value>Du gick med på villkoren för det här samtalet på {0}</value>
+  </data>
+  <data name="ChatErrorIniciar" xml:space="preserve">
+    <value>Fel startar chatt</value>
+  </data>
+  <data name="ChatErrorCargar" xml:space="preserve">
+    <value>Chattladdningsfel</value>
+  </data>
+  <data name="ChatActivo" xml:space="preserve">
+    <value>Aktiv chatt</value>
+  </data>
+  <data name="ChatAdjuntar" xml:space="preserve">
+    <value>Fäst</value>
+  </data>
+  <data name="ChatFuncionalidadProximamente" xml:space="preserve">
+    <value>Bifoga bild Kommer snart Funktionalitet</value>
+  </data>
+  <data name="ChatErrorAdjuntar" xml:space="preserve">
+    <value>Felbilaga till bild</value>
+  </data>
+  <data name="ChatErrorNavegar" xml:space="preserve">
+    <value>Fel vid navigering till karta</value>
+  </data>
+  <data name="LabelRestriccion" xml:space="preserve">
+    <value>Vissa larm är tillfälligt avstängda på Apple® iPhone® på grund av bristande överenskommelse med myndigheterna, eller på grund av landets förhållanden, såsom valperioder eller andra händelser.</value>
+  </data>
+  <data name="LogoEditorTitle" xml:space="preserve">
+    <value>Crop Circular Logotyp</value>
+  </data>
+  <data name="LogoEditorZoom" xml:space="preserve">
+    <value>Justera zoom</value>
+  </data>
+  <data name="LogoEditorSave" xml:space="preserve">
+    <value>Spara</value>
+  </data>
+  <data name="LogoEditorNoImage" xml:space="preserve">
+    <value>Ingen bild uppladdad</value>
+  </data>
+  <data name="LogoEditorSaveError" xml:space="preserve">
+    <value>Fel som sparar logotypen</value>
+  </data>
+  <data name="PromoVerificarNIT" xml:space="preserve">
+    <value>VERIFIERA ENTREPRENÖRSKAP</value>
+  </data>
+  <data name="PromoPlaceholderNIT" xml:space="preserve">
+    <value>NIT eller ägar-ID</value>
+  </data>
+  <data name="PromoBotonVerificarNIT" xml:space="preserve">
+    <value>Verifiera ID</value>
+  </data>
+  <data name="PromoDeclaroPropietario" xml:space="preserve">
+    <value>Jag uppger att jag är den juridiska ägaren av detta NIT/ID</value>
+  </data>
+  <data name="PromoDatosEmprendimiento" xml:space="preserve">
+    <value>ENTREPRENÖRSKAPSDATA</value>
+  </data>
+  <data name="PromoPlaceholderNombreEmprendimiento" xml:space="preserve">
+    <value>Företaget heter</value>
+  </data>
+  <data name="PromoPlaceholderNombrePropietario" xml:space="preserve">
+    <value>Ägarens namn</value>
+  </data>
+  <data name="NITRequerido" xml:space="preserve">
+    <value>Du måste ange ägarens eller företagets identifikationsnummer</value>
+  </data>
+  <data name="NITNoExisteSerPropietario" xml:space="preserve">
+    <value>Detta ID-nummer är inte registrerat. När du skapar den första kampanjen kommer du att registreras som ägare. VIKTIGT: Se till att du anger rätt ägar- eller företags-ID-nummer från början, eftersom ägarbyte kräver en valideringsprocess på upp till 15 dagar via teknisk support.</value>
+  </data>
+  <data name="EresPropietario" xml:space="preserve">
+    <value>Du är ägare till detta företag. Du kan redigera namn och logotyp.</value>
+  </data>
+  <data name="EresSubalternoSoloPromocion" xml:space="preserve">
+    <value>Detta projekt finns redan. Du kan bara skapa kampanjer, inte ändra namn eller logotyp.</value>
+  </data>
+  <data name="DebeVerificarNITPrimero" xml:space="preserve">
+    <value>Du måste verifiera ID-numret innan du skapar kampanjen</value>
+  </data>
+  <data name="DebeAceptarDeclaracionPropietario" xml:space="preserve">
+    <value>Du måste bekräfta att du är ägare av detta företag under det identifikationsnumret</value>
+  </data>
+  <data name="NombreEmprendimientoYPropietarioRequeridos" xml:space="preserve">
+    <value>Du måste ange företagets namn och ägaren</value>
+  </data>
+  <data name="LabelAdvertencia" xml:space="preserve">
+    <value>Varning</value>
+  </data>
+  <data name="ErrorVerificandoNIT" xml:space="preserve">
+    <value>Misslyckades med att verifiera ID-numret</value>
+  </data>
+  <data name="LblRefrescandoAlarmas" xml:space="preserve">
+    <value>Uppfriskar alarm...</value>
+  </data>
+  <data name="LblCargandoAlarmas" xml:space="preserve">
+    <value>Laddar larm...</value>
+  </data>
+  <data name="LblActualizandoAlarmas" xml:space="preserve">
+    <value>Uppdaterar larm...</value>
+  </data>
+  <data name="LblAlarmaRecibida" xml:space="preserve">
+    <value>Larm mottaget</value>
+  </data>
+  <data name="LblDetallePromocion" xml:space="preserve">
+    <value>Befordran</value>
+  </data>
+  <data name="LblUsuariosNotificados" xml:space="preserve">
+    <value>Noterade användare</value>
+  </data>
+  <data name="LblPoderesUsados" xml:space="preserve">
+    <value>Använda krafter</value>
+  </data>
+  <data name="LblRadioAlcance" xml:space="preserve">
+    <value>Räckviddsradie</value>
+  </data>
+  <data name="LblDuracionDias" xml:space="preserve">
+    <value>Varaktighet (dagar)</value>
+  </data>
+  <data name="LblTextoPush" xml:space="preserve">
+    <value>Notistext</value>
+  </data>
+  <data name="LblEnvioAceptado" xml:space="preserve">
+    <value>Godkänt</value>
+  </data>
+  <data name="LblEnvioRechazado" xml:space="preserve">
+    <value>Avvisad</value>
+  </data>
+  <data name="LblTotalNotificados" xml:space="preserve">
+    <value>Totalt</value>
+  </data>
+  <data name="LblLogoHabilitado" xml:space="preserve">
+    <value>Logotyp aktiverad</value>
+  </data>
+  <data name="LblContactoHabilitado" xml:space="preserve">
+    <value>Kontakt aktiverad</value>
+  </data>
+  <data name="LblDomicilioHabilitado" xml:space="preserve">
+    <value>Auktoriserad adress</value>
+  </data>
+  <data name="LblConfiguracionPromocion" xml:space="preserve">
+    <value>Marknadsföringsinställningar</value>
+  </data>
+  <data name="LblCantidadMedia" xml:space="preserve">
+    <value>Foton/videor</value>
+  </data>
+  <data name="LblFechaInicio" xml:space="preserve">
+    <value>Startdatum</value>
+  </data>
+  <data name="LblFechaFin" xml:space="preserve">
+    <value>Slutdatum</value>
+  </data>
+  <data name="LblOpcionesHabilitadas" xml:space="preserve">
+    <value>Aktiverade alternativ</value>
+  </data>
+  <data name="LblListadoUsuarios" xml:space="preserve">
+    <value>Lista över användare</value>
+  </data>
+  <data name="LblPendiente" xml:space="preserve">
+    <value>Väntar</value>
+  </data>
+  <data name="LblDescripcionPromocional" xml:space="preserve">
+    <value>Reklambeskrivning</value>
+  </data>
+  <data name="LblNitCedula" xml:space="preserve">
+    <value>NIT/Cédula</value>
+  </data>
+  <data name="Anunciopublicitariodeusuarios" xml:space="preserve">
+    <value>Användarbanner</value>
+  </data>
+  <data name="LblNombreEmprendimiento" xml:space="preserve">
+    <value>Namn på Venture</value>
+  </data>
+  <data name="LblProcesandoVideo" xml:space="preserve">
+    <value>Framkallar video...</value>
+  </data>
+  <data name="LblErrorGrabarVideo" xml:space="preserve">
+    <value>Fel startar videoinspelning</value>
+  </data>
+  <data name="LblErrorGuardarVideo" xml:space="preserve">
+    <value>Felsparande video</value>
+  </data>
+  <data name="LblVideoVacio" xml:space="preserve">
+    <value>Ingen video spelades in</value>
+  </data>
+  <data name="LblDescartarVideo" xml:space="preserve">
+    <value>Vill du kassera videon du spelar in?</value>
+  </data>
+  <data name="LblTocaParaGrabar" xml:space="preserve">
+    <value>Tryck för att spela in</value>
+  </data>
+  <data name="LblTocaParaDetener" xml:space="preserve">
+    <value>Knacka för att stoppa</value>
+  </data>
+  <data name="LblContactarAnunciante" xml:space="preserve">
+    <value>Kontakta annonsören</value>
+  </data>
+  <data name="LblVerChatsPromocion" xml:space="preserve">
+    <value>Visa chattar för denna kampanj</value>
+  </data>
+  <data name="LblChatsPromocion" xml:space="preserve">
+    <value>Befordringschattar</value>
+  </data>
+  <data name="LblNoTienesChatsAun" xml:space="preserve">
+    <value>Du har inga chattar än</value>
+  </data>
+  <data name="LblDetallePromocion_Duplicate[1]" xml:space="preserve">
+    <value>Befordran</value>
+  </data>
+  <data name="LblAceptarTerminosChat" xml:space="preserve">
+    <value>För att kontakta annonsören måste du godkänna chattens villkor</value>
+  </data>
+  <data name="LblAceptarYContactar" xml:space="preserve">
+    <value>Acceptera villkor och kontakt</value>
+  </data>
+  <data name="LblTituloCierreEncuesta" xml:space="preserve">
+    <value>Avslutning med undersökning</value>
+  </data>
+  <data name="LblTituloProponerCierre" xml:space="preserve">
+    <value>Föreslå avstängning av varning</value>
+  </data>
+  <data name="LblDescripcionPropuestaCierre" xml:space="preserve">
+    <value>Varför ska denna varning stängas?</value>
+  </data>
+  <data name="LblPlaceholderPropuestaCierre" xml:space="preserve">
+    <value>Beskriv kort anledningen till att denna varning stängdes...</value>
+  </data>
+  <data name="LblEvidenciaFotografica" xml:space="preserve">
+    <value>Fotografiska bevis (valfritt)</value>
+  </data>
+  <data name="LblBotonProponerCierre" xml:space="preserve">
+    <value>Föreslagen nedläggning</value>
+  </data>
+  <data name="LblTituloVotacionCierre" xml:space="preserve">
+    <value>Slutomröstning pågår</value>
+  </data>
+  <data name="LblDescripcionPropuesta" xml:space="preserve">
+    <value>Beskrivning av förslaget</value>
+  </data>
+  <data name="LblResultadosVotacion" xml:space="preserve">
+    <value>Röstningsresultat</value>
+  </data>
+  <data name="LblVotosAFavor" xml:space="preserve">
+    <value>För</value>
+  </data>
+  <data name="LblVotosEnContra" xml:space="preserve">
+    <value>Emot</value>
+  </data>
+  <data name="LblTiempoRestanteVotacion" xml:space="preserve">
+    <value>Återstående tid:</value>
+  </data>
+  <data name="LblVotarAFavor" xml:space="preserve">
+    <value>Rösta för</value>
+  </data>
+  <data name="LblVotarEnContra" xml:space="preserve">
+    <value>Rösta emot</value>
+  </data>
+  <data name="LblYaVotoAFavor" xml:space="preserve">
+    <value>Du har redan röstat för stängningen</value>
+  </data>
+  <data name="LblYaVotoEnContra" xml:space="preserve">
+    <value>Du har redan röstat emot stängningen</value>
+  </data>
+  <data name="LblVotacionFinalizada" xml:space="preserve">
+    <value>Röstningen avslutades</value>
+  </data>
+  <data name="LblDescripcionRequerida" xml:space="preserve">
+    <value>Du måste ange en beskrivning</value>
+  </data>
+  <data name="LblPropuestaCierreEnviada" xml:space="preserve">
+    <value>Förslag skickat</value>
+  </data>
+  <data name="LblPropuestaCierreExito" xml:space="preserve">
+    <value>Ditt avslutande förslag har lämnats in. Gemenskapen kommer att rösta för att bestämma.</value>
+  </data>
+  <data name="LblVotoRegistrado" xml:space="preserve">
+    <value>Registrerad röstning</value>
+  </data>
+  <data name="LblVotoRegistradoExito" xml:space="preserve">
+    <value>Din röst har registrerats framgångsrikt</value>
+  </data>
+  <data name="LblTituloCierreCaptura" xml:space="preserve">
+    <value>Stäng larm</value>
+  </data>
+  <data name="LblTituloCierrePersona" xml:space="preserve">
+    <value>Varning för nära förlorad person</value>
+  </data>
+  <data name="LblTituloCierreMascota" xml:space="preserve">
+    <value>Stäng varning för förlorat husdjur</value>
+  </data>
+  <data name="LblTituloCierreBasico" xml:space="preserve">
+    <value>Stäng varning</value>
+  </data>
+  <data name="LblPersonaEncontrada" xml:space="preserve">
+    <value>Hittades personen?</value>
+  </data>
+  <data name="LblMascotaRecuperada" xml:space="preserve">
+    <value>Återhämtade sig husdjuret?</value>
+  </data>
+  <data name="LblCierreExitoso" xml:space="preserve">
+    <value>Larmet stängdes framgångsrikt</value>
+  </data>
+  <data name="LblProponendoCierre" xml:space="preserve">
+    <value>Skickar avslutande förslag...</value>
+  </data>
+  <data name="LblRegistrandoVoto" xml:space="preserve">
+    <value>Röstregistrering av röst...</value>
+  </data>
+  <data name="LblNotifResultadoCierreAprobado" xml:space="preserve">
+    <value>{0} röster mottogs. {1} % för, {2} % emot. Medborgarlarmet var avstängt.</value>
+  </data>
+  <data name="LblNotifResultadoCierreDenegado" xml:space="preserve">
+    <value>{0} röster mottogs. {1} % för, {2} % emot. Begäran om stängning avslogs.</value>
+  </data>
+  <data name="LblNotifResultadoSinVotos" xml:space="preserve">
+    <value>Inga röster mottogs under de 24 timmarna. Medborgarlarmet var avstängt.</value>
+  </data>
+  <data name="LblEvidenciaFotograficaCierre" xml:space="preserve">
+    <value>Fotografiska bevis (valfritt)</value>
+  </data>
+  <data name="LblConsultandoSolicitud" xml:space="preserve">
+    <value>Begäran om konsultationsavslutning...</value>
+  </data>
+  <data name="LblNotifProponerCierreAlerta" xml:space="preserve">
+    <value>En medborgarvarning nära dig har föreslagits att stängas. Du har 24 timmar på dig att rösta.</value>
+  </data>
+  <data name="Alertaciudadana" xml:space="preserve">
+    <value>Medborgarvarning</value>
+  </data>
+  <data name="Alarm_14" xml:space="preserve">
+    <value>Medborgarvarning</value>
+  </data>
+  <data name="LblVerAlertaCercana" xml:space="preserve">
+    <value>Se {0} {1} bort från dig</value>
+  </data>
+  <data name="LblVerAlerta" xml:space="preserve">
+    <value>Visa varningsdetaljer</value>
+  </data>
+  <data name="LblMensajeDestinatario" xml:space="preserve">
+    <value>Mottagare av meddelandet</value>
+  </data>
+  <data name="LblMensajeRemitente" xml:space="preserve">
+    <value>Meddelandeavsändare</value>
+  </data>
+  <data name="LblDescripcionInicial_Duplicate[1]" xml:space="preserve">
+    <value>Välkommen till SOSpect, din app för samhällssäkerhet. Vi visar dig hur det fungerar steg för steg.</value>
+  </data>
+  <data name="SeguimientoUbicacionTitulo" xml:space="preserve">
+    <value>SOSpect Aktiv</value>
+  </data>
+  <data name="SeguimientoUbicacionMensaje" xml:space="preserve">
+    <value>Övervakning av närliggande larm</value>
+  </data>
+  <data name="PermisoUbicacionFondoTitulo" xml:space="preserve">
+    <value>Plats i bakgrunden</value>
+  </data>
+  <data name="PermisoUbicacionFondoMensaje" xml:space="preserve">
+    <value>SOSpect behöver tillgång till din plats även när appen är stängd för att varna dig om närliggande riskområden. Vill du tillåta åtkomst?</value>
+  </data>
+  <data name="LblIntervaloMonitoreoBackground" xml:space="preserve">
+    <value>Säkerhetsövervakningsintervall</value>
+  </data>
+  <data name="LblDescripcionIntervaloBackground" xml:space="preserve">
+    <value>Hur ofta vill du att SOSpect ska kontrollera om du har anlänt till ett område med kritiska säkerhetsrisker och meddela dig?</value>
+  </data>
+  <data name="LblNoHayAlarmas" xml:space="preserve">
+    <value>Du har inga larm här just nu.</value>
+  </data>
+  <data name="NotificacionServicioTitulo" xml:space="preserve">
+    <value>SOSpect Aktiv</value>
+  </data>
+  <data name="NotificacionServicioTexto" xml:space="preserve">
+    <value>Övervakning av närliggande larm</value>
+  </data>
+  <data name="NotificacionCanalNombre" xml:space="preserve">
+    <value>Platsspårning</value>
+  </data>
+  <data name="NotificacionCanalDescripcion" xml:space="preserve">
+    <value>SOSpect övervakar din position för att varna dig för riskområden</value>
+  </data>
+  <data name="LabelPermitir" xml:space="preserve">
+    <value>Tillåt</value>
+  </data>
+  <data name="LabelAhoraNo" xml:space="preserve">
+    <value>Inte nu</value>
+  </data>
+  <data name="OptimizacionBateriaTitulo" xml:space="preserve">
+    <value>Batterioptimering</value>
+  </data>
+  <data name="OptimizacionBateriaMensaje" xml:space="preserve">
+    <value>För att SOSpect ska skydda dig även med appen stängd behöver du inaktivera batterioptimering. Detta gör att övervakningstjänsten kan förbli aktiv. Vill du tillåta det?</value>
+  </data>
+  <data name="LblUsuarioID" xml:space="preserve">
+    <value>Användar-ID:</value>
+  </data>
+  <data name="SeguirUsuario" xml:space="preserve">
+    <value>Följ den här användaren</value>
+  </data>
+  <data name="DejarDeSeguirUsuario" xml:space="preserve">
+    <value>Avfölj</value>
+  </data>
+  <data name="SeguirExplicacion" xml:space="preserve">
+    <value>Att följa är gratis. Du kommer att se deras larm under 'Följer', utan pushnotiser.</value>
+  </data>
+  <data name="SiguiendoExplicacion" xml:space="preserve">
+    <value>'Följa' skickar inte notiser. För akuta varningar, använd Protected.</value>
+  </data>
+  <data name="PersonalizarParaTi" xml:space="preserve">
+    <value>Anpassa för dig</value>
+  </data>
+  <data name="PaisesInteres" xml:space="preserve">
+    <value>Intressanta länder</value>
+  </data>
+  <data name="TodosLosPaises" xml:space="preserve">
+    <value>Alla länder</value>
+  </data>
+  <data name="LikeAlarma" xml:space="preserve">
+    <value>Som</value>
+  </data>
+  <data name="QuitarLikeAlarma" xml:space="preserve">
+    <value>Jag gillar det inte längre</value>
+  </data>
+  <data name="ReenviarAlarma" xml:space="preserve">
+    <value>Framåt</value>
+  </data>
+  <data name="QuitarReenvio" xml:space="preserve">
+    <value>Avbryt vidarebefordran</value>
+  </data>
+  <data name="CompartirAlarma" xml:space="preserve">
+    <value>Dela</value>
+  </data>
+  <data name="MarcarVerdadera" xml:space="preserve">
+    <value>Det stämmer</value>
+  </data>
+  <data name="MarcarFalsa" xml:space="preserve">
+    <value>Detta är falskt</value>
+  </data>
+  <data name="SeguirConfirmacion" xml:space="preserve">
+    <value>Vill du följa den här användaren? Du kommer att se deras larm i ditt 'Följ'-flöde.</value>
+  </data>
+  <data name="DejarDeSeguirConfirmacion" xml:space="preserve">
+    <value>Sluta följa den här användaren?</value>
+  </data>
+  <data name="LblAdvertenciaLimiteAlto" xml:space="preserve">
+    <value>En högre gräns kan påverka prestandan på långsammare enheter.</value>
+  </data>
+  <data name="MensajeSeguirUsuario" xml:space="preserve">
+    <value>Nu följer du den här användaren. Dina larm kommer att visas i fliken 'Följer'. Observera att följande användare inte genererar pushnotiser; för att få akuta aviseringar från någon, överväg att lägga till dem som Skyddade.</value>
+  </data>
+  <data name="PublicarEnX" xml:space="preserve">
+    <value>Inlägg på X (Twitter)</value>
+  </data>
+  <data name="PublicarEnFacebook" xml:space="preserve">
+    <value>Lägg upp på Facebook</value>
+  </data>
+  <data name="TextoCompartirAlarmaIntro" xml:space="preserve">
+    <value>🚨 En ny varning har dykt upp i mitt område!
+Delad på SOSpect, community-appen som håller oss informerade och enade inför brott och faror.
+👉 Se detaljer:</value>
+  </data>
+  <data name="PromoConfirmaUbicacion" xml:space="preserve">
+    <value>Bekräfta platsen där du vill lansera kampanjen</value>
+  </data>
+  <data name="PromoConfirmaUbicacionModal" xml:space="preserve">
+    <value>Tryck på kartan för att justera exakt när kampanjen startar</value>
+  </data>
+  <data name="PromoBotonConfirmarUbicacion" xml:space="preserve">
+    <value>Bekräfta plats</value>
+  </data>
+  <data name="LblUsuarios" xml:space="preserve">
+    <value>Användare</value>
+  </data>
+  <data name="TituloAutoridadesResponsables" xml:space="preserve">
+    <value>Ansvariga myndigheter</value>
+  </data>
+  <data name="AutoridadesResponsablesDescripcion" xml:space="preserve">
+    <value>Offentliga tjänstemän ansvariga för säkerheten i detta område</value>
+  </data>
+  <data name="LblVerAutoridadesResponsables" xml:space="preserve">
+    <value>Se ansvariga myndigheter</value>
+  </data>
+  <data name="AlarmasPoliticasUltimos30d" xml:space="preserve">
+    <value>30-dagars säkerhetslarm</value>
+  </data>
+  <data name="LblEmail" xml:space="preserve">
+    <value>E-post</value>
+  </data>
+  <data name="LblTelefono" xml:space="preserve">
+    <value>Telefon</value>
+  </data>
+  <data name="LblSitioWeb" xml:space="preserve">
+    <value>Webbplats</value>
+  </data>
+  <data name="Cargo_1" xml:space="preserve">
+    <value>President</value>
+  </data>
+  <data name="Cargo_2" xml:space="preserve">
+    <value>Guvernör</value>
+  </data>
+  <data name="Cargo_3" xml:space="preserve">
+    <value>Borgmästare</value>
+  </data>
+  <data name="Cargo_4" xml:space="preserve">
+    <value>Borgmästare</value>
+  </data>
+  <data name="LblResolucion" xml:space="preserve">
+    <value>Upplösning</value>
+  </data>
+  <data name="LblVerReporte" xml:space="preserve">
+    <value>· Se → rapport</value>
+  </data>
+  <data name="LblAlarmasAbiertas" xml:space="preserve">
+    <value>Öppna larm</value>
+  </data>
+  <data name="LblAlarmasCerradas" xml:space="preserve">
+    <value>Larm avslutade</value>
+  </data>
+  <data name="LblTiempoPromedioResolucion" xml:space="preserve">
+    <value>Genomsnittlig upplösningstid</value>
+  </data>
+  <data name="LblDias" xml:space="preserve">
+    <value>Dagar</value>
+  </data>
+  <data name="LblTituloReporteAutoridad" xml:space="preserve">
+    <value>Resultatrapport</value>
+  </data>
+  <data name="LblReporteAutoridadNota" xml:space="preserve">
+    <value>Data uppdateras dagligen kl. 00:00 UTC</value>
+  </data>
+  <data name="LblTiposDeAlarma" xml:space="preserve">
+    <value>Typer av rapporterade larm</value>
+  </data>
+  <data name="LblLikes" xml:space="preserve">
+    <value>Gilla</value>
+  </data>
+  <data name="LblReenvios" xml:space="preserve">
+    <value>Vidarebefordran</value>
+  </data>
+  <data name="LblMarcarRutaEscapeOpcional" xml:space="preserve">
+    <value>Mark Fugitives flyktväg (Valfritt)</value>
+  </data>
+  <data name="LblCalificaGestionPolitico" xml:space="preserve">
+    <value>Betygsätt denna myndighets prestation</value>
+  </data>
+  <data name="LblAprobacionCiudadana" xml:space="preserve">
+    <value>Medborgargodkännande</value>
+  </data>
+  <data name="LblVotantesAprobacion" xml:space="preserve">
+    <value>Väljare</value>
+  </data>
+  <data name="LblEstrella1" xml:space="preserve">
+    <value>Mycket dåligt</value>
+  </data>
+  <data name="LblEstrella5" xml:space="preserve">
+    <value>Utmärkt</value>
+  </data>
+  <data name="LblAprobacionSOSpect" xml:space="preserve">
+    <value>Medborgargodkännande</value>
+  </data>
+  <data name="LblVerReporteCorto" xml:space="preserve">
+    <value>Se → rapport</value>
+  </data>
+  <data name="LblNuevaDescripcion" xml:space="preserve">
+    <value>Ny beskrivning</value>
+  </data>
+  <data name="LblVeracidadAlarma" xml:space="preserve">
+    <value>Sanningslarmet</value>
+  </data>
+  <data name="LblVotoPendienteEnCierre" xml:space="preserve">
+    <value>Din röst saknas för att ta reda på om detta larm kan stängas</value>
+  </data>
+  <data name="MsgYaVotasteCierre" xml:space="preserve">
+    <value>Du kan inte rösta igen, du har redan röstat för det här larmet</value>
+  </data>
+  <data name="MsgEresProponenteCierre" xml:space="preserve">
+    <value>Du är den som söker stängningen, du kan inte rösta</value>
+  </data>
+  <data name="LblAlarmaEnVotacionCierre" xml:space="preserve">
+    <value>Detta alarm håller på att röstas om</value>
+  </data>
+  <data name="LblVerHistorialAlarma" xml:space="preserve">
+    <value>Visa larmhistorik</value>
+  </data>
+  <data name="LblResultadosOcultos" xml:space="preserve">
+    <value>Resultaten visas efter omröstningen</value>
+  </data>
+  <data name="LabelNickname" xml:space="preserve">
+    <value>Alias/smeknamn:</value>
+  </data>
+  <data name="LabelNicknameHint" xml:space="preserve">
+    <value>Ge användaren ett alias eller smeknamn så att du kan känna igen dem senare</value>
+  </data>
+  <data name="LabelNicknameObligatorio" xml:space="preserve">
+    <value>Alias eller smeknamn är obligatoriskt</value>
+  </data>
+  <data name="MsgSolicitudProtegidoPendiente" xml:space="preserve">
+    <value>En väntande begäran om godkännande är redan tillgänglig för denna användare. Vänta tills det godkänns eller avvisas innan du skickar in ett nytt.</value>
+  </data>
+  <data name="LblSuspensionActiva" xml:space="preserve">
+    <value>Notiser tillfälligt avstängda på användarens begäran</value>
+  </data>
+  <data name="LabelAlertas" xml:space="preserve">
+    <value>Varningar</value>
+  </data>
+  <data name="LblRankingPoliticosLocales" xml:space="preserve">
+    <value>Lokal politisk rangordning</value>
+  </data>
+  <data name="LblRankingDescripcion" xml:space="preserve">
+    <value>Jämför lokala politikers prestationer enligt olika medborgarmått</value>
+  </data>
+  <data name="LblSeleccionaMetrica" xml:space="preserve">
+    <value>Välj en metrik</value>
+  </data>
+  <data name="LblTop5Mejores" xml:space="preserve">
+    <value>Topp 5 bästa</value>
+  </data>
+  <data name="LblTop5Peores" xml:space="preserve">
+    <value>Topp 5 Sämsta</value>
+  </data>
+  <data name="LblSinDatos" xml:space="preserve">
+    <value>Ingen tillgänglig data</value>
+  </data>
+  <data name="LblMetricaPctResolucion" xml:space="preserve">
+    <value>% larmupplösning</value>
+  </data>
+  <data name="LblMetricaCntAlarmas" xml:space="preserve">
+    <value>Totalt antal rapporterade larm</value>
+  </data>
+  <data name="LblMetricaCntLikes" xml:space="preserve">
+    <value>Gilla-markeringar mottagna</value>
+  </data>
+  <data name="LblMetricaCntReenvios" xml:space="preserve">
+    <value>Larmframkoppling</value>
+  </data>
+  <data name="LblMetricaAvgDias" xml:space="preserve">
+    <value>Genomsnittliga upplösningsdagar</value>
+  </data>
+  <data name="LblMetricaAprobacion" xml:space="preserve">
+    <value>Medborgargodkännande</value>
+  </data>
+  <data name="LblCargandoRanking" xml:space="preserve">
+    <value>Laddar ranking...</value>
+  </data>
+  <data name="OptRankingPoliticosLocales" xml:space="preserve">
+    <value>Lokal politisk rangordning</value>
+  </data>
+  <data name="LblVerRankingPoliticos" xml:space="preserve">
+    <value>Se rankning av lokala politiker</value>
+  </data>
+  <data name="LblMetricaScoreGestion" xml:space="preserve">
+    <value>Managementpoäng</value>
+  </data>
+  <data name="LblCriteriosGestionTitulo" xml:space="preserve">
+    <value>Hur mäts förvaltningen?</value>
+  </data>
+  <data name="LblCriterioAlarmasReales" xml:space="preserve">
+    <value>Endast riktiga larm räknas (bekräftade falsklarm är uteslutna)</value>
+  </data>
+  <data name="LblCriterioPremioViralidad" xml:space="preserve">
+    <value>Stängning av larm belönas, särskilt de som hade hög spridning</value>
+  </data>
+  <data name="LblCriterioPenalizacionAbiertas" xml:space="preserve">
+    <value>Larm som varit öppna i flera dagar utan stängning straffas, särskilt virala</value>
+  </data>
+  <data name="LblCriterioScoreFinal" xml:space="preserve">
+    <value>Slutpoängen ligger mellan 0 och 100 och kombinerar upplösning, punktlighet och kritisk larmhantering</value>
+  </data>
+  <data name="LblCriterioBaseHistorial" xml:space="preserve">
+    <value>Poängen baseras på andelen larm som historiskt stängts i dess område</value>
+  </data>
+  <data name="LblExpiraEl" xml:space="preserve">
+    <value>Löper ut</value>
+  </data>
+  <data name="LblDashboardMiEmprendimiento" xml:space="preserve">
+    <value>Mitt entreprenörskap</value>
+  </data>
+  <data name="LblPuestoEnPais" xml:space="preserve">
+    <value>Rankad #{0} i {1}</value>
+  </data>
+  <data name="LblMejorEmprendedor" xml:space="preserve">
+    <value>Bäst i landet</value>
+  </data>
+  <data name="LblPeorEmprendedor" xml:space="preserve">
+    <value>Med fler möjligheter till förbättring</value>
+  </data>
+  <data name="LblVerMasEstadisticas" xml:space="preserve">
+    <value>Se mer statistik</value>
+  </data>
+  <data name="LblComparativoEnPais" xml:space="preserve">
+    <value>Jämförelse i ditt land</value>
+  </data>
+  <data name="LblTiempoRespuesta" xml:space="preserve">
+    <value>Res. Genomsnitt</value>
+  </data>
+  <data name="LblSatisfaccion" xml:space="preserve">
+    <value>Tillfredsställelse</value>
+  </data>
+  <data name="LblChatsMes" xml:space="preserve">
+    <value>Chattar denna månad</value>
+  </data>
+  <data name="LblTransacciones" xml:space="preserve">
+    <value>Framgångsrika transaktioner</value>
+  </data>
+  <data name="LblTuPuntaje" xml:space="preserve">
+    <value>Du</value>
+  </data>
+  <data name="LabelContinuar" xml:space="preserve">
+    <value>Fortsätt</value>
+  </data>
+  <data name="LblDashboardEmprendedorTitulo" xml:space="preserve">
+    <value>Rapportera mitt entreprenörskap</value>
+  </data>
+  <data name="OptDashboardMiEmprendimiento" xml:space="preserve">
+    <value>Rapportera mitt entreprenörskap</value>
+  </data>
+  <data name="LblSeleccionaEmprendimiento" xml:space="preserve">
+    <value>Välj en startup</value>
+  </data>
+  <data name="MsgUsarDatosUltimaPromocion" xml:space="preserve">
+    <value>Vill du fylla i formuläret med detaljer om den senaste kampanjen som lanserats?</value>
+  </data>
+  <data name="LblSi" xml:space="preserve">
+    <value>Ja</value>
+  </data>
+  <data name="LblNo" xml:space="preserve">
+    <value>Nej</value>
+  </data>
+  <data name="LblDashboardSinDatosTitulo" xml:space="preserve">
+    <value>Inga tillgängliga mätvärden</value>
+  </data>
+  <data name="LblDashboardSinDatosDescripcion" xml:space="preserve">
+    <value>Detta projekt har ännu inga beräknade mätvärden. Detta sker när det nyligen är skapat eller när den första befordran ännu inte har avslutats.</value>
   </data>
 </root>

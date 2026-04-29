@@ -1,8 +1,8 @@
-﻿using System;
+using System;
 using System.Globalization;
+using Microsoft.Maui.Controls;
 using sospect.Models;
 using sospect.ViewModels;
-using Xamarin.Forms;
 
 namespace sospect.Converters
 {
@@ -14,6 +14,10 @@ namespace sospect.Converters
             {
                 return alarma.flag_propietario_alarma || alarma.flag_es_policia;
             }
+            if (value is string texto)
+            {
+                return !string.IsNullOrWhiteSpace(texto);
+            }
             return false;
         }
 
@@ -23,4 +27,3 @@ namespace sospect.Converters
         }
     }
 }
-

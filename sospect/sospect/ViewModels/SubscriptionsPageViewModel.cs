@@ -3,7 +3,7 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using sospect.Models;
-using Xamarin.Forms;
+using Microsoft.Maui.Controls;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
@@ -13,8 +13,10 @@ using sospect.Services;
 using sospect.Utils;
 using sospect.Helpers;
 using System.Collections.Specialized;
-using Xamarin.Essentials;
+using Microsoft.Maui.ApplicationModel;
+using Microsoft.Maui.Storage;
 using sospect.Views;
+using sospect.Interfaces;
 
 namespace sospect.ViewModels
 {
@@ -28,6 +30,7 @@ namespace sospect.ViewModels
         public ICommand RenewSubscriptionCommand { get; }
         public ICommand CancelSubscriptionCommand { get; }
         public ICommand ShowCancelConfirmationCommand { get; }
+        public ICommand VerDetalleSubscripcionCommand { get; }
 
         public bool IsListEmpty
         {
@@ -42,6 +45,7 @@ namespace sospect.ViewModels
             RenewSubscriptionCommand = new Command<MisSubscripciones>(RenewSubscription);
             CancelSubscriptionCommand = new Command<MisSubscripciones>(CancelSubscription);
             ShowCancelConfirmationCommand = new Command<MisSubscripciones>(ShowCancelConfirmation);
+            VerDetalleSubscripcionCommand = new Command<MisSubscripciones>(VerDetalleSubscripcion);
             Subscriptions.CollectionChanged += OnSubscriptionsChanged;
         }
 
@@ -63,16 +67,14 @@ namespace sospect.ViewModels
                     subscription.observ_subscripcion = subscription.observ_subscripcion == null ? null : TranslateExtension.Translate(subscription.observ_subscripcion.Replace(" ", ""));
 
                     Subscriptions.Add(subscription);
-                    IsListEmpty = Subscriptions.Count == 0;
+                    
                 }
+
+                IsListEmpty = Subscriptions.Count == 0;
             }
             catch (Exception ex)
             {
-                var properties = new Dictionary<string, string> {
-                        { "Object", "SubscriptionsPageViewModel" },
-                        { "Method", "ObtenerMisSubscripciones" }
-                    };
-                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
+                CrashlyticsHelper.LogError(ex, "SubscriptionsPageViewModel", "LoadSubscriptions");
             }
             finally
             {
@@ -82,11 +84,11 @@ namespace sospect.ViewModels
 
         private async void ShowCancelConfirmation(MisSubscripciones subscription)
         {
-            var LblCancelarSubscripcion = TranslateExtension.Translate("LblCancelarSubscripcion");
-            var LblSeguroDeCancelar = TranslateExtension.Translate("LblSeguroDeCancelar");
-            var LblAceptar = TranslateExtension.Translate("LblAceptar");
-            var LabelCancelar = TranslateExtension.Translate("LabelCancelar");
-            var answer = await Application.Current.MainPage.DisplayAlert(LblCancelarSubscripcion, LblSeguroDeCancelar, LblAceptar, LabelCancelar);
+            var LblCancelarSubscripcion = await TranslateExtension.TranslateAsync("LblCancelarSubscripcion");
+            var LblSeguroDeCancelar = await TranslateExtension.TranslateAsync("LblSeguroDeCancelar");
+            var LblAceptar = await TranslateExtension.TranslateAsync("LblAceptar");
+            var LabelCancelar = await TranslateExtension.TranslateAsync("LabelCancelar");
+            var answer = await ModernAlerts.ShowConfirmation(LblCancelarSubscripcion, LblSeguroDeCancelar, LblAceptar, LabelCancelar, false);
             if (answer)
             {
                 CancelSubscription(subscription);
@@ -94,31 +96,35 @@ namespace sospect.ViewModels
         }
         private async void RenewSubscription(MisSubscripciones subscription)
         {
-            var saldoPoderesInsuficiente = TranslateExtension.Translate("LblSaldoPoderesInsuficiente");
-            var comprarPoderes = TranslateExtension.Translate("LblComprarPoderes");
-            var cancelar = TranslateExtension.Translate("LabelCancelar");
-            var LabelError = TranslateExtension.Translate("LabelError");
-            var LblErrorRenovando = TranslateExtension.Translate("LblErrorRenovando");
-            var LabelOK = TranslateExtension.Translate("LabelOK");
-            var LblRenovacionAplicada = TranslateExtension.Translate("LblRenovacionAplicada");
-            var LabelInformacion = TranslateExtension.Translate("LabelInformacion");
-            var MensajeError = TranslateExtension.Translate("MensajeError");
+            var saldoPoderesInsuficiente = await TranslateExtension.TranslateAsync("LblSaldoPoderesInsuficiente");
+            var comprarPoderes = await TranslateExtension.TranslateAsync("LblComprarPoderes");
+            var cancelar = await TranslateExtension.TranslateAsync("LabelCancelar");
+            var LabelError = await TranslateExtension.TranslateAsync("LabelError");
+            var LblErrorRenovando = await TranslateExtension.TranslateAsync("LblErrorRenovando");
+            var LabelOK = await TranslateExtension.TranslateAsync("LabelOK");
+            var LblRenovacionAplicada = await TranslateExtension.TranslateAsync("LblRenovacionAplicada");
+            var LabelInformacion = await TranslateExtension.TranslateAsync("LabelInformacion");
+            var MensajeError = await TranslateExtension.TranslateAsync("MensajeError");
 
             if (_parametros.SaldoPoderes < subscription.poderes_renovacion)
             {
-                var answer = await Application.Current.MainPage.DisplayAlert(saldoPoderesInsuficiente, "", comprarPoderes, cancelar);
+                var answer = await ModernAlerts.ShowConfirmation(saldoPoderesInsuficiente, "", comprarPoderes, cancelar, false);
                 if (answer)
                 {
-                    await Application.Current.MainPage.Navigation.PushAsync(new PurchaseSuperPowersPage());
+                    var navigation = GetCurrentNavigation();
+                    if (navigation != null)
+                    {
+                        await navigation.PushAsync(new PurchaseSuperPowersPage());
+                    }
                 }
                 return;
             }
 
             var seguroRenovar = TranslateExtension.Translate("LblSeguroRenovar");
-            var si = TranslateExtension.Translate("LabelSi");
-            var no = TranslateExtension.Translate("LabelNo");
+            var si = await TranslateExtension.TranslateAsync("LabelSi");
+            var no = await TranslateExtension.TranslateAsync("LabelNo");
 
-            var answerRenovar = await Application.Current.MainPage.DisplayAlert(seguroRenovar, "", si, no);
+            var answerRenovar = await ModernAlerts.ShowConfirmation(seguroRenovar, "", si, no, false);
             if (!answerRenovar)
             {
                 return;
@@ -141,22 +147,22 @@ namespace sospect.ViewModels
 
                 if (response.IsSuccess)
                 {
-                    await Application.Current.MainPage.DisplayAlert(LabelOK, LblRenovacionAplicada, LabelOK);
-                    await Application.Current.MainPage.Navigation.PushAsync(new MenuPage());
+                    await ModernAlerts.ShowSuccess(LabelOK, LblRenovacionAplicada);
+                    var navigation = GetCurrentNavigation();
+                    if (navigation != null)
+                    {
+                        await navigation.PushAsync(new MenuPage());
+                    }
                 }
                 else
                 {
-                    await Application.Current.MainPage.DisplayAlert(LabelError, LblErrorRenovando, LabelOK);
+                    await ModernAlerts.ShowError(LabelError, LblErrorRenovando);
                 }
             }
             catch (Exception ex)
             {
-                await App.Current.MainPage.DisplayAlert(LabelInformacion, MensajeError, LabelOK);
-                var properties = new Dictionary<string, string> {
-                        { "Object", "SubscriptionsPageViewModel" },
-                        { "Method", "RenovarSubscripcion" }
-                    };
-                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
+                await ModernAlerts.ShowWarning(LabelInformacion, MensajeError);
+                CrashlyticsHelper.LogError(ex, "SubscriptionsPageViewModel", "RenewSubscription");
             }
             finally
             {
@@ -167,18 +173,18 @@ namespace sospect.ViewModels
 
         public async void CancelSubscription(MisSubscripciones subscription)
         {
-            var LblCancelarSubscripcion = TranslateExtension.Translate("LblCancelarSubscripcion");
-            var LblSeguroDeCancelar = TranslateExtension.Translate("LblSeguroDeCancelar");
-            var LblAceptar = TranslateExtension.Translate("LblAceptar");
-            var LabelCancelar = TranslateExtension.Translate("LabelCancelar");
-            var LabelError = TranslateExtension.Translate("LabelError");
-            var LblErrorCancelando = TranslateExtension.Translate("LblErrorCancelando");
-            var LabelOK = TranslateExtension.Translate("LabelOK");
-            var LblCancelacionAplicada = TranslateExtension.Translate("LblCancelacionAplicada");
-            var LabelInformacion = TranslateExtension.Translate("LabelInformacion");
-            var MensajeError = TranslateExtension.Translate("MensajeError");
+            var LblCancelarSubscripcion = await TranslateExtension.TranslateAsync("LblCancelarSubscripcion");
+            var LblSeguroDeCancelar = await TranslateExtension.TranslateAsync("LblSeguroDeCancelar");
+            var LblAceptar = await TranslateExtension.TranslateAsync("LblAceptar");
+            var LabelCancelar = await TranslateExtension.TranslateAsync("LabelCancelar");
+            var LabelError = await TranslateExtension.TranslateAsync("LabelError");
+            var LblErrorCancelando = await TranslateExtension.TranslateAsync("LblErrorCancelando");
+            var LabelOK = await TranslateExtension.TranslateAsync("LabelOK");
+            var LblCancelacionAplicada = await TranslateExtension.TranslateAsync("LblCancelacionAplicada");
+            var LabelInformacion = await TranslateExtension.TranslateAsync("LabelInformacion");
+            var MensajeError = await TranslateExtension.TranslateAsync("MensajeError");
 
-            var answer = await Application.Current.MainPage.DisplayAlert(LblCancelarSubscripcion, LblSeguroDeCancelar, LblAceptar, LabelCancelar);
+            var answer = await ModernAlerts.ShowConfirmation(LblCancelarSubscripcion, LblSeguroDeCancelar, LblAceptar, LabelCancelar, false);
 
             if (!answer)
             {
@@ -198,29 +204,86 @@ namespace sospect.ViewModels
 
                 if (response.IsSuccess)
                 {
-                    await Application.Current.MainPage.DisplayAlert(LabelOK, LblCancelacionAplicada, LabelOK);
+                    await ModernAlerts.ShowSuccess(LabelOK, LblCancelacionAplicada);
                     //await Application.Current.MainPage.Navigation.PushAsync(new HomePage());
                     Subscriptions.Remove(subscription);
+                    _ = HomeViewModel.RefrescarParametrosAsync();
+                    MessagingCenter.Send(this, "DatosActualizados");
                 }
                 else
                 {
-                    await Application.Current.MainPage.DisplayAlert(LabelError, LblErrorCancelando, LabelOK);
+                    await ModernAlerts.ShowError(LabelError, LblErrorCancelando);
                 }
             }
             catch (Exception ex)
             {
-                await App.Current.MainPage.DisplayAlert(LabelInformacion, MensajeError, LabelOK);
-                var properties = new Dictionary<string, string> {
-                        { "Object", "SubscriptionsPageViewModel" },
-                        { "Method", "CancelarSubscripcion" }
-                    };
-                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
+                await ModernAlerts.ShowWarning(LabelInformacion, MensajeError);
+                CrashlyticsHelper.LogError(ex, "SubscriptionsPageViewModel", "CancelSubscription");
             }
             finally
             {
                 IsRunning = false;
             }
-            
+
+        }
+
+        /// <summary>
+        /// Navega al detalle de la suscripción si es una promoción
+        /// </summary>
+        private async void VerDetalleSubscripcion(MisSubscripciones subscription)
+        {
+            // Solo navegar si es una promoción
+            if (subscription.es_promocion)
+            {
+                // Obtener la navegación correcta del TabbedPage
+                // MainPage es un TabbedPage, y cada tab tiene su propio NavigationPage
+                var navigation = GetCurrentNavigation();
+                if (navigation != null)
+                {
+                    await navigation.PushAsync(new DetallePromocionPage(subscription.subscripcion_id));
+                }
+                else
+                {
+                    System.Diagnostics.Debug.WriteLine("VerDetalleSubscripcion: No se pudo obtener la navegación");
+                }
+            }
+        }
+
+        /// <summary>
+        /// Obtiene la navegación del tab actual en el TabbedPage
+        /// </summary>
+        private INavigation GetCurrentNavigation()
+        {
+            try
+            {
+                var mainPage = Application.Current?.MainPage;
+
+                // Si es un TabbedPage, obtener la navegación del tab actual
+                if (mainPage is TabbedPage tabbedPage)
+                {
+                    var currentPage = tabbedPage.CurrentPage;
+                    if (currentPage is NavigationPage navigationPage)
+                    {
+                        return navigationPage.Navigation;
+                    }
+                    return currentPage?.Navigation;
+                }
+
+                // Si es un NavigationPage directo
+                if (mainPage is NavigationPage navPage)
+                {
+                    return navPage.Navigation;
+                }
+
+                // Fallback: usar la navegación del MainPage
+                return mainPage?.Navigation;
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine($"GetCurrentNavigation error: {ex.Message}");
+                CrashlyticsHelper.LogError(ex, "SubscriptionsPageViewModel", "GetCurrentNavigation");
+                return null;
+            }
         }
 
     }

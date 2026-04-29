@@ -1,6 +1,6 @@
-﻿using System;
+using System;
 using System.Globalization;
-using Xamarin.Forms;
+using Microsoft.Maui.Controls;
 
 namespace sospect.Converters
 {
@@ -31,4 +31,3 @@ namespace sospect.Converters
         }
     }
 }
-

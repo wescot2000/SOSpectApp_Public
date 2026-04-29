@@ -1,171 +1,483 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <ContentPage
-    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:fonts="clr-namespace:sospect.Resources.Fonts;assembly=sospect"
     xmlns:helpers="clr-namespace:sospect.Helpers"
-    xmlns:ads="clr-namespace:sospect.CustomRenderers"
-    BackgroundColor="White"
+    xmlns:admob="clr-namespace:Plugin.AdMob;assembly=Plugin.AdMob"
+    BackgroundColor="#F8F9FA"
     x:Class="sospect.Views.MenuPage"
     Title="{helpers:TranslateExtension Text='ConfiguraciondeSOSpect'}">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <!-- Estilos para el diseño de una columna -->
+            <Style x:Key="HeaderCardStyle" TargetType="Frame">
+                <Setter Property="BackgroundColor" Value="White" />
+                <Setter Property="HasShadow" Value="True" />
+                <Setter Property="CornerRadius" Value="16" />
+                <Setter Property="Padding" Value="20" />
+                <Setter Property="Margin" Value="16,16,16,8" />
+                <Setter Property="BorderColor" Value="Transparent" />
+            </Style>
+
+            <Style x:Key="MenuItemStyle" TargetType="Frame">
+                <Setter Property="BackgroundColor" Value="White" />
+                <Setter Property="HasShadow" Value="True" />
+                <Setter Property="CornerRadius" Value="12" />
+                <Setter Property="Padding" Value="16" />
+                <Setter Property="Margin" Value="16,4" />
+                <Setter Property="BorderColor" Value="Transparent" />
+                <Setter Property="MinimumHeightRequest" Value="70" />
+            </Style>
+
+            <Style x:Key="MenuIconStyle" TargetType="Label">
+                <Setter Property="FontFamily" Value="{StaticResource IcoMoonFamily}" />
+                <Setter Property="FontSize" Value="28" />
+                <Setter Property="TextColor" Value="#4A90E2" />
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="WidthRequest" Value="50" />
+            </Style>
+
+            <Style x:Key="MenuTextStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="16" />
+                <Setter Property="TextColor" Value="#2C3E50" />
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="LineBreakMode" Value="WordWrap" />
+                <Setter Property="FontAttributes" Value="None" />
+                <Setter Property="MaxLines" Value="2" />
+            </Style>
+
+            <Style x:Key="UserInfoLabelStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="14" />
+                <Setter Property="TextColor" Value="#7F8C8D" />
+                <Setter Property="HorizontalTextAlignment" Value="Center" />
+                <Setter Property="Margin" Value="0,2" />
+            </Style>
+
+            <Style x:Key="UserIdStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="16" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="TextColor" Value="#2C3E50" />
+                <Setter Property="HorizontalTextAlignment" Value="Start" />
+                <Setter Property="LineBreakMode" Value="MiddleTruncation" />
+                <Setter Property="VerticalOptions" Value="Center" />
+            </Style>
+
+            <Style x:Key="TrustBadgeStyle" TargetType="Frame">
+                <Setter Property="BackgroundColor" Value="#27AE60" />
+                <Setter Property="CornerRadius" Value="12" />
+                <Setter Property="Padding" Value="12,6" />
+                <Setter Property="HasShadow" Value="False" />
+                <Setter Property="BorderColor" Value="Transparent" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+            </Style>
+
+            <Style x:Key="SessionActionStyle" TargetType="Frame">
+                <Setter Property="HasShadow" Value="True" />
+                <Setter Property="CornerRadius" Value="12" />
+                <Setter Property="Padding" Value="16" />
+                <Setter Property="Margin" Value="16,4" />
+                <Setter Property="BorderColor" Value="Transparent" />
+                <Setter Property="MinimumHeightRequest" Value="60" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
-    <ScrollView>
-        <StackLayout Spacing="0" Padding="5">
-            <?Label Text="{Binding userId}" FontAttributes="Bold" HorizontalTextAlignment="Center" Margin="0,5,0,0"?>
-            <Frame BorderColor="Transparent" BackgroundColor="Transparent" HasShadow="False">
-                <Entry Text="{Binding userId}"
-                       TextColor="Black"
-                       FontAttributes="None"
-                       FontSize="Medium"
-                       HorizontalTextAlignment="Center" 
-                       Margin="0,0,0,0"
-                       IsReadOnly="False"
-                       BackgroundColor="Transparent" />
-            </Frame>
-            <Label Text="{Binding LoginUsuario}" TextColor="Gray" FontSize="Small" HorizontalTextAlignment="Center" Margin="0,0,0,0"></Label>
-            <Label Text="{Binding SaldoPoderes}" TextColor="Gray" FontSize="Small" HorizontalTextAlignment="Center" Margin="0,0,0,0"></Label>
-            <Label Text="{Binding MarcaBloqueo}" TextColor="Gray" FontSize="Small" HorizontalTextAlignment="Center" Margin="0,0,0,0"></Label>
-            <Label Text="{Binding RadioActual}" TextColor="Gray" FontSize="Small" HorizontalTextAlignment="Center" Margin="0,0,0,0"></Label>
-            <Label Text="{Binding CredibilidadActual}" TextColor="Gray" FontSize="Small" HorizontalTextAlignment="Center" Margin="0,0,0,0"></Label>
 
-            <Frame Padding="5" BorderColor="Black" BackgroundColor="LightGray" Margin="0,20,0,0" HorizontalOptions="Center" HeightRequest="35" WidthRequest="380" CornerRadius="10">
-                <Frame.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding SuperpoderesCommand}" NumberOfTapsRequired="1" />
-                </Frame.GestureRecognizers>
-                <Label Text="{helpers:TranslateExtension Text='OptCompraPoderes'}" 
-                       TextColor="Black"
-                       LineBreakMode="WordWrap"
-                       HorizontalOptions="CenterAndExpand"
-                       VerticalOptions="CenterAndExpand"
-                       HorizontalTextAlignment="Center"
-                       VerticalTextAlignment="Center" />
-            </Frame>
+        <!-- Contenido principal con scroll -->
+        <ScrollView Grid.Row="0" BackgroundColor="#F8F9FA">
+            <StackLayout Spacing="0">
 
-            <Frame Padding="5" BorderColor="Black" BackgroundColor="LightGray" Margin="0,15,0,0" HorizontalOptions="Center" HeightRequest="35" WidthRequest="380" CornerRadius="10">
-                <Frame.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding ProtegidosCommand}" NumberOfTapsRequired="1" />
-                </Frame.GestureRecognizers>
-                <Label Text="{helpers:TranslateExtension Text='OptGestionarProtegidos'}" 
-                       TextColor="Black"
-                       LineBreakMode="WordWrap"
-                       HorizontalOptions="CenterAndExpand"
-                       VerticalOptions="CenterAndExpand"
-                       HorizontalTextAlignment="Center"
-                       VerticalTextAlignment="Center" />
-            </Frame>
+                <!-- Header Card con información del usuario -->
+                <Frame Style="{StaticResource HeaderCardStyle}">
+                    <StackLayout Spacing="8">
+                        <!-- Avatar y nombre de usuario -->
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="60" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="60" />
+                            </Grid.ColumnDefinitions>
 
-            <Frame Padding="5" BorderColor="Black" BackgroundColor="LightGray" Margin="0,15,0,0" HorizontalOptions="Center" HeightRequest="35" WidthRequest="380" CornerRadius="10">
-                <Frame.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding CrearZonasCommand}" NumberOfTapsRequired="1" />
-                </Frame.GestureRecognizers>
-                <Label Text="{helpers:TranslateExtension Text='OptCrearZonas'}" 
-                       TextColor="Black"
-                       LineBreakMode="WordWrap"
-                       HorizontalOptions="CenterAndExpand"
-                       VerticalOptions="CenterAndExpand"
-                       HorizontalTextAlignment="Center"
-                       VerticalTextAlignment="Center" />
-            </Frame>
+                            <!-- Avatar circular -->
+                            <Frame Grid.Column="0"
+                                   BackgroundColor="#4A90E2"
+                                   WidthRequest="50"
+                                   HeightRequest="50"
+                                   CornerRadius="25"
+                                   HasShadow="False"
+                                   BorderColor="Transparent"
+                                   Padding="0"
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="Center">
+                                <Label Text="{x:Static fonts:IconFont.User}"
+                                       FontFamily="{StaticResource IcoMoonFamily}"
+                                       FontSize="24"
+                                       TextColor="White"
+                                       HorizontalOptions="Center"
+                                       VerticalOptions="Center" />
+                            </Frame>
 
-            <Frame Padding="5" BorderColor="Black" BackgroundColor="LightGray" Margin="0,15,0,0" HorizontalOptions="Center" HeightRequest="35" WidthRequest="380" CornerRadius="10">
-                <Frame.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding RadioAlertasCommand}" NumberOfTapsRequired="1" />
-                </Frame.GestureRecognizers>
-                <Label Text="{helpers:TranslateExtension Text='OptAumentarRadio'}" 
-                       TextColor="Black"
-                       LineBreakMode="WordWrap"
-                       HorizontalOptions="CenterAndExpand"
-                       VerticalOptions="CenterAndExpand"
-                       HorizontalTextAlignment="Center"
-                       VerticalTextAlignment="Center" />
-            </Frame>
+                            <!-- Información del usuario -->
+                            <StackLayout Grid.Column="1" 
+                                         Spacing="2" 
+                                         VerticalOptions="Center"
+                                         Margin="12,0,8,0">
+                                <Label Text="{helpers:TranslateExtension Text='LblUsuarioID'}"
+                                       Style="{StaticResource UserInfoLabelStyle}"
+                                       HorizontalTextAlignment="Start" />
+                                <Label Text="{Binding userId}"
+                                       Style="{StaticResource UserIdStyle}"
+                                       HorizontalTextAlignment="Start" />
+                            </StackLayout>
 
-            <Frame Padding="5" BorderColor="Black" BackgroundColor="LightGray" Margin="0,15,0,0" HorizontalOptions="Center" HeightRequest="35" WidthRequest="380" CornerRadius="10">
-                <Frame.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding RenovarSubscrCommand}" NumberOfTapsRequired="1" />
-                </Frame.GestureRecognizers>
-                <Label Text="{helpers:TranslateExtension Text='OptMisSubs'}" 
-                       TextColor="Black"
-                       LineBreakMode="WordWrap"
-                       HorizontalOptions="CenterAndExpand"
-                       VerticalOptions="CenterAndExpand"
-                       HorizontalTextAlignment="Center"
-                       VerticalTextAlignment="Center" />
-            </Frame>
+                            <!-- Botón copiar con más espacio -->
+                            <Button Grid.Column="2"
+                                    Text="{x:Static fonts:IconFont.Copy}"
+                                    FontFamily="{StaticResource IcoMoonFamily}"
+                                    FontSize="20"
+                                    TextColor="#4A90E2"
+                                    BackgroundColor="Transparent"
+                                    BorderColor="Transparent"
+                                    WidthRequest="50"
+                                    HeightRequest="50"
+                                    CornerRadius="25"
+                                    Command="{Binding CopyUserIdCommand}"
+                                    VerticalOptions="Center"
+                                    HorizontalOptions="Center" />
+                        </Grid>
 
-            <Frame Padding="5" BorderColor="Black" BackgroundColor="LightGray" Margin="0,15,0,0" HorizontalOptions="Center" HeightRequest="35" WidthRequest="380" CornerRadius="10">
-                <Frame.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding ReportesCommand}" NumberOfTapsRequired="1" />
-                </Frame.GestureRecognizers>
-                <Label Text="{helpers:TranslateExtension Text='OptReportes'}" 
-                       TextColor="Black"
-                       LineBreakMode="WordWrap"
-                       HorizontalOptions="CenterAndExpand"
-                       VerticalOptions="CenterAndExpand"
-                       HorizontalTextAlignment="Center"
-                       VerticalTextAlignment="Center" />
-            </Frame>
+                        <!-- Información adicional del usuario -->
+                        <StackLayout Spacing="4" Margin="0,8,0,0">
+                            <Label Text="{Binding LoginUsuario}" 
+                                   Style="{StaticResource UserInfoLabelStyle}" />
+                            <Label Text="{Binding SaldoPoderes}" 
+                                   Style="{StaticResource UserInfoLabelStyle}" />
+                            <Label Text="{Binding RadioActual}" 
+                                   Style="{StaticResource UserInfoLabelStyle}" />
+                            <Label Text="{Binding CredibilidadActual}" 
+                                   Style="{StaticResource UserInfoLabelStyle}" />
+                            <Label Text="{Binding MarcaBloqueo}" 
+                                   Style="{StaticResource UserInfoLabelStyle}" />
+                        </StackLayout>
 
-            <Frame Padding="5" BorderColor="Black" BackgroundColor="LightGray" Margin="0,15,0,0" HorizontalOptions="Center" HeightRequest="35" WidthRequest="380" CornerRadius="10">
-                <Frame.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding TerminosCondicionesCommand}" NumberOfTapsRequired="1" />
-                </Frame.GestureRecognizers>
-                <Label Text="{helpers:TranslateExtension Text='OptTerminosCondiciones'}" 
-                       TextColor="Black"
-                       LineBreakMode="WordWrap"
-                       HorizontalOptions="CenterAndExpand"
-                       VerticalOptions="CenterAndExpand"
-                       HorizontalTextAlignment="Center"
-                       VerticalTextAlignment="Center" />
-            </Frame>
+                        <!-- Badge de red de confianza -->
+                        <Frame IsVisible="{Binding FlagRedConfianza}" 
+                               Style="{StaticResource TrustBadgeStyle}"
+                               Margin="0,8,0,0">
+                            <Label Text="{Binding TextoFlagRedConfianza}"
+                                   TextColor="White"
+                                   FontSize="12"
+                                   FontAttributes="Bold"
+                                   HorizontalOptions="Center" />
+                        </Frame>
+                    </StackLayout>
+                </Frame>
 
-            <Frame Padding="5" BorderColor="Black" BackgroundColor="LightGray" Margin="0,15,0,0" HorizontalOptions="Center" HeightRequest="35" WidthRequest="380" CornerRadius="10">
-                <Frame.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding ManualSospectCommand}" NumberOfTapsRequired="1" />
-                </Frame.GestureRecognizers>
-                    <Label Text="{helpers:TranslateExtension Text='OptManualUsuarioSospect'}" 
-                       TextColor="Black"
-                       LineBreakMode="WordWrap"
-                       HorizontalOptions="CenterAndExpand"
-                       VerticalOptions="CenterAndExpand"
-                       HorizontalTextAlignment="Center"
-                       VerticalTextAlignment="Center" />
-            </Frame>
+                <!-- Elementos del menú en una sola columna -->
+                <StackLayout Spacing="0" Margin="0,8,0,16">
 
-            <Frame Padding="5" BorderColor="Black" BackgroundColor="LightGray" Margin="0,15,0,0" HorizontalOptions="Center" HeightRequest="35" WidthRequest="380" CornerRadius="10">
-                <Frame.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding AcercaDeCommand}" NumberOfTapsRequired="1" />
-                </Frame.GestureRecognizers>
-                <Label Text="{helpers:TranslateExtension Text='OptAcercaDe'}" 
-                       TextColor="Black"
-                       LineBreakMode="WordWrap"
-                       HorizontalOptions="CenterAndExpand"
-                       VerticalOptions="CenterAndExpand"
-                       HorizontalTextAlignment="Center"
-                       VerticalTextAlignment="Center"/>
-            </Frame>
+                    <!-- Red de Confianza -->
+                    <Frame Style="{StaticResource MenuItemStyle}">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding TrustedNetworkCommand}" />
+                        </Frame.GestureRecognizers>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="60" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0" 
+                                   Text="{x:Static fonts:IconFont.Users}"
+                                   Style="{StaticResource MenuIconStyle}" />
+                            <Label Grid.Column="1" 
+                                   Text="{helpers:TranslateExtension Text='LabelTitleRedConfianza'}"
+                                   Style="{StaticResource MenuTextStyle}"
+                                   Margin="8,0,0,0" />
+                        </Grid>
+                    </Frame>
 
-            <Frame Padding="5" BorderColor="Black" BackgroundColor="LightGray" Margin="0,15,0,0" HorizontalOptions="Center" HeightRequest="35" WidthRequest="380" CornerRadius="10">
-                <Frame.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding CerrarSesionCommand}" NumberOfTapsRequired="1" />
-                </Frame.GestureRecognizers>
-                <Label Text="{helpers:TranslateExtension Text='OptCerrarSesion'}" 
-                       TextColor="Black"
-                       LineBreakMode="WordWrap"
-                       HorizontalOptions="CenterAndExpand"
-                       VerticalOptions="CenterAndExpand"
-                       HorizontalTextAlignment="Center"
-                       VerticalTextAlignment="Center" />
-            </Frame>
-                       
-        </StackLayout>
-    </ScrollView>
+                    <!-- Historial -->
+                    <Frame Style="{StaticResource MenuItemStyle}" IsVisible="False">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding HistorialCommand}" />
+                        </Frame.GestureRecognizers>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="60" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0" 
+                                   Text="{x:Static fonts:IconFont.Clock}"
+                                   Style="{StaticResource MenuIconStyle}" />
+                            <Label Grid.Column="1" 
+                                   Text="{helpers:TranslateExtension Text='LblHistorialAlertas'}"
+                                   Style="{StaticResource MenuTextStyle}"
+                                   Margin="8,0,0,0" />
+                        </Grid>
+                    </Frame>
+
+                    <!-- Comprar Poderes -->
+                    <Frame Style="{StaticResource MenuItemStyle}">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding SuperpoderesCommand}" />
+                        </Frame.GestureRecognizers>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="60" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0" 
+                                   Text="{x:Static fonts:IconFont.CreditCard}"
+                                   Style="{StaticResource MenuIconStyle}" />
+                            <Label Grid.Column="1" 
+                                   Text="{helpers:TranslateExtension Text='OptCompraPoderes'}"
+                                   Style="{StaticResource MenuTextStyle}"
+                                   Margin="8,0,0,0" />
+                        </Grid>
+                    </Frame>
+
+                    <!-- Gestionar Protegidos -->
+                    <Frame Style="{StaticResource MenuItemStyle}">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding ProtegidosCommand}" />
+                        </Frame.GestureRecognizers>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="60" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0" 
+                                   Text="{x:Static fonts:IconFont.Shield}"
+                                   Style="{StaticResource MenuIconStyle}" />
+                            <Label Grid.Column="1" 
+                                   Text="{helpers:TranslateExtension Text='OptGestionarProtegidos'}"
+                                   Style="{StaticResource MenuTextStyle}"
+                                   Margin="8,0,0,0" />
+                        </Grid>
+                    </Frame>
+
+                    <!-- Crear Zonas -->
+                    <Frame Style="{StaticResource MenuItemStyle}">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding CrearZonasCommand}" />
+                        </Frame.GestureRecognizers>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="60" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0" 
+                                   Text="{x:Static fonts:IconFont.Globe}"
+                                   Style="{StaticResource MenuIconStyle}" />
+                            <Label Grid.Column="1" 
+                                   Text="{helpers:TranslateExtension Text='OptCrearZonas'}"
+                                   Style="{StaticResource MenuTextStyle}"
+                                   Margin="8,0,0,0" />
+                        </Grid>
+                    </Frame>
+
+                    <!-- Aumentar Radio -->
+                    <Frame Style="{StaticResource MenuItemStyle}">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding RadioAlertasCommand}" />
+                        </Frame.GestureRecognizers>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="60" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0" 
+                                   Text="{x:Static fonts:IconFont.Gear}"
+                                   Style="{StaticResource MenuIconStyle}" />
+                            <Label Grid.Column="1" 
+                                   Text="{helpers:TranslateExtension Text='OptAumentarRadio'}"
+                                   Style="{StaticResource MenuTextStyle}"
+                                   Margin="8,0,0,0" />
+                        </Grid>
+                    </Frame>
+
+                    <!-- Mis Suscripciones -->
+                    <Frame Style="{StaticResource MenuItemStyle}">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding RenovarSubscrCommand}" />
+                        </Frame.GestureRecognizers>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="60" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0" 
+                                   Text="{x:Static fonts:IconFont.Info}"
+                                   Style="{StaticResource MenuIconStyle}" />
+                            <Label Grid.Column="1" 
+                                   Text="{helpers:TranslateExtension Text='OptMisSubs'}"
+                                   Style="{StaticResource MenuTextStyle}"
+                                   Margin="8,0,0,0" />
+                        </Grid>
+                    </Frame>
+
+                    <!-- Reportes -->
+                    <Frame Style="{StaticResource MenuItemStyle}">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding ReportesCommand}" />
+                        </Frame.GestureRecognizers>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="60" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0" 
+                                   Text="{x:Static fonts:IconFont.UserSecret}"
+                                   Style="{StaticResource MenuIconStyle}" />
+                            <Label Grid.Column="1" 
+                                   Text="{helpers:TranslateExtension Text='OptReportes'}"
+                                   Style="{StaticResource MenuTextStyle}"
+                                   Margin="8,0,0,0" />
+                        </Grid>
+                    </Frame>
+
+                    <!-- Configurar Notificaciones -->
+                    <Frame Style="{StaticResource MenuItemStyle}">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding NotifCommand}" />
+                        </Frame.GestureRecognizers>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="60" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0" 
+                                   Text="{x:Static fonts:IconFont.Bell}"
+                                   Style="{StaticResource MenuIconStyle}" />
+                            <Label Grid.Column="1" 
+                                   Text="{helpers:TranslateExtension Text='OptConfNotif'}"
+                                   Style="{StaticResource MenuTextStyle}"
+                                   Margin="8,0,0,0" />
+                        </Grid>
+                    </Frame>
+
+                    <!-- Términos y Condiciones -->
+                    <Frame Style="{StaticResource MenuItemStyle}">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding TerminosCondicionesCommand}" />
+                        </Frame.GestureRecognizers>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="60" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0" 
+                                   Text="{x:Static fonts:IconFont.File}"
+                                   Style="{StaticResource MenuIconStyle}" />
+                            <Label Grid.Column="1" 
+                                   Text="{helpers:TranslateExtension Text='OptTerminosCondiciones'}"
+                                   Style="{StaticResource MenuTextStyle}"
+                                   Margin="8,0,0,0" />
+                        </Grid>
+                    </Frame>
+
+                    <!-- Manual de Usuario -->
+                    <Frame Style="{StaticResource MenuItemStyle}">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding ManualSospectCommand}" />
+                        </Frame.GestureRecognizers>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="60" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0" 
+                                   Text="{x:Static fonts:IconFont.Book}"
+                                   Style="{StaticResource MenuIconStyle}" />
+                            <Label Grid.Column="1" 
+                                   Text="{helpers:TranslateExtension Text='OptManualUsuarioSospect'}"
+                                   Style="{StaticResource MenuTextStyle}"
+                                   Margin="8,0,0,0" />
+                        </Grid>
+                    </Frame>
+
+                    <!-- Acerca De -->
+                    <Frame Style="{StaticResource MenuItemStyle}">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding AcercaDeCommand}" />
+                        </Frame.GestureRecognizers>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="60" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0" 
+                                   Text="{x:Static fonts:IconFont.Info}"
+                                   Style="{StaticResource MenuIconStyle}" />
+                            <Label Grid.Column="1" 
+                                   Text="{helpers:TranslateExtension Text='OptAcercaDe'}"
+                                   Style="{StaticResource MenuTextStyle}"
+                                   Margin="8,0,0,0" />
+                        </Grid>
+                    </Frame>
+
+                    <!-- Sección de acciones de sesión -->
+                    <StackLayout Spacing="0" Margin="0,16,0,0">
+                        <!-- Borrar Datos y Cerrar Sesión -->
+                        <Frame Style="{StaticResource SessionActionStyle}" BackgroundColor="#FFF3CD">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding BorraYCierraSesionCommand}" />
+                            </Frame.GestureRecognizers>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="60" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.Column="0" 
+                                       Text="{x:Static fonts:IconFont.Trash}"
+                                       Style="{StaticResource MenuIconStyle}"
+                                       TextColor="#FF6B35" />
+                                <Label Grid.Column="1" 
+                                       Text="{helpers:TranslateExtension Text='BorraDatosYCierraSesion'}"
+                                       Style="{StaticResource MenuTextStyle}"
+                                       TextColor="#FF6B35"
+                                       Margin="8,0,0,0" />
+                            </Grid>
+                        </Frame>
+
+                        <!-- Cerrar Sesión -->
+                        <Frame Style="{StaticResource SessionActionStyle}" BackgroundColor="#F8D7DA">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding CerrarSesionCommand}" />
+                            </Frame.GestureRecognizers>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="60" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.Column="0" 
+                                       Text="{x:Static fonts:IconFont.UserSecret}"
+                                       Style="{StaticResource MenuIconStyle}"
+                                       TextColor="#DC3545" />
+                                <Label Grid.Column="1" 
+                                       Text="{helpers:TranslateExtension Text='OptCerrarSesion'}"
+                                       Style="{StaticResource MenuTextStyle}"
+                                       TextColor="#DC3545"
+                                       Margin="8,0,0,0" />
+                            </Grid>
+                        </Frame>
+                    </StackLayout>
+
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+
+        <!-- Banner publicitario -->
         <Grid BackgroundColor="LightGray" Grid.Row="1" HeightRequest="90">
-            <ads:AdBanner></ads:AdBanner>
+            <admob:BannerAd AdSize="LargeBanner" />
         </Grid>
     </Grid>
 </ContentPage>

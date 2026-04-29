@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<toolkit:Popup xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:helpers="clr-namespace:sospect.Helpers"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    xmlns:fonts="clr-namespace:sospect.Resources.Fonts;assembly=sospect"
+    x:Class="sospect.Views.Popups.ProtegidosPopupPage"
+    CanBeDismissedByTappingOutsideOfPopup="True">
+
+    <toolkit:Popup.Resources>
+        <ResourceDictionary>
+            <!-- Estilos consistentes con el menú principal -->
+            <Style x:Key="PopupMenuItemStyle" TargetType="Frame">
+                <Setter Property="BackgroundColor" Value="White" />
+                <Setter Property="HasShadow" Value="True" />
+                <Setter Property="CornerRadius" Value="12" />
+                <Setter Property="Padding" Value="16" />
+                <Setter Property="Margin" Value="0,6" />
+                <Setter Property="BorderColor" Value="Transparent" />
+                <Setter Property="MinimumHeightRequest" Value="60" />
+            </Style>
+
+            <Style x:Key="PopupMenuIconStyle" TargetType="Label">
+                <Setter Property="FontFamily" Value="{StaticResource IcoMoonFamily}" />
+                <Setter Property="FontSize" Value="24" />
+                <Setter Property="TextColor" Value="#4A90E2" />
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="WidthRequest" Value="40" />
+            </Style>
+
+            <Style x:Key="PopupMenuTextStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="15" />
+                <Setter Property="TextColor" Value="#2C3E50" />
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="LineBreakMode" Value="WordWrap" />
+                <Setter Property="MaxLines" Value="2" />
+            </Style>
+
+            <Style x:Key="CloseButtonStyle" TargetType="Frame">
+                <Setter Property="BackgroundColor" Value="#E74C3C" />
+                <Setter Property="HasShadow" Value="True" />
+                <Setter Property="CornerRadius" Value="12" />
+                <Setter Property="Padding" Value="16" />
+                <Setter Property="Margin" Value="0,16,0,0" />
+                <Setter Property="BorderColor" Value="Transparent" />
+                <Setter Property="HeightRequest" Value="60" />
+            </Style>
+
+            <Style x:Key="HeaderStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="20" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="TextColor" Value="#2C3E50" />
+                <Setter Property="HorizontalTextAlignment" Value="Center" />
+                <Setter Property="Margin" Value="0,0,0,8" />
+            </Style>
+
+            <Style x:Key="SubHeaderStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="14" />
+                <Setter Property="TextColor" Value="#7F8C8D" />
+                <Setter Property="HorizontalTextAlignment" Value="Center" />
+                <Setter Property="LineBreakMode" Value="WordWrap" />
+                <Setter Property="Margin" Value="0,0,0,16" />
+            </Style>
+        </ResourceDictionary>
+    </toolkit:Popup.Resources>
+
+    <Grid>
+        <!-- Fondo semi-transparente -->
+        <BoxView Color="#80000000" />
+
+        <!-- Contenedor principal del popup -->
+        <Frame BackgroundColor="#F8F9FA" 
+               HasShadow="True" 
+               CornerRadius="20" 
+               HorizontalOptions="Center" 
+               VerticalOptions="Center" 
+               WidthRequest="350"
+               MaximumHeightRequest="600"
+               Padding="0"
+               BorderColor="Transparent">
+
+            <ScrollView>
+                <StackLayout Spacing="0" Padding="20">
+
+                    <!-- Header -->
+                    <StackLayout Spacing="4" Margin="0,0,0,20">
+                        <Label Text="{helpers:TranslateExtension Text='LblOpcionesProtegidos'}" 
+                               Style="{StaticResource HeaderStyle}" />
+                        <Label Text="{helpers:TranslateExtension Text='LblExplicacionProtegidos'}" 
+                               Style="{StaticResource SubHeaderStyle}" />
+                    </StackLayout>
+
+                    <!-- Opciones del menú -->
+                    <StackLayout Spacing="0">
+
+                        <!-- Iniciar Trámite -->
+                        <Frame Style="{StaticResource PopupMenuItemStyle}">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding AgregarProtegidoCommand}" />
+                            </Frame.GestureRecognizers>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="50" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.Column="0" 
+                                       Text="{x:Static fonts:IconFont.User}"
+                                       Style="{StaticResource PopupMenuIconStyle}" />
+                                <Label Grid.Column="1" 
+                                       Text="{helpers:TranslateExtension Text='OptIniciarTramite'}"
+                                       Style="{StaticResource PopupMenuTextStyle}"
+                                       Margin="8,0,0,0" />
+                            </Grid>
+                        </Frame>
+
+                        <!-- Aprobar Solicitud -->
+                        <Frame Style="{StaticResource PopupMenuItemStyle}">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding AprobarSolicitudCommand}" />
+                            </Frame.GestureRecognizers>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="50" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.Column="0" 
+                                       Text="{x:Static fonts:IconFont.Check}"
+                                       Style="{StaticResource PopupMenuIconStyle}" />
+                                <Label Grid.Column="1" 
+                                       Text="{helpers:TranslateExtension Text='OptAprobarSolicitud'}"
+                                       Style="{StaticResource PopupMenuTextStyle}"
+                                       Margin="8,0,0,0" />
+                            </Grid>
+                        </Frame>
+
+                        <!-- Completar Trámite -->
+                        <Frame Style="{StaticResource PopupMenuItemStyle}">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding CompletarSubscrProtegidoCommand}" />
+                            </Frame.GestureRecognizers>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="50" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.Column="0" 
+                                       Text="{x:Static fonts:IconFont.File}"
+                                       Style="{StaticResource PopupMenuIconStyle}" />
+                                <Label Grid.Column="1" 
+                                       Text="{helpers:TranslateExtension Text='OptCompletarTramite'}"
+                                       Style="{StaticResource PopupMenuTextStyle}"
+                                       Margin="8,0,0,0" />
+                            </Grid>
+                        </Frame>
+
+                        <!-- Listar Protegidos -->
+                        <Frame Style="{StaticResource PopupMenuItemStyle}">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding ListarProtegidosCommand}" />
+                            </Frame.GestureRecognizers>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="50" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.Column="0" 
+                                       Text="{x:Static fonts:IconFont.Users}"
+                                       Style="{StaticResource PopupMenuIconStyle}" />
+                                <Label Grid.Column="1" 
+                                       Text="{helpers:TranslateExtension Text='OptListarProtegidos'}"
+                                       Style="{StaticResource PopupMenuTextStyle}"
+                                       Margin="8,0,0,0" />
+                            </Grid>
+                        </Frame>
+
+                        <!-- Listar Protectores -->
+                        <Frame Style="{StaticResource PopupMenuItemStyle}">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding ListarProtectoresCommand}" />
+                            </Frame.GestureRecognizers>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="50" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.Column="0" 
+                                       Text="{x:Static fonts:IconFont.Shield}"
+                                       Style="{StaticResource PopupMenuIconStyle}" />
+                                <Label Grid.Column="1" 
+                                       Text="{helpers:TranslateExtension Text='OptListarProtectores'}"
+                                       Style="{StaticResource PopupMenuTextStyle}"
+                                       Margin="8,0,0,0" />
+                            </Grid>
+                        </Frame>
+                    </StackLayout>
+
+                    <!-- Botón Cerrar -->
+                    <Frame Style="{StaticResource CloseButtonStyle}">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding CloseCommand}" />
+                        </Frame.GestureRecognizers>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="40" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0" 
+                                   Text="{x:Static fonts:IconFont.UserSecret}"
+                                   FontFamily="{StaticResource IcoMoonFamily}"
+                                   FontSize="20"
+                                   TextColor="White"
+                                   VerticalOptions="Center"
+                                   HorizontalOptions="Center" />
+                            <Label Grid.Column="1" 
+                                   Text="{helpers:TranslateExtension Text='OptVolver'}"
+                                   FontSize="18"
+                                   FontAttributes="Bold"
+                                   TextColor="White"
+                                   VerticalOptions="Center"
+                                   HorizontalOptions="Center"
+                                   HorizontalTextAlignment="Center"
+                                   VerticalTextAlignment="Center" />
+                        </Grid>
+                    </Frame>
+
+                </StackLayout>
+            </ScrollView>
+        </Frame>
+    </Grid>
+</toolkit:Popup>

@@ -1,13 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Net.Http;
-using System.Text;
-using System.Windows.Input;
-using Newtonsoft.Json;
-using Xamarin.Forms;
-using Xamarin.Forms.PlatformConfiguration.AndroidSpecific;
-using Xamarin.Forms.Xaml;
+using Microsoft.Maui.Controls;
 
 namespace sospect.Views
 {
@@ -19,9 +11,16 @@ namespace sospect.Views
         {
             InitializeComponent();
             ConfirmationMessageLabel.Text = message;
+        }
 
-            YesButton.Clicked += (sender, args) => ConfirmationResult?.Invoke(this, true);
-            NoButton.Clicked += (sender, args) => ConfirmationResult?.Invoke(this, false);
+        private void OnYesButtonTapped(object sender, EventArgs e)
+        {
+            ConfirmationResult?.Invoke(this, true);
+        }
+
+        private void OnNoButtonTapped(object sender, EventArgs e)
+        {
+            ConfirmationResult?.Invoke(this, false);
         }
     }
 }

@@ -1,49 +1,83 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="sospect.Views.HeatReportPage"
-             xmlns:fonts="clr-namespace:sospect.Resources.Fonts;assembly=sospect"
              xmlns:helpers="clr-namespace:sospect.Helpers"
-             BackgroundColor="White"
+             xmlns:fonts="clr-namespace:sospect.Resources.Fonts;assembly=sospect"
+             BackgroundColor="#F8F9FA"
              Title="{helpers:TranslateExtension Text='LblReporteCalorSospect'}">
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
 
-        <Label
-            Grid.Row="0" Grid.Column="1"
-               Text="{helpers:TranslateExtension Text='LblReporteEnConstruccion'}"
-               FontSize="Medium"
-               HorizontalOptions="CenterAndExpand"
-               VerticalOptions="CenterAndExpand" 
-               HorizontalTextAlignment="Center"
-               TextColor="Red"/>
+    <ScrollView>
+        <StackLayout Padding="16" Spacing="20" VerticalOptions="CenterAndExpand">
 
-        <Label
-            Grid.Row="1" Grid.Column="1"
-               Text="{helpers:TranslateExtension Text='LblDescripcionMapaDeCalor'}"
-               FontSize="Small"
-               Margin="0,50,0,20"
-               VerticalOptions="StartAndExpand" 
-               HorizontalTextAlignment="Center"
-               TextColor="Gray"/>
+            <!-- Ícono principal -->
+            <Label FontFamily="{StaticResource IcoMoonFamily}"
+                   Text="&#xf06d;"
+                   FontSize="80"
+                   TextColor="#3498DB"
+                   HorizontalOptions="Center"
+                   Margin="0,40,0,0"/>
 
-        <Label
-            Grid.Row="2" Grid.Column="1"
-               Text="{helpers:TranslateExtension Text='LblCostoReporte'}"
-               FontSize="Small"
-               Margin="0,50,0,20"
-               VerticalOptions="StartAndExpand" 
-               HorizontalTextAlignment="Center"
-               TextColor="Gray"/>
-    </Grid>
+            <!-- Mensaje "En Construcción" -->
+            <Frame BackgroundColor="White" 
+                   CornerRadius="12" 
+                   HasShadow="True"
+                   Padding="24"
+                   Margin="0">
+                <StackLayout Spacing="16">
+                    <Label Text="&#xf0ad;"
+                           FontFamily="{StaticResource IcoMoonFamily}"
+                           FontSize="50"
+                           TextColor="#E74C3C"
+                           HorizontalOptions="Center"/>
+                    <Label Text="{helpers:TranslateExtension Text='LblReporteEnConstruccion'}"
+                           FontSize="20"
+                           FontAttributes="Bold"
+                           TextColor="#E74C3C"
+                           HorizontalTextAlignment="Center"/>
+                </StackLayout>
+            </Frame>
+
+            <!-- Descripción del mapa de calor -->
+            <Frame BackgroundColor="White" 
+                   CornerRadius="12" 
+                   HasShadow="True"
+                   Padding="20"
+                   Margin="0">
+                <StackLayout Spacing="12">
+                    <Label Text="&#xf05a;"
+                           FontFamily="{StaticResource IcoMoonFamily}"
+                           FontSize="24"
+                           TextColor="#3498DB"
+                           HorizontalOptions="Center"/>
+                    <Label Text="{helpers:TranslateExtension Text='LblDescripcionMapaDeCalor'}"
+                           FontSize="16"
+                           TextColor="#7F8C8D"
+                           HorizontalTextAlignment="Center"
+                           LineHeight="1.4"/>
+                </StackLayout>
+            </Frame>
+
+            <!-- Información de costo -->
+            <Frame BackgroundColor="White" 
+                   CornerRadius="12" 
+                   HasShadow="True"
+                   Padding="20"
+                   Margin="0,0,0,40">
+                <StackLayout Spacing="12">
+                    <Label Text="&#xf09d;"
+                           FontFamily="{StaticResource IcoMoonFamily}"
+                           FontSize="24"
+                           TextColor="#9B59B6"
+                           HorizontalOptions="Center"/>
+                    <Label Text="{helpers:TranslateExtension Text='LblCostoReporte'}"
+                           FontSize="16"
+                           TextColor="#7F8C8D"
+                           HorizontalTextAlignment="Center"
+                           LineHeight="1.4"/>
+                </StackLayout>
+            </Frame>
+
+        </StackLayout>
+    </ScrollView>
 </ContentPage>

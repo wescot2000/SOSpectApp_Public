@@ -4,7 +4,7 @@ using System.Net.Http;
 using System.Text;
 using System.Windows.Input;
 using Newtonsoft.Json;
-using Xamarin.Forms;
+using Microsoft.Maui.Controls;
 using sospect.Helpers;
 using sospect.Models;
 using System.Collections.ObjectModel;
@@ -12,9 +12,11 @@ using sospect.Services;
 using System.Linq;
 using sospect.Utils;
 using System.Threading.Tasks;
-using Xamarin.Essentials;
+using Microsoft.Maui.ApplicationModel;
+using Microsoft.Maui.Storage;
 using sospect.Views;
 using System.Collections.Generic;
+using sospect.Interfaces;
 
 namespace sospect.ViewModels
 {
@@ -106,11 +108,7 @@ namespace sospect.ViewModels
             }
             catch (Exception ex)
             {
-                var properties = new Dictionary<string, string> {
-                        { "Object", "AlarmRadiusViewModel" },
-                        { "Method", "ObtenerRadiosDisponibles" }
-                    };
-                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
+                CrashlyticsHelper.LogError(ex, "AlarmRadiusViewModel", "LoadAvailableRadios");
             }
             finally
             {
@@ -118,18 +116,30 @@ namespace sospect.ViewModels
             }           
         }
 
+        /// <summary>
+        /// Obtiene la navegación del tab activo cuando MainPage es TabbedPage.
+        /// Necesario porque esta página se pushea en el NavigationPage del tab,
+        /// no en App.Current.MainPage.Navigation.
+        /// </summary>
+        private INavigation GetTabNavigation()
+        {
+            if (Application.Current.MainPage is TabbedPage tabbedPage &&
+                tabbedPage.CurrentPage is NavigationPage navPage)
+                return navPage.Navigation;
+            return Application.Current.MainPage.Navigation;
+        }
+
         private async void CreateSubscription()
         {
             int requiredPowers = CalculateRequiredPowers(NewRadius);
             int roundedRadius = (int)Math.Ceiling(NewRadius.radio_mts / 100.0) * 100;
-            var saldoPoderesInsuficiente = TranslateExtension.Translate("LblSaldoPoderesInsuficiente");
-            var comprarPoderes = TranslateExtension.Translate("LblComprarPoderes");
-            var cancelar = TranslateExtension.Translate("LabelCancelar");
-            
+            var saldoPoderesInsuficiente = await TranslateExtension.TranslateAsync("LblSaldoPoderesInsuficiente");
+            var comprarPoderes = await TranslateExtension.TranslateAsync("LblComprarPoderes");
+            var cancelar = await TranslateExtension.TranslateAsync("LabelCancelar");
 
             if (PoderesActualesUsuario < requiredPowers)
             {
-                var answer = await Application.Current.MainPage.DisplayAlert(saldoPoderesInsuficiente, "", comprarPoderes, cancelar);
+                var answer = await ModernAlerts.ShowConfirmation(saldoPoderesInsuficiente, "", comprarPoderes, cancelar, false);
                 if (answer)
                 {
                     await Application.Current.MainPage.Navigation.PushAsync(new PurchaseSuperPowersPage());
@@ -147,42 +157,43 @@ namespace sospect.ViewModels
             ParametrosUsuario parametros = JsonConvert.DeserializeObject<ParametrosUsuario>(Preferences.Get("ParametrosUsuario", ""));
 
             IsRunning = true;
+            bool navigatedAway = false;
             try
             {
-                var exito = TranslateExtension.Translate("Exito");
-                var subscreada = TranslateExtension.Translate("SubscripcionCreada");
-                var LabelOk = TranslateExtension.Translate("LabelOK");
-                var labelerror = TranslateExtension.Translate("LabelError");
-                var MensajeError = TranslateExtension.Translate("MensajeError");
+                var exito = await TranslateExtension.TranslateAsync("Exito");
+                var subscreada = await TranslateExtension.TranslateAsync("SubscripcionCreada");
+                var LabelError = await TranslateExtension.TranslateAsync("LabelError");
 
                 var response = await ApiService.SubscribirNuevoRadio(requestData);
                 if (response.IsSuccess)
                 {
                     parametros.radio_alarmas_mts_actual = roundedRadius;
                     Preferences.Set("ParametrosUsuario", JsonConvert.SerializeObject(parametros));
-                    await Application.Current.MainPage.DisplayAlert(exito, subscreada, LabelOk);
+                    await ModernAlerts.ShowSuccess(exito, subscreada);
+                    _ = HomeViewModel.RefrescarParametrosAsync();
                     MessagingCenter.Send(this, "DatosActualizados");
-                    await Application.Current.MainPage.Navigation.PopToRootAsync();
+                    navigatedAway = true;
+                    await GetTabNavigation().PopToRootAsync();
                 }
                 else
                 {
-                    await Application.Current.MainPage.DisplayAlert(labelerror, MensajeError, LabelOk);
+                    await ModernAlerts.ShowError(LabelError, response.Message);
                 }
             }
             catch (Exception ex)
             {
-                var properties = new Dictionary<string, string> {
-                        { "Object", "AlarmRadiusViewModel" },
-                        { "Method", "SubscribirNuevoRadio" }
-                    };
-                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
-
+                if (!navigatedAway)
+                {
+                    var LabelInformacion = await TranslateExtension.TranslateAsync("LabelInformacion");
+                    var MensajeError = await TranslateExtension.TranslateAsync("MensajeError");
+                    await ModernAlerts.ShowWarning(LabelInformacion, MensajeError);
+                }
+                CrashlyticsHelper.LogError(ex, "AlarmRadiusViewModel", "CreateSubscription");
             }
             finally
             {
                 IsRunning = false;
             }
-                       
         }
 
         public int CalculateRequiredPowers(RadiosDisponiblesResponse newRadius)

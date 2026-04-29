@@ -1,58 +1,219 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="sospect.Views.AlarmRadiusPage"
              xmlns:fonts="clr-namespace:sospect.Resources.Fonts;assembly=sospect"
              xmlns:helpers="clr-namespace:sospect.Helpers"
-             BackgroundColor="White"
+             BackgroundColor="#F8F9FA"
              Title="{helpers:TranslateExtension Text='AmpliacionRadio'}">
-    <Grid>
-        <StackLayout Margin="20">
-            <Label TextColor="Gray" Text="{helpers:TranslateExtension Text='TuRadioActual'}" />
-            <Label TextColor="Gray" Text="{Binding RadioActual}" />
-            <Label TextColor="Gray" Margin="0,20,0,0" Text="{helpers:TranslateExtension Text='ExplicacionRadio'}" />
 
-            <Frame BorderColor="Gray" Padding="0" CornerRadius="5" HasShadow="False">
-                    <Grid>
-                        <Picker x:Name="NewRadiusPicker" BackgroundColor="White" TextColor="Black" 
-                                ItemsSource="{Binding AvailableRadios}" 
-                                ItemDisplayBinding="{Binding radio_mts}" 
-                                SelectedItem="{Binding NewRadius, Mode=TwoWay}"
-                                Title="{helpers:TranslateExtension Text='LblSeleccionaNuevoRadio'}"
-                                SelectedIndexChanged="NewRadiusPicker_SelectedIndexChanged" />
-                        <Image Source="dropdown_icon.png" HorizontalOptions="End" HeightRequest="15" WidthRequest="15" Margin="0,0,10,0" VerticalOptions="Center"/>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="InfoCardStyle" TargetType="Frame">
+                <Setter Property="BackgroundColor" Value="White" />
+                <Setter Property="BorderColor" Value="Transparent" />
+                <Setter Property="CornerRadius" Value="12" />
+                <Setter Property="Padding" Value="20" />
+                <Setter Property="Margin" Value="20,20,20,10" />
+                <Setter Property="HasShadow" Value="True" />
+            </Style>
+
+            <Style x:Key="InfoLabelStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="#7F8C8D" />
+                <Setter Property="FontSize" Value="13" />
+                <Setter Property="Margin" Value="0,0,0,4" />
+            </Style>
+
+            <Style x:Key="InfoValueStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="#2C3E50" />
+                <Setter Property="FontSize" Value="18" />
+                <Setter Property="FontAttributes" Value="Bold" />
+            </Style>
+
+            <Style x:Key="SelectorCardStyle" TargetType="Frame">
+                <Setter Property="BackgroundColor" Value="White" />
+                <Setter Property="BorderColor" Value="Transparent" />
+                <Setter Property="CornerRadius" Value="12" />
+                <Setter Property="Padding" Value="20" />
+                <Setter Property="Margin" Value="20,10" />
+                <Setter Property="HasShadow" Value="True" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Grid>
+        <ScrollView>
+            <StackLayout Spacing="0">
+
+                <!-- Radio Actual -->
+                <Frame Style="{StaticResource InfoCardStyle}">
+                    <StackLayout Spacing="12">
+                        <Grid ColumnSpacing="12">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                            <Frame Grid.Column="0"
+                                   BackgroundColor="#E8F4FD"
+                                   WidthRequest="50"
+                                   HeightRequest="50"
+                                   CornerRadius="25"
+                                   HasShadow="False"
+                                   BorderColor="Transparent"
+                                   Padding="0">
+                                <Label Text="{x:Static fonts:IconFont.LocationDot}"
+                                       FontFamily="{StaticResource IcoMoonFamily}"
+                                       FontSize="24"
+                                       TextColor="#4A90E2"
+                                       HorizontalOptions="Center"
+                                       VerticalOptions="Center" />
+                            </Frame>
+
+                            <StackLayout Grid.Column="1" 
+                                         Spacing="4"
+                                         VerticalOptions="Center">
+                                <Label Text="{helpers:TranslateExtension Text='TuRadioActual'}" 
+                                       Style="{StaticResource InfoLabelStyle}" />
+                                <Label Text="{Binding RadioActual}" 
+                                       Style="{StaticResource InfoValueStyle}"
+                                       TextColor="#4A90E2" />
+                            </StackLayout>
+                        </Grid>
+                    </StackLayout>
+                </Frame>
+
+                <!-- Selector de nuevo radio -->
+                <Frame Style="{StaticResource SelectorCardStyle}">
+                    <StackLayout Spacing="12">
+                        <Label Text="{helpers:TranslateExtension Text='ExplicacionRadio'}" 
+                               TextColor="#2C3E50"
+                               FontSize="14"
+                               LineBreakMode="WordWrap" />
+
+                        <Frame BorderColor="#BDC3C7" 
+                               BackgroundColor="White"
+                               Padding="0" 
+                               CornerRadius="8" 
+                               HasShadow="False">
+                            <Grid>
+                                <Picker x:Name="NewRadiusPicker" 
+                                        BackgroundColor="Transparent" 
+                                        TextColor="#2C3E50" 
+                                        ItemsSource="{Binding AvailableRadios}" 
+                                        ItemDisplayBinding="{Binding radio_mts}" 
+                                        SelectedItem="{Binding NewRadius, Mode=TwoWay}"
+                                        Title="{helpers:TranslateExtension Text='LblSeleccionaNuevoRadio'}"
+                                        SelectedIndexChanged="NewRadiusPicker_SelectedIndexChanged"
+                                        Margin="12,0" />
+                                <Label Text="{x:Static fonts:IconFont.ChevronDown}"
+                                       FontFamily="{StaticResource IcoMoonFamily}"
+                                       HorizontalOptions="End" 
+                                       FontSize="14" 
+                                       TextColor="#7F8C8D"
+                                       Margin="0,0,12,0" 
+                                       VerticalOptions="Center"
+                                       InputTransparent="True" />
+                            </Grid>
+                        </Frame>
+                    </StackLayout>
+                </Frame>
+
+                <!-- Información de poderes requeridos -->
+                <Frame Style="{StaticResource InfoCardStyle}">
+                    <StackLayout Spacing="12">
+                        <Grid ColumnSpacing="12">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                            <Label Grid.Column="0"
+                                   Text="{x:Static fonts:IconFont.Bolt}"
+                                   FontFamily="{StaticResource IcoMoonFamily}"
+                                   FontSize="32"
+                                   TextColor="#9B59B6"
+                                   VerticalOptions="Center" />
+
+                            <StackLayout Grid.Column="1" Spacing="8">
+                                <Label Text="{Binding RequiredPowersLabel}" 
+                                       TextColor="#2C3E50"
+                                       FontSize="15"
+                                       FontAttributes="Bold" />
+                                <Label Text="{Binding SaldoPoderes}" 
+                                       TextColor="#7F8C8D"
+                                       FontSize="14" />
+                            </StackLayout>
+                        </Grid>
+                    </StackLayout>
+                </Frame>
+
+                <!-- Botón Crear -->
+                <Frame BackgroundColor="#9B59B6"
+                       BorderColor="Transparent"
+                       CornerRadius="12"
+                       Padding="0"
+                       HasShadow="True"
+                       HeightRequest="54"
+                       Margin="20,16,20,10">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding CreateSubscriptionCommand}" />
+                    </Frame.GestureRecognizers>
+                    <Label Text="{helpers:TranslateExtension Text='CrearNuevoRadio'}"
+                           TextColor="White"
+                           FontSize="16"
+                           FontAttributes="Bold"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center" />
+                </Frame>
+
+                <!-- Explicación de vigencias -->
+                <Frame BackgroundColor="#FFF3CD"
+                       BorderColor="Transparent"
+                       CornerRadius="12"
+                       Padding="16"
+                       HasShadow="False"
+                       Margin="20,10,20,20">
+                    <Grid ColumnSpacing="12">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <Label Grid.Column="0"
+                               FontFamily="{StaticResource IcoMoonFamily}"
+                               Text="{x:Static fonts:IconFont.Clock}"
+                               FontSize="20"
+                               TextColor="#856404"
+                               VerticalOptions="Start"
+                               Margin="0,2,0,0" />
+
+                        <Label Grid.Column="1"
+                               Text="{helpers:TranslateExtension Text='ExplicacionVigencias'}"
+                               TextColor="#856404"
+                               FontSize="13"
+                               LineBreakMode="WordWrap"
+                               VerticalOptions="Center" />
                     </Grid>
                 </Frame>
-            <Label TextColor="Gray" Margin="0,20,0,0" Text="{Binding RequiredPowersLabel}" />
-            <Label TextColor="Gray" Margin="0,20,0,0" Text="{Binding SaldoPoderes}" />
 
-            <Frame Grid.Row="2" Grid.ColumnSpan="2" Padding="5" BorderColor="Black" BackgroundColor="LightGray" Margin="0,20,0,0" HorizontalOptions="Center" HeightRequest="35" WidthRequest="350" CornerRadius="10">
-                <Frame.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding CreateSubscriptionCommand}" NumberOfTapsRequired="1" />
-                </Frame.GestureRecognizers>
-                <Label Text="{helpers:TranslateExtension Text='CrearNuevoRadio'}" 
-                        TextColor="Black"
-                        LineBreakMode="WordWrap"
-                        HorizontalOptions="CenterAndExpand"
-                        VerticalOptions="CenterAndExpand"
-                        HorizontalTextAlignment="Center"
-                        VerticalTextAlignment="Center" />
-             </Frame>
+                <BoxView HeightRequest="20" Color="Transparent" />
 
-            <Label TextColor="Gray" Text="{helpers:TranslateExtension Text='ExplicacionVigencias'}" />
-        </StackLayout>
+            </StackLayout>
+        </ScrollView>
+
+        <!-- Loading overlay -->
         <Grid BackgroundColor="Black"
-                  Opacity="0.5"
-                  HorizontalOptions="FillAndExpand"
-                  VerticalOptions="FillAndExpand"
-                  IsVisible="{Binding IsRunning}">
+              Opacity="0.5"
+              HorizontalOptions="FillAndExpand"
+              VerticalOptions="FillAndExpand"
+              IsVisible="{Binding IsRunning}">
             <ActivityIndicator VerticalOptions="Center"
-                                   HorizontalOptions="Center"
-                                   HeightRequest="50"
-                                   WidthRequest="50"
-                                   Color="DarkBlue"
-                                   IsRunning="{Binding IsRunning}">
-            </ActivityIndicator>
+                               HorizontalOptions="Center"
+                               HeightRequest="50"
+                               WidthRequest="50"
+                               Color="#9B59B6"
+                               IsRunning="{Binding IsRunning}" />
         </Grid>
     </Grid>
 </ContentPage>

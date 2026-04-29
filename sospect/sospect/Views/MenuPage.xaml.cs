@@ -2,21 +2,21 @@
 using System.Collections.Generic;
 using System.Windows.Input;
 using sospect.ViewModels;
-using Xamarin.Forms;
-using sospect.Popups;
+using Microsoft.Maui.Controls;
+using sospect.Views.Popups;
 
 namespace sospect.Views
 {
     public partial class MenuPage : ContentPage
     {
         private MenuPageViewModel _viewModel;
+
         public MenuPage()
         {
             InitializeComponent();
-
             BindingContext = new MenuPageViewModel(Navigation);
-
         }
+
         protected override void OnAppearing()
         {
             base.OnAppearing();
@@ -33,7 +33,5 @@ namespace sospect.Views
         {
             ((MenuPageViewModel)BindingContext).ActualizarDatos(sender, e);
         }
-
     }
 }
-

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Windows.Input;
 using sospect.ViewModels;
-using Xamarin.Forms;
+using Microsoft.Maui.Controls;
 using Newtonsoft.Json;
 using sospect.Models;
 using sospect.Helpers;
@@ -23,7 +23,7 @@ namespace sospect.Views
 
             MessagingCenter.Subscribe<MessagesViewModel>(this, "MarkAllAsReadSuccess", async (sender) =>
             {
-                await DisplayAlert(LabelInformacion, LblSeMarcaronComoLeidos, LabelOK);
+                await ModernAlerts.ShowInfo(LabelInformacion, LblSeMarcaronComoLeidos);
             });
         }
 
@@ -32,8 +32,12 @@ namespace sospect.Views
             var message = e.Item as Mensajes;
             if (message != null)
             {
-                // Reemplaza "MessageDetailPage" con el nombre real de la página de detalles del mensaje que vas a crear
+                // Navegar al detalle del mensaje
                 await Navigation.PushAsync(new MensajeDetallePage(message.mensaje_id));
+
+                // Al volver del detalle, marcar el mensaje como leído en la UI
+                // El API ya lo marcó como leído en la BD al cargar el detalle
+                message.estado = false;
             }
 
             // Anula la selección del elemento en la lista

@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="sospect.Views.TutorialOverlayPage"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#F5F7FA">
+
+    <Grid>
+        <!-- Imagen de fondo del tutorial -->
+        <Image x:Name="TutorialImage" 
+               Source="{Binding CurrentImageSource}"
+               Aspect="AspectFill"
+               Opacity="0.8"
+               IsVisible="False"/>
+
+        <!-- Overlay con gradiente suave -->
+        <BoxView BackgroundColor="#FFFFFF" 
+                 Opacity="0.2"/>
+
+        <!-- Contenido principal -->
+        <ScrollView VerticalOptions="Fill">
+            <Grid>
+                <Grid.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnScreenTapped"/>
+                </Grid.GestureRecognizers>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="80"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="120"/>
+                </Grid.RowDefinitions>
+
+                <!-- Header con botón Skip -->
+                <Grid Grid.Row="0" Margin="20,15,20,10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Label Grid.Column="0" 
+                           Text="SOSpect Tutorial"
+                           TextColor="#1E3A8A"
+                           FontSize="22"
+                           FontAttributes="Bold"
+                           VerticalOptions="Center"/>
+
+                    <Button Grid.Column="1"
+                            x:Name="SkipButton"
+                            Text="{Binding SkipText}"
+                            BackgroundColor="Transparent"
+                            TextColor="#60A5FA"
+                            FontSize="16"
+                            BorderWidth="0"
+                            CornerRadius="15"
+                            Padding="20,8"
+                            MinimumWidthRequest="80"
+                            Clicked="OnSkipClicked"/>
+                </Grid>
+
+                <!-- Área de imagen destacada (opcional) -->
+                <Frame Grid.Row="1" 
+                       x:Name="HighlightFrame"
+                       BackgroundColor="White"
+                       BorderColor="Transparent"
+                       CornerRadius="20"
+                       Padding="15"
+                       Margin="25,10"
+                       IsVisible="{Binding HasHighlightImage}"
+                       VerticalOptions="Start"
+                       HasShadow="False">
+
+                    <Image Source="{Binding HighlightImageSource}"
+                           Aspect="AspectFit"
+                           BackgroundColor="Transparent"
+                           HeightRequest="200"
+                           VerticalOptions="Center"/>
+                </Frame>
+
+                <!-- Contenido de texto -->
+                <StackLayout Grid.Row="2" 
+                            Margin="30,15,30,20"
+                            Spacing="25">
+
+                    <!-- Indicador de progreso -->
+                    <StackLayout Orientation="Horizontal" 
+                                HorizontalOptions="Center"
+                                Spacing="6">
+                        <Frame x:Name="Progress1" BackgroundColor="#60A5FA" WidthRequest="22" HeightRequest="4" CornerRadius="2" HasShadow="False" Padding="0"/>
+                        <Frame x:Name="Progress2" BackgroundColor="#E5E7EB" WidthRequest="22" HeightRequest="4" CornerRadius="2" HasShadow="False" Padding="0"/>
+                        <Frame x:Name="Progress3" BackgroundColor="#E5E7EB" WidthRequest="22" HeightRequest="4" CornerRadius="2" HasShadow="False" Padding="0"/>
+                        <Frame x:Name="Progress4" BackgroundColor="#E5E7EB" WidthRequest="22" HeightRequest="4" CornerRadius="2" HasShadow="False" Padding="0"/>
+                        <Frame x:Name="Progress5" BackgroundColor="#E5E7EB" WidthRequest="22" HeightRequest="4" CornerRadius="2" HasShadow="False" Padding="0"/>
+                        <Frame x:Name="Progress6" BackgroundColor="#E5E7EB" WidthRequest="22" HeightRequest="4" CornerRadius="2" HasShadow="False" Padding="0"/>
+                        <Frame x:Name="Progress7" BackgroundColor="#E5E7EB" WidthRequest="22" HeightRequest="4" CornerRadius="2" HasShadow="False" Padding="0"/>
+                        <Frame x:Name="Progress8" BackgroundColor="#E5E7EB" WidthRequest="22" HeightRequest="4" CornerRadius="2" HasShadow="False" Padding="0"/>
+                        <Frame x:Name="Progress9" BackgroundColor="#E5E7EB" WidthRequest="22" HeightRequest="4" CornerRadius="2" HasShadow="False" Padding="0"/>
+                        <Frame x:Name="Progress10" BackgroundColor="#E5E7EB" WidthRequest="22" HeightRequest="4" CornerRadius="2" HasShadow="False" Padding="0"/>
+                        <Frame x:Name="Progress11" BackgroundColor="#E5E7EB" WidthRequest="22" HeightRequest="4" CornerRadius="2" HasShadow="False" Padding="0"/>
+                    </StackLayout>
+
+                    <!-- Título del paso -->
+                    <Label Text="{Binding CurrentStepTitle}"
+                           TextColor="#1E3A8A"
+                           FontSize="24"
+                           FontAttributes="Bold"
+                           HorizontalTextAlignment="Center"/>
+
+                    <!-- Descripción del paso -->
+                    <Label Text="{Binding CurrentStepDescription}"
+                           TextColor="#4B5563"
+                           FontSize="16"
+                           LineHeight="1.4"
+                           HorizontalTextAlignment="Center"
+                           Margin="0,0,0,10"/>
+
+                </StackLayout>
+
+                <!-- Botones de navegación -->
+                <Grid Grid.Row="3" 
+                      Margin="30,10,30,40">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="15"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Button Grid.Column="0"
+                            x:Name="PreviousButton"
+                            Text="{Binding PreviousText}"
+                            BackgroundColor="#F3F4F6"
+                            TextColor="#6B7280"
+                            BorderColor="Transparent"
+                            BorderWidth="0"
+                            CornerRadius="25"
+                            HeightRequest="50"
+                            FontSize="16"
+                            IsVisible="{Binding CanGoPrevious}"
+                            Clicked="OnPreviousClicked"/>
+
+                    <Button Grid.Column="2"
+                            x:Name="NextButton"
+                            Text="{Binding NextText}"
+                            BackgroundColor="#60A5FA"
+                            TextColor="White"
+                            CornerRadius="25"
+                            HeightRequest="50"
+                            FontSize="16"
+                            FontAttributes="Bold"
+                            Clicked="OnNextClicked"/>
+                </Grid>
+            </Grid>
+        </ScrollView>
+
+        <!-- Loading indicator (opcional) -->
+        <ActivityIndicator x:Name="LoadingIndicator"
+                          IsVisible="False"
+                          IsRunning="False"
+                          Color="#60A5FA"
+                          VerticalOptions="Center"
+                          HorizontalOptions="Center"/>
+    </Grid>
+</ContentPage>

@@ -16,6 +16,20 @@ namespace sospect.Models
         public string Plataforma { get; set; }
 
         public string Idioma { get; set; }
+        public string Pais { get; set; }
+
+        // ❌ CAMPOS ELIMINADOS (Movidos a modelo Emprendimiento.cs - 13-01-2026):
+        // public bool es_proveedor { get; set; }
+        // public string url_logo_emprendimiento { get; set; }
+        // public DateTime? fecha_actualizacion_logo { get; set; }
+        // public decimal reputacion_promedio { get; set; }
+        // public int total_calificaciones { get; set; }
+        // public int promedio_tiempo_respuesta_minutos { get; set; }
+        // public int promedio_tiempo_entrega_horas { get; set; }
+        // public decimal porcentaje_satisfaccion { get; set; }
+        // public int total_chats_mes_actual { get; set; }
+        // public int total_transacciones_exitosas { get; set; }
+        // public List<Badge> badges_ganados { get; set; }
     }
 }
 

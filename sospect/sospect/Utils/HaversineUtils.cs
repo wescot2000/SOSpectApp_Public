@@ -1,4 +1,5 @@
-﻿using System;
+using System;
+
 namespace sospect.Utils
 {
     public static class HaversineUtils
@@ -25,4 +26,3 @@ namespace sospect.Utils
         }
     }
 }
-

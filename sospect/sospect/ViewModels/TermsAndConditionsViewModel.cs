@@ -5,12 +5,15 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using Newtonsoft.Json;
 using sospect.Helpers;
+using sospect.Interfaces;
 using sospect.Models;
 using sospect.Services;
 using sospect.Utils;
 using sospect.Views;
-using Xamarin.Essentials;
-using Xamarin.Forms;
+using sospect.Views.Popups;
+using Microsoft.Maui.Storage;
+using Microsoft.Maui.Controls;
+using CommunityToolkit.Maui.Views;
 
 namespace sospect.ViewModels
 {
@@ -52,67 +55,124 @@ namespace sospect.ViewModels
             }
             catch (Exception ex)
             {
-                var properties = new Dictionary<string, string> {
-                        { "Object", "TermsAndConditionsViewModel" },
-                        { "Method", "ObtenerContratoUsuario" }
-                    };
-                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
+                CrashlyticsHelper.LogError(ex, "TermsAndConditionsViewModel", "LoadTermsAndConditionsAsync");
             }
-            
+
             IsRunning = false;
         }
 
         private async void AcceptTerms()
         {
-            var LblExitoEnAceptacion = TranslateExtension.Translate("LblExitoEnAceptacion");
-            var LblFalloEnAceptacion = TranslateExtension.Translate("LblFalloEnAceptacion");
-            var LabelInformacion = TranslateExtension.Translate("LabelInformacion");
-            var LabelError = TranslateExtension.Translate("LabelError");
-            var LabelOK = TranslateExtension.Translate("LabelOK");
-            var MensajeError = TranslateExtension.Translate("MensajeError");
-
             IsRunning = true;
+
+            string LblExitoEnAceptacion = await TranslateExtension.TranslateAsync("LblExitoEnAceptacion");
+            string LblFalloEnAceptacion = await TranslateExtension.TranslateAsync("LblFalloEnAceptacion");
+            string LabelInformacion = await TranslateExtension.TranslateAsync("LabelInformacion");
+            string LabelError = await TranslateExtension.TranslateAsync("LabelError");
+            string LabelOK = await TranslateExtension.TranslateAsync("LabelOK");
+            string MensajeError = await TranslateExtension.TranslateAsync("MensajeError");
+
             try
             {
+                // LOG: Antes de llamar al API
+                System.Diagnostics.Debug.WriteLine("[TermsViewModel] Llamando AceptarContratoDeUsuario...");
+
                 var response = await ApiService.AceptarContratoDeUsuario(new AcceptContractRequest()
                 {
                     PIpAceptacion = InternetUtil.GetPublicIpAddress(),
                     PUserIdThirdparty = App.persona.user_id_thirdparty
                 });
 
+                // LOG: Respuesta del API
+                System.Diagnostics.Debug.WriteLine($"[TermsViewModel] Response.IsSuccess: {response.IsSuccess}");
+                System.Diagnostics.Debug.WriteLine($"[TermsViewModel] Response.Message: {response.Message}");
+
                 if (response.IsSuccess)
                 {
-                    await App.Current.MainPage.DisplayAlert(LabelInformacion, LblExitoEnAceptacion, LabelOK);
-                    App.Current.MainPage = new NavigationPage(new SospectTabs()) { BarBackgroundColor = Color.Black };
+                    // CRÍTICO: Actualizar cache local para que HomePage no vuelva a mostrar el contrato
+                    try
+                    {
+                        var parametrosString = Preferences.Get("ParametrosUsuario", "");
+                        if (!string.IsNullOrEmpty(parametrosString))
+                        {
+                            var parametros = JsonConvert.DeserializeObject<ParametrosUsuario>(parametrosString);
+                            parametros.FlagUsuarioDebeFirmarCto = false;
+                            Preferences.Set("ParametrosUsuario", JsonConvert.SerializeObject(parametros));
+                            System.Diagnostics.Debug.WriteLine("[TermsViewModel] Cache local actualizado: FlagUsuarioDebeFirmarCto = false");
+                        }
+                    }
+                    catch (Exception cacheEx)
+                    {
+                        System.Diagnostics.Debug.WriteLine($"[TermsViewModel] Error actualizando cache: {cacheEx.Message}");
+                    }
+
+                    // LOG: Mostrando popup de éxito
+                    System.Diagnostics.Debug.WriteLine("[TermsViewModel] Mostrando popup de éxito...");
+
+                    // MODERNO: Usar popup personalizado en lugar de DisplayAlert
+                    await ModernAlerts.ShowSuccess(LabelInformacion, LblExitoEnAceptacion);
+
+                    // LOG: Popup cerrado - esperando antes de navegar
+                    System.Diagnostics.Debug.WriteLine("[TermsViewModel] Popup cerrado - esperando 300ms...");
+
+                    // CRÍTICO: Delay para garantizar que el popup se cerró completamente en iOS
+                    await Task.Delay(300);
+
+                    // LOG: Navegando a SospectTabs
+                    System.Diagnostics.Debug.WriteLine("[TermsViewModel] Cambiando MainPage a SospectTabs...");
+
+                    // CAMBIO: Usar InvokeOnMainThreadAsync en lugar de BeginInvokeOnMainThread
+                    // Navegar después de cerrar el popup
+                    await MainThread.InvokeOnMainThreadAsync(() =>
+                    {
+                        // NOTA: SospectTabs (TabbedPage) ya tiene NavigationPages internos.
+                        // NO envolver en otro NavigationPage para evitar doble barra de navegación.
+                        App.Current.MainPage = new SospectTabs();
+                    });
+
+                    // LOG: Navegación completada
+                    System.Diagnostics.Debug.WriteLine("[TermsViewModel] MainPage cambiado exitosamente");
                 }
                 else
                 {
-                    await App.Current.MainPage.DisplayAlert(LabelError, LblFalloEnAceptacion, LabelOK);
+                    // LOG: Error en la respuesta
+                    System.Diagnostics.Debug.WriteLine($"[TermsViewModel] Error en respuesta: {response.Message}");
+
+                    // MODERNO: Error también con popup personalizado
+                    await ModernAlerts.ShowError(LabelError, LblFalloEnAceptacion);
                 }
             }
             catch (Exception ex)
             {
-                await App.Current.MainPage.DisplayAlert(LabelInformacion, MensajeError, LabelOK);
-                var properties = new Dictionary<string, string> {
-                        { "Object", "TermsAndConditionsViewModel" },
-                        { "Method", "AceptarContratoDeUsuario" }
-                    };
-                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
+                // LOG: Excepción capturada
+                System.Diagnostics.Debug.WriteLine($"[TermsViewModel] EXCEPTION: {ex.Message}");
+                System.Diagnostics.Debug.WriteLine($"[TermsViewModel] StackTrace: {ex.StackTrace}");
+
+                // MODERNO: Error de conexión con popup personalizado
+                await ModernAlerts.ShowError(LabelError, MensajeError);
+                CrashlyticsHelper.LogError(ex, "TermsAndConditionsViewModel", "AcceptTerms");
             }
             finally
             {
+                // LOG: Finally block
+                System.Diagnostics.Debug.WriteLine("[TermsViewModel] Finally: IsRunning = false");
                 IsRunning = false;
             }
-            
         }
 
         private async void DeclineTerms()
         {
-            var LblDeclinacionAceptacion = TranslateExtension.Translate("LblDeclinacionAceptacion");
-            var LabelInformacion = TranslateExtension.Translate("LabelInformacion");
-            var LabelOK = TranslateExtension.Translate("LabelOK");
-            await App.Current.MainPage.DisplayAlert(LabelInformacion, LblDeclinacionAceptacion, LabelOK);
+            var LblDeclinacionAceptacion = await TranslateExtension.TranslateAsync("LblDeclinacionAceptacion");
+            var LabelInformacion = await TranslateExtension.TranslateAsync("LabelInformacion");
+
+            // MODERNO: Warning popup en lugar de DisplayAlert básico
+            await ModernAlerts.ShowWarning(LabelInformacion, LblDeclinacionAceptacion);
+
+            // Cerrar aplicación después del popup
             System.Diagnostics.Process.GetCurrentProcess().CloseMainWindow();
         }
+
+        // ELIMINAR: Ya no necesitamos este método porque usamos ModernAlerts
+        // private async Task ShowModernAlert(ModernAlertConfig config, Action onClosed = null) { ... }
     }
 }

@@ -1,10 +1,10 @@
-﻿using System;
+using System;
+
 namespace sospect.Interfaces
 {
-	public interface ISettingsService
-	{
+    public interface ISettingsService
+    {
         void OpenSettings();
         void RegisterDeviceAgain();
     }
 }
-

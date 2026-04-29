@@ -1,73 +1,140 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="sospect.Views.CompleteSubscriptionPage"
              xmlns:fonts="clr-namespace:sospect.Resources.Fonts;assembly=sospect"
              xmlns:helpers="clr-namespace:sospect.Helpers"
-             BackgroundColor="White"
+             BackgroundColor="#F8F9FA"
              Title="{helpers:TranslateExtension Text='CompletarSubscripcion'}">
-    <ContentPage.Content>
-        <Grid>
-            <Grid Margin="0,20,0,0">
-                <ListView x:Name="ApprovedSubscriptionsListView" ItemsSource="{Binding ApprovedSubscriptions}" BackgroundColor="White" HasUnevenRows="True" SelectionMode="None">
-                    <ListView.ItemTemplate>
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="SubscriptionCardStyle" TargetType="Frame">
+                <Setter Property="BackgroundColor" Value="White" />
+                <Setter Property="HasShadow" Value="True" />
+                <Setter Property="CornerRadius" Value="12" />
+                <Setter Property="Padding" Value="16" />
+                <Setter Property="Margin" Value="16,8" />
+                <Setter Property="BorderColor" Value="Transparent" />
+            </Style>
+
+            <Style x:Key="LabelHeaderStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="12" />
+                <Setter Property="TextColor" Value="#7F8C8D" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="Margin" Value="0,0,0,4" />
+            </Style>
+
+            <Style x:Key="LabelValueStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="14" />
+                <Setter Property="TextColor" Value="#2C3E50" />
+                <Setter Property="Margin" Value="0,0,0,12" />
+            </Style>
+
+            <Style x:Key="ActionButtonStyle" TargetType="Frame">
+                <Setter Property="BackgroundColor" Value="#4A90E2" />
+                <Setter Property="HasShadow" Value="False" />
+                <Setter Property="CornerRadius" Value="8" />
+                <Setter Property="Padding" Value="0" />
+                <Setter Property="MinimumHeightRequest" Value="44" />
+                <Setter Property="BorderColor" Value="Transparent" />
+                <Setter Property="Margin" Value="0,12,0,0" />
+            </Style>
+
+            <Style x:Key="ActionButtonLabelStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="14" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="HorizontalTextAlignment" Value="Center" />
+                <Setter Property="VerticalTextAlignment" Value="Center" />
+            </Style>
+
+            <Style x:Key="EmptyStateLabelStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="16" />
+                <Setter Property="TextColor" Value="#7F8C8D" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="HorizontalTextAlignment" Value="Center" />
+                <Setter Property="Margin" Value="20" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Grid>
+        <!-- Lista de suscripciones aprobadas -->
+        <ScrollView IsVisible="{Binding IsListEmpty, Converter={StaticResource InverseBooleanConverter}}">
+            <StackLayout Spacing="0" Padding="0,8">
+                <CollectionView x:Name="ApprovedSubscriptionsListView" 
+                                ItemsSource="{Binding ApprovedSubscriptions}"
+                                SelectionMode="None">
+                    <CollectionView.ItemTemplate>
                         <DataTemplate>
-                            <ViewCell>
-                                <Frame Padding="5" Margin="5" CornerRadius="10" BackgroundColor="White"  HasShadow="True">
-                                    <Grid>
-                                        <Grid.RowDefinitions>
-                                            <RowDefinition Height="Auto" />
-                                            <RowDefinition Height="Auto" />
-                                            <RowDefinition Height="Auto" />
-                                        </Grid.RowDefinitions>
-                                        <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="Auto" />
-                                            <ColumnDefinition Width="*" />
-                                        </Grid.ColumnDefinitions>
-                                        <Label Grid.Row="0" Grid.Column="0" Text="{helpers:TranslateExtension Text='LblUsuarioAprobador'}" TextColor="Gray" FontAttributes="Bold" />
-                                        <Label Grid.Row="0" Grid.Column="1" TextColor="Gray"  Text="{Binding Aprobador}" />
-                                        <Label Grid.Row="1" Grid.Column="0" Text="{helpers:TranslateExtension Text='LblFechaAprobacion'}" TextColor="Gray" FontAttributes="Bold" />
-                                        <Label Grid.Row="1" Grid.Column="1" TextColor="Gray"  Text="{Binding FechaAprobado}" />
-                                        <Frame Grid.Row="2" Grid.ColumnSpan="2" Padding="5" BorderColor="Black" BackgroundColor="LightGray" Margin="0,20,0,0" HorizontalOptions="Center" HeightRequest="35" WidthRequest="350" CornerRadius="10">
-                                            <Frame.GestureRecognizers>
-                                                <TapGestureRecognizer Command="{Binding Path=BindingContext.CompleteSubscriptionCommand, Source={x:Reference ApprovedSubscriptionsListView}}"  CommandParameter="{Binding .}" NumberOfTapsRequired="1" />
-                                            </Frame.GestureRecognizers>
-                                            <Label Text="{helpers:TranslateExtension Text='CompletarSubsc'}" 
-                                                   TextColor="Black"
-                                                   LineBreakMode="WordWrap"
-                                                   HorizontalOptions="CenterAndExpand"
-                                                   VerticalOptions="CenterAndExpand"
-                                                   HorizontalTextAlignment="Center"
-                                                   VerticalTextAlignment="Center" />
-                                            </Frame>
-                                    </Grid>
-                                </Frame>
-                            </ViewCell>
+                            <Frame Style="{StaticResource SubscriptionCardStyle}">
+                                <StackLayout Spacing="8">
+                                    <!-- Usuario aprobador -->
+                                    <StackLayout Spacing="4">
+                                        <Label Text="{helpers:TranslateExtension Text='LblUsuarioAprobador'}"
+                                               Style="{StaticResource LabelHeaderStyle}" />
+                                        <Label Text="{Binding Aprobador}"
+                                               Style="{StaticResource LabelValueStyle}" />
+                                    </StackLayout>
+
+                                    <!-- Fecha de aprobación -->
+                                    <StackLayout Spacing="4">
+                                        <Label Text="{helpers:TranslateExtension Text='LblFechaAprobacion'}"
+                                               Style="{StaticResource LabelHeaderStyle}" />
+                                        <Label Text="{Binding FechaAprobado}"
+                                               Style="{StaticResource LabelValueStyle}" />
+                                    </StackLayout>
+
+                                    <!-- Separador -->
+                                    <BoxView HeightRequest="1" 
+                                             BackgroundColor="#E8E8E8" 
+                                             Margin="0,4,0,8" />
+
+                                    <!-- Botón completar suscripción -->
+                                    <Frame Style="{StaticResource ActionButtonStyle}">
+                                        <Frame.GestureRecognizers>
+                                            <TapGestureRecognizer Command="{Binding Path=BindingContext.CompleteSubscriptionCommand, Source={x:Reference ApprovedSubscriptionsListView}}"
+                                                                  CommandParameter="{Binding .}" />
+                                        </Frame.GestureRecognizers>
+                                        <Label Text="{helpers:TranslateExtension Text='CompletarSubsc'}"
+                                               Style="{StaticResource ActionButtonLabelStyle}" />
+                                    </Frame>
+                                </StackLayout>
+                            </Frame>
                         </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>
-                <Label
-                x:Name="EmptyListLabel"
-                Text="{helpers:TranslateExtension Text='LblNoHayRegistros'}"
-                FontSize="18"
-                TextColor="Gray"
-                HorizontalOptions="Center"
-                VerticalOptions="Center"
-                IsVisible="{Binding IsListEmpty}" />
-            </Grid>
-            <Grid BackgroundColor="Black"
-                  Opacity="0.5"
-                  HorizontalOptions="FillAndExpand"
-                  VerticalOptions="FillAndExpand"
-                  IsVisible="{Binding IsRunning}">
-                <ActivityIndicator VerticalOptions="Center"
-                                   HorizontalOptions="Center"
-                                   HeightRequest="50"
-                                   WidthRequest="50"
-                                   Color="DarkBlue"
-                                   IsRunning="{Binding IsRunning}">
-                </ActivityIndicator>
-            </Grid>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </StackLayout>
+        </ScrollView>
+
+        <!-- Estado vacío -->
+        <StackLayout IsVisible="{Binding IsListEmpty}"
+                     VerticalOptions="Center"
+                     HorizontalOptions="Center"
+                     Padding="40">
+            <Label Text="{x:Static fonts:IconFont.Check}"
+                   FontFamily="{StaticResource IcoMoonFamily}"
+                   FontSize="64"
+                   TextColor="#BDC3C7"
+                   HorizontalOptions="Center"
+                   Margin="0,0,0,16" />
+            <Label Text="{helpers:TranslateExtension Text='LblNoHayRegistros'}"
+                   Style="{StaticResource EmptyStateLabelStyle}" />
+        </StackLayout>
+
+        <!-- Loading overlay -->
+        <Grid BackgroundColor="#80000000"
+              IsVisible="{Binding IsRunning}">
+            <ActivityIndicator VerticalOptions="Center"
+                               HorizontalOptions="Center"
+                               HeightRequest="50"
+                               WidthRequest="50"
+                               Color="#4A90E2"
+                               IsRunning="{Binding IsRunning}" />
         </Grid>
-    </ContentPage.Content>
+    </Grid>
 </ContentPage>

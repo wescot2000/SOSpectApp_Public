@@ -7,11 +7,12 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using Newtonsoft.Json;
 using sospect.Helpers;
-using Xamarin.Forms;
+using Microsoft.Maui.Controls;
 using sospect.Models;
 using sospect.Services;
 using sospect.Utils;
 using System.Linq;
+using sospect.Interfaces;
 
 namespace sospect.ViewModels
 {
@@ -46,7 +47,7 @@ namespace sospect.ViewModels
         {
             RelationshipTypes = new ObservableCollection<RelationshipType>();
             RequestPermissionCommand = new Command(async () => await RequestPermissionAsync());
-            Device.BeginInvokeOnMainThread(async () => await LoadRelationshipTypes());
+            MainThread.BeginInvokeOnMainThread(async () => await LoadRelationshipTypes());
         }
 
 
@@ -55,27 +56,38 @@ namespace sospect.ViewModels
             IsRunning = true;
             try
             {
+                System.Diagnostics.Debug.WriteLine($"[DIAG-ProtectedSubscriptionVM] LoadRelationshipTypes INICIANDO");
+
                 var relationshipTypes = await ApiService.ObtenerTiposRelaciones();
-                
+
+                System.Diagnostics.Debug.WriteLine($"[DIAG-ProtectedSubscriptionVM] relationshipTypes es null: {relationshipTypes == null}");
+                System.Diagnostics.Debug.WriteLine($"[DIAG-ProtectedSubscriptionVM] relationshipTypes count: {relationshipTypes?.Count ?? 0}");
 
                 if (relationshipTypes != null)
                 {
+                    System.Diagnostics.Debug.WriteLine($"[DIAG-ProtectedSubscriptionVM] Agregando {relationshipTypes.Count} tipos de relacion");
                     foreach (RelationshipType relationshipType in relationshipTypes)
                     {
+                        System.Diagnostics.Debug.WriteLine($"[DIAG-ProtectedSubscriptionVM] Tipo: Id={relationshipType?.TiporelacionId}, Desc={relationshipType?.DescripcionTiporel ?? "null"}");
                         RelationshipTypes.Add(relationshipType);
                     }
 
                     // Establecer el primer elemento de la lista como el valor predeterminado del Picker
                     SelectedRelationshipType = RelationshipTypes.FirstOrDefault(rt => rt.TiporelacionId == 183);
+                    System.Diagnostics.Debug.WriteLine($"[DIAG-ProtectedSubscriptionVM] SelectedRelationshipType: {SelectedRelationshipType?.TiporelacionId}");
                 }
+                else
+                {
+                    System.Diagnostics.Debug.WriteLine($"[DIAG-ProtectedSubscriptionVM] relationshipTypes es NULL - posible error en API");
+                }
+
+                System.Diagnostics.Debug.WriteLine($"[DIAG-ProtectedSubscriptionVM] LoadRelationshipTypes COMPLETADO - Total: {RelationshipTypes.Count}");
             }
             catch (Exception ex)
             {
-                var properties = new Dictionary<string, string> {
-                        { "Object", "ProtectedSubscriptionPageViewModel" },
-                        { "Method", "ObtenerTiposRelaciones" }
-                        };
-                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
+                System.Diagnostics.Debug.WriteLine($"[DIAG-ProtectedSubscriptionVM] EXCEPCION en LoadRelationshipTypes: {ex.GetType().Name}: {ex.Message}");
+                System.Diagnostics.Debug.WriteLine($"[DIAG-ProtectedSubscriptionVM] StackTrace: {ex.StackTrace}");
+                CrashlyticsHelper.LogError(ex, "ProtectedSubscriptionPageViewModel", "LoadRelationshipTypes");
             }
             finally
             {
@@ -87,18 +99,23 @@ namespace sospect.ViewModels
 
         private async Task RequestPermissionAsync()
         {
-            var LabelError = TranslateExtension.Translate("LabelError");
-            var LabelExito = TranslateExtension.Translate("LabelExito");
-            var LblCompleteCampos = TranslateExtension.Translate("LblCompleteCampos");
-            var LabelOK = TranslateExtension.Translate("LabelOK");
-            var LblProcesarSolicitud = TranslateExtension.Translate("LblProcesarSolicitud");
-            var LabelInformacion = TranslateExtension.Translate("LabelInformacion");
-            var LblSuspensionRealizada = TranslateExtension.Translate("LblSuspensionRealizada");
-            var MensajeError = TranslateExtension.Translate("MensajeError");
+            System.Diagnostics.Debug.WriteLine($"[DIAG-RequestPermission] ===== INICIO RequestPermissionAsync =====");
+            System.Diagnostics.Debug.WriteLine($"[DIAG-RequestPermission] UserId='{UserId}', SelectedRelationshipType={SelectedRelationshipType?.TiporelacionId}, IsRunning={IsRunning}");
+
+            var LabelError = await TranslateExtension.TranslateAsync("LabelError");
+            var LabelExito = await TranslateExtension.TranslateAsync("LabelExito");
+            var LblCompleteCampos = await TranslateExtension.TranslateAsync("LblCompleteCampos");
+            var LabelOK = await TranslateExtension.TranslateAsync("LabelOK");
+            //var LblProcesarSolicitud = await TranslateExtension.TranslateAsync("LblProcesarSolicitud");
+            var LabelInformacion = await TranslateExtension.TranslateAsync("LabelInformacion");
+            //var LblSuspensionRealizada = await TranslateExtension.TranslateAsync("LblSuspensionRealizada");
+            var MensajeError = await TranslateExtension.TranslateAsync("MensajeError");
+            var MsgSolicitudProtegidoPendiente = await TranslateExtension.TranslateAsync("MsgSolicitudProtegidoPendiente");
 
             if (string.IsNullOrEmpty(UserId) || SelectedRelationshipType == null)
             {
-                await Application.Current.MainPage.DisplayAlert(LabelError, LblCompleteCampos, LabelOK);
+                System.Diagnostics.Debug.WriteLine($"[DIAG-RequestPermission] VALIDACION FALLIDA - UserId vacío o relación nula. Retornando.");
+                await ModernAlerts.ShowError(LabelError, LblCompleteCampos);
                 return;
             }
 
@@ -111,46 +128,86 @@ namespace sospect.ViewModels
                 TiporelacionId = SelectedRelationshipType.TiporelacionId
             };
 
+            System.Diagnostics.Debug.WriteLine($"[DIAG-RequestPermission] Modelo creado: Protector='{requestPermissionModel.PUserIdThirdpartyProtector}', Protegido='{requestPermissionModel.PUserIdThirdpartyProtegido}', TiporelacionId={requestPermissionModel.TiporelacionId}, Idioma='{requestPermissionModel.Idioma}'");
+
             IsRunning = true;
+            bool navigatedAway = false;
+            System.Diagnostics.Debug.WriteLine($"[DIAG-RequestPermission] IsRunning=true. Llamando a ApiService.RequestPermissionAsync...");
             try
             {
                 ResponseMessage response = await ApiService.RequestPermissionAsync(requestPermissionModel);
-                
+
+                System.Diagnostics.Debug.WriteLine($"[DIAG-RequestPermission] Respuesta recibida. response==null: {response == null}");
+                System.Diagnostics.Debug.WriteLine($"[DIAG-RequestPermission] response.IsSuccess={response?.IsSuccess}, response.Message='{response?.Message}', response.Data='{response?.Data}'");
 
                 if (response.IsSuccess)
                 {
+                    System.Diagnostics.Debug.WriteLine($"[DIAG-RequestPermission] IsSuccess=TRUE. Traduciendo mensaje de salida...");
                     var mensajeSalida = "";
                     try
                     {
                         mensajeSalida = response.Message == null ? null : TranslateExtension.Translate(response.Message.Replace(" ", ""));
+                        System.Diagnostics.Debug.WriteLine($"[DIAG-RequestPermission] mensajeSalida traducido='{mensajeSalida}'");
                     }
-                    catch (Exception)
+                    catch (Exception exTrans)
                     {
                         mensajeSalida = response.Message;
+                        System.Diagnostics.Debug.WriteLine($"[DIAG-RequestPermission] EXCEPCION al traducir mensaje: {exTrans.Message}. Usando mensaje original: '{mensajeSalida}'");
                     }
-                    IsResultVisible = true;
-                    await App.Current.MainPage.Navigation.PopAsync();
-                    await Application.Current.MainPage.DisplayAlert(LabelExito, mensajeSalida, LabelOK);
+                    System.Diagnostics.Debug.WriteLine($"[DIAG-RequestPermission] ANTES de ShowSuccess...");
+                    await ModernAlerts.ShowSuccess(LabelExito, mensajeSalida);
+                    System.Diagnostics.Debug.WriteLine($"[DIAG-RequestPermission] DESPUES de ShowSuccess. ANTES de PopToRootAsync...");
+                    navigatedAway = true;
+                    await GetCurrentTabNavigation().PopAsync();
+                    System.Diagnostics.Debug.WriteLine($"[DIAG-RequestPermission] DESPUES de PopToRootAsync.");
                 }
                 else
                 {
-                    await Application.Current.MainPage.DisplayAlert(LabelError, LblProcesarSolicitud, LabelOK);
+                    System.Diagnostics.Debug.WriteLine($"[DIAG-RequestPermission] IsSuccess=FALSE. response.Data='{response?.Data}', fallback='{MsgSolicitudProtegidoPendiente}'");
+                    // response.Data contiene el mensaje descriptivo ya traducido por el servidor (ej: error de BD).
+                    // Si viene vacío, se usa el fallback local MsgSolicitudProtegidoPendiente.
+                    var mensajeDetalle = !string.IsNullOrWhiteSpace(response.Data)
+                        ? response.Data
+                        : MsgSolicitudProtegidoPendiente;
+                    System.Diagnostics.Debug.WriteLine($"[DIAG-RequestPermission] mensajeDetalle a mostrar='{mensajeDetalle}'. ANTES de ShowError...");
+                    await ModernAlerts.ShowError(LabelError, mensajeDetalle);
+                    System.Diagnostics.Debug.WriteLine($"[DIAG-RequestPermission] DESPUES de ShowError.");
                 }
             }
             catch (Exception ex)
             {
-                await App.Current.MainPage.DisplayAlert(LabelInformacion, MensajeError, LabelOK);
-                var properties = new Dictionary<string, string> {
-                        { "Object", "ProtectedSubscriptionPageViewModel" },
-                        { "Method", "RequestPermissionAsync" }
-                        };
-                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
+                System.Diagnostics.Debug.WriteLine($"[DIAG-RequestPermission] EXCEPCION CAPTURADA: {ex.GetType().Name}: {ex.Message}");
+                System.Diagnostics.Debug.WriteLine($"[DIAG-RequestPermission] StackTrace: {ex.StackTrace}");
+                // Si ya navegamos exitosamente (PopAsync ejecutado), ignorar la excepción —
+                // puede ser un error de contexto de navegación de iOS que no tiene impacto real.
+                if (!navigatedAway)
+                {
+                    await ModernAlerts.ShowWarning(LabelInformacion, MensajeError);
+                    System.Diagnostics.Debug.WriteLine($"[DIAG-RequestPermission] DESPUES de ShowWarning (catch).");
+                }
+                else
+                {
+                    System.Diagnostics.Debug.WriteLine($"[DIAG-RequestPermission] Excepcion post-navegacion ignorada (navigatedAway=true).");
+                }
+                CrashlyticsHelper.LogError(ex, "ProtectedSubscriptionPageViewModel", "RequestPermissionAsync");
             }
             finally
             {
                 IsRunning = false;
+                System.Diagnostics.Debug.WriteLine($"[DIAG-RequestPermission] finally: IsRunning=false. ===== FIN RequestPermissionAsync =====");
             }
-            
+
+        }
+
+        private INavigation GetCurrentTabNavigation()
+        {
+            if (Application.Current.MainPage is TabbedPage tabbedPage)
+            {
+                if (tabbedPage.CurrentPage is NavigationPage navPage)
+                    return navPage.Navigation;
+                return tabbedPage.CurrentPage?.Navigation ?? tabbedPage.Navigation;
+            }
+            return Application.Current.MainPage.Navigation;
         }
     }
 }

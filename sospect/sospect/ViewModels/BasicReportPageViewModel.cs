@@ -3,15 +3,16 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Input;
-using GalaSoft.MvvmLight.Command;
+using CommunityToolkit.Mvvm.Input;
 using sospect.Models;
 using sospect.Services;
 using SkiaSharp;
-using Microcharts;
+using Microcharts; //  DESCOMENTADO: Microcharts está disponible en .csproj
 using System.Collections.Generic;
-using Xamarin.Forms;
+using Microsoft.Maui.Controls;
 using sospect.Views;
-
+using sospect.Interfaces;
+using sospect.Helpers;
 
 namespace sospect.ViewModels
 {
@@ -20,7 +21,9 @@ namespace sospect.ViewModels
         public ICommand TipoAlarmasCommand { get; }
         public ICommand EfectividadAlarmasCommand { get; }
         public ICommand MetricasBasicasCommand { get; }
+        public ICommand HistorialCommand { get; }
 
+        //  RESTAURADO: Chart property descomentada
         private Chart _chart;
         public Chart Chart
         {
@@ -55,7 +58,6 @@ namespace sospect.ViewModels
             get => this._EfectividadAlarmas;
             set => this.SetValue(ref this._EfectividadAlarmas, value);
         }
-
 
         private string _descripcionCompleta = "{helpers:TranslateExtension Text='LblReporteBasicoDescripcion'}";
         public string DescripcionCompleta
@@ -108,12 +110,19 @@ namespace sospect.ViewModels
             TipoAlarmasCommand = new Command(async () => await TipoAlarmasClicked(navigation));
             EfectividadAlarmasCommand = new Command(async () => await EfectividadAlarmasClicked(navigation));
             MetricasBasicasCommand = new Command(async () => await MetricasBasicasClicked(navigation));
+            HistorialCommand = new Command(() => HistorialClicked(navigation));
         }
 
         private async Task TipoAlarmasClicked(INavigation navigation)
         {
             var BasicReportTiposAlarmaPage = new BasicReportTiposAlarmaPage();
             await navigation.PushAsync(BasicReportTiposAlarmaPage);
+        }
+
+        private async Task HistorialClicked(INavigation navigation)
+        {
+            var HistorialPage = new HistorialPage();
+            await navigation.PushAsync(HistorialPage);
         }
 
         private async Task EfectividadAlarmasClicked(INavigation navigation)
@@ -158,15 +167,11 @@ namespace sospect.ViewModels
             try
             {
                 var metricasBasicasReporte = await ApiService.ObtenerReportBasMetricasSueltas();
-                MetricasBasicasReporte = new ObservableCollection<MetricasBasicasReporte>(metricasBasicasReporte);          
+                MetricasBasicasReporte = new ObservableCollection<MetricasBasicasReporte>(metricasBasicasReporte);
             }
             catch (Exception ex)
             {
-                var properties = new Dictionary<string, string> {
-                        { "Object", "BasicReportPageViewModel" },
-                        { "Method", "ObtenerReportBasMetricasSueltas" }
-                    };
-                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
+                CrashlyticsHelper.LogError(ex, "BasicReportPageViewModel", "CargarMetricasBasicasReporte");
             }
             finally
             {
@@ -192,18 +197,13 @@ namespace sospect.ViewModels
             }
             catch (Exception ex)
             {
-                var properties = new Dictionary<string, string> {
-                        { "Object", "BasicReportPageViewModel" },
-                        { "Method", "ObtenerPromedioEfectivoAlarmas" }
-                    };
-                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
+                CrashlyticsHelper.LogError(ex, "BasicReportPageViewModel", "CargarPromedioEfectivoAlarmas");
             }
             finally
             {
                 IsRunning = false;
                 apiCallsInProgress--;
             }
-            
         }
 
         private async Task CargarTiposAlarmaReporte()
@@ -218,64 +218,106 @@ namespace sospect.ViewModels
             IsRunning = true;
             try
             {
+                Console.WriteLine($"[BasicReport-DIAG] CargarTiposAlarmaReporte INICIO - IsMainThread={Microsoft.Maui.ApplicationModel.MainThread.IsMainThread} ThreadId={System.Threading.Thread.CurrentThread.ManagedThreadId}");
+
                 var tiposAlarmaReporte = await ApiService.ObtenerReportBasParticipacionTipoAlarma();
+
+                Console.WriteLine($"[BasicReport-DIAG] API retornó {tiposAlarmaReporte?.Count ?? 0} items - IsMainThread={Microsoft.Maui.ApplicationModel.MainThread.IsMainThread} ThreadId={System.Threading.Thread.CurrentThread.ManagedThreadId}");
+
                 int index = 0;
-                TiposAlarmaReporte = new ObservableCollection<TipoAlarmaReporteConColor>(
+                var coleccion = new ObservableCollection<TipoAlarmaReporteConColor>(
                     tiposAlarmaReporte.Select(tipo => new TipoAlarmaReporteConColor
                     {
                         TipoAlarma = tipo,
                         Color = GenerateColor(index++, tiposAlarmaReporte.Count)
                     }));
 
-                // Ahora que los datos están cargados, creamos la gráfica
-                CreateChart();
+                Console.WriteLine($"[BasicReport-DIAG] Colección creada con {coleccion.Count} items. Primer DescripcionTraducida='{coleccion.FirstOrDefault()?.DescripcionTraducida}'");
+
+                // 2026-04-12: Asegurar que la asignación al BindableLayout ocurra en el hilo principal.
+                //             En iOS, actualizaciones de UI desde hilos de background se ignoran silenciosamente.
+                await Microsoft.Maui.ApplicationModel.MainThread.InvokeOnMainThreadAsync(() =>
+                {
+                    Console.WriteLine($"[BasicReport-DIAG] Asignando TiposAlarmaReporte en main thread - IsMainThread={Microsoft.Maui.ApplicationModel.MainThread.IsMainThread}");
+                    TiposAlarmaReporte = coleccion;
+                    Console.WriteLine($"[BasicReport-DIAG] TiposAlarmaReporte asignado. Count={TiposAlarmaReporte?.Count}");
+                    CreateChart();
+                });
             }
             catch (Exception ex)
             {
-                var properties = new Dictionary<string, string> {
-                        { "Object", "BasicReportPageViewModel" },
-                        { "Method", "ObtenerReportBasParticipacionTipoAlarma" }
-                    };
-                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
+                CrashlyticsHelper.LogError(ex, "BasicReportPageViewModel", "CargarTiposAlarmaReporte");
             }
             finally
             {
                 IsRunning = false;
                 apiCallsInProgress--;
-            }            
+            }
         }
 
         private SKColor GenerateColor(int index, int total)
         {
             var hue = (index * 360 / total) % 360;
-            //return SKColor.FromHsl(hue, 100, 50); // 50 will give you mid-toned colors.
             var lightness = 35 + ((index * 30 / total) % 65); // produces lightness between 35 and 65
 
             return SKColor.FromHsl(hue, 100, lightness);
         }
 
-
         public class TipoAlarmaReporteConColor
         {
             public TipoAlarmaReporte TipoAlarma { get; set; }
             public SKColor Color { get; set; }
+
+            // 2026-04-12: Propiedades directas para evitar binding anidado (TipoAlarma.XXX)
+            //             en iOS con BindableLayout. Los bindings anidados a propiedades
+            //             computadas sin INotifyPropertyChanged se evalúan pero el resultado
+            //             no se aplica al Label en iOS. Usar binding directo es el patrón
+            //             que funciona (mismo enfoque de TipoAlarmaItemConColor en ReporteAutoridadViewModel).
+            public string DescripcionTraducida
+            {
+                get
+                {
+                    var valor = TipoAlarma?.DescripcionTraducida ?? string.Empty;
+                    Console.WriteLine($"[BasicReport-DIAG] TipoAlarmaReporteConColor.DescripcionTraducida getter - valor='{valor}' IsMainThread={Microsoft.Maui.ApplicationModel.MainThread.IsMainThread} ThreadId={System.Threading.Thread.CurrentThread.ManagedThreadId}");
+                    return valor;
+                }
+            }
+            public string ParticipacionTexto => TipoAlarma != null ? $"{TipoAlarma.Participacion:N1}%" : string.Empty;
         }
 
+        //  RESTAURADO: Método CreateChart() completo del código Xamarin original
         private void CreateChart()
         {
-            var entries = new List<ChartEntry>();
-            foreach (var tipo in TiposAlarmaReporte)
+            try
             {
-                entries.Add(new ChartEntry(Convert.ToSingle(tipo.TipoAlarma.Participacion) * 100)
+                var entries = new List<ChartEntry>();
+
+                if (TiposAlarmaReporte != null && TiposAlarmaReporte.Any())
                 {
-                    ValueLabel = tipo.TipoAlarma.Participacion.ToString(),
-                    Color = tipo.Color
-                });
+                    foreach (var tipo in TiposAlarmaReporte)
+                    {
+                        if (tipo?.TipoAlarma != null)
+                        {
+                            entries.Add(new ChartEntry(Convert.ToSingle(tipo.TipoAlarma.Participacion) * 100)
+                            {
+                                ValueLabel = tipo.TipoAlarma.Participacion.ToString(),
+                                Color = tipo.Color
+                            });
+                        }
+                    }
+                }
+
+                // Crear el gráfico de pastel
+                Chart = new PieChart() { Entries = entries };
             }
+            catch (Exception ex)
+            {
+                // Log del error pero no fallar la carga del reporte
+                CrashlyticsHelper.LogError(ex, "BasicReportPageViewModel", "CreateChart");
 
-            Chart = new PieChart() { Entries = entries };
+                // En caso de error, dejar Chart como null o crear uno vacío
+                Chart = null;
+            }
         }
-
-
     }
 }

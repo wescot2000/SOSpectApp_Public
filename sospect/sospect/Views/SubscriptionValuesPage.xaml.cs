@@ -1,6 +1,6 @@
 ﻿using sospect.ViewModels;
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
+using Microsoft.Maui.Controls;
+using Microsoft.Maui.Controls.Xaml;
 
 namespace sospect.Views
 {
@@ -13,6 +13,11 @@ namespace sospect.Views
         {
             InitializeComponent();
             BindingContext = new SubscriptionValuesPageViewModel();
+        }
+
+        private async void OnBackClicked(object sender, EventArgs e)
+        {
+            await Navigation.PopAsync();
         }
     }
 }

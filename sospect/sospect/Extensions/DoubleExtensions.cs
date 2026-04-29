@@ -1,4 +1,5 @@
-﻿using System;
+using System;
+
 namespace sospect.Extensions
 {
     public static class DoubleExtensions
@@ -10,4 +11,3 @@ namespace sospect.Extensions
         }
     }
 }
-

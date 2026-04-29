@@ -1,99 +1,169 @@
-﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                 x:Class="sospect.Views.BasicReportEfectividadAlarmasPage"
-                 xmlns:converters="clr-namespace:sospect.Converters"
-                 xmlns:fonts="clr-namespace:sospect.Resources.Fonts;assembly=sospect"
-                 xmlns:helpers="clr-namespace:sospect.Helpers"
-                 xmlns:charts="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
-                 BackgroundColor="White"
-                 xmlns:ads="clr-namespace:sospect.CustomRenderers"
-                 Title="{helpers:TranslateExtension Text='LblReporteBasicoSospect'}">
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="sospect.Views.BasicReportEfectividadAlarmasPage"
+             xmlns:converters="clr-namespace:sospect.Converters"
+             xmlns:fonts="clr-namespace:sospect.Resources.Fonts;assembly=sospect"
+             xmlns:helpers="clr-namespace:sospect.Helpers"
+             xmlns:admob="clr-namespace:Plugin.AdMob;assembly=Plugin.AdMob"
+             BackgroundColor="#F8F9FA"
+             Title="{helpers:TranslateExtension Text='LblReporteBasicoSospect'}">
+
     <ContentPage.Resources>
         <ResourceDictionary>
             <converters:InverseBooleanConverter x:Key="InverseBooleanConverter"/>
-            <converters:SKColorToXamarinColorConverter x:Key="ColorConverter"/>
+
+            <Style x:Key="ReportCardStyle" TargetType="Frame">
+                <Setter Property="BackgroundColor" Value="White" />
+                <Setter Property="HasShadow" Value="True" />
+                <Setter Property="CornerRadius" Value="12" />
+                <Setter Property="Padding" Value="20" />
+                <Setter Property="Margin" Value="16" />
+                <Setter Property="BorderColor" Value="Transparent" />
+            </Style>
+
+            <Style x:Key="TitleStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="22" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="TextColor" Value="#27AE60" />
+                <Setter Property="Margin" Value="0,0,0,12" />
+            </Style>
+
+            <Style x:Key="DescriptionStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="14" />
+                <Setter Property="TextColor" Value="#2C3E50" />
+                <Setter Property="LineHeight" Value="1.4" />
+                <Setter Property="Margin" Value="0,0,0,16" />
+            </Style>
+
+            <Style x:Key="RangeInfoStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="12" />
+                <Setter Property="TextColor" Value="#7F8C8D" />
+                <Setter Property="FontAttributes" Value="Italic" />
+                <Setter Property="Margin" Value="0,0,0,20" />
+            </Style>
+
+            <Style x:Key="MetricLabelStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="14" />
+                <Setter Property="TextColor" Value="#7F8C8D" />
+            </Style>
+
+            <Style x:Key="MetricValueStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="16" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="TextColor" Value="#2C3E50" />
+                <Setter Property="HorizontalOptions" Value="End" />
+            </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
+
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
-        <ScrollView>
-            <StackLayout Margin="20" >
-                <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="Auto"/>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
-                    <Label Grid.Row="0" Grid.Column="0" Margin="0,10,0,0" TextColor="Gray" Grid.ColumnSpan="3" Text="{helpers:TranslateExtension Text='LblEfectiAlarmas'}" FontAttributes="Bold" FontSize="Large" />
-                    <Label
-                        Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3"
-                        Text="{helpers:TranslateExtension Text='LblDescripcionRepEfectAlarmas'}"
-                        Margin="0,20,0,20"
-                        FontSize="Medium"
-                        HorizontalOptions="CenterAndExpand"
-                        VerticalOptions="StartAndExpand" 
-                        HorizontalTextAlignment="Start"
-                        TextColor="Black">
-                    </Label>
 
-                    <Label
-                        Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3"
-                        Text="{helpers:TranslateExtension Text='LblRangoReporte'}"
-                        FontSize="Small"
-                        HorizontalOptions="CenterAndExpand"
-                        VerticalOptions="StartAndExpand" 
-                        HorizontalTextAlignment="Start"
-                        TextColor="Gray"/>
+        <ScrollView Grid.Row="0">
+            <StackLayout Spacing="0">
+                <!-- Card principal -->
+                <Frame Style="{StaticResource ReportCardStyle}">
+                    <StackLayout Spacing="12">
+                        <!-- Título -->
+                        <Label Text="{helpers:TranslateExtension Text='LblEfectiAlarmas'}"
+                               Style="{StaticResource TitleStyle}" />
 
-                    <!-- Sección de EfectividadAlarmas -->
-                    
-                    <Label Grid.Row="3" Grid.Column="0" Margin="0,20,0,20" TextColor="Gray" Grid.ColumnSpan="3" Text="{Binding EfectividadAlarmas.DescripcionTraducida}" />
-                    <Grid Grid.Row="4" Grid.ColumnSpan="3" Margin="0,0,0,10">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto" />
-                            <RowDefinition Height="1" />
-                            <RowDefinition Height="Auto" />
-                            <RowDefinition Height="1" />
-                            <RowDefinition Height="Auto" />
-                            <RowDefinition Height="1" />
-                            <RowDefinition Height="Auto" />
-                        </Grid.RowDefinitions>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*" />
-                            <ColumnDefinition Width="Auto" />
-                        </Grid.ColumnDefinitions>
+                        <!-- Descripción -->
+                        <Label Text="{helpers:TranslateExtension Text='LblDescripcionRepEfectAlarmas'}"
+                               Style="{StaticResource DescriptionStyle}" />
 
-                        <Label Grid.Row="0" Grid.Column="0" FontSize="Medium" TextColor="Gray" Text="{helpers:TranslateExtension Text='LblTotalAlarmas'}" />
-                        <Label Grid.Row="0" Grid.Column="1"  FontSize="Medium" TextColor="Black"   HorizontalOptions="EndAndExpand" Text="{Binding EfectividadAlarmas.total_alarmas, StringFormat='{0}'}" />
-                        <BoxView Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" HeightRequest="1" BackgroundColor="Black" />
+                        <!-- Rango del reporte -->
+                        <Label Text="{helpers:TranslateExtension Text='LblRangoReporte'}"
+                               Style="{StaticResource RangeInfoStyle}" />
 
-                        <Label Grid.Row="2" Grid.Column="0" FontSize="Medium" TextColor="Gray" Text="{helpers:TranslateExtension Text='LblAlarmasVerdaderas'}" />
-                        <Label Grid.Row="2" Grid.Column="1"  FontSize="Medium" TextColor="Black"   HorizontalOptions="EndAndExpand" Text="{Binding EfectividadAlarmas.alarmas_ciertas, StringFormat='{0}'}" />
-                        <BoxView Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" HeightRequest="1" BackgroundColor="Black" />
+                        <!-- Descripción adicional del modelo -->
+                        <Label Text="{Binding EfectividadAlarmas.DescripcionTraducida}"
+                               FontSize="13"
+                               TextColor="#7F8C8D"
+                               Margin="0,0,0,16" />
 
-                        <Label Grid.Row="4" Grid.Column="0" FontSize="Medium" TextColor="Gray" Text="{helpers:TranslateExtension Text='LblAlarmasFalsas'}" />
-                        <Label Grid.Row="4" Grid.Column="1"  FontSize="Medium" TextColor="Black"  HorizontalOptions="EndAndExpand" Text="{Binding EfectividadAlarmas.alarmas_falsas, StringFormat='{0}'}" />
-                        <BoxView Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" HeightRequest="1" BackgroundColor="Black" />
+                        <!-- Métricas -->
+                        <StackLayout Spacing="0">
+                            <!-- Total Alarmas -->
+                            <Grid Padding="0,8">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.Column="0"
+                                       Text="{helpers:TranslateExtension Text='LblTotalAlarmas'}"
+                                       Style="{StaticResource MetricLabelStyle}" />
+                                <Label Grid.Column="1"
+                                       Text="{Binding EfectividadAlarmas.total_alarmas, StringFormat='{0}'}"
+                                       Style="{StaticResource MetricValueStyle}" />
+                            </Grid>
+                            <BoxView HeightRequest="1" BackgroundColor="#E8E8E8" />
 
-                        <Label Grid.Row="6" Grid.Column="0" FontSize="Medium" TextColor="Gray" Text="{helpers:TranslateExtension Text='LblAlarmasEfectivas'}" />
-                        <Label Grid.Row="6" Grid.Column="1"  FontSize="Medium" TextColor="Black"  HorizontalOptions="EndAndExpand" Text="{Binding EfectividadAlarmas.porcentaje_ciertas, StringFormat='{0:P}'}" />
-                        <BoxView Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" HeightRequest="1" BackgroundColor="Black" />
-                    </Grid>
-                </Grid>
+                            <!-- Alarmas Verdaderas -->
+                            <Grid Padding="0,8">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.Column="0"
+                                       Text="{helpers:TranslateExtension Text='LblAlarmasVerdaderas'}"
+                                       Style="{StaticResource MetricLabelStyle}" />
+                                <Label Grid.Column="1"
+                                       Text="{Binding EfectividadAlarmas.alarmas_ciertas, StringFormat='{0}'}"
+                                       Style="{StaticResource MetricValueStyle}"
+                                       TextColor="#27AE60" />
+                            </Grid>
+                            <BoxView HeightRequest="1" BackgroundColor="#E8E8E8" />
+
+                            <!-- Alarmas Falsas -->
+                            <Grid Padding="0,8">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.Column="0"
+                                       Text="{helpers:TranslateExtension Text='LblAlarmasFalsas'}"
+                                       Style="{StaticResource MetricLabelStyle}" />
+                                <Label Grid.Column="1"
+                                       Text="{Binding EfectividadAlarmas.alarmas_falsas, StringFormat='{0}'}"
+                                       Style="{StaticResource MetricValueStyle}"
+                                       TextColor="#E74C3C" />
+                            </Grid>
+                            <BoxView HeightRequest="1" BackgroundColor="#E8E8E8" />
+
+                            <!-- Porcentaje de Efectividad -->
+                            <Grid Padding="0,12,0,8">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.Column="0"
+                                       Text="{helpers:TranslateExtension Text='LblAlarmasEfectivas'}"
+                                       Style="{StaticResource MetricLabelStyle}"
+                                       FontAttributes="Bold"
+                                       FontSize="15" />
+                                <!-- 2026-04-12: porcentaje_ciertas llega como 0-100 (ej. 93.1).
+                                     StringFormat='{0:P}' multiplica por 100 resultando en 9310%.
+                                     Corregido a '{0:N1}%' para mostrar "93,1%" directamente. -->
+                                <Label Grid.Column="1"
+                                       Text="{Binding EfectividadAlarmas.porcentaje_ciertas, StringFormat='{0:N1}%'}"
+                                       Style="{StaticResource MetricValueStyle}"
+                                       FontSize="18"
+                                       TextColor="#27AE60" />
+                            </Grid>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
             </StackLayout>
         </ScrollView>
+
+        <!-- Banner publicitario -->
         <Grid BackgroundColor="LightGray" Grid.Row="1" HeightRequest="90">
-            <ads:AdBanner></ads:AdBanner>
+            <admob:BannerAd AdSize="LargeBanner" />
         </Grid>
     </Grid>
 </ContentPage>

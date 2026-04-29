@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- ConfirmarUbicacionPromoPage.xaml
+     Creado: 2026-02-28
+     Propósito: Modal de confirmación de ubicación para PromocionLocalPage.
+     El usuario puede mover el pin para ajustar el punto exacto de la promoción
+     antes de confirmar el lanzamiento (flujo estilo Uber). -->
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:helpers="clr-namespace:sospect.Helpers"
+    xmlns:maps="clr-namespace:sospect.CustomRenderers"
+    x:Class="sospect.Views.ConfirmarUbicacionPromoPage"
+    Title="{helpers:TranslateExtension Text='PromoConfirmaUbicacion'}"
+    BackgroundColor="White">
+
+    <!-- Grid de 3 filas: instrucción + mapa a pantalla completa + botones -->
+    <Grid RowDefinitions="Auto,*,Auto">
+
+        <!-- Fila 0: Instrucción para el usuario -->
+        <Frame Grid.Row="0"
+               BackgroundColor="#E3F2FD"
+               BorderColor="Transparent"
+               CornerRadius="0"
+               Padding="16,12"
+               HasShadow="False">
+            <Label Text="{helpers:TranslateExtension Text='PromoConfirmaUbicacionModal'}"
+                   FontSize="13"
+                   TextColor="#1565C0"
+                   HorizontalTextAlignment="Center"
+                   LineBreakMode="WordWrap"/>
+        </Frame>
+
+        <!-- Fila 1: Mapa a pantalla completa (sin ScrollView → gestos funcionan correctamente) -->
+        <maps:MiniMapa x:Name="miMapa"
+                       Grid.Row="1"
+                       HorizontalOptions="FillAndExpand"
+                       VerticalOptions="FillAndExpand"/>
+
+        <!-- Fila 2: Botones Cancelar / Confirmar -->
+        <Grid Grid.Row="2" ColumnDefinitions="*,*" ColumnSpacing="0">
+            <Button Grid.Column="0"
+                    Text="{helpers:TranslateExtension Text='LabelCancelar'}"
+                    BackgroundColor="#9E9E9E"
+                    TextColor="White"
+                    FontSize="16"
+                    CornerRadius="0"
+                    HeightRequest="52"
+                    Clicked="OnCancelarClicked"/>
+            <Button Grid.Column="1"
+                    Text="{helpers:TranslateExtension Text='PromoBotonConfirmarUbicacion'}"
+                    BackgroundColor="#4CAF50"
+                    TextColor="White"
+                    FontSize="16"
+                    FontAttributes="Bold"
+                    CornerRadius="0"
+                    HeightRequest="52"
+                    Clicked="OnConfirmarClicked"/>
+        </Grid>
+
+    </Grid>
+</ContentPage>

@@ -1,0 +1,23 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Net.Http;
+using System.Text;
+using System.Windows.Input;
+using Newtonsoft.Json;
+using sospect.ViewModels;
+using Microsoft.Maui.Controls;
+using Microsoft.Maui.Controls.Xaml;
+
+namespace sospect.Views
+{
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class TrustedNetwork : ContentPage
+    {
+        public TrustedNetwork()
+        {
+            InitializeComponent();
+            BindingContext = new TrustedNetworkViewModel(Navigation);
+        }
+    }
+}

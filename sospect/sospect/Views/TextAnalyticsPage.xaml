@@ -1,49 +1,100 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="sospect.Views.TextAnalyticsPage"
              xmlns:fonts="clr-namespace:sospect.Resources.Fonts;assembly=sospect"
              xmlns:helpers="clr-namespace:sospect.Helpers"
-             BackgroundColor="White"
+             BackgroundColor="#F8F9FA"
              Title="{helpers:TranslateExtension Text='LblReporteAnalisisDeTextos'}">
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
 
-        <Label
-            Grid.Row="0" Grid.Column="1"
-               Text="{helpers:TranslateExtension Text='LblReporteEnConstruccion'}"
-               FontSize="Medium"
-               HorizontalOptions="CenterAndExpand"
-               VerticalOptions="CenterAndExpand" 
-               HorizontalTextAlignment="Center"
-               TextColor="Red"/>
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="20">
 
-        <Label
-            Grid.Row="1" Grid.Column="1"
-               Text="{helpers:TranslateExtension Text='LblDescripcionAnalisisTextos'}"
-               FontSize="Small"
-               Margin="0,50,0,20"
-               VerticalOptions="StartAndExpand" 
-               HorizontalTextAlignment="Center"
-               TextColor="Gray"/>
+            <!-- Card de Reporte en Construcción -->
+            <Frame BackgroundColor="White"
+                   CornerRadius="16"
+                   HasShadow="True"
+                   Padding="0"
+                   BorderColor="Transparent">
+                <Grid Padding="24" RowSpacing="20">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
 
-        <Label
-            Grid.Row="2" Grid.Column="1"
-               Text="{helpers:TranslateExtension Text='LblCostoReporte'}"
-               FontSize="Small"
-               Margin="0,50,0,20"
-               VerticalOptions="StartAndExpand" 
-               HorizontalTextAlignment="Center"
-               TextColor="Gray"/>
-    </Grid>
+                    <!-- Icono de Construcción -->
+                    <Frame Grid.Row="0"
+                           WidthRequest="80"
+                           HeightRequest="80"
+                           CornerRadius="40"
+                           BackgroundColor="#FFF3E0"
+                           HasShadow="False"
+                           Padding="0"
+                           HorizontalOptions="Center"
+                           BorderColor="Transparent">
+                        <Label Text="{x:Static fonts:IconFont.Gear}"
+                               FontFamily="{StaticResource IcoMoonFamily}"
+                               FontSize="40"
+                               TextColor="#FF9800"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center"/>
+                    </Frame>
+
+                    <!-- Título -->
+                    <Label Grid.Row="1"
+                           Text="{helpers:TranslateExtension Text='LblReporteEnConstruccion'}"
+                           FontSize="20"
+                           FontAttributes="Bold"
+                           HorizontalOptions="Center"
+                           HorizontalTextAlignment="Center"
+                           TextColor="#E74C3C"
+                           Margin="0,0,0,10"/>
+
+                    <!-- Descripción -->
+                    <Label Grid.Row="2"
+                           Text="{helpers:TranslateExtension Text='LblDescripcionAnalisisTextos'}"
+                           FontSize="14"
+                           LineBreakMode="WordWrap"
+                           HorizontalOptions="Center"
+                           HorizontalTextAlignment="Center"
+                           TextColor="#7F8C8D"/>
+
+                    <!-- Costo del Reporte -->
+                    <Frame Grid.Row="3"
+                           BackgroundColor="#F0F4FF"
+                           CornerRadius="12"
+                           HasShadow="False"
+                           Padding="16"
+                           BorderColor="Transparent">
+                        <VerticalStackLayout Spacing="8">
+                            <Grid ColumnSpacing="8">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Label Grid.Column="0"
+                                       Text="{x:Static fonts:IconFont.CreditCard}"
+                                       FontFamily="{StaticResource IcoMoonFamily}"
+                                       FontSize="18"
+                                       TextColor="#9B59B6"
+                                       VerticalOptions="Center"/>
+
+                                <Label Grid.Column="1"
+                                       Text="{helpers:TranslateExtension Text='LblCostoReporte'}"
+                                       FontSize="14"
+                                       LineBreakMode="WordWrap"
+                                       TextColor="#2C3E50"
+                                       VerticalOptions="Center"/>
+                            </Grid>
+                        </VerticalStackLayout>
+                    </Frame>
+
+                </Grid>
+            </Frame>
+
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 namespace sospect.Models
 {
     public class Alarma
@@ -10,6 +10,9 @@ namespace sospect.Models
         public string ip_usuario { get; set; }
         public long? p_alarma_id { get; set; }
         public string idioma_dispositivo { get; set; }
+        public string? DescripcionInicial { get; set; }
+        public List<string> MediaFiles { get; set; }  // Mantenido para compatibilidad
+        public List<FotoAlarmaDto> Fotos { get; set; }  // Nueva propiedad para enviar fotos al API
     }
 }
 

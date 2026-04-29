@@ -1,124 +1,292 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="sospect.Views.AboutPage"
              xmlns:fonts="clr-namespace:sospect.Resources.Fonts;assembly=sospect"
              xmlns:helpers="clr-namespace:sospect.Helpers"
-             BackgroundColor="White"
+             BackgroundColor="#F8F9FA"
              Title="{helpers:TranslateExtension Text='AcercadeSOSpect'}">
+
     <ScrollView>
-        <StackLayout Padding="20">
-            <Label Text="{helpers:TranslateExtension Text='LabelIntroduccion'}"
-                   FontSize="Large"
-                   TextColor="Black" 
-                   FontAttributes="Bold"
-                   HorizontalOptions="Start" />
+        <VerticalStackLayout Padding="20" Spacing="20">
 
-            <Label Margin="0,20,0,0" FontSize="Small" TextColor="Black" Text="{helpers:TranslateExtension Text='ObjetivoSospect'}" />
+            <!-- Card Principal - Introducción -->
+            <Frame BackgroundColor="White"
+                   CornerRadius="16"
+                   HasShadow="True"
+                   Padding="0"
+                   BorderColor="Transparent">
+                <VerticalStackLayout Padding="24" Spacing="16">
 
-            <Label Margin="0,20,0,0" FontSize="Small" TextColor="Black" Text="{helpers:TranslateExtension Text='InvitaMasPersonas'}" />
+                    <!-- Header con Logo -->
+                    <Grid ColumnSpacing="12">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
 
-            <Label Margin="0,20,0,0" FontSize="Small" TextColor="Black" Text="{helpers:TranslateExtension Text='UbicacionImportante'}" />
+                        <Frame Grid.Column="0"
+                               WidthRequest="50"
+                               HeightRequest="50"
+                               CornerRadius="25"
+                               BackgroundColor="#E3F2FD"
+                               HasShadow="False"
+                               Padding="0"
+                               VerticalOptions="Start"
+                               BorderColor="Transparent">
+                            <Label Text="{x:Static fonts:IconFont.Shield}"
+                                   FontFamily="{StaticResource IcoMoonFamily}"
+                                   FontSize="24"
+                                   TextColor="#4A90E2"
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="Center"/>
+                        </Frame>
 
-            <Label Margin="0,20,0,0" FontSize="Small" TextColor="Black" Text="{helpers:TranslateExtension Text='DebesAbrirLaApp'}" />
+                        <VerticalStackLayout Grid.Column="1" Spacing="4" VerticalOptions="Center">
+                            <Label Text="{helpers:TranslateExtension Text='LabelIntroduccion'}"
+                                   FontSize="20"
+                                   FontAttributes="Bold"
+                                   TextColor="#2C3E50"/>
+                            <Label Text="{Binding AppVersion}"
+                                   FontSize="13"
+                                   TextColor="#7F8C8D"/>
+                        </VerticalStackLayout>
+                    </Grid>
 
-            <Label>
-                <Label.FormattedText>
-                    <FormattedString>
-                        <Span FontSize="Small" TextColor="Black" Text="{helpers:TranslateExtension Text='contactenos'}" FontAttributes="Italic"/>
-                        <Span FontSize="Small" TextColor="Blue" TextDecorations="Underline" Text=" soporte@wescot.com.co">
-                            <Span.GestureRecognizers>
-                                <TapGestureRecognizer Command="{Binding SendEmailCommand}" />
-                            </Span.GestureRecognizers>
-                        </Span>
-                    </FormattedString>
-                </Label.FormattedText>
-                <Label.Margin>
-                    <OnPlatform x:TypeArguments="Thickness" iOS="0,30,0,0" Android="0,20,0,0"/>
-                </Label.Margin>
-                <Label.HorizontalOptions>
-                    <OnPlatform x:TypeArguments="LayoutOptions" iOS="StartAndExpand" Android="Start"/>
-                </Label.HorizontalOptions>
-            </Label>
+                    <!-- Objetivo -->
+                    <Label Text="{helpers:TranslateExtension Text='ObjetivoSospect'}"
+                           FontSize="14"
+                           LineBreakMode="WordWrap"
+                           TextColor="#2C3E50"
+                           Margin="0,8,0,0"/>
 
+                    <Label Text="{helpers:TranslateExtension Text='InvitaMasPersonas'}"
+                           FontSize="14"
+                           LineBreakMode="WordWrap"
+                           TextColor="#2C3E50"/>
 
-            <Label>
-                <Label.FormattedText>
-                    <FormattedString>
-                        <Span FontSize="Small" TextColor="Black" Text="{helpers:TranslateExtension Text='visitenos'}" FontAttributes="Italic"/>
-                        <Span FontSize="Small" TextColor="Black" Text=": ">
-                            <Span.GestureRecognizers>
-                                <TapGestureRecognizer Command="{Binding OpenWebCommandWescot}" />
-                            </Span.GestureRecognizers>
-                        </Span>
-                        <Span FontSize="Small" TextColor="Blue" Text="www.wescotcorporation.com" TextDecorations="Underline">
-                            <Span.GestureRecognizers>
-                                <TapGestureRecognizer Command="{Binding OpenWebCommandWescot}" />
-                            </Span.GestureRecognizers>
-                        </Span>
-                    </FormattedString>
-                </Label.FormattedText>
-                <Label.HorizontalOptions>
-                    <OnPlatform x:TypeArguments="LayoutOptions" iOS="StartAndExpand" Android="Start"/>
-                </Label.HorizontalOptions>
-            </Label>
+                    <Label Text="{helpers:TranslateExtension Text='UbicacionImportante'}"
+                           FontSize="14"
+                           LineBreakMode="WordWrap"
+                           TextColor="#2C3E50"/>
 
+                    <Label Text="{helpers:TranslateExtension Text='DebesAbrirLaApp'}"
+                           FontSize="14"
+                           LineBreakMode="WordWrap"
+                           TextColor="#2C3E50"/>
 
-            <Image Source="icon.png"
-               Margin="0,30,0,0"
-               HorizontalOptions="Center">
-                <Image.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding OpenSospectWebCommand}"/>
-                </Image.GestureRecognizers>
-            </Image>
+                </VerticalStackLayout>
+            </Frame>
 
-            <Label Text="{helpers:TranslateExtension Text='LblCreditos'}"
-                   FontSize="Large"
-                   TextColor="Black" 
-                   FontAttributes="Bold"
-                   HorizontalOptions="Start" />
-            <Label Margin="0,20,0,0" FontSize="Small" FontAttributes="Bold" TextColor="Black" Text="{helpers:TranslateExtension Text='LblIconoPolicia'}" />
-            <Label>
-                <Label.FormattedText>
-                    <FormattedString>
-                        <Span FontSize="Small" TextColor="Black" Text="{helpers:TranslateExtension Text='LblOrigenIcono'}" FontAttributes="Italic"/>
-                        <Span FontSize="Small" TextColor="Black" Text=": ">
-                            <Span.GestureRecognizers>
-                                <TapGestureRecognizer Command="{Binding OpenWebCommandIconfinder}" />
-                            </Span.GestureRecognizers>
-                        </Span>
-                        <Span FontSize="Small" TextColor="Blue" Text="www.iconfinder.com" TextDecorations="Underline">
-                            <Span.GestureRecognizers>
-                                <TapGestureRecognizer Command="{Binding OpenWebCommandIconfinder}" />
-                            </Span.GestureRecognizers>
-                        </Span>
-                    </FormattedString>
-                </Label.FormattedText>
-                <Label.HorizontalOptions>
-                    <OnPlatform x:TypeArguments="LayoutOptions" iOS="StartAndExpand" Android="Start"/>
-                </Label.HorizontalOptions>
-            </Label>
-            <Label Margin="0,20,0,0" FontSize="Small" FontAttributes="Bold" TextColor="Black" Text="{helpers:TranslateExtension Text='LblOtrosIconos'}" />
-            <Label>
-                <Label.FormattedText>
-                    <FormattedString>
-                        <Span FontSize="Small" TextColor="Black" Text="{helpers:TranslateExtension Text='LblOrigenOtrosIconos'}" FontAttributes="Italic"/>
-                        <Span FontSize="Small" TextColor="Black" Text=": ">
-                            <Span.GestureRecognizers>
-                                <TapGestureRecognizer Command="{Binding OpenWebCommandDibuRome}" />
-                            </Span.GestureRecognizers>
-                        </Span>
-                        <Span FontSize="Small" TextColor="Blue" Text="www.iconfinder.com" TextDecorations="Underline">
-                            <Span.GestureRecognizers>
-                                <TapGestureRecognizer Command="{Binding OpenWebCommandDibuRome}" />
-                            </Span.GestureRecognizers>
-                        </Span>
-                    </FormattedString>
-                </Label.FormattedText>
-                <Label.HorizontalOptions>
-                    <OnPlatform x:TypeArguments="LayoutOptions" iOS="StartAndExpand" Android="Start"/>
-                </Label.HorizontalOptions>
-            </Label>
-        </StackLayout>
+            <!-- Card de Contacto -->
+            <Frame BackgroundColor="White"
+                   CornerRadius="16"
+                   HasShadow="True"
+                   Padding="0"
+                   BorderColor="Transparent">
+                <VerticalStackLayout Padding="20" Spacing="16">
+
+                    <!-- Email de Soporte -->
+                    <Frame Padding="0"
+                           BackgroundColor="Transparent"
+                           HasShadow="False"
+                           BorderColor="Transparent">
+                        <Grid Padding="12" ColumnSpacing="12">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Label Grid.Column="0"
+                                   Text="{x:Static fonts:IconFont.Envelope}"
+                                   FontFamily="{StaticResource IcoMoonFamily}"
+                                   FontSize="20"
+                                   TextColor="#4A90E2"
+                                   VerticalOptions="Center"/>
+
+                            <Label Grid.Column="1" VerticalOptions="Center">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span FontSize="14" 
+                                              TextColor="#2C3E50" 
+                                              Text="{helpers:TranslateExtension Text='contactenos'}"
+                                              FontAttributes="Italic"/>
+                                        <Span FontSize="14" 
+                                              TextColor="#4A90E2" 
+                                              TextDecorations="Underline" 
+                                              Text=" soporte@wescot.com.co">
+                                            <Span.GestureRecognizers>
+                                                <TapGestureRecognizer Command="{Binding SendEmailCommand}" />
+                                            </Span.GestureRecognizers>
+                                        </Span>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </Grid>
+                    </Frame>
+
+                    <BoxView HeightRequest="1" BackgroundColor="#E0E0E0" Margin="12,0"/>
+
+                    <!-- Website -->
+                    <Frame Padding="0"
+                           BackgroundColor="Transparent"
+                           HasShadow="False"
+                           BorderColor="Transparent">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding OpenWebCommandWescot}" />
+                        </Frame.GestureRecognizers>
+                        <Grid Padding="12" ColumnSpacing="12">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Label Grid.Column="0"
+                                   Text="{x:Static fonts:IconFont.Globe}"
+                                   FontFamily="{StaticResource IcoMoonFamily}"
+                                   FontSize="20"
+                                   TextColor="#4A90E2"
+                                   VerticalOptions="Center"/>
+
+                            <Label Grid.Column="1" VerticalOptions="Center">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span FontSize="14" 
+                                              TextColor="#2C3E50" 
+                                              Text="{helpers:TranslateExtension Text='visitenos'}"
+                                              FontAttributes="Italic"/>
+                                        <Span FontSize="14" TextColor="#2C3E50" Text=": "/>
+                                        <Span FontSize="14" 
+                                              TextColor="#4A90E2" 
+                                              Text="www.wescotcorporation.com" 
+                                              TextDecorations="Underline"/>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </Grid>
+                    </Frame>
+
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Logo Clickeable -->
+            <Frame CornerRadius="16"
+                   HasShadow="True"
+                   Padding="24"
+                   BackgroundColor="White"
+                   BorderColor="Transparent">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding OpenWebCommandWescot}"/>
+                </Frame.GestureRecognizers>
+                <Image Source="wescotcorplogowithoutbg.png"
+                       Aspect="AspectFit"
+                       HeightRequest="120"
+                       WidthRequest="120"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"/>
+            </Frame>
+
+            <!-- Card de Créditos -->
+            <Frame BackgroundColor="White"
+                   CornerRadius="16"
+                   HasShadow="True"
+                   Padding="0"
+                   BorderColor="Transparent">
+                <VerticalStackLayout Padding="24" Spacing="16">
+
+                    <!-- Header de Créditos -->
+                    <Grid ColumnSpacing="12">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Frame Grid.Column="0"
+                               WidthRequest="50"
+                               HeightRequest="50"
+                               CornerRadius="25"
+                               BackgroundColor="#FFF3E0"
+                               HasShadow="False"
+                               Padding="0"
+                               VerticalOptions="Start"
+                               BorderColor="Transparent">
+                            <Label Text="{x:Static fonts:IconFont.Star}"
+                                   FontFamily="{StaticResource IcoMoonFamily}"
+                                   FontSize="24"
+                                   TextColor="#FF9800"
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="Center"/>
+                        </Frame>
+
+                        <Label Grid.Column="1"
+                               Text="{helpers:TranslateExtension Text='LblCreditos'}"
+                               FontSize="20"
+                               FontAttributes="Bold"
+                               TextColor="#2C3E50"
+                               VerticalOptions="Center"/>
+                    </Grid>
+
+                    <!-- Icono de Policía -->
+                    <VerticalStackLayout Spacing="8">
+                        <Label Text="{helpers:TranslateExtension Text='LblIconoPolicia'}"
+                               FontSize="14"
+                               FontAttributes="Bold"
+                               TextColor="#2C3E50"/>
+
+                        <Label>
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span FontSize="13" 
+                                          TextColor="#7F8C8D" 
+                                          Text="{helpers:TranslateExtension Text='LblOrigenIcono'}"
+                                          FontAttributes="Italic"/>
+                                    <Span FontSize="13" TextColor="#7F8C8D" Text=": "/>
+                                    <Span FontSize="13" 
+                                          TextColor="#4A90E2" 
+                                          Text="www.iconfinder.com" 
+                                          TextDecorations="Underline">
+                                        <Span.GestureRecognizers>
+                                            <TapGestureRecognizer Command="{Binding OpenWebCommandIconfinder}" />
+                                        </Span.GestureRecognizers>
+                                    </Span>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                    </VerticalStackLayout>
+
+                    <BoxView HeightRequest="1" BackgroundColor="#E0E0E0"/>
+
+                    <!-- Otros Iconos -->
+                    <VerticalStackLayout Spacing="8">
+                        <Label Text="{helpers:TranslateExtension Text='LblOtrosIconos'}"
+                               FontSize="14"
+                               FontAttributes="Bold"
+                               TextColor="#2C3E50"/>
+
+                        <Label>
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span FontSize="13" 
+                                          TextColor="#7F8C8D" 
+                                          Text="{helpers:TranslateExtension Text='LblOrigenOtrosIconos'}"
+                                          FontAttributes="Italic"/>
+                                    <Span FontSize="13" TextColor="#7F8C8D" Text=": "/>
+                                    <Span FontSize="13" 
+                                          TextColor="#4A90E2" 
+                                          Text="www.iconfinder.com" 
+                                          TextDecorations="Underline">
+                                        <Span.GestureRecognizers>
+                                            <TapGestureRecognizer Command="{Binding OpenWebCommandDibuRome}" />
+                                        </Span.GestureRecognizers>
+                                    </Span>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                    </VerticalStackLayout>
+
+                </VerticalStackLayout>
+            </Frame>
+
+        </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

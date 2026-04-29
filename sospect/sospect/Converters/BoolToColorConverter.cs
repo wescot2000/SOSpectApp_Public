@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+using System;
 using System.Globalization;
-using System.Text;
-using Xamarin.Forms;
+using Microsoft.Maui.Controls;
 
 namespace sospect.Converters
 {
@@ -10,13 +8,15 @@ namespace sospect.Converters
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            if (value is bool && (bool)value)
+            if (value is bool boolValue && boolValue)
             {
-                return Color.Red; // Cambia a verde si es verdadero
+                // Vencida = gris (no rojo, porque rojo indica error/peligro)
+                return Color.FromArgb("#7F8C8D");
             }
             else
             {
-                return Color.Green; // Cambia a rojo si es falso
+                // Activa = verde
+                return Color.FromArgb("#1E8449");
             }
         }
 

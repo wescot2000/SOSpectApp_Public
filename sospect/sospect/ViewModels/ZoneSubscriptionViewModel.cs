@@ -1,18 +1,22 @@
 ﻿using System.Windows.Input;
-using Xamarin.Forms;
+using Microsoft.Maui.Controls;
 using sospect.Helpers;
 using sospect.Models;
 using sospect.Services;
 using sospect.Utils;
 using sospect.CustomRenderers;
 using System.Linq;
-using Xamarin.Forms.Maps;
+using MapControl = Microsoft.Maui.Controls.Maps.Map;
+using Microsoft.Maui.Controls.Maps;
 using System.Threading.Tasks;
+using Microsoft.Maui.Maps;
 using System;
 using System.Collections.Generic;
 using Newtonsoft.Json;
-using Xamarin.Essentials;
+using Microsoft.Maui.ApplicationModel;
+using Microsoft.Maui.Storage;
 using sospect.Views;
+using sospect.Interfaces;
 
 namespace sospect.ViewModels
 {
@@ -49,12 +53,8 @@ namespace sospect.ViewModels
             {
                 var LabelError = TranslateExtension.Translate("LabelError");
                 var LabelOK = TranslateExtension.Translate("LabelOK");
-                await Application.Current.MainPage.DisplayAlert(LabelError, ex.Message, LabelOK);
-                var properties = new Dictionary<string, string> {
-                        { "Object", "ZoneSubscriptionViewModel" },
-                        { "Method", "ObtenerValoresDeSubscripcion" }
-                    };
-                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
+                await ModernAlerts.ShowError(LabelError, ex.Message);
+                CrashlyticsHelper.LogError(ex, "ZoneSubscriptionViewModel", "LoadSubscriptionValues");
             }
             finally
             {
@@ -62,28 +62,37 @@ namespace sospect.ViewModels
             }
         }
 
+        /// <summary>
+        /// Obtiene la navegación del tab activo cuando MainPage es TabbedPage.
+        /// Necesario porque esta página se pushea en el NavigationPage del tab,
+        /// no en App.Current.MainPage.Navigation.
+        /// </summary>
+        private INavigation GetTabNavigation()
+        {
+            if (Application.Current.MainPage is TabbedPage tabbedPage &&
+                tabbedPage.CurrentPage is NavigationPage navPage)
+                return navPage.Navigation;
+            return Application.Current.MainPage.Navigation;
+        }
+
         private async void CreateZone(MiniMapa miniMap)
         {
-            var LabelError = TranslateExtension.Translate("LabelError");
-            var LblErrorZonaVigil = TranslateExtension.Translate("LblErrorZonaVigil");
-            var LabelOK = TranslateExtension.Translate("LabelOK");
-            var LblZonaCreada = TranslateExtension.Translate("LblZonaCreada");
-            var LblSeleccionePuntoMapa = TranslateExtension.Translate("LblSeleccionePuntoMapa");
-            var LabelInformacion = TranslateExtension.Translate("LabelInformacion");
-            var MensajeError = TranslateExtension.Translate("MensajeError");
+            var LabelError = await TranslateExtension.TranslateAsync("LabelError");
+            var LabelOK = await TranslateExtension.TranslateAsync("LabelOK");
+            var LblZonaCreada = await TranslateExtension.TranslateAsync("LblZonaCreada");
+            var LblSeleccionePuntoMapa = await TranslateExtension.TranslateAsync("LblSeleccionePuntoMapa");
 
             if (miniMap.CustomPins.Any())
             {
-                Pin pin = miniMap.CustomPins.FirstOrDefault();
-                var saldoPoderesInsuficiente = TranslateExtension.Translate("LblSaldoPoderesInsuficiente");
-                var comprarPoderes = TranslateExtension.Translate("LblComprarPoderes");
-                var cancelar = TranslateExtension.Translate("LabelCancelar");
-
-                
+                CustomPin customPin = miniMap.CustomPins.FirstOrDefault();
+                var saldoPoderesInsuficiente = await TranslateExtension.TranslateAsync("LblSaldoPoderesInsuficiente");
+                var comprarPoderes = await TranslateExtension.TranslateAsync("LblComprarPoderes");
+                var cancelar = await TranslateExtension.TranslateAsync("LabelCancelar");
 
                 if (_parametros.SaldoPoderes < _poderesRequeridos)
                 {
-                    var answer = await Application.Current.MainPage.DisplayAlert(saldoPoderesInsuficiente, "", comprarPoderes, cancelar);
+                    var answer = await ModernAlerts.ShowConfirmation(
+                        saldoPoderesInsuficiente, "", comprarPoderes, cancelar, false);
                     if (answer)
                     {
                         await Application.Current.MainPage.Navigation.PushAsync(new PurchaseSuperPowersPage());
@@ -94,47 +103,49 @@ namespace sospect.ViewModels
                 var nuevaZonaVRequest = new NuevaZonaVRequest
                 {
                     p_user_id_thirdparty_protector = App.persona.user_id_thirdparty,
-                    Latitud_zona = pin.Position.Latitude,
-                    Longitud_zona = pin.Position.Longitude,
+                    Latitud_zona = customPin.Location.Latitude,
+                    Longitud_zona = customPin.Location.Longitude,
                     idioma = IdiomUtil.ObtenerCodigoDeIdioma()
                 };
+
                 IsRunning = true;
+                bool navigatedAway = false;
                 try
                 {
                     var response = await ApiService.NuevaZonaVigilancia(nuevaZonaVRequest);
-                    
+
                     if (response.IsSuccess)
                     {
-                        await Application.Current.MainPage.DisplayAlert(LabelOK, LblZonaCreada, LabelOK);
+                        await ModernAlerts.ShowSuccess(LabelOK, LblZonaCreada);
+                        _ = HomeViewModel.RefrescarParametrosAsync();
                         MessagingCenter.Send(this, "DatosActualizados");
-                        await Application.Current.MainPage.Navigation.PopToRootAsync();
+                        navigatedAway = true;
+                        await GetTabNavigation().PopToRootAsync();
                     }
                     else
                     {
-                        await Application.Current.MainPage.DisplayAlert(LabelError, LblErrorZonaVigil, LabelOK);
+                        await ModernAlerts.ShowError(LabelError, response.Message);
                     }
                 }
                 catch (Exception ex)
                 {
-                    await App.Current.MainPage.DisplayAlert(LabelInformacion, MensajeError, LabelOK);
-                    var properties = new Dictionary<string, string> {
-                        { "Object", "TermsAndConditionsViewModel" },
-                        { "Method", "NuevaZonaVigilancia" }
-                    };
-                    Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
+                    if (!navigatedAway)
+                    {
+                        var LabelInformacion = await TranslateExtension.TranslateAsync("LabelInformacion");
+                        var MensajeError = await TranslateExtension.TranslateAsync("MensajeError");
+                        await ModernAlerts.ShowWarning(LabelInformacion, MensajeError);
+                    }
+                    CrashlyticsHelper.LogError(ex, "ZoneSubscriptionViewModel", "CreateZone");
                 }
                 finally
                 {
                     IsRunning = false;
                 }
-                
             }
             else
             {
-                await App.Current.MainPage.DisplayAlert(LabelError, LblSeleccionePuntoMapa, LabelOK);
+                await ModernAlerts.ShowError(LabelError, LblSeleccionePuntoMapa);
             }
-
-
         }
 
     }

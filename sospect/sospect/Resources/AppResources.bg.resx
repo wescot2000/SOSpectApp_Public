@@ -249,18 +249,6 @@
   <data name="DireccionEscape" xml:space="preserve">
     <value>Моля, посочете адреса за бягство на заподозрения.</value>
   </data>
-  <data name="DescripcionAlerta" xml:space="preserve">
-    <value>Описание на сигнала</value>
-  </data>
-  <data name="DescripcionImplicado" xml:space="preserve">
-    <value>Описание на лицето, участвало в сигнала</value>
-  </data>
-  <data name="DescripcionVehiculoImp" xml:space="preserve">
-    <value>Участващо превозно средство (ако е приложимо)</value>
-  </data>
-  <data name="ArmaImplicada" xml:space="preserve">
-    <value>Включено оръжие (ако е приложимо)</value>
-  </data>
   <data name="LabelRutaEscape" xml:space="preserve">
     <value>Подозрителен път за бягство</value>
   </data>
@@ -660,9 +648,6 @@
   <data name="LblSaldoPoderesEs" xml:space="preserve">
     <value>Балансът на силите ми е:</value>
   </data>
-  <data name="LblUsuarioID" xml:space="preserve">
-    <value>Моят потребителски ИД е</value>
-  </data>
   <data name="LblAlertaReportadaPorMi" xml:space="preserve">
     <value>Сигнал, докладван от мен</value>
   </data>
@@ -690,23 +675,14 @@
   <data name="LblAlarmaNoGrave" xml:space="preserve">
     <value>Използвайте жълтия бутон, за да поставите предупреждения с ниска опасност и да предупредите вашата общност или протектори. Можете да изберете вида на сигнала и да го маркирате като извършено престъпление. Този бутон стартира предупреждението в точното ви местоположение, като е полезен, когато имате нужда от помощ. Можете също така да изберете точка на картата, за да намерите предупреждението, без да компрометирате местоположението си.</value>
   </data>
-  <data name="LblCrimenCometido" xml:space="preserve">
-    <value>Червеният бутон задейства категория: аларма за извършено престъпление. SOSpect не изисква от вас да включвате категория поради важността на времето в тези случаи. Алармата се поставя автоматично на точното ви местоположение. Можете също така да изберете точка на картата, за да поставите сигнала и след това да промените категорията на извършеното престъпление.</value>
-  </data>
   <data name="LblDescripcionAlarmas" xml:space="preserve">
     <value>В опцията "Опишете" в долната лента ще намерите списък с аларми, поставени от вас или други. Ако сте създали алармата, можете да добавите описание. Ако алармата е създадена от някой друг, можете да оцените нейната истинност и да допълните нейното описание. Внимавай! Ако предоставите невярна информация или неправилни оценки, профилът Ви може да бъде спрян. Внимателно прегледайте правилата и условията, за да избегнете това.</value>
   </data>
   <data name="LblDescripcionMensajes" xml:space="preserve">
     <value>В звънеца в горния десен ъгъл можете да четете съобщенията си, които включват известия за абонамент и скорошни аларми. Този списък е различен от опцията за описания, където можете да намерите директно последните аларми.</value>
   </data>
-  <data name="LblDescripcionMenu" xml:space="preserve">
-    <value>В предавката в горния ляв ъгъл ще намерите опциите за конфигуриране на SOSpect. Можете да закупите правомощия за закупуване на абонаменти и да защитите семейството си или да разширите радиуса на приемане на алармата. ПОМНЯ! В началото ви даваме 80 правомощия, за да можете да закупите два абонамента от самото начало.</value>
-  </data>
   <data name="LblRecomendaciones" xml:space="preserve">
     <value>ЗАЕДНО СМЕ НЕПОБЕДИМИ! Основните функции за сигнализиране и получаване на сигнали в радиус от 100 метра са безплатни, а когато стартирате ви даваме 2 абонамента. Поканете вашата общност и семейство да използват тази безплатна услуга за борба с нарастващата престъпност. Можете да спасите животи или да бъдете спасени, като получите предупреждение навреме. Сигналите за изгубени хора или домашни любимци имат обхват от 10 километра, а насилствените демонстрации имат обхват от 1 километър</value>
-  </data>
-  <data name="LblPromocion" xml:space="preserve">
-    <value>И накрая, не забравяйте, че ще спечелите пълномощно за всеки верен рейтинг, който предоставяте в SOSpect, когато гласуването на алармите се затвори след 90 минути от поставянето им. Повечето хора са честни и заедно ще защитаваме един друг и семействата си. ДОБРЕ ДОШЛИ В SOSPECT!</value>
   </data>
   <data name="LblDescripcionMapa" xml:space="preserve">
     <value>По всяко време можете да изберете опцията "MAP" отляво на долната лента, която е началната точка на SOSpect. От там можете да видите близките аларми. Местоположението ви ще се появи в центъра на картата, а кръгът представлява радиуса, който може да ви засегне. По подразбиране този радиус е 100 метра, но можете да го промените в менюто с настройки.</value>
@@ -1171,7 +1147,1938 @@ SOSpect е безплатен инструмент, предназначен д�
   <data name="Capturasrealizadasenunkilometroymedioalaredondademiubicacion" xml:space="preserve">
     <value>Заснемания, направени за километър и половина около моето местоположение</value>
   </data>
+  <data name="LblErrorConexion" xml:space="preserve">
+    <value>Грешка при свързване</value>
+  </data>
+  <data name="LblCierreSesion" xml:space="preserve">
+    <value>Изход</value>
+  </data>
+  <data name="LblSinConexionDetalle" xml:space="preserve">
+    <value>Офлайн, моля, активирайте връзката и рестартирайте приложението</value>
+    </data>
+  <data name="CmdGuardarConfiguracion" xml:space="preserve">
+    <value>Запазване на настройките</value>
+  </data>
+  <data name="LblCantDiasNotifApagada" xml:space="preserve">
+    <value>Брой дни, в които искам да изключа известията си в качеството си на компетентен орган</value>
+  </data>
+  <data name="LblNotifAlarmasCercanas" xml:space="preserve">
+    <value>Получаване на известия за близки аларми</value>
+  </data>
+  <data name="LblNotifAlarmasProtegidos" xml:space="preserve">
+    <value>Получаване на известия за аларми, поставени от защитени</value>
+  </data>
+  <data name="LblNotifAlarmasZonas" xml:space="preserve">
+    <value>Получаване на известия за аларми, поставени в надзорни зони</value>
+  </data>
+  <data name="LblNotifAlarmasAutoridadComp" xml:space="preserve">
+    <value>Получавам алармени известия в качеството си на компетентен орган</value>
+  </data>
+  <data name="LblDescripcionConfNotificaciones" xml:space="preserve">
+    <value>Това са текущите ви настройки за известия, изключете ги или ги включете по ваш вкус, за да направите преживяването си в SOSpect по-добро и по-добро!</value>
+  </data>
+  <data name="LblConfNotifGuardadas" xml:space="preserve">
+    <value>Новите настройки бяха записани успешно</value>
+  </data>
+  <data name="LblConfNotifNoSeGuarda" xml:space="preserve">
+    <value>Неуспешно записване на настройките. Опитайте отново.</value>
+  </data>
+  <data name="LblConfigNotificaciones" xml:space="preserve">
+    <value>Конфигуриране на SOSpect известия</value>
+  </data>
+  <data name="LblFechaApagadoAutomaticoNotif" xml:space="preserve">
+    <value>Дата на изключване на полицейското известие:</value>
+  </data>
+  <data name="LblTiempoParaActivacionAutomatica" xml:space="preserve">
+    <value>Оставащо време за автоматично активиране:</value>
+  </data>
+  <data name="LblCamposIncompletos" xml:space="preserve">
+    <value>Моля, попълнете коректно всички полета.</value>
+  </data>
+  <data name="LblNoAplicable" xml:space="preserve">
+    <value>Не е приложимо</value>
+  </data>
+  <data name="LblTiempoExpirado" xml:space="preserve">
+    <value>Часът е изтекъл</value>
+  </data>
+  <data name="LblCopiado" xml:space="preserve">
+    <value>Копира</value>
+  </data>
+  <data name="LblUsuarioCopiado" xml:space="preserve">
+    <value>ИД на потребител, копиран в клипборда</value>
+  </data>
   <data name="LblCondicionesCierreAlarma" xml:space="preserve">
-    <value>Можете да затворите алармата само ако сте я създали или ако не се посещава</value>
+    <value>Посочете причината за затварянето. Тя ще се затвори, ако вие сте създателят и тя не е в вниманието.</value>
+  </data>
+  <data name="LabelCheckConnection" xml:space="preserve">
+    <value>Версията на SOSpect не можа да бъде проверена поради неуспешна интернет връзка. Проверете свързаността.</value>
+  </data>
+  <data name="TocaParaAgregarInfo" xml:space="preserve">
+    <value>Докоснете тук, за да добавите информация</value>
+  </data>
+  <data name="DescripcionAlerta" xml:space="preserve">
+    <value>Описание на предупреждението (по избор)</value>
+  </data>
+  <data name="DescripcionImplicado" xml:space="preserve">
+    <value>Описание на лицето, участващо в сигнала (по избор)</value>
+  </data>
+  <data name="DescripcionVehiculoImp" xml:space="preserve">
+    <value>Участващо превозно средство (по избор)</value>
+  </data>
+  <data name="ArmaImplicada" xml:space="preserve">
+    <value>Включено оръжие (по избор)</value>
+  </data>
+  <data name="TocaAlarmaARevisar" xml:space="preserve">
+    <value>Докоснете алармата, която искате да проверите</value>
+  </data>
+  <data name="TocaAquiParaDescribir" xml:space="preserve">
+    <value>Докоснете тук, за да добавите описание или взаимодействие</value>
+  </data>
+  <data name="MostrarAlarmaEnMapa" xml:space="preserve">
+    <value>Покажи аларма на картата</value>
+  </data>
+  <data name="EsAlarmaVerdadera" xml:space="preserve">
+    <value>Вярна ли е алармата?</value>
+  </data>
+  <data name="BorraDatosYCierraSesion" xml:space="preserve">
+    <value>Изчистване на моите данни и излизане</value>
+  </data>
+  <data name="ElValorNoCorrespondeAsuID" xml:space="preserve">
+    <value>Въведената стойност не съответства на вашия потребителски ИД</value>
+  </data>
+  <data name="SeEliminaronTodosSusDatos" xml:space="preserve">
+    <value>Всички ваши данни са изтрити, тази сесия ще бъде излязла</value>
+  </data>
+  <data name="FailureDeletingData" xml:space="preserve">
+    <value>Потребителските данни не можаха да бъдат изтрити, няма изтрити данни.</value>
+  </data>
+  <data name="LblAtencion" xml:space="preserve">
+    <value>ВНИМАНИЕ!</value>
+  </data>
+  <data name="AdverBorradoDatos" xml:space="preserve">
+    <value>Предупреждение: Това действие ще изтрие окончателно всичките ви данни, включително покупки и абонаменти в SOSpect. Извличането на покупки е възможно само чрез подробна заявка до soporte@wescot.com.co, подлежаща на проверка.</value>
+  </data>
+  <data name="ConfirmarBorradoDatosUsuario" xml:space="preserve">
+    <value>За да потвърдите изтриването на данните си, въведете потребителското си име (разположено в горната част на менюто с настройки) и натиснете OK. Това ще изтрие данните ви и автоматично ще ви излезе.</value>
+  </data>
+  <data name="ColoqueSuIDUsuario" xml:space="preserve">
+    <value>Въведете потребителското си име тук</value>
+  </data>
+  <data name="AccionNoPermitida" xml:space="preserve">
+    <value>Недопустимо действие</value>
+  </data>
+  <data name="SoloAutoridadCompetente" xml:space="preserve">
+    <value>Само компетентният орган може да реагира на алармата, ако тя е активна.</value>
+  </data>
+  <data name="SoloCreadorConfirmaAlarma" xml:space="preserve">
+    <value>Не можете да потвърдите алармата, ако сте създател или ако не е активна.</value>
+  </data>
+  <data name="SoloCreadorCierraAlarma" xml:space="preserve">
+    <value>Алармата може да бъде затворена само от нейния създател, властите или ако е активна.</value>
+  </data>
+  <data name="IrAConfiguracion" xml:space="preserve">
+    <value>Отидете в настройките</value>
+  </data>
+  <data name="LblIgnorar" xml:space="preserve">
+    <value>Игнорирам</value>
+  </data>
+  <data name="LblImportante" xml:space="preserve">
+    <value>Важен!</value>
+  </data>
+  <data name="SinNotifPodriasEstarEnRiesgo" xml:space="preserve">
+    <value>Игнориране на предупрежденията за риск? Без известия може да пропуснете важни бележки.</value>
+  </data>
+  <data name="LblCierreSesionDetalle" xml:space="preserve">
+    <value>Излезли сте, като влезете в друго устройство или активирате известия.</value>
+  </data>
+  <data name="LblAlarmaActiva" xml:space="preserve">
+    <value>Активна аларма</value>
+  </data>
+  <data name="LblDescripcion" xml:space="preserve">
+    <value>Описание: __________:</value>
+  </data>
+  <data name="LblHistorialAlertas" xml:space="preserve">
+    <value>История на радио тревога 3 км.</value>
+  </data>
+  <data name="LblTituloHistorialAlertas" xml:space="preserve">
+    <value>История на алармите за последните 30 дни в радиус от 3 км.</value>
+  </data>
+  <data name="LblVolverAtras" xml:space="preserve">
+    <value>Обратно в началото</value>
+  </data>
+  <data name="LblTocaAgregarDescripcion" xml:space="preserve">
+    <value>Докоснете тук, за да добавите описание (по избор)</value>
+  </data>
+  <data name="LabelSessionExpired" xml:space="preserve">
+    <value>Вашата сесия е изтекла. Моля, влезте отново.</value>
+  </data>
+  <data name="LabelAlarmaDeRedConfianza" xml:space="preserve">
+    <value>Аларма, създадена от доверен мрежов потребител</value>
+  </data>
+  <data name="LabelEscritoRedConfianza" xml:space="preserve">
+    <value>Написано от доверен мрежов потребител</value>
+  </data>
+  <data name="LabelPertenecesRedConfianza" xml:space="preserve">
+    <value>Вие принадлежите към доверената мрежа на SOSpect!</value>
+  </data>
+  <data name="LabelVentajasRedC" xml:space="preserve">
+    <value>Предимства на това да бъдеш в доверената мрежа</value>
+  </data>
+  <data name="LabelV1UsuariosConfiables" xml:space="preserve">
+    <value>1. Идентифициране и проверка на доверени потребители:</value>
+  </data>
+  <data name="LabelV1UsuariosConfiablesDesc" xml:space="preserve">
+    <value>Механизми за идентифициране и проверка на потребители, които постоянно предоставят точна и полезна информация. Това гарантира, че данните, споделяни в мрежата, са с високо качество и надеждност.</value>
+  </data>
+  <data name="LabelV2AlertasPrioritarias" xml:space="preserve">
+    <value>2. Сигнал за приоритет:</value>
+  </data>
+  <data name="LabelV2AlertasPrioritariasDesc" xml:space="preserve">
+    <value>Сигналите, генерирани от проверени потребители в надеждната мрежа, имат по-висока видимост и приоритет. Това означава, че те ще се открояват на платформата, което ще позволи по-бърза и по-ефективна реакция от страна на общността и властите.</value>
+  </data>
+  <data name="LabelV3RecompensasConfiabilidad" xml:space="preserve">
+    <value>3. Награди за надеждност:</value>
+  </data>
+  <data name="LabelV3RecompensasConfiabilidadDesc" xml:space="preserve">
+    <value>Стимулирайте доверените потребители с награди в приложението, като допълнителни "сили" или първокласни функции. Това не само мотивира потребителите да поддържат статуса си на надеждност, но и обогатява изживяването им в платформата.</value>
+  </data>
+  <data name="LabelMasVentajas" xml:space="preserve">
+    <value>Още предимства:</value>
+  </data>
+  <data name="LabelMasVentajasDesc" xml:space="preserve">
+    <value>Алармите, генерирани от доверени потребители на мрежата, се показват със зелена рамка в списъка с аларми и знак, показващ, че сигналът е от потвърден потребител. Освен това щифтът на картата е маркиран в зелено, сигнализирайки, че това е проверена аларма. Коментарите от доверени потребители на мрежата също са маркирани със зелен знак, показващ техния надежден произход.</value>
+  </data>
+  <data name="LabelObjetivoVentajas" xml:space="preserve">
+    <value>Членовете на доверената мрежа се очаква да бъдат хора, далеч от престъпността, така че техните аларми се считат за надеждни и трябва да се приемат по-сериозно. Това допринася за по-безопасна общност и по-ефективна реакция на сигнали.</value>
+  </data>
+  <data name="LabelTitleVentajas" xml:space="preserve">
+    <value>Предимства</value>
+  </data>
+  <data name="LabelTitleDatosBasicos" xml:space="preserve">
+    <value>Добавяне на основни данни</value>
+  </data>
+  <data name="LabelInstruccionesDatosBasicos" xml:space="preserve">
+    <value>Моля, въведете основните си данни, за да се присъедините към SOSpect Trusted Network. Правете това само ако познавате член на мрежата, който може да ви добави. Уверете се, че предоставяте реална и вярна информация, тъй като няма да можете да я променяте, след като бъдете добавени към надеждната мрежа.</value>
+  </data>
+  <data name="LabelNombres" xml:space="preserve">
+    <value>Имена:</value>
+  </data>
+  <data name="LabelApellidos" xml:space="preserve">
+    <value>Фамилия:</value>
+  </data>
+  <data name="LabelNumeroMovil" xml:space="preserve">
+    <value>Мобилен номер:</value>
+  </data>
+  <data name="LabelEmail" xml:space="preserve">
+    <value>Имейл:</value>
+  </data>
+  <data name="LabelPais" xml:space="preserve">
+    <value>Страна:</value>
+  </data>
+  <data name="LabelDocumentoIdentificacion" xml:space="preserve">
+    <value>Национален документ за самоличност:</value>
+  </data>
+  <data name="LabelGuardarDatosBasicos" xml:space="preserve">
+    <value>Запазване или актуализиране на данни</value>
+  </data>
+  <data name="LabelValidacionNombres" xml:space="preserve">
+    <value>Невалидни имена, разрешени са само букви.</value>
+  </data>
+  <data name="LabelValidacionApellidos" xml:space="preserve">
+    <value>Невалидни фамилни имена, разрешени са само букви.</value>
+  </data>
+  <data name="LabelValidacionCelular" xml:space="preserve">
+    <value>Невалиден мобилен номер, разрешени са само номера.</value>
+  </data>
+  <data name="LabelValidacionEmail" xml:space="preserve">
+    <value>Невалиден имейл.</value>
+  </data>
+  <data name="LabelValidacionPais" xml:space="preserve">
+    <value>Невалидна държава, разрешени са само букви.</value>
+  </data>
+  <data name="LabelValidacionDocumento" xml:space="preserve">
+    <value>Невалиден идентификатор, разрешени са само буквено-цифрови знаци, точки и тирета.</value>
+  </data>
+  <data name="LabelAgregarUsuarioRedTitle" xml:space="preserve">
+    <value>Добавяне на потребител към надеждната мрежа</value>
+  </data>
+  <data name="LabelEscribaIDUsuario" xml:space="preserve">
+    <value>Въведете идентификатора на потребителя за защита тук:</value>
+  </data>
+  <data name="LabelConsultarDisponibilidad" xml:space="preserve">
+    <value>Проверете наличността</value>
+  </data>
+  <data name="LabelAgregarUsuario" xml:space="preserve">
+    <value>Добавяне на потребител</value>
+  </data>
+  <data name="LabelDesventajasTitle" xml:space="preserve">
+    <value>Недостатъци</value>
+  </data>
+  <data name="LabelDesventajasSubTitle" xml:space="preserve">
+    <value>Недостатъци на принадлежността към мрежата за доверие</value>
+  </data>
+  <data name="LabelDV1Investigacion" xml:space="preserve">
+    <value>1. Безотговорно разследване на аларма:</value>
+  </data>
+  <data name="LabelDV1InvestigacionDesc" xml:space="preserve">
+    <value>В случаите, когато компетентните органи го изискват, алармите могат да бъдат разследвани, ако има съмнение, че са поставени безотговорно или лъжливо, засягайки други граждани.</value>
+  </data>
+  <data name="LabelDV2Requisitos" xml:space="preserve">
+    <value>2. Изисквания за проверка на SOSpect:</value>
+  </data>
+  <data name="LabelDV2RequisitosDesc" xml:space="preserve">
+    <value>SOSpect ще провери дали искането за разследване има достатъчно основания, преди да предостави информация. Освен това предоставянето на информация ще бъде отказано в случаи, свързани с правителства или органи, свързани с диктатури, незаконни групи, мафии или други подобни, за да се защити потребителят, който е създал алармата.</value>
+  </data>
+  <data name="LabelDV3ImplicacionAgregador" xml:space="preserve">
+    <value>3. Участие на потребителя на агрегатора:</value>
+  </data>
+  <data name="LabelDV3ImplicacionAgregadorDesc" xml:space="preserve">
+    <value>При евентуално разследване от ползвателя, който е добавил създателя на алармата в надеждната мрежа, компетентните органи могат да изискат от компетентните органи да сътрудничат на разследването със същите уговорки, посочени по-горе.</value>
+  </data>
+  <data name="LabelDV4BorradoInformacion" xml:space="preserve">
+    <value>4. Изтриване на информация:</value>
+  </data>
+  <data name="LabelDV4BorradoInformacionDesc" xml:space="preserve">
+    <value>Когато потребителите решат да изтрият информацията си от SOSpect и да деинсталират приложението, SOSpect ще го изтрие след 90 календарни дни, след като провери, че не са подадени оплаквания от компетентните органи във връзка с алармите, поставени от потребителя.</value>
+  </data>
+  <data name="LabelDV5Responsabilidad" xml:space="preserve">
+    <value>5. Потенциална отговорност:</value>
+  </data>
+  <data name="LabelDV5ResponsabilidadDesc" xml:space="preserve">
+    <value>Да бъдеш част от доверената мрежа идва с допълнителна отговорност, тъй като от членовете се очаква да добавят само доверени потребители. Ако се добави някой, който не отговаря на тези стандарти, може да има негативни последици.</value>
+  </data>
+  <data name="LabelListarRedConfianzaTitle" xml:space="preserve">
+    <value>Списък Надеждна мрежа</value>
+  </data>
+  <data name="LabelNoHayUsuarioEnRed" xml:space="preserve">
+    <value>Няма доверени потребители в мрежата</value>
+  </data>
+  <data name="LabelTitleMasInformacion" xml:space="preserve">
+    <value>Научете повече</value>
+  </data>
+  <data name="LabelQueEsRedConfianza" xml:space="preserve">
+    <value>Какво представлява мрежата за доверие?</value>
+  </data>
+  <data name="LabelQueEsRedConfianzaDesc" xml:space="preserve">
+    <value>"Мрежата на доверие" в SOSpect е функция, предназначена да позволи на потребителите да създадат кръг от доверени хора в приложението. Чрез добавяне на хора, които познавате и на които имате доверие, вашите сигнали и известия ще бъдат третирани с по-висок приоритет и видимост. Основната цел е да се подобри ефективността и надеждността на алармите, издавани чрез приложението, като се гарантира, че сигналите от проверени потребители получават необходимото внимание.</value>
+  </data>
+  <data name="LabelFuncionamientoRed" xml:space="preserve">
+    <value>Как работи мрежата за доверие</value>
+  </data>
+  <data name="Label1IdentificacionUsuarios" xml:space="preserve">
+    <value>1. Идентифициране на доверени потребители:</value>
+  </data>
+  <data name="Label1IdentificacionUsuariosDesc" xml:space="preserve">
+    <value>Можете да добавяте хора, които познавате и на които имате доверие, към вашата надеждна мрежа. Това ще гарантира, че сигналите ви се считат за потвърдени в приложението, маркирани в зелено и с повишена видимост.</value>
+  </data>
+  <data name="Label2Privacidad" xml:space="preserve">
+    <value>2. Поверителност на сигналите:</value>
+  </data>
+  <data name="Label2PrivacidadDesc" xml:space="preserve">
+    <value>Въпреки приоритета, даден на надеждните мрежови сигнали, всички аларми остават анонимни. Самоличността и личната информация на потребителите няма да бъдат изложени на други потребители, което гарантира поверителността, като същевременно подобрява ефективността на сигналите.</value>
+  </data>
+  <data name="Label3ComposicionRed" xml:space="preserve">
+    <value>3. Състав на мрежата:</value>
+  </data>
+  <data name="Label3ComposicionRedDesc" xml:space="preserve">
+    <value>Очаква се мрежата да бъде съставена от хора, далеч от престъпни дейности. Включването на потребители в тази мрежа трябва да се обработва внимателно, като се гарантира, че се добавят само доверени хора.</value>
+  </data>
+  <data name="Label4DatosInalterables" xml:space="preserve">
+    <value>4. Неизменност на данните:</value>
+  </data>
+  <data name="Label4DatosInalterablesDesc" xml:space="preserve">
+    <value>След като потребителят бъде добавен към надеждната мрежа, той няма да може да промени основните си данни или да бъде премахнат от мрежата. Това правило се прилага за поддържане на целостта и надеждността на мрежата.</value>
+  </data>
+  <data name="LabelRecomendacionesRed" xml:space="preserve">
+    <value>Препоръки за добавяне на потребители към доверената мрежа</value>
+  </data>
+  <data name="Label1VerificaIdentidad" xml:space="preserve">
+    <value>1. Потвърдете самоличността:</value>
+  </data>
+  <data name="Label1VerificaIdentidadDesc" xml:space="preserve">
+    <value>Преди да добавите някого към вашата надеждна мрежа, уверете се, че знаете и потвърждавате самоличността на потребителя. Тъй като вашите сигнали ще бъдат третирани специално, от решаващо значение е да имате пълна увереност в истинността на предоставената информация.</value>
+  </data>
+  <data name="Label2RevisaInfo" xml:space="preserve">
+    <value>2. Прегледайте основната информация:</value>
+  </data>
+  <data name="Label2RevisaInfoDesc" xml:space="preserve">
+    <value>Важно е да се уверите, че основните данни на потребителя, като име, мобилен номер, имейл и национален документ за самоличност, са правилни и актуални.</value>
+  </data>
+  <data name="Label3ResponsabilidadAgregador" xml:space="preserve">
+    <value>3. Отговорност на доставчика на агрегирани услуги:</value>
+  </data>
+  <data name="Label3ResponsabilidadAgregadorDesc" xml:space="preserve">
+    <value>Когато добавяте потребител към надеждната мрежа, вие поемате отговорност да се уверите, че данните на потребителя са точни. Това е жизненоважно за поддържане на целостта на мрежата и гарантиране, че проверените аларми са с високо качество и надеждност.</value>
+  </data>
+  <data name="LabelRecomendacionesAdicionales" xml:space="preserve">
+    <value>Допълнителни предупреждения и препоръки</value>
+  </data>
+  <data name="Label1InvestigacionAlarmas" xml:space="preserve">
+    <value>1. Разследване на аларма:</value>
+  </data>
+  <data name="Label1InvestigacionAlarmasDesc" xml:space="preserve">
+    <value>Ако се изисква от компетентните органи, може да се разследва аларма, поставена от доверен потребител на мрежата. SOSpect ще предприеме стъпки за проверка на легитимността на искането, преди да предаде каквато и да е информация и ще откаже такова предаване в случаи, включващи правителства или организации, свързани с диктатури, незаконни групи, мафии или други подобни.</value>
+  </data>
+  <data name="Label2ImplicacionesAgregador" xml:space="preserve">
+    <value>2. Последици за потребителя на агрегатора:</value>
+  </data>
+  <data name="Label2ImplicacionesAgregadorDesc" xml:space="preserve">
+    <value>В случай на разследване потребителят, който е добавил създателя на алармата, може да бъде задължен да сътрудничи, винаги при същата правна защита.</value>
+  </data>
+  <data name="Label3EliminacionDatos" xml:space="preserve">
+    <value>3. Процес на изтриване на данни:</value>
+  </data>
+  <data name="Label3EliminacionDatosDesc" xml:space="preserve">
+    <value>Ако потребител реши да изтрие информацията си и да деинсталира приложението, SOSpect ще пристъпи към изтриване на данните след 90 дни, при условие че не са възникнали оплаквания от компетентните органи, свързани с алармите, издадени от потребителя.</value>
+  </data>
+  <data name="LabelTitleRedConfianza" xml:space="preserve">
+    <value>Мрежа на доверие</value>
+  </data>
+  <data name="LabelBienvenidoRedConfianza" xml:space="preserve">
+    <value>Добре дошли в Мрежата на доверие. Тук можете да добавите хора, които познавате и на които имате доверие, позволявайки на техните аларми да се считат за проверени, маркирани в зелено и им се придава по-голямо значение. Не забравяйте, че всички аларми ще останат анонимни и ничии данни няма да бъдат изложени.
+
+Алармите от хора, които не са част от вашата надеждна мрежа, ще се показват в сиво. Очаква се мрежата да бъде съставена от надеждни хора, които са далеч от престъпните дейности.
+
+Потребителите, които добавяте, трябва да предоставят основните си данни, като влязат в менюто SOSpect и попълнят необходимата информация. Като агрегатор е ваша отговорност да гарантирате истинността на тези данни. Веднъж добавен, потребителят няма да може да промени данните си или да бъде премахнат от мрежата.</value>
+  </data>
+  <data name="LabelQuieroSaberMas" xml:space="preserve">
+    <value>ИСКАМ ДА ЗНАМ ПОВЕЧЕ</value>
+  </data>
+  <data name="LabelVentajasRed" xml:space="preserve">
+    <value>ПРЕДИМСТВА НА ДОВЕРЕНАТА МРЕЖА</value>
+  </data>
+  <data name="LabelDesventajasRed" xml:space="preserve">
+    <value>НЕДОСТАТЪЦИ НА НАДЕЖДНАТА МРЕЖА</value>
+  </data>
+  <data name="LabelAgregarDatosBasicos" xml:space="preserve">
+    <value>Добавяне или промяна на основни данни, които да бъдат включени</value>
+  </data>
+  <data name="LabelAgregarUsuarioARed" xml:space="preserve">
+    <value>Добавяне на потребител към надеждната мрежа</value>
+  </data>
+  <data name="LabelListarUsuariosRed" xml:space="preserve">
+    <value>Списък с доверени потребители на мрежата, добавени от мен</value>
+  </data>
+  <data name="Ellídernotieneelindicadordereddeconfianzaestablecidoenverdadero" xml:space="preserve">
+    <value>Лидерът няма индикатор за доверителна мрежа, зададен на true</value>
+  </data>
+  <data name="Unoomáscamposobligatoriossonnulos" xml:space="preserve">
+    <value>Едно или повече задължителни полета са нулеви</value>
+  </data>
+  <data name="Elnuevousuarioyaperteneceaunareddeconfianza" xml:space="preserve">
+    <value>Новият потребител вече принадлежи към доверена мрежа</value>
+  </data>
+  <data name="Usuarioagregadoalareddeconfianzaconéxito" xml:space="preserve">
+    <value>Потребителят е добавен успешно към доверена мрежа</value>
+  </data>
+  <data name="NoseencontróningúnusuarioconelIDdeusuariodetercerosproporcionado" xml:space="preserve">
+    <value>Не е намерен потребител с предоставения потребителски идентификатор на трета страна</value>
+  </data>
+  <data name="Elusuarioyaespartedelareddeconfianza" xml:space="preserve">
+    <value>Потребителят вече е част от доверената мрежа</value>
+  </data>
+  <data name="Lainformaciónpersonaldelusuarioqueseagregaráalareddeconfianzaestáincompleta" xml:space="preserve">
+    <value>Личната информация на потребителя, която трябва да бъде добавена към доверената мрежа, е непълна</value>
+  </data>
+  <data name="Lainformaciónpersonaldelusuarioqueseagregaráalareddeconfianzaestácompletayelusuarioaúnnoformapartedelareddeconfianza" xml:space="preserve">
+    <value>Личната информация на потребителя, която трябва да бъде добавена към надеждната мрежа, е пълна и потребителят все още не е част от надеждната мрежа</value>
+  </data>
+  <data name="Elusuarioyaformapartedelareddeconfianzaysuinformaciónnopuedemodificarse" xml:space="preserve">
+    <value>Потребителят вече е част от доверената мрежа и информацията му не може да бъде променяна</value>
+  </data>
+  <data name="Informacióndelusuarioactualizadaexitosamente" xml:space="preserve">
+    <value>Успешно актуализирана потребителска информация</value>
+  </data>
+  <data name="LabelGuardadoRedConfianza" xml:space="preserve">
+    <value>Направени! Можете да актуализирате данни само преди да се присъедините към надеждната мрежа</value>
+  </data>
+  <data name="Userinformationupdatedsuccessfully" xml:space="preserve">
+    <value>Успешно актуализирана потребителска информация</value>
+  </data>
+  <data name="Anerroroccurredwhileupdatinguserinformation" xml:space="preserve">
+    <value>Възникна грешка при актуализиране на потребителската информация</value>
+  </data>
+  <data name="Invalidmodelstateforuserinformation" xml:space="preserve">
+    <value>Невалидно състояние на модела за потребителска информация</value>
+  </data>
+  <data name="Userinformationretrievedsuccessfully" xml:space="preserve">
+    <value>Успешно извлечена потребителска информация</value>
+  </data>
+  <data name="NouserfoundwiththeprovidedthirdpartyuserID" xml:space="preserve">
+    <value>Не е намерен потребител с предоставения потребителски идентификатор</value>
+  </data>
+  <data name="Usersinthetrustnetworkretrievedsuccessfully" xml:space="preserve">
+    <value>Доверени потребители на мрежата са успешно възстановени</value>
+  </data>
+  <data name="Anerroroccurredwhileretrievingusersinthetrustnetwork" xml:space="preserve">
+    <value>Неуспешно извличане на потребители в надеждната мрежа</value>
+  </data>
+  <data name="Useraddedtothetrustnetworksuccessfully" xml:space="preserve">
+    <value>Потребителят успешно е добавен към доверената мрежа</value>
+  </data>
+  <data name="Anerroroccurredwhileaddingtheusertothetrustnetwork" xml:space="preserve">
+    <value>Възникна грешка при добавяне на потребителя към надеждната мрежа</value>
+  </data>
+  <data name="LabelRestriccionApple" xml:space="preserve">
+    <value>За Apple® iPhone® не е позволено да докладва видовете аларми "Извършено престъпление или престъпление", "Уличен бой", "Бунтове или протести" и "Домашно насилие", докато няма споразумение с компетентните органи.</value>
+  </data>
+  <data name="LblQueAccionRealizar" xml:space="preserve">
+    <value>Какви действия искате да предприемете?</value>
+  </data>
+  <data name="LblVerEnMapa" xml:space="preserve">
+    <value>Покажи на картата</value>
+  </data>
+  <data name="LblIrAlPunto" xml:space="preserve">
+    <value>Отидете до тази точка</value>
+  </data>
+  <data name="LblElegirApp" xml:space="preserve">
+    <value>Изберете приложение</value>
+  </data>
+  <data name="LblMapas" xml:space="preserve">
+    <value>Карти</value>
+  </data>
+  <data name="LblAnuncioPublicitario" xml:space="preserve">
+    <value>Поставяне на обява</value>
+  </data>
+  <data name="LblErrorInicializandoParametros" xml:space="preserve">
+    <value>Потребителските параметри не могат да бъдат инициализирани. Проверете връзката си.</value>
+  </data>
+  <data name="LblMensajeCompraPoderes" xml:space="preserve">
+    <value>Не е задължително да се купуват правомощия за използване на SOSpect. Повечето от функциите са безплатни. Освен това можете да спечелите правомощия, като гласувате честно за алармите на вашата общност.</value>
+  </data>
+  <data name="LblCargandoTiposAlarma" xml:space="preserve">
+    <value>Видове аларми за зареждане...</value>
+  </data>
+  <data name="LabelTocarParaDetalles" xml:space="preserve">
+    <value>Докоснете за подробности</value>
+  </data>
+  <data name="LabelChat" xml:space="preserve">
+    <value>💬 Чат</value>
+  </data>
+  <data name="LblLeeTerminosDetenidamente" xml:space="preserve">
+    <value>Прочетете внимателно правилата и условията</value>
+  </data>
+  <data name="LblVisualizacionSoloLectura" xml:space="preserve">
+    <value>Преглеждате термини в режим само за четене</value>
+  </data>
+  <data name="LblProcesando" xml:space="preserve">
+    <value>Преработване...</value>
+  </data>
+  <data name="LabelSinAccesoAChat" xml:space="preserve">
+    <value>Чатът не е достъпен в момента</value>
+  </data>
+  <data name="LabelUbicacionNoDisponible" xml:space="preserve">
+    <value>Местоположението не е налично</value>
+  </data>
+  <data name="LabelVerificaGPS" xml:space="preserve">
+    <value>Проверете дали вашият GPS е активен</value>
+  </data>
+  <data name="LabelReintentar" xml:space="preserve">
+    <value>Опитайте</value>
+  </data>
+  <data name="LabelReiniciarApp" xml:space="preserve">
+    <value>Рестартиране на приложението</value>
+  </data>
+  <data name="LabelGPSRequerido" xml:space="preserve">
+    <value>Изисква се GPS</value>
+  </data>
+  <data name="LabelHabilitarUbicacion" xml:space="preserve">
+    <value>Моля, активирайте местоположението в настройките на устройството</value>
+  </data>
+  <data name="LabelIrAConfiguracion" xml:space="preserve">
+    <value>Отидете в настройките</value>
+  </data>
+  <data name="MsgTrasAlarmaSinRiesgo" xml:space="preserve">
+    <value>Ако имате време, моля, опишете алармата, тя ще бъде полезна за вашите съседи!</value>
+  </data>
+  <data name="LabelSiguiente" xml:space="preserve">
+    <value>Следните</value>
+  </data>
+  <data name="LabelAnterior" xml:space="preserve">
+    <value>Предишен</value>
+  </data>
+  <data name="LabelOmitir" xml:space="preserve">
+    <value>Пропуснете</value>
+  </data>
+  <data name="LabelFinalizar" xml:space="preserve">
+    <value>Край</value>
+  </data>
+  <data name="LabelConfirmarOmitir" xml:space="preserve">
+    <value>Пропуснете урока</value>
+  </data>
+  <data name="LabelMensajeOmitir" xml:space="preserve">
+    <value>Сигурни ли сте, че искате да пропуснете урока? Можете да го гледате отново, като излезете и влезете отново.</value>
+  </data>
+  <data name="LabelMensajeVolverVerTutorial" xml:space="preserve">
+    <value>Ако искате да гледате този урок отново, просто излезте и влезте отново в приложението.</value>
+  </data>
+  <data name="LabelFelicitaciones" xml:space="preserve">
+    <value>Поздравления!</value>
+  </data>
+  <data name="LabelTutorialCompletado" xml:space="preserve">
+    <value>Завършихте урока SOSpect. Сега сте готови да използвате приложението безопасно!</value>
+  </data>
+  <data name="LblDescripcionInicial" xml:space="preserve">
+    <value>Добре дошли в SOSpect, вашето приложение за безопасност на общността. Ще ви покажем как работи стъпка по стъпка.</value>
+  </data>
+  <data name="LblDescripcionAlarmaNoGrave" xml:space="preserve">
+    <value>Използвайте оранжевия бутон, за да докладвате за подозрителни ситуации, които изискват внимание, но не са спешни.</value>
+  </data>
+  <data name="LblDescripcionCrimenCometido" xml:space="preserve">
+    <value>Червеният бутон е за докладване на текущи или току-що извършени престъпления. Използвайте само в сериозни ситуации.</value>
+  </data>
+  <data name="LblDescripcionCompletaAlarmas" xml:space="preserve">
+    <value>В този раздел можете да преглеждате и описвате аларми наблизо, за да помогнете на други потребители в общността.</value>
+  </data>
+  <data name="LabelParaQueSirveSospect" xml:space="preserve">
+    <value>Какво е SOSpect?</value>
+  </data>
+  <data name="LblAspectosBasicos" xml:space="preserve">
+    <value>Основни</value>
+  </data>
+  <data name="LblEnviaUnaAlerta" xml:space="preserve">
+    <value>Изпратете предупреждение!</value>
+  </data>
+  <data name="LblCrimenCometido" xml:space="preserve">
+    <value>Червеният бутон активира аларма от категория: извършено престъпление. SOSpect не изисква от вас да включвате категория поради важността на времето в тези случаи. Алармата автоматично се поставя на точното ви местоположение. Можете също така да изберете точка на картата, за да поставите предупреждението и след това да промените категорията на извършено престъпление. (Не е налично за Apple за държави без активно споразумение)</value>
+  </data>
+  <data name="LblReportaUnCrimen" xml:space="preserve">
+    <value>Съобщете за престъпление!</value>
+  </data>
+  <data name="LblExplicaLoSucedido" xml:space="preserve">
+    <value>Обяснете какво се е случило!</value>
+  </data>
+  <data name="LblRevisaTusNotificaciones" xml:space="preserve">
+    <value>Проверете вашите известия!</value>
+  </data>
+  <data name="LblAdministraTusConfiguraciones" xml:space="preserve">
+    <value>Управлявайте настройките си!</value>
+  </data>
+  <data name="LblPorSiFueraPoco" xml:space="preserve">
+    <value>... и сякаш това не беше достатъчно...</value>
+  </data>
+  <data name="LblMuyImportante" xml:space="preserve">
+    <value>Много важно!</value>
+  </data>
+  <data name="LblParaFinalizar" xml:space="preserve">
+    <value>И накрая...</value>
+  </data>
+  <data name="LblQueAppUsar" xml:space="preserve">
+    <value>Кое приложение искате да използвате?</value>
+  </data>
+  <data name="LblDescripcionMenu" xml:space="preserve">
+    <value>В предавката в горния ляв ъгъл ще намерите опциите за конфигурация на SOSpect. Можете да закупите мощности, за да закупите абонаменти и да защитите семейството си или да разширите радиуса на приемане на алармата.</value>
+  </data>
+  <data name="LblPromocion" xml:space="preserve">
+    <value>ВАЖЕН! Когато започнете, ние ви даваме 100 правомощия, за да можете да закупите два абонамента от самото начало.
+
+И накрая, не забравяйте, че ще спечелите пълномощно за всеки достоверен рейтинг, който предоставите в SOSpect, когато гласуването за аларма затвори след 90 минути от поставянето им. Повечето хора са честни и заедно ще се защитим взаимно и семействата си. ДОБРЕ ДОШЛИ В SOSPECT!</value>
+  </data>
+  <data name="LabelErrorReiniciar" xml:space="preserve">
+    <value>Възникна неочаквана грешка. Моля, рестартирайте SOSpect. Ако грешката продължава, свържете се с soporte@wescot.com.co</value>
+  </data>
+  <data name="LblLeyenda" xml:space="preserve">
+    <value>Отчет за типа аларма</value>
+  </data>
+  <data name="LabelDescribirAlarma" xml:space="preserve">
+    <value>Опишете алармата</value>
+  </data>
+  <data name="LblErrorNavegador" xml:space="preserve">
+    <value>Грешка при отваряне на браузъра</value>
+  </data>
+  <data name="LblErrorManual" xml:space="preserve">
+    <value>Грешка при отваряне на ръководството</value>
+  </data>
+  <data name="LblErrorSitioWeb" xml:space="preserve">
+    <value>Грешка при отваряне на уебсайта</value>
+  </data>
+  <data name="LabelMoreOptions" xml:space="preserve">
+    <value>Още опции</value>
+  </data>
+  <data name="LblAgregarMedia" xml:space="preserve">
+    <value>Добавете снимка или видео</value>
+  </data>
+  <data name="LblTomarFoto" xml:space="preserve">
+    <value>Направи снимка</value>
+  </data>
+  <data name="LblSeleccionarFoto" xml:space="preserve">
+    <value>Изберете снимка от вашата камера</value>
+  </data>
+  <data name="LblSeleccionarVideo" xml:space="preserve">
+    <value>Изберете видео</value>
+  </data>
+  <data name="LblPermisoCamaraNecesario" xml:space="preserve">
+    <value>За да се снимат снимки, необходимо е разрешение за камера</value>
+  </data>
+  <data name="LblCamaraNoDisponible" xml:space="preserve">
+    <value>Камерата не е налична на това устройство</value>
+  </data>
+  <data name="LblCamaraNoCompatible" xml:space="preserve">
+    <value>Камерата не е съвместима с това устройство</value>
+  </data>
+  <data name="LblTomarFotoAlarma" xml:space="preserve">
+    <value>Направете снимка за аларма</value>
+  </data>
+  <data name="LblSeleccionarFotoAlarma" xml:space="preserve">
+    <value>Изберете снимка за аларма</value>
+  </data>
+  <data name="LblSeleccionarVideoAlarma" xml:space="preserve">
+    <value>Изберете видео за аларма</value>
+  </data>
+  <data name="LblErrorCapturarFoto" xml:space="preserve">
+    <value>Не успях да заснема снимката</value>
+  </data>
+  <data name="LblErrorSeleccionarFoto" xml:space="preserve">
+    <value>Не можах да избера снимка</value>
+  </data>
+  <data name="LblErrorSeleccionarVideo" xml:space="preserve">
+    <value>Видеото не можеше да бъде избрано</value>
+  </data>
+  <data name="LblLimiteAlcanzado" xml:space="preserve">
+    <value>Достигнат лимит</value>
+  </data>
+  <data name="LblSoloPuedesAgregar" xml:space="preserve">
+    <value>Можеш да се събереш само до</value>
+  </data>
+  <data name="LblFotosVideosPorAlarma" xml:space="preserve">
+    <value>Снимки/Видеа от Аларм</value>
+  </data>
+  <data name="LblArchivoMuyGrande" xml:space="preserve">
+    <value>Много голям файл</value>
+  </data>
+  <data name="LblTamanoMaximo100MB" xml:space="preserve">
+    <value>Файлът е твърде голям. Максимален размер: 100MB</value>
+  </data>
+  <data name="LblArchivoNoSeGuardo" xml:space="preserve">
+    <value>Файлът не беше запазен правилно</value>
+  </data>
+  <data name="LblErrorProcesarArchivo" xml:space="preserve">
+    <value>Файлът не можа да бъде обработен</value>
+  </data>
+  <data name="LblCerrarCamara" xml:space="preserve">
+    <value>Затварям</value>
+  </data>
+  <data name="LblCapturarFoto" xml:space="preserve">
+    <value>Хващам</value>
+  </data>
+  <data name="LblGuardandoAlarma" xml:space="preserve">
+    <value>Спасявам алармата...</value>
+  </data>
+  <data name="LblProcesandoFoto" xml:space="preserve">
+    <value>Обработка на снимка...</value>
+  </data>
+  <data name="LblSeleccionarOrigen" xml:space="preserve">
+    <value>Изберете източника на снимката</value>
+  </data>
+  <data name="LblSeleccioneAppNavegacion" xml:space="preserve">
+    <value>Изберете навигационното приложение, което искате да използвате:</value>
+  </data>
+  <data name="LblLongPressForVideo" xml:space="preserve">
+    <value>Натиснете и задръжте, за да запишете видео</value>
+  </data>
+  <data name="LblTomarFotoOVideo" xml:space="preserve">
+    <value>Снимайте или снимайте видео</value>
+  </data>
+  <data name="LblSeleccionarTipoMedia" xml:space="preserve">
+    <value>Избран тип медия</value>
+  </data>
+  <data name="LblGrabarVideo" xml:space="preserve">
+    <value>Запис на видео</value>
+  </data>
+  <data name="LblSospechosoCorto" xml:space="preserve">
+    <value>Подозрителен:</value>
+  </data>
+  <data name="LblVehiculoCorto" xml:space="preserve">
+    <value>Превозно средство:</value>
+  </data>
+  <data name="LblArmasCorto" xml:space="preserve">
+    <value>Оръжия:</value>
+  </data>
+  <data name="LblPlaceholderDescripcionCierre" xml:space="preserve">
+    <value>Накратко опишете затварянето на алармата...</value>
+  </data>
+  <data name="LblDescripcionFalsaAlarma" xml:space="preserve">
+    <value>Алармата не беше истинска или беше грешка</value>
+  </data>
+  <data name="LblDescripcionCaptura" xml:space="preserve">
+    <value>Заловени ли са заподозрени?</value>
+  </data>
+  <data name="LblCerrandoAlarma" xml:space="preserve">
+    <value>Затваряща аларма...</value>
+  </data>
+  <data name="ParaTi" xml:space="preserve">
+    <value>За тебе</value>
+  </data>
+  <data name="SiguiendoEnTuRadio" xml:space="preserve">
+    <value>Следене/Във вашия район</value>
+  </data>
+  <data name="Advertencia" xml:space="preserve">
+    <value>Предупреждение</value>
+  </data>
+  <data name="Crimen" xml:space="preserve">
+    <value>Престъпление</value>
+  </data>
+  <data name="Riña" xml:space="preserve">
+    <value>Битка</value>
+  </data>
+  <data name="Mascota" xml:space="preserve">
+    <value>Талисман</value>
+  </data>
+  <data name="Persona" xml:space="preserve">
+    <value>Личност</value>
+  </data>
+  <data name="Disturbios" xml:space="preserve">
+    <value>Бунтове</value>
+  </data>
+  <data name="Acompañamiento" xml:space="preserve">
+    <value>Акомпанимент</value>
+  </data>
+  <data name="Intrafamiliar" xml:space="preserve">
+    <value>Вътрешно семейство</value>
+  </data>
+  <data name="Persecución" xml:space="preserve">
+    <value>Преследване</value>
+  </data>
+  <data name="Eventos" xml:space="preserve">
+    <value>Събития</value>
+  </data>
+  <data name="Compravotos" xml:space="preserve">
+    <value>Купи гласове</value>
+  </data>
+  <data name="Votaciónforzada" xml:space="preserve">
+    <value>Принудително гласуване</value>
+  </data>
+  <data name="Ciudadana" xml:space="preserve">
+    <value>Гражданин</value>
+  </data>
+  <data name="Compradevotos" xml:space="preserve">
+    <value>Купуване на гласове</value>
+  </data>
+  <data name="Votaciónforzadaporgruposarmados" xml:space="preserve">
+    <value>Принудително гласуване от въоръжени групи</value>
+  </data>
+  <data name="FiltrarTiposDeAlarma" xml:space="preserve">
+    <value>Видове филтърни аларми</value>
+  </data>
+  <data name="AfectaMapaYParaTi" xml:space="preserve">
+    <value>Ефекти: Карта и "За теб"</value>
+  </data>
+  <data name="SiguiendoNoSeFiltrado" xml:space="preserve">
+    <value>⚠️ "Следване/Във вашия район" НЕ е филтриран (критичен приоритет)</value>
+  </data>
+  <data name="TiposCaracteristicosSOSpect" xml:space="preserve">
+    <value>Характерни типове на SOSpect</value>
+  </data>
+  <data name="OtrosTiposOrdenadosPopularidad" xml:space="preserve">
+    <value>Други видове (сортирани по популярност)</value>
+  </data>
+  <data name="Cancelar" xml:space="preserve">
+    <value>Отмени</value>
+  </data>
+  <data name="Aplicar" xml:space="preserve">
+    <value>Кандидатствайте</value>
+  </data>
+  <data name="ErrorCargandoTiposIntenteNuevamente" xml:space="preserve">
+    <value>Типовете аларми не можеха да се зареждат. Моля, опитайте отново.</value>
+  </data>
+  <data name="ErrorCargandoTiposVerifiqueConexion" xml:space="preserve">
+    <value>Типове аларми при зареждане при грешка. Провери връзката си.</value>
+  </data>
+  <data name="InfoPorcentajesBasadosUltimos30Dias" xml:space="preserve">
+    <value>⚠️ Проценти и броя, базирани на аларми, докладвани през последните 30 дни. Те не представляват аларми, които в момента са видими на картата.</value>
+  </data>
+  <data name="PromoWarningImmutable" xml:space="preserve">
+    <value>Провери добре рекламата си, няма да можеш да я модифицираш след като я пуснеш</value>
+  </data>
+  <data name="PromoWarningNoCancellation" xml:space="preserve">
+    <value>Сигурен ли си, че ще го пуснеш? Не може да бъде изтрито след това</value>
+  </data>
+  <data name="PromoInsufficientBalance" xml:space="preserve">
+    <value>Липса на {0} сили</value>
+  </data>
+  <data name="PromoSaldoActual" xml:space="preserve">
+    <value>ТЕКУЩ БАЛАНС: {0} СИЛИ</value>
+  </data>
+  <data name="PromoCostoActual" xml:space="preserve">
+    <value>Текуща цена: {0} Сили</value>
+  </data>
+  <data name="PromoSaldoDespues" xml:space="preserve">
+    <value>Баланс след: {0} сили</value>
+  </data>
+  <data name="PromoLanzarPromocion" xml:space="preserve">
+    <value>ПРОМОЦИЯ ПРИ СТАРТИРАНЕ</value>
+  </data>
+  <data name="PromoComprarPoderes" xml:space="preserve">
+    <value>КУПИ ПРАВОМОЩИЯ</value>
+  </data>
+  <data name="PromoContenidoPromocional" xml:space="preserve">
+    <value>ПРОМОЦИОНАЛНО СЪДЪРЖАНИЕ</value>
+  </data>
+  <data name="PromoDescribePromocion" xml:space="preserve">
+    <value>Опишете вашето повишение или предложение...</value>
+  </data>
+  <data name="PromoMultimedia" xml:space="preserve">
+    <value>МУЛТИМЕДИЯ (включена е 1, общо до 10)</value>
+  </data>
+  <data name="PromoItemIncluido" xml:space="preserve">
+    <value>✓ Включено</value>
+  </data>
+  <data name="PromoItemCosto" xml:space="preserve">
+    <value>+{0} степени</value>
+  </data>
+  <data name="PromoLogoOpcional" xml:space="preserve">
+    <value>ЛОГО (по желание)</value>
+  </data>
+  <data name="PromoAgregarLogo" xml:space="preserve">
+    <value>Добави лого (+{0} степени)</value>
+  </data>
+  <data name="PromoAlcanceGeografico" xml:space="preserve">
+    <value>ГЕОГРАФСКИ ОБХВАТ</value>
+  </data>
+  <data name="PromoRadioMetros" xml:space="preserve">
+    <value>Радиус: {0} метра</value>
+  </data>
+  <data name="PromoDuracion" xml:space="preserve">
+    <value>ПРОДЪЛЖИТЕЛНОСТ</value>
+  </data>
+  <data name="PromoDuracionDias" xml:space="preserve">
+    <value>Продължителност: {0} дни</value>
+  </data>
+  <data name="PromoOpcionesContacto" xml:space="preserve">
+    <value>ОПЦИИ ЗА КОНТАКТ</value>
+  </data>
+  <data name="PromoHabilitarChatPrivado" xml:space="preserve">
+    <value>Активиране на частен чат (+{0} Powers)</value>
+  </data>
+  <data name="PromoPermitirDomicilio" xml:space="preserve">
+    <value>Разрешаване на домашни заповеди (+{0} правомощия)</value>
+  </data>
+  <data name="PromoNotificacionesPush" xml:space="preserve">
+    <value>PUSH ИЗВЕСТИЯ (по желание)</value>
+  </data>
+  <data name="PromoEnviarPush" xml:space="preserve">
+    <value>Изпращане на push известия</value>
+  </data>
+  <data name="PromoUsuariosDisponibles" xml:space="preserve">
+    <value>Потребители, налични в {0} м: {1}</value>
+  </data>
+  <data name="PromoNotificarA" xml:space="preserve">
+    <value>Уведомете {0} потребители</value>
+  </data>
+  <data name="PromoTextoPush" xml:space="preserve">
+    <value>Въведете текста на push известието:</value>
+  </data>
+  <data name="PromoCostoTotal" xml:space="preserve">
+    <value>ОБЩА ЦЕНА: {0} СИЛИ</value>
+  </data>
+  <data name="PromoGuidance" xml:space="preserve">
+    <value>Добавете лого и контактни данни, за да направите промоцията си по-сериозна</value>
+  </data>
+  <data name="PromoErrorCreando" xml:space="preserve">
+    <value>Промоция, създаваща грешка</value>
+  </data>
+  <data name="PromoExitoCreada" xml:space="preserve">
+    <value>Успешно създадена промоция</value>
+  </data>
+  <data name="PromoNecesitasPoderes" xml:space="preserve">
+    <value>За това повишение са нужни поне {0} сили</value>
+  </data>
+  <data name="ChatPendingAcceptance" xml:space="preserve">
+    <value>Чакане за приемане на условията и от двете страни</value>
+  </data>
+  <data name="ChatAcceptTerms" xml:space="preserve">
+    <value>Приемете условията</value>
+  </data>
+  <data name="ChatProveedor" xml:space="preserve">
+    <value>Доставчик:</value>
+  </data>
+  <data name="ChatUsted" xml:space="preserve">
+    <value>Вие:</value>
+  </data>
+  <data name="ChatAceptado" xml:space="preserve">
+    <value>✅ Прието</value>
+  </data>
+  <data name="ChatPendiente" xml:space="preserve">
+    <value>⏳ В процес на изчакване</value>
+  </data>
+  <data name="PromotionalAlarmHeader" xml:space="preserve">
+    <value>Местна промоция</value>
+  </data>
+  <data name="DeliveryAvailable" xml:space="preserve">
+    <value>🚚 Налична доставка до дома</value>
+  </data>
+  <data name="ChatVerEnMapa" xml:space="preserve">
+    <value>Изглед на картата</value>
+  </data>
+  <data name="ChatEnviarMensaje" xml:space="preserve">
+    <value>Изпрати съобщение</value>
+  </data>
+  <data name="ChatAdjuntarImagen" xml:space="preserve">
+    <value>Прикачете изображение</value>
+  </data>
+  <data name="ChatEscribeMensaje" xml:space="preserve">
+    <value>Напиши съобщение...</value>
+  </data>
+  <data name="ChatNoActivo" xml:space="preserve">
+    <value>Чатът не е активен. Двете страни трябва първо да се споразумеят за условията.</value>
+  </data>
+  <data name="ChatErrorEnviandoMensaje" xml:space="preserve">
+    <value>Съобщение за изпращане на грешка</value>
+  </data>
+  <data name="ChatMensajeEnviado" xml:space="preserve">
+    <value>Съобщение изпратено</value>
+  </data>
+  <data name="ChatTerminosAceptados" xml:space="preserve">
+    <value>Приети условия. Чатът вече е активен.</value>
+  </data>
+  <data name="ChatErrorAceptandoTerminos" xml:space="preserve">
+    <value>Условия при приемане на грешки</value>
+  </data>
+  <data name="PromoPublicadoNoEditable" xml:space="preserve">
+    <value>Публикувано - Нередактирано</value>
+  </data>
+  <data name="PromoInsuficiente" xml:space="preserve">
+    <value>Недостатъчни</value>
+  </data>
+  <data name="PromoRecomendado" xml:space="preserve">
+    <value>Препоръчано ⭐</value>
+  </data>
+  <data name="PromoSinTerminosNoContacto" xml:space="preserve">
+    <value>Ако не сте съгласни с условията, не можете да активирате опции за контакт или доставка до дома</value>
+  </data>
+  <data name="PromoTerminosRequeridos" xml:space="preserve">
+    <value>Трябва да приемете условията, за да позволите контакт или домашна доставка</value>
+  </data>
+  <data name="PromoTerminosCondiciones" xml:space="preserve">
+    <value>Условия и правила за чата</value>
+  </data>
+  <data name="PromoAceptoTerminos" xml:space="preserve">
+    <value>Съгласен съм да получавам съобщения от потенциални клиенти</value>
+  </data>
+  <data name="PromoTerminosObligatorios" xml:space="preserve">
+    <value>(изисква се за контакт/адрес)</value>
+  </data>
+  <data name="PromoTerminosExplicacion" xml:space="preserve">
+    <value>Като приемете, ще можете да получавате лични съобщения от хора, заинтересовани от вашата промоция, чрез интегрирания чат на приложението.</value>
+  </data>
+  <data name="LabelAlarmas" xml:space="preserve">
+    <value>Аларми</value>
+  </data>
+  <data name="LabelAlarmasAgrupadas" xml:space="preserve">
+    <value>Групирани аларми</value>
+  </data>
+  <data name="Alarm_10" xml:space="preserve">
+    <value>Събития</value>
+  </data>
+  <data name="Alarm_11" xml:space="preserve">
+    <value>Купуване на гласове</value>
+  </data>
+  <data name="Alarm_12" xml:space="preserve">
+    <value>Принудително гласуване от въоръжени групи</value>
+  </data>
+  <data name="Alarm_13" xml:space="preserve">
+    <value>Местна промоция</value>
+  </data>
+  <data name="Promoción" xml:space="preserve">
+    <value>Промоция</value>
+  </data>
+  <data name="LblLimiteAlarmasFeed" xml:space="preserve">
+    <value>Лимит на алармите в началния поток</value>
+  </data>
+  <data name="LblDescripcionLimiteAlarmasFeed" xml:space="preserve">
+    <value>Изберете колко аларми искате да качите, когато отворите приложението. По-малък брой подобряват представянето.</value>
+  </data>
+  <data name="OptConfNotif" xml:space="preserve">
+    <value>Задаване на параметри и известия</value>
+  </data>
+  <data name="PromoFormTitle" xml:space="preserve">
+    <value>Създаване на местна промоция</value>
+  </data>
+  <data name="PromoAlcance" xml:space="preserve">
+    <value>3. ОБХВАТ И ПРОДЪЛЖИТЕЛНОСТ</value>
+  </data>
+  <data name="PromoCaracteristicasOpcionales" xml:space="preserve">
+    <value>4. ОПЦИОНАЛНИ ФУНКЦИИ</value>
+  </data>
+  <data name="PromoEnviarNotificaciones" xml:space="preserve">
+    <value>Изпратете на {0} потребители</value>
+  </data>
+  <data name="PromoCostoNotificaciones" xml:space="preserve">
+    <value>(+{0} сили на 50 потребители)</value>
+  </data>
+  <data name="PromoConfirmacionFinal" xml:space="preserve">
+    <value>6. ПОТВЪРЖДЕНИЕ</value>
+  </data>
+  <data name="PromoConfirmarLanzamiento" xml:space="preserve">
+    <value>Сигурен ли си, че ще го пуснеш? Не може да бъде изтрито след това</value>
+  </data>
+  <data name="PromoCreandoAlarma" xml:space="preserve">
+    <value>Създаване на промоция...</value>
+  </data>
+  <data name="PromoCreacionExitosa" xml:space="preserve">
+    <value>Промоцията е публикувана успешно!</value>
+  </data>
+  <data name="PromoErrorCreacion" xml:space="preserve">
+    <value>Промоция, създаваща грешка</value>
+  </data>
+  <data name="PromoDescripcionVacia" xml:space="preserve">
+    <value>Трябва да добавите описание за вашето повишение.</value>
+  </data>
+  <data name="PromoTerminoProveedor1" xml:space="preserve">
+    <value>Съгласен съм, че съм единствено отговорен за предлагания продукт или услуга, неговата доставка, качество, съответствие и всякакви споразумения, сключени с потребителя.</value>
+  </data>
+  <data name="PromoTerminoProveedor2" xml:space="preserve">
+    <value>Съгласен съм, че всяко плащане, начин на плащане или събиране ще се извършва директно между мен и купувача, и че SOSpect не действа като посредник и не носи отговорност за тези споразумения.</value>
+  </data>
+  <data name="PromoTerminoProveedor3" xml:space="preserve">
+    <value>Съгласен съм, че адресите, доставките или домашните услуги са изцяло моя отговорност, включително сигурността, навременността и съответствието.</value>
+  </data>
+  <data name="PromoTerminoProveedor4" xml:space="preserve">
+    <value>Съгласен съм, че SOSpect действа само като средство за контакт и е освободен от отговорност за сделката, продукта или услугата.</value>
+  </data>
+  <data name="PromoTerminoInteresado1" xml:space="preserve">
+    <value>Съгласен съм, че продуктът или услугата се предлагат директно от доставчика и че SOSpect не гарантира тяхното качество, наличност или производителност.</value>
+  </data>
+  <data name="PromoTerminoInteresado2" xml:space="preserve">
+    <value>Съгласен съм, че всяко плащане се извършва директно на доставчика и че SOSpect не се намесва и не отговаря за пари, преводи или икономически споразумения.</value>
+  </data>
+  <data name="PromoTerminoInteresado3" xml:space="preserve">
+    <value>Съгласен съм да поема нормалните рискове при транзакция между индивиди, включително проверка на самоличност, качество на продукта и сигурност на срещата.</value>
+  </data>
+  <data name="PromoTerminoInteresado4" xml:space="preserve">
+    <value>Съгласен съм, че SOSpect не носи отговорност за резултата от това взаимодействие или за постигнатите споразумения.</value>
+  </data>
+  <data name="PromoEjemplo" xml:space="preserve">
+    <value>Пример: "🍕 Пица 2x1 в семейен размер - Само днес от 17:00 до 21:00 - Елате и се насладете с цялото семейство"</value>
+  </data>
+  <data name="PromoUsuariosPotenciales" xml:space="preserve">
+    <value>Потенциални потребители в радиото: {0}</value>
+  </data>
+  <data name="PromoAgregarMultimedia" xml:space="preserve">
+    <value>Добави снимка/видео</value>
+  </data>
+  <data name="PromoAgregarLogoImagen" xml:space="preserve">
+    <value>Добави лого</value>
+  </data>
+  <data name="PromoLimiteMultimedia" xml:space="preserve">
+    <value>Можеш да добавиш само до 10 снимки/видеа</value>
+  </data>
+  <data name="PromoAgregarFotoVideo" xml:space="preserve">
+    <value>Добави снимка/видео ({0}/10)</value>
+  </data>
+  <data name="PromoPoderesInsuficientes" xml:space="preserve">
+    <value>Недостатъчни правомощия</value>
+  </data>
+  <data name="PromoConfirmarLanzar" xml:space="preserve">
+    <value>Сигурни ли сте, че ще стартирате тази промоция?
+
+Цена: {0} сили
+Продължителност: {1} дни
+Радиус: {2} метра
+
+{3}</value>
+  </data>
+  <data name="PromoSiLanzar" xml:space="preserve">
+    <value>Да, изстрелване</value>
+  </data>
+  <data name="LabelErrorDesconocido" xml:space="preserve">
+    <value>Неизвестна грешка</value>
+  </data>
+  <data name="LabelVideo" xml:space="preserve">
+    <value>Видео</value>
+  </data>
+  <data name="LabelFoto" xml:space="preserve">
+    <value>Снимка</value>
+  </data>
+  <data name="LabelCargando" xml:space="preserve">
+    <value>Зареждане...</value>
+  </data>
+  <data name="PromocionLocal" xml:space="preserve">
+    <value>Местна промоция</value>
+  </data>
+  <data name="PromoCaracteresRestantes" xml:space="preserve">
+    <value>{0} останали герои</value>
+  </data>
+  <data name="PromoPlaceholderTextoPush" xml:space="preserve">
+    <value>Например: 🍕 2x1 пица днес! Само до 20:00</value>
+  </data>
+  <data name="ChatTerminosCondiciones" xml:space="preserve">
+    <value>Условия и правила за чата</value>
+  </data>
+  <data name="ChatNoDisponible" xml:space="preserve">
+    <value>Чатът не е наличен</value>
+  </data>
+  <data name="DebesAceptarTerminos" xml:space="preserve">
+    <value>Трябва да се съгласите с условията, за да можете да разговаряте с доставчика.</value>
+  </data>
+  <data name="ChatAceptoTerminosInteresado" xml:space="preserve">
+    <value>Приемам условията и правилата на чата</value>
+  </data>
+  <data name="ChatTerminoInteresado1" xml:space="preserve">
+    <value>Съгласен съм, че продуктът или услугата се предлагат директно от доставчика и че SOSpect не гарантира, не валидира или гарантира за това.</value>
+  </data>
+  <data name="ChatTerminoInteresado2" xml:space="preserve">
+    <value>Съгласен съм, че всяко плащане се извършва директно на доставчика и че SOSpect не се намесва и не отговаря за пари, преводи или икономически споразумения.</value>
+  </data>
+  <data name="ChatTerminoInteresado3" xml:space="preserve">
+    <value>Съгласен съм да поема нормалните рискове от транзакция между индивиди, включително възможни неизпълнения.</value>
+  </data>
+  <data name="ChatTerminoInteresado4" xml:space="preserve">
+    <value>Съгласен съм, че SOSpect не носи отговорност за резултата от това взаимодействие или за постигнатите споразумения.</value>
+  </data>
+  <data name="PromoPrioridadNotificaciones" xml:space="preserve">
+    <value>i️ Ако изберете по-малко потребители от общия брой налични в радиуса, потребителите с актуално и активно приложение ще бъдат приоритетни, за да се максимизира ефективността на вашата промоция. Останалите ще бъдат избрани на случаен принцип.</value>
+  </data>
+  <data name="AppName" xml:space="preserve">
+    <value>SOSpect</value>
+  </data>
+  <data name="LblNuevaAlarmaCerca" xml:space="preserve">
+    <value>Нова аларма близо до вас</value>
+  </data>
+  <data name="BtnVerAlarma" xml:space="preserve">
+    <value>Виж аларма</value>
+  </data>
+  <data name="PromoEditarLogo" xml:space="preserve">
+    <value>Промяна на логото</value>
+  </data>
+  <data name="PromoUsandoLogoGuardado" xml:space="preserve">
+    <value>Използване на лого за запазено стартиране</value>
+  </data>
+  <data name="PromoLogoSeGuardara" xml:space="preserve">
+    <value>Това лого ще бъде запазено и използвано в бъдещи промоции</value>
+  </data>
+  <data name="ChatRecordatorioProveedorAcepto" xml:space="preserve">
+    <value>Вече сте приели условията за тази промоция в {0}</value>
+  </data>
+  <data name="ChatRecordatorioInteresadoAcepto" xml:space="preserve">
+    <value>Съгласи се с условията на този чат {0}</value>
+  </data>
+  <data name="ChatErrorIniciar" xml:space="preserve">
+    <value>Грешка при стартиране на чат</value>
+  </data>
+  <data name="ChatErrorCargar" xml:space="preserve">
+    <value>Грешка при зареждане на чата</value>
+  </data>
+  <data name="ChatActivo" xml:space="preserve">
+    <value>Активен чат</value>
+  </data>
+  <data name="ChatAdjuntar" xml:space="preserve">
+    <value>Прикачете се</value>
+  </data>
+  <data name="ChatFuncionalidadProximamente" xml:space="preserve">
+    <value>Функция за прикачване на изображение скоро идва</value>
+  </data>
+  <data name="ChatErrorAdjuntar" xml:space="preserve">
+    <value>Грешка при прикачване на изображение</value>
+  </data>
+  <data name="ChatErrorNavegar" xml:space="preserve">
+    <value>Грешка при навигация към карта</value>
+  </data>
+  <data name="LabelRestriccion" xml:space="preserve">
+    <value>Някои аларми временно са изключени на Apple® iPhone® поради липса на споразумение с властите или поради условия в страната, като изборен сезон или други събития.</value>
+  </data>
+  <data name="LogoEditorTitle" xml:space="preserve">
+    <value>Лого с кръгла площ</value>
+  </data>
+  <data name="LogoEditorZoom" xml:space="preserve">
+    <value>Регулиране на зума</value>
+  </data>
+  <data name="LogoEditorSave" xml:space="preserve">
+    <value>Запази</value>
+  </data>
+  <data name="LogoEditorNoImage" xml:space="preserve">
+    <value>Няма качено изображение</value>
+  </data>
+  <data name="LogoEditorSaveError" xml:space="preserve">
+    <value>Грешка при запазване на логото</value>
+  </data>
+  <data name="PromoVerificarNIT" xml:space="preserve">
+    <value>ПРОВЕРЕТЕ ПРЕДПРИЕМАЧЕСТВОТО</value>
+  </data>
+  <data name="PromoPlaceholderNIT" xml:space="preserve">
+    <value>NIT или лична карта на собственика</value>
+  </data>
+  <data name="PromoBotonVerificarNIT" xml:space="preserve">
+    <value>Провери самоличността</value>
+  </data>
+  <data name="PromoDeclaroPropietario" xml:space="preserve">
+    <value>Обявявам се за законен собственик на този NIT/ID</value>
+  </data>
+  <data name="PromoDatosEmprendimiento" xml:space="preserve">
+    <value>ДАННИ ЗА ПРЕДПРИЕМАЧЕСТВО</value>
+  </data>
+  <data name="PromoPlaceholderNombreEmprendimiento" xml:space="preserve">
+    <value>Име на предприятието</value>
+  </data>
+  <data name="PromoPlaceholderNombrePropietario" xml:space="preserve">
+    <value>Име на собственика</value>
+  </data>
+  <data name="NITRequerido" xml:space="preserve">
+    <value>Трябва да въведете идентификационния номер на собственика или бизнеса</value>
+  </data>
+  <data name="NITNoExisteSerPropietario" xml:space="preserve">
+    <value>Този идентификационен номер не е регистриран. Когато създадете първата промоция, ще бъдете регистрирани като собственик. ВАЖНО: Уверете се, че въвеждате правилния собственик или бизнес идентификационен номер от самото начало, тъй като смяната на собствеността изисква процес на валидиране до 15 дни чрез техническа поддръжка.</value>
+  </data>
+  <data name="EresPropietario" xml:space="preserve">
+    <value>Вие сте собственикът на това начинание. Можете да редактирате името и логото.</value>
+  </data>
+  <data name="EresSubalternoSoloPromocion" xml:space="preserve">
+    <value>Това начинание вече съществува. Можете само да създавате промоции, не можете да променяте името или логото.</value>
+  </data>
+  <data name="DebeVerificarNITPrimero" xml:space="preserve">
+    <value>Трябва да потвърдите ID номера преди да създадете промоцията</value>
+  </data>
+  <data name="DebeAceptarDeclaracionPropietario" xml:space="preserve">
+    <value>Трябва да потвърдите, че сте собственик на този бизнес под този идентификационен номер</value>
+  </data>
+  <data name="NombreEmprendimientoYPropietarioRequeridos" xml:space="preserve">
+    <value>Трябва да въведете името на бизнеса и собственика</value>
+  </data>
+  <data name="LabelAdvertencia" xml:space="preserve">
+    <value>Предупреждение</value>
+  </data>
+  <data name="ErrorVerificandoNIT" xml:space="preserve">
+    <value>Не успях да потвърдя идентификационния номер</value>
+  </data>
+  <data name="LblRefrescandoAlarmas" xml:space="preserve">
+    <value>Освежаващи аларми...</value>
+  </data>
+  <data name="LblCargandoAlarmas" xml:space="preserve">
+    <value>Зареждане на аларми...</value>
+  </data>
+  <data name="LblActualizandoAlarmas" xml:space="preserve">
+    <value>Актуализирам алармите...</value>
+  </data>
+  <data name="LblAlarmaRecibida" xml:space="preserve">
+    <value>Получена тревога</value>
+  </data>
+  <data name="LblDetallePromocion" xml:space="preserve">
+    <value>Подробности за повишение</value>
+  </data>
+  <data name="LblUsuariosNotificados" xml:space="preserve">
+    <value>Уведомени потребители</value>
+  </data>
+  <data name="LblPoderesUsados" xml:space="preserve">
+    <value>Използвани сили</value>
+  </data>
+  <data name="LblRadioAlcance" xml:space="preserve">
+    <value>Радиус на обхвата</value>
+  </data>
+  <data name="LblDuracionDias" xml:space="preserve">
+    <value>Продължителност (дни)</value>
+  </data>
+  <data name="LblTextoPush" xml:space="preserve">
+    <value>Текст на известие</value>
+  </data>
+  <data name="LblEnvioAceptado" xml:space="preserve">
+    <value>Прието</value>
+  </data>
+  <data name="LblEnvioRechazado" xml:space="preserve">
+    <value>Отхвърлени</value>
+  </data>
+  <data name="LblTotalNotificados" xml:space="preserve">
+    <value>Total</value>
+  </data>
+  <data name="LblLogoHabilitado" xml:space="preserve">
+    <value>Логото е активирано</value>
+  </data>
+  <data name="LblContactoHabilitado" xml:space="preserve">
+    <value>Контакт е активиран</value>
+  </data>
+  <data name="LblDomicilioHabilitado" xml:space="preserve">
+    <value>Разрешен адрес</value>
+  </data>
+  <data name="LblConfiguracionPromocion" xml:space="preserve">
+    <value>Промоционални настройки</value>
+  </data>
+  <data name="LblCantidadMedia" xml:space="preserve">
+    <value>Снимки/Видеа</value>
+  </data>
+  <data name="LblFechaInicio" xml:space="preserve">
+    <value>Начална дата</value>
+  </data>
+  <data name="LblFechaFin" xml:space="preserve">
+    <value>Крайна дата</value>
+  </data>
+  <data name="LblOpcionesHabilitadas" xml:space="preserve">
+    <value>Активирани опции</value>
+  </data>
+  <data name="LblListadoUsuarios" xml:space="preserve">
+    <value>Списък на потребителите</value>
+  </data>
+  <data name="LblPendiente" xml:space="preserve">
+    <value>В процес на изчакване</value>
+  </data>
+  <data name="LblDescripcionPromocional" xml:space="preserve">
+    <value>Промоционално описание</value>
+  </data>
+  <data name="LblNitCedula" xml:space="preserve">
+    <value>NIT/Cédula</value>
+  </data>
+  <data name="Anunciopublicitariodeusuarios" xml:space="preserve">
+    <value>Потребителски банер</value>
+  </data>
+  <data name="LblNombreEmprendimiento" xml:space="preserve">
+    <value>Име на Venture</value>
+  </data>
+  <data name="LblProcesandoVideo" xml:space="preserve">
+    <value>Обработка на видео...</value>
+  </data>
+  <data name="LblErrorGrabarVideo" xml:space="preserve">
+    <value>Грешка при стартиране на видео запис</value>
+  </data>
+  <data name="LblErrorGuardarVideo" xml:space="preserve">
+    <value>Видео при запазване на грешки</value>
+  </data>
+  <data name="LblVideoVacio" xml:space="preserve">
+    <value>Не беше заснето видео</value>
+  </data>
+  <data name="LblDescartarVideo" xml:space="preserve">
+    <value>Искате ли да изхвърлите видеото, което записвате?</value>
+  </data>
+  <data name="LblTocaParaGrabar" xml:space="preserve">
+    <value>Докосни за запис</value>
+  </data>
+  <data name="LblTocaParaDetener" xml:space="preserve">
+    <value>Докосни, за да спреш</value>
+  </data>
+  <data name="LblContactarAnunciante" xml:space="preserve">
+    <value>Свържете се с рекламодателя</value>
+  </data>
+  <data name="LblVerChatsPromocion" xml:space="preserve">
+    <value>Вижте чатовете за тази промоция</value>
+  </data>
+  <data name="LblChatsPromocion" xml:space="preserve">
+    <value>Промоционални чатове</value>
+  </data>
+  <data name="LblNoTienesChatsAun" xml:space="preserve">
+    <value>Все още нямате чатове</value>
+  </data>
+  <data name="LblDetallePromocion_Duplicate[1]" xml:space="preserve">
+    <value>Подробности за повишение</value>
+  </data>
+  <data name="LblAceptarTerminosChat" xml:space="preserve">
+    <value>За да се свържете с рекламодателя, трябва да се съгласите с условията на чата</value>
+  </data>
+  <data name="LblAceptarYContactar" xml:space="preserve">
+    <value>Приемете условията и контакт</value>
+  </data>
+  <data name="LblTituloCierreEncuesta" xml:space="preserve">
+    <value>Затваряне чрез измерване</value>
+  </data>
+  <data name="LblTituloProponerCierre" xml:space="preserve">
+    <value>Предложено предупреждение за затваряне</value>
+  </data>
+  <data name="LblDescripcionPropuestaCierre" xml:space="preserve">
+    <value>Защо това предупреждение трябва да бъде затворено?</value>
+  </data>
+  <data name="LblPlaceholderPropuestaCierre" xml:space="preserve">
+    <value>Накратко опишете причината за затварянето на това предупреждение...</value>
+  </data>
+  <data name="LblEvidenciaFotografica" xml:space="preserve">
+    <value>Фотографски доказателства (по избор)</value>
+  </data>
+  <data name="LblBotonProponerCierre" xml:space="preserve">
+    <value>Предложете затваряне</value>
+  </data>
+  <data name="LblTituloVotacionCierre" xml:space="preserve">
+    <value>В ход е финално гласуване</value>
+  </data>
+  <data name="LblDescripcionPropuesta" xml:space="preserve">
+    <value>Описание на предложението</value>
+  </data>
+  <data name="LblResultadosVotacion" xml:space="preserve">
+    <value>Резултати от гласуването</value>
+  </data>
+  <data name="LblVotosAFavor" xml:space="preserve">
+    <value>В подкрепа</value>
+  </data>
+  <data name="LblVotosEnContra" xml:space="preserve">
+    <value>Срещу</value>
+  </data>
+  <data name="LblTiempoRestanteVotacion" xml:space="preserve">
+    <value>Оставащо време:</value>
+  </data>
+  <data name="LblVotarAFavor" xml:space="preserve">
+    <value>Гласувайте в подкрепа</value>
+  </data>
+  <data name="LblVotarEnContra" xml:space="preserve">
+    <value>Гласувайте против</value>
+  </data>
+  <data name="LblYaVotoAFavor" xml:space="preserve">
+    <value>Вече гласувахте в подкрепа на затварянето</value>
+  </data>
+  <data name="LblYaVotoEnContra" xml:space="preserve">
+    <value>Вече гласувахте против затварянето</value>
+  </data>
+  <data name="LblVotacionFinalizada" xml:space="preserve">
+    <value>Гласуването приключи</value>
+  </data>
+  <data name="LblDescripcionRequerida" xml:space="preserve">
+    <value>Трябва да въведете описание</value>
+  </data>
+  <data name="LblPropuestaCierreEnviada" xml:space="preserve">
+    <value>Изпратено предложение</value>
+  </data>
+  <data name="LblPropuestaCierreExito" xml:space="preserve">
+    <value>Вашето заключително предложение е подадено. Общността ще гласува да реши.</value>
+  </data>
+  <data name="LblVotoRegistrado" xml:space="preserve">
+    <value>Записано гласуване</value>
+  </data>
+  <data name="LblVotoRegistradoExito" xml:space="preserve">
+    <value>Вашият глас е успешно записан</value>
+  </data>
+  <data name="LblTituloCierreCaptura" xml:space="preserve">
+    <value>Затвори алармата</value>
+  </data>
+  <data name="LblTituloCierrePersona" xml:space="preserve">
+    <value>Предупреждение за затваряне на изгубен човек</value>
+  </data>
+  <data name="LblTituloCierreMascota" xml:space="preserve">
+    <value>Затваряне на предупреждение за изгубен домашен любимец</value>
+  </data>
+  <data name="LblTituloCierreBasico" xml:space="preserve">
+    <value>Близо до тревога</value>
+  </data>
+  <data name="LblPersonaEncontrada" xml:space="preserve">
+    <value>Намерен ли е човекът?</value>
+  </data>
+  <data name="LblMascotaRecuperada" xml:space="preserve">
+    <value>Възстанови ли се домашният любимец?</value>
+  </data>
+  <data name="LblCierreExitoso" xml:space="preserve">
+    <value>Алармата успешно затворена</value>
+  </data>
+  <data name="LblProponendoCierre" xml:space="preserve">
+    <value>Изпращане на заключително предложение...</value>
+  </data>
+  <data name="LblRegistrandoVoto" xml:space="preserve">
+    <value>Регистрация на гласа...</value>
+  </data>
+  <data name="LblNotifResultadoCierreAprobado" xml:space="preserve">
+    <value>Бяха събрани {0} гласа. {1}% "за", {2}% "против". Гражданското предупреждение беше затворено.</value>
+  </data>
+  <data name="LblNotifResultadoCierreDenegado" xml:space="preserve">
+    <value>Бяха събрани {0} гласа. {1}% "за", {2}% "против". Молбата за затваряне беше отхвърлена.</value>
+  </data>
+  <data name="LblNotifResultadoSinVotos" xml:space="preserve">
+    <value>В рамките на 24-те часа не бяха получени гласове. Гражданското предупреждение беше затворено.</value>
+  </data>
+  <data name="LblEvidenciaFotograficaCierre" xml:space="preserve">
+    <value>Фотографски доказателства (по избор)</value>
+  </data>
+  <data name="LblConsultandoSolicitud" xml:space="preserve">
+    <value>Консултация за затваряне...</value>
+  </data>
+  <data name="LblNotifProponerCierreAlerta" xml:space="preserve">
+    <value>Гражданско предупреждение близо до вас е предложено да бъде затворено. Имате 24 часа да гласувате.</value>
+  </data>
+  <data name="Alertaciudadana" xml:space="preserve">
+    <value>Гражданско предупреждение</value>
+  </data>
+  <data name="Alarm_14" xml:space="preserve">
+    <value>Гражданско предупреждение</value>
+  </data>
+  <data name="LblVerAlertaCercana" xml:space="preserve">
+    <value>Виж, {0} {1} съм далеч от теб</value>
+  </data>
+  <data name="LblVerAlerta" xml:space="preserve">
+    <value>Вижте подробности за предупрежденията</value>
+  </data>
+  <data name="LblMensajeDestinatario" xml:space="preserve">
+    <value>Получател на съобщението</value>
+  </data>
+  <data name="LblMensajeRemitente" xml:space="preserve">
+    <value>Изпращач на съобщение</value>
+  </data>
+  <data name="LblDescripcionInicial_Duplicate[1]" xml:space="preserve">
+    <value>Добре дошли в SOSpect, вашето приложение за безопасност в общността. Ще ви покажем как работи стъпка по стъпка.</value>
+  </data>
+  <data name="SeguimientoUbicacionTitulo" xml:space="preserve">
+    <value>SOSpect Active</value>
+  </data>
+  <data name="SeguimientoUbicacionMensaje" xml:space="preserve">
+    <value>Наблюдение на близките аларми</value>
+  </data>
+  <data name="PermisoUbicacionFondoTitulo" xml:space="preserve">
+    <value>Местоположение на заден план</value>
+  </data>
+  <data name="PermisoUbicacionFondoMensaje" xml:space="preserve">
+    <value>SOSpect се нуждае от достъп до вашето местоположение, дори когато приложението е затворено, за да ви уведоми за близките рискови зони. Искате ли да позволите достъп?</value>
+  </data>
+  <data name="LblIntervaloMonitoreoBackground" xml:space="preserve">
+    <value>Интервал за мониторинг на сигурността</value>
+  </data>
+  <data name="LblDescripcionIntervaloBackground" xml:space="preserve">
+    <value>Колко често искате SOSpect да провери дали сте пристигнали в район с критични рискове за вашата безопасност и да ви уведоми?</value>
+  </data>
+  <data name="LblNoHayAlarmas" xml:space="preserve">
+    <value>В момента нямаш аларми тук.</value>
+  </data>
+  <data name="NotificacionServicioTitulo" xml:space="preserve">
+    <value>SOSpect Active</value>
+  </data>
+  <data name="NotificacionServicioTexto" xml:space="preserve">
+    <value>Наблюдение на близките аларми</value>
+  </data>
+  <data name="NotificacionCanalNombre" xml:space="preserve">
+    <value>Проследяване на местоположението</value>
+  </data>
+  <data name="NotificacionCanalDescripcion" xml:space="preserve">
+    <value>SOSpect следи местоположението ви, за да ви предупреди за рискови зони</value>
+  </data>
+  <data name="LabelPermitir" xml:space="preserve">
+    <value>Позволи</value>
+  </data>
+  <data name="LabelAhoraNo" xml:space="preserve">
+    <value>Не сега</value>
+  </data>
+  <data name="OptimizacionBateriaTitulo" xml:space="preserve">
+    <value>Оптимизация на батериите</value>
+  </data>
+  <data name="OptimizacionBateriaMensaje" xml:space="preserve">
+    <value>За да може SOSpect да ви защити дори когато приложението е затворено, трябва да изключите оптимизацията на батерията. Това позволява на услугата за мониторинг да остане активна. Искаш ли да го позволиш?</value>
+  </data>
+  <data name="LblUsuarioID" xml:space="preserve">
+    <value>Потребителски ID:</value>
+  </data>
+  <data name="SeguirUsuario" xml:space="preserve">
+    <value>Следвайте този потребител</value>
+  </data>
+  <data name="DejarDeSeguirUsuario" xml:space="preserve">
+    <value>Отпишете</value>
+  </data>
+  <data name="SeguirExplicacion" xml:space="preserve">
+    <value>Следите са безплатни. Ще видите алармите им в "Следване", без push известия.</value>
+  </data>
+  <data name="SiguiendoExplicacion" xml:space="preserve">
+    <value>'Following' не изпраща известия. За спешни сигнали използвайте Protected.</value>
+  </data>
+  <data name="PersonalizarParaTi" xml:space="preserve">
+    <value>Персонализирам за вас</value>
+  </data>
+  <data name="PaisesInteres" xml:space="preserve">
+    <value>Страни от интерес</value>
+  </data>
+  <data name="TodosLosPaises" xml:space="preserve">
+    <value>Всички държави</value>
+  </data>
+  <data name="LikeAlarma" xml:space="preserve">
+    <value>Като</value>
+  </data>
+  <data name="QuitarLikeAlarma" xml:space="preserve">
+    <value>Вече не ми харесва.</value>
+  </data>
+  <data name="ReenviarAlarma" xml:space="preserve">
+    <value>Напред</value>
+  </data>
+  <data name="QuitarReenvio" xml:space="preserve">
+    <value>Cancel препращане</value>
+  </data>
+  <data name="CompartirAlarma" xml:space="preserve">
+    <value>Сподели</value>
+  </data>
+  <data name="MarcarVerdadera" xml:space="preserve">
+    <value>Това е вярно</value>
+  </data>
+  <data name="MarcarFalsa" xml:space="preserve">
+    <value>Това е невярно</value>
+  </data>
+  <data name="SeguirConfirmacion" xml:space="preserve">
+    <value>Искате ли да последвате този потребител? Ще видите алармите им във вашия поток "Следващи".</value>
+  </data>
+  <data name="DejarDeSeguirConfirmacion" xml:space="preserve">
+    <value>Да спрете да следвате този потребител?</value>
+  </data>
+  <data name="LblAdvertenciaLimiteAlto" xml:space="preserve">
+    <value>По-високият лимит може да повлияе на производителността при бавни устройства.</value>
+  </data>
+  <data name="MensajeSeguirUsuario" xml:space="preserve">
+    <value>Сега следи този потребител. Вашите аларми ще се появят в таба "Следващи". Обърнете внимание, че потребителите на последвани не генерират push известия; За да получите спешни известия от някого, помислете да ги добавите като Защитени.</value>
+  </data>
+  <data name="PublicarEnX" xml:space="preserve">
+    <value>Публикувайте в X (Twitter)</value>
+  </data>
+  <data name="PublicarEnFacebook" xml:space="preserve">
+    <value>Публикувайте във Facebook</value>
+  </data>
+  <data name="TextoCompartirAlarmaIntro" xml:space="preserve">
+    <value>🚨 В моя район се появи ново предупреждение!
+Споделено в SOSpect, общностното приложение, което ни държи информирани и обединени пред лицето на престъпността и опасностите.
+👉 Вижте подробности:</value>
+  </data>
+  <data name="PromoConfirmaUbicacion" xml:space="preserve">
+    <value>Потвърдете мястото, където искате да стартирате промоцията</value>
+  </data>
+  <data name="PromoConfirmaUbicacionModal" xml:space="preserve">
+    <value>Докоснете картата, за да коригирате точната точка, в която ще бъде стартирана промоцията</value>
+  </data>
+  <data name="PromoBotonConfirmarUbicacion" xml:space="preserve">
+    <value>Потвърдете местоположението</value>
+  </data>
+  <data name="LblUsuarios" xml:space="preserve">
+    <value>Потребители</value>
+  </data>
+  <data name="TituloAutoridadesResponsables" xml:space="preserve">
+    <value>Отговорни органи</value>
+  </data>
+  <data name="AutoridadesResponsablesDescripcion" xml:space="preserve">
+    <value>Държавни служители, отговорни за сигурността в този район</value>
+  </data>
+  <data name="LblVerAutoridadesResponsables" xml:space="preserve">
+    <value>Вижте отговорни органи</value>
+  </data>
+  <data name="AlarmasPoliticasUltimos30d" xml:space="preserve">
+    <value>30-дневни аларми за сигурност</value>
+  </data>
+  <data name="LblEmail" xml:space="preserve">
+    <value>Имейл</value>
+  </data>
+  <data name="LblTelefono" xml:space="preserve">
+    <value>Телефон</value>
+  </data>
+  <data name="LblSitioWeb" xml:space="preserve">
+    <value>Уебсайт</value>
+  </data>
+  <data name="Cargo_1" xml:space="preserve">
+    <value>Президент</value>
+  </data>
+  <data name="Cargo_2" xml:space="preserve">
+    <value>Губернатор</value>
+  </data>
+  <data name="Cargo_3" xml:space="preserve">
+    <value>Кмет</value>
+  </data>
+  <data name="Cargo_4" xml:space="preserve">
+    <value>Кмет</value>
+  </data>
+  <data name="LblResolucion" xml:space="preserve">
+    <value>Резолюция</value>
+  </data>
+  <data name="LblVerReporte" xml:space="preserve">
+    <value>· Вижте → доклад</value>
+  </data>
+  <data name="LblAlarmasAbiertas" xml:space="preserve">
+    <value>Отворени аларми</value>
+  </data>
+  <data name="LblAlarmasCerradas" xml:space="preserve">
+    <value>Алармите са затворени</value>
+  </data>
+  <data name="LblTiempoPromedioResolucion" xml:space="preserve">
+    <value>Средно време за резолюция</value>
+  </data>
+  <data name="LblDias" xml:space="preserve">
+    <value>Дни</value>
+  </data>
+  <data name="LblTituloReporteAutoridad" xml:space="preserve">
+    <value>Доклад за представянето</value>
+  </data>
+  <data name="LblReporteAutoridadNota" xml:space="preserve">
+    <value>Данните се обновяват ежедневно в 0:00 UTC</value>
+  </data>
+  <data name="LblTiposDeAlarma" xml:space="preserve">
+    <value>Видове докладвани аларми</value>
+  </data>
+  <data name="LblLikes" xml:space="preserve">
+    <value>Харесва</value>
+  </data>
+  <data name="LblReenvios" xml:space="preserve">
+    <value>Препращане</value>
+  </data>
+  <data name="LblMarcarRutaEscapeOpcional" xml:space="preserve">
+    <value>Пътят за бягство на Марк Фюгитив (по избор)</value>
+  </data>
+  <data name="LblCalificaGestionPolitico" xml:space="preserve">
+    <value>Оценете изпълнението на този орган</value>
+  </data>
+  <data name="LblAprobacionCiudadana" xml:space="preserve">
+    <value>Гражданско одобрение</value>
+  </data>
+  <data name="LblVotantesAprobacion" xml:space="preserve">
+    <value>Избиратели</value>
+  </data>
+  <data name="LblEstrella1" xml:space="preserve">
+    <value>Много зле</value>
+  </data>
+  <data name="LblEstrella5" xml:space="preserve">
+    <value>Отлично</value>
+  </data>
+  <data name="LblAprobacionSOSpect" xml:space="preserve">
+    <value>Гражданско одобрение</value>
+  </data>
+  <data name="LblVerReporteCorto" xml:space="preserve">
+    <value>Вижте → доклад</value>
+  </data>
+  <data name="LblNuevaDescripcion" xml:space="preserve">
+    <value>Ново описание</value>
+  </data>
+  <data name="LblVeracidadAlarma" xml:space="preserve">
+    <value>Аларма за достоверност</value>
+  </data>
+  <data name="LblVotoPendienteEnCierre" xml:space="preserve">
+    <value>Вашият глас липсва, за да разберете дали тази аларма може да бъде затворена</value>
+  </data>
+  <data name="MsgYaVotasteCierre" xml:space="preserve">
+    <value>Не можеш да гласуваш отново, вече си гласувал за тази аларма</value>
+  </data>
+  <data name="MsgEresProponenteCierre" xml:space="preserve">
+    <value>Вие сте кандидатът за затваряне, не можете да гласувате</value>
+  </data>
+  <data name="LblAlarmaEnVotacionCierre" xml:space="preserve">
+    <value>Тази тревога е в процес на гласуване</value>
+  </data>
+  <data name="LblVerHistorialAlarma" xml:space="preserve">
+    <value>Вижте историята на алармите</value>
+  </data>
+  <data name="LblResultadosOcultos" xml:space="preserve">
+    <value>Резултатите се показват след гласуване</value>
+  </data>
+  <data name="LabelNickname" xml:space="preserve">
+    <value>Псевдоним/Прякор:</value>
+  </data>
+  <data name="LabelNicknameHint" xml:space="preserve">
+    <value>Дайте на потребителя псевдоним или прякор, за да го разпознаете по-късно</value>
+  </data>
+  <data name="LabelNicknameObligatorio" xml:space="preserve">
+    <value>Псевдонимът или прякорът е задължителен</value>
+  </data>
+  <data name="MsgSolicitudProtegidoPendiente" xml:space="preserve">
+    <value>Висяща заявка за одобрение вече е налична за този потребител. Изчакай да бъде одобрен или отхвърлен, преди да подадеш нов.</value>
+  </data>
+  <data name="LblSuspensionActiva" xml:space="preserve">
+    <value>Известията временно са спрени по искане на потребителя</value>
+  </data>
+  <data name="LabelAlertas" xml:space="preserve">
+    <value>Предупреждения</value>
+  </data>
+  <data name="LblRankingPoliticosLocales" xml:space="preserve">
+    <value>Местно политическо класиране</value>
+  </data>
+  <data name="LblRankingDescripcion" xml:space="preserve">
+    <value>Сравнете представянето на местните политици според различни граждански показатели</value>
+  </data>
+  <data name="LblSeleccionaMetrica" xml:space="preserve">
+    <value>Изберете метрика</value>
+  </data>
+  <data name="LblTop5Mejores" xml:space="preserve">
+    <value>Топ 5 най-добри</value>
+  </data>
+  <data name="LblTop5Peores" xml:space="preserve">
+    <value>Топ 5 най-лоши</value>
+  </data>
+  <data name="LblSinDatos" xml:space="preserve">
+    <value>Няма налични данни</value>
+  </data>
+  <data name="LblMetricaPctResolucion" xml:space="preserve">
+    <value>% Резолюция на алармите</value>
+  </data>
+  <data name="LblMetricaCntAlarmas" xml:space="preserve">
+    <value>Общо докладвани аларми</value>
+  </data>
+  <data name="LblMetricaCntLikes" xml:space="preserve">
+    <value>Получени харесвания</value>
+  </data>
+  <data name="LblMetricaCntReenvios" xml:space="preserve">
+    <value>Пренасочване на аларма</value>
+  </data>
+  <data name="LblMetricaAvgDias" xml:space="preserve">
+    <value>Средни дни на резолюция</value>
+  </data>
+  <data name="LblMetricaAprobacion" xml:space="preserve">
+    <value>Гражданско одобрение</value>
+  </data>
+  <data name="LblCargandoRanking" xml:space="preserve">
+    <value>Зареждане на класиране...</value>
+  </data>
+  <data name="OptRankingPoliticosLocales" xml:space="preserve">
+    <value>Местно политическо класиране</value>
+  </data>
+  <data name="LblVerRankingPoliticos" xml:space="preserve">
+    <value>Вижте класирането на местните политици</value>
+  </data>
+  <data name="LblMetricaScoreGestion" xml:space="preserve">
+    <value>Оценка по управление</value>
+  </data>
+  <data name="LblCriteriosGestionTitulo" xml:space="preserve">
+    <value>Как се измерва управлението?</value>
+  </data>
+  <data name="LblCriterioAlarmasReales" xml:space="preserve">
+    <value>Броят се само реални аларми (потвърдените фалшиви аларми са изключени)</value>
+  </data>
+  <data name="LblCriterioPremioViralidad" xml:space="preserve">
+    <value>Затварянето на алармите се възнаграждава, особено тези с висока дифузия</value>
+  </data>
+  <data name="LblCriterioPenalizacionAbiertas" xml:space="preserve">
+    <value>Аларми, които са отворени дни наред без затваряне, се наказват, особено вирусните</value>
+  </data>
+  <data name="LblCriterioScoreFinal" xml:space="preserve">
+    <value>Крайният резултат варира от 0 до 100, комбинирайки резолюция, навременност и управление на критични аларми</value>
+  </data>
+  <data name="LblCriterioBaseHistorial" xml:space="preserve">
+    <value>Основата на оценката е процентът на алармите, които исторически са били затворени в нейната територия</value>
+  </data>
+  <data name="LblExpiraEl" xml:space="preserve">
+    <value>Изтича на</value>
+  </data>
+  <data name="LblDashboardMiEmprendimiento" xml:space="preserve">
+    <value>Моето предприемачество</value>
+  </data>
+  <data name="LblPuestoEnPais" xml:space="preserve">
+    <value>Класиран #{0} в {1}</value>
+  </data>
+  <data name="LblMejorEmprendedor" xml:space="preserve">
+    <value>Най-добрите в страната</value>
+  </data>
+  <data name="LblPeorEmprendedor" xml:space="preserve">
+    <value>С повече възможности за подобрение</value>
+  </data>
+  <data name="LblVerMasEstadisticas" xml:space="preserve">
+    <value>Вижте още статистика</value>
+  </data>
+  <data name="LblComparativoEnPais" xml:space="preserve">
+    <value>Сравнение във вашата страна</value>
+  </data>
+  <data name="LblTiempoRespuesta" xml:space="preserve">
+    <value>В отговор. средно</value>
+  </data>
+  <data name="LblSatisfaccion" xml:space="preserve">
+    <value>Удовлетворение</value>
+  </data>
+  <data name="LblChatsMes" xml:space="preserve">
+    <value>Чатове този месец</value>
+  </data>
+  <data name="LblTransacciones" xml:space="preserve">
+    <value>Успешни транзакции</value>
+  </data>
+  <data name="LblTuPuntaje" xml:space="preserve">
+    <value>Ти</value>
+  </data>
+  <data name="LabelContinuar" xml:space="preserve">
+    <value>Продължавай</value>
+  </data>
+  <data name="LblDashboardEmprendedorTitulo" xml:space="preserve">
+    <value>Докладвай моето предприемачество</value>
+  </data>
+  <data name="OptDashboardMiEmprendimiento" xml:space="preserve">
+    <value>Докладвай моето предприемачество</value>
+  </data>
+  <data name="LblSeleccionaEmprendimiento" xml:space="preserve">
+    <value>Изберете стартиращ модел</value>
+  </data>
+  <data name="MsgUsarDatosUltimaPromocion" xml:space="preserve">
+    <value>Искате ли да попълните формуляра с подробности за последната стартирана промоция?</value>
+  </data>
+  <data name="LblSi" xml:space="preserve">
+    <value>Да</value>
+  </data>
+  <data name="LblNo" xml:space="preserve">
+    <value>Не</value>
+  </data>
+  <data name="LblDashboardSinDatosTitulo" xml:space="preserve">
+    <value>Няма налични метрики</value>
+  </data>
+  <data name="LblDashboardSinDatosDescripcion" xml:space="preserve">
+    <value>Това начинание все още няма изчислени метрики. Това се случва, когато е новосъздадена или първата промоция все още не е приключила.</value>
   </data>
 </root>

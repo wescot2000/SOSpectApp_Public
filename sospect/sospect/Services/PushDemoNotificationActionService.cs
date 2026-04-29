@@ -2,6 +2,9 @@
 using sospect.Models;
 using System.Collections.Generic;
 using System.Linq;
+using sospect.Interfaces;
+using Microsoft.Maui.Controls;
+using sospect.Helpers;
 
 namespace sospect.Services
 {
@@ -30,6 +33,7 @@ namespace sospect.Services
                 }
                 catch (Exception ex)
                 {
+                    CrashlyticsHelper.LogError(ex, "PushDemoNotificationActionService", "TriggerAction");
                     exceptions.Add(ex);
                 }
             }

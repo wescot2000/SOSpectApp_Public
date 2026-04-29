@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<Application xmlns="http://xamarin.com/schemas/2014/forms"
+<Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:Converters="clr-namespace:sospect.Converters"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="sospect.App">
@@ -15,7 +15,19 @@
                 x:Key="BooleanNegatorConverter"></Converters:BooleanNegatorConverter>
             <Converters:BooleanToFontAttributeConverter
                 x:Key="BooleanToFontAttributeConverter"></Converters:BooleanToFontAttributeConverter>
-
+            <Converters:InverseBooleanConverter
+                x:Key="InverseBooleanConverter"></Converters:InverseBooleanConverter>
+            <!-- MAUI 10 breaking change: ContentPage ahora renderiza edge-to-edge por defecto.
+                 SafeAreaEdges="Container" restaura el comportamiento de .NET 9 donde el contenido
+                 respeta las barras del sistema (status bar arriba, navigation bar abajo).
+                 Ref: https://github.com/dotnet/maui/issues/31925 -->
+            <Style TargetType="ContentPage" ApplyToDerivedTypes="True">
+                <Setter Property="SafeAreaEdges" Value="Container"/>
+            </Style>
+            <Style TargetType="NavigationPage">
+                <Setter Property="BarBackgroundColor" Value="#1A237E"/>
+                <Setter Property="BarTextColor" Value="White"/>
+            </Style>
             <OnPlatform x:Key="FontAwesomeFamily" x:TypeArguments="x:String">
                 <On Platform="iOS" Value="Font Awesome 6 Free"/>
                 <On Platform="Android" Value="Font Awesome 6 Free-Regular-400.otf#Font Awesome 6 Free-Regular-400"/>

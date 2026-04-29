@@ -1,92 +1,257 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="sospect.Views.MyProtectorsPage"
              xmlns:helpers="clr-namespace:sospect.Helpers"
-             BackgroundColor="White"
+             xmlns:fonts="clr-namespace:sospect.Resources.Fonts;assembly=sospect"
+             BackgroundColor="#F8F9FA"
              Title="{helpers:TranslateExtension Text='LblProtectores'}">
-    <ContentPage.Content>
-        <Grid>
-            <Grid Margin="0,20,0,0">
-                <ListView x:Name="MyProtectorsList" HasUnevenRows="True" BackgroundColor="White" ItemsSource="{Binding Protectors}" SelectionMode="None">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="CardStyle" TargetType="Frame">
+                <Setter Property="BackgroundColor" Value="White"/>
+                <Setter Property="CornerRadius" Value="12"/>
+                <Setter Property="HasShadow" Value="True"/>
+                <Setter Property="Padding" Value="16"/>
+                <Setter Property="Margin" Value="16,8"/>
+                <Setter Property="BorderColor" Value="Transparent"/>
+            </Style>
+
+            <Style x:Key="ButtonStyle" TargetType="Frame">
+                <Setter Property="HasShadow" Value="True"/>
+                <Setter Property="CornerRadius" Value="10"/>
+                <Setter Property="Padding" Value="12"/>
+                <Setter Property="BorderColor" Value="Transparent"/>
+                <Setter Property="HeightRequest" Value="50"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Grid>
+        <ScrollView>
+            <StackLayout Spacing="0" Padding="0,8">
+
+                <!-- Header -->
+                <Frame Style="{StaticResource CardStyle}" Margin="16,8,16,16">
+                    <StackLayout Spacing="12">
+                        <Label Text="{x:Static fonts:IconFont.Shield}"
+                               FontFamily="{StaticResource IcoMoonFamily}"
+                               FontSize="40"
+                               TextColor="#4A90E2"
+                               HorizontalOptions="Center"/>
+                        <Label Text="{helpers:TranslateExtension Text='LblProtectores'}"
+                               FontSize="20"
+                               FontAttributes="Bold"
+                               TextColor="#2C3E50"
+                               HorizontalTextAlignment="Center"/>
+                    </StackLayout>
+                </Frame>
+
+                <!-- Lista de protectores -->
+                <ListView x:Name="MyProtectorsList" 
+                          HasUnevenRows="True" 
+                          BackgroundColor="Transparent"
+                          ItemsSource="{Binding Protectors}" 
+                          SelectionMode="None"
+                          SeparatorVisibility="None">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
-                                <Frame Padding="5" Margin="5" BackgroundColor="White" CornerRadius="10" HasShadow="True">
-                                    <Grid>
-                                        <Grid.RowDefinitions>
-                                            <RowDefinition Height="Auto" />
-                                            <RowDefinition Height="Auto" />
-                                            <RowDefinition Height="Auto" />
-                                            <RowDefinition Height="Auto" />
-                                            <RowDefinition Height="Auto" />
-                                        </Grid.RowDefinitions>
-                                        <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="Auto" />
-                                            <ColumnDefinition Width="*" />
-                                        </Grid.ColumnDefinitions>
-                                        <Label Grid.Row="0" Grid.Column="0" TextColor="Gray" FontSize="Small" Text="{helpers:TranslateExtension Text='LblUsuarioProtector'}" FontAttributes="Bold" />
-                                        <Label Grid.Row="0" Grid.Column="1" TextColor="Gray" FontSize="Small" Text="{Binding user_id_thirdParty_protector}" />
-                                        <Label Grid.Row="1" Grid.Column="0" TextColor="Gray" FontSize="Small" Text="{helpers:TranslateExtension Text='LabelUsuario'}" FontAttributes="Bold" />
-                                        <Label Grid.Row="1" Grid.Column="1" TextColor="Gray" FontSize="Small" Text="{Binding login_protector}" />
-                                        <Label Grid.Row="2" Grid.Column="0" TextColor="Gray" FontSize="Small" Text="{helpers:TranslateExtension Text='LblFechaActivacion'}" FontAttributes="Bold" />
-                                        <Label Grid.Row="2" Grid.Column="1" TextColor="Gray" FontSize="Small" Text="{Binding fecha_activacion, StringFormat='{0:yyyy-MM-dd}'}" />
-                                        <Label Grid.Row="3" Grid.Column="0" TextColor="Gray" FontSize="Small" Text="{helpers:TranslateExtension Text='LblFechaFinalizacion'}" FontAttributes="Bold" />
-                                        <Label Grid.Row="3" Grid.Column="1" TextColor="Gray" FontSize="Small" Text="{Binding fecha_finalizacion, StringFormat='{0:yyyy-MM-dd}'}" />
+                                <Frame Style="{StaticResource CardStyle}">
+                                    <StackLayout Spacing="12">
 
-                                        <Frame Grid.Row="4" Grid.ColumnSpan="2" Padding="5" BorderColor="Black" BackgroundColor="LightGray" Margin="0,10,0,0" HorizontalOptions="Center" HeightRequest="35" WidthRequest="350" CornerRadius="10"  >
-                                            <Frame.GestureRecognizers>
-                                                <TapGestureRecognizer Command="{Binding Source={x:Reference MyProtectorsList}, Path=BindingContext.SuspendProtectorCommand}" CommandParameter="{Binding .}" NumberOfTapsRequired="1" />
-                                            </Frame.GestureRecognizers>
-                                            <Label Text="{helpers:TranslateExtension Text='LblSuspender'}" 
-                                                   TextColor="Black"
-                                                   LineBreakMode="WordWrap"
-                                                   HorizontalOptions="CenterAndExpand"
-                                                   VerticalOptions="CenterAndExpand"
-                                                   HorizontalTextAlignment="Center"
-                                                   VerticalTextAlignment="Center" />
+                                        <!-- Usuario Protector -->
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="Auto"/>
+                                                <ColumnDefinition Width="*"/>
+                                            </Grid.ColumnDefinitions>
+                                            <Label Grid.Column="0" 
+                                                   Text="{helpers:TranslateExtension Text='LblUsuarioProtector'}" 
+                                                   TextColor="#7F8C8D" 
+                                                   FontSize="14" 
+                                                   FontAttributes="Bold"
+                                                   Margin="0,0,8,0"/>
+                                            <Label Grid.Column="1" 
+                                                   Text="{Binding user_id_thirdParty_protector}" 
+                                                   TextColor="#2C3E50" 
+                                                   FontSize="14"
+                                                   LineBreakMode="WordWrap"/>
+                                        </Grid>
+
+                                        <!-- Login -->
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="Auto"/>
+                                                <ColumnDefinition Width="*"/>
+                                            </Grid.ColumnDefinitions>
+                                            <Label Grid.Column="0" 
+                                                   Text="{helpers:TranslateExtension Text='LabelUsuario'}" 
+                                                   TextColor="#7F8C8D" 
+                                                   FontSize="14" 
+                                                   FontAttributes="Bold"
+                                                   Margin="0,0,8,0"/>
+                                            <Label Grid.Column="1" 
+                                                   Text="{Binding login_protector}" 
+                                                   TextColor="#2C3E50" 
+                                                   FontSize="14"/>
+                                        </Grid>
+
+                                        <!-- Separador -->
+                                        <BoxView HeightRequest="1" BackgroundColor="#E0E0E0"/>
+
+                                        <!-- Fecha Activación -->
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="Auto"/>
+                                                <ColumnDefinition Width="*"/>
+                                            </Grid.ColumnDefinitions>
+                                            <Label Grid.Column="0" 
+                                                   Text="{helpers:TranslateExtension Text='LblFechaActivacion'}" 
+                                                   TextColor="#7F8C8D" 
+                                                   FontSize="14" 
+                                                   FontAttributes="Bold"
+                                                   Margin="0,0,8,0"/>
+                                            <Label Grid.Column="1" 
+                                                   Text="{Binding fecha_activacion, StringFormat='{0:yyyy-MM-dd}'}" 
+                                                   TextColor="#27AE60" 
+                                                   FontSize="14"/>
+                                        </Grid>
+
+                                        <!-- Fecha Finalización -->
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="Auto"/>
+                                                <ColumnDefinition Width="*"/>
+                                            </Grid.ColumnDefinitions>
+                                            <Label Grid.Column="0" 
+                                                   Text="{helpers:TranslateExtension Text='LblFechaFinalizacion'}" 
+                                                   TextColor="#7F8C8D" 
+                                                   FontSize="14" 
+                                                   FontAttributes="Bold"
+                                                   Margin="0,0,8,0"/>
+                                            <Label Grid.Column="1" 
+                                                   Text="{Binding fecha_finalizacion, StringFormat='{0:yyyy-MM-dd}'}" 
+                                                   TextColor="#E67E22" 
+                                                   FontSize="14"/>
+                                        </Grid>
+
+                                        <!-- Mensaje de suspensión activa -->
+                                        <Frame IsVisible="{Binding flag_suspension_activa}"
+                                               BackgroundColor="#FFF8E1"
+                                               CornerRadius="8"
+                                               Padding="10,6"
+                                               HasShadow="False"
+                                               BorderColor="#FFB300">
+                                            <Label Text="{helpers:TranslateExtension Text='LblSuspensionActiva'}"
+                                                   TextColor="#E65100"
+                                                   FontSize="13"
+                                                   FontAttributes="Italic"
+                                                   HorizontalTextAlignment="Center"/>
+                                        </Frame>
+
+                                        <!-- Botones de acción -->
+                                        <StackLayout Spacing="8" Margin="0,8,0,0">
+                                            <!-- Suspender -->
+                                            <Frame Style="{StaticResource ButtonStyle}" 
+                                                   BackgroundColor="#FFF3CD">
+                                                <Frame.GestureRecognizers>
+                                                    <TapGestureRecognizer Command="{Binding Source={x:Reference MyProtectorsList}, Path=BindingContext.SuspendProtectorCommand}" 
+                                                                          CommandParameter="{Binding .}"/>
+                                                </Frame.GestureRecognizers>
+                                                <Grid>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="Auto"/>
+                                                        <ColumnDefinition Width="*"/>
+                                                    </Grid.ColumnDefinitions>
+                                                    <Label Grid.Column="0"
+                                                           Text="{x:Static fonts:IconFont.Clock}"
+                                                           FontFamily="{StaticResource IcoMoonFamily}"
+                                                           FontSize="18"
+                                                           TextColor="#FF6B35"
+                                                           VerticalOptions="Center"
+                                                           Margin="0,0,8,0"/>
+                                                    <Label Grid.Column="1"
+                                                           Text="{helpers:TranslateExtension Text='LblSuspender'}" 
+                                                           TextColor="#FF6B35"
+                                                           FontSize="15"
+                                                           FontAttributes="Bold"
+                                                           VerticalOptions="Center"
+                                                           HorizontalOptions="Start"/>
+                                                </Grid>
                                             </Frame>
 
-                                         <Frame Grid.Row="5" Grid.ColumnSpan="2" Padding="5" BorderColor="Black" BackgroundColor="LightGray" Margin="0,5,0,0" HorizontalOptions="Center" HeightRequest="35" WidthRequest="350" CornerRadius="10" >
-                                            <Frame.GestureRecognizers>
-                                                <TapGestureRecognizer Command="{Binding Source={x:Reference MyProtectorsList}, Path=BindingContext.DeleteProtectorCommand}" CommandParameter="{Binding .}" NumberOfTapsRequired="1" />
-                                            </Frame.GestureRecognizers>
-                                            <Label Text="{helpers:TranslateExtension Text='LblEliminarProtector'}" 
-                                                   TextColor="Black"
-                                                   LineBreakMode="WordWrap"
-                                                   HorizontalOptions="CenterAndExpand"
-                                                   VerticalOptions="CenterAndExpand"
-                                                   HorizontalTextAlignment="Center"
-                                                   VerticalTextAlignment="Center" />
+                                            <!-- Eliminar -->
+                                            <Frame Style="{StaticResource ButtonStyle}" 
+                                                   BackgroundColor="#F8D7DA">
+                                                <Frame.GestureRecognizers>
+                                                    <TapGestureRecognizer Command="{Binding Source={x:Reference MyProtectorsList}, Path=BindingContext.DeleteProtectorCommand}" 
+                                                                          CommandParameter="{Binding .}"/>
+                                                </Frame.GestureRecognizers>
+                                                <Grid>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="Auto"/>
+                                                        <ColumnDefinition Width="*"/>
+                                                    </Grid.ColumnDefinitions>
+                                                    <Label Grid.Column="0"
+                                                           Text="{x:Static fonts:IconFont.Trash}"
+                                                           FontFamily="{StaticResource IcoMoonFamily}"
+                                                           FontSize="18"
+                                                           TextColor="#DC3545"
+                                                           VerticalOptions="Center"
+                                                           Margin="0,0,8,0"/>
+                                                    <Label Grid.Column="1"
+                                                           Text="{helpers:TranslateExtension Text='LblEliminarProtector'}" 
+                                                           TextColor="#DC3545"
+                                                           FontSize="15"
+                                                           FontAttributes="Bold"
+                                                           VerticalOptions="Center"
+                                                           HorizontalOptions="Start"/>
+                                                </Grid>
                                             </Frame>
-                                    </Grid>
+                                        </StackLayout>
+
+                                    </StackLayout>
                                 </Frame>
                             </ViewCell>
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
-                <Label
-                x:Name="EmptyListLabel"
-                Text="{helpers:TranslateExtension Text='LblNoHayRegistros'}"
-                FontSize="18"
-                TextColor="Gray"
-                HorizontalOptions="Center"
-                VerticalOptions="Center"
-                IsVisible="{Binding IsListEmpty}" />
-            </Grid>
-            <Grid BackgroundColor="Black"
-                  Opacity="0.5"
-                  HorizontalOptions="FillAndExpand"
-                  VerticalOptions="FillAndExpand"
-                  IsVisible="{Binding IsRunning}">
-                <ActivityIndicator VerticalOptions="Center"
-                                   HorizontalOptions="Center"
-                                   HeightRequest="50"
-                                   WidthRequest="50"
-                                   Color="DarkBlue"
-                                   IsRunning="{Binding IsRunning}">
-                </ActivityIndicator>
-            </Grid>
+
+                <!-- Mensaje de lista vacía -->
+                <Frame x:Name="EmptyListFrame"
+                       Style="{StaticResource CardStyle}"
+                       Margin="16,40,16,16"
+                       IsVisible="{Binding IsListEmpty}">
+                    <StackLayout Spacing="16">
+                        <Label Text="{x:Static fonts:IconFont.Shield}"
+                               FontFamily="{StaticResource IcoMoonFamily}"
+                               FontSize="60"
+                               TextColor="#BDC3C7"
+                               HorizontalOptions="Center"/>
+                        <Label Text="{helpers:TranslateExtension Text='LblNoHayRegistros'}"
+                               FontSize="16"
+                               TextColor="#7F8C8D"
+                               HorizontalTextAlignment="Center"/>
+                    </StackLayout>
+                </Frame>
+
+            </StackLayout>
+        </ScrollView>
+
+        <!-- Indicador de carga -->
+        <Grid BackgroundColor="Black"
+              Opacity="0.5"
+              HorizontalOptions="FillAndExpand"
+              VerticalOptions="FillAndExpand"
+              IsVisible="{Binding IsRunning}">
+            <ActivityIndicator VerticalOptions="Center"
+                               HorizontalOptions="Center"
+                               HeightRequest="50"
+                               WidthRequest="50"
+                               Color="#4A90E2"
+                               IsRunning="{Binding IsRunning}"/>
         </Grid>
-    </ContentPage.Content>
+    </Grid>
 </ContentPage>

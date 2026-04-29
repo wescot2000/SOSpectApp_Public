@@ -1,0 +1,267 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="sospect.Views.AgregarUsuarioRedConfianzaPage"
+             xmlns:fonts="clr-namespace:sospect.Resources.Fonts;assembly=sospect"
+             xmlns:helpers="clr-namespace:sospect.Helpers"
+             BackgroundColor="#F8F9FA"
+             Title="{helpers:TranslateExtension Text='LabelAgregarUsuarioRedTitle'}">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="SearchCardStyle" TargetType="Frame">
+                <Setter Property="BackgroundColor" Value="White" />
+                <Setter Property="BorderColor" Value="Transparent" />
+                <Setter Property="CornerRadius" Value="12" />
+                <Setter Property="Padding" Value="20" />
+                <Setter Property="Margin" Value="20,20,20,10" />
+                <Setter Property="HasShadow" Value="True" />
+            </Style>
+
+            <Style x:Key="UserDataCardStyle" TargetType="Frame">
+                <Setter Property="BackgroundColor" Value="White" />
+                <Setter Property="BorderColor" Value="Transparent" />
+                <Setter Property="CornerRadius" Value="12" />
+                <Setter Property="Padding" Value="20" />
+                <Setter Property="Margin" Value="20,10" />
+                <Setter Property="HasShadow" Value="True" />
+            </Style>
+
+            <Style x:Key="DataLabelStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="#7F8C8D" />
+                <Setter Property="FontSize" Value="12" />
+                <Setter Property="Margin" Value="0,0,0,4" />
+            </Style>
+
+            <Style x:Key="DataValueStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="#2C3E50" />
+                <Setter Property="FontSize" Value="15" />
+                <Setter Property="FontAttributes" Value="Bold" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Grid>
+        <ScrollView>
+            <StackLayout Spacing="0">
+
+                <!-- Buscar Usuario -->
+                <Frame Style="{StaticResource SearchCardStyle}">
+                    <StackLayout Spacing="12">
+                        <Label Text="{helpers:TranslateExtension Text='LabelEscribaIDUsuario'}" 
+                               TextColor="#2C3E50"
+                               FontSize="15"
+                               FontAttributes="Bold" />
+
+                        <Frame BackgroundColor="White"
+                               BorderColor="#BDC3C7"
+                               CornerRadius="8"
+                               Padding="12,8"
+                               HasShadow="False">
+                            <Entry x:Name="UserIdEntry" 
+                                   BackgroundColor="Transparent" 
+                                   TextColor="#2C3E50" 
+                                   Text="{Binding UserId}"
+                                   Placeholder="{helpers:TranslateExtension Text='LblidUsuario'}" />
+                        </Frame>
+
+                        <!-- Botón Consultar -->
+                        <Frame BackgroundColor="#3498DB"
+                               BorderColor="Transparent"
+                               CornerRadius="12"
+                               Padding="0"
+                               HasShadow="False"
+                               HeightRequest="50"
+                               Margin="0,8,0,0">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding ConsultarDisponibilidadCommand}" />
+                            </Frame.GestureRecognizers>
+                            <Label Text="{helpers:TranslateExtension Text='LabelConsultarDisponibilidad'}"
+                                   TextColor="White"
+                                   FontSize="15"
+                                   FontAttributes="Bold"
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="Center" />
+                        </Frame>
+                    </StackLayout>
+                </Frame>
+
+                <!-- Mensaje de resultado -->
+                <Label x:Name="ResultLabel" 
+                       Text="{Binding ResultText}" 
+                       TextColor="#3498DB"
+                       FontSize="14"
+                       HorizontalTextAlignment="Center"
+                       Margin="20,8"
+                       LineBreakMode="WordWrap"
+                       IsVisible="{Binding IsResultVisible}" />
+
+                <!-- Datos del Usuario -->
+                <Frame x:Name="UserDataStack" 
+                       Style="{StaticResource UserDataCardStyle}"
+                       IsVisible="{Binding IsUserDataVisible}">
+                    <StackLayout Spacing="16">
+
+                        <!-- Header con icono -->
+                        <Grid ColumnSpacing="12" Margin="0,0,0,8">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                            <Frame Grid.Column="0"
+                                   BackgroundColor="#E8F4FD"
+                                   WidthRequest="50"
+                                   HeightRequest="50"
+                                   CornerRadius="25"
+                                   HasShadow="False"
+                                   BorderColor="Transparent"
+                                   Padding="0">
+                                <Label Text="{x:Static fonts:IconFont.User}"
+                                       FontFamily="{StaticResource IcoMoonFamily}"
+                                       FontSize="24"
+                                       TextColor="#3498DB"
+                                       HorizontalOptions="Center"
+                                       VerticalOptions="Center" />
+                            </Frame>
+
+                            <Label Grid.Column="1"
+                                   Text="Información del usuario"
+                                   TextColor="#2C3E50"
+                                   FontSize="18"
+                                   FontAttributes="Bold"
+                                   VerticalOptions="Center" />
+                        </Grid>
+
+                        <!-- Campos de información -->
+                        <StackLayout Spacing="12">
+                            <StackLayout Spacing="2">
+                                <Label Text="{helpers:TranslateExtension Text='LabelNombres'}" 
+                                       Style="{StaticResource DataLabelStyle}" />
+                                <Label Text="{Binding Nombres}" 
+                                       Style="{StaticResource DataValueStyle}" />
+                            </StackLayout>
+
+                            <StackLayout Spacing="2">
+                                <Label Text="{helpers:TranslateExtension Text='LabelApellidos'}" 
+                                       Style="{StaticResource DataLabelStyle}" />
+                                <Label Text="{Binding Apellidos}" 
+                                       Style="{StaticResource DataValueStyle}" />
+                            </StackLayout>
+
+                            <StackLayout Spacing="2">
+                                <Label Text="{helpers:TranslateExtension Text='LabelNumeroMovil'}" 
+                                       Style="{StaticResource DataLabelStyle}" />
+                                <Label Text="{Binding NumeroMovil}" 
+                                       Style="{StaticResource DataValueStyle}" />
+                            </StackLayout>
+
+                            <StackLayout Spacing="2">
+                                <Label Text="{helpers:TranslateExtension Text='LabelEmail'}" 
+                                       Style="{StaticResource DataLabelStyle}" />
+                                <Label Text="{Binding Email}" 
+                                       Style="{StaticResource DataValueStyle}" />
+                            </StackLayout>
+
+                            <StackLayout Spacing="2">
+                                <Label Text="{helpers:TranslateExtension Text='LabelPais'}" 
+                                       Style="{StaticResource DataLabelStyle}" />
+                                <Label Text="{Binding Pais}" 
+                                       Style="{StaticResource DataValueStyle}" />
+                            </StackLayout>
+
+                            <StackLayout Spacing="2">
+                                <Label Text="{helpers:TranslateExtension Text='LabelDocumentoIdentificacion'}" 
+                                       Style="{StaticResource DataLabelStyle}" />
+                                <Label Text="{Binding NationalId}" 
+                                       Style="{StaticResource DataValueStyle}" />
+                            </StackLayout>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+
+                <!-- Mensaje adicional -->
+                <Label x:Name="AdditionalMessageLabel"
+                       Text="{Binding AdditionalMessage}"
+                       TextColor="#E67E22"
+                       FontSize="14"
+                       HorizontalTextAlignment="Center"
+                       Margin="20,8"
+                       LineBreakMode="WordWrap"
+                       IsVisible="{Binding IsAdditionalMessageVisible}" />
+
+                <!-- Nickname -->
+                <Frame BackgroundColor="White"
+                       BorderColor="Transparent"
+                       CornerRadius="12"
+                       Padding="20"
+                       Margin="20,0,20,0"
+                       HasShadow="True"
+                       IsVisible="{Binding IsAgregarUsuarioButtonVisible}">
+                    <StackLayout Spacing="8">
+                        <Label Text="{helpers:TranslateExtension Text='LabelNickname'}"
+                               TextColor="#2C3E50"
+                               FontSize="15"
+                               FontAttributes="Bold" />
+                        <Frame BackgroundColor="White"
+                               BorderColor="#BDC3C7"
+                               CornerRadius="8"
+                               Padding="12,8"
+                               HasShadow="False">
+                            <Entry BackgroundColor="Transparent"
+                                   TextColor="#2C3E50"
+                                   Text="{Binding Nickname}"
+                                   Placeholder="{helpers:TranslateExtension Text='LabelNicknameHint'}"
+                                   PlaceholderColor="#BDC3C7"
+                                   MaxLength="50" />
+                        </Frame>
+                        <Label x:Name="NicknameErrorLabel"
+                               Text="{helpers:TranslateExtension Text='LabelNicknameObligatorio'}"
+                               TextColor="#E74C3C"
+                               FontSize="12"
+                               Margin="4,0,0,0"
+                               IsVisible="{Binding IsNicknameErrorVisible}" />
+                    </StackLayout>
+                </Frame>
+
+                <!-- Botón Agregar Usuario -->
+                <Frame x:Name="AgregarUsuarioFrame" 
+                       BackgroundColor="#27AE60"
+                       BorderColor="Transparent"
+                       CornerRadius="12"
+                       Padding="0"
+                       HasShadow="True"
+                       HeightRequest="54"
+                       Margin="20,16,20,20"
+                       IsVisible="{Binding IsAgregarUsuarioButtonVisible}">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding AgregarUsuarioCommand}" />
+                    </Frame.GestureRecognizers>
+                    <Label Text="{helpers:TranslateExtension Text='LabelAgregarUsuario'}"
+                           TextColor="White"
+                           FontSize="16"
+                           FontAttributes="Bold"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center" />
+                </Frame>
+
+                <BoxView HeightRequest="20" Color="Transparent" />
+
+            </StackLayout>
+        </ScrollView>
+
+        <!-- Loading overlay -->
+        <Grid BackgroundColor="Black"
+              Opacity="0.5"
+              HorizontalOptions="FillAndExpand"
+              VerticalOptions="FillAndExpand"
+              IsVisible="{Binding IsRunning}">
+            <ActivityIndicator VerticalOptions="Center"
+                               HorizontalOptions="Center"
+                               HeightRequest="50"
+                               WidthRequest="50"
+                               Color="#3498DB"
+                               IsRunning="{Binding IsRunning}" />
+        </Grid>
+    </Grid>
+</ContentPage>

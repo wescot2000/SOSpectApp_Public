@@ -1,245 +1,385 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <ContentPage
-    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:fonts="clr-namespace:sospect.Resources.Fonts;assembly=sospect"
     xmlns:local="clr-namespace:sospect.TemplateSelectors"
     xmlns:helpers="clr-namespace:sospect.Helpers"
-    xmlns:ads="clr-namespace:sospect.CustomRenderers"
+    xmlns:converters="clr-namespace:sospect.Converters"
     Title="SOSpect"
     BackgroundColor="White"
     x:Name="DetalleDescripcionesalarmaList"
     x:Class="sospect.Views.DetalleDescripcionAlarmaPage">
-    <!-- Estilos para personalizar la burbuja -->
+
     <ContentPage.Resources>
-        <Style x:Key="MensajePropio" TargetType="Frame">
+        <converters:BooleanNegatorConverter x:Key="BooleanNegatorConverter" />
+        <!-- Estilos optimizados para diseño responsivo -->
+        <Style x:Key="MensajePropio" TargetType="Border">
             <Setter Property="BackgroundColor" Value="#007AFF" />
-            <Setter Property="CornerRadius" Value="15" />
-            <Setter Property="Margin" Value="50,10,15,10" />
+            <Setter Property="StrokeThickness" Value="0" />
+            <Setter Property="StrokeShape" Value="RoundRectangle 15" />
+            <Setter Property="Margin" Value="60,5,10,5" />
             <Setter Property="HorizontalOptions" Value="End" />
+            <Setter Property="Padding" Value="12,8,12,8" />
         </Style>
 
-        <Style x:Key="MensajeAjeno" TargetType="Frame">
+        <Style x:Key="MensajeAjeno" TargetType="Border">
             <Setter Property="BackgroundColor" Value="#E5E5EA" />
-            <Setter Property="CornerRadius" Value="15" />
-            <Setter Property="Margin" Value="15,10,50,10" />
+            <Setter Property="StrokeThickness" Value="0" />
+            <Setter Property="StrokeShape" Value="RoundRectangle 15" />
+            <Setter Property="Margin" Value="10,5,60,5" />
             <Setter Property="HorizontalOptions" Value="Start" />
+            <Setter Property="Padding" Value="12,8,12,8" />
         </Style>
+
         <DataTemplate x:Key="PropioTemplate">
-            <!-- Mensaje propio -->
             <ViewCell>
-                <Grid>
+                <Grid Padding="5,2">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="Auto"/>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
 
                     <Label Text="{helpers:TranslateExtension Text='Tu'}"
-                       Grid.Column="0" 
-                       VerticalTextAlignment="Center"
-                       TextColor="Blue"
-                       FontSize="Medium"
-                       HorizontalTextAlignment="End" 
-                       HorizontalOptions="FillAndExpand" 
-                       IsVisible="{Binding PropietarioDescripcion}"/>
+                           Grid.Column="0" 
+                           VerticalTextAlignment="Center"
+                           TextColor="Blue"
+                           FontSize="14"
+                           Margin="0,0,10,0"
+                           HorizontalTextAlignment="End" 
+                           HorizontalOptions="End" 
+                           IsVisible="{Binding PropietarioDescripcion}"/>
 
-                    <Frame Style="{StaticResource MensajePropio}" Grid.Row="0" Grid.Column="1">
-                        <StackLayout>
-                        <Label Text="{helpers:TranslateExtension Text='DescripcionAlarma'}"
-                                   x:Name="LabelPropio1"
-                                   FontAttributes="Bold"
-                                   TextColor="White"
-                                   FontSize="15"
-                                   IsVisible="{Binding Source={x:Reference ValorPropio1},
-                                   Path=Text,
-                                   Converter={StaticResource StringNullOrEmptyToBoolConverter}}"/>
-                            <Label Text="{Binding Descripcionalarma}"
-                                   x:Name="ValorPropio1"
-                                   TextColor="White"
-                                   IsVisible="{Binding Source={x:Reference ValorPropio1},
-                                   Path=Text,
-                                   Converter={StaticResource StringNullOrEmptyToBoolConverter}}"/>
+                    <Border Style="{StaticResource MensajePropio}" Grid.Column="1">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
 
-                        <Label Text="{helpers:TranslateExtension Text='DescripcionSospechoso'}"
-                                   x:Name="LabelPropio2"
-                                   FontAttributes="Bold"
-                                   TextColor="White"
-                                   FontSize="15"
-                                   IsVisible="{Binding Source={x:Reference ValorPropio2},
-                                   Path=Text,
-                                   Converter={StaticResource StringNullOrEmptyToBoolConverter}}"/>
-                            <Label Text="{Binding Descripcionsospechoso}"
-                                   x:Name="ValorPropio2"
-                                   TextColor="White"
-                                   IsVisible="{Binding Source={x:Reference ValorPropio2},
-                                   Path=Text,
-                                   Converter={StaticResource StringNullOrEmptyToBoolConverter}}"/>
+                            <!-- Contenido del mensaje -->
+                            <StackLayout Grid.Row="0" Spacing="6">
+                                <Label Text="{Binding TextoFlagRedConfianza}"
+                                       TextColor="LightGreen"
+                                       FontAttributes="Bold"
+                                       FontSize="12"
+                                       HorizontalTextAlignment="Center"
+                                       IsVisible="{Binding FlagRedConfianza}" />
 
-                        <Label Text="{helpers:TranslateExtension Text='DescripcionVehiculo'}"
-                                   x:Name="LabelPropio3"
-                                   FontAttributes="Bold"
-                                   TextColor="White"
-                                   FontSize="15"
-                                   IsVisible="{Binding Source={x:Reference ValorPropio3},
-                                   Path=Text,
-                                   Converter={StaticResource StringNullOrEmptyToBoolConverter}}"/>
-                            <Label Text="{Binding Descripcionvehiculo}"
-                                   x:Name="ValorPropio3"
-                                   TextColor="White"
-                                   IsVisible="{Binding Source={x:Reference ValorPropio3},
-                                   Path=Text,
-                                   Converter={StaticResource StringNullOrEmptyToBoolConverter}}"/>
+                                <!-- Descripción de la alarma -->
+                                <StackLayout IsVisible="{Binding Source={x:Reference ValorPropio1}, Path=Text, Converter={StaticResource StringNullOrEmptyToBoolConverter}}">
+                                    <Label Text="{helpers:TranslateExtension Text='DescripcionAlarma'}"
+                                           FontAttributes="Bold"
+                                           TextColor="White"
+                                           FontSize="13"
+                                           Margin="0,0,0,2"/>
+                                    <Label Text="{Binding Descripcionalarma}"
+                                           x:Name="ValorPropio1"
+                                           TextColor="White"
+                                           FontSize="14"
+                                           LineBreakMode="WordWrap"/>
+                                </StackLayout>
 
-                        <Label Text="{helpers:TranslateExtension Text='DescripcionArma'}"
-                                   x:Name="LabelPropio4"
-                                   FontAttributes="Bold"
-                                   TextColor="White"
-                                   FontSize="15"
-                                   IsVisible="{Binding Source={x:Reference ValorPropio4},
-                                   Path=Text,
-                                   Converter={StaticResource StringNullOrEmptyToBoolConverter}}"/>
-                            <Label Text="{Binding Descripcionarmas}"
-                                   x:Name="ValorPropio4"
-                                   TextColor="White"
-                                   IsVisible="{Binding Source={x:Reference ValorPropio4},
-                                   Path=Text,
-                                   Converter={StaticResource StringNullOrEmptyToBoolConverter}}"/>
+                                <!-- Descripción del sospechoso -->
+                                <StackLayout IsVisible="{Binding Source={x:Reference ValorPropio2}, Path=Text, Converter={StaticResource StringNullOrEmptyToBoolConverter}}">
+                                    <Label Text="{helpers:TranslateExtension Text='DescripcionSospechoso'}"
+                                           FontAttributes="Bold"
+                                           TextColor="White"
+                                           FontSize="13"
+                                           Margin="0,0,0,2"/>
+                                    <Label Text="{Binding Descripcionsospechoso}"
+                                           x:Name="ValorPropio2"
+                                           TextColor="White"
+                                           FontSize="14"
+                                           LineBreakMode="WordWrap"/>
+                                </StackLayout>
 
-                        <Label Text="{helpers:TranslateExtension Text='PuntuacionDescripcion'}"
-                                   FontAttributes="Bold"
-                                   TextColor="White"
-                                   FontSize="15"/>
-                            <Label Text="{Binding CalificacionDescripcion}"
-                                   TextColor="White"></Label>
+                                <!-- Descripción del vehículo -->
+                                <StackLayout IsVisible="{Binding Source={x:Reference ValorPropio3}, Path=Text, Converter={StaticResource StringNullOrEmptyToBoolConverter}}">
+                                    <Label Text="{helpers:TranslateExtension Text='DescripcionVehiculo'}"
+                                           FontAttributes="Bold"
+                                           TextColor="White"
+                                           FontSize="13"
+                                           Margin="0,0,0,2"/>
+                                    <Label Text="{Binding Descripcionvehiculo}"
+                                           x:Name="ValorPropio3"
+                                           TextColor="White"
+                                           FontSize="14"
+                                           LineBreakMode="WordWrap"/>
+                                </StackLayout>
 
-                            <Grid>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="80"></ColumnDefinition>
-                                    <ColumnDefinition Width="90"></ColumnDefinition>
-                                </Grid.ColumnDefinitions>
-                                <Button Grid.Column="0"
-                                        Margin="0,0,5,0"
-                                        BackgroundColor="Transparent"
-                                        Text="{helpers:TranslateExtension Text='LabelEditar'}"
-                                        TextColor="White"
-                                        Command="{Binding BindingContext.EditarDetalleAlarmaCommand, Source={x:Reference DetalleDescripcionesalarmaList}}"
-                                        CommandParameter="{Binding .}"
-                                        IsVisible="{Binding esAlarmaActiva}">
-                                </Button>
-                                <Label Text="{Binding Fechadescripcion,StringFormat='{}{0:hh\\:mm tt}'}"
-                                       Grid.Column="1"
-                                       FontSize="Small" 
-                                       VerticalTextAlignment="Center"
-                                       HorizontalOptions="End"
-                                       HorizontalTextAlignment="End"
-                                       TextColor="White" />
-                            </Grid>
-                        </StackLayout>
-                    </Frame>
+                                <!-- Descripción del arma -->
+                                <StackLayout IsVisible="{Binding Source={x:Reference ValorPropio4}, Path=Text, Converter={StaticResource StringNullOrEmptyToBoolConverter}}">
+                                    <Label Text="{helpers:TranslateExtension Text='DescripcionArma'}"
+                                           FontAttributes="Bold"
+                                           TextColor="White"
+                                           FontSize="13"
+                                           Margin="0,0,0,2"/>
+                                    <Label Text="{Binding Descripcionarmas}"
+                                           x:Name="ValorPropio4"
+                                           TextColor="White"
+                                           FontSize="14"
+                                           LineBreakMode="WordWrap"/>
+                                </StackLayout>
+
+                                <!-- Puntuación -->
+                                <StackLayout>
+                                    <Label Text="{helpers:TranslateExtension Text='PuntuacionDescripcion'}"
+                                           FontAttributes="Bold"
+                                           TextColor="White"
+                                           FontSize="13"
+                                           Margin="0,0,0,2"/>
+                                    <Label Text="{Binding CalificacionDescripcion}"
+                                           TextColor="White"
+                                           FontSize="14"/>
+                                </StackLayout>
+
+                                <!-- Miniaturas de fotos -->
+                                <CollectionView ItemsSource="{Binding Fotos}"
+                                                IsVisible="{Binding TieneFotos}"
+                                                HeightRequest="88"
+                                                Margin="0,6,0,0">
+                                    <CollectionView.ItemsLayout>
+                                        <LinearItemsLayout Orientation="Horizontal" ItemSpacing="6"/>
+                                    </CollectionView.ItemsLayout>
+                                    <CollectionView.ItemTemplate>
+                                        <DataTemplate>
+                                            <Border StrokeThickness="1"
+                                                    Stroke="WhiteSmoke"
+                                                    StrokeShape="RoundRectangle 6"
+                                                    HeightRequest="80"
+                                                    WidthRequest="80">
+                                                <Border.GestureRecognizers>
+                                                    <TapGestureRecognizer
+                                                        Command="{Binding BindingContext.VerFotoCommand, Source={RelativeSource AncestorType={x:Type ContentPage}}}"
+                                                        CommandParameter="{Binding .}"/>
+                                                </Border.GestureRecognizers>
+                                                <Grid>
+                                                    <Image Source="{Binding ThumbnailUrlOrOriginal}"
+                                                           Aspect="AspectFill"
+                                                           HeightRequest="80"
+                                                           WidthRequest="80"/>
+                                                    <!-- Icono de play para videos -->
+                                                    <Label Text="▶"
+                                                           FontSize="32"
+                                                           TextColor="White"
+                                                           HorizontalOptions="Center"
+                                                           VerticalOptions="Center"
+                                                           IsVisible="{Binding EsVideo}"/>
+                                                </Grid>
+                                            </Border>
+                                        </DataTemplate>
+                                    </CollectionView.ItemTemplate>
+                                </CollectionView>
+                            </StackLayout>
+
+                            <!-- Hora del mensaje alineada a la derecha -->
+                            <Label Grid.Row="1"
+                                   Text="{Binding FechadescripcionLocal,StringFormat='{}{0:HH:mm}'}"
+                                   FontSize="11" 
+                                   TextColor="WhiteSmoke"
+                                   HorizontalOptions="End"
+                                   HorizontalTextAlignment="End"
+                                   Margin="0,4,0,0"
+                                   Opacity="0.8" />
+                        </Grid>
+                    </Border>
                 </Grid>
             </ViewCell>
         </DataTemplate>
 
         <DataTemplate x:Key="AjenoTemplate">
             <ViewCell>
-                <Grid>
+                <Grid Padding="5,2">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="Auto"/>
                     </Grid.ColumnDefinitions>
-                    <Frame Style="{StaticResource MensajeAjeno}">
-                       <StackLayout>
-                        <Label Text="{helpers:TranslateExtension Text='DescripcionAlarma'}"
-                                   x:Name="LabelAjeno1"
-                                   FontAttributes="Bold"
-                                   FontSize="15"
-                                   TextColor="Black"
-                                   IsVisible="{Binding Source={x:Reference ValorAjeno1},
-                                   Path=Text,
-                                   Converter={StaticResource StringNullOrEmptyToBoolConverter}}"/>
-                            <Label Text="{Binding Descripcionalarma}"
-                                   x:Name="ValorAjeno1"
-                                   TextColor="Black"
-                                   IsVisible="{Binding Source={x:Reference ValorAjeno1},
-                                   Path=Text,
-                                   Converter={StaticResource StringNullOrEmptyToBoolConverter}}"/>
 
-                        <Label Text="{helpers:TranslateExtension Text='DescripcionSospechoso'}"
-                                   x:Name="LabelAjeno2"
-                                   FontAttributes="Bold"
-                                   TextColor="Black"
-                                   FontSize="15"
-                                   IsVisible="{Binding Source={x:Reference ValorAjeno2},
-                                   Path=Text,
-                                   Converter={StaticResource StringNullOrEmptyToBoolConverter}}"/>
-                            <Label Text="{Binding Descripcionsospechoso}"
-                                   x:Name="ValorAjeno2"
-                                   TextColor="Black"
-                                   IsVisible="{Binding Source={x:Reference ValorAjeno2},
-                                   Path=Text,
-                                   Converter={StaticResource StringNullOrEmptyToBoolConverter}}"/>
+                    <Border Style="{StaticResource MensajeAjeno}" Grid.Column="0">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
 
-                            <Label x:Name="LabelAjeno3"
-                                   Text="{helpers:TranslateExtension Text='DescripcionVehiculo'}"
-                                   FontAttributes="Bold"
-                                   FontSize="15"
-                                   IsVisible="{Binding Source={x:Reference ValorAjeno3},
-                                   Path=Text,
-                                   Converter={StaticResource StringNullOrEmptyToBoolConverter}}"/>
-                            <Label x:Name="ValorAjeno3"
-                                   Text="{Binding Descripcionvehiculo}"
-                                   IsVisible="{Binding Source={x:Reference ValorAjeno3},
-                                   Path=Text,
-                                   Converter={StaticResource StringNullOrEmptyToBoolConverter}}"/>
+                            <!-- Contenido del mensaje -->
+                            <StackLayout Grid.Row="0" Spacing="6">
+                                <Label Text="{Binding TextoFlagRedConfianza}"
+                                       TextColor="Green"
+                                       FontAttributes="Bold"
+                                       FontSize="12"
+                                       HorizontalTextAlignment="Center"
+                                       IsVisible="{Binding FlagRedConfianza}" />
 
-                        <Label Text="{helpers:TranslateExtension Text='DescripcionArma'}"
-                                   x:Name="LabelAjeno4"
-                                   FontAttributes="Bold"
-                                   TextColor="Black"
-                                   FontSize="15"
-                                   IsVisible="{Binding Source={x:Reference ValorAjeno4},
-                                   Path=Text,
-                                   Converter={StaticResource StringNullOrEmptyToBoolConverter}}"/>
-                            <Label Text="{Binding Descripcionarmas}"
-                                   x:Name="ValorAjeno4"
-                                   TextColor="Black"
-                                   IsVisible="{Binding Source={x:Reference ValorAjeno4},
-                                   Path=Text,
-                                   Converter={StaticResource StringNullOrEmptyToBoolConverter}}"/>
+                                <!-- Descripción de la alarma -->
+                                <StackLayout IsVisible="{Binding Source={x:Reference ValorAjeno1}, Path=Text, Converter={StaticResource StringNullOrEmptyToBoolConverter}}">
+                                    <Label Text="{helpers:TranslateExtension Text='DescripcionAlarma'}"
+                                           FontAttributes="Bold"
+                                           FontSize="13"
+                                           TextColor="Black"
+                                           Margin="0,0,0,2"/>
+                                    <Label Text="{Binding Descripcionalarma}"
+                                           x:Name="ValorAjeno1"
+                                           TextColor="Black"
+                                           FontSize="14"
+                                           LineBreakMode="WordWrap"/>
+                                </StackLayout>
 
-                        <Label Text="{helpers:TranslateExtension Text='PuntuacionDescripcion'}"
-                                   FontAttributes="Bold"
-                                   TextColor="Black"
-                                   FontSize="15"/>
-                            <Label TextColor="Black" Text="{Binding CalificacionDescripcion}"></Label>
+                                <!-- Descripción del sospechoso -->
+                                <StackLayout IsVisible="{Binding Source={x:Reference ValorAjeno2}, Path=Text, Converter={StaticResource StringNullOrEmptyToBoolConverter}}">
+                                    <Label Text="{helpers:TranslateExtension Text='DescripcionSospechoso'}"
+                                           FontAttributes="Bold"
+                                           TextColor="Black"
+                                           FontSize="13"
+                                           Margin="0,0,0,2"/>
+                                    <Label Text="{Binding Descripcionsospechoso}"
+                                           x:Name="ValorAjeno2"
+                                           TextColor="Black"
+                                           FontSize="14"
+                                           LineBreakMode="WordWrap"/>
+                                </StackLayout>
 
-                            <Grid>
+                                <!-- Descripción del vehículo -->
+                                <StackLayout IsVisible="{Binding Source={x:Reference ValorAjeno3}, Path=Text, Converter={StaticResource StringNullOrEmptyToBoolConverter}}">
+                                    <Label Text="{helpers:TranslateExtension Text='DescripcionVehiculo'}"
+                                           FontAttributes="Bold"
+                                           TextColor="Black"
+                                           FontSize="13"
+                                           Margin="0,0,0,2"/>
+                                    <Label Text="{Binding Descripcionvehiculo}"
+                                           x:Name="ValorAjeno3"
+                                           TextColor="Black"
+                                           FontSize="14"
+                                           LineBreakMode="WordWrap"/>
+                                </StackLayout>
+
+                                <!-- Descripción del arma -->
+                                <StackLayout IsVisible="{Binding Source={x:Reference ValorAjeno4}, Path=Text, Converter={StaticResource StringNullOrEmptyToBoolConverter}}">
+                                    <Label Text="{helpers:TranslateExtension Text='DescripcionArma'}"
+                                           FontAttributes="Bold"
+                                           TextColor="Black"
+                                           FontSize="13"
+                                           Margin="0,0,0,2"/>
+                                    <Label Text="{Binding Descripcionarmas}"
+                                           x:Name="ValorAjeno4"
+                                           TextColor="Black"
+                                           FontSize="14"
+                                           LineBreakMode="WordWrap"/>
+                                </StackLayout>
+
+                                <!-- Puntuación -->
+                                <StackLayout>
+                                    <Label Text="{helpers:TranslateExtension Text='PuntuacionDescripcion'}"
+                                           FontAttributes="Bold"
+                                           TextColor="Black"
+                                           FontSize="13"
+                                           Margin="0,0,0,2"/>
+                                    <Label Text="{Binding CalificacionDescripcion}"
+                                           TextColor="Black"
+                                           FontSize="14"/>
+                                </StackLayout>
+
+                                <!-- Miniaturas de fotos -->
+                                <CollectionView ItemsSource="{Binding Fotos}"
+                                                IsVisible="{Binding TieneFotos}"
+                                                HeightRequest="88"
+                                                Margin="0,6,0,0">
+                                    <CollectionView.ItemsLayout>
+                                        <LinearItemsLayout Orientation="Horizontal" ItemSpacing="6"/>
+                                    </CollectionView.ItemsLayout>
+                                    <CollectionView.ItemTemplate>
+                                        <DataTemplate>
+                                            <Border StrokeThickness="1"
+                                                    Stroke="Gray"
+                                                    StrokeShape="RoundRectangle 6"
+                                                    HeightRequest="80"
+                                                    WidthRequest="80">
+                                                <Border.GestureRecognizers>
+                                                    <TapGestureRecognizer
+                                                        Command="{Binding BindingContext.VerFotoCommand, Source={RelativeSource AncestorType={x:Type ContentPage}}}"
+                                                        CommandParameter="{Binding .}"/>
+                                                </Border.GestureRecognizers>
+                                                <Grid>
+                                                    <Image Source="{Binding ThumbnailUrlOrOriginal}"
+                                                           Aspect="AspectFill"
+                                                           HeightRequest="80"
+                                                           WidthRequest="80"/>
+                                                    <!-- Icono de play para videos -->
+                                                    <Label Text="▶"
+                                                           FontSize="32"
+                                                           TextColor="White"
+                                                           HorizontalOptions="Center"
+                                                           VerticalOptions="Center"
+                                                           IsVisible="{Binding EsVideo}"/>
+                                                </Grid>
+                                            </Border>
+                                        </DataTemplate>
+                                    </CollectionView.ItemTemplate>
+                                </CollectionView>
+                            </StackLayout>
+
+                            <!-- Botones de calificación -->
+                            <Grid Grid.Row="1" Margin="0,6,0,0" IsVisible="{Binding esAlarmaActiva}">
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="40"></ColumnDefinition>
-                                    <ColumnDefinition Width="40"></ColumnDefinition>
-                                    <ColumnDefinition Width="90"></ColumnDefinition>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
                                 </Grid.ColumnDefinitions>
-                                <ImageButton Grid.Column="0" Margin="0,0,5,0" BackgroundColor="Transparent" Command="{Binding BindingContext.CalificarPositivoAlarmaCommand, Source={x:Reference DetalleDescripcionesalarmaList}}" CommandParameter="{Binding .}">
+
+                                <ImageButton Grid.Column="0" 
+                                           Margin="0,0,8,0" 
+                                           BackgroundColor="Transparent" 
+                                           HeightRequest="32"
+                                           WidthRequest="32"
+                                           Command="{Binding BindingContext.CalificarPositivoAlarmaCommand, Source={RelativeSource AncestorType={x:Type ContentPage}}}"
+                                           CommandParameter="{Binding .}">
                                     <ImageButton.Source>
                                         <FontImageSource FontFamily="{StaticResource IcoMoonFamily}"
                                                         Color="{Binding CalificacionOtrasDescripciones, Converter={StaticResource CalificacionDescripcionAlarmaAColorPositivoConverter}}"
                                                         Glyph="{x:Static fonts:IconFont.ThumbsUp}"
-                                                        ></FontImageSource>
+                                                        Size="20" />
                                     </ImageButton.Source>
                                 </ImageButton>
-                                <ImageButton Grid.Column="1" TranslationY="9" BackgroundColor="Transparent" Command="{Binding BindingContext.CalificarNegativoAlarmaCommand, Source={x:Reference DetalleDescripcionesalarmaList}}" CommandParameter="{Binding .}">
+
+                                <ImageButton Grid.Column="1" 
+                                           Margin="0,0,8,0"  
+                                           BackgroundColor="Transparent" 
+                                           HeightRequest="32"
+                                           WidthRequest="32"
+                                           Command="{Binding BindingContext.CalificarNegativoAlarmaCommand, Source={RelativeSource AncestorType={x:Type ContentPage}}}" 
+                                           CommandParameter="{Binding .}">
                                     <ImageButton.Source>
                                         <FontImageSource FontFamily="{StaticResource IcoMoonFamily}"
                                                         Color="{Binding CalificacionOtrasDescripciones, Converter={StaticResource CalificacionDescripcionAlarmaAColorNegativoConverter}}"
                                                         Glyph="{x:Static fonts:IconFont.ThumbsDown}"
-                                                        ></FontImageSource>
+                                                        Size="20" />
                                     </ImageButton.Source>
                                 </ImageButton>
-                                <Label Grid.Column="2" FontSize="Small" TextColor="Black" Text="{Binding Fechadescripcion,StringFormat='{}{0:hh\\:mm tt}'}" VerticalTextAlignment="Center" HorizontalOptions="End" HorizontalTextAlignment="End"/>
                             </Grid>
-                        </StackLayout>
-                    </Frame>
-                    <Label TextColor="Gray" FontSize="Medium" Text="{helpers:TranslateExtension Text='Anonimo'}" Grid.Column="1" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" HorizontalOptions="Start" IsVisible="{Binding Source={x:Reference ValorAjeno1}, Path=Text, Converter={StaticResource StringNullOrEmptyToBoolConverter}}"/>
+
+                            <!-- Hora del mensaje alineada a la derecha -->
+                            <Label Grid.Row="2"
+                                   Text="{Binding FechadescripcionLocal,StringFormat='{}{0:HH:mm}'}"
+                                   FontSize="11" 
+                                   TextColor="Gray"
+                                   HorizontalOptions="End"
+                                   HorizontalTextAlignment="End"
+                                   Margin="0,4,0,0"
+                                   Opacity="0.7" />
+                        </Grid>
+                    </Border>
+
+                    <Label TextColor="Gray" 
+                           FontSize="12" 
+                           Text="{helpers:TranslateExtension Text='Anonimo'}" 
+                           Grid.Column="1" 
+                           HorizontalTextAlignment="Start" 
+                           VerticalTextAlignment="Center" 
+                           HorizontalOptions="Start" 
+                           Margin="8,0,0,0"
+                           IsVisible="{Binding Source={x:Reference ValorAjeno1}, Path=Text, Converter={StaticResource StringNullOrEmptyToBoolConverter}}"/>
                 </Grid>
             </ViewCell>
         </DataTemplate>
@@ -248,34 +388,45 @@
             PropioTemplate="{StaticResource PropioTemplate}"
             AjenoTemplate="{StaticResource AjenoTemplate}" />
     </ContentPage.Resources>
-    <Grid BackgroundColor="White"
-              VerticalOptions="FillAndExpand">
+
+    <ContentPage.Content>
+        <Grid BackgroundColor="White" VerticalOptions="FillAndExpand">
             <Grid.RowDefinitions>
-                <RowDefinition Height="*"></RowDefinition>
-                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-            <ListView
-                Margin="20,0"
+
+                <Label Grid.Row="0"
+                   Margin="0,8"
+                   TextColor="Gray"
+                   FontSize="16"
+                   Text="{helpers:TranslateExtension Text='DescripcionesParaAlarma'}"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   HorizontalTextAlignment="Center"/>
+
+            <ListView x:Name="DescripcionesAlarmaListView"
+                Grid.Row="1"
+                Margin="0"
                 BackgroundColor="White"
                 SelectionMode="None"
                 SeparatorVisibility="None"
                 ItemsSource="{Binding ListadoDescripcionesAlarmas}"
                 HasUnevenRows="True"
-                HeightRequest="NaN"
                 VerticalOptions="FillAndExpand"
-                ItemTemplate="{StaticResource DescripcionAlarmaTemplateSelector}">
-                <ListView.Header>
-                <Label Margin="20" TextColor="Gray" Text="{helpers:TranslateExtension Text='DescripcionesParaAlarma'}" FontAttributes="Bold" HorizontalOptions="Center" HorizontalTextAlignment="Center"></Label>
-                </ListView.Header>
-            </ListView>
-            <Grid Grid.Row="0" BackgroundColor="White" IsVisible="{Binding EmptyState}">
-            <Label TextColor="Gray" Text="{helpers:TranslateExtension Text='LblNoHayRegistrosAqui'}" VerticalOptions="Center" HorizontalOptions="Center" HorizontalTextAlignment="Center"></Label>
+                ItemTemplate="{StaticResource DescripcionAlarmaTemplateSelector}"/>
+
+            <Grid Grid.Row="1" BackgroundColor="White" IsVisible="{Binding EmptyState}">
+                <Label TextColor="Gray" 
+                       Text="{helpers:TranslateExtension Text='LblNoHayRegistrosAqui'}" 
+                       VerticalOptions="Center" 
+                       HorizontalOptions="Center" 
+                       HorizontalTextAlignment="Center"/>
             </Grid>
-            <Grid BackgroundColor="LightGray" Grid.Row="1" HeightRequest="90">
-            <ads:AdBanner></ads:AdBanner>
-            </Grid>
+
             <Grid BackgroundColor="Black"
-                  Grid.RowSpan="2"
+                  Grid.RowSpan="3"
                   Opacity="0.5"
                   HorizontalOptions="FillAndExpand"
                   VerticalOptions="FillAndExpand"
@@ -285,9 +436,208 @@
                                    HeightRequest="50"
                                    WidthRequest="50"
                                    Color="DarkBlue"
-                                   IsRunning="{Binding IsRunning}">
-                </ActivityIndicator>
+                                   IsRunning="{Binding IsRunning}"/>
+            </Grid>
+
+            <!-- Sección de botones mejorada -->
+            <Grid Grid.Row="2" Margin="10,10,10,20" RowSpacing="8">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <!-- Fila 1: "Nueva descripción" + "Ver en mapa" -->
+                <Grid Grid.Row="0" ColumnSpacing="8">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Button Grid.Column="0"
+                           Text="{helpers:TranslateExtension Text='LblNuevaDescripcion'}"
+                           BackgroundColor="LightGray"
+                           TextColor="Black"
+                           FontSize="14"
+                           CornerRadius="8"
+                           HeightRequest="48"
+                           IsVisible="{Binding AlarmaSeleccionada.estado_alarma}"
+                           Command="{Binding DescribirAlarmaCommand}"
+                           CommandParameter="{Binding AlarmaSeleccionada}">
+                        <Button.ImageSource>
+                            <FontImageSource FontFamily="{StaticResource IcoMoonFamily}"
+                                           Color="Black"
+                                           Glyph="{x:Static fonts:IconFont.PenToSquare}"
+                                           Size="18" />
+                        </Button.ImageSource>
+                    </Button>
+
+                    <Button Grid.Column="1"
+                           Text="{helpers:TranslateExtension Text='LblVerEnMapa'}"
+                           BackgroundColor="LightGray"
+                           TextColor="Black"
+                           FontSize="14"
+                           CornerRadius="8"
+                           HeightRequest="48"
+                           Command="{Binding VerAlarmaEnMapaCommand}"
+                           CommandParameter="{Binding AlarmaSeleccionada}">
+                        <Button.ImageSource>
+                            <FontImageSource FontFamily="{StaticResource IcoMoonFamily}"
+                                           Color="Black"
+                                           Glyph="{x:Static fonts:IconFont.MapLocationDot}"
+                                           Size="18" />
+                        </Button.ImageSource>
+                    </Button>
+                </Grid>
+
+                <!-- Fila 2: "Veracidad alarma" + "Atender alarma" + "Cerrar alarma" (solo alarma activa) -->
+                <Grid Grid.Row="1" ColumnSpacing="8"
+                      IsVisible="{Binding AlarmaSeleccionada.estado_alarma}">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Border Grid.Column="0"
+                            BackgroundColor="LightGray"
+                            StrokeThickness="0"
+                            StrokeShape="RoundRectangle 8"
+                            Padding="8,10">
+                        <Border.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding ConfirmarAlarmaCommand}" CommandParameter="{Binding AlarmaSeleccionada}"/>
+                        </Border.GestureRecognizers>
+                        <StackLayout Spacing="4" HorizontalOptions="Center" VerticalOptions="Center">
+                            <Image HorizontalOptions="Center" HeightRequest="20" WidthRequest="20">
+                                <Image.Source>
+                                    <FontImageSource FontFamily="{StaticResource IcoMoonFamily}"
+                                                   Color="Red"
+                                                   Glyph="{x:Static fonts:IconFont.ListCheck}"
+                                                   Size="20" />
+                                </Image.Source>
+                            </Image>
+                            <Label Text="{helpers:TranslateExtension Text='LblVeracidadAlarma'}"
+                                   TextColor="Black"
+                                   FontSize="12"
+                                   HorizontalTextAlignment="Center"
+                                   LineBreakMode="WordWrap"/>
+                        </StackLayout>
+                    </Border>
+
+                    <Border Grid.Column="1"
+                            BackgroundColor="LightGray"
+                            StrokeThickness="0"
+                            StrokeShape="RoundRectangle 8"
+                            Padding="8,10">
+                        <Border.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding AtenderAlarmaCommand}" CommandParameter="{Binding AlarmaSeleccionada}"/>
+                        </Border.GestureRecognizers>
+                        <StackLayout Spacing="4" HorizontalOptions="Center" VerticalOptions="Center">
+                            <Image HorizontalOptions="Center" HeightRequest="20" WidthRequest="20">
+                                <Image.Source>
+                                    <FontImageSource FontFamily="{StaticResource IcoMoonFamily}"
+                                                   Color="Black"
+                                                   Glyph="{x:Static fonts:IconFont.Handcuffs}"
+                                                   Size="20" />
+                                </Image.Source>
+                            </Image>
+                            <Label Text="{helpers:TranslateExtension Text='LblAtenderAlarma'}"
+                                   TextColor="Black"
+                                   FontSize="12"
+                                   HorizontalTextAlignment="Center"
+                                   LineBreakMode="WordWrap"/>
+                        </StackLayout>
+                    </Border>
+
+                    <Border Grid.Column="2"
+                            BackgroundColor="LightGray"
+                            StrokeThickness="0"
+                            StrokeShape="RoundRectangle 8"
+                            Padding="8,10">
+                        <Border.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding CerrarAlarmaCommand}" CommandParameter="{Binding AlarmaSeleccionada}"/>
+                        </Border.GestureRecognizers>
+                        <StackLayout Spacing="4" HorizontalOptions="Center" VerticalOptions="Center">
+                            <Image HorizontalOptions="Center" HeightRequest="20" WidthRequest="20">
+                                <Image.Source>
+                                    <FontImageSource FontFamily="{StaticResource IcoMoonFamily}"
+                                                   Color="Black"
+                                                   Glyph="{x:Static fonts:IconFont.TrashCan}"
+                                                   Size="20" />
+                                </Image.Source>
+                            </Image>
+                            <Label Text="{helpers:TranslateExtension Text='LblCerrarAlarma'}"
+                                   TextColor="Black"
+                                   FontSize="12"
+                                   HorizontalTextAlignment="Center"
+                                   LineBreakMode="WordWrap"/>
+                        </StackLayout>
+                    </Border>
+                </Grid>
+
+                <!-- Fila 3: "Seguir usuario" + "Ver autoridades responsables" -->
+                <Grid Grid.Row="2" ColumnSpacing="8">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <!-- Solo visible cuando el usuario NO es el propietario de la alarma -->
+                    <Border Grid.Column="0"
+                            BackgroundColor="{Binding ColorBotonSeguir}"
+                            StrokeThickness="0"
+                            StrokeShape="RoundRectangle 8"
+                            Padding="8,10"
+                            IsVisible="{Binding AlarmaSeleccionada.flag_propietario_alarma, Converter={StaticResource BooleanNegatorConverter}}">
+                        <Border.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding SeguirUsuarioCommand}"/>
+                        </Border.GestureRecognizers>
+                        <StackLayout Spacing="4" HorizontalOptions="Center" VerticalOptions="Center">
+                            <Image HorizontalOptions="Center" HeightRequest="20" WidthRequest="20">
+                                <Image.Source>
+                                    <FontImageSource FontFamily="{StaticResource IcoMoonFamily}"
+                                                   Color="White"
+                                                   Glyph="{x:Static fonts:IconFont.UserPlus}"
+                                                   Size="20" />
+                                </Image.Source>
+                            </Image>
+                            <Label Text="{Binding TextoBotonSeguir}"
+                                   TextColor="White"
+                                   FontSize="13"
+                                   HorizontalTextAlignment="Center"
+                                   LineBreakMode="WordWrap"/>
+                        </StackLayout>
+                    </Border>
+
+                    <!-- Solo visible para alarmas de SEGURIDAD (id=1) y POLITICA (id=2) -->
+                    <Border Grid.Column="1"
+                            BackgroundColor="#1A6FB4"
+                            StrokeThickness="0"
+                            StrokeShape="RoundRectangle 8"
+                            Padding="8,10"
+                            IsVisible="{Binding AlarmaSeleccionada.MostrarAutoridadesResponsables}">
+                        <Border.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding VerAutoridadesResponsablesCommand}" CommandParameter="{Binding AlarmaSeleccionada}"/>
+                        </Border.GestureRecognizers>
+                        <StackLayout Spacing="4" HorizontalOptions="Center" VerticalOptions="Center">
+                            <Image HorizontalOptions="Center" HeightRequest="20" WidthRequest="20">
+                                <Image.Source>
+                                    <FontImageSource FontFamily="{StaticResource IcoMoonFamily}"
+                                                   Color="White"
+                                                   Glyph="{x:Static fonts:IconFont.BuildingColumns}"
+                                                   Size="20" />
+                                </Image.Source>
+                            </Image>
+                            <Label Text="{helpers:TranslateExtension Text='LblVerAutoridadesResponsables'}"
+                                   TextColor="White"
+                                   FontSize="13"
+                                   HorizontalTextAlignment="Center"
+                                   LineBreakMode="WordWrap"/>
+                        </StackLayout>
+                    </Border>
+                </Grid>
+
             </Grid>
         </Grid>
+    </ContentPage.Content>
 </ContentPage>
-

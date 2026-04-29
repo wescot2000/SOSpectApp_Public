@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<VerticalStackLayout
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:helpers="clr-namespace:sospect.Helpers"
+    xmlns:converters="clr-namespace:sospect.Converters"
+    xmlns:fonts="clr-namespace:sospect.Resources.Fonts;assembly=sospect"
+    x:Class="sospect.Views.DataTemplates.FourPhotosTemplate"
+    Padding="12"
+    BackgroundColor="{Binding BackgroundColorFeed}"
+    Spacing="8">
+
+    <VerticalStackLayout.Resources>
+        <ResourceDictionary>
+            <converters:VisibilityConverter x:Key="VisibilityConverter" />
+            <converters:BooleanNegatorConverter x:Key="BooleanNegatorConverter" />
+            <converters:FlagPropietarioAlarmaToTextConverter x:Key="FlagPropietarioAlarmaToTextConverter" />
+        </ResourceDictionary>
+    </VerticalStackLayout.Resources>
+
+    <VerticalStackLayout.GestureRecognizers>
+        <TapGestureRecognizer
+            Command="{Binding BindingContext.VerDetallesAlarmaCommand, Source={RelativeSource AncestorType={x:Type ContentPage}}}"
+            CommandParameter="{Binding}" />
+    </VerticalStackLayout.GestureRecognizers>
+
+    <!-- Tipo de alarma (título) + fecha -->
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Column="0"
+               Text="{Binding descripciontipoalarma}"
+               FontSize="16"
+               FontAttributes="Bold"
+               TextColor="#1A1A1A" />
+
+        <Label Grid.Column="1"
+               Text="{Binding fecha_alarma, StringFormat='{0:dd/MM/yyyy HH:mm}'}"
+               FontSize="12"
+               TextColor="Gray"
+               HorizontalOptions="End" />
+    </Grid>
+
+    <!-- Usuario anonimizado -->
+    <Label Text="{Binding UsuarioAnonimizadoFormateado}"
+           FontSize="15"
+           FontAttributes="Bold"
+           TextColor="#444444"
+           IsVisible="{Binding usuario_anonimizado, Converter={StaticResource VisibilityConverter}}" />
+
+    <!-- Descripción completa -->
+    <Label Text="{Binding Descripcionalarma}"
+           FontSize="15"
+           TextColor="#1A1A1A"
+           LineBreakMode="WordWrap" />
+
+    <!-- Collage: Grid 2x2 -->
+    <Grid HeightRequest="350" RowSpacing="4" ColumnSpacing="4">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <!-- Foto 1: Arriba izquierda -->
+        <Border Grid.Row="0" Grid.Column="0"
+                StrokeThickness="0"
+                BackgroundColor="LightGray">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="12,0,0,0"/>
+            </Border.StrokeShape>
+            <Border.GestureRecognizers>
+                <TapGestureRecognizer
+                    Command="{Binding AbrirCarruselFotosCommand}"
+                    CommandParameter="{Binding Fotos[0]}" />
+            </Border.GestureRecognizers>
+
+            <Grid>
+                <Image Source="{Binding Fotos[0].ThumbnailUrlOrOriginal}"
+                       Aspect="AspectFill" />
+
+                <Grid IsVisible="{Binding Fotos[0].EsVideo}"
+                      BackgroundColor="#80000000">
+                    <Label Text="▶"
+                           FontSize="40"
+                           TextColor="White"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center" />
+                </Grid>
+            </Grid>
+        </Border>
+
+        <!-- Foto 2: Arriba derecha -->
+        <Border Grid.Row="0" Grid.Column="1"
+                StrokeThickness="0"
+                BackgroundColor="LightGray">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="0,12,0,0"/>
+            </Border.StrokeShape>
+            <Border.GestureRecognizers>
+                <TapGestureRecognizer
+                    Command="{Binding AbrirCarruselFotosCommand}"
+                    CommandParameter="{Binding Fotos[1]}" />
+            </Border.GestureRecognizers>
+
+            <Grid>
+                <Image Source="{Binding Fotos[1].ThumbnailUrlOrOriginal}"
+                       Aspect="AspectFill" />
+
+                <Grid IsVisible="{Binding Fotos[1].EsVideo}"
+                      BackgroundColor="#80000000">
+                    <Label Text="▶"
+                           FontSize="40"
+                           TextColor="White"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center" />
+                </Grid>
+            </Grid>
+        </Border>
+
+        <!-- Foto 3: Abajo izquierda -->
+        <Border Grid.Row="1" Grid.Column="0"
+                StrokeThickness="0"
+                BackgroundColor="LightGray">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="0,0,0,12"/>
+            </Border.StrokeShape>
+            <Border.GestureRecognizers>
+                <TapGestureRecognizer
+                    Command="{Binding AbrirCarruselFotosCommand}"
+                    CommandParameter="{Binding Fotos[2]}" />
+            </Border.GestureRecognizers>
+
+            <Grid>
+                <Image Source="{Binding Fotos[2].ThumbnailUrlOrOriginal}"
+                       Aspect="AspectFill" />
+
+                <Grid IsVisible="{Binding Fotos[2].EsVideo}"
+                      BackgroundColor="#80000000">
+                    <Label Text="▶"
+                           FontSize="40"
+                           TextColor="White"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center" />
+                </Grid>
+            </Grid>
+        </Border>
+
+        <!-- Foto 4: Abajo derecha -->
+        <Border Grid.Row="1" Grid.Column="1"
+                StrokeThickness="0"
+                BackgroundColor="LightGray">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="0,0,12,0"/>
+            </Border.StrokeShape>
+            <Border.GestureRecognizers>
+                <TapGestureRecognizer
+                    Command="{Binding AbrirCarruselFotosCommand}"
+                    CommandParameter="{Binding Fotos[3]}" />
+            </Border.GestureRecognizers>
+
+            <Grid>
+                <Image Source="{Binding Fotos[3].ThumbnailUrlOrOriginal}"
+                       Aspect="AspectFill" />
+
+                <Grid IsVisible="{Binding Fotos[3].EsVideo}"
+                      BackgroundColor="#80000000">
+                    <Label Text="▶"
+                           FontSize="40"
+                           TextColor="White"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center" />
+                </Grid>
+            </Grid>
+        </Border>
+    </Grid>
+
+    <!-- Label "Red de confianza" (solo si flag_red_confianza = true) -->
+    <Label Text="Alarm created by trusted network user"
+           FontSize="12"
+           FontAttributes="Bold"
+           TextColor="Green"
+           IsVisible="{Binding flag_red_confianza}" />
+
+    <!-- Credibilidad -->
+    <Label Text="{Binding CredibilidadAlarma}"
+           FontSize="12"
+           TextColor="Gray"
+           FontAttributes="Bold" />
+
+    <!-- Ubicación Territorial (Barrio-Ciudad-Pais) -->
+    <Label Text="{Binding UbicacionTerritorial}"
+           FontSize="11"
+           TextColor="#999999" />
+
+    <!-- Status -->
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Column="0"
+               Text="{Binding flag_propietario_alarma, Converter={StaticResource FlagPropietarioAlarmaToTextConverter}}"
+               FontSize="12"
+               TextColor="Gray" />
+
+        <Label Grid.Column="1"
+               Text="{helpers:TranslateExtension Text='LblAlarmaActiva'}"
+               FontSize="12"
+               FontAttributes="Bold"
+               TextColor="Green"
+               HorizontalOptions="End"
+               IsVisible="{Binding EsAlarmaActiva}" />
+
+        <Label Grid.Column="1"
+               Text="{helpers:TranslateExtension Text='AlarmaCerrada'}"
+               FontSize="12"
+               FontAttributes="Bold"
+               TextColor="Red"
+               HorizontalOptions="End"
+               IsVisible="{Binding EsAlarmaActiva, Converter={StaticResource BooleanNegatorConverter}}"/>
+    </Grid>
+
+    <!-- Barra de acciones estilo Twitter/X — 5 columnas uniformes -->
+    <Grid ColumnDefinitions="*,*,*,*,*" Margin="0,8,0,0" HeightRequest="44">
+        <!-- Like -->
+        <Grid Grid.Column="0" MinimumHeightRequest="44" MinimumWidthRequest="44"
+              HorizontalOptions="Center" VerticalOptions="Center">
+            <Grid.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding BindingContext.DarLikeCommand, Source={RelativeSource AncestorType={x:Type ContentPage}}}" CommandParameter="{Binding}" />
+            </Grid.GestureRecognizers>
+            <StackLayout Orientation="Horizontal" Spacing="4" HorizontalOptions="Center" VerticalOptions="Center">
+                <Label Text="{x:Static fonts:IconFont.Heart}"
+                       FontFamily="{StaticResource IcoMoonFamily}"
+                       FontSize="20" TextColor="{Binding ColorIconoLike}"
+                       VerticalOptions="Center" />
+                <Label Text="{Binding LikesFormateado}" FontSize="12" TextColor="Gray" VerticalOptions="Center" />
+            </StackLayout>
+        </Grid>
+        <!-- Reenviar -->
+        <Grid Grid.Column="1" MinimumHeightRequest="44" MinimumWidthRequest="44"
+              HorizontalOptions="Center" VerticalOptions="Center">
+            <Grid.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding BindingContext.ReenviarCommand, Source={RelativeSource AncestorType={x:Type ContentPage}}}" CommandParameter="{Binding}" />
+            </Grid.GestureRecognizers>
+            <StackLayout Orientation="Horizontal" Spacing="4" HorizontalOptions="Center" VerticalOptions="Center">
+                <Label Text="{x:Static fonts:IconFont.Retweet}"
+                       FontFamily="{StaticResource IcoMoonFamily}"
+                       FontSize="20" TextColor="{Binding ColorIconoReenvio}"
+                       VerticalOptions="Center" />
+                <Label Text="{Binding ReenviosFormateado}" FontSize="12" TextColor="Gray" VerticalOptions="Center" />
+            </StackLayout>
+        </Grid>
+        <!-- Compartir -->
+        <Grid Grid.Column="2" MinimumHeightRequest="44" MinimumWidthRequest="44"
+              HorizontalOptions="Center" VerticalOptions="Center">
+            <Grid.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding BindingContext.CompartirCommand, Source={RelativeSource AncestorType={x:Type ContentPage}}}" CommandParameter="{Binding}" />
+            </Grid.GestureRecognizers>
+            <Label Text="{x:Static fonts:IconFont.Share}"
+                   FontFamily="{StaticResource IcoMoonFamily}"
+                   FontSize="20" TextColor="#95A5A6"
+                   HorizontalOptions="Center" VerticalOptions="Center" />
+        </Grid>
+        <!-- Verdadero (solo si no es propietario) -->
+        <Grid Grid.Column="3" MinimumHeightRequest="44" MinimumWidthRequest="44"
+              HorizontalOptions="Center" VerticalOptions="Center"
+              IsVisible="{Binding PuedeCalificarVeracidad}">
+            <Grid.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding BindingContext.MarcarVerdaderaCommand, Source={RelativeSource AncestorType={x:Type ContentPage}}}" CommandParameter="{Binding}" />
+            </Grid.GestureRecognizers>
+            <StackLayout Orientation="Horizontal" Spacing="4" HorizontalOptions="Center" VerticalOptions="Center">
+                <Label Text="{x:Static fonts:IconFont.CircleCheck}"
+                       FontFamily="{StaticResource IcoMoonFamily}"
+                       FontSize="20" TextColor="{Binding ColorIconoVerdadero}"
+                       VerticalOptions="Center" />
+                <Label Text="{Binding VerdaderosFormateado}" FontSize="12" TextColor="Gray" VerticalOptions="Center" />
+            </StackLayout>
+        </Grid>
+        <!-- Falso (solo si no es propietario) -->
+        <Grid Grid.Column="4" MinimumHeightRequest="44" MinimumWidthRequest="44"
+              HorizontalOptions="Center" VerticalOptions="Center"
+              IsVisible="{Binding PuedeCalificarVeracidad}">
+            <Grid.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding BindingContext.MarcarFalsaCommand, Source={RelativeSource AncestorType={x:Type ContentPage}}}" CommandParameter="{Binding}" />
+            </Grid.GestureRecognizers>
+            <StackLayout Orientation="Horizontal" Spacing="4" HorizontalOptions="Center" VerticalOptions="Center">
+                <Label Text="{x:Static fonts:IconFont.CircleXmark}"
+                       FontFamily="{StaticResource IcoMoonFamily}"
+                       FontSize="20" TextColor="{Binding ColorIconoFalso}"
+                       VerticalOptions="Center" />
+                <Label Text="{Binding FalsosFormateado}" FontSize="12" TextColor="Gray" VerticalOptions="Center" />
+            </StackLayout>
+        </Grid>
+    </Grid>
+
+    <!-- Votación de cierre comunitario pendiente (2026-03-29) -->
+    <Label Text="{helpers:TranslateExtension Text='LblVotoPendienteEnCierre'}"
+           FontSize="12"
+           FontAttributes="Bold"
+           TextColor="#E67E22"
+           Margin="0,4,0,0"
+           IsVisible="{Binding TieneVotacionActivaSinVoto}" />
+
+    <!-- Separador estilo Twitter/X -->
+    <BoxView HeightRequest="1" Color="#E0E0E0" Margin="0,8,0,0" />
+</VerticalStackLayout>

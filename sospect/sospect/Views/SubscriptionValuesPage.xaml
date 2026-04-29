@@ -1,56 +1,121 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="sospect.Views.SubscriptionValuesPage"
              xmlns:fonts="clr-namespace:sospect.Resources.Fonts;assembly=sospect"
              xmlns:helpers="clr-namespace:sospect.Helpers"
-             BackgroundColor="White"
+             BackgroundColor="#F8F9FA"
              Title="{helpers:TranslateExtension Text='LblValoresSubsc'}">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="HeaderContainerStyle" TargetType="Frame">
+                <Setter Property="BackgroundColor" Value="#4A90E2" />
+                <Setter Property="BorderColor" Value="Transparent" />
+                <Setter Property="CornerRadius" Value="12" />
+                <Setter Property="Padding" Value="20" />
+                <Setter Property="Margin" Value="20,20,20,10" />
+                <Setter Property="HasShadow" Value="True" />
+            </Style>
+
+            <Style x:Key="SubscriptionCardStyle" TargetType="Frame">
+                <Setter Property="BackgroundColor" Value="White" />
+                <Setter Property="BorderColor" Value="Transparent" />
+                <Setter Property="CornerRadius" Value="12" />
+                <Setter Property="Padding" Value="15" />
+                <Setter Property="Margin" Value="20,8,20,8" />
+                <Setter Property="HasShadow" Value="True" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
     <Grid>
-        <Grid Padding="20">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="*" />
-            </Grid.RowDefinitions>
-            <Grid Margin="0, 10">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="Auto" />
-                </Grid.ColumnDefinitions>
-                <Label Text="{helpers:TranslateExtension Text='LblSuscripcionesDisponibles'}" FontAttributes="Bold" TextColor="Black" FontSize="18" />
-            </Grid>
-                <CollectionView Grid.Row="1" BackgroundColor="White" ItemsSource="{Binding SubscriptionValues}" Margin="10">
-                <CollectionView.ItemTemplate>
-                    <DataTemplate>
-                        <Frame Margin="5" Padding="10" CornerRadius="10" HasShadow="True" BackgroundColor="#F0F0F0" VerticalOptions="Center">
-                            <Grid Margin="20,0" >
+        <ScrollView>
+            <StackLayout Spacing="0">
+
+                <!-- Header con título e icono -->
+                <Frame Style="{StaticResource HeaderContainerStyle}">
+                    <Grid ColumnSpacing="15">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <Label Grid.Column="0"
+                               FontFamily="{StaticResource IcoMoonFamily}"
+                               Text="{x:Static fonts:IconFont.CreditCard}"
+                               FontSize="32"
+                               TextColor="White"
+                               VerticalOptions="Center" />
+
+                        <Label Grid.Column="1"
+                               Text="{helpers:TranslateExtension Text='LblSuscripcionesDisponibles'}"
+                               TextColor="White"
+                               FontSize="20"
+                               FontAttributes="Bold"
+                               VerticalOptions="Center"
+                               LineBreakMode="WordWrap" />
+                    </Grid>
+                </Frame>
+
+                <!-- Lista de suscripciones -->
+                <CollectionView ItemsSource="{Binding SubscriptionValues}"
+                               SelectionMode="None">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Frame Style="{StaticResource SubscriptionCardStyle}">
+                                <Grid ColumnSpacing="15">
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="Auto" />
                                         <ColumnDefinition Width="*" />
                                     </Grid.ColumnDefinitions>
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="70"></RowDefinition>                                        
-                                    </Grid.RowDefinitions>
-                                    <Label Text="•" FontSize="28" TextColor="Black" VerticalTextAlignment="Center" HorizontalOptions="Start" />
-                                    <Label Grid.Column="1" TextColor="Black" Text="{Binding Texto}" FontSize="16" Margin="20,0,0,0" HorizontalOptions="Center" VerticalTextAlignment="Center" LineBreakMode="WordWrap" />
+
+                                    <!-- Icono decorativo -->
+                                    <Frame Grid.Column="0"
+                                           BackgroundColor="#E8F4FD"
+                                           BorderColor="Transparent"
+                                           CornerRadius="8"
+                                           Padding="12"
+                                           HasShadow="False"
+                                           VerticalOptions="Center">
+                                        <Label FontFamily="{StaticResource IcoMoonFamily}"
+                                               Text="{x:Static fonts:IconFont.Check}"
+                                               FontSize="24"
+                                               TextColor="#4A90E2"
+                                               VerticalOptions="Center"
+                                               HorizontalOptions="Center" />
+                                    </Frame>
+
+                                    <!-- Texto de la suscripción -->
+                                    <Label Grid.Column="1"
+                                           Text="{Binding Texto}"
+                                           TextColor="#2C3E50"
+                                           FontSize="15"
+                                           LineBreakMode="WordWrap"
+                                           VerticalOptions="Center" />
                                 </Grid>
                             </Frame>
                         </DataTemplate>
                     </CollectionView.ItemTemplate>
                 </CollectionView>
-        </Grid>
+
+                <BoxView HeightRequest="20" Color="Transparent" />
+
+            </StackLayout>
+        </ScrollView>
+
+        <!-- Loading overlay -->
         <Grid BackgroundColor="Black"
-                  Opacity="0.5"
-                  HorizontalOptions="FillAndExpand"
-                  VerticalOptions="FillAndExpand"
-                  IsVisible="{Binding IsRunning}">
+              Opacity="0.5"
+              HorizontalOptions="FillAndExpand"
+              VerticalOptions="FillAndExpand"
+              IsVisible="{Binding IsRunning}">
             <ActivityIndicator VerticalOptions="Center"
-                                   HorizontalOptions="Center"
-                                   HeightRequest="50"
-                                   WidthRequest="50"
-                                   Color="DarkBlue"
-                                   IsRunning="{Binding IsRunning}">
-            </ActivityIndicator>
+                             HorizontalOptions="Center"
+                             HeightRequest="50"
+                             WidthRequest="50"
+                             Color="#4A90E2"
+                             IsRunning="{Binding IsRunning}" />
         </Grid>
     </Grid>
 </ContentPage>

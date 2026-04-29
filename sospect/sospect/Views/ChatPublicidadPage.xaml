@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:helpers="clr-namespace:sospect.Helpers"
+    x:Class="sospect.Views.ChatPublicidadPage"
+    Title="{helpers:TranslateExtension Text='PromotionalAlarmHeader'}"
+    BackgroundColor="White">
+
+    <Grid RowDefinitions="Auto,*,Auto">
+
+        <!-- Header: Información de la promoción -->
+        <Frame Grid.Row="0"
+               BackgroundColor="#E3F2FD"
+               BorderColor="Transparent"
+               CornerRadius="0"
+               Padding="15"
+               HasShadow="False">
+            <StackLayout Spacing="10">
+                <!-- Logo (si está habilitado) -->
+                <Image x:Name="ImgLogo"
+                       HeightRequest="80"
+                       WidthRequest="80"
+                       Aspect="AspectFit"
+                       HorizontalOptions="Center"
+                       IsVisible="False"/>
+
+                <!-- Texto promocional -->
+                <Label x:Name="LblTextoPromocional"
+                       Text=""
+                       FontSize="15"
+                       TextColor="#333"
+                       HorizontalTextAlignment="Center"/>
+
+                <!-- Indicador de domicilio -->
+                <Label x:Name="LblDomicilio"
+                       Text="{helpers:TranslateExtension Text='DeliveryAvailable'}"
+                       FontSize="13"
+                       TextColor="#4CAF50"
+                       FontAttributes="Bold"
+                       HorizontalTextAlignment="Center"
+                       IsVisible="False"/>
+
+                <!-- Estado del chat (si está pendiente) -->
+                <Frame x:Name="FramePendiente"
+                       BackgroundColor="#FFF3CD"
+                       BorderColor="#FFEEBA"
+                       CornerRadius="8"
+                       Padding="12"
+                       HasShadow="False"
+                       IsVisible="False">
+                    <StackLayout Spacing="8">
+                        <Label Text="{helpers:TranslateExtension Text='ChatPendingAcceptance'}"
+                               TextColor="#856404"
+                               FontSize="13"
+                               HorizontalTextAlignment="Center"/>
+
+                        <StackLayout Orientation="Horizontal"
+                                     HorizontalOptions="Center"
+                                     Spacing="15">
+                            <StackLayout Orientation="Horizontal" Spacing="5">
+                                <Label Text="{helpers:TranslateExtension Text='ChatProveedor'}"
+                                       FontSize="12"
+                                       FontAttributes="Bold"
+                                       TextColor="#856404"/>
+                                <Label x:Name="LblProveedorEstado"
+                                       Text=""
+                                       FontSize="12"
+                                       TextColor="#856404"/>
+                            </StackLayout>
+
+                            <StackLayout Orientation="Horizontal" Spacing="5">
+                                <Label Text="{helpers:TranslateExtension Text='ChatUsted'}"
+                                       FontSize="12"
+                                       FontAttributes="Bold"
+                                       TextColor="#856404"/>
+                                <Label x:Name="LblUsuarioEstado"
+                                       Text=""
+                                       FontSize="12"
+                                       TextColor="#856404"/>
+                            </StackLayout>
+                        </StackLayout>
+
+                        <Button x:Name="BtnAceptarTerminos"
+                                Text="{helpers:TranslateExtension Text='ChatAcceptTerms'}"
+                                BackgroundColor="#FF9800"
+                                TextColor="White"
+                                CornerRadius="8"
+                                HeightRequest="40"
+                                IsVisible="False"
+                                Clicked="OnAceptarTerminosClicked"/>
+                    </StackLayout>
+                </Frame>
+
+                <!-- Visual Reminder of Terms Acceptance (Proveedor view) -->
+                <Frame x:Name="FrameRecordatorioProveedor"
+                       BackgroundColor="#E8F5E9" BorderColor="#4CAF50"
+                       Padding="12" Margin="0,10,0,0" CornerRadius="8"
+                       HasShadow="False"
+                       IsVisible="False">
+                    <StackLayout Orientation="Horizontal" Spacing="10">
+                        <Label Text="ℹ️" FontSize="18" VerticalOptions="Center"/>
+                        <StackLayout VerticalOptions="Center">
+                            <Label x:Name="LblRecordatorioProveedor"
+                                   FontSize="12" TextColor="#2E7D32"/>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+
+                <!-- Visual Reminder of Terms Acceptance (Interesado view) -->
+                <Frame x:Name="FrameRecordatorioInteresado"
+                       BackgroundColor="#E3F2FD" BorderColor="#2196F3"
+                       Padding="12" Margin="0,10,0,0" CornerRadius="8"
+                       HasShadow="False"
+                       IsVisible="False">
+                    <StackLayout Orientation="Horizontal" Spacing="10">
+                        <Label Text="ℹ️" FontSize="18" VerticalOptions="Center"/>
+                        <StackLayout VerticalOptions="Center">
+                            <Label x:Name="LblRecordatorioInteresado"
+                                   FontSize="12" TextColor="#1565C0"/>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+
+                <!-- Botón Ver en Mapa -->
+                <Button Text="{helpers:TranslateExtension Text='ChatVerEnMapa'}"
+                        BackgroundColor="#2196F3"
+                        TextColor="White"
+                        CornerRadius="8"
+                        HeightRequest="40"
+                        Clicked="OnVerEnMapaClicked"/>
+            </StackLayout>
+        </Frame>
+
+        <!-- Área de mensajes: CollectionView con DataTemplate declarativo.
+             Usar CollectionView (renderer nativo RecyclerView en Android) evita el bug
+             de edge-to-edge donde StackLayout dinámico colapsa a Height=0 tras SetPadding. -->
+        <CollectionView Grid.Row="1"
+                        x:Name="MensajesCollectionView"
+                        Margin="0"
+                        ItemsUpdatingScrollMode="KeepLastItemInView">
+            <CollectionView.ItemsLayout>
+                <LinearItemsLayout Orientation="Vertical" ItemSpacing="4"/>
+            </CollectionView.ItemsLayout>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Padding="10,3">
+                        <!-- Burbuja propia (derecha, azul) -->
+                        <Frame IsVisible="{Binding EsPropio}"
+                               CornerRadius="12"
+                               Padding="10"
+                               HasShadow="False"
+                               BackgroundColor="#1565C0"
+                               BorderColor="Transparent"
+                               HorizontalOptions="End"
+                               MaximumWidthRequest="280"
+                               Margin="60,2,0,2">
+                            <StackLayout Spacing="5">
+                                <!-- Imagen adjunta -->
+                                <Image Source="{Binding UrlMedia}"
+                                       Aspect="AspectFill"
+                                       HeightRequest="160"
+                                       WidthRequest="200"
+                                       IsVisible="{Binding TieneImagenAdjunta}">
+                                    <Image.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnMensajeImagenTapped" CommandParameter="{Binding .}"/>
+                                    </Image.GestureRecognizers>
+                                </Image>
+                                <!-- Video adjunto -->
+                                <Grid HeightRequest="160" WidthRequest="200" BackgroundColor="Black"
+                                      IsVisible="{Binding TieneVideoAdjunto}">
+                                    <Label Text="▶" FontSize="40" TextColor="White"
+                                           HorizontalOptions="Center" VerticalOptions="Center"/>
+                                    <Grid.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnMensajeImagenTapped" CommandParameter="{Binding .}"/>
+                                    </Grid.GestureRecognizers>
+                                </Grid>
+                                <!-- Texto -->
+                                <Label Text="{Binding Contenido}"
+                                       TextColor="White"
+                                       FontSize="15"
+                                       LineBreakMode="WordWrap"
+                                       IsVisible="{Binding TieneTexto}"/>
+                                <!-- Hora -->
+                                <Label Text="{Binding FechaEnvio, StringFormat='{}{0:HH:mm}'}"
+                                       TextColor="#B0BEC5"
+                                       FontSize="11"
+                                       HorizontalTextAlignment="End"/>
+                            </StackLayout>
+                        </Frame>
+                        <!-- Burbuja ajena (izquierda, gris) -->
+                        <Frame IsVisible="{Binding EsAjeno}"
+                               CornerRadius="12"
+                               Padding="10"
+                               HasShadow="False"
+                               BackgroundColor="#E5E5EA"
+                               BorderColor="Transparent"
+                               HorizontalOptions="Start"
+                               MaximumWidthRequest="280"
+                               Margin="0,2,60,2">
+                            <StackLayout Spacing="5">
+                                <!-- Imagen adjunta -->
+                                <Image Source="{Binding UrlMedia}"
+                                       Aspect="AspectFill"
+                                       HeightRequest="160"
+                                       WidthRequest="200"
+                                       IsVisible="{Binding TieneImagenAdjunta}">
+                                    <Image.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnMensajeImagenTapped" CommandParameter="{Binding .}"/>
+                                    </Image.GestureRecognizers>
+                                </Image>
+                                <!-- Video adjunto -->
+                                <Grid HeightRequest="160" WidthRequest="200" BackgroundColor="Black"
+                                      IsVisible="{Binding TieneVideoAdjunto}">
+                                    <Label Text="▶" FontSize="40" TextColor="White"
+                                           HorizontalOptions="Center" VerticalOptions="Center"/>
+                                    <Grid.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnMensajeImagenTapped" CommandParameter="{Binding .}"/>
+                                    </Grid.GestureRecognizers>
+                                </Grid>
+                                <!-- Texto -->
+                                <Label Text="{Binding Contenido}"
+                                       TextColor="Black"
+                                       FontSize="15"
+                                       LineBreakMode="WordWrap"
+                                       IsVisible="{Binding TieneTexto}"/>
+                                <!-- Hora -->
+                                <Label Text="{Binding FechaEnvio, StringFormat='{}{0:HH:mm}'}"
+                                       TextColor="#999999"
+                                       FontSize="11"
+                                       HorizontalTextAlignment="End"/>
+                            </StackLayout>
+                        </Frame>
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <!-- Input de mensaje (parte inferior fija) -->
+        <Frame Grid.Row="2"
+               BackgroundColor="White"
+               BorderColor="#E0E0E0"
+               CornerRadius="0"
+               Padding="10"
+               HasShadow="True">
+            <StackLayout Spacing="6">
+
+                <!-- Vista previa de fotos/videos adjuntos (igual que DescribirAlarmaPage) -->
+                <ScrollView x:Name="MediaScrollView"
+                            Orientation="Horizontal"
+                            HeightRequest="80"
+                            Margin="0,0,0,4"
+                            IsVisible="False">
+                    <HorizontalStackLayout Spacing="8">
+                        <CollectionView x:Name="MediaCollectionView"
+                                        ItemsLayout="HorizontalList">
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate>
+                                    <Border StrokeThickness="1"
+                                            Stroke="#E0E0E0"
+                                            HeightRequest="70"
+                                            WidthRequest="70"
+                                            Margin="2">
+                                        <Border.StrokeShape>
+                                            <RoundRectangle CornerRadius="8"/>
+                                        </Border.StrokeShape>
+                                        <Grid>
+                                            <!-- Thumbnail -->
+                                            <Image Source="{Binding ThumbnailPath}"
+                                                   Aspect="AspectFill"/>
+                                            <!-- Overlay para videos -->
+                                            <Label Text="▶"
+                                                   FontSize="24"
+                                                   TextColor="White"
+                                                   HorizontalOptions="Center"
+                                                   VerticalOptions="Center"
+                                                   IsVisible="{Binding IsVideo}"/>
+                                            <!-- Botón X para eliminar -->
+                                            <Border BackgroundColor="#80000000"
+                                                    HeightRequest="24"
+                                                    WidthRequest="24"
+                                                    HorizontalOptions="End"
+                                                    VerticalOptions="Start"
+                                                    Margin="4">
+                                                <Border.StrokeShape>
+                                                    <RoundRectangle CornerRadius="12"/>
+                                                </Border.StrokeShape>
+                                                <Border.GestureRecognizers>
+                                                    <TapGestureRecognizer Tapped="OnRemoveMediaTapped"
+                                                                          CommandParameter="{Binding .}"/>
+                                                </Border.GestureRecognizers>
+                                                <Label Text="✕"
+                                                       FontSize="14"
+                                                       TextColor="White"
+                                                       HorizontalTextAlignment="Center"
+                                                       VerticalTextAlignment="Center"/>
+                                            </Border>
+                                        </Grid>
+                                    </Border>
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
+                        </CollectionView>
+                    </HorizontalStackLayout>
+                </ScrollView>
+
+                <Grid ColumnDefinitions="Auto,*,Auto">
+                    <!-- Botón de cámara -->
+                    <Border Grid.Column="0"
+                            x:Name="BtnAdjuntar"
+                            StrokeThickness="1"
+                            Stroke="#1465bb"
+                            BackgroundColor="White"
+                            HeightRequest="44"
+                            WidthRequest="44"
+                            VerticalOptions="Center"
+                            InputTransparent="True"
+                            Opacity="0.4">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="8"/>
+                        </Border.StrokeShape>
+                        <Border.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnAdjuntarClicked"/>
+                        </Border.GestureRecognizers>
+                        <Label Text="📷"
+                               FontSize="24"
+                               HorizontalTextAlignment="Center"
+                               VerticalTextAlignment="Center"/>
+                    </Border>
+
+                    <!-- Campo de texto -->
+                    <Frame Grid.Column="1"
+                           BackgroundColor="#F5F5F5"
+                           BorderColor="#E0E0E0"
+                           CornerRadius="20"
+                           Padding="12,8"
+                           HasShadow="False"
+                           Margin="5,0">
+                        <Entry x:Name="EntryMensaje"
+                               Placeholder="{helpers:TranslateExtension Text='ChatEscribeMensaje'}"
+                               BackgroundColor="Transparent"
+                               TextColor="Black"
+                               PlaceholderColor="#999"
+                               IsEnabled="False"/>
+                    </Frame>
+
+                    <!-- Botón enviar -->
+                    <Button Grid.Column="2"
+                            x:Name="BtnEnviar"
+                            Text="➤"
+                            BackgroundColor="#4CAF50"
+                            TextColor="White"
+                            CornerRadius="20"
+                            WidthRequest="50"
+                            HeightRequest="40"
+                            FontSize="20"
+                            Clicked="OnEnviarClicked"
+                            IsEnabled="False"/>
+                </Grid>
+            </StackLayout>
+        </Frame>
+
+        <!-- Indicador de carga -->
+        <ActivityIndicator Grid.Row="1"
+                           x:Name="LoadingIndicator"
+                           IsRunning="False"
+                           IsVisible="False"
+                           Color="#4CAF50"
+                           VerticalOptions="Center"
+                           HorizontalOptions="Center"/>
+    </Grid>
+</ContentPage>

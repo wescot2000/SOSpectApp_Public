@@ -1,7 +1,7 @@
-﻿using System;
-using SkiaSharp;
+using System;
 using System.Globalization;
-using Xamarin.Forms;
+using Microsoft.Maui.Controls;
+using SkiaSharp;
 
 namespace sospect.Converters
 {
@@ -11,9 +11,9 @@ namespace sospect.Converters
         {
             if (value is SKColor skColor)
             {
-                return new Color(skColor.Red / 255.0, skColor.Green / 255.0, skColor.Blue / 255.0, skColor.Alpha / 255.0);
+                return new Color((float)(skColor.Red / 255.0), (float)(skColor.Green / 255.0), (float)(skColor.Blue / 255.0), (float)(skColor.Alpha / 255.0));
             }
-            return Color.Default;
+            return Colors.Transparent; // Cambié a Colors en lugar de Color.Default
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
@@ -21,6 +21,4 @@ namespace sospect.Converters
             throw new NotImplementedException();
         }
     }
-
 }
-

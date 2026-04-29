@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+using System;
 using System.Globalization;
-using System.Text;
-using Xamarin.Forms;
+using Microsoft.Maui.Controls;
 
 namespace sospect.Converters
 {
@@ -20,7 +18,7 @@ namespace sospect.Converters
             }
             else if (!flag_subscr_vencida && !flag_renovable)
             {
-                return false; // Solo el boton "Renovar" oculto
+                return false; // Solo el botón "Renovar" oculto
             }
             else if (!flag_subscr_vencida && flag_renovable)
             {
@@ -28,7 +26,7 @@ namespace sospect.Converters
             }
             else // flag_subscr_vencida && flag_renovable
             {
-                return true; // Solo el boton "Renovar" visible
+                return true; // Solo el botón "Renovar" visible
             }
         }
 

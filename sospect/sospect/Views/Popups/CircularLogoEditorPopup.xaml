@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<toolkit:Popup xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             xmlns:skia="clr-namespace:SkiaSharp.Views.Maui.Controls;assembly=SkiaSharp.Views.Maui.Controls"
+             x:Class="sospect.Views.Popups.CircularLogoEditorPopup"
+             CanBeDismissedByTappingOutsideOfPopup="False">
+
+    <Border BackgroundColor="White"
+            Stroke="Transparent"
+            Padding="12"
+            MaximumWidthRequest="340"
+            MaximumHeightRequest="520"
+            StrokeShape="RoundRectangle 16">
+
+        <Grid RowDefinitions="Auto,Auto,Auto,Auto" RowSpacing="10">
+
+            <!-- Título -->
+            <Label Grid.Row="0"
+                   x:Name="LblTitle"
+                   FontSize="18"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   Margin="0,0,0,5"/>
+
+            <!-- Canvas de SkiaSharp para mostrar imagen y círculo de recorte -->
+            <Border Grid.Row="1"
+                    BackgroundColor="#F5F5F5"
+                    Stroke="#E0E0E0"
+                    StrokeThickness="1"
+                    HeightRequest="280"
+                    WidthRequest="280"
+                    HorizontalOptions="Center"
+                    StrokeShape="RoundRectangle 8">
+                <Grid>
+                    <skia:SKCanvasView x:Name="CanvasView"
+                                       PaintSurface="OnCanvasViewPaintSurface"
+                                       HeightRequest="280"
+                                       WidthRequest="280"
+                                       EnableTouchEvents="True"
+                                       Touch="OnCanvasTouch"/>
+                    <!-- Overlay transparente para capturar gestos -->
+                    <BoxView x:Name="GestureOverlay"
+                             Color="Transparent"
+                             HeightRequest="280"
+                             WidthRequest="280">
+                        <BoxView.GestureRecognizers>
+                            <PanGestureRecognizer PanUpdated="OnPanUpdated"/>
+                            <PinchGestureRecognizer PinchUpdated="OnPinchUpdated"/>
+                        </BoxView.GestureRecognizers>
+                    </BoxView>
+                </Grid>
+            </Border>
+
+            <!-- Slider para zoom -->
+            <VerticalStackLayout Grid.Row="2" Spacing="3" Padding="5,0">
+                <Label x:Name="LblZoom"
+                       FontSize="13"
+                       HorizontalOptions="Center"/>
+                <Slider x:Name="ZoomSlider"
+                        Minimum="1.0"
+                        Maximum="3.0"
+                        Value="1.0"
+                        ValueChanged="OnZoomChanged"
+                        MaximumTrackColor="LightGray"
+                        MinimumTrackColor="#4CAF50"/>
+            </VerticalStackLayout>
+
+            <!-- Botones -->
+            <Grid Grid.Row="3" ColumnDefinitions="*,*" ColumnSpacing="10" Padding="5,5,5,0">
+                <Button Grid.Column="0"
+                        x:Name="BtnCancel"
+                        BackgroundColor="#9E9E9E"
+                        TextColor="White"
+                        HeightRequest="44"
+                        CornerRadius="8"
+                        FontSize="14"
+                        Clicked="OnCancelClicked"/>
+
+                <Button Grid.Column="1"
+                        x:Name="BtnSave"
+                        BackgroundColor="#4CAF50"
+                        TextColor="White"
+                        HeightRequest="44"
+                        CornerRadius="8"
+                        FontSize="14"
+                        Clicked="OnSaveClicked"/>
+            </Grid>
+
+        </Grid>
+    </Border>
+</toolkit:Popup>

@@ -249,18 +249,6 @@
   <data name="DireccionEscape" xml:space="preserve">
     <value>Harap tunjukkan arah pelarian tersangka.</value>
   </data>
-  <data name="DescripcionAlerta" xml:space="preserve">
-    <value>Deskripsi peringatan</value>
-  </data>
-  <data name="DescripcionImplicado" xml:space="preserve">
-    <value>Deskripsi orang yang terlibat dalam peringatan</value>
-  </data>
-  <data name="DescripcionVehiculoImp" xml:space="preserve">
-    <value>Kendaraan yang terlibat (Jika ada)</value>
-  </data>
-  <data name="ArmaImplicada" xml:space="preserve">
-    <value>Senjata yang terlibat (Jika ada)</value>
-  </data>
   <data name="LabelRutaEscape" xml:space="preserve">
     <value>Rute pelarian yang mencurigakan</value>
   </data>
@@ -660,9 +648,6 @@
   <data name="LblSaldoPoderesEs" xml:space="preserve">
     <value>Keseimbangan kekuatan saya adalah:</value>
   </data>
-  <data name="LblUsuarioID" xml:space="preserve">
-    <value>ID pengguna saya adalah</value>
-  </data>
   <data name="LblAlertaReportadaPorMi" xml:space="preserve">
     <value>Peringatan dilaporkan oleh saya</value>
   </data>
@@ -690,23 +675,14 @@
   <data name="LblAlarmaNoGrave" xml:space="preserve">
     <value>Gunakan tombol kuning untuk menempatkan peringatan bahaya rendah dan memperingatkan komunitas atau pelindung Anda. Anda dapat memilih jenis peringatan dan menandainya sebagai kejahatan yang dilakukan. Tombol ini meluncurkan peringatan di lokasi persis Anda, berguna saat Anda membutuhkan bantuan. Anda juga dapat memilih titik di peta untuk menemukan peringatan tanpa mengorbankan lokasi Anda.</value>
   </data>
-  <data name="LblCrimenCometido" xml:space="preserve">
-    <value>Tombol merah memicu kategori: kejahatan yang dilakukan alarm. SOSpect tidak mengharuskan Anda untuk memasukkan kategori karena pentingnya waktu dalam kasus ini. Alarm secara otomatis ditempatkan di lokasi Anda yang sebenarnya. Anda juga dapat memilih titik pada peta untuk menempatkan peringatan dan kemudian mengubah kategori menjadi kejahatan yang dilakukan.</value>
-  </data>
   <data name="LblDescripcionAlarmas" xml:space="preserve">
     <value>Dalam opsi 'Jelaskan' di bilah bawah, Anda akan menemukan daftar alarm yang ditempatkan oleh Anda atau orang lain. Jika Anda membuat alarm, Anda dapat menambahkan deskripsi. Jika alarm dibuat oleh orang lain, Anda dapat menilai kebenarannya dan melengkapi deskripsinya. Hati-hati! Jika Anda memberikan informasi palsu atau peringkat yang salah, akun Anda dapat ditangguhkan. Tinjau syarat dan ketentuan dengan cermat untuk menghindari hal ini.</value>
   </data>
   <data name="LblDescripcionMensajes" xml:space="preserve">
     <value>Di bel di sudut kanan atas, Anda dapat membaca pesan Anda, yang mencakup pemberitahuan berlangganan dan alarm terbaru. Daftar ini berbeda dari opsi deskripsi, di mana Anda dapat menemukan alarm terbaru secara langsung.</value>
   </data>
-  <data name="LblDescripcionMenu" xml:space="preserve">
-    <value>Di roda gigi di sudut kiri atas Anda akan menemukan opsi konfigurasi SOSpect. Anda dapat membeli daya untuk membeli langganan dan melindungi keluarga Anda atau memperluas radius penerimaan alarm Anda. INGAT! Pada awalnya, kami memberi Anda 80 kekuatan sehingga Anda dapat membeli dua langganan dari awal.</value>
-  </data>
   <data name="LblRecomendaciones" xml:space="preserve">
     <value>BERSAMA-SAMA KITA TAK TERKALAHKAN! Fungsi dasar peringatan dan penerimaan peringatan dalam radius 100 meter gratis, dan ketika Anda mulai, kami memberi Anda 2 langganan. Undang komunitas dan keluarga Anda untuk menggunakan layanan gratis ini untuk memerangi meningkatnya kejahatan. Anda dapat menyelamatkan nyawa atau diselamatkan dengan menerima peringatan tepat waktu. Peringatan orang hilang atau hewan peliharaan memiliki jangkauan 10 kilometer, dan demonstrasi kekerasan memiliki jangkauan 1 kilometer</value>
-  </data>
-  <data name="LblPromocion" xml:space="preserve">
-    <value>Akhirnya, ingatlah bahwa Anda akan mendapatkan surat kuasa untuk setiap peringkat jujur yang Anda berikan di SOSpect, ketika pemungutan suara alarm ditutup setelah 90 menit dari penempatannya. Kebanyakan orang jujur dan bersama-sama kita akan saling melindungi dan keluarga kita. SELAMAT DATANG DI SOSPECT!</value>
   </data>
   <data name="LblDescripcionMapa" xml:space="preserve">
     <value>Kapan saja, Anda dapat memilih opsi "MAP" di sebelah kiri bilah bawah, yang merupakan titik awal SOSpect. Dari sana, Anda dapat melihat alarm terdekat. Lokasi Anda akan muncul di tengah peta, dan lingkaran mewakili radius yang dapat memengaruhi Anda. Secara default, radius ini adalah 100 meter, tetapi Anda dapat memodifikasinya di menu pengaturan.</value>
@@ -1171,7 +1147,1938 @@ Ketuk layar untuk melanjutkan...</value>
   <data name="Capturasrealizadasenunkilometroymedioalaredondademiubicacion" xml:space="preserve">
     <value>Tangkapan dibuat dalam satu setengah kilometer di sekitar lokasi saya</value>
   </data>
+  <data name="LblErrorConexion" xml:space="preserve">
+    <value>Kesalahan Koneksi</value>
+  </data>
+  <data name="LblCierreSesion" xml:space="preserve">
+    <value>Logout</value>
+  </data>
+  <data name="LblSinConexionDetalle" xml:space="preserve">
+    <value>Offline, silakan aktifkan koneksi dan restart aplikasi</value>
+</data>
+  <data name="CmdGuardarConfiguracion" xml:space="preserve">
+    <value>Simpan Pengaturan</value>
+  </data>
+  <data name="LblCantDiasNotifApagada" xml:space="preserve">
+    <value>Jumlah hari saya ingin mematikan notifikasi saya dalam kapasitas saya sebagai otoritas yang kompeten</value>
+  </data>
+  <data name="LblNotifAlarmasCercanas" xml:space="preserve">
+    <value>Menerima pemberitahuan alarm terdekat</value>
+  </data>
+  <data name="LblNotifAlarmasProtegidos" xml:space="preserve">
+    <value>Menerima pemberitahuan alarm yang ditempatkan oleh dilindungi</value>
+  </data>
+  <data name="LblNotifAlarmasZonas" xml:space="preserve">
+    <value>Terima pemberitahuan alarm yang ditempatkan di zona pengawasan</value>
+  </data>
+  <data name="LblNotifAlarmasAutoridadComp" xml:space="preserve">
+    <value>Menerima pemberitahuan alarm dalam kapasitas saya sebagai otoritas yang kompeten</value>
+  </data>
+  <data name="LblDescripcionConfNotificaciones" xml:space="preserve">
+    <value>Ini adalah pengaturan notifikasi Anda saat ini, matikan atau hidupkan sesuai keinginan Anda untuk membuat pengalaman Anda di SOSpect lebih baik dan lebih baik!</value>
+  </data>
+  <data name="LblConfNotifGuardadas" xml:space="preserve">
+    <value>Pengaturan baru berhasil disimpan</value>
+  </data>
+  <data name="LblConfNotifNoSeGuarda" xml:space="preserve">
+    <value>Gagal menyimpan pengaturan. Silakan coba lagi.</value>
+  </data>
+  <data name="LblConfigNotificaciones" xml:space="preserve">
+    <value>Mengonfigurasi Pemberitahuan SOSpect</value>
+  </data>
+  <data name="LblFechaApagadoAutomaticoNotif" xml:space="preserve">
+    <value>Tanggal Shutdown Pemberitahuan Polisi:</value>
+  </data>
+  <data name="LblTiempoParaActivacionAutomatica" xml:space="preserve">
+    <value>Waktu tersisa untuk aktivasi otomatis:</value>
+  </data>
+  <data name="LblCamposIncompletos" xml:space="preserve">
+    <value>Silakan isi semua kolom dengan benar.</value>
+  </data>
+  <data name="LblNoAplicable" xml:space="preserve">
+    <value>Tidak berlaku</value>
+  </data>
+  <data name="LblTiempoExpirado" xml:space="preserve">
+    <value>Waktu Habis</value>
+  </data>
+  <data name="LblCopiado" xml:space="preserve">
+    <value>Disalin</value>
+  </data>
+  <data name="LblUsuarioCopiado" xml:space="preserve">
+    <value>ID Pengguna disalin ke clipboard</value>
+  </data>
   <data name="LblCondicionesCierreAlarma" xml:space="preserve">
-    <value>Anda hanya dapat menutup alarm jika Anda membuatnya atau jika tidak dihadiri</value>
+    <value>Tunjukkan alasan penutupan. Ini akan ditutup jika Anda adalah pencipta dan tidak dalam perhatian.</value>
+  </data>
+  <data name="LabelCheckConnection" xml:space="preserve">
+    <value>Versi SOSpect tidak dapat diverifikasi karena kegagalan konektivitas internet. Periksa konektivitas.</value>
+  </data>
+  <data name="TocaParaAgregarInfo" xml:space="preserve">
+    <value>Ketuk di sini untuk menambahkan informasi</value>
+  </data>
+  <data name="DescripcionAlerta" xml:space="preserve">
+    <value>Deskripsi Peringatan (Opsional)</value>
+  </data>
+  <data name="DescripcionImplicado" xml:space="preserve">
+    <value>Deskripsi orang yang terlibat dalam pemberitahuan (Opsional)</value>
+  </data>
+  <data name="DescripcionVehiculoImp" xml:space="preserve">
+    <value>Kendaraan yang Terlibat (Opsional)</value>
+  </data>
+  <data name="ArmaImplicada" xml:space="preserve">
+    <value>Senjata yang Terlibat (Opsional)</value>
+  </data>
+  <data name="TocaAlarmaARevisar" xml:space="preserve">
+    <value>Ketuk alarm yang ingin Anda periksa</value>
+  </data>
+  <data name="TocaAquiParaDescribir" xml:space="preserve">
+    <value>Ketuk di sini untuk menambahkan deskripsi atau interaksi</value>
+  </data>
+  <data name="MostrarAlarmaEnMapa" xml:space="preserve">
+    <value>Tampilkan alarm di peta</value>
+  </data>
+  <data name="EsAlarmaVerdadera" xml:space="preserve">
+    <value>Apakah alarm itu benar?</value>
+  </data>
+  <data name="BorraDatosYCierraSesion" xml:space="preserve">
+    <value>Hapus data saya dan logout</value>
+  </data>
+  <data name="ElValorNoCorrespondeAsuID" xml:space="preserve">
+    <value>Nilai yang dimasukkan tidak sesuai dengan ID pengguna Anda</value>
+  </data>
+  <data name="SeEliminaronTodosSusDatos" xml:space="preserve">
+    <value>Semua data Anda telah dihapus, sesi ini akan keluar</value>
+  </data>
+  <data name="FailureDeletingData" xml:space="preserve">
+    <value>Tidak dapat menghapus data pengguna, tidak ada data yang dihapus.</value>
+  </data>
+  <data name="LblAtencion" xml:space="preserve">
+    <value>PERHATIAN!</value>
+  </data>
+  <data name="AdverBorradoDatos" xml:space="preserve">
+    <value>Peringatan: Tindakan ini akan menghapus semua data Anda secara permanen, termasuk pembelian dan langganan di SOSpect. Pengambilan pembelian hanya dimungkinkan melalui permintaan terperinci untuk soporte@wescot.com.co, tergantung verifikasi.</value>
+  </data>
+  <data name="ConfirmarBorradoDatosUsuario" xml:space="preserve">
+    <value>Untuk mengonfirmasi penghapusan data Anda, masukkan ID pengguna Anda (terletak di bagian atas menu pengaturan) dan tekan OK. Ini akan menghapus data Anda dan secara otomatis mengeluarkan Anda.</value>
+  </data>
+  <data name="ColoqueSuIDUsuario" xml:space="preserve">
+    <value>Masukkan User ID Anda disini</value>
+  </data>
+  <data name="AccionNoPermitida" xml:space="preserve">
+    <value>Tindakan yang Tidak Diizinkan</value>
+  </data>
+  <data name="SoloAutoridadCompetente" xml:space="preserve">
+    <value>Hanya otoritas yang kompeten yang dapat menanggapi alarm jika aktif.</value>
+  </data>
+  <data name="SoloCreadorConfirmaAlarma" xml:space="preserve">
+    <value>Anda tidak dapat mengonfirmasi alarm jika Anda adalah kreatornya atau jika alarm tidak aktif.</value>
+  </data>
+  <data name="SoloCreadorCierraAlarma" xml:space="preserve">
+    <value>Alarm hanya dapat ditutup oleh penciptanya, pihak berwenang, atau jika aktif.</value>
+  </data>
+  <data name="IrAConfiguracion" xml:space="preserve">
+    <value>Buka pengaturan</value>
+  </data>
+  <data name="LblIgnorar" xml:space="preserve">
+    <value>Mengabaikan</value>
+  </data>
+  <data name="LblImportante" xml:space="preserve">
+    <value>Penting!</value>
+  </data>
+  <data name="SinNotifPodriasEstarEnRiesgo" xml:space="preserve">
+    <value>Abaikan peringatan risiko? Tanpa pemberitahuan, Anda dapat melewatkan pemberitahuan penting.</value>
+  </data>
+  <data name="LblCierreSesionDetalle" xml:space="preserve">
+    <value>Anda telah keluar dengan masuk ke perangkat lain atau mengaktifkan pemberitahuan.</value>
+  </data>
+  <data name="LblAlarmaActiva" xml:space="preserve">
+    <value>Alarm Aktif</value>
+  </data>
+  <data name="LblDescripcion" xml:space="preserve">
+    <value>Deskripsi: __________:</value>
+  </data>
+  <data name="LblHistorialAlertas" xml:space="preserve">
+    <value>Riwayat peringatan radio 3 km.</value>
+  </data>
+  <data name="LblTituloHistorialAlertas" xml:space="preserve">
+    <value>Riwayat alarm selama 30 hari terakhir dalam radius 3 km.</value>
+  </data>
+  <data name="LblVolverAtras" xml:space="preserve">
+    <value>Kembali ke atas</value>
+  </data>
+  <data name="LblTocaAgregarDescripcion" xml:space="preserve">
+    <value>Ketuk di sini untuk menambahkan deskripsi (opsional)</value>
+  </data>
+  <data name="LabelSessionExpired" xml:space="preserve">
+    <value>Sesi Anda telah kedaluwarsa. Silakan masuk lagi.</value>
+  </data>
+  <data name="LabelAlarmaDeRedConfianza" xml:space="preserve">
+    <value>Alarm dibuat oleh pengguna jaringan tepercaya</value>
+  </data>
+  <data name="LabelEscritoRedConfianza" xml:space="preserve">
+    <value>Ditulis oleh pengguna jaringan tepercaya</value>
+  </data>
+  <data name="LabelPertenecesRedConfianza" xml:space="preserve">
+    <value>Anda termasuk dalam jaringan tepercaya SOSpect!</value>
+  </data>
+  <data name="LabelVentajasRedC" xml:space="preserve">
+    <value>Keuntungan berada di Jaringan Terpercaya</value>
+  </data>
+  <data name="LabelV1UsuariosConfiables" xml:space="preserve">
+    <value>1. Identifikasi dan Verifikasi Pengguna Tepercaya:</value>
+  </data>
+  <data name="LabelV1UsuariosConfiablesDesc" xml:space="preserve">
+    <value>Mekanisme untuk mengidentifikasi dan memverifikasi pengguna yang secara konsisten memberikan informasi yang akurat dan bermanfaat. Ini memastikan bahwa data yang dibagikan dalam jaringan berkualitas tinggi dan dapat diandalkan.</value>
+  </data>
+  <data name="LabelV2AlertasPrioritarias" xml:space="preserve">
+    <value>2. Peringatan Prioritas:</value>
+  </data>
+  <data name="LabelV2AlertasPrioritariasDesc" xml:space="preserve">
+    <value>Peringatan yang dihasilkan oleh pengguna terverifikasi dalam jaringan tepercaya memiliki visibilitas dan prioritas yang lebih tinggi. Ini berarti bahwa mereka akan menonjol di platform, memungkinkan respons yang lebih cepat dan lebih efektif dari komunitas dan pihak berwenang.</value>
+  </data>
+  <data name="LabelV3RecompensasConfiabilidad" xml:space="preserve">
+    <value>3. Hadiah untuk Keandalan:</value>
+  </data>
+  <data name="LabelV3RecompensasConfiabilidadDesc" xml:space="preserve">
+    <value>Beri insentif kepada pengguna tepercaya dengan hadiah dalam aplikasi, seperti 'kekuatan' tambahan atau fitur premium. Ini tidak hanya memotivasi pengguna untuk mempertahankan status kepercayaan mereka, tetapi juga memperkaya pengalaman mereka di platform.</value>
+  </data>
+  <data name="LabelMasVentajas" xml:space="preserve">
+    <value>Keuntungan lainnya:</value>
+  </data>
+  <data name="LabelMasVentajasDesc" xml:space="preserve">
+    <value>Alarm yang dihasilkan oleh pengguna jaringan tepercaya ditampilkan dengan bingkai hijau dalam daftar alarm dan tanda yang menunjukkan bahwa peringatan tersebut berasal dari pengguna terverifikasi. Selain itu, pin di peta ditandai dengan warna hijau, menandakan bahwa itu adalah alarm terverifikasi. Komentar dari pengguna jaringan tepercaya juga disorot dengan tanda hijau, yang menunjukkan asal-usul tepercaya mereka.</value>
+  </data>
+  <data name="LabelObjetivoVentajas" xml:space="preserve">
+    <value>Anggota jaringan tepercaya diharapkan adalah orang-orang yang jauh dari kejahatan, sehingga alarm mereka dianggap dapat diandalkan dan harus ditanggapi lebih serius. Ini berkontribusi pada komunitas yang lebih aman dan respons yang lebih efektif terhadap peringatan.</value>
+  </data>
+  <data name="LabelTitleVentajas" xml:space="preserve">
+    <value>Keuntungan</value>
+  </data>
+  <data name="LabelTitleDatosBasicos" xml:space="preserve">
+    <value>Tambahkan Data Dasar</value>
+  </data>
+  <data name="LabelInstruccionesDatosBasicos" xml:space="preserve">
+    <value>Silakan masukkan detail dasar Anda untuk bergabung dengan Jaringan Tepercaya SOSpekt. Lakukan ini hanya jika Anda mengenal anggota jaringan yang dapat menambahkan Anda. Pastikan Anda memberikan informasi yang nyata dan benar, karena Anda tidak akan dapat memodifikasinya setelah ditambahkan ke jaringan tepercaya.</value>
+  </data>
+  <data name="LabelNombres" xml:space="preserve">
+    <value>Nama:</value>
+  </data>
+  <data name="LabelApellidos" xml:space="preserve">
+    <value>Nama keluarga:</value>
+  </data>
+  <data name="LabelNumeroMovil" xml:space="preserve">
+    <value>Nomer hp:</value>
+  </data>
+  <data name="LabelEmail" xml:space="preserve">
+    <value>Email:</value>
+  </data>
+  <data name="LabelPais" xml:space="preserve">
+    <value>Negara:</value>
+  </data>
+  <data name="LabelDocumentoIdentificacion" xml:space="preserve">
+    <value>Dokumen Identifikasi Nasional:</value>
+  </data>
+  <data name="LabelGuardarDatosBasicos" xml:space="preserve">
+    <value>Menyimpan atau memperbarui data</value>
+  </data>
+  <data name="LabelValidacionNombres" xml:space="preserve">
+    <value>Nama tidak valid, hanya huruf yang diperbolehkan.</value>
+  </data>
+  <data name="LabelValidacionApellidos" xml:space="preserve">
+    <value>Nama keluarga tidak valid, hanya huruf yang diperbolehkan.</value>
+  </data>
+  <data name="LabelValidacionCelular" xml:space="preserve">
+    <value>Nomor ponsel tidak valid, hanya nomor yang diperbolehkan.</value>
+  </data>
+  <data name="LabelValidacionEmail" xml:space="preserve">
+    <value>Email tidak valid.</value>
+  </data>
+  <data name="LabelValidacionPais" xml:space="preserve">
+    <value>Negara tidak valid, hanya huruf yang diperbolehkan.</value>
+  </data>
+  <data name="LabelValidacionDocumento" xml:space="preserve">
+    <value>ID tidak valid, hanya karakter alfanumerik, titik, dan tanda hubung yang diperbolehkan.</value>
+  </data>
+  <data name="LabelAgregarUsuarioRedTitle" xml:space="preserve">
+    <value>Tambahkan Pengguna ke Jaringan Tepercaya</value>
+  </data>
+  <data name="LabelEscribaIDUsuario" xml:space="preserve">
+    <value>Masukkan ID Pengguna yang akan Dilindungi di sini:</value>
+  </data>
+  <data name="LabelConsultarDisponibilidad" xml:space="preserve">
+    <value>Cek Ketersediaan</value>
+  </data>
+  <data name="LabelAgregarUsuario" xml:space="preserve">
+    <value>Tambahkan Pengguna</value>
+  </data>
+  <data name="LabelDesventajasTitle" xml:space="preserve">
+    <value>Kerugian</value>
+  </data>
+  <data name="LabelDesventajasSubTitle" xml:space="preserve">
+    <value>Kerugian menjadi bagian dari Trust Network</value>
+  </data>
+  <data name="LabelDV1Investigacion" xml:space="preserve">
+    <value>1. Investigasi Alarm yang Tidak Bertanggung Jawab:</value>
+  </data>
+  <data name="LabelDV1InvestigacionDesc" xml:space="preserve">
+    <value>Dalam kasus di mana otoritas yang berwenang memerlukannya, alarm dapat diselidiki jika dicurigai telah ditempatkan secara tidak bertanggung jawab atau berbohong, mempengaruhi warga negara lain.</value>
+  </data>
+  <data name="LabelDV2Requisitos" xml:space="preserve">
+    <value>2. Persyaratan Verifikasi SOSpect:</value>
+  </data>
+  <data name="LabelDV2RequisitosDesc" xml:space="preserve">
+    <value>SOSpect akan memverifikasi bahwa permintaan investigasi memiliki alasan yang memadai sebelum mengirimkan informasi. Selain itu, penyampaian informasi akan ditolak dalam kasus-kasus yang terkait dengan pemerintah atau otoritas yang terkait dengan kediktatoran, kelompok ilegal, mafia atau sejenisnya, untuk melindungi pengguna yang membuat alarm.</value>
+  </data>
+  <data name="LabelDV3ImplicacionAgregador" xml:space="preserve">
+    <value>3. Keterlibatan Pengguna Agregator:</value>
+  </data>
+  <data name="LabelDV3ImplicacionAgregadorDesc" xml:space="preserve">
+    <value>Dalam investigasi akhirnya, pengguna yang menambahkan pembuat alarm di jaringan tepercaya dapat diminta oleh otoritas yang berwenang untuk bekerja sama dalam penyelidikan, dengan peringatan yang sama yang disebutkan di atas.</value>
+  </data>
+  <data name="LabelDV4BorradoInformacion" xml:space="preserve">
+    <value>4. Penghapusan Informasi:</value>
+  </data>
+  <data name="LabelDV4BorradoInformacionDesc" xml:space="preserve">
+    <value>Ketika pengguna memutuskan untuk menghapus informasi mereka dari SOSpect dan menghapus aplikasi, SOSpect akan menghapusnya setelah 90 hari kalender, setelah memverifikasi bahwa tidak ada keluhan yang dibuat oleh otoritas yang berwenang sehubungan dengan alarm yang dipasang oleh pengguna.</value>
+  </data>
+  <data name="LabelDV5Responsabilidad" xml:space="preserve">
+    <value>5. Potensi Kewajiban:</value>
+  </data>
+  <data name="LabelDV5ResponsabilidadDesc" xml:space="preserve">
+    <value>Menjadi bagian dari jaringan tepercaya disertai dengan tanggung jawab tambahan, karena anggota diharapkan hanya menambahkan pengguna tepercaya. Jika seseorang yang tidak memenuhi standar ini ditambahkan, mungkin ada konsekuensi negatif.</value>
+  </data>
+  <data name="LabelListarRedConfianzaTitle" xml:space="preserve">
+    <value>Daftar Jaringan Tepercaya</value>
+  </data>
+  <data name="LabelNoHayUsuarioEnRed" xml:space="preserve">
+    <value>Tidak ada pengguna tepercaya di jaringan</value>
+  </data>
+  <data name="LabelTitleMasInformacion" xml:space="preserve">
+    <value>Pelajari lebih lanjut</value>
+  </data>
+  <data name="LabelQueEsRedConfianza" xml:space="preserve">
+    <value>Apa itu Trust Network?</value>
+  </data>
+  <data name="LabelQueEsRedConfianzaDesc" xml:space="preserve">
+    <value>'Jaringan Kepercayaan' di SOSpect adalah fitur yang dirancang untuk memungkinkan pengguna membuat lingkaran orang tepercaya di dalam aplikasi. Dengan menambahkan orang yang Anda kenal dan percayai, peringatan dan pemberitahuan Anda akan diperlakukan dengan prioritas dan visibilitas yang lebih tinggi. Tujuan utamanya adalah untuk meningkatkan efektivitas dan keandalan alarm yang dikeluarkan melalui aplikasi, memastikan bahwa peringatan dari pengguna terverifikasi menerima perhatian yang diperlukan.</value>
+  </data>
+  <data name="LabelFuncionamientoRed" xml:space="preserve">
+    <value>Cara kerja Trust Network</value>
+  </data>
+  <data name="Label1IdentificacionUsuarios" xml:space="preserve">
+    <value>1. Identifikasi Pengguna Tepercaya:</value>
+  </data>
+  <data name="Label1IdentificacionUsuariosDesc" xml:space="preserve">
+    <value>Anda dapat menambahkan orang yang Anda kenal dan percayai ke jaringan tepercaya Anda. Ini akan memastikan bahwa peringatan Anda dianggap terverifikasi dalam aplikasi, ditandai dengan warna hijau, dan dengan visibilitas yang ditingkatkan.</value>
+  </data>
+  <data name="Label2Privacidad" xml:space="preserve">
+    <value>2. Privasi Peringatan:</value>
+  </data>
+  <data name="Label2PrivacidadDesc" xml:space="preserve">
+    <value>Terlepas dari prioritas yang diberikan pada peringatan jaringan tepercaya, semua alarm tetap anonim. Identitas dan informasi pribadi pengguna tidak akan terekspos kepada pengguna lain, memastikan privasi sekaligus meningkatkan efektivitas peringatan.</value>
+  </data>
+  <data name="Label3ComposicionRed" xml:space="preserve">
+    <value>3. Komposisi Jaringan:</value>
+  </data>
+  <data name="Label3ComposicionRedDesc" xml:space="preserve">
+    <value>Jaringan ini diharapkan terdiri dari orang-orang yang jauh dari kegiatan kriminal. Penyertaan pengguna dalam jaringan ini harus ditangani dengan hati-hati, memastikan bahwa hanya orang tepercaya yang ditambahkan.</value>
+  </data>
+  <data name="Label4DatosInalterables" xml:space="preserve">
+    <value>4. Ketidakterkendalian Data:</value>
+  </data>
+  <data name="Label4DatosInalterablesDesc" xml:space="preserve">
+    <value>Setelah pengguna ditambahkan ke jaringan tepercaya, mereka tidak akan dapat mengubah data dasar mereka atau dihapus dari jaringan. Aturan ini diterapkan untuk menjaga integritas dan keandalan jaringan.</value>
+  </data>
+  <data name="LabelRecomendacionesRed" xml:space="preserve">
+    <value>Rekomendasi untuk Menambahkan Pengguna ke Jaringan Tepercaya</value>
+  </data>
+  <data name="Label1VerificaIdentidad" xml:space="preserve">
+    <value>1. Verifikasi Identitas:</value>
+  </data>
+  <data name="Label1VerificaIdentidadDesc" xml:space="preserve">
+    <value>Sebelum menambahkan seseorang ke jaringan tepercaya, pastikan Anda mengetahui dan memverifikasi identitas pengguna. Karena peringatan Anda akan menerima perlakuan khusus, sangat penting bagi Anda untuk memiliki keyakinan penuh pada kebenaran informasi yang diberikan.</value>
+  </data>
+  <data name="Label2RevisaInfo" xml:space="preserve">
+    <value>2. Tinjau Informasi Dasar:</value>
+  </data>
+  <data name="Label2RevisaInfoDesc" xml:space="preserve">
+    <value>Penting untuk memastikan bahwa data dasar pengguna, seperti nama, nomor ponsel, email, dan dokumen identifikasi nasional, benar dan terbaru.</value>
+  </data>
+  <data name="Label3ResponsabilidadAgregador" xml:space="preserve">
+    <value>3. Kewajiban Agregator:</value>
+  </data>
+  <data name="Label3ResponsabilidadAgregadorDesc" xml:space="preserve">
+    <value>Saat menambahkan pengguna ke jaringan tepercaya, Anda bertanggung jawab untuk memastikan bahwa data pengguna akurat. Ini sangat penting untuk menjaga integritas jaringan dan memastikan bahwa alarm terverifikasi memiliki kualitas dan keandalan yang tinggi.</value>
+  </data>
+  <data name="LabelRecomendacionesAdicionales" xml:space="preserve">
+    <value>Peringatan dan Rekomendasi Tambahan</value>
+  </data>
+  <data name="Label1InvestigacionAlarmas" xml:space="preserve">
+    <value>1. Investigasi Alarm:</value>
+  </data>
+  <data name="Label1InvestigacionAlarmasDesc" xml:space="preserve">
+    <value>Jika diperlukan oleh otoritas yang berwenang, alarm yang ditempatkan oleh pengguna jaringan tepercaya dapat diselidiki. SOSpect akan mengambil langkah-langkah untuk memverifikasi keabsahan permintaan tersebut sebelum menyerahkan informasi apa pun dan akan menolak penyerahan tersebut dalam kasus-kasus yang melibatkan pemerintah atau entitas yang terkait dengan kediktatoran, kelompok ilegal, mafia, atau sejenisnya.</value>
+  </data>
+  <data name="Label2ImplicacionesAgregador" xml:space="preserve">
+    <value>2. Implikasi bagi Pengguna Agregator:</value>
+  </data>
+  <data name="Label2ImplicacionesAgregadorDesc" xml:space="preserve">
+    <value>Jika terjadi penyelidikan, pengguna yang menambahkan pembuat alarm dapat diminta untuk bekerja sama, selalu di bawah perlindungan hukum yang sama.</value>
+  </data>
+  <data name="Label3EliminacionDatos" xml:space="preserve">
+    <value>3. Proses Penghapusan Data:</value>
+  </data>
+  <data name="Label3EliminacionDatosDesc" xml:space="preserve">
+    <value>Jika pengguna memutuskan untuk menghapus informasi mereka dan menghapus aplikasi, SOSpect akan melanjutkan penghapusan data setelah 90 hari, asalkan tidak ada keluhan yang muncul dari otoritas yang berwenang terkait dengan alarm yang dikeluarkan oleh pengguna.</value>
+  </data>
+  <data name="LabelTitleRedConfianza" xml:space="preserve">
+    <value>Jaringan Kepercayaan</value>
+  </data>
+  <data name="LabelBienvenidoRedConfianza" xml:space="preserve">
+    <value>Selamat datang di Jaringan Kepercayaan. Di sini Anda dapat menambahkan orang yang Anda kenal dan percayai, memungkinkan alarm mereka dianggap terverifikasi, ditandai dengan warna hijau, dan diberi kepentingan yang lebih besar. Ingatlah bahwa semua alarm akan tetap anonim dan tidak ada data yang akan terekspos.
+
+Alarm dari orang-orang yang bukan bagian dari jaringan tepercaya Anda akan muncul dalam warna abu-abu. Jaringan ini diharapkan terdiri dari orang-orang yang dapat dipercaya yang jauh dari kegiatan kriminal.
+
+Pengguna yang Anda tambahkan harus memberikan data dasarnya dengan masuk ke menu SOSpect dan mengisi informasi yang diperlukan. Sebagai agregator, Anda bertanggung jawab untuk memastikan kebenaran data ini. Setelah ditambahkan, pengguna tidak akan dapat mengubah data mereka atau dihapus dari jaringan.</value>
+  </data>
+  <data name="LabelQuieroSaberMas" xml:space="preserve">
+    <value>SAYA INGIN TAHU LEBIH BANYAK</value>
+  </data>
+  <data name="LabelVentajasRed" xml:space="preserve">
+    <value>KEUNTUNGAN DARI JARINGAN TERPERCAYA</value>
+  </data>
+  <data name="LabelDesventajasRed" xml:space="preserve">
+    <value>KERUGIAN DARI JARINGAN TEPERCAYA</value>
+  </data>
+  <data name="LabelAgregarDatosBasicos" xml:space="preserve">
+    <value>Menambahkan atau memodifikasi data dasar yang akan disertakan</value>
+  </data>
+  <data name="LabelAgregarUsuarioARed" xml:space="preserve">
+    <value>Menambahkan pengguna ke jaringan tepercaya</value>
+  </data>
+  <data name="LabelListarUsuariosRed" xml:space="preserve">
+    <value>Daftar pengguna jaringan tepercaya yang saya tambahkan</value>
+  </data>
+  <data name="Ellídernotieneelindicadordereddeconfianzaestablecidoenverdadero" xml:space="preserve">
+    <value>Pemimpin tidak memiliki indikator jaringan kepercayaan yang disetel ke true</value>
+  </data>
+  <data name="Unoomáscamposobligatoriossonnulos" xml:space="preserve">
+    <value>Satu atau beberapa bidang wajib adalah null</value>
+  </data>
+  <data name="Elnuevousuarioyaperteneceaunareddeconfianza" xml:space="preserve">
+    <value>Pengguna baru sudah termasuk dalam jaringan tepercaya</value>
+  </data>
+  <data name="Usuarioagregadoalareddeconfianzaconéxito" xml:space="preserve">
+    <value>Pengguna berhasil ditambahkan ke jaringan tepercaya</value>
+  </data>
+  <data name="NoseencontróningúnusuarioconelIDdeusuariodetercerosproporcionado" xml:space="preserve">
+    <value>Tidak ada pengguna yang ditemukan dengan ID pengguna pihak ketiga yang diberikan</value>
+  </data>
+  <data name="Elusuarioyaespartedelareddeconfianza" xml:space="preserve">
+    <value>Pengguna sudah menjadi bagian dari jaringan tepercaya</value>
+  </data>
+  <data name="Lainformaciónpersonaldelusuarioqueseagregaráalareddeconfianzaestáincompleta" xml:space="preserve">
+    <value>Informasi pribadi pengguna yang akan ditambahkan ke jaringan tepercaya tidak lengkap</value>
+  </data>
+  <data name="Lainformaciónpersonaldelusuarioqueseagregaráalareddeconfianzaestácompletayelusuarioaúnnoformapartedelareddeconfianza" xml:space="preserve">
+    <value>Informasi pribadi pengguna yang akan ditambahkan ke jaringan terpercaya sudah lengkap dan pengguna belum menjadi bagian dari jaringan terpercaya</value>
+  </data>
+  <data name="Elusuarioyaformapartedelareddeconfianzaysuinformaciónnopuedemodificarse" xml:space="preserve">
+    <value>Pengguna sudah menjadi bagian dari jaringan tepercaya dan informasi mereka tidak dapat dimodifikasi</value>
+  </data>
+  <data name="Informacióndelusuarioactualizadaexitosamente" xml:space="preserve">
+    <value>Informasi pengguna berhasil diperbarui</value>
+  </data>
+  <data name="LabelGuardadoRedConfianza" xml:space="preserve">
+    <value>Berbuat! Anda hanya dapat memperbarui data sebelum bergabung dengan jaringan tepercaya</value>
+  </data>
+  <data name="Userinformationupdatedsuccessfully" xml:space="preserve">
+    <value>Informasi pengguna berhasil diperbarui</value>
+  </data>
+  <data name="Anerroroccurredwhileupdatinguserinformation" xml:space="preserve">
+    <value>Terjadi kesalahan saat memperbarui informasi pengguna</value>
+  </data>
+  <data name="Invalidmodelstateforuserinformation" xml:space="preserve">
+    <value>Status model tidak valid untuk informasi pengguna</value>
+  </data>
+  <data name="Userinformationretrievedsuccessfully" xml:space="preserve">
+    <value>Informasi Pengguna Berhasil Diambil</value>
+  </data>
+  <data name="NouserfoundwiththeprovidedthirdpartyuserID" xml:space="preserve">
+    <value>Tidak ada pengguna yang ditemukan dengan ID pengguna yang diberikan</value>
+  </data>
+  <data name="Usersinthetrustnetworkretrievedsuccessfully" xml:space="preserve">
+    <value>Pengguna Jaringan Tepercaya Berhasil Pulih</value>
+  </data>
+  <data name="Anerroroccurredwhileretrievingusersinthetrustnetwork" xml:space="preserve">
+    <value>Gagal mengambil pengguna di jaringan tepercaya</value>
+  </data>
+  <data name="Useraddedtothetrustnetworksuccessfully" xml:space="preserve">
+    <value>Pengguna berhasil ditambahkan ke jaringan tepercaya</value>
+  </data>
+  <data name="Anerroroccurredwhileaddingtheusertothetrustnetwork" xml:space="preserve">
+    <value>Terjadi kesalahan saat menambahkan pengguna ke jaringan tepercaya</value>
+  </data>
+  <data name="LabelRestriccionApple" xml:space="preserve">
+    <value>Untuk Apple® iPhone®, tidak diperbolehkan melaporkan jenis alarm 'Kejahatan atau kejahatan yang dilakukan', 'Perkelahian jalanan', 'Kerusuhan atau protes' dan 'Kekerasan Dalam Rumah Tangga' sampai ada kesepakatan dengan otoritas yang berwenang.</value>
+  </data>
+  <data name="LblQueAccionRealizar" xml:space="preserve">
+    <value>Tindakan apa yang ingin Anda ambil?</value>
+  </data>
+  <data name="LblVerEnMapa" xml:space="preserve">
+    <value>Lihat di Peta</value>
+  </data>
+  <data name="LblIrAlPunto" xml:space="preserve">
+    <value>Pergi ke titik ini</value>
+  </data>
+  <data name="LblElegirApp" xml:space="preserve">
+    <value>Pilih aplikasi</value>
+  </data>
+  <data name="LblMapas" xml:space="preserve">
+    <value>Peta</value>
+  </data>
+  <data name="LblAnuncioPublicitario" xml:space="preserve">
+    <value>Tempatkan iklan</value>
+  </data>
+  <data name="LblErrorInicializandoParametros" xml:space="preserve">
+    <value>Parameter pengguna tidak dapat diinisialisasi. Periksa koneksi Anda.</value>
+  </data>
+  <data name="LblMensajeCompraPoderes" xml:space="preserve">
+    <value>Tidak wajib membeli kekuatan untuk menggunakan SOSpect. Sebagian besar fiturnya gratis. Selain itu, Anda bisa mendapatkan kekuatan dengan memberikan suara jujur untuk alarm komunitas Anda.</value>
+  </data>
+  <data name="LblCargandoTiposAlarma" xml:space="preserve">
+    <value>Memuat jenis alarm...</value>
+  </data>
+  <data name="LabelTocarParaDetalles" xml:space="preserve">
+    <value>Ketuk untuk detail</value>
+  </data>
+  <data name="LabelChat" xml:space="preserve">
+    <value>💬 Mengobrol</value>
+  </data>
+  <data name="LblLeeTerminosDetenidamente" xml:space="preserve">
+    <value>Baca syarat dan ketentuan dengan seksama</value>
+  </data>
+  <data name="LblVisualizacionSoloLectura" xml:space="preserve">
+    <value>Anda melihat istilah dalam mode baca-saja</value>
+  </data>
+  <data name="LblProcesando" xml:space="preserve">
+    <value>Pengolahan...</value>
+  </data>
+  <data name="LabelSinAccesoAChat" xml:space="preserve">
+    <value>Chat tidak dapat diakses saat ini</value>
+  </data>
+  <data name="LabelUbicacionNoDisponible" xml:space="preserve">
+    <value>Lokasi tidak tersedia</value>
+  </data>
+  <data name="LabelVerificaGPS" xml:space="preserve">
+    <value>Periksa apakah GPS Anda aktif</value>
+  </data>
+  <data name="LabelReintentar" xml:space="preserve">
+    <value>Pengulangan</value>
+  </data>
+  <data name="LabelReiniciarApp" xml:space="preserve">
+    <value>Mulai Ulang Aplikasi</value>
+  </data>
+  <data name="LabelGPSRequerido" xml:space="preserve">
+    <value>Diperlukan GPS</value>
+  </data>
+  <data name="LabelHabilitarUbicacion" xml:space="preserve">
+    <value>Silakan aktifkan lokasi di pengaturan perangkat</value>
+  </data>
+  <data name="LabelIrAConfiguracion" xml:space="preserve">
+    <value>Buka pengaturan</value>
+  </data>
+  <data name="MsgTrasAlarmaSinRiesgo" xml:space="preserve">
+    <value>Jika Anda punya waktu, tolong jelaskan alarm, ini akan berguna untuk tetangga Anda!</value>
+  </data>
+  <data name="LabelSiguiente" xml:space="preserve">
+    <value>Berikut</value>
+  </data>
+  <data name="LabelAnterior" xml:space="preserve">
+    <value>Mantan</value>
+  </data>
+  <data name="LabelOmitir" xml:space="preserve">
+    <value>Menghilangkan</value>
+  </data>
+  <data name="LabelFinalizar" xml:space="preserve">
+    <value>Ujung</value>
+  </data>
+  <data name="LabelConfirmarOmitir" xml:space="preserve">
+    <value>Lewati Tutorial</value>
+  </data>
+  <data name="LabelMensajeOmitir" xml:space="preserve">
+    <value>Apakah Anda yakin ingin melewatkan tutorial? Anda dapat menontonnya lagi dengan keluar dan masuk kembali.</value>
+  </data>
+  <data name="LabelMensajeVolverVerTutorial" xml:space="preserve">
+    <value>Jika Anda ingin menonton tutorial ini lagi, cukup keluar dan masuk kembali ke aplikasi.</value>
+  </data>
+  <data name="LabelFelicitaciones" xml:space="preserve">
+    <value>Selamat!</value>
+  </data>
+  <data name="LabelTutorialCompletado" xml:space="preserve">
+    <value>Anda telah menyelesaikan tutorial SOSpect. Sekarang Anda siap menggunakan aplikasi dengan aman!</value>
+  </data>
+  <data name="LblDescripcionInicial" xml:space="preserve">
+    <value>Selamat datang di SOSpect, aplikasi keamanan komunitas Anda. Kami akan menunjukkan cara kerjanya langkah demi langkah.</value>
+  </data>
+  <data name="LblDescripcionAlarmaNoGrave" xml:space="preserve">
+    <value>Gunakan tombol oranye untuk melaporkan situasi mencurigakan yang memerlukan perhatian tetapi bukan keadaan darurat.</value>
+  </data>
+  <data name="LblDescripcionCrimenCometido" xml:space="preserve">
+    <value>Tombol merah adalah untuk melaporkan kejahatan yang sedang berlangsung atau yang baru saja terjadi. Gunakan hanya dalam situasi serius.</value>
+  </data>
+  <data name="LblDescripcionCompletaAlarmas" xml:space="preserve">
+    <value>Di bagian ini, Anda dapat melihat dan mendeskripsikan alarm terdekat untuk membantu pengguna lain di komunitas.</value>
+  </data>
+  <data name="LabelParaQueSirveSospect" xml:space="preserve">
+    <value>Apa itu SOSpect?</value>
+  </data>
+  <data name="LblAspectosBasicos" xml:space="preserve">
+    <value>Dasar</value>
+  </data>
+  <data name="LblEnviaUnaAlerta" xml:space="preserve">
+    <value>Kirim peringatan!</value>
+  </data>
+  <data name="LblCrimenCometido" xml:space="preserve">
+    <value>Tombol merah mengaktifkan alarm kategori: kejahatan yang dilakukan. SOSpect tidak mengharuskan Anda untuk memasukkan kategori karena pentingnya waktu dalam kasus ini. Alarm secara otomatis ditempatkan di lokasi Anda yang tepat. Anda juga dapat memilih titik di peta untuk menempatkan peringatan dan kemudian mengubah kategori menjadi kejahatan yang dilakukan. (Tidak tersedia di Apple untuk negara tanpa perjanjian aktif)</value>
+  </data>
+  <data name="LblReportaUnCrimen" xml:space="preserve">
+    <value>Laporkan kejahatan!</value>
+  </data>
+  <data name="LblExplicaLoSucedido" xml:space="preserve">
+    <value>Jelaskan apa yang terjadi!</value>
+  </data>
+  <data name="LblRevisaTusNotificaciones" xml:space="preserve">
+    <value>Periksa notifikasi Anda!</value>
+  </data>
+  <data name="LblAdministraTusConfiguraciones" xml:space="preserve">
+    <value>Kelola pengaturan Anda!</value>
+  </data>
+  <data name="LblPorSiFueraPoco" xml:space="preserve">
+    <value>... dan seolah-olah itu belum cukup...</value>
+  </data>
+  <data name="LblMuyImportante" xml:space="preserve">
+    <value>Sangat penting!</value>
+  </data>
+  <data name="LblParaFinalizar" xml:space="preserve">
+    <value>Dan akhirnya...</value>
+  </data>
+  <data name="LblQueAppUsar" xml:space="preserve">
+    <value>Aplikasi mana yang ingin Anda gunakan?</value>
+  </data>
+  <data name="LblDescripcionMenu" xml:space="preserve">
+    <value>Di roda gigi di sudut kiri atas Anda akan menemukan opsi konfigurasi SOSpect. Anda dapat membeli kekuatan untuk membeli langganan dan melindungi keluarga Anda atau memperluas radius penerimaan alarm Anda.</value>
+  </data>
+  <data name="LblPromocion" xml:space="preserve">
+    <value>PENTING! Saat Anda memulai, kami memberi Anda 100 kekuatan sehingga Anda dapat membeli dua langganan sejak awal.
+
+Terakhir, ingatlah bahwa Anda akan mendapatkan surat kuasa untuk setiap peringkat jujur yang Anda berikan di SOSpect, ketika suara alarm ditutup setelah 90 menit dari penempatannya. Kebanyakan orang jujur dan bersama-sama kita akan saling melindungi dan keluarga kita. SELAMAT DATANG DI SOSPECT!</value>
+  </data>
+  <data name="LabelErrorReiniciar" xml:space="preserve">
+    <value>Kesalahan yang tidak terduga muncul. Silakan mulai ulang SOSpect. Jika kesalahan berlanjut, hubungi soporte@wescot.com.co</value>
+  </data>
+  <data name="LblLeyenda" xml:space="preserve">
+    <value>Laporan Jenis Alarm</value>
+  </data>
+  <data name="LabelDescribirAlarma" xml:space="preserve">
+    <value>Jelaskan Alarm</value>
+  </data>
+  <data name="LblErrorNavegador" xml:space="preserve">
+    <value>Kesalahan saat membuka browser</value>
+  </data>
+  <data name="LblErrorManual" xml:space="preserve">
+    <value>Kesalahan saat membuka manual</value>
+  </data>
+  <data name="LblErrorSitioWeb" xml:space="preserve">
+    <value>Kesalahan saat membuka situs web</value>
+  </data>
+  <data name="LabelMoreOptions" xml:space="preserve">
+    <value>Lebih banyak pilihan</value>
+  </data>
+  <data name="LblAgregarMedia" xml:space="preserve">
+    <value>Menambahkan foto atau video</value>
+  </data>
+  <data name="LblTomarFoto" xml:space="preserve">
+    <value>Mengambil foto</value>
+  </data>
+  <data name="LblSeleccionarFoto" xml:space="preserve">
+    <value>Pilih foto dari rol kamera Anda</value>
+  </data>
+  <data name="LblSeleccionarVideo" xml:space="preserve">
+    <value>Pilih Video</value>
+  </data>
+  <data name="LblPermisoCamaraNecesario" xml:space="preserve">
+    <value>Izin kamera diperlukan untuk mengambil foto</value>
+  </data>
+  <data name="LblCamaraNoDisponible" xml:space="preserve">
+    <value>Kamera tidak tersedia di perangkat ini</value>
+  </data>
+  <data name="LblCamaraNoCompatible" xml:space="preserve">
+    <value>Kamera tidak kompatibel dengan perangkat ini</value>
+  </data>
+  <data name="LblTomarFotoAlarma" xml:space="preserve">
+    <value>Mengambil foto untuk alarm</value>
+  </data>
+  <data name="LblSeleccionarFotoAlarma" xml:space="preserve">
+    <value>Pilih foto untuk alarm</value>
+  </data>
+  <data name="LblSeleccionarVideoAlarma" xml:space="preserve">
+    <value>Pilih Video untuk Alarm</value>
+  </data>
+  <data name="LblErrorCapturarFoto" xml:space="preserve">
+    <value>Tidak dapat mengambil foto</value>
+  </data>
+  <data name="LblErrorSeleccionarFoto" xml:space="preserve">
+    <value>Tidak dapat memilih foto</value>
+  </data>
+  <data name="LblErrorSeleccionarVideo" xml:space="preserve">
+    <value>Video tidak dapat dipilih</value>
+  </data>
+  <data name="LblLimiteAlcanzado" xml:space="preserve">
+    <value>Batas tercapai</value>
+  </data>
+  <data name="LblSoloPuedesAgregar" xml:space="preserve">
+    <value>Anda hanya dapat menambahkan hingga</value>
+  </data>
+  <data name="LblFotosVideosPorAlarma" xml:space="preserve">
+    <value>Foto/Video dengan Alarm</value>
+  </data>
+  <data name="LblArchivoMuyGrande" xml:space="preserve">
+    <value>File yang sangat besar</value>
+  </data>
+  <data name="LblTamanoMaximo100MB" xml:space="preserve">
+    <value>Filenya terlalu besar. Ukuran maksimum: 100MB</value>
+  </data>
+  <data name="LblArchivoNoSeGuardo" xml:space="preserve">
+    <value>File tidak disimpan dengan benar</value>
+  </data>
+  <data name="LblErrorProcesarArchivo" xml:space="preserve">
+    <value>File tidak dapat diproses</value>
+  </data>
+  <data name="LblCerrarCamara" xml:space="preserve">
+    <value>Tutup</value>
+  </data>
+  <data name="LblCapturarFoto" xml:space="preserve">
+    <value>Menangkap</value>
+  </data>
+  <data name="LblGuardandoAlarma" xml:space="preserve">
+    <value>Menghemat alarm...</value>
+  </data>
+  <data name="LblProcesandoFoto" xml:space="preserve">
+    <value>Memproses foto...</value>
+  </data>
+  <data name="LblSeleccionarOrigen" xml:space="preserve">
+    <value>Pilih sumber foto</value>
+  </data>
+  <data name="LblSeleccioneAppNavegacion" xml:space="preserve">
+    <value>Pilih aplikasi navigasi yang ingin Anda gunakan:</value>
+  </data>
+  <data name="LblLongPressForVideo" xml:space="preserve">
+    <value>Tekan dan tahan untuk merekam video</value>
+  </data>
+  <data name="LblTomarFotoOVideo" xml:space="preserve">
+    <value>Mengambil foto atau video</value>
+  </data>
+  <data name="LblSeleccionarTipoMedia" xml:space="preserve">
+    <value>Pilih Jenis Media</value>
+  </data>
+  <data name="LblGrabarVideo" xml:space="preserve">
+    <value>Rekam Video</value>
+  </data>
+  <data name="LblSospechosoCorto" xml:space="preserve">
+    <value>Curiga:</value>
+  </data>
+  <data name="LblVehiculoCorto" xml:space="preserve">
+    <value>Kendaraan:</value>
+  </data>
+  <data name="LblArmasCorto" xml:space="preserve">
+    <value>Senjata:</value>
+  </data>
+  <data name="LblPlaceholderDescripcionCierre" xml:space="preserve">
+    <value>Jelaskan secara singkat penutupan alarm...</value>
+  </data>
+  <data name="LblDescripcionFalsaAlarma" xml:space="preserve">
+    <value>Alarmnya tidak nyata atau itu adalah kesalahan</value>
+  </data>
+  <data name="LblDescripcionCaptura" xml:space="preserve">
+    <value>Apakah tersangka ditangkap?</value>
+  </data>
+  <data name="LblCerrandoAlarma" xml:space="preserve">
+    <value>Alarm penutupan...</value>
+  </data>
+  <data name="ParaTi" xml:space="preserve">
+    <value>Untukmu</value>
+  </data>
+  <data name="SiguiendoEnTuRadio" xml:space="preserve">
+    <value>Mengikuti/Di daerah Anda</value>
+  </data>
+  <data name="Advertencia" xml:space="preserve">
+    <value>peringatan</value>
+  </data>
+  <data name="Crimen" xml:space="preserve">
+    <value>Kejahatan</value>
+  </data>
+  <data name="Riña" xml:space="preserve">
+    <value>Pertarungan</value>
+  </data>
+  <data name="Mascota" xml:space="preserve">
+    <value>Maskot</value>
+  </data>
+  <data name="Persona" xml:space="preserve">
+    <value>Orang</value>
+  </data>
+  <data name="Disturbios" xml:space="preserve">
+    <value>Kerusuhan</value>
+  </data>
+  <data name="Acompañamiento" xml:space="preserve">
+    <value>Iringan</value>
+  </data>
+  <data name="Intrafamiliar" xml:space="preserve">
+    <value>Intra-keluarga</value>
+  </data>
+  <data name="Persecución" xml:space="preserve">
+    <value>Penganiayaan</value>
+  </data>
+  <data name="Eventos" xml:space="preserve">
+    <value>Acara</value>
+  </data>
+  <data name="Compravotos" xml:space="preserve">
+    <value>Beli suara</value>
+  </data>
+  <data name="Votaciónforzada" xml:space="preserve">
+    <value>Pemungutan Suara Paksa</value>
+  </data>
+  <data name="Ciudadana" xml:space="preserve">
+    <value>Warga Negara</value>
+  </data>
+  <data name="Compradevotos" xml:space="preserve">
+    <value>Membeli Suara</value>
+  </data>
+  <data name="Votaciónforzadaporgruposarmados" xml:space="preserve">
+    <value>Pemungutan suara paksa oleh kelompok bersenjata</value>
+  </data>
+  <data name="FiltrarTiposDeAlarma" xml:space="preserve">
+    <value>Jenis alarm filter</value>
+  </data>
+  <data name="AfectaMapaYParaTi" xml:space="preserve">
+    <value>Memengaruhi: Peta dan 'Untuk Anda'</value>
+  </data>
+  <data name="SiguiendoNoSeFiltrado" xml:space="preserve">
+    <value>⚠️ 'Mengikuti/Di Area Anda' TIDAK difilter (prioritas kritis)</value>
+  </data>
+  <data name="TiposCaracteristicosSOSpect" xml:space="preserve">
+    <value>Jenis karakteristik SOSpect</value>
+  </data>
+  <data name="OtrosTiposOrdenadosPopularidad" xml:space="preserve">
+    <value>Jenis lain (diurutkan berdasarkan popularitas)</value>
+  </data>
+  <data name="Cancelar" xml:space="preserve">
+    <value>Membatalkan</value>
+  </data>
+  <data name="Aplicar" xml:space="preserve">
+    <value>Terapkan</value>
+  </data>
+  <data name="ErrorCargandoTiposIntenteNuevamente" xml:space="preserve">
+    <value>Jenis alarm tidak dapat dimuat. Silakan coba lagi.</value>
+  </data>
+  <data name="ErrorCargandoTiposVerifiqueConexion" xml:space="preserve">
+    <value>Jenis alarm error memuat. Periksa koneksi Anda.</value>
+  </data>
+  <data name="InfoPorcentajesBasadosUltimos30Dias" xml:space="preserve">
+    <value>⚠️ Persentase dan hitungan berdasarkan alarm yang dilaporkan dalam 30 hari terakhir. Mereka tidak mewakili alarm yang saat ini terlihat di peta.</value>
+  </data>
+  <data name="PromoWarningImmutable" xml:space="preserve">
+    <value>Periksa iklan Anda dengan baik, Anda tidak akan dapat memodifikasinya setelah meluncurkannya</value>
+  </data>
+  <data name="PromoWarningNoCancellation" xml:space="preserve">
+    <value>Apakah Anda yakin untuk meluncurkannya? Tidak dapat dihapus setelahnya</value>
+  </data>
+  <data name="PromoInsufficientBalance" xml:space="preserve">
+    <value>Kurangnya kekuatan {0}</value>
+  </data>
+  <data name="PromoSaldoActual" xml:space="preserve">
+    <value>KESEIMBANGAN SAAT INI: KEKUATAN {0}</value>
+  </data>
+  <data name="PromoCostoActual" xml:space="preserve">
+    <value>Biaya Saat Ini: {0} Kekuatan</value>
+  </data>
+  <data name="PromoSaldoDespues" xml:space="preserve">
+    <value>Keseimbangan setelah: kekuatan {0}</value>
+  </data>
+  <data name="PromoLanzarPromocion" xml:space="preserve">
+    <value>LUNCURKAN PROMOSI</value>
+  </data>
+  <data name="PromoComprarPoderes" xml:space="preserve">
+    <value>BELI KEKUATAN</value>
+  </data>
+  <data name="PromoContenidoPromocional" xml:space="preserve">
+    <value>KONTEN PROMOSI</value>
+  </data>
+  <data name="PromoDescribePromocion" xml:space="preserve">
+    <value>Jelaskan promosi atau penawaran Anda...</value>
+  </data>
+  <data name="PromoMultimedia" xml:space="preserve">
+    <value>MULTIMEDIA (termasuk 1, hingga total 10)</value>
+  </data>
+  <data name="PromoItemIncluido" xml:space="preserve">
+    <value>✓ Termasuk</value>
+  </data>
+  <data name="PromoItemCosto" xml:space="preserve">
+    <value>+{0} kekuatan</value>
+  </data>
+  <data name="PromoLogoOpcional" xml:space="preserve">
+    <value>LOGO (Opsional)</value>
+  </data>
+  <data name="PromoAgregarLogo" xml:space="preserve">
+    <value>Tambahkan logo (+{0} kekuatan)</value>
+  </data>
+  <data name="PromoAlcanceGeografico" xml:space="preserve">
+    <value>RUANG LINGKUP GEOGRAFIS</value>
+  </data>
+  <data name="PromoRadioMetros" xml:space="preserve">
+    <value>Jari-jari: {0} meter</value>
+  </data>
+  <data name="PromoDuracion" xml:space="preserve">
+    <value>DURASI</value>
+  </data>
+  <data name="PromoDuracionDias" xml:space="preserve">
+    <value>Durasi: {0} hari</value>
+  </data>
+  <data name="PromoOpcionesContacto" xml:space="preserve">
+    <value>OPSI KONTAK</value>
+  </data>
+  <data name="PromoHabilitarChatPrivado" xml:space="preserve">
+    <value>Aktifkan Obrolan Pribadi (+{0} Kekuatan)</value>
+  </data>
+  <data name="PromoPermitirDomicilio" xml:space="preserve">
+    <value>Izinkan pesanan rumah (+{0} kekuatan)</value>
+  </data>
+  <data name="PromoNotificacionesPush" xml:space="preserve">
+    <value>PEMBERITAHUAN PUSH (Opsional)</value>
+  </data>
+  <data name="PromoEnviarPush" xml:space="preserve">
+    <value>Mengirim pemberitahuan push</value>
+  </data>
+  <data name="PromoUsuariosDisponibles" xml:space="preserve">
+    <value>Pengguna tersedia dalam {0}m: {1}</value>
+  </data>
+  <data name="PromoNotificarA" xml:space="preserve">
+    <value>Beri tahu pengguna {0}</value>
+  </data>
+  <data name="PromoTextoPush" xml:space="preserve">
+    <value>Ketik teks pemberitahuan push:</value>
+  </data>
+  <data name="PromoCostoTotal" xml:space="preserve">
+    <value>TOTAL BIAYA: {0} KEKUATAN</value>
+  </data>
+  <data name="PromoGuidance" xml:space="preserve">
+    <value>Tambahkan logo dan detail kontak untuk membuat promosi Anda lebih serius</value>
+  </data>
+  <data name="PromoErrorCreando" xml:space="preserve">
+    <value>Error membuat promosi</value>
+  </data>
+  <data name="PromoExitoCreada" xml:space="preserve">
+    <value>Berhasil membuat promosi</value>
+  </data>
+  <data name="PromoNecesitasPoderes" xml:space="preserve">
+    <value>Anda membutuhkan setidaknya {0} kekuatan untuk promosi ini</value>
+  </data>
+  <data name="ChatPendingAcceptance" xml:space="preserve">
+    <value>Menunggu persyaratan penerimaan dari kedua belah pihak</value>
+  </data>
+  <data name="ChatAcceptTerms" xml:space="preserve">
+    <value>Terima Ketentuan</value>
+  </data>
+  <data name="ChatProveedor" xml:space="preserve">
+    <value>Pemasok:</value>
+  </data>
+  <data name="ChatUsted" xml:space="preserve">
+    <value>Anda:</value>
+  </data>
+  <data name="ChatAceptado" xml:space="preserve">
+    <value>✅ Diterima</value>
+  </data>
+  <data name="ChatPendiente" xml:space="preserve">
+    <value>⏳ Tertunda</value>
+  </data>
+  <data name="PromotionalAlarmHeader" xml:space="preserve">
+    <value>Promosi Lokal</value>
+  </data>
+  <data name="DeliveryAvailable" xml:space="preserve">
+    <value>🚚 Pengiriman ke rumah tersedia</value>
+  </data>
+  <data name="ChatVerEnMapa" xml:space="preserve">
+    <value>Lihat di peta</value>
+  </data>
+  <data name="ChatEnviarMensaje" xml:space="preserve">
+    <value>Kirim pesan</value>
+  </data>
+  <data name="ChatAdjuntarImagen" xml:space="preserve">
+    <value>Lampirkan Gambar</value>
+  </data>
+  <data name="ChatEscribeMensaje" xml:space="preserve">
+    <value>Tulis pesan...</value>
+  </data>
+  <data name="ChatNoActivo" xml:space="preserve">
+    <value>Obrolan tidak aktif. Kedua belah pihak harus menyetujui persyaratan terlebih dahulu.</value>
+  </data>
+  <data name="ChatErrorEnviandoMensaje" xml:space="preserve">
+    <value>Kesalahan pengiriman pesan</value>
+  </data>
+  <data name="ChatMensajeEnviado" xml:space="preserve">
+    <value>Pesan terkirim</value>
+  </data>
+  <data name="ChatTerminosAceptados" xml:space="preserve">
+    <value>Persyaratan yang diterima. Obrolan sekarang aktif.</value>
+  </data>
+  <data name="ChatErrorAceptandoTerminos" xml:space="preserve">
+    <value>Kesalahan menerima persyaratan</value>
+  </data>
+  <data name="PromoPublicadoNoEditable" xml:space="preserve">
+    <value>Diterbitkan - Tidak dapat diedit</value>
+  </data>
+  <data name="PromoInsuficiente" xml:space="preserve">
+    <value>Tidak mencukupi</value>
+  </data>
+  <data name="PromoRecomendado" xml:space="preserve">
+    <value>Direkomendasikan ⭐</value>
+  </data>
+  <data name="PromoSinTerminosNoContacto" xml:space="preserve">
+    <value>Jika Anda tidak menyetujui persyaratan, Anda tidak dapat mengaktifkan opsi kontak atau pengiriman ke rumah</value>
+  </data>
+  <data name="PromoTerminosRequeridos" xml:space="preserve">
+    <value>Anda harus menerima ketentuan untuk mengaktifkan kontak atau pengiriman ke rumah</value>
+  </data>
+  <data name="PromoTerminosCondiciones" xml:space="preserve">
+    <value>Syarat dan Ketentuan Chat</value>
+  </data>
+  <data name="PromoAceptoTerminos" xml:space="preserve">
+    <value>Saya setuju untuk menerima pesan dari calon pelanggan</value>
+  </data>
+  <data name="PromoTerminosObligatorios" xml:space="preserve">
+    <value>(diperlukan untuk kontak/alamat)</value>
+  </data>
+  <data name="PromoTerminosExplicacion" xml:space="preserve">
+    <value>Dengan menerima, Anda akan dapat menerima pesan pribadi dari orang-orang yang tertarik dengan promosi Anda melalui obrolan terintegrasi aplikasi.</value>
+  </data>
+  <data name="LabelAlarmas" xml:space="preserve">
+    <value>Alarm</value>
+  </data>
+  <data name="LabelAlarmasAgrupadas" xml:space="preserve">
+    <value>Alarm yang dikelompokkan</value>
+  </data>
+  <data name="Alarm_10" xml:space="preserve">
+    <value>Acara</value>
+  </data>
+  <data name="Alarm_11" xml:space="preserve">
+    <value>Membeli Suara</value>
+  </data>
+  <data name="Alarm_12" xml:space="preserve">
+    <value>Pemungutan suara paksa oleh kelompok bersenjata</value>
+  </data>
+  <data name="Alarm_13" xml:space="preserve">
+    <value>Promosi Lokal</value>
+  </data>
+  <data name="Promoción" xml:space="preserve">
+    <value>Promosi</value>
+  </data>
+  <data name="LblLimiteAlarmasFeed" xml:space="preserve">
+    <value>Batas alarm dalam umpan awal</value>
+  </data>
+  <data name="LblDescripcionLimiteAlarmasFeed" xml:space="preserve">
+    <value>Pilih berapa banyak alarm yang ingin Anda unggah saat membuka aplikasi. Jumlah yang lebih kecil meningkatkan kinerja.</value>
+  </data>
+  <data name="OptConfNotif" xml:space="preserve">
+    <value>Mengatur Parameter dan Pemberitahuan</value>
+  </data>
+  <data name="PromoFormTitle" xml:space="preserve">
+    <value>Buat Promosi Lokal</value>
+  </data>
+  <data name="PromoAlcance" xml:space="preserve">
+    <value>3. RUANG LINGKUP DAN DURASI</value>
+  </data>
+  <data name="PromoCaracteristicasOpcionales" xml:space="preserve">
+    <value>4. FITUR OPSIONAL</value>
+  </data>
+  <data name="PromoEnviarNotificaciones" xml:space="preserve">
+    <value>Kirim ke pengguna {0}</value>
+  </data>
+  <data name="PromoCostoNotificaciones" xml:space="preserve">
+    <value>(+{0} kekuatan per 50 pengguna)</value>
+  </data>
+  <data name="PromoConfirmacionFinal" xml:space="preserve">
+    <value>6. KONFIRMASI</value>
+  </data>
+  <data name="PromoConfirmarLanzamiento" xml:space="preserve">
+    <value>Apakah Anda yakin untuk meluncurkannya? Tidak dapat dihapus setelahnya</value>
+  </data>
+  <data name="PromoCreandoAlarma" xml:space="preserve">
+    <value>Membuat promosi...</value>
+  </data>
+  <data name="PromoCreacionExitosa" xml:space="preserve">
+    <value>Promosi berhasil diterbitkan!</value>
+  </data>
+  <data name="PromoErrorCreacion" xml:space="preserve">
+    <value>Error membuat promosi</value>
+  </data>
+  <data name="PromoDescripcionVacia" xml:space="preserve">
+    <value>Anda harus menambahkan deskripsi untuk promosi Anda</value>
+  </data>
+  <data name="PromoTerminoProveedor1" xml:space="preserve">
+    <value>Saya setuju bahwa saya bertanggung jawab penuh atas produk atau layanan yang ditawarkan, pengiriman, kualitas, kepatuhan, dan setiap perjanjian yang dibuat dengan pengguna.</value>
+  </data>
+  <data name="PromoTerminoProveedor2" xml:space="preserve">
+    <value>Saya setuju bahwa setiap pembayaran, alat pembayaran, atau penagihan akan dilakukan langsung antara pembeli dan saya, dan bahwa SOSpect tidak bertindak sebagai perantara dan tidak bertanggung jawab atas perjanjian ini.</value>
+  </data>
+  <data name="PromoTerminoProveedor3" xml:space="preserve">
+    <value>Saya setuju bahwa alamat, pengiriman, atau layanan rumah adalah tanggung jawab saya sepenuhnya, termasuk keamanan, ketepatan waktu, dan kepatuhan.</value>
+  </data>
+  <data name="PromoTerminoProveedor4" xml:space="preserve">
+    <value>Saya setuju bahwa SOSpect hanya bertindak sebagai sarana kontak dan dibebaskan dari tanggung jawab atas transaksi, produk, atau layanan.</value>
+  </data>
+  <data name="PromoTerminoInteresado1" xml:space="preserve">
+    <value>Saya setuju bahwa produk atau layanan ditawarkan langsung oleh pemasok dan bahwa SOSpect tidak menjamin kualitas, ketersediaan, atau kinerjanya.</value>
+  </data>
+  <data name="PromoTerminoInteresado2" xml:space="preserve">
+    <value>Saya setuju bahwa setiap pembayaran dilakukan langsung ke pemasok dan bahwa SOSpect tidak campur tangan atau menanggapi uang, transfer, atau perjanjian ekonomi.</value>
+  </data>
+  <data name="PromoTerminoInteresado3" xml:space="preserve">
+    <value>Saya setuju untuk menanggung risiko normal dari transaksi antar individu, termasuk verifikasi identitas, kualitas produk, dan keamanan pertemuan.</value>
+  </data>
+  <data name="PromoTerminoInteresado4" xml:space="preserve">
+    <value>Saya setuju bahwa SOSpect tidak bertanggung jawab atas hasil interaksi ini atau atas kesepakatan yang dicapai.</value>
+  </data>
+  <data name="PromoEjemplo" xml:space="preserve">
+    <value>Contoh: "🍕 Pizza 2x1 dalam Ukuran Keluarga - Hanya Hari Ini dari jam 5 sore hingga 9 malam - Datang dan nikmati bersama seluruh keluarga"</value>
+  </data>
+  <data name="PromoUsuariosPotenciales" xml:space="preserve">
+    <value>Pengguna potensial di radio: {0}</value>
+  </data>
+  <data name="PromoAgregarMultimedia" xml:space="preserve">
+    <value>Tambahkan Foto/Video</value>
+  </data>
+  <data name="PromoAgregarLogoImagen" xml:space="preserve">
+    <value>Tambahkan logo</value>
+  </data>
+  <data name="PromoLimiteMultimedia" xml:space="preserve">
+    <value>Anda hanya dapat menambahkan hingga 10 foto/video</value>
+  </data>
+  <data name="PromoAgregarFotoVideo" xml:space="preserve">
+    <value>Tambahkan Foto/Video ({0}/10)</value>
+  </data>
+  <data name="PromoPoderesInsuficientes" xml:space="preserve">
+    <value>Kekuatan tidak mencukupi</value>
+  </data>
+  <data name="PromoConfirmarLanzar" xml:space="preserve">
+    <value>Apakah Anda yakin untuk meluncurkan promosi ini?
+
+Biaya: {0} kekuatan
+Durasi: {1} hari
+Jari-jari: {2} meter
+
+{3}</value>
+  </data>
+  <data name="PromoSiLanzar" xml:space="preserve">
+    <value>Ya, luncurkan</value>
+  </data>
+  <data name="LabelErrorDesconocido" xml:space="preserve">
+    <value>Kesalahan tidak diketahui</value>
+  </data>
+  <data name="LabelVideo" xml:space="preserve">
+    <value>Videonya</value>
+  </data>
+  <data name="LabelFoto" xml:space="preserve">
+    <value>Foto</value>
+  </data>
+  <data name="LabelCargando" xml:space="preserve">
+    <value>Memuat...</value>
+  </data>
+  <data name="PromocionLocal" xml:space="preserve">
+    <value>Promosi Lokal</value>
+  </data>
+  <data name="PromoCaracteresRestantes" xml:space="preserve">
+    <value>{0} karakter yang tersisa</value>
+  </data>
+  <data name="PromoPlaceholderTextoPush" xml:space="preserve">
+    <value>Ex: 🍕 pizza 2x1 hari ini! Hanya sampai jam 8 malam</value>
+  </data>
+  <data name="ChatTerminosCondiciones" xml:space="preserve">
+    <value>Syarat dan Ketentuan Chat</value>
+  </data>
+  <data name="ChatNoDisponible" xml:space="preserve">
+    <value>Obrolan tidak tersedia</value>
+  </data>
+  <data name="DebesAceptarTerminos" xml:space="preserve">
+    <value>Anda harus menyetujui syarat dan ketentuan untuk mengobrol dengan penyedia.</value>
+  </data>
+  <data name="ChatAceptoTerminosInteresado" xml:space="preserve">
+    <value>Saya menerima syarat dan ketentuan obrolan</value>
+  </data>
+  <data name="ChatTerminoInteresado1" xml:space="preserve">
+    <value>Saya setuju bahwa produk atau layanan ditawarkan langsung oleh pemasok dan bahwa SOSpect tidak menjamin, memvalidasi, atau menjamin hal yang sama.</value>
+  </data>
+  <data name="ChatTerminoInteresado2" xml:space="preserve">
+    <value>Saya setuju bahwa setiap pembayaran dilakukan langsung ke pemasok dan bahwa SOSpect tidak campur tangan atau menanggapi uang, transfer, atau perjanjian ekonomi.</value>
+  </data>
+  <data name="ChatTerminoInteresado3" xml:space="preserve">
+    <value>Saya setuju untuk menanggung risiko normal dari transaksi antar individu, termasuk kemungkinan gagal bayar.</value>
+  </data>
+  <data name="ChatTerminoInteresado4" xml:space="preserve">
+    <value>Saya setuju bahwa SOSpect tidak bertanggung jawab atas hasil interaksi ini atau atas kesepakatan yang dicapai.</value>
+  </data>
+  <data name="PromoPrioridadNotificaciones" xml:space="preserve">
+    <value>i️ Jika Anda memilih lebih sedikit pengguna daripada total yang tersedia dalam radius, pengguna dengan aplikasi terbaru dan aktif akan diprioritaskan untuk memaksimalkan efektivitas promosi Anda. Sisanya akan dipilih secara acak.</value>
+  </data>
+  <data name="AppName" xml:space="preserve">
+    <value>SOSpect</value>
+  </data>
+  <data name="LblNuevaAlarmaCerca" xml:space="preserve">
+    <value>Alarm baru di dekat Anda</value>
+  </data>
+  <data name="BtnVerAlarma" xml:space="preserve">
+    <value>Lihat Alarm</value>
+  </data>
+  <data name="PromoEditarLogo" xml:space="preserve">
+    <value>Ubah logo</value>
+  </data>
+  <data name="PromoUsandoLogoGuardado" xml:space="preserve">
+    <value>Menggunakan Logo Startup Tersimpan</value>
+  </data>
+  <data name="PromoLogoSeGuardara" xml:space="preserve">
+    <value>Logo ini akan disimpan dan digunakan dalam promosi mendatang</value>
+  </data>
+  <data name="ChatRecordatorioProveedorAcepto" xml:space="preserve">
+    <value>Anda telah menyetujui persyaratan untuk promosi ini di {0}</value>
+  </data>
+  <data name="ChatRecordatorioInteresadoAcepto" xml:space="preserve">
+    <value>Anda menyetujui ketentuan obrolan ini di {0}</value>
+  </data>
+  <data name="ChatErrorIniciar" xml:space="preserve">
+    <value>Error memulai chat</value>
+  </data>
+  <data name="ChatErrorCargar" xml:space="preserve">
+    <value>Kesalahan pemuatan obrolan</value>
+  </data>
+  <data name="ChatActivo" xml:space="preserve">
+    <value>Obrolan Aktif</value>
+  </data>
+  <data name="ChatAdjuntar" xml:space="preserve">
+    <value>Lampirkan</value>
+  </data>
+  <data name="ChatFuncionalidadProximamente" xml:space="preserve">
+    <value>Lampirkan Fungsionalitas Gambar Segera Hadir</value>
+  </data>
+  <data name="ChatErrorAdjuntar" xml:space="preserve">
+    <value>Kesalahan melampirkan gambar</value>
+  </data>
+  <data name="ChatErrorNavegar" xml:space="preserve">
+    <value>Kesalahan saat menavigasi ke peta</value>
+  </data>
+  <data name="LabelRestriccion" xml:space="preserve">
+    <value>Beberapa alarm dinonaktifkan sementara di Apple® iPhone® karena kurangnya kesepakatan dengan pihak berwenang, atau karena kondisi negara, seperti musim pemilihan atau acara lainnya.</value>
+  </data>
+  <data name="LogoEditorTitle" xml:space="preserve">
+    <value>Pangkas Logo Melingkar</value>
+  </data>
+  <data name="LogoEditorZoom" xml:space="preserve">
+    <value>Sesuaikan Zoom</value>
+  </data>
+  <data name="LogoEditorSave" xml:space="preserve">
+    <value>Simpan</value>
+  </data>
+  <data name="LogoEditorNoImage" xml:space="preserve">
+    <value>Tidak ada gambar yang diunggah</value>
+  </data>
+  <data name="LogoEditorSaveError" xml:space="preserve">
+    <value>Kesalahan menyimpan logo</value>
+  </data>
+  <data name="PromoVerificarNIT" xml:space="preserve">
+    <value>VERIFIKASI KEWIRAUSAHAAN</value>
+  </data>
+  <data name="PromoPlaceholderNIT" xml:space="preserve">
+    <value>NIT atau ID pemilik</value>
+  </data>
+  <data name="PromoBotonVerificarNIT" xml:space="preserve">
+    <value>Verifikasi ID</value>
+  </data>
+  <data name="PromoDeclaroPropietario" xml:space="preserve">
+    <value>Saya menyatakan sebagai pemilik sah NIT/ID ini</value>
+  </data>
+  <data name="PromoDatosEmprendimiento" xml:space="preserve">
+    <value>DATA KEWIRAUSAHAAN</value>
+  </data>
+  <data name="PromoPlaceholderNombreEmprendimiento" xml:space="preserve">
+    <value>Nama perusahaan</value>
+  </data>
+  <data name="PromoPlaceholderNombrePropietario" xml:space="preserve">
+    <value>Nama Pemilik</value>
+  </data>
+  <data name="NITRequerido" xml:space="preserve">
+    <value>Anda harus memasukkan nomor identifikasi pemilik atau bisnis</value>
+  </data>
+  <data name="NITNoExisteSerPropietario" xml:space="preserve">
+    <value>Nomor ID ini tidak terdaftar. Saat Anda membuat promosi pertama, Anda akan terdaftar sebagai pemilik. PENTING: Pastikan Anda memasukkan pemilik atau nomor ID bisnis yang benar sejak awal, karena perubahan kepemilikan memerlukan proses validasi hingga 15 hari melalui dukungan teknis.</value>
+  </data>
+  <data name="EresPropietario" xml:space="preserve">
+    <value>Anda adalah pemilik usaha ini. Anda dapat mengedit nama dan logo.</value>
+  </data>
+  <data name="EresSubalternoSoloPromocion" xml:space="preserve">
+    <value>Usaha ini sudah ada. Anda hanya dapat membuat promosi, bukan memodifikasi nama atau logo.</value>
+  </data>
+  <data name="DebeVerificarNITPrimero" xml:space="preserve">
+    <value>Anda harus memverifikasi nomor ID sebelum membuat promosi</value>
+  </data>
+  <data name="DebeAceptarDeclaracionPropietario" xml:space="preserve">
+    <value>Anda harus mengonfirmasi bahwa Anda adalah pemilik bisnis ini dengan nomor identifikasi tersebut</value>
+  </data>
+  <data name="NombreEmprendimientoYPropietarioRequeridos" xml:space="preserve">
+    <value>Anda harus memasukkan nama bisnis dan pemiliknya</value>
+  </data>
+  <data name="LabelAdvertencia" xml:space="preserve">
+    <value>peringatan</value>
+  </data>
+  <data name="ErrorVerificandoNIT" xml:space="preserve">
+    <value>Gagal memverifikasi nomor ID</value>
+  </data>
+  <data name="LblRefrescandoAlarmas" xml:space="preserve">
+    <value>Alarm yang menyegarkan...</value>
+  </data>
+  <data name="LblCargandoAlarmas" xml:space="preserve">
+    <value>Memuat alarm...</value>
+  </data>
+  <data name="LblActualizandoAlarmas" xml:space="preserve">
+    <value>Memperbarui alarm...</value>
+  </data>
+  <data name="LblAlarmaRecibida" xml:space="preserve">
+    <value>Alarm diterima</value>
+  </data>
+  <data name="LblDetallePromocion" xml:space="preserve">
+    <value>Detail Promosi</value>
+  </data>
+  <data name="LblUsuariosNotificados" xml:space="preserve">
+    <value>Pengguna yang Diberitahukan</value>
+  </data>
+  <data name="LblPoderesUsados" xml:space="preserve">
+    <value>Kekuatan yang Digunakan</value>
+  </data>
+  <data name="LblRadioAlcance" xml:space="preserve">
+    <value>Radius Rentang</value>
+  </data>
+  <data name="LblDuracionDias" xml:space="preserve">
+    <value>Durasi (hari)</value>
+  </data>
+  <data name="LblTextoPush" xml:space="preserve">
+    <value>Teks Pemberitahuan</value>
+  </data>
+  <data name="LblEnvioAceptado" xml:space="preserve">
+    <value>Diterima</value>
+  </data>
+  <data name="LblEnvioRechazado" xml:space="preserve">
+    <value>Ditolak</value>
+  </data>
+  <data name="LblTotalNotificados" xml:space="preserve">
+    <value>Jumlah</value>
+  </data>
+  <data name="LblLogoHabilitado" xml:space="preserve">
+    <value>Logo Diaktifkan</value>
+  </data>
+  <data name="LblContactoHabilitado" xml:space="preserve">
+    <value>Kontak Diaktifkan</value>
+  </data>
+  <data name="LblDomicilioHabilitado" xml:space="preserve">
+    <value>Alamat resmi</value>
+  </data>
+  <data name="LblConfiguracionPromocion" xml:space="preserve">
+    <value>Pengaturan Promosi</value>
+  </data>
+  <data name="LblCantidadMedia" xml:space="preserve">
+    <value>Foto/Video</value>
+  </data>
+  <data name="LblFechaInicio" xml:space="preserve">
+    <value>Tanggal Mulai</value>
+  </data>
+  <data name="LblFechaFin" xml:space="preserve">
+    <value>Tanggal Berakhir</value>
+  </data>
+  <data name="LblOpcionesHabilitadas" xml:space="preserve">
+    <value>Opsi yang Diaktifkan</value>
+  </data>
+  <data name="LblListadoUsuarios" xml:space="preserve">
+    <value>Daftar Pengguna</value>
+  </data>
+  <data name="LblPendiente" xml:space="preserve">
+    <value>Tertunda</value>
+  </data>
+  <data name="LblDescripcionPromocional" xml:space="preserve">
+    <value>Deskripsi Promosi</value>
+  </data>
+  <data name="LblNitCedula" xml:space="preserve">
+    <value>NIT/Cédula</value>
+  </data>
+  <data name="Anunciopublicitariodeusuarios" xml:space="preserve">
+    <value>Spanduk Pengguna</value>
+  </data>
+  <data name="LblNombreEmprendimiento" xml:space="preserve">
+    <value>Nama Usaha</value>
+  </data>
+  <data name="LblProcesandoVideo" xml:space="preserve">
+    <value>Memproses video...</value>
+  </data>
+  <data name="LblErrorGrabarVideo" xml:space="preserve">
+    <value>Kesalahan memulai perekaman video</value>
+  </data>
+  <data name="LblErrorGuardarVideo" xml:space="preserve">
+    <value>Kesalahan menyimpan video</value>
+  </data>
+  <data name="LblVideoVacio" xml:space="preserve">
+    <value>Tidak ada video yang direkam</value>
+  </data>
+  <data name="LblDescartarVideo" xml:space="preserve">
+    <value>Apakah Anda ingin membuang video yang Anda rekam?</value>
+  </data>
+  <data name="LblTocaParaGrabar" xml:space="preserve">
+    <value>Ketuk untuk merekam</value>
+  </data>
+  <data name="LblTocaParaDetener" xml:space="preserve">
+    <value>Ketuk untuk berhenti</value>
+  </data>
+  <data name="LblContactarAnunciante" xml:space="preserve">
+    <value>Hubungi pengiklan</value>
+  </data>
+  <data name="LblVerChatsPromocion" xml:space="preserve">
+    <value>Lihat obrolan untuk promosi ini</value>
+  </data>
+  <data name="LblChatsPromocion" xml:space="preserve">
+    <value>Obrolan Promosi</value>
+  </data>
+  <data name="LblNoTienesChatsAun" xml:space="preserve">
+    <value>Anda belum memiliki obrolan apa pun</value>
+  </data>
+  <data name="LblDetallePromocion_Duplicate[1]" xml:space="preserve">
+    <value>Detail Promosi</value>
+  </data>
+  <data name="LblAceptarTerminosChat" xml:space="preserve">
+    <value>Untuk menghubungi pengiklan, Anda harus menyetujui persyaratan obrolan</value>
+  </data>
+  <data name="LblAceptarYContactar" xml:space="preserve">
+    <value>Terima Ketentuan dan Kontak</value>
+  </data>
+  <data name="LblTituloCierreEncuesta" xml:space="preserve">
+    <value>Penutupan dengan survei</value>
+  </data>
+  <data name="LblTituloProponerCierre" xml:space="preserve">
+    <value>Mengusulkan Penutupan Peringatan</value>
+  </data>
+  <data name="LblDescripcionPropuestaCierre" xml:space="preserve">
+    <value>Mengapa peringatan ini harus ditutup?</value>
+  </data>
+  <data name="LblPlaceholderPropuestaCierre" xml:space="preserve">
+    <value>Jelaskan secara singkat alasan penutupan peringatan ini...</value>
+  </data>
+  <data name="LblEvidenciaFotografica" xml:space="preserve">
+    <value>Bukti fotografi (opsional)</value>
+  </data>
+  <data name="LblBotonProponerCierre" xml:space="preserve">
+    <value>Mengusulkan penutupan</value>
+  </data>
+  <data name="LblTituloVotacionCierre" xml:space="preserve">
+    <value>Pemungutan suara penutup sedang berlangsung</value>
+  </data>
+  <data name="LblDescripcionPropuesta" xml:space="preserve">
+    <value>Deskripsi proposal</value>
+  </data>
+  <data name="LblResultadosVotacion" xml:space="preserve">
+    <value>Hasil pemungutan suara</value>
+  </data>
+  <data name="LblVotosAFavor" xml:space="preserve">
+    <value>Mendukung</value>
+  </data>
+  <data name="LblVotosEnContra" xml:space="preserve">
+    <value>Melawan</value>
+  </data>
+  <data name="LblTiempoRestanteVotacion" xml:space="preserve">
+    <value>Waktu tersisa:</value>
+  </data>
+  <data name="LblVotarAFavor" xml:space="preserve">
+    <value>Pilih mendukung</value>
+  </data>
+  <data name="LblVotarEnContra" xml:space="preserve">
+    <value>Pilih menentang</value>
+  </data>
+  <data name="LblYaVotoAFavor" xml:space="preserve">
+    <value>Anda telah memilih mendukung penutupan</value>
+  </data>
+  <data name="LblYaVotoEnContra" xml:space="preserve">
+    <value>Anda sudah memilih menentang penutupan</value>
+  </data>
+  <data name="LblVotacionFinalizada" xml:space="preserve">
+    <value>Pemungutan suara berakhir</value>
+  </data>
+  <data name="LblDescripcionRequerida" xml:space="preserve">
+    <value>Anda harus memasukkan deskripsi</value>
+  </data>
+  <data name="LblPropuestaCierreEnviada" xml:space="preserve">
+    <value>Proposal dikirim</value>
+  </data>
+  <data name="LblPropuestaCierreExito" xml:space="preserve">
+    <value>Proposal penutup Anda telah diajukan. Komunitas akan memilih untuk memutuskan.</value>
+  </data>
+  <data name="LblVotoRegistrado" xml:space="preserve">
+    <value>Suara tercatat</value>
+  </data>
+  <data name="LblVotoRegistradoExito" xml:space="preserve">
+    <value>Suara Anda telah berhasil dicatat</value>
+  </data>
+  <data name="LblTituloCierreCaptura" xml:space="preserve">
+    <value>Tutup alarm</value>
+  </data>
+  <data name="LblTituloCierrePersona" xml:space="preserve">
+    <value>Tutup Peringatan Orang Hilang</value>
+  </data>
+  <data name="LblTituloCierreMascota" xml:space="preserve">
+    <value>Tutup Peringatan Hewan Peliharaan yang Hilang</value>
+  </data>
+  <data name="LblTituloCierreBasico" xml:space="preserve">
+    <value>Tutup peringatan</value>
+  </data>
+  <data name="LblPersonaEncontrada" xml:space="preserve">
+    <value>Apakah orang itu ditemukan?</value>
+  </data>
+  <data name="LblMascotaRecuperada" xml:space="preserve">
+    <value>Apakah hewan peliharaan itu pulih?</value>
+  </data>
+  <data name="LblCierreExitoso" xml:space="preserve">
+    <value>Alarm Berhasil Ditutup</value>
+  </data>
+  <data name="LblProponendoCierre" xml:space="preserve">
+    <value>Mengirimkan proposal penutup...</value>
+  </data>
+  <data name="LblRegistrandoVoto" xml:space="preserve">
+    <value>Mendaftarkan suara...</value>
+  </data>
+  <data name="LblNotifResultadoCierreAprobado" xml:space="preserve">
+    <value>{0} suara diterima. {1}% mendukung, {2}% menentang. Peringatan warga ditutup.</value>
+  </data>
+  <data name="LblNotifResultadoCierreDenegado" xml:space="preserve">
+    <value>{0} suara diterima. {1}% mendukung, {2}% menentang. Permintaan penutupan ditolak.</value>
+  </data>
+  <data name="LblNotifResultadoSinVotos" xml:space="preserve">
+    <value>Tidak ada suara yang diterima dalam 24 jam. Peringatan warga ditutup.</value>
+  </data>
+  <data name="LblEvidenciaFotograficaCierre" xml:space="preserve">
+    <value>Bukti fotografi (opsional)</value>
+  </data>
+  <data name="LblConsultandoSolicitud" xml:space="preserve">
+    <value>Permintaan penutupan konsultasi...</value>
+  </data>
+  <data name="LblNotifProponerCierreAlerta" xml:space="preserve">
+    <value>Peringatan warga di dekat Anda telah diusulkan untuk ditutup. Anda memiliki waktu 24 jam untuk memilih.</value>
+  </data>
+  <data name="Alertaciudadana" xml:space="preserve">
+    <value>Peringatan warga</value>
+  </data>
+  <data name="Alarm_14" xml:space="preserve">
+    <value>Peringatan warga</value>
+  </data>
+  <data name="LblVerAlertaCercana" xml:space="preserve">
+    <value>Lihat {0} {1} jauh dari Anda</value>
+  </data>
+  <data name="LblVerAlerta" xml:space="preserve">
+    <value>Melihat detail peringatan</value>
+  </data>
+  <data name="LblMensajeDestinatario" xml:space="preserve">
+    <value>Penerima pesan</value>
+  </data>
+  <data name="LblMensajeRemitente" xml:space="preserve">
+    <value>Pengirim pesan</value>
+  </data>
+  <data name="LblDescripcionInicial_Duplicate[1]" xml:space="preserve">
+    <value>Selamat datang di SOSpect, aplikasi keamanan komunitas Anda. Kami akan menunjukkan cara kerjanya langkah demi langkah.</value>
+  </data>
+  <data name="SeguimientoUbicacionTitulo" xml:space="preserve">
+    <value>SOSpect Aktif</value>
+  </data>
+  <data name="SeguimientoUbicacionMensaje" xml:space="preserve">
+    <value>Memantau alarm terdekat</value>
+  </data>
+  <data name="PermisoUbicacionFondoTitulo" xml:space="preserve">
+    <value>Lokasi di latar belakang</value>
+  </data>
+  <data name="PermisoUbicacionFondoMensaje" xml:space="preserve">
+    <value>SOSpect membutuhkan akses ke lokasi Anda bahkan saat aplikasi ditutup untuk memperingatkan Anda tentang area berisiko terdekat. Apakah Anda ingin mengizinkan akses?</value>
+  </data>
+  <data name="LblIntervaloMonitoreoBackground" xml:space="preserve">
+    <value>Interval pemantauan keamanan</value>
+  </data>
+  <data name="LblDescripcionIntervaloBackground" xml:space="preserve">
+    <value>Seberapa sering Anda ingin SOSpect memeriksa apakah Anda telah tiba di daerah dengan risiko kritis bagi keselamatan Anda dan memberi tahu Anda?</value>
+  </data>
+  <data name="LblNoHayAlarmas" xml:space="preserve">
+    <value>Anda tidak memiliki alarm di sini saat ini.</value>
+  </data>
+  <data name="NotificacionServicioTitulo" xml:space="preserve">
+    <value>SOSpect Aktif</value>
+  </data>
+  <data name="NotificacionServicioTexto" xml:space="preserve">
+    <value>Memantau alarm terdekat</value>
+  </data>
+  <data name="NotificacionCanalNombre" xml:space="preserve">
+    <value>Pelacakan Lokasi</value>
+  </data>
+  <data name="NotificacionCanalDescripcion" xml:space="preserve">
+    <value>SOSpect memantau lokasi Anda untuk mengingatkan Anda tentang area berisiko</value>
+  </data>
+  <data name="LabelPermitir" xml:space="preserve">
+    <value>Izinkan</value>
+  </data>
+  <data name="LabelAhoraNo" xml:space="preserve">
+    <value>Tidak sekarang</value>
+  </data>
+  <data name="OptimizacionBateriaTitulo" xml:space="preserve">
+    <value>Optimasi Baterai</value>
+  </data>
+  <data name="OptimizacionBateriaMensaje" xml:space="preserve">
+    <value>Agar SOSpect dapat melindungi Anda bahkan dengan aplikasi tertutup, Anda perlu menonaktifkan pengoptimalan baterai. Hal ini memungkinkan layanan pemantauan tetap aktif. Apakah Anda ingin mengizinkannya?</value>
+  </data>
+  <data name="LblUsuarioID" xml:space="preserve">
+    <value>ID Pengguna:</value>
+  </data>
+  <data name="SeguirUsuario" xml:space="preserve">
+    <value>Ikuti pengguna ini</value>
+  </data>
+  <data name="DejarDeSeguirUsuario" xml:space="preserve">
+    <value>Berhenti mengikuti</value>
+  </data>
+  <data name="SeguirExplicacion" xml:space="preserve">
+    <value>Mengikuti gratis. Anda akan melihat alarm mereka di "Mengikuti", tanpa pemberitahuan push.</value>
+  </data>
+  <data name="SiguiendoExplicacion" xml:space="preserve">
+    <value>"Mengikuti" tidak mengirim notifikasi. Untuk peringatan mendesak, gunakan Terlindungi.</value>
+  </data>
+  <data name="PersonalizarParaTi" xml:space="preserve">
+    <value>Sesuaikan untuk Anda</value>
+  </data>
+  <data name="PaisesInteres" xml:space="preserve">
+    <value>Negara yang diminati</value>
+  </data>
+  <data name="TodosLosPaises" xml:space="preserve">
+    <value>Semua negara</value>
+  </data>
+  <data name="LikeAlarma" xml:space="preserve">
+    <value>Seperti</value>
+  </data>
+  <data name="QuitarLikeAlarma" xml:space="preserve">
+    <value>Saya tidak menyukainya lagi</value>
+  </data>
+  <data name="ReenviarAlarma" xml:space="preserve">
+    <value>Maju</value>
+  </data>
+  <data name="QuitarReenvio" xml:space="preserve">
+    <value>Batalkan penerusan</value>
+  </data>
+  <data name="CompartirAlarma" xml:space="preserve">
+    <value>Bagikan</value>
+  </data>
+  <data name="MarcarVerdadera" xml:space="preserve">
+    <value>Ini benar</value>
+  </data>
+  <data name="MarcarFalsa" xml:space="preserve">
+    <value>Ini salah</value>
+  </data>
+  <data name="SeguirConfirmacion" xml:space="preserve">
+    <value>Ingin mengikuti pengguna ini? Anda akan melihat alarm mereka di feed "Mengikuti".</value>
+  </data>
+  <data name="DejarDeSeguirConfirmacion" xml:space="preserve">
+    <value>Berhenti mengikuti pengguna ini?</value>
+  </data>
+  <data name="LblAdvertenciaLimiteAlto" xml:space="preserve">
+    <value>Batas yang lebih tinggi dapat memengaruhi kinerja pada perangkat yang lambat.</value>
+  </data>
+  <data name="MensajeSeguirUsuario" xml:space="preserve">
+    <value>Sekarang Anda mengikuti pengguna ini. Alarm Anda akan muncul di tab 'Mengikuti'. Perhatikan bahwa pengguna yang diikuti tidak menghasilkan pemberitahuan push; untuk mendapatkan peringatan mendesak dari seseorang, pertimbangkan untuk menambahkannya sebagai Terlindungi.</value>
+  </data>
+  <data name="PublicarEnX" xml:space="preserve">
+    <value>Posting ke X (Twitter)</value>
+  </data>
+  <data name="PublicarEnFacebook" xml:space="preserve">
+    <value>Posting ke Facebook</value>
+  </data>
+  <data name="TextoCompartirAlarmaIntro" xml:space="preserve">
+    <value>🚨 Peringatan baru telah muncul di daerah saya!
+Dibagikan di SOSpect, aplikasi komunitas untuk membuat kami tetap mendapat informasi dan persatuan dalam menghadapi kejahatan dan bahaya.
+👉 Lihat detailnya:</value>
+  </data>
+  <data name="PromoConfirmaUbicacion" xml:space="preserve">
+    <value>Konfirmasikan lokasi tempat Anda ingin meluncurkan promosi</value>
+  </data>
+  <data name="PromoConfirmaUbicacionModal" xml:space="preserve">
+    <value>Ketuk peta untuk menyesuaikan titik yang tepat di mana promosi akan diluncurkan</value>
+  </data>
+  <data name="PromoBotonConfirmarUbicacion" xml:space="preserve">
+    <value>Konfirmasi Lokasi</value>
+  </data>
+  <data name="LblUsuarios" xml:space="preserve">
+    <value>Pengguna</value>
+  </data>
+  <data name="TituloAutoridadesResponsables" xml:space="preserve">
+    <value>Otoritas yang Bertanggung Jawab</value>
+  </data>
+  <data name="AutoridadesResponsablesDescripcion" xml:space="preserve">
+    <value>Pejabat publik yang bertanggung jawab atas keamanan di daerah ini</value>
+  </data>
+  <data name="LblVerAutoridadesResponsables" xml:space="preserve">
+    <value>Lihat otoritas yang bertanggung jawab</value>
+  </data>
+  <data name="AlarmasPoliticasUltimos30d" xml:space="preserve">
+    <value>Alarm keamanan 30 hari</value>
+  </data>
+  <data name="LblEmail" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="LblTelefono" xml:space="preserve">
+    <value>Telepon</value>
+  </data>
+  <data name="LblSitioWeb" xml:space="preserve">
+    <value>Situs web</value>
+  </data>
+  <data name="Cargo_1" xml:space="preserve">
+    <value>Presiden</value>
+  </data>
+  <data name="Cargo_2" xml:space="preserve">
+    <value>Gubernur</value>
+  </data>
+  <data name="Cargo_3" xml:space="preserve">
+    <value>Walikota</value>
+  </data>
+  <data name="Cargo_4" xml:space="preserve">
+    <value>Walikota</value>
+  </data>
+  <data name="LblResolucion" xml:space="preserve">
+    <value>Resolusi</value>
+  </data>
+  <data name="LblVerReporte" xml:space="preserve">
+    <value>· Melihat laporan →</value>
+  </data>
+  <data name="LblAlarmasAbiertas" xml:space="preserve">
+    <value>Buka alarm</value>
+  </data>
+  <data name="LblAlarmasCerradas" xml:space="preserve">
+    <value>Alarm ditutup</value>
+  </data>
+  <data name="LblTiempoPromedioResolucion" xml:space="preserve">
+    <value>Waktu Resolusi Rata-rata</value>
+  </data>
+  <data name="LblDias" xml:space="preserve">
+    <value>hari</value>
+  </data>
+  <data name="LblTituloReporteAutoridad" xml:space="preserve">
+    <value>Laporan Kinerja</value>
+  </data>
+  <data name="LblReporteAutoridadNota" xml:space="preserve">
+    <value>Data diperbarui setiap hari pada 0:00 UTC</value>
+  </data>
+  <data name="LblTiposDeAlarma" xml:space="preserve">
+    <value>Jenis Alarm yang Dilaporkan</value>
+  </data>
+  <data name="LblLikes" xml:space="preserve">
+    <value>Suka</value>
+  </data>
+  <data name="LblReenvios" xml:space="preserve">
+    <value>Penerusan</value>
+  </data>
+  <data name="LblMarcarRutaEscapeOpcional" xml:space="preserve">
+    <value>Tandai Rute Pelarian Buronan (Opsional)</value>
+  </data>
+  <data name="LblCalificaGestionPolitico" xml:space="preserve">
+    <value>Menilai kinerja otoritas ini</value>
+  </data>
+  <data name="LblAprobacionCiudadana" xml:space="preserve">
+    <value>Persetujuan warga negara</value>
+  </data>
+  <data name="LblVotantesAprobacion" xml:space="preserve">
+    <value>Pemilih</value>
+  </data>
+  <data name="LblEstrella1" xml:space="preserve">
+    <value>Sangat buruk</value>
+  </data>
+  <data name="LblEstrella5" xml:space="preserve">
+    <value>Luar biasa</value>
+  </data>
+  <data name="LblAprobacionSOSpect" xml:space="preserve">
+    <value>Persetujuan warga negara</value>
+  </data>
+  <data name="LblVerReporteCorto" xml:space="preserve">
+    <value>Melihat laporan →</value>
+  </data>
+  <data name="LblNuevaDescripcion" xml:space="preserve">
+    <value>Deskripsi baru</value>
+  </data>
+  <data name="LblVeracidadAlarma" xml:space="preserve">
+    <value>Alarm Veracity</value>
+  </data>
+  <data name="LblVotoPendienteEnCierre" xml:space="preserve">
+    <value>Suara Anda hilang untuk mengetahui apakah alarm ini dapat ditutup</value>
+  </data>
+  <data name="MsgYaVotasteCierre" xml:space="preserve">
+    <value>Anda tidak dapat memilih lagi, Anda sudah memilih alarm ini</value>
+  </data>
+  <data name="MsgEresProponenteCierre" xml:space="preserve">
+    <value>Anda adalah pemohon penutupan, Anda tidak dapat memilih</value>
+  </data>
+  <data name="LblAlarmaEnVotacionCierre" xml:space="preserve">
+    <value>Alarm ini sedang dalam proses pemungutan suara</value>
+  </data>
+  <data name="LblVerHistorialAlarma" xml:space="preserve">
+    <value>Lihat riwayat alarm</value>
+  </data>
+  <data name="LblResultadosOcultos" xml:space="preserve">
+    <value>Hasil ditampilkan setelah pemungutan suara</value>
+  </data>
+  <data name="LabelNickname" xml:space="preserve">
+    <value>Alias/Nama panggilan:</value>
+  </data>
+  <data name="LabelNicknameHint" xml:space="preserve">
+    <value>Beri pengguna alias atau nama panggilan sehingga Anda dapat mengenalinya nanti</value>
+  </data>
+  <data name="LabelNicknameObligatorio" xml:space="preserve">
+    <value>Alias atau nama panggilan adalah wajib</value>
+  </data>
+  <data name="MsgSolicitudProtegidoPendiente" xml:space="preserve">
+    <value>Permintaan persetujuan yang tertunda sudah tersedia untuk pengguna ini. Tunggu hingga disetujui atau ditolak sebelum mengirimkan yang baru.</value>
+  </data>
+  <data name="LblSuspensionActiva" xml:space="preserve">
+    <value>Notifikasi ditangguhkan sementara atas permintaan pengguna</value>
+  </data>
+  <data name="LabelAlertas" xml:space="preserve">
+    <value>Peringatan</value>
+  </data>
+  <data name="LblRankingPoliticosLocales" xml:space="preserve">
+    <value>Peringkat Politik Lokal</value>
+  </data>
+  <data name="LblRankingDescripcion" xml:space="preserve">
+    <value>Bandingkan kinerja politisi lokal sesuai dengan metrik warga yang berbeda</value>
+  </data>
+  <data name="LblSeleccionaMetrica" xml:space="preserve">
+    <value>Pilih metrik</value>
+  </data>
+  <data name="LblTop5Mejores" xml:space="preserve">
+    <value>5 Terbaik</value>
+  </data>
+  <data name="LblTop5Peores" xml:space="preserve">
+    <value>5 Terburuk</value>
+  </data>
+  <data name="LblSinDatos" xml:space="preserve">
+    <value>Tidak ada data yang tersedia</value>
+  </data>
+  <data name="LblMetricaPctResolucion" xml:space="preserve">
+    <value>% Resolusi alarm</value>
+  </data>
+  <data name="LblMetricaCntAlarmas" xml:space="preserve">
+    <value>Total Alarm Dilaporkan</value>
+  </data>
+  <data name="LblMetricaCntLikes" xml:space="preserve">
+    <value>Suka diterima</value>
+  </data>
+  <data name="LblMetricaCntReenvios" xml:space="preserve">
+    <value>Penerusan alarm</value>
+  </data>
+  <data name="LblMetricaAvgDias" xml:space="preserve">
+    <value>Rata-rata hari resolusi</value>
+  </data>
+  <data name="LblMetricaAprobacion" xml:space="preserve">
+    <value>Persetujuan warga negara</value>
+  </data>
+  <data name="LblCargandoRanking" xml:space="preserve">
+    <value>Memuat peringkat...</value>
+  </data>
+  <data name="OptRankingPoliticosLocales" xml:space="preserve">
+    <value>Peringkat Politik Lokal</value>
+  </data>
+  <data name="LblVerRankingPoliticos" xml:space="preserve">
+    <value>Lihat peringkat politisi lokal</value>
+  </data>
+  <data name="LblMetricaScoreGestion" xml:space="preserve">
+    <value>Skor Manajemen</value>
+  </data>
+  <data name="LblCriteriosGestionTitulo" xml:space="preserve">
+    <value>Bagaimana manajemen diukur?</value>
+  </data>
+  <data name="LblCriterioAlarmasReales" xml:space="preserve">
+    <value>Hanya alarm nyata yang dihitung (alarm palsu yang dikonfirmasi dikecualikan)</value>
+  </data>
+  <data name="LblCriterioPremioViralidad" xml:space="preserve">
+    <value>Penutupan alarm dihargai, terutama yang memiliki difusi tinggi</value>
+  </data>
+  <data name="LblCriterioPenalizacionAbiertas" xml:space="preserve">
+    <value>Alarm yang sudah buka selama berhari-hari tanpa tutup dihukum, terutama yang viral</value>
+  </data>
+  <data name="LblCriterioScoreFinal" xml:space="preserve">
+    <value>Skor akhir berkisar dari 0 hingga 100 yang menggabungkan resolusi, ketepatan waktu, dan manajemen alarm kritis</value>
+  </data>
+  <data name="LblCriterioBaseHistorial" xml:space="preserve">
+    <value>Dasar skor adalah persentase alarm yang secara historis ditutup di wilayahnya</value>
+  </data>
+  <data name="LblExpiraEl" xml:space="preserve">
+    <value>Kedaluwarsa pada</value>
+  </data>
+  <data name="LblDashboardMiEmprendimiento" xml:space="preserve">
+    <value>Kewirausahaan Saya</value>
+  </data>
+  <data name="LblPuestoEnPais" xml:space="preserve">
+    <value>Peringkat #{0} di {1}</value>
+  </data>
+  <data name="LblMejorEmprendedor" xml:space="preserve">
+    <value>Terbaik di negara ini</value>
+  </data>
+  <data name="LblPeorEmprendedor" xml:space="preserve">
+    <value>Dengan lebih banyak peluang untuk perbaikan</value>
+  </data>
+  <data name="LblVerMasEstadisticas" xml:space="preserve">
+    <value>Lihat statistik lainnya</value>
+  </data>
+  <data name="LblComparativoEnPais" xml:space="preserve">
+    <value>Perbandingan di negara Anda</value>
+  </data>
+  <data name="LblTiempoRespuesta" xml:space="preserve">
+    <value>Resp. rata-rata</value>
+  </data>
+  <data name="LblSatisfaccion" xml:space="preserve">
+    <value>Kepuasan</value>
+  </data>
+  <data name="LblChatsMes" xml:space="preserve">
+    <value>Obrolan bulan ini</value>
+  </data>
+  <data name="LblTransacciones" xml:space="preserve">
+    <value>Transaksi yang Berhasil</value>
+  </data>
+  <data name="LblTuPuntaje" xml:space="preserve">
+    <value>Kamu</value>
+  </data>
+  <data name="LabelContinuar" xml:space="preserve">
+    <value>Lanjutkan</value>
+  </data>
+  <data name="LblDashboardEmprendedorTitulo" xml:space="preserve">
+    <value>Laporkan kewirausahaan saya</value>
+  </data>
+  <data name="OptDashboardMiEmprendimiento" xml:space="preserve">
+    <value>Laporkan kewirausahaan saya</value>
+  </data>
+  <data name="LblSeleccionaEmprendimiento" xml:space="preserve">
+    <value>Pilih Startup</value>
+  </data>
+  <data name="MsgUsarDatosUltimaPromocion" xml:space="preserve">
+    <value>Apakah Anda ingin mengisi formulir dengan detail promosi terbaru yang diluncurkan?</value>
+  </data>
+  <data name="LblSi" xml:space="preserve">
+    <value>Ya</value>
+  </data>
+  <data name="LblNo" xml:space="preserve">
+    <value>Tidak</value>
+  </data>
+  <data name="LblDashboardSinDatosTitulo" xml:space="preserve">
+    <value>Tidak ada metrik yang tersedia</value>
+  </data>
+  <data name="LblDashboardSinDatosDescripcion" xml:space="preserve">
+    <value>Usaha ini belum memiliki metrik yang diperhitungkan. Ini terjadi ketika baru dibuat atau promosi pertama belum selesai.</value>
   </data>
 </root>

@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:fonts="clr-namespace:sospect.Resources.Fonts;assembly=sospect"
+    xmlns:helpers="clr-namespace:sospect.Helpers"
+    x:Class="sospect.Views.AutoridadesResponsablesPage"
+    BackgroundColor="#F8F9FA"
+    Title="{helpers:TranslateExtension Text='TituloAutoridadesResponsables'}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <!-- Descripción informativa -->
+        <Border Grid.Row="0"
+                BackgroundColor="White"
+                StrokeThickness="0"
+                Padding="16,12"
+                Margin="0,0,0,4">
+            <Label Text="{helpers:TranslateExtension Text='AutoridadesResponsablesDescripcion'}"
+                   FontSize="13"
+                   TextColor="#7F8C8D"
+                   HorizontalOptions="Center"
+                   HorizontalTextAlignment="Center" />
+        </Border>
+
+        <!-- Lista de autoridades -->
+        <CollectionView x:Name="AutoridadesListView"
+                        Grid.Row="1"
+                        ItemsSource="{Binding Autoridades}"
+                        SelectionMode="None">
+
+            <CollectionView.EmptyView>
+                <StackLayout VerticalOptions="Center"
+                             HorizontalOptions="Center"
+                             Padding="40">
+                    <Label Text="{x:Static fonts:IconFont.BuildingColumns}"
+                           FontFamily="{StaticResource IcoMoonFamily}"
+                           FontSize="64"
+                           TextColor="#BDC3C7"
+                           HorizontalOptions="Center"
+                           Margin="0,0,0,16" />
+                    <Label Text="{helpers:TranslateExtension Text='LblNoHayRegistrosAqui'}"
+                           FontSize="16"
+                           TextColor="#7F8C8D"
+                           HorizontalOptions="Center"
+                           HorizontalTextAlignment="Center" />
+                </StackLayout>
+            </CollectionView.EmptyView>
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <!-- Card de autoridad: tap en la card → reporte de desempeño -->
+                    <Border Margin="12,6"
+                            BackgroundColor="White"
+                            Stroke="#E8E8E8"
+                            StrokeThickness="1"
+                            StrokeShape="RoundRectangle 12"
+                            Padding="14">
+                        <Border.GestureRecognizers>
+                            <TapGestureRecognizer
+                                Command="{Binding Path=BindingContext.VerReporteCommand, Source={x:Reference AutoridadesListView}}"
+                                CommandParameter="{Binding .}" />
+                        </Border.GestureRecognizers>
+                        <StackLayout Spacing="10">
+
+                            <!-- Fila superior: foto + cargo/nombre + territorio -->
+                            <Grid ColumnSpacing="12">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="56" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+
+                                <!-- Foto circular -->
+                                <Border Grid.Column="0"
+                                        StrokeShape="Ellipse"
+                                        StrokeThickness="0"
+                                        HeightRequest="56"
+                                        WidthRequest="56"
+                                        HorizontalOptions="Center"
+                                        VerticalOptions="Center"
+                                        BackgroundColor="#E8E8E8"
+                                        IsVisible="{Binding TieneFoto}">
+                                    <Image Source="{Binding FotoUrl}"
+                                           Aspect="AspectFill"
+                                           HeightRequest="56"
+                                           WidthRequest="56" />
+                                </Border>
+
+                                <!-- Placeholder foto cuando no hay imagen -->
+                                <Border Grid.Column="0"
+                                        StrokeShape="Ellipse"
+                                        StrokeThickness="0"
+                                        HeightRequest="56"
+                                        WidthRequest="56"
+                                        HorizontalOptions="Center"
+                                        VerticalOptions="Center"
+                                        BackgroundColor="#D6E4F0"
+                                        IsVisible="{Binding TieneFoto, Converter={StaticResource InverseBooleanConverter}}">
+                                    <Label Text="{x:Static fonts:IconFont.UserTie}"
+                                           FontFamily="{StaticResource IcoMoonFamily}"
+                                           FontSize="28"
+                                           TextColor="#1A6FB4"
+                                           HorizontalOptions="Center"
+                                           VerticalOptions="Center" />
+                                </Border>
+
+                                <!-- Cargo, nombre y territorio -->
+                                <StackLayout Grid.Column="1"
+                                             Spacing="2"
+                                             VerticalOptions="Center">
+                                    <Label Text="{Binding CargoNombre}"
+                                           FontSize="12"
+                                           FontAttributes="Bold"
+                                           TextColor="#1A6FB4" />
+                                    <Label Text="{Binding NombreCompleto}"
+                                           FontSize="15"
+                                           FontAttributes="Bold"
+                                           TextColor="#2C3E50"
+                                           LineBreakMode="TailTruncation" />
+                                    <Label Text="{Binding TerritorioNombre}"
+                                           FontSize="12"
+                                           TextColor="#7F8C8D"
+                                           LineBreakMode="TailTruncation" />
+                                </StackLayout>
+                            </Grid>
+
+                            <!-- Partido y mandato -->
+                            <StackLayout Spacing="2"
+                                         IsVisible="{Binding Partido, Converter={StaticResource StringNullOrEmptyToBoolConverter}}">
+                                <Label Text="{Binding Partido}"
+                                       FontSize="12"
+                                       TextColor="#95A5A6"
+                                       LineBreakMode="TailTruncation" />
+                            </StackLayout>
+                            <Label Text="{Binding MandatoTexto}"
+                                   FontSize="11"
+                                   TextColor="#BDC3C7" />
+
+                            <!-- Badge naranja: métricas 30 días -->
+                            <Border BackgroundColor="#FFF3CD"
+                                    StrokeThickness="0"
+                                    StrokeShape="RoundRectangle 6"
+                                    Padding="10,5"
+                                    HorizontalOptions="Start">
+                                <StackLayout Orientation="Horizontal" Spacing="6">
+                                    <Label Text="{x:Static fonts:IconFont.TriangleExclamation}"
+                                           FontFamily="{StaticResource IcoMoonFamily}"
+                                           FontSize="13"
+                                           TextColor="#E67E22"
+                                           VerticalOptions="Center" />
+                                    <Label FontSize="12"
+                                           TextColor="#E67E22"
+                                           VerticalOptions="Center">
+                                        <Label.FormattedText>
+                                            <FormattedString>
+                                                <Span Text="{Binding CntAlarmas30d}"
+                                                      FontAttributes="Bold" />
+                                                <Span Text=" " />
+                                                <Span Text="{helpers:TranslateExtension Text='AlarmasPoliticasUltimos30d'}" />
+                                            </FormattedString>
+                                        </Label.FormattedText>
+                                    </Label>
+                                </StackLayout>
+                            </Border>
+
+                            <!-- Métrica de resolución + aprobación + link al reporte -->
+                            <StackLayout Orientation="Horizontal"
+                                         Spacing="6"
+                                         Margin="0,4,0,0">
+                                <!-- Porcentaje de resolución: visible solo si hay dato en la MV -->
+                                <Label Text="{Binding MetricaResumen}"
+                                       TextColor="{Binding MetricaColor}"
+                                       FontSize="13"
+                                       FontAttributes="Bold"
+                                       IsVisible="{Binding TieneMetrica}"
+                                       VerticalOptions="Center" />
+                                <!-- Separador · entre resolución y aprobación -->
+                                <Label Text="·"
+                                       FontSize="13"
+                                       TextColor="#BDC3C7"
+                                       IsVisible="{Binding TieneAprobacion}"
+                                       VerticalOptions="Center" />
+                                <!-- Aprobación ciudadana SOSpect -->
+                                <Label Text="{Binding AprobacionResumen}"
+                                       TextColor="#8E44AD"
+                                       FontSize="13"
+                                       FontAttributes="Bold"
+                                       IsVisible="{Binding TieneAprobacion}"
+                                       VerticalOptions="Center" />
+                                <!-- Separador · antes del link al reporte -->
+                                <Label Text="·"
+                                       FontSize="13"
+                                       TextColor="#BDC3C7"
+                                       VerticalOptions="Center" />
+                                <!-- Link al reporte: siempre visible -->
+                                <Label FontSize="13"
+                                       TextColor="#1A6FB4"
+                                       Text="{helpers:TranslateExtension Text='LblVerReporteCorto'}"
+                                       VerticalOptions="Center" />
+                            </StackLayout>
+
+                            <!-- Separador -->
+                            <BoxView HeightRequest="1"
+                                     BackgroundColor="#F0F0F0"
+                                     Margin="0,2" />
+
+                            <!-- Botones de contacto -->
+                            <StackLayout Orientation="Horizontal"
+                                         Spacing="8">
+
+                                <!-- Email -->
+                                <Button IsVisible="{Binding TieneEmail}"
+                                        Text="{helpers:TranslateExtension Text='LblEmail'}"
+                                        BackgroundColor="#1A6FB4"
+                                        TextColor="White"
+                                        FontSize="12"
+                                        CornerRadius="6"
+                                        HeightRequest="36"
+                                        Padding="12,0"
+                                        Command="{Binding Path=BindingContext.AbrirEmailCommand, Source={x:Reference AutoridadesListView}}"
+                                        CommandParameter="{Binding .}">
+                                    <Button.ImageSource>
+                                        <FontImageSource FontFamily="{StaticResource IcoMoonFamily}"
+                                                         Color="White"
+                                                         Glyph="{x:Static fonts:IconFont.Envelope}"
+                                                         Size="13" />
+                                    </Button.ImageSource>
+                                </Button>
+
+                                <!-- Teléfono -->
+                                <Button IsVisible="{Binding TieneTelefono}"
+                                        Text="{helpers:TranslateExtension Text='LblTelefono'}"
+                                        BackgroundColor="#27AE60"
+                                        TextColor="White"
+                                        FontSize="12"
+                                        CornerRadius="6"
+                                        HeightRequest="36"
+                                        Padding="12,0"
+                                        Command="{Binding Path=BindingContext.AbrirTelefonoCommand, Source={x:Reference AutoridadesListView}}"
+                                        CommandParameter="{Binding .}">
+                                    <Button.ImageSource>
+                                        <FontImageSource FontFamily="{StaticResource IcoMoonFamily}"
+                                                         Color="White"
+                                                         Glyph="{x:Static fonts:IconFont.Phone}"
+                                                         Size="13" />
+                                    </Button.ImageSource>
+                                </Button>
+
+                                <!-- Sitio Web -->
+                                <Button IsVisible="{Binding TieneSitioWeb}"
+                                        Text="{helpers:TranslateExtension Text='LblSitioWeb'}"
+                                        BackgroundColor="#7F8C8D"
+                                        TextColor="White"
+                                        FontSize="12"
+                                        CornerRadius="6"
+                                        HeightRequest="36"
+                                        Padding="12,0"
+                                        Command="{Binding Path=BindingContext.AbrirSitioWebCommand, Source={x:Reference AutoridadesListView}}"
+                                        CommandParameter="{Binding .}">
+                                    <Button.ImageSource>
+                                        <FontImageSource FontFamily="{StaticResource IcoMoonFamily}"
+                                                         Color="White"
+                                                         Glyph="{x:Static fonts:IconFont.Globe}"
+                                                         Size="13" />
+                                    </Button.ImageSource>
+                                </Button>
+
+                                <!-- Twitter / X -->
+                                <Button IsVisible="{Binding TieneTwitter}"
+                                        Text="Twitter/X"
+                                        BackgroundColor="#2C3E50"
+                                        TextColor="White"
+                                        FontSize="12"
+                                        CornerRadius="6"
+                                        HeightRequest="36"
+                                        Padding="12,0"
+                                        Command="{Binding Path=BindingContext.AbrirTwitterCommand, Source={x:Reference AutoridadesListView}}"
+                                        CommandParameter="{Binding .}">
+                                    <Button.ImageSource>
+                                        <FontImageSource FontFamily="{StaticResource IcoMoonFamily}"
+                                                         Color="White"
+                                                         Glyph="{x:Static fonts:IconFont.ShareNodes}"
+                                                         Size="13" />
+                                    </Button.ImageSource>
+                                </Button>
+
+                            </StackLayout>
+
+                        </StackLayout>
+                    </Border>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <!-- Loading overlay -->
+        <Grid Grid.RowSpan="2"
+              BackgroundColor="#80000000"
+              IsVisible="{Binding IsRunning}">
+            <ActivityIndicator VerticalOptions="Center"
+                               HorizontalOptions="Center"
+                               HeightRequest="50"
+                               WidthRequest="50"
+                               Color="#4A90E2"
+                               IsRunning="{Binding IsRunning}" />
+        </Grid>
+
+    </Grid>
+</ContentPage>

@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<toolkit:Popup
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    xmlns:helpers="clr-namespace:sospect.Helpers"
+    xmlns:fonts="clr-namespace:sospect.Resources.Fonts;assembly=sospect"
+    x:Class="sospect.Views.Popups.AtenderAlarmaPopup"
+    CanBeDismissedByTappingOutsideOfPopup="False">
+
+    <Frame BackgroundColor="White"
+           CornerRadius="16"
+           HasShadow="True"
+           Padding="24"
+           WidthRequest="360"
+           MaximumWidthRequest="380"
+           BorderColor="Transparent">
+
+        <Grid RowSpacing="16">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <!-- Ícono -->
+            <Label Grid.Row="0"
+                   Text="{x:Static fonts:IconFont.Bell}"
+                   FontFamily="{StaticResource IcoMoonFamily}"
+                   FontSize="50"
+                   TextColor="#4A90E2"
+                   HorizontalOptions="Center"/>
+
+            <!-- Título -->
+            <Label Grid.Row="1"
+                   Text="{helpers:TranslateExtension Text='LblEstasSeguroAtender'}" 
+                   TextColor="#2C3E50"
+                   FontAttributes="Bold" 
+                   FontSize="18"
+                   HorizontalTextAlignment="Center"
+                   LineBreakMode="WordWrap"/>
+
+            <!-- Advertencia -->
+            <Label Grid.Row="2"
+                   Text="{helpers:TranslateExtension Text='LblAccionSinDeshacer'}" 
+                   TextColor="#7F8C8D"
+                   FontSize="15"
+                   HorizontalTextAlignment="Center"
+                   LineBreakMode="WordWrap"/>
+
+            <!-- Botones -->
+            <Grid Grid.Row="3" 
+                  Margin="0,8,0,0"
+                  ColumnSpacing="12">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <!-- Botón Cancelar -->
+                <Frame Grid.Column="0"
+                       Padding="0"
+                       CornerRadius="10"
+                       BackgroundColor="#95A5A6"
+                       HasShadow="True"
+                       BorderColor="Transparent"
+                       HeightRequest="50">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding CancelarCommand}"/>
+                    </Frame.GestureRecognizers>
+                    <Label Text="{helpers:TranslateExtension Text='LabelCancelar'}"
+                           TextColor="White"
+                           FontSize="15"
+                           FontAttributes="Bold"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"/>
+                </Frame>
+
+                <!-- Botón Confirmar -->
+                <Frame Grid.Column="1"
+                       Padding="0"
+                       CornerRadius="10"
+                       BackgroundColor="#27AE60"
+                       HasShadow="True"
+                       BorderColor="Transparent"
+                       HeightRequest="50">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding ConfirmarAtencionCommand}"/>
+                    </Frame.GestureRecognizers>
+                    <Label Text="{helpers:TranslateExtension Text='LblConfirmoAtencion'}"
+                           TextColor="White"
+                           FontSize="15"
+                           FontAttributes="Bold"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"
+                           LineBreakMode="WordWrap"
+                           HorizontalTextAlignment="Center"
+                           Margin="4,0"/>
+                </Frame>
+            </Grid>
+
+        </Grid>
+
+    </Frame>
+</toolkit:Popup>

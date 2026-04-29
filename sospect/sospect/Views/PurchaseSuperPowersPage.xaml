@@ -1,73 +1,183 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-         xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-         x:Class="sospect.Views.PurchaseSuperPowersPage"
-         xmlns:fonts="clr-namespace:sospect.Resources.Fonts;assembly=sospect"
-         xmlns:helpers="clr-namespace:sospect.Helpers"
-         BackgroundColor="White"
-         Title="{helpers:TranslateExtension Text='LblCompraPoderes'}">
-    <ContentPage.Content>
-        <Grid>
-            <StackLayout>
-                <ListView x:Name="SuperPowersListView" BackgroundColor="White" ItemsSource="{Binding SuperPowers}" HasUnevenRows="True"  SelectionMode="None">
-                    <ListView.Header>
-                        <Grid Margin="0,20,0,0">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*" />
-                                <ColumnDefinition Width="*" />
-                                <ColumnDefinition Width="*" />
-                            </Grid.ColumnDefinitions>
-                            <Label Text="{helpers:TranslateExtension Text='LblCantidadPoderes'}" Grid.Column="0" TextColor="Gray" FontAttributes="Bold" FontSize="18" VerticalOptions="Center" HorizontalOptions="Center"/>
-                            <Label Text="{helpers:TranslateExtension Text='LblPrecio'}" Grid.Column="1" TextColor="Gray" FontAttributes="Bold" FontSize="18" VerticalOptions="Center" HorizontalOptions="Center"/>
-                            <Label Text="{helpers:TranslateExtension Text='LblAccion'}" Grid.Column="2" TextColor="Gray" FontAttributes="Bold" FontSize="18" VerticalOptions="Center" HorizontalOptions="Center"/>
-                        </Grid>
-                    </ListView.Header>
-                    <ListView.ItemTemplate>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="sospect.Views.PurchaseSuperPowersPage"
+             xmlns:fonts="clr-namespace:sospect.Resources.Fonts;assembly=sospect"
+             xmlns:helpers="clr-namespace:sospect.Helpers"
+             BackgroundColor="#F8F9FA"
+             Title="{helpers:TranslateExtension Text='LblCompraPoderes'}">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="HeaderMessageStyle" TargetType="Frame">
+                <Setter Property="BackgroundColor" Value="#FFF3CD" />
+                <Setter Property="BorderColor" Value="#FFE69C" />
+                <Setter Property="CornerRadius" Value="12" />
+                <Setter Property="Padding" Value="15" />
+                <Setter Property="Margin" Value="20,20,20,10" />
+                <Setter Property="HasShadow" Value="False" />
+            </Style>
+
+            <Style x:Key="ColumnHeaderStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="#2C3E50" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="FontSize" Value="16" />
+                <Setter Property="HorizontalTextAlignment" Value="Center" />
+                <Setter Property="VerticalTextAlignment" Value="Center" />
+            </Style>
+
+            <Style x:Key="ProductCardStyle" TargetType="Frame">
+                <Setter Property="BackgroundColor" Value="White" />
+                <Setter Property="BorderColor" Value="Transparent" />
+                <Setter Property="CornerRadius" Value="12" />
+                <Setter Property="Padding" Value="15" />
+                <Setter Property="Margin" Value="20,8,20,8" />
+                <Setter Property="HasShadow" Value="True" />
+            </Style>
+
+            <Style x:Key="BuyButtonStyle" TargetType="Frame">
+                <Setter Property="BackgroundColor" Value="#9B59B6" />
+                <Setter Property="BorderColor" Value="Transparent" />
+                <Setter Property="CornerRadius" Value="10" />
+                <Setter Property="Padding" Value="0" />
+                <Setter Property="HasShadow" Value="False" />
+                <Setter Property="HeightRequest" Value="44" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Grid>
+        <ScrollView>
+            <StackLayout Spacing="0">
+
+                <!-- Header con mensaje informativo -->
+                <Frame Style="{StaticResource HeaderMessageStyle}">
+                    <Grid ColumnSpacing="10">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <Label Grid.Column="0"
+                               FontFamily="{StaticResource IcoMoonFamily}"
+                               Text="{x:Static fonts:IconFont.CircleInfo}"
+                               FontSize="20"
+                               TextColor="#856404"
+                               VerticalOptions="Start"
+                               Margin="0,2,0,0" />
+
+                        <Label Grid.Column="1"
+                               Text="{helpers:TranslateExtension Text='LblMensajeCompraPoderes'}"
+                               TextColor="#856404"
+                               FontSize="14"
+                               LineBreakMode="WordWrap"
+                               VerticalOptions="Center" />
+                    </Grid>
+                </Frame>
+
+                <!-- Header de tabla -->
+                <Grid Margin="20,20,20,10"
+                      ColumnSpacing="10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="1.2*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Label Grid.Column="0"
+                           Style="{StaticResource ColumnHeaderStyle}"
+                           Text="{helpers:TranslateExtension Text='LblCantidadPoderes'}" />
+
+                    <Label Grid.Column="1"
+                           Style="{StaticResource ColumnHeaderStyle}"
+                           Text="{helpers:TranslateExtension Text='LblPrecio'}" />
+
+                    <Label Grid.Column="2"
+                           Style="{StaticResource ColumnHeaderStyle}"
+                           Text="{helpers:TranslateExtension Text='LblAccion'}" />
+                </Grid>
+
+                <!-- Lista de productos -->
+                <CollectionView ItemsSource="{Binding SuperPowers}"
+                               SelectionMode="None">
+                    <CollectionView.ItemTemplate>
                         <DataTemplate>
-                            <ViewCell>
-                                <Grid Margin="0,15,15,5">
+                            <Frame Style="{StaticResource ProductCardStyle}">
+                                <Grid ColumnSpacing="10">
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="*" />
                                         <ColumnDefinition Width="*" />
-                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="1.2*" />
                                     </Grid.ColumnDefinitions>
-                                    <Label Text="{Binding cantidad_poderes}" Grid.Column="0" TextColor="Black" FontSize="16"  VerticalOptions="Center" HorizontalOptions="Center"/>
-                                    <Label Text="{Binding LocalizedPrice, StringFormat='{0}'}" Grid.Column="1" TextColor="Black" FontSize="16"  VerticalOptions="Center"/>
 
-                                    <!--Button BackgroundColor="LightGray" FontAttributes="Bold" TextColor="Black" CornerRadius="5" Text="{helpers:TranslateExtension Text='LblComprar'}"  Grid.Column="2" CommandParameter="{Binding .}" Command="{Binding Path=BindingContext.PurchaseCommand, Source={x:Reference SuperPowersListView}}"  VerticalOptions="Center" HorizontalOptions="FillAndExpand" /-->
+                                    <!-- Cantidad de poderes -->
+                                    <StackLayout Grid.Column="0"
+                                               VerticalOptions="Center"
+                                               HorizontalOptions="Center"
+                                               Spacing="2">
+                                        <Label FontFamily="{StaticResource IcoMoonFamily}"
+                                               Text="{x:Static fonts:IconFont.Bolt}"
+                                               FontSize="24"
+                                               TextColor="#9B59B6"
+                                               HorizontalOptions="Center" />
+                                        <Label Text="{Binding cantidad_poderes}"
+                                               TextColor="#2C3E50"
+                                               FontSize="18"
+                                               FontAttributes="Bold"
+                                               HorizontalTextAlignment="Center" />
+                                    </StackLayout>
 
-                                    <Frame Grid.Column="2" Padding="5" BorderColor="Black" BackgroundColor="LightGray" Margin="0,0,0,0"  VerticalOptions="Center" HorizontalOptions="FillAndExpand" HeightRequest="35" WidthRequest="100" CornerRadius="10">
-                                    <Frame.GestureRecognizers>
-                                        <TapGestureRecognizer Command="{Binding Path=BindingContext.PurchaseCommand, Source={x:Reference SuperPowersListView}}"  CommandParameter="{Binding .}" NumberOfTapsRequired="1" />
-                                    </Frame.GestureRecognizers>
-                                    <Label Text="{helpers:TranslateExtension Text='LblComprar'}" 
-                                           TextColor="Black"
-                                           LineBreakMode="WordWrap"
-                                           HorizontalOptions="CenterAndExpand"
-                                           VerticalOptions="CenterAndExpand"
-                                           HorizontalTextAlignment="Center"
-                                           VerticalTextAlignment="Center" />
-                                </Frame>
+                                    <!-- Precio -->
+                                    <Label Grid.Column="1"
+                                           Text="{Binding LocalizedPrice}"
+                                           TextColor="#27AE60"
+                                           FontSize="16"
+                                           FontAttributes="Bold"
+                                           VerticalOptions="Center"
+                                           HorizontalTextAlignment="Center" />
+
+                                    <!-- Botón de compra -->
+                                    <Frame Grid.Column="2"
+                                           Style="{StaticResource BuyButtonStyle}"
+                                           VerticalOptions="Center">
+                                        <Frame.GestureRecognizers>
+                                            <TapGestureRecognizer 
+                                                Command="{Binding Path=BindingContext.PurchaseCommand, Source={RelativeSource AncestorType={x:Type ContentPage}}}"
+                                                CommandParameter="{Binding .}" />
+                                        </Frame.GestureRecognizers>
+
+                                        <Label Text="{helpers:TranslateExtension Text='LblComprar'}"
+                                               TextColor="White"
+                                               FontSize="15"
+                                               FontAttributes="Bold"
+                                               HorizontalOptions="Center"
+                                               VerticalOptions="Center"
+                                               HorizontalTextAlignment="Center"
+                                               VerticalTextAlignment="Center" />
+                                    </Frame>
                                 </Grid>
-                            </ViewCell>
+                            </Frame>
                         </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>
-                <!--Button BackgroundColor="Gray" TextColor="Black" CornerRadius="5" Text="ConsumirCompra" Command="{Binding ConsumirCommand}"  VerticalOptions="Center" HorizontalOptions="Center" /-->
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+
+                <BoxView HeightRequest="20" Color="Transparent" />
+
             </StackLayout>
-            <Grid BackgroundColor="Black"
-                  Opacity="0.5"
-                  HorizontalOptions="FillAndExpand"
-                  VerticalOptions="FillAndExpand"
-                  IsVisible="{Binding IsRunning}">
-                <ActivityIndicator VerticalOptions="Center"
-                                   HorizontalOptions="Center"
-                                   HeightRequest="50"
-                                   WidthRequest="50"
-                                   Color="DarkBlue"
-                                   IsRunning="{Binding IsRunning}">
-                </ActivityIndicator>
-            </Grid>
+        </ScrollView>
+
+        <!-- Loading overlay -->
+        <Grid BackgroundColor="Black"
+              Opacity="0.5"
+              HorizontalOptions="FillAndExpand"
+              VerticalOptions="FillAndExpand"
+              IsVisible="{Binding IsRunning}">
+            <ActivityIndicator VerticalOptions="Center"
+                             HorizontalOptions="Center"
+                             HeightRequest="50"
+                             WidthRequest="50"
+                             Color="#9B59B6"
+                             IsRunning="{Binding IsRunning}" />
         </Grid>
-    </ContentPage.Content>
+    </Grid>
 </ContentPage>

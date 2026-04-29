@@ -15,6 +15,7 @@ namespace sospect.Models
         public double? longitud_escape { get; set; }
         public string? ip_usuario { get; set; }
         public string? idioma_descripcion { get; set; }
+        public List<FotoAlarmaDto> Fotos { get; set; }  // Nueva propiedad para enviar fotos al API
     }
 }
 

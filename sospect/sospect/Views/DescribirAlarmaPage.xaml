@@ -1,0 +1,356 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:maps="clr-namespace:sospect.CustomRenderers"
+    xmlns:helpers="clr-namespace:sospect.Helpers"
+    xmlns:converters="clr-namespace:sospect.Converters;assembly=sospect"
+    x:Class="sospect.Views.DescribirAlarmaPage"
+    Title="{helpers:TranslateExtension Text='LabelDescribirAlarma'}"
+    BackgroundColor="White">
+
+    <ContentPage.Resources>
+        <converters:TipoAlarmaVisibilityConverter x:Key="TipoAlarmaVisibility" />
+        <converters:InverseBooleanConverter x:Key="InverseBooleanConverter" />
+        <converters:BoolToOpacityConverter x:Key="BoolToOpacityConverter" />
+        <converters:BoolToTextColorConverter x:Key="BoolToTextColorConverter" />
+
+        <!-- Estilos modernos -->
+        <Style x:Key="SectionLabelStyle" TargetType="Label">
+            <Setter Property="TextColor" Value="#333333" />
+            <Setter Property="FontSize" Value="15" />
+            <Setter Property="FontAttributes" Value="Bold" />
+            <Setter Property="Margin" Value="0,8,0,5" />
+        </Style>
+
+        <Style x:Key="ModernFrameStyle" TargetType="Frame">
+            <Setter Property="BorderColor" Value="#E0E0E0" />
+            <Setter Property="BackgroundColor" Value="White" />
+            <Setter Property="Padding" Value="12,10" />
+            <Setter Property="CornerRadius" Value="8" />
+            <Setter Property="HasShadow" Value="False" />
+        </Style>
+
+        <Style x:Key="ModernEntryStyle" TargetType="Entry">
+            <Setter Property="BackgroundColor" Value="Transparent" />
+            <Setter Property="TextColor" Value="Black" />
+            <Setter Property="FontSize" Value="16" />
+            <Setter Property="PlaceholderColor" Value="#999999" />
+        </Style>
+
+        <Style x:Key="ModernEditorStyle" TargetType="Editor">
+            <Setter Property="BackgroundColor" Value="Transparent" />
+            <Setter Property="TextColor" Value="Black" />
+            <Setter Property="FontSize" Value="16" />
+            <Setter Property="PlaceholderColor" Value="#999999" />
+        </Style>
+    </ContentPage.Resources>
+
+    <Grid>
+        <!-- ÁREA DE CONTENIDO SCROLLEABLE -->
+        <ScrollView 
+            VerticalScrollBarVisibility="Always"
+            HorizontalScrollBarVisibility="Never"
+            Padding="20,20,20,10"
+            VerticalOptions="FillAndExpand">
+
+            <StackLayout Spacing="15">
+
+                <!-- Sección Tipo de Alarma -->
+                <StackLayout 
+                    IsVisible="{Binding Alarma, Converter={StaticResource TipoAlarmaVisibility}}"
+                    Spacing="8">
+
+                    <Label 
+                        Text="{helpers:TranslateExtension Text='LabelTipoAlarma'}"
+                        Style="{StaticResource SectionLabelStyle}" />
+
+                    <!-- Selector moderno simple -->
+                    <StackLayout HeightRequest="50">
+                        <Frame Style="{StaticResource ModernFrameStyle}"
+                               Opacity="{Binding PickerEnabled, Converter={StaticResource BoolToOpacityConverter}}">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnTipoAlarmaTapped" />
+                            </Frame.GestureRecognizers>
+
+                            <StackLayout Orientation="Horizontal" IsEnabled="{Binding IsInitialized}">
+                                <Label
+                                    Text="{Binding TipoAlarmaSeleccionado.DescripcionTraducida, FallbackValue={helpers:TranslateExtension Text='LblSeleccioneTipoAlarma'}}"
+                                    TextColor="{Binding PickerEnabled, Converter={StaticResource BoolToTextColorConverter}}"
+                                    FontSize="16"
+                                    VerticalTextAlignment="Center"
+                                    HorizontalOptions="FillAndExpand"
+                                    Margin="5,0,0,0"/>
+
+                                <!-- Mostrar flecha solo si está habilitado -->
+                                <Label
+                                    Text="▼"
+                                    TextColor="#666666"
+                                    FontSize="12"
+                                    VerticalTextAlignment="Center"
+                                    HorizontalOptions="End"
+                                    Margin="0,0,5,0"
+                                    IsVisible="{Binding PickerEnabled}"/>
+                            </StackLayout>
+                        </Frame>
+
+                        <!-- Overlay de carga -->
+                        <Frame IsVisible="{Binding IsInitialized, Converter={StaticResource InverseBooleanConverter}}"
+                               BackgroundColor="#F8F8F8"
+                               BorderColor="#E0E0E0"
+                               CornerRadius="8"
+                               HasShadow="False"
+                               Padding="10"
+                               Margin="0,-50,0,0">
+                            <StackLayout Orientation="Horizontal" 
+                                       HorizontalOptions="Center" 
+                                       VerticalOptions="Center">
+                                <ActivityIndicator IsRunning="True" 
+                                                 Color="#1465bb" 
+                                                 WidthRequest="20" 
+                                                 HeightRequest="20"/>
+                                <Label Text="{helpers:TranslateExtension Text='LblCargandoTiposAlarma'}" 
+                                       TextColor="#666666" 
+                                       FontSize="14" 
+                                       VerticalOptions="Center"
+                                       Margin="8,0,0,0"/>
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+                </StackLayout>
+
+                <!-- Sección Dirección de Escape -->
+                <StackLayout 
+                    IsVisible="{Binding MostrarBotonPuntoHuida}"
+                    Spacing="10">
+
+                    <Label 
+                        Text="{helpers:TranslateExtension Text='DireccionEscape'}"
+                        TextColor="#D32F2F" 
+                        FontSize="16"
+                        FontAttributes="Bold"
+                        HorizontalTextAlignment="Center" />
+
+                    <Button 
+                        Text="{helpers:TranslateExtension Text='LblMostrarDireccionEscape'}"
+                        BackgroundColor="#FFECB3"
+                        TextColor="#D32F2F"
+                        FontSize="16"
+                        FontAttributes="Bold"
+                        CornerRadius="10"
+                        HeightRequest="50"
+                        HorizontalOptions="FillAndExpand"
+                        Clicked="Abrir_MapaClicked"
+                        BorderColor="#FFB74D"
+                        BorderWidth="1" />
+                </StackLayout>
+
+                <!-- Descripción de la Alerta con Botón de Cámara -->
+                <StackLayout Spacing="5">
+                    <Label
+                        Text="{helpers:TranslateExtension Text='DescripcionAlerta'}"
+                        Style="{StaticResource SectionLabelStyle}" />
+
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Frame Grid.Column="0" Style="{StaticResource ModernFrameStyle}" HeightRequest="100">
+                            <Editor
+                                Style="{StaticResource ModernEditorStyle}"
+                                Placeholder="{helpers:TranslateExtension Text='TocaParaAgregarInfo'}"
+                                Text="{Binding DescripcionAlarma.DescripcionAlarma}"
+                                AutoSize="TextChanges" />
+                        </Frame>
+
+                        <!-- Botón de cámara -->
+                        <Border Grid.Column="1"
+                                StrokeThickness="1"
+                                Stroke="#1465bb"
+                                BackgroundColor="White"
+                                Margin="8,0,0,0"
+                                HeightRequest="44"
+                                WidthRequest="44"
+                                VerticalOptions="Start">
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="8"/>
+                            </Border.StrokeShape>
+                            <Border.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnCameraButtonTapped"/>
+                            </Border.GestureRecognizers>
+
+                            <Label Text="📷"
+                                   FontSize="24"
+                                   HorizontalTextAlignment="Center"
+                                   VerticalTextAlignment="Center"/>
+                        </Border>
+                    </Grid>
+
+                    <!-- Vista previa de fotos/videos -->
+                    <ScrollView Orientation="Horizontal"
+                                HeightRequest="80"
+                                Margin="0,5,0,0"
+                                IsVisible="{Binding HasMediaFiles}">
+                        <HorizontalStackLayout Spacing="8">
+                            <CollectionView ItemsSource="{Binding MediaFiles}"
+                                            ItemsLayout="HorizontalList">
+                                <CollectionView.ItemTemplate>
+                                    <DataTemplate>
+                                        <Border StrokeThickness="1"
+                                                Stroke="#E0E0E0"
+                                                HeightRequest="70"
+                                                WidthRequest="70"
+                                                Margin="2">
+                                            <Border.StrokeShape>
+                                                <RoundRectangle CornerRadius="8"/>
+                                            </Border.StrokeShape>
+                                            <Grid>
+                                                <!-- Thumbnail -->
+                                                <Image Source="{Binding ThumbnailPath}"
+                                                       Aspect="AspectFill"/>
+
+                                                <!-- Overlay para videos -->
+                                                <Label Text="▶"
+                                                       FontSize="24"
+                                                       TextColor="White"
+                                                       HorizontalOptions="Center"
+                                                       VerticalOptions="Center"
+                                                       IsVisible="{Binding IsVideo}"/>
+
+                                                <!-- Botón X para eliminar -->
+                                                <Border BackgroundColor="#80000000"
+                                                        HeightRequest="24"
+                                                        WidthRequest="24"
+                                                        HorizontalOptions="End"
+                                                        VerticalOptions="Start"
+                                                        Margin="4">
+                                                    <Border.StrokeShape>
+                                                        <RoundRectangle CornerRadius="12"/>
+                                                    </Border.StrokeShape>
+                                                    <Border.GestureRecognizers>
+                                                        <TapGestureRecognizer
+                                                            Command="{Binding Source={RelativeSource AncestorType={x:Type ContentPage}}, Path=BindingContext.RemoveMediaCommand}"
+                                                            CommandParameter="{Binding .}"/>
+                                                    </Border.GestureRecognizers>
+                                                    <Label Text="✕"
+                                                           FontSize="14"
+                                                           TextColor="White"
+                                                           HorizontalTextAlignment="Center"
+                                                           VerticalTextAlignment="Center"/>
+                                                </Border>
+                                            </Grid>
+                                        </Border>
+                                    </DataTemplate>
+                                </CollectionView.ItemTemplate>
+                            </CollectionView>
+                        </HorizontalStackLayout>
+                    </ScrollView>
+                </StackLayout>
+
+                <!-- Descripción del Implicado -->
+                <StackLayout Spacing="5">
+                    <Label 
+                        Text="{helpers:TranslateExtension Text='DescripcionImplicado'}"
+                        Style="{StaticResource SectionLabelStyle}" />
+
+                    <Frame Style="{StaticResource ModernFrameStyle}" HeightRequest="100">
+                        <Editor 
+                            Style="{StaticResource ModernEditorStyle}"
+                            Placeholder="{helpers:TranslateExtension Text='TocaParaAgregarInfo'}" 
+                            Text="{Binding DescripcionAlarma.DescripcionSospechoso}" 
+                            AutoSize="TextChanges" />
+                    </Frame>
+                </StackLayout>
+
+                <!-- Descripción del Vehículo -->
+                <StackLayout Spacing="5">
+                    <Label 
+                        Text="{helpers:TranslateExtension Text='DescripcionVehiculoImp'}"
+                        Style="{StaticResource SectionLabelStyle}" />
+
+                    <Frame Style="{StaticResource ModernFrameStyle}" HeightRequest="60">
+                        <Entry 
+                            Style="{StaticResource ModernEntryStyle}"
+                            Placeholder="{helpers:TranslateExtension Text='TocaParaAgregarInfo'}" 
+                            Text="{Binding DescripcionAlarma.DescripcionVehiculo}" 
+                            VerticalTextAlignment="Center"/>
+                    </Frame>
+                </StackLayout>
+
+                <!-- Arma Implicada -->
+                <StackLayout Spacing="5">
+                    <Label 
+                        Text="{helpers:TranslateExtension Text='ArmaImplicada'}"
+                        Style="{StaticResource SectionLabelStyle}" />
+
+                    <Frame Style="{StaticResource ModernFrameStyle}" HeightRequest="60">
+                        <Entry 
+                            Style="{StaticResource ModernEntryStyle}"
+                            Placeholder="{helpers:TranslateExtension Text='TocaParaAgregarInfo'}" 
+                            Text="{Binding DescripcionAlarma.DescripcionArmas}" 
+                            VerticalTextAlignment="Center"/>
+                    </Frame>
+                </StackLayout>
+
+                <!-- Espaciado adicional para botones fijos -->
+                <BoxView HeightRequest="80" Color="Transparent" />
+
+            </StackLayout>
+        </ScrollView>
+
+        <!-- BOTONES FIJOS EN LA PARTE INFERIOR -->
+        <StackLayout 
+            BackgroundColor="White"
+            Padding="20,10,20,20"
+            Spacing="15"
+            VerticalOptions="End">
+
+            <BoxView 
+                HeightRequest="1" 
+                BackgroundColor="#E0E0E0" 
+                HorizontalOptions="FillAndExpand" />
+
+            <StackLayout Orientation="Horizontal" Spacing="10">
+                <!-- Botón Cancelar -->
+                <Button 
+                    Text="{helpers:TranslateExtension Text='LabelCancelar'}" 
+                    BackgroundColor="#F5F5F5"
+                    TextColor="#333333"
+                    FontSize="14"
+                    FontAttributes="Bold"
+                    HeightRequest="50" 
+                    CornerRadius="12"
+                    BorderColor="#CCCCCC"
+                    BorderWidth="1"
+                    HorizontalOptions="FillAndExpand"
+                    Command="{Binding CancelarCommand}" />
+
+                <!-- Botón Chat -->
+                <Button 
+                    Text="{helpers:TranslateExtension Text='LabelChat'}"
+                    BackgroundColor="#2196F3"
+                    TextColor="White"
+                    FontSize="14"
+                    FontAttributes="Bold"
+                    HeightRequest="50" 
+                    CornerRadius="12"
+                    HorizontalOptions="FillAndExpand"
+                    Clicked="OnChatClicked" />
+
+                <!-- Botón Hecho -->
+                <Button 
+                    Text="{helpers:TranslateExtension Text='LabelHecho'}" 
+                    BackgroundColor="#4CAF50"
+                    TextColor="White"
+                    FontSize="14"
+                    FontAttributes="Bold"
+                    HeightRequest="50" 
+                    CornerRadius="12"
+                    HorizontalOptions="FillAndExpand"
+                    Command="{Binding HechoCommand}" />
+            </StackLayout>
+        </StackLayout>
+    </Grid>
+</ContentPage>

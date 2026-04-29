@@ -249,18 +249,6 @@
   <data name="DireccionEscape" xml:space="preserve">
     <value>請註明嫌疑人的逃生方向。</value>
   </data>
-  <data name="DescripcionAlerta" xml:space="preserve">
-    <value>警報的說明</value>
-  </data>
-  <data name="DescripcionImplicado" xml:space="preserve">
-    <value>警報中涉及的人員的說明</value>
-  </data>
-  <data name="DescripcionVehiculoImp" xml:space="preserve">
-    <value>涉及車輛（如適用）</value>
-  </data>
-  <data name="ArmaImplicada" xml:space="preserve">
-    <value>涉及的武器（如適用）</value>
-  </data>
   <data name="LabelRutaEscape" xml:space="preserve">
     <value>可疑逃生路線</value>
   </data>
@@ -660,9 +648,6 @@
   <data name="LblSaldoPoderesEs" xml:space="preserve">
     <value>我的力量平衡是：</value>
   </data>
-  <data name="LblUsuarioID" xml:space="preserve">
-    <value>我的使用者ID是</value>
-  </data>
   <data name="LblAlertaReportadaPorMi" xml:space="preserve">
     <value>我報告的警報</value>
   </data>
@@ -690,23 +675,14 @@
   <data name="LblAlarmaNoGrave" xml:space="preserve">
     <value>使用黃色按鈕放置低危險警報並提醒您的社區或保護者。您可以選擇警報類型並將其標記為已犯罪。此按鈕會在您的確切位置啟動警報，在您需要説明時非常有用。您還可以在地圖上選擇一個點來定位警報，而不會影響您的位置。</value>
   </data>
-  <data name="LblCrimenCometido" xml:space="preserve">
-    <value>紅色按鈕觸發一個類別：犯罪警報。SOSpect 不要求您包含類別，因為在這些情況下時間很重要。警報會自動放置在您的確切位置。您還可以在地圖上選擇一個點來放置警報，然後將類別更改為已犯罪。</value>
-  </data>
   <data name="LblDescripcionAlarmas" xml:space="preserve">
     <value>在底部欄的“描述”選項中，您將找到您或其他人放置的警報清單。如果您創建了警報，則可以添加描述。如果警報是由其他人創建的，您可以對其真實性進行評分並補充其描述。小心！如果您提供虛假資訊或評分不正確，您的帳戶可能會被暫停。請仔細查看條款和條件以避免這種情況。</value>
   </data>
   <data name="LblDescripcionMensajes" xml:space="preserve">
     <value>在右上角的鈴鐺中，您可以閱讀消息，其中包括訂閱通知和最近的警報。此清單與描述選項不同，您可以在其中直接找到最近的警報。</value>
   </data>
-  <data name="LblDescripcionMenu" xml:space="preserve">
-    <value>在左上角的齒輪中，您將找到SOSpect配置選項。您可以購買電源來購買訂閱並保護您的家人或擴大您的警報接收半徑。記得！一開始，我們為您提供80種功能，因此您可以從一開始就購買兩個訂閱。</value>
-  </data>
   <data name="LblRecomendaciones" xml:space="preserve">
     <value>我們一起立於不敗之地！半徑100米內的警報和接收警報的基本功能是免費的，當您開始時，我們會為您提供2個訂閱。邀請您的社區和家人使用此免費服務來打擊不斷上升的犯罪率。您可以通過及時收到警報來挽救生命或被拯救。走失人員或寵物的警報範圍為10公里，暴力示威的射程為1公里</value>
-  </data>
-  <data name="LblPromocion" xml:space="preserve">
-    <value>最後，請記住，當您在SOSpect中提供的每個真實評級時，當警報的投票在放置90分鐘後關閉時，您將獲得一份授權書。大多數人都是誠實的，我們將一起保護彼此和家人。歡迎來到SOSPECT！</value>
   </data>
   <data name="LblDescripcionMapa" xml:space="preserve">
     <value>您可以隨時選擇底部欄左側的“MAP”選項，這是SOSpect的起點。從那裡，您可以查看附近的警報。您的位置將顯示在地圖的中心，圓圈表示可能影響您的半徑。默認情況下，此半徑為100公尺，但您可以在設置功能表中對其進行修改。</value>
@@ -1171,7 +1147,1938 @@ SOSpect是一款免費工具，旨在通過提供有關附近風險的及時警�
   <data name="Capturasrealizadasenunkilometroymedioalaredondademiubicacion" xml:space="preserve">
     <value>在我的位置周圍一公里半內捕獲</value>
   </data>
+  <data name="LblErrorConexion" xml:space="preserve">
+    <value>連接錯誤</value>
+  </data>
+  <data name="LblCierreSesion" xml:space="preserve">
+    <value>註銷</value>
+  </data>
+  <data name="LblSinConexionDetalle" xml:space="preserve">
+    <value>離線，請啟動連接並重新啟動應用程式</value>
+</data>
+  <data name="CmdGuardarConfiguracion" xml:space="preserve">
+    <value>保存設置</value>
+  </data>
+  <data name="LblCantDiasNotifApagada" xml:space="preserve">
+    <value>我想以主管當局的身份關閉通知的天數</value>
+  </data>
+  <data name="LblNotifAlarmasCercanas" xml:space="preserve">
+    <value>接收附近警報的通知</value>
+  </data>
+  <data name="LblNotifAlarmasProtegidos" xml:space="preserve">
+    <value>接收受保護者發出的警報通知</value>
+  </data>
+  <data name="LblNotifAlarmasZonas" xml:space="preserve">
+    <value>接收監控區域內發出警報的通知</value>
+  </data>
+  <data name="LblNotifAlarmasAutoridadComp" xml:space="preserve">
+    <value>以主管當局的身份接收警報通知</value>
+  </data>
+  <data name="LblDescripcionConfNotificaciones" xml:space="preserve">
+    <value>這是您當前的通知設置，請根據自己的喜好關閉或打開它們，以使您在SOSpect上的體驗越來越好！</value>
+  </data>
+  <data name="LblConfNotifGuardadas" xml:space="preserve">
+    <value>新設置已成功保存</value>
+  </data>
+  <data name="LblConfNotifNoSeGuarda" xml:space="preserve">
+    <value>無法儲存設置。請重試。</value>
+  </data>
+  <data name="LblConfigNotificaciones" xml:space="preserve">
+    <value>配置 SOSpect 通知</value>
+  </data>
+  <data name="LblFechaApagadoAutomaticoNotif" xml:space="preserve">
+    <value>警方通知關閉日期：</value>
+  </data>
+  <data name="LblTiempoParaActivacionAutomatica" xml:space="preserve">
+    <value>自動啟動的剩餘時間：</value>
+  </data>
+  <data name="LblCamposIncompletos" xml:space="preserve">
+    <value>請正確填寫所有欄位。</value>
+  </data>
+  <data name="LblNoAplicable" xml:space="preserve">
+    <value>不適用</value>
+  </data>
+  <data name="LblTiempoExpirado" xml:space="preserve">
+    <value>已過期時間</value>
+  </data>
+  <data name="LblCopiado" xml:space="preserve">
+    <value>複製</value>
+  </data>
+  <data name="LblUsuarioCopiado" xml:space="preserve">
+    <value>使用者ID已複製到剪貼簿</value>
+  </data>
   <data name="LblCondicionesCierreAlarma" xml:space="preserve">
-    <value>只有在您創建了鬧鐘或未有人參與鬧鐘時，您才能關閉鬧鐘</value>
+    <value>說明關閉的原因。如果你是創造者並且它不被注意，它將關閉。</value>
+  </data>
+  <data name="LabelCheckConnection" xml:space="preserve">
+    <value>由於 Internet 連接失敗，無法驗證 SOSpect 的版本。檢查連接性。</value>
+  </data>
+  <data name="TocaParaAgregarInfo" xml:space="preserve">
+    <value>點擊此處添加資訊</value>
+  </data>
+  <data name="DescripcionAlerta" xml:space="preserve">
+    <value>警示說明（選擇）</value>
+  </data>
+  <data name="DescripcionImplicado" xml:space="preserve">
+    <value>警報中涉及的人員的描述（可選）</value>
+  </data>
+  <data name="DescripcionVehiculoImp" xml:space="preserve">
+    <value>涉及車輛（可選）</value>
+  </data>
+  <data name="ArmaImplicada" xml:space="preserve">
+    <value>涉及的武器（可選）</value>
+  </data>
+  <data name="TocaAlarmaARevisar" xml:space="preserve">
+    <value>點按要查看的鬧鐘</value>
+  </data>
+  <data name="TocaAquiParaDescribir" xml:space="preserve">
+    <value>點擊此處添加描述或互動</value>
+  </data>
+  <data name="MostrarAlarmaEnMapa" xml:space="preserve">
+    <value>在地圖上顯示鬧鐘</value>
+  </data>
+  <data name="EsAlarmaVerdadera" xml:space="preserve">
+    <value>警報是真的嗎？</value>
+  </data>
+  <data name="BorraDatosYCierraSesion" xml:space="preserve">
+    <value>清除我的數據並註銷</value>
+  </data>
+  <data name="ElValorNoCorrespondeAsuID" xml:space="preserve">
+    <value>輸入的值與您的使用者ID不對應</value>
+  </data>
+  <data name="SeEliminaronTodosSusDatos" xml:space="preserve">
+    <value>您的所有資料都已刪除，此工作階段將被註銷</value>
+  </data>
+  <data name="FailureDeletingData" xml:space="preserve">
+    <value>無法刪除使用者資料，沒有資料被刪除。</value>
+  </data>
+  <data name="LblAtencion" xml:space="preserve">
+    <value>注意力！</value>
+  </data>
+  <data name="AdverBorradoDatos" xml:space="preserve">
+    <value>警告：此操作將永久刪除您的所有數據，包括在SOSpect上的購買和訂閱。只有通過詳細的 soporte@wescot.com.co 請求才能檢索購買，但需經過驗證。</value>
+  </data>
+  <data name="ConfirmarBorradoDatosUsuario" xml:space="preserve">
+    <value>若要確認刪除數據，請輸入您的使用者ID（位於設置功能表頂部）並按下「確定」。這將刪除您的數據並自動註銷。</value>
+  </data>
+  <data name="ColoqueSuIDUsuario" xml:space="preserve">
+    <value>在此處輸入您的使用者ID</value>
+  </data>
+  <data name="AccionNoPermitida" xml:space="preserve">
+    <value>不允許的行為</value>
+  </data>
+  <data name="SoloAutoridadCompetente" xml:space="preserve">
+    <value>如果警報處於活動狀態，則只有主管當局才能回應警報。</value>
+  </data>
+  <data name="SoloCreadorConfirmaAlarma" xml:space="preserve">
+    <value>如果您是建立者或警報未處於活動狀態，則無法確認警報。</value>
+  </data>
+  <data name="SoloCreadorCierraAlarma" xml:space="preserve">
+    <value>警報只能由其建立者、當局或處於活動狀態時關閉。</value>
+  </data>
+  <data name="IrAConfiguracion" xml:space="preserve">
+    <value>前往設置</value>
+  </data>
+  <data name="LblIgnorar" xml:space="preserve">
+    <value>忽視</value>
+  </data>
+  <data name="LblImportante" xml:space="preserve">
+    <value>重要！</value>
+  </data>
+  <data name="SinNotifPodriasEstarEnRiesgo" xml:space="preserve">
+    <value>忽略風險警報？如果沒有通知，您可能會錯過重要通知。</value>
+  </data>
+  <data name="LblCierreSesionDetalle" xml:space="preserve">
+    <value>您已通過在其他設備上登錄或啟用通知而註銷。</value>
+  </data>
+  <data name="LblAlarmaActiva" xml:space="preserve">
+    <value>主動報警</value>
+  </data>
+  <data name="LblDescripcion" xml:space="preserve">
+    <value>描述：</value>
+  </data>
+  <data name="LblHistorialAlertas" xml:space="preserve">
+    <value>無線電警報歷史 3 公里。</value>
+  </data>
+  <data name="LblTituloHistorialAlertas" xml:space="preserve">
+    <value>半徑 3 公里內過去 30 天的警報歷史記錄。</value>
+  </data>
+  <data name="LblVolverAtras" xml:space="preserve">
+    <value>返回頁首</value>
+  </data>
+  <data name="LblTocaAgregarDescripcion" xml:space="preserve">
+    <value>點擊此處新增描述（選擇）</value>
+  </data>
+  <data name="LabelSessionExpired" xml:space="preserve">
+    <value>您的工作階段已過期。請重新登錄。</value>
+  </data>
+  <data name="LabelAlarmaDeRedConfianza" xml:space="preserve">
+    <value>受信任的網路用戶創建的警報</value>
+  </data>
+  <data name="LabelEscritoRedConfianza" xml:space="preserve">
+    <value>由受信任的網路使用者撰寫</value>
+  </data>
+  <data name="LabelPertenecesRedConfianza" xml:space="preserve">
+    <value>您屬於SOSpect的可信賴網路！</value>
+  </data>
+  <data name="LabelVentajasRedC" xml:space="preserve">
+    <value>加入可信網路的優勢</value>
+  </data>
+  <data name="LabelV1UsuariosConfiables" xml:space="preserve">
+    <value>1. 可信使用者的識別和驗證：</value>
+  </data>
+  <data name="LabelV1UsuariosConfiablesDesc" xml:space="preserve">
+    <value>識別和驗證始終提供準確和有用資訊的用戶的機制。這確保了在網路內共享的數據是高品質和可靠的。</value>
+  </data>
+  <data name="LabelV2AlertasPrioritarias" xml:space="preserve">
+    <value>2. 優先順序提醒：</value>
+  </data>
+  <data name="LabelV2AlertasPrioritariasDesc" xml:space="preserve">
+    <value>由受信任網路內的已驗證使用者生成的警報具有更高的可見性和優先順序。這意味著他們將在平臺上脫穎而出，從而使社區和當局能夠更快、更有效地做出回應。</value>
+  </data>
+  <data name="LabelV3RecompensasConfiabilidad" xml:space="preserve">
+    <value>3. 可靠性獎勵：</value>
+  </data>
+  <data name="LabelV3RecompensasConfiabilidadDesc" xml:space="preserve">
+    <value>通過應用內獎勵激勵受信任的使用者，例如額外的“能力”或高級功能。這不僅激勵了使用者保持自己的可信度狀態，也豐富了他們在平臺上的體驗。</value>
+  </data>
+  <data name="LabelMasVentajas" xml:space="preserve">
+    <value>更多優勢：</value>
+  </data>
+  <data name="LabelMasVentajasDesc" xml:space="preserve">
+    <value>受信任網路使用者生成的告警在告警清單中以綠框顯示，並帶有一個標誌，表明告警來自已驗證的使用者。此外，地圖上的圖釘標記為綠色，表示它是已驗證的警報。來自受信任網路用戶的評論也會用綠色標誌突出顯示，表示他們的受信任來源。</value>
+  </data>
+  <data name="LabelObjetivoVentajas" xml:space="preserve">
+    <value>受信任網路的成員應該是遠離犯罪的人，因此他們的警報被認為是可靠的，應該更加認真地對待。這有助於建立更安全的社區和更有效地回應警報。</value>
+  </data>
+  <data name="LabelTitleVentajas" xml:space="preserve">
+    <value>優勢</value>
+  </data>
+  <data name="LabelTitleDatosBasicos" xml:space="preserve">
+    <value>添加基礎數據</value>
+  </data>
+  <data name="LabelInstruccionesDatosBasicos" xml:space="preserve">
+    <value>請輸入您的基本詳細資訊以加入SOSpect可信網路。僅當您認識可以添加您的網路成員時，才執行此操作。請確保您提供真實且正確的資訊，因為在被添加到受信任的網路後，您將無法對其進行修改。</value>
+  </data>
+  <data name="LabelNombres" xml:space="preserve">
+    <value>名稱：</value>
+  </data>
+  <data name="LabelApellidos" xml:space="preserve">
+    <value>姓氏：</value>
+  </data>
+  <data name="LabelNumeroMovil" xml:space="preserve">
+    <value>手機號碼：</value>
+  </data>
+  <data name="LabelEmail" xml:space="preserve">
+    <value>電子郵件：</value>
+  </data>
+  <data name="LabelPais" xml:space="preserve">
+    <value>國家：</value>
+  </data>
+  <data name="LabelDocumentoIdentificacion" xml:space="preserve">
+    <value>國民身份證明檔：</value>
+  </data>
+  <data name="LabelGuardarDatosBasicos" xml:space="preserve">
+    <value>保存或更新數據</value>
+  </data>
+  <data name="LabelValidacionNombres" xml:space="preserve">
+    <value>名稱無效，只允許使用字母。</value>
+  </data>
+  <data name="LabelValidacionApellidos" xml:space="preserve">
+    <value>無效的姓氏，只允許使用字母。</value>
+  </data>
+  <data name="LabelValidacionCelular" xml:space="preserve">
+    <value>無效的手機號碼，只允許使用號碼。</value>
+  </data>
+  <data name="LabelValidacionEmail" xml:space="preserve">
+    <value>無效的電子郵件。</value>
+  </data>
+  <data name="LabelValidacionPais" xml:space="preserve">
+    <value>無效的國家/地區，只允許使用字母。</value>
+  </data>
+  <data name="LabelValidacionDocumento" xml:space="preserve">
+    <value>ID 無效，只允許使用字母數位字元、句點和連字元。</value>
+  </data>
+  <data name="LabelAgregarUsuarioRedTitle" xml:space="preserve">
+    <value>將使用者添加到受信任的網路</value>
+  </data>
+  <data name="LabelEscribaIDUsuario" xml:space="preserve">
+    <value>在此輸入要保護的使用者的代碼：</value>
+  </data>
+  <data name="LabelConsultarDisponibilidad" xml:space="preserve">
+    <value>查看餘票</value>
+  </data>
+  <data name="LabelAgregarUsuario" xml:space="preserve">
+    <value>添加使用者</value>
+  </data>
+  <data name="LabelDesventajasTitle" xml:space="preserve">
+    <value>弊</value>
+  </data>
+  <data name="LabelDesventajasSubTitle" xml:space="preserve">
+    <value>加入信任網路的缺點</value>
+  </data>
+  <data name="LabelDV1Investigacion" xml:space="preserve">
+    <value>1. 不負責任的警報調查：</value>
+  </data>
+  <data name="LabelDV1InvestigacionDesc" xml:space="preserve">
+    <value>在主管當局要求的情況下，如果懷疑警報器是不負責任或撒謊放置的，影響了其他公民，則可以對警報器進行調查。</value>
+  </data>
+  <data name="LabelDV2Requisitos" xml:space="preserve">
+    <value>2. SOSpect驗證要求：</value>
+  </data>
+  <data name="LabelDV2RequisitosDesc" xml:space="preserve">
+    <value>在提交資訊之前，SOSpect 將驗證調查請求是否有足夠的理由。此外，在與獨裁政權、非法團體、黑手黨或類似組織有聯繫的政府或當局有關的情況下，將拒絕提供資訊，以保護創建警報的使用者。</value>
+  </data>
+  <data name="LabelDV3ImplicacionAgregador" xml:space="preserve">
+    <value>3. 聚合用戶的參與：</value>
+  </data>
+  <data name="LabelDV3ImplicacionAgregadorDesc" xml:space="preserve">
+    <value>在最終的調查中，主管當局可能會要求在受信任網路中添加警報創建者的使用者配合調查，但需要遵守上述相同的警告。</value>
+  </data>
+  <data name="LabelDV4BorradoInformacion" xml:space="preserve">
+    <value>4. 資訊移除：</value>
+  </data>
+  <data name="LabelDV4BorradoInformacionDesc" xml:space="preserve">
+    <value>當使用者決定從 SOSpect 中刪除他們的資訊並卸載應用程式時，SOSpect 將在 90 個日曆日後將其刪除，在確認主管當局沒有就使用者放置的警報提出任何投訴後。</value>
+  </data>
+  <data name="LabelDV5Responsabilidad" xml:space="preserve">
+    <value>5. 潛在責任：</value>
+  </data>
+  <data name="LabelDV5ResponsabilidadDesc" xml:space="preserve">
+    <value>成為受信任網路的一部分會帶來額外的責任，因為成員只能添加受信任的使用者。如果添加不符合這些標準的人，可能會產生負面後果。</value>
+  </data>
+  <data name="LabelListarRedConfianzaTitle" xml:space="preserve">
+    <value>列出受信任的網路</value>
+  </data>
+  <data name="LabelNoHayUsuarioEnRed" xml:space="preserve">
+    <value>網路上沒有受信任的使用者</value>
+  </data>
+  <data name="LabelTitleMasInformacion" xml:space="preserve">
+    <value>瞭解更多資訊</value>
+  </data>
+  <data name="LabelQueEsRedConfianza" xml:space="preserve">
+    <value>什麼是信任網路？</value>
+  </data>
+  <data name="LabelQueEsRedConfianzaDesc" xml:space="preserve">
+    <value>SOSpect 中的「信任網路」是一項功能，旨在允許使用者在應用程式內創建一個受信任的人圈子。通過添加您認識和信任的人，您的警報和通知將以更高的優先順序和可見性進行處理。主要目標是提高通過應用程式發出的警報的有效性和可靠性，確保來自經過驗證的使用者的警報得到必要的關注。</value>
+  </data>
+  <data name="LabelFuncionamientoRed" xml:space="preserve">
+    <value>信任網路的工作原理</value>
+  </data>
+  <data name="Label1IdentificacionUsuarios" xml:space="preserve">
+    <value>1. 可信使用者的識別：</value>
+  </data>
+  <data name="Label1IdentificacionUsuariosDesc" xml:space="preserve">
+    <value>您可以將您認識和信任的人添加到您的受信任網路中。這將確保您的警報在應用程式內被視為已驗證，以綠色標記，並具有更高的可見性。</value>
+  </data>
+  <data name="Label2Privacidad" xml:space="preserve">
+    <value>2. 警報的隱私：</value>
+  </data>
+  <data name="Label2PrivacidadDesc" xml:space="preserve">
+    <value>儘管優先考慮受信任的網路警報，但所有警報都保持匿名。使用者的身份和個人資訊不會暴露給其他使用者，在保證隱私的同時，提高了警報的有效性。</value>
+  </data>
+  <data name="Label3ComposicionRed" xml:space="preserve">
+    <value>3. 網路的組成：</value>
+  </data>
+  <data name="Label3ComposicionRedDesc" xml:space="preserve">
+    <value>預計該網路將由遠離犯罪活動的人組成。應謹慎處理在此網路中包含使用者，確保僅添加受信任的人。</value>
+  </data>
+  <data name="Label4DatosInalterables" xml:space="preserve">
+    <value>4. 資料的不可改變性：</value>
+  </data>
+  <data name="Label4DatosInalterablesDesc" xml:space="preserve">
+    <value>一旦使用者被添加到受信任的網路中，他們將無法更改其基本數據或被從網路中刪除。實施此規則是為了維護網路的完整性和可靠性。</value>
+  </data>
+  <data name="LabelRecomendacionesRed" xml:space="preserve">
+    <value>有關將使用者添加到受信任網路的建議</value>
+  </data>
+  <data name="Label1VerificaIdentidad" xml:space="preserve">
+    <value>1. 驗證身份：</value>
+  </data>
+  <data name="Label1VerificaIdentidadDesc" xml:space="preserve">
+    <value>在將某人添加到受信任的網路之前，請確保您知道並驗證使用者的身份。由於您的警報將受到特殊處理，因此您對所提供信息的真實性充滿信心至關重要。</value>
+  </data>
+  <data name="Label2RevisaInfo" xml:space="preserve">
+    <value>2. 查看基本資訊：</value>
+  </data>
+  <data name="Label2RevisaInfoDesc" xml:space="preserve">
+    <value>重要的是要確保使用者的基本數據，如姓名、手機號碼、電子郵件和國民身份證件，是正確和最新的。</value>
+  </data>
+  <data name="Label3ResponsabilidadAgregador" xml:space="preserve">
+    <value>3. 聚合商的責任：</value>
+  </data>
+  <data name="Label3ResponsabilidadAgregadorDesc" xml:space="preserve">
+    <value>當您將使用者添加到受信任的網路時，您有責任確保使用者的數據準確無誤。這對於保持網路完整性和確保經過驗證的警報具有高品質和可靠性至關重要。</value>
+  </data>
+  <data name="LabelRecomendacionesAdicionales" xml:space="preserve">
+    <value>其他警告和建議</value>
+  </data>
+  <data name="Label1InvestigacionAlarmas" xml:space="preserve">
+    <value>1.告警調查：</value>
+  </data>
+  <data name="Label1InvestigacionAlarmasDesc" xml:space="preserve">
+    <value>如果主管部門要求，可以對受信任的網路用戶發出的警報進行調查。SOSpect 將在移交任何資訊之前採取措施驗證請求的合法性，並在涉及與獨裁政權、非法團體、黑手黨等相關的政府或實體的案件中拒絕此類移交。</value>
+  </data>
+  <data name="Label2ImplicacionesAgregador" xml:space="preserve">
+    <value>2. 對聚合器用戶的影響：</value>
+  </data>
+  <data name="Label2ImplicacionesAgregadorDesc" xml:space="preserve">
+    <value>在進行調查的情況下，可能會要求添加警報創建者的用戶進行合作，並始終受到相同的法律保護。</value>
+  </data>
+  <data name="Label3EliminacionDatos" xml:space="preserve">
+    <value>3. 資料刪除流程：</value>
+  </data>
+  <data name="Label3EliminacionDatosDesc" xml:space="preserve">
+    <value>如果使用者決定刪除其資訊並卸載應用程式，SOSpect 將在 90 天后繼續刪除數據，前提是主管當局未就使用者發出的警報提出投訴。</value>
+  </data>
+  <data name="LabelTitleRedConfianza" xml:space="preserve">
+    <value>信任網路</value>
+  </data>
+  <data name="LabelBienvenidoRedConfianza" xml:space="preserve">
+    <value>歡迎來到信任網路。在這裡，您可以添加您認識和信任的人，使他們的警報被視為已驗證、標記為綠色並賦予其更重要性。請記住，所有警報都將保持匿名，不會洩露任何人的數據。
+
+不屬於您受信任網路的人員的警報將顯示為灰色。預計該網路將由遠離犯罪活動的可信賴的人組成。
+
+您添加的使用者必須通過進入SOSpect功能表並填寫必填資訊來提供其基本數據。作為聚合商，您有責任確保這些數據的真實性。一旦添加，使用者將無法更改其數據或從網路中刪除。</value>
+  </data>
+  <data name="LabelQuieroSaberMas" xml:space="preserve">
+    <value>我想知道更多</value>
+  </data>
+  <data name="LabelVentajasRed" xml:space="preserve">
+    <value>可信網路的優勢</value>
+  </data>
+  <data name="LabelDesventajasRed" xml:space="preserve">
+    <value>可信網路的缺點</value>
+  </data>
+  <data name="LabelAgregarDatosBasicos" xml:space="preserve">
+    <value>添加或修改要包含的基本數據</value>
+  </data>
+  <data name="LabelAgregarUsuarioARed" xml:space="preserve">
+    <value>將使用者添加到受信任的網路</value>
+  </data>
+  <data name="LabelListarUsuariosRed" xml:space="preserve">
+    <value>列出我添加的受信任網路使用者</value>
+  </data>
+  <data name="Ellídernotieneelindicadordereddeconfianzaestablecidoenverdadero" xml:space="preserve">
+    <value>領導者未將信任網路指示器設置為 true</value>
+  </data>
+  <data name="Unoomáscamposobligatoriossonnulos" xml:space="preserve">
+    <value>一個或多個必填欄位為 null</value>
+  </data>
+  <data name="Elnuevousuarioyaperteneceaunareddeconfianza" xml:space="preserve">
+    <value>新用戶已屬於受信任的網路</value>
+  </data>
+  <data name="Usuarioagregadoalareddeconfianzaconéxito" xml:space="preserve">
+    <value>使用者已成功添加到受信任的網路</value>
+  </data>
+  <data name="NoseencontróningúnusuarioconelIDdeusuariodetercerosproporcionado" xml:space="preserve">
+    <value>未找到使用提供的第三方使用者 ID 的使用者</value>
+  </data>
+  <data name="Elusuarioyaespartedelareddeconfianza" xml:space="preserve">
+    <value>用戶已經是受信任網路的一部分</value>
+  </data>
+  <data name="Lainformaciónpersonaldelusuarioqueseagregaráalareddeconfianzaestáincompleta" xml:space="preserve">
+    <value>要添加到受信任網路的用戶個人資訊不完整</value>
+  </data>
+  <data name="Lainformaciónpersonaldelusuarioqueseagregaráalareddeconfianzaestácompletayelusuarioaúnnoformapartedelareddeconfianza" xml:space="preserve">
+    <value>要添加到受信任網路的用戶個人資訊已完整，且使用者尚未成為受信任網路的一部分</value>
+  </data>
+  <data name="Elusuarioyaformapartedelareddeconfianzaysuinformaciónnopuedemodificarse" xml:space="preserve">
+    <value>用戶已經是受信任網路的一部分，他們的信息無法修改</value>
+  </data>
+  <data name="Informacióndelusuarioactualizadaexitosamente" xml:space="preserve">
+    <value>已成功更新用戶資訊</value>
+  </data>
+  <data name="LabelGuardadoRedConfianza" xml:space="preserve">
+    <value>樺！您只能在加入受信任網路之前更新數據</value>
+  </data>
+  <data name="Userinformationupdatedsuccessfully" xml:space="preserve">
+    <value>已成功更新用戶資訊</value>
+  </data>
+  <data name="Anerroroccurredwhileupdatinguserinformation" xml:space="preserve">
+    <value>更新使用者資訊時出錯</value>
+  </data>
+  <data name="Invalidmodelstateforuserinformation" xml:space="preserve">
+    <value>用戶資訊的模型狀態無效</value>
+  </data>
+  <data name="Userinformationretrievedsuccessfully" xml:space="preserve">
+    <value>已成功檢索用戶資訊</value>
+  </data>
+  <data name="NouserfoundwiththeprovidedthirdpartyuserID" xml:space="preserve">
+    <value>未找到使用提供的使用者 ID 的使用者</value>
+  </data>
+  <data name="Usersinthetrustnetworkretrievedsuccessfully" xml:space="preserve">
+    <value>受信任的網路使用者已成功恢復</value>
+  </data>
+  <data name="Anerroroccurredwhileretrievingusersinthetrustnetwork" xml:space="preserve">
+    <value>無法在受信任的網路上檢索使用者</value>
+  </data>
+  <data name="Useraddedtothetrustnetworksuccessfully" xml:space="preserve">
+    <value>使用者已成功添加到受信任的網路</value>
+  </data>
+  <data name="Anerroroccurredwhileaddingtheusertothetrustnetwork" xml:space="preserve">
+    <value>將使用者添加到受信任網路時出錯</value>
+  </data>
+  <data name="LabelRestriccionApple" xml:space="preserve">
+    <value>對於 Apple® iPhone®，在與主管當局達成協定之前，不允許報告“犯罪或犯罪”、“街頭鬥毆”、“騷亂或抗議”和“家庭暴力”警報類型。</value>
+  </data>
+  <data name="LblQueAccionRealizar" xml:space="preserve">
+    <value>您要採取什麼行動？</value>
+  </data>
+  <data name="LblVerEnMapa" xml:space="preserve">
+    <value>在地圖上查看</value>
+  </data>
+  <data name="LblIrAlPunto" xml:space="preserve">
+    <value>轉到這一點</value>
+  </data>
+  <data name="LblElegirApp" xml:space="preserve">
+    <value>選擇應用</value>
+  </data>
+  <data name="LblMapas" xml:space="preserve">
+    <value>地圖</value>
+  </data>
+  <data name="LblAnuncioPublicitario" xml:space="preserve">
+    <value>放置廣告</value>
+  </data>
+  <data name="LblErrorInicializandoParametros" xml:space="preserve">
+    <value>無法初始化用戶參數。檢查您的連接。</value>
+  </data>
+  <data name="LblMensajeCompraPoderes" xml:space="preserve">
+    <value>使用SOSpect並非必須購買電源。大多數功能都是免費的。此外，您可以通過真實地投票支援社區的警報來獲得權力。</value>
+  </data>
+  <data name="LblCargandoTiposAlarma" xml:space="preserve">
+    <value>載入警報類型...</value>
+  </data>
+  <data name="LabelTocarParaDetalles" xml:space="preserve">
+    <value>點擊查看詳情</value>
+  </data>
+  <data name="LabelChat" xml:space="preserve">
+    <value>💬 談</value>
+  </data>
+  <data name="LblLeeTerminosDetenidamente" xml:space="preserve">
+    <value>仔細閱讀條款和條件</value>
+  </data>
+  <data name="LblVisualizacionSoloLectura" xml:space="preserve">
+    <value>您正在以唯讀模式檢視字詞</value>
+  </data>
+  <data name="LblProcesando" xml:space="preserve">
+    <value>處理中...</value>
+  </data>
+  <data name="LabelSinAccesoAChat" xml:space="preserve">
+    <value>目前無法存取聊天</value>
+  </data>
+  <data name="LabelUbicacionNoDisponible" xml:space="preserve">
+    <value>位置不可用</value>
+  </data>
+  <data name="LabelVerificaGPS" xml:space="preserve">
+    <value>檢查您的 GPS 是否處於活動狀態</value>
+  </data>
+  <data name="LabelReintentar" xml:space="preserve">
+    <value>重試</value>
+  </data>
+  <data name="LabelReiniciarApp" xml:space="preserve">
+    <value>重新啟動應用程式</value>
+  </data>
+  <data name="LabelGPSRequerido" xml:space="preserve">
+    <value>需要 GPS</value>
+  </data>
+  <data name="LabelHabilitarUbicacion" xml:space="preserve">
+    <value>請在裝置設定中啟用位置</value>
+  </data>
+  <data name="LabelIrAConfiguracion" xml:space="preserve">
+    <value>前往設置</value>
+  </data>
+  <data name="MsgTrasAlarmaSinRiesgo" xml:space="preserve">
+    <value>如果您有時間，請描述警報，它對您的鄰居很有用！</value>
+  </data>
+  <data name="LabelSiguiente" xml:space="preserve">
+    <value>以下</value>
+  </data>
+  <data name="LabelAnterior" xml:space="preserve">
+    <value>前</value>
+  </data>
+  <data name="LabelOmitir" xml:space="preserve">
+    <value>省</value>
+  </data>
+  <data name="LabelFinalizar" xml:space="preserve">
+    <value>端</value>
+  </data>
+  <data name="LabelConfirmarOmitir" xml:space="preserve">
+    <value>跳過教學課程</value>
+  </data>
+  <data name="LabelMensajeOmitir" xml:space="preserve">
+    <value>您確定要跳過教程嗎？您可以通過註銷並重新登錄再次觀看。</value>
+  </data>
+  <data name="LabelMensajeVolverVerTutorial" xml:space="preserve">
+    <value>如果您想再次觀看本教程，只需註銷並重新登錄應用程序即可。</value>
+  </data>
+  <data name="LabelFelicitaciones" xml:space="preserve">
+    <value>恭喜！</value>
+  </data>
+  <data name="LabelTutorialCompletado" xml:space="preserve">
+    <value>您已完成 SOSpect 教學課程。現在您已準備好安全地使用該應用程序！</value>
+  </data>
+  <data name="LblDescripcionInicial" xml:space="preserve">
+    <value>歡迎使用 SOSpect，您的社區安全應用程式。我們將逐步向您展示它是如何工作的。</value>
+  </data>
+  <data name="LblDescripcionAlarmaNoGrave" xml:space="preserve">
+    <value>使用橙色按鈕報告需要注意但不是緊急情況的可疑情況。</value>
+  </data>
+  <data name="LblDescripcionCrimenCometido" xml:space="preserve">
+    <value>紅色按鈕用於報告正在進行或剛剛發生的犯罪。僅在嚴重情況下使用。</value>
+  </data>
+  <data name="LblDescripcionCompletaAlarmas" xml:space="preserve">
+    <value>在此部分中，您可以查看和描述附近的警報，以幫助社區中的其他用戶。</value>
+  </data>
+  <data name="LabelParaQueSirveSospect" xml:space="preserve">
+    <value>什麼是 SOSpect？</value>
+  </data>
+  <data name="LblAspectosBasicos" xml:space="preserve">
+    <value>基本</value>
+  </data>
+  <data name="LblEnviaUnaAlerta" xml:space="preserve">
+    <value>發送警報！</value>
+  </data>
+  <data name="LblCrimenCometido" xml:space="preserve">
+    <value>紅色按鈕會啟動類別為：犯罪的警報。SOSpect 不要求您包含類別，因為在這些情況下時間很重要。警報會自動放置在您的確切位置。您也可以在地圖上選取一個點來放置警示，然後將類別變更為「犯罪」。（對於沒有有效協議的國家/地區，Apple 不可用）</value>
+  </data>
+  <data name="LblReportaUnCrimen" xml:space="preserve">
+    <value>舉報犯罪！</value>
+  </data>
+  <data name="LblExplicaLoSucedido" xml:space="preserve">
+    <value>解釋發生了什麼事！</value>
+  </data>
+  <data name="LblRevisaTusNotificaciones" xml:space="preserve">
+    <value>檢查您的通知！</value>
+  </data>
+  <data name="LblAdministraTusConfiguraciones" xml:space="preserve">
+    <value>管理您的設置！</value>
+  </data>
+  <data name="LblPorSiFueraPoco" xml:space="preserve">
+    <value>...好像這還不夠......</value>
+  </data>
+  <data name="LblMuyImportante" xml:space="preserve">
+    <value>非常重要！</value>
+  </data>
+  <data name="LblParaFinalizar" xml:space="preserve">
+    <value>最後......</value>
+  </data>
+  <data name="LblQueAppUsar" xml:space="preserve">
+    <value>您想使用哪個應用程序？</value>
+  </data>
+  <data name="LblDescripcionMenu" xml:space="preserve">
+    <value>在左上角的齒輪中，您將找到 SOSpect 配置選項。您可以購買購買訂閱並保護您的家人或擴大您的警報接收半徑的權力。</value>
+  </data>
+  <data name="LblPromocion" xml:space="preserve">
+    <value>要！當您開始時，我們會為您提供 100 種權限，以便您可以從一開始就購買兩個訂閱。
+
+最後，請記住，當您在 SOSpect 中提供的每項真實評級時，當警報投票在放置後 90 分鐘後關閉時，您將獲得一份授權書。大多數人都是誠實的，我們將一起保護彼此和我們的家人。歡迎來到 SOSPECT！</value>
+  </data>
+  <data name="LabelErrorReiniciar" xml:space="preserve">
+    <value>出現了一個意外的錯誤。請重新啟動 SOSpect。如果錯誤仍然存在，請聯絡 soporte@wescot.com.co</value>
+  </data>
+  <data name="LblLeyenda" xml:space="preserve">
+    <value>警示類型報告</value>
+  </data>
+  <data name="LabelDescribirAlarma" xml:space="preserve">
+    <value>描述警報</value>
+  </data>
+  <data name="LblErrorNavegador" xml:space="preserve">
+    <value>開啟瀏覽器時出錯</value>
+  </data>
+  <data name="LblErrorManual" xml:space="preserve">
+    <value>開啟手冊時出錯</value>
+  </data>
+  <data name="LblErrorSitioWeb" xml:space="preserve">
+    <value>開啟網站時出錯</value>
+  </data>
+  <data name="LabelMoreOptions" xml:space="preserve">
+    <value>更多選項</value>
+  </data>
+  <data name="LblAgregarMedia" xml:space="preserve">
+    <value>請加入照片或影片</value>
+  </data>
+  <data name="LblTomarFoto" xml:space="preserve">
+    <value>拍照</value>
+  </data>
+  <data name="LblSeleccionarFoto" xml:space="preserve">
+    <value>從你的相簿中選擇照片</value>
+  </data>
+  <data name="LblSeleccionarVideo" xml:space="preserve">
+    <value>精選影片</value>
+  </data>
+  <data name="LblPermisoCamaraNecesario" xml:space="preserve">
+    <value>拍照需取得相機許可</value>
+  </data>
+  <data name="LblCamaraNoDisponible" xml:space="preserve">
+    <value>此裝置無法使用該相機</value>
+  </data>
+  <data name="LblCamaraNoCompatible" xml:space="preserve">
+    <value>此相機與此裝置不相容</value>
+  </data>
+  <data name="LblTomarFotoAlarma" xml:space="preserve">
+    <value>拍照以示警戒</value>
+  </data>
+  <data name="LblSeleccionarFotoAlarma" xml:space="preserve">
+    <value>請選擇警報照片</value>
+  </data>
+  <data name="LblSeleccionarVideoAlarma" xml:space="preserve">
+    <value>選擇警報影片</value>
+  </data>
+  <data name="LblErrorCapturarFoto" xml:space="preserve">
+    <value>沒能拍到照片</value>
+  </data>
+  <data name="LblErrorSeleccionarFoto" xml:space="preserve">
+    <value>無法選取照片</value>
+  </data>
+  <data name="LblErrorSeleccionarVideo" xml:space="preserve">
+    <value>無法選取影片</value>
+  </data>
+  <data name="LblLimiteAlcanzado" xml:space="preserve">
+    <value>達到極限</value>
+  </data>
+  <data name="LblSoloPuedesAgregar" xml:space="preserve">
+    <value>你只能加總到</value>
+  </data>
+  <data name="LblFotosVideosPorAlarma" xml:space="preserve">
+    <value>照片/影片由 Alarm 提供</value>
+  </data>
+  <data name="LblArchivoMuyGrande" xml:space="preserve">
+    <value>檔案非常大</value>
+  </data>
+  <data name="LblTamanoMaximo100MB" xml:space="preserve">
+    <value>檔案太大了。最大容量：100MB</value>
+  </data>
+  <data name="LblArchivoNoSeGuardo" xml:space="preserve">
+    <value>檔案沒有正確儲存</value>
+  </data>
+  <data name="LblErrorProcesarArchivo" xml:space="preserve">
+    <value>檔案無法處理</value>
+  </data>
+  <data name="LblCerrarCamara" xml:space="preserve">
+    <value>近</value>
+  </data>
+  <data name="LblCapturarFoto" xml:space="preserve">
+    <value>擒</value>
+  </data>
+  <data name="LblGuardandoAlarma" xml:space="preserve">
+    <value>拯救警報......</value>
+  </data>
+  <data name="LblProcesandoFoto" xml:space="preserve">
+    <value>正在沖洗照片......</value>
+  </data>
+  <data name="LblSeleccionarOrigen" xml:space="preserve">
+    <value>請選擇照片來源</value>
+  </data>
+  <data name="LblSeleccioneAppNavegacion" xml:space="preserve">
+    <value>選擇你想使用的導航應用程式：</value>
+  </data>
+  <data name="LblLongPressForVideo" xml:space="preserve">
+    <value>按住以錄製影片</value>
+  </data>
+  <data name="LblTomarFotoOVideo" xml:space="preserve">
+    <value>拍照或錄影</value>
+  </data>
+  <data name="LblSeleccionarTipoMedia" xml:space="preserve">
+    <value>選擇媒體類型</value>
+  </data>
+  <data name="LblGrabarVideo" xml:space="preserve">
+    <value>錄影帶</value>
+  </data>
+  <data name="LblSospechosoCorto" xml:space="preserve">
+    <value>怚：</value>
+  </data>
+  <data name="LblVehiculoCorto" xml:space="preserve">
+    <value>車：</value>
+  </data>
+  <data name="LblArmasCorto" xml:space="preserve">
+    <value>䂆：</value>
+  </data>
+  <data name="LblPlaceholderDescripcionCierre" xml:space="preserve">
+    <value>簡要描述警報關閉的過程......</value>
+  </data>
+  <data name="LblDescripcionFalsaAlarma" xml:space="preserve">
+    <value>警報不是真的，或者是誤會</value>
+  </data>
+  <data name="LblDescripcionCaptura" xml:space="preserve">
+    <value>嫌疑人被逮捕了嗎？</value>
+  </data>
+  <data name="LblCerrandoAlarma" xml:space="preserve">
+    <value>警報關閉......</value>
+  </data>
+  <data name="ParaTi" xml:space="preserve">
+    <value>給你</value>
+  </data>
+  <data name="SiguiendoEnTuRadio" xml:space="preserve">
+    <value>追蹤/在你所在地區</value>
+  </data>
+  <data name="Advertencia" xml:space="preserve">
+    <value>警告</value>
+  </data>
+  <data name="Crimen" xml:space="preserve">
+    <value>犯罪</value>
+  </data>
+  <data name="Riña" xml:space="preserve">
+    <value>戰鬥</value>
+  </data>
+  <data name="Mascota" xml:space="preserve">
+    <value>吉祥物</value>
+  </data>
+  <data name="Persona" xml:space="preserve">
+    <value>人物</value>
+  </data>
+  <data name="Disturbios" xml:space="preserve">
+    <value>暴動</value>
+  </data>
+  <data name="Acompañamiento" xml:space="preserve">
+    <value>伴奏</value>
+  </data>
+  <data name="Intrafamiliar" xml:space="preserve">
+    <value>家族內</value>
+  </data>
+  <data name="Persecución" xml:space="preserve">
+    <value>迫害</value>
+  </data>
+  <data name="Eventos" xml:space="preserve">
+    <value>活動</value>
+  </data>
+  <data name="Compravotos" xml:space="preserve">
+    <value>買票</value>
+  </data>
+  <data name="Votaciónforzada" xml:space="preserve">
+    <value>強制投票</value>
+  </data>
+  <data name="Ciudadana" xml:space="preserve">
+    <value>公民</value>
+  </data>
+  <data name="Compradevotos" xml:space="preserve">
+    <value>買票</value>
+  </data>
+  <data name="Votaciónforzadaporgruposarmados" xml:space="preserve">
+    <value>武裝團體強制投票</value>
+  </data>
+  <data name="FiltrarTiposDeAlarma" xml:space="preserve">
+    <value>過濾器警報類型</value>
+  </data>
+  <data name="AfectaMapaYParaTi" xml:space="preserve">
+    <value>影響：地圖與「For You」</value>
+  </data>
+  <data name="SiguiendoNoSeFiltrado" xml:space="preserve">
+    <value>⚠️ 「追蹤/在你的區域內」沒有被過濾（關鍵優先權）</value>
+  </data>
+  <data name="TiposCaracteristicosSOSpect" xml:space="preserve">
+    <value>SOSpect的特徵類型</value>
+  </data>
+  <data name="OtrosTiposOrdenadosPopularidad" xml:space="preserve">
+    <value>其他類型（依受歡迎程度排序）</value>
+  </data>
+  <data name="Cancelar" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="Aplicar" xml:space="preserve">
+    <value>申請</value>
+  </data>
+  <data name="ErrorCargandoTiposIntenteNuevamente" xml:space="preserve">
+    <value>無法載入警報類型。請再試一次。</value>
+  </data>
+  <data name="ErrorCargandoTiposVerifiqueConexion" xml:space="preserve">
+    <value>錯誤載入警報類型。檢查你的連線。</value>
+  </data>
+  <data name="InfoPorcentajesBasadosUltimos30Dias" xml:space="preserve">
+    <value>⚠️ 百分比與計數基於過去30天內報告的警報。它們並不代表目前地圖上可見的警報。</value>
+  </data>
+  <data name="PromoWarningImmutable" xml:space="preserve">
+    <value>請仔細檢查你的廣告，啟動後你就無法修改它</value>
+  </data>
+  <data name="PromoWarningNoCancellation" xml:space="preserve">
+    <value>你確定要推出它嗎？之後無法刪除</value>
+  </data>
+  <data name="PromoInsufficientBalance" xml:space="preserve">
+    <value>缺乏{0}能力</value>
+  </data>
+  <data name="PromoSaldoActual" xml:space="preserve">
+    <value>現行平衡：{0}能力</value>
+  </data>
+  <data name="PromoCostoActual" xml:space="preserve">
+    <value>目前成本：{0}能力</value>
+  </data>
+  <data name="PromoSaldoDespues" xml:space="preserve">
+    <value>平衡後：{0}能力</value>
+  </data>
+  <data name="PromoLanzarPromocion" xml:space="preserve">
+    <value>啟動宣傳</value>
+  </data>
+  <data name="PromoComprarPoderes" xml:space="preserve">
+    <value>購買力量</value>
+  </data>
+  <data name="PromoContenidoPromocional" xml:space="preserve">
+    <value>宣傳內容</value>
+  </data>
+  <data name="PromoDescribePromocion" xml:space="preserve">
+    <value>請描述你的升遷或聘用條件......</value>
+  </data>
+  <data name="PromoMultimedia" xml:space="preserve">
+    <value>多媒體（包含1個，最多10個）</value>
+  </data>
+  <data name="PromoItemIncluido" xml:space="preserve">
+    <value>✓ 包含</value>
+  </data>
+  <data name="PromoItemCosto" xml:space="preserve">
+    <value>+{0}能力</value>
+  </data>
+  <data name="PromoLogoOpcional" xml:space="preserve">
+    <value>標誌（選配）</value>
+  </data>
+  <data name="PromoAgregarLogo" xml:space="preserve">
+    <value>新增標誌（+{0}能力）</value>
+  </data>
+  <data name="PromoAlcanceGeografico" xml:space="preserve">
+    <value>地理範圍</value>
+  </data>
+  <data name="PromoRadioMetros" xml:space="preserve">
+    <value>半徑：{0}公尺</value>
+  </data>
+  <data name="PromoDuracion" xml:space="preserve">
+    <value>持續時間</value>
+  </data>
+  <data name="PromoDuracionDias" xml:space="preserve">
+    <value>持續時間：{0}天</value>
+  </data>
+  <data name="PromoOpcionesContacto" xml:space="preserve">
+    <value>聯絡方式</value>
+  </data>
+  <data name="PromoHabilitarChatPrivado" xml:space="preserve">
+    <value>啟用私人聊天（+{0} 能力）</value>
+  </data>
+  <data name="PromoPermitirDomicilio" xml:space="preserve">
+    <value>允許國內命令（+{0}權力）</value>
+  </data>
+  <data name="PromoNotificacionesPush" xml:space="preserve">
+    <value>推播通知（可選）</value>
+  </data>
+  <data name="PromoEnviarPush" xml:space="preserve">
+    <value>發送推播通知</value>
+  </data>
+  <data name="PromoUsuariosDisponibles" xml:space="preserve">
+    <value>{0}m 可用用戶：{1}</value>
+  </data>
+  <data name="PromoNotificarA" xml:space="preserve">
+    <value>通知{0}使用者</value>
+  </data>
+  <data name="PromoTextoPush" xml:space="preserve">
+    <value>輸入推播通知的文字：</value>
+  </data>
+  <data name="PromoCostoTotal" xml:space="preserve">
+    <value>總花費：{0}能力</value>
+  </data>
+  <data name="PromoGuidance" xml:space="preserve">
+    <value>加入標誌和聯絡方式，讓你的推廣更認真</value>
+  </data>
+  <data name="PromoErrorCreando" xml:space="preserve">
+    <value>錯誤產生升調</value>
+  </data>
+  <data name="PromoExitoCreada" xml:space="preserve">
+    <value>成功創造的推廣</value>
+  </data>
+  <data name="PromoNecesitasPoderes" xml:space="preserve">
+    <value>你至少需要{0}能力才能升遷</value>
+  </data>
+  <data name="ChatPendingAcceptance" xml:space="preserve">
+    <value>等待雙方同意條款</value>
+  </data>
+  <data name="ChatAcceptTerms" xml:space="preserve">
+    <value>接受條款</value>
+  </data>
+  <data name="ChatProveedor" xml:space="preserve">
+    <value>供應商：</value>
+  </data>
+  <data name="ChatUsted" xml:space="preserve">
+    <value>你：</value>
+  </data>
+  <data name="ChatAceptado" xml:space="preserve">
+    <value>✅ 接受</value>
+  </data>
+  <data name="ChatPendiente" xml:space="preserve">
+    <value>⏳ 待定</value>
+  </data>
+  <data name="PromotionalAlarmHeader" xml:space="preserve">
+    <value>本地推廣</value>
+  </data>
+  <data name="DeliveryAvailable" xml:space="preserve">
+    <value>🚚 提供宅配服務</value>
+  </data>
+  <data name="ChatVerEnMapa" xml:space="preserve">
+    <value>地圖上的檢視</value>
+  </data>
+  <data name="ChatEnviarMensaje" xml:space="preserve">
+    <value>發送訊息</value>
+  </data>
+  <data name="ChatAdjuntarImagen" xml:space="preserve">
+    <value>附上圖片</value>
+  </data>
+  <data name="ChatEscribeMensaje" xml:space="preserve">
+    <value>寫個訊息......</value>
+  </data>
+  <data name="ChatNoActivo" xml:space="preserve">
+    <value>聊天室沒有啟用。雙方必須先同意條款。</value>
+  </data>
+  <data name="ChatErrorEnviandoMensaje" xml:space="preserve">
+    <value>錯誤傳送訊息</value>
+  </data>
+  <data name="ChatMensajeEnviado" xml:space="preserve">
+    <value>訊息已發送</value>
+  </data>
+  <data name="ChatTerminosAceptados" xml:space="preserve">
+    <value>接受條件。聊天室現在已經啟用。</value>
+  </data>
+  <data name="ChatErrorAceptandoTerminos" xml:space="preserve">
+    <value>錯誤接受條款</value>
+  </data>
+  <data name="PromoPublicadoNoEditable" xml:space="preserve">
+    <value>已發表 - 不可編輯</value>
+  </data>
+  <data name="PromoInsuficiente" xml:space="preserve">
+    <value>不足</value>
+  </data>
+  <data name="PromoRecomendado" xml:space="preserve">
+    <value>推薦 ⭐</value>
+  </data>
+  <data name="PromoSinTerminosNoContacto" xml:space="preserve">
+    <value>如果您不同意條款，就無法啟用聯絡或宅配選項</value>
+  </data>
+  <data name="PromoTerminosRequeridos" xml:space="preserve">
+    <value>您必須接受相關條件，才能啟用聯絡或送達到府</value>
+  </data>
+  <data name="PromoTerminosCondiciones" xml:space="preserve">
+    <value>聊天服務條款與條件</value>
+  </data>
+  <data name="PromoAceptoTerminos" xml:space="preserve">
+    <value>我同意接收潛在客戶的訊息</value>
+  </data>
+  <data name="PromoTerminosObligatorios" xml:space="preserve">
+    <value>（聯絡人/地址要求）</value>
+  </data>
+  <data name="PromoTerminosExplicacion" xml:space="preserve">
+    <value>接受後，你將能透過應用程式整合的聊天室，收到對你推廣有興趣者的私訊。</value>
+  </data>
+  <data name="LabelAlarmas" xml:space="preserve">
+    <value>警報</value>
+  </data>
+  <data name="LabelAlarmasAgrupadas" xml:space="preserve">
+    <value>群組警報</value>
+  </data>
+  <data name="Alarm_10" xml:space="preserve">
+    <value>活動</value>
+  </data>
+  <data name="Alarm_11" xml:space="preserve">
+    <value>買票</value>
+  </data>
+  <data name="Alarm_12" xml:space="preserve">
+    <value>武裝團體強制投票</value>
+  </data>
+  <data name="Alarm_13" xml:space="preserve">
+    <value>本地推廣</value>
+  </data>
+  <data name="Promoción" xml:space="preserve">
+    <value>推廣</value>
+  </data>
+  <data name="LblLimiteAlarmasFeed" xml:space="preserve">
+    <value>初始訊號中警報的上限</value>
+  </data>
+  <data name="LblDescripcionLimiteAlarmasFeed" xml:space="preserve">
+    <value>開啟應用程式時，選擇你想上傳多少個警報。較小的數字會提升效能。</value>
+  </data>
+  <data name="OptConfNotif" xml:space="preserve">
+    <value>設定參數與通知</value>
+  </data>
+  <data name="PromoFormTitle" xml:space="preserve">
+    <value>創造在地推廣</value>
+  </data>
+  <data name="PromoAlcance" xml:space="preserve">
+    <value>3. 範圍與持續時間</value>
+  </data>
+  <data name="PromoCaracteristicasOpcionales" xml:space="preserve">
+    <value>4. 選配功能</value>
+  </data>
+  <data name="PromoEnviarNotificaciones" xml:space="preserve">
+    <value>發送給{0}使用者</value>
+  </data>
+  <data name="PromoCostoNotificaciones" xml:space="preserve">
+    <value>（每50名使用者+{0}能力）</value>
+  </data>
+  <data name="PromoConfirmacionFinal" xml:space="preserve">
+    <value>6. 堅振</value>
+  </data>
+  <data name="PromoConfirmarLanzamiento" xml:space="preserve">
+    <value>你確定要推出它嗎？之後無法刪除</value>
+  </data>
+  <data name="PromoCreandoAlarma" xml:space="preserve">
+    <value>創造推廣......</value>
+  </data>
+  <data name="PromoCreacionExitosa" xml:space="preserve">
+    <value>推廣成功發表！</value>
+  </data>
+  <data name="PromoErrorCreacion" xml:space="preserve">
+    <value>錯誤產生升調</value>
+  </data>
+  <data name="PromoDescripcionVacia" xml:space="preserve">
+    <value>你必須為你的晉升加上說明</value>
+  </data>
+  <data name="PromoTerminoProveedor1" xml:space="preserve">
+    <value>我同意，我對所提供的產品或服務、交付、品質、合規以及與用戶所達成的任何協議負全責。</value>
+  </data>
+  <data name="PromoTerminoProveedor2" xml:space="preserve">
+    <value>我同意任何付款、付款方式或催收都將直接在買方與我之間進行，SOSpect不作為中介，也不對這些協議負責。</value>
+  </data>
+  <data name="PromoTerminoProveedor3" xml:space="preserve">
+    <value>我同意地址、送貨或居家服務完全由我負責，包括安全性、時效性與合規性。</value>
+  </data>
+  <data name="PromoTerminoProveedor4" xml:space="preserve">
+    <value>我同意 SOSpect 僅作為聯絡方式，對交易、產品或服務免於責任。</value>
+  </data>
+  <data name="PromoTerminoInteresado1" xml:space="preserve">
+    <value>我同意該產品或服務是由供應商直接提供，SOSpect 並不保證其品質、可用性或效能。</value>
+  </data>
+  <data name="PromoTerminoInteresado2" xml:space="preserve">
+    <value>我同意任何付款都直接支付給供應商，SOSpect不會介入或回應金錢、轉帳或經濟協議。</value>
+  </data>
+  <data name="PromoTerminoInteresado3" xml:space="preserve">
+    <value>我同意承擔個人間交易的正常風險，包括身份驗證、產品品質及遭遇安全。</value>
+  </data>
+  <data name="PromoTerminoInteresado4" xml:space="preserve">
+    <value>我同意 SOSpect 不對這次互動的結果或達成的協議負責。</value>
+  </data>
+  <data name="PromoEjemplo" xml:space="preserve">
+    <value>範例：「🍕 2x1家庭量披薩 - 僅限今天下午5點到9點 - 全家一起來享用」</value>
+  </data>
+  <data name="PromoUsuariosPotenciales" xml:space="preserve">
+    <value>廣播潛在使用者：{0}</value>
+  </data>
+  <data name="PromoAgregarMultimedia" xml:space="preserve">
+    <value>新增照片/影片</value>
+  </data>
+  <data name="PromoAgregarLogoImagen" xml:space="preserve">
+    <value>新增標誌</value>
+  </data>
+  <data name="PromoLimiteMultimedia" xml:space="preserve">
+    <value>你最多只能加10張照片或影片</value>
+  </data>
+  <data name="PromoAgregarFotoVideo" xml:space="preserve">
+    <value>新增照片/影片（{0}/10）</value>
+  </data>
+  <data name="PromoPoderesInsuficientes" xml:space="preserve">
+    <value>權力不足</value>
+  </data>
+  <data name="PromoConfirmarLanzar" xml:space="preserve">
+    <value>你確定要推出這個促銷活動嗎？
+
+費用：{0}能力
+持續時間：{1}天
+半徑：{2}公尺
+
+{3}</value>
+  </data>
+  <data name="PromoSiLanzar" xml:space="preserve">
+    <value>是的，發射</value>
+  </data>
+  <data name="LabelErrorDesconocido" xml:space="preserve">
+    <value>未知錯誤</value>
+  </data>
+  <data name="LabelVideo" xml:space="preserve">
+    <value>影片</value>
+  </data>
+  <data name="LabelFoto" xml:space="preserve">
+    <value>照片</value>
+  </data>
+  <data name="LabelCargando" xml:space="preserve">
+    <value>載入中......</value>
+  </data>
+  <data name="PromocionLocal" xml:space="preserve">
+    <value>本地推廣</value>
+  </data>
+  <data name="PromoCaracteresRestantes" xml:space="preserve">
+    <value>{0}剩下的角色</value>
+  </data>
+  <data name="PromoPlaceholderTextoPush" xml:space="preserve">
+    <value>例如：🍕今天有2x1披薩！只到晚上8點</value>
+  </data>
+  <data name="ChatTerminosCondiciones" xml:space="preserve">
+    <value>聊天服務條款與條件</value>
+  </data>
+  <data name="ChatNoDisponible" xml:space="preserve">
+    <value>聊天不可用</value>
+  </data>
+  <data name="DebesAceptarTerminos" xml:space="preserve">
+    <value>您必須同意條款與條件，才能與服務提供者聊天。</value>
+  </data>
+  <data name="ChatAceptoTerminosInteresado" xml:space="preserve">
+    <value>我接受聊天的條款與條件</value>
+  </data>
+  <data name="ChatTerminoInteresado1" xml:space="preserve">
+    <value>我同意該產品或服務是由供應商直接提供，SOSpect 並不保證、驗證或擔保。</value>
+  </data>
+  <data name="ChatTerminoInteresado2" xml:space="preserve">
+    <value>我同意任何付款都直接支付給供應商，SOSpect不會介入或回應金錢、轉帳或經濟協議。</value>
+  </data>
+  <data name="ChatTerminoInteresado3" xml:space="preserve">
+    <value>我同意承擔個人間交易的正常風險，包括可能的違約。</value>
+  </data>
+  <data name="ChatTerminoInteresado4" xml:space="preserve">
+    <value>我同意 SOSpect 不對這次互動的結果或達成的協議負責。</value>
+  </data>
+  <data name="PromoPrioridadNotificaciones" xml:space="preserve">
+    <value>i️ 如果你選擇的用戶數少於半徑內可用用戶總數，擁有最新且活躍應用程式的用戶將被優先考慮，以最大化推廣效果。其餘的將隨機抽取。</value>
+  </data>
+  <data name="AppName" xml:space="preserve">
+    <value>SOSpect</value>
+  </data>
+  <data name="LblNuevaAlarmaCerca" xml:space="preserve">
+    <value>新警報就在你附近</value>
+  </data>
+  <data name="BtnVerAlarma" xml:space="preserve">
+    <value>查看警報</value>
+  </data>
+  <data name="PromoEditarLogo" xml:space="preserve">
+    <value>更換標誌</value>
+  </data>
+  <data name="PromoUsandoLogoGuardado" xml:space="preserve">
+    <value>使用已儲存的啟動標誌</value>
+  </data>
+  <data name="PromoLogoSeGuardara" xml:space="preserve">
+    <value>此標誌將被保存並用於未來的促銷活動</value>
+  </data>
+  <data name="ChatRecordatorioProveedorAcepto" xml:space="preserve">
+    <value>你已經在{0}上接受了這個促銷的條款</value>
+  </data>
+  <data name="ChatRecordatorioInteresadoAcepto" xml:space="preserve">
+    <value>你同意了這次聊天的條款{0}</value>
+  </data>
+  <data name="ChatErrorIniciar" xml:space="preserve">
+    <value>錯誤：聊天開始</value>
+  </data>
+  <data name="ChatErrorCargar" xml:space="preserve">
+    <value>聊天載入錯誤</value>
+  </data>
+  <data name="ChatActivo" xml:space="preserve">
+    <value>主動聊天</value>
+  </data>
+  <data name="ChatAdjuntar" xml:space="preserve">
+    <value>接駁</value>
+  </data>
+  <data name="ChatFuncionalidadProximamente" xml:space="preserve">
+    <value>附上圖片即將推出功能</value>
+  </data>
+  <data name="ChatErrorAdjuntar" xml:space="preserve">
+    <value>錯誤附加影像</value>
+  </data>
+  <data name="ChatErrorNavegar" xml:space="preserve">
+    <value>地圖導航錯誤</value>
+  </data>
+  <data name="LabelRestriccion" xml:space="preserve">
+    <value>由於與當局不一致，或因國家條件（如選舉季節或其他事件），Apple iPhone® 的部分警報會暫時停用®。</value>
+  </data>
+  <data name="LogoEditorTitle" xml:space="preserve">
+    <value>作物圓形標誌</value>
+  </data>
+  <data name="LogoEditorZoom" xml:space="preserve">
+    <value>調整變焦</value>
+  </data>
+  <data name="LogoEditorSave" xml:space="preserve">
+    <value>存檔</value>
+  </data>
+  <data name="LogoEditorNoImage" xml:space="preserve">
+    <value>沒有上傳圖片</value>
+  </data>
+  <data name="LogoEditorSaveError" xml:space="preserve">
+    <value>錯誤地儲存標誌</value>
+  </data>
+  <data name="PromoVerificarNIT" xml:space="preserve">
+    <value>驗證創業經驗</value>
+  </data>
+  <data name="PromoPlaceholderNIT" xml:space="preserve">
+    <value>NIT或車主證</value>
+  </data>
+  <data name="PromoBotonVerificarNIT" xml:space="preserve">
+    <value>驗證身分證</value>
+  </data>
+  <data name="PromoDeclaroPropietario" xml:space="preserve">
+    <value>我宣告為此 NIT/ID 的法定擁有人</value>
+  </data>
+  <data name="PromoDatosEmprendimiento" xml:space="preserve">
+    <value>創業數據</value>
+  </data>
+  <data name="PromoPlaceholderNombreEmprendimiento" xml:space="preserve">
+    <value>企業名稱</value>
+  </data>
+  <data name="PromoPlaceholderNombrePropietario" xml:space="preserve">
+    <value>業主姓名</value>
+  </data>
+  <data name="NITRequerido" xml:space="preserve">
+    <value>您必須輸入業主或企業識別號碼</value>
+  </data>
+  <data name="NITNoExisteSerPropietario" xml:space="preserve">
+    <value>這個 ID 號碼並未註冊。當你建立第一個促銷時，你將被註冊為擁有者。重要提示：請務必一開始就輸入正確的業主或商業識別號碼，因為變更所有權需要技術支援最多15天的驗證流程。</value>
+  </data>
+  <data name="EresPropietario" xml:space="preserve">
+    <value>你是這個事業的擁有者。你可以編輯名稱和標誌。</value>
+  </data>
+  <data name="EresSubalternoSoloPromocion" xml:space="preserve">
+    <value>這項事業已經存在。你只能創建促銷活動，不能修改名稱或標誌。</value>
+  </data>
+  <data name="DebeVerificarNITPrimero" xml:space="preserve">
+    <value>您必須在建立促銷前驗證 ID 號碼</value>
+  </data>
+  <data name="DebeAceptarDeclaracionPropietario" xml:space="preserve">
+    <value>您必須確認您是該識別號碼下的該企業的所有者</value>
+  </data>
+  <data name="NombreEmprendimientoYPropietarioRequeridos" xml:space="preserve">
+    <value>您必須輸入企業名稱及業主</value>
+  </data>
+  <data name="LabelAdvertencia" xml:space="preserve">
+    <value>警告</value>
+  </data>
+  <data name="ErrorVerificandoNIT" xml:space="preserve">
+    <value>未能驗證身分證號碼</value>
+  </data>
+  <data name="LblRefrescandoAlarmas" xml:space="preserve">
+    <value>刷新鬧鐘......</value>
+  </data>
+  <data name="LblCargandoAlarmas" xml:space="preserve">
+    <value>正在裝填警報......</value>
+  </data>
+  <data name="LblActualizandoAlarmas" xml:space="preserve">
+    <value>更新警報......</value>
+  </data>
+  <data name="LblAlarmaRecibida" xml:space="preserve">
+    <value>收到警報</value>
+  </data>
+  <data name="LblDetallePromocion" xml:space="preserve">
+    <value>晉升細節</value>
+  </data>
+  <data name="LblUsuariosNotificados" xml:space="preserve">
+    <value>通知使用者</value>
+  </data>
+  <data name="LblPoderesUsados" xml:space="preserve">
+    <value>使用能力</value>
+  </data>
+  <data name="LblRadioAlcance" xml:space="preserve">
+    <value>射程半徑</value>
+  </data>
+  <data name="LblDuracionDias" xml:space="preserve">
+    <value>持續時間（天數）</value>
+  </data>
+  <data name="LblTextoPush" xml:space="preserve">
+    <value>通知文字</value>
+  </data>
+  <data name="LblEnvioAceptado" xml:space="preserve">
+    <value>接受</value>
+  </data>
+  <data name="LblEnvioRechazado" xml:space="preserve">
+    <value>被拒絕</value>
+  </data>
+  <data name="LblTotalNotificados" xml:space="preserve">
+    <value>總計</value>
+  </data>
+  <data name="LblLogoHabilitado" xml:space="preserve">
+    <value>啟用標誌</value>
+  </data>
+  <data name="LblContactoHabilitado" xml:space="preserve">
+    <value>聯絡啟用</value>
+  </data>
+  <data name="LblDomicilioHabilitado" xml:space="preserve">
+    <value>授權地址</value>
+  </data>
+  <data name="LblConfiguracionPromocion" xml:space="preserve">
+    <value>晉升設定</value>
+  </data>
+  <data name="LblCantidadMedia" xml:space="preserve">
+    <value>照片/影片</value>
+  </data>
+  <data name="LblFechaInicio" xml:space="preserve">
+    <value>開始日期</value>
+  </data>
+  <data name="LblFechaFin" xml:space="preserve">
+    <value>結束日期</value>
+  </data>
+  <data name="LblOpcionesHabilitadas" xml:space="preserve">
+    <value>啟用選項</value>
+  </data>
+  <data name="LblListadoUsuarios" xml:space="preserve">
+    <value>使用者列表</value>
+  </data>
+  <data name="LblPendiente" xml:space="preserve">
+    <value>待定</value>
+  </data>
+  <data name="LblDescripcionPromocional" xml:space="preserve">
+    <value>宣傳說明</value>
+  </data>
+  <data name="LblNitCedula" xml:space="preserve">
+    <value>NIT/Cédula</value>
+  </data>
+  <data name="Anunciopublicitariodeusuarios" xml:space="preserve">
+    <value>使用者橫幅</value>
+  </data>
+  <data name="LblNombreEmprendimiento" xml:space="preserve">
+    <value>Venture 名稱</value>
+  </data>
+  <data name="LblProcesandoVideo" xml:space="preserve">
+    <value>正在處理影片......</value>
+  </data>
+  <data name="LblErrorGrabarVideo" xml:space="preserve">
+    <value>錯誤：開始錄影</value>
+  </data>
+  <data name="LblErrorGuardarVideo" xml:space="preserve">
+    <value>錯誤儲存影片</value>
+  </data>
+  <data name="LblVideoVacio" xml:space="preserve">
+    <value>未拍攝任何影片</value>
+  </data>
+  <data name="LblDescartarVideo" xml:space="preserve">
+    <value>你想丟棄你正在錄製的影片嗎？</value>
+  </data>
+  <data name="LblTocaParaGrabar" xml:space="preserve">
+    <value>點擊錄音</value>
+  </data>
+  <data name="LblTocaParaDetener" xml:space="preserve">
+    <value>輕觸即可停止</value>
+  </data>
+  <data name="LblContactarAnunciante" xml:space="preserve">
+    <value>聯絡廣告商</value>
+  </data>
+  <data name="LblVerChatsPromocion" xml:space="preserve">
+    <value>查看本次促銷的聊天內容</value>
+  </data>
+  <data name="LblChatsPromocion" xml:space="preserve">
+    <value>宣傳聊天室</value>
+  </data>
+  <data name="LblNoTienesChatsAun" xml:space="preserve">
+    <value>你還沒聊天</value>
+  </data>
+  <data name="LblDetallePromocion_Duplicate[1]" xml:space="preserve">
+    <value>晉升細節</value>
+  </data>
+  <data name="LblAceptarTerminosChat" xml:space="preserve">
+    <value>要聯絡廣告主，您必須同意聊天的條款</value>
+  </data>
+  <data name="LblAceptarYContactar" xml:space="preserve">
+    <value>接受條款與聯絡</value>
+  </data>
+  <data name="LblTituloCierreEncuesta" xml:space="preserve">
+    <value>以測量方式關閉</value>
+  </data>
+  <data name="LblTituloProponerCierre" xml:space="preserve">
+    <value>提議關閉警戒</value>
+  </data>
+  <data name="LblDescripcionPropuestaCierre" xml:space="preserve">
+    <value>為什麼這個警報應該被關閉？</value>
+  </data>
+  <data name="LblPlaceholderPropuestaCierre" xml:space="preserve">
+    <value>請簡要說明關閉此警示的原因......</value>
+  </data>
+  <data name="LblEvidenciaFotografica" xml:space="preserve">
+    <value>照片證據（可選）</value>
+  </data>
+  <data name="LblBotonProponerCierre" xml:space="preserve">
+    <value>提出閉包</value>
+  </data>
+  <data name="LblTituloVotacionCierre" xml:space="preserve">
+    <value>結束投票進行中</value>
+  </data>
+  <data name="LblDescripcionPropuesta" xml:space="preserve">
+    <value>提案說明</value>
+  </data>
+  <data name="LblResultadosVotacion" xml:space="preserve">
+    <value>投票結果</value>
+  </data>
+  <data name="LblVotosAFavor" xml:space="preserve">
+    <value>贊成</value>
+  </data>
+  <data name="LblVotosEnContra" xml:space="preserve">
+    <value>反對</value>
+  </data>
+  <data name="LblTiempoRestanteVotacion" xml:space="preserve">
+    <value>剩餘時間：</value>
+  </data>
+  <data name="LblVotarAFavor" xml:space="preserve">
+    <value>投贊成票</value>
+  </data>
+  <data name="LblVotarEnContra" xml:space="preserve">
+    <value>投反對票</value>
+  </data>
+  <data name="LblYaVotoAFavor" xml:space="preserve">
+    <value>你已經投票支持關閉了</value>
+  </data>
+  <data name="LblYaVotoEnContra" xml:space="preserve">
+    <value>你已經投票反對關閉了</value>
+  </data>
+  <data name="LblVotacionFinalizada" xml:space="preserve">
+    <value>投票結束</value>
+  </data>
+  <data name="LblDescripcionRequerida" xml:space="preserve">
+    <value>你必須輸入描述</value>
+  </data>
+  <data name="LblPropuestaCierreEnviada" xml:space="preserve">
+    <value>提案已送出</value>
+  </data>
+  <data name="LblPropuestaCierreExito" xml:space="preserve">
+    <value>您的結案提案已提交。社群將投票決定。</value>
+  </data>
+  <data name="LblVotoRegistrado" xml:space="preserve">
+    <value>記名投票</value>
+  </data>
+  <data name="LblVotoRegistradoExito" xml:space="preserve">
+    <value>您的投票已成功記錄</value>
+  </data>
+  <data name="LblTituloCierreCaptura" xml:space="preserve">
+    <value>關閉警報</value>
+  </data>
+  <data name="LblTituloCierrePersona" xml:space="preserve">
+    <value>近距離迷路者警報</value>
+  </data>
+  <data name="LblTituloCierreMascota" xml:space="preserve">
+    <value>關閉走失寵物警報</value>
+  </data>
+  <data name="LblTituloCierreBasico" xml:space="preserve">
+    <value>高度警戒</value>
+  </data>
+  <data name="LblPersonaEncontrada" xml:space="preserve">
+    <value>那個人找到了嗎？</value>
+  </data>
+  <data name="LblMascotaRecuperada" xml:space="preserve">
+    <value>寵物恢復了嗎？</value>
+  </data>
+  <data name="LblCierreExitoso" xml:space="preserve">
+    <value>警報成功關閉</value>
+  </data>
+  <data name="LblProponendoCierre" xml:space="preserve">
+    <value>發送結案提案......</value>
+  </data>
+  <data name="LblRegistrandoVoto" xml:space="preserve">
+    <value>正在登記投票......</value>
+  </data>
+  <data name="LblNotifResultadoCierreAprobado" xml:space="preserve">
+    <value>{0}票已獲得。{1}%贊成，{2}%反對。市民警報已關閉。</value>
+  </data>
+  <data name="LblNotifResultadoCierreDenegado" xml:space="preserve">
+    <value>{0}票已獲得。{1}%贊成，{2}%反對。關閉申請被駁回。</value>
+  </data>
+  <data name="LblNotifResultadoSinVotos" xml:space="preserve">
+    <value>24小時內未收到任何投票。市民警報已關閉。</value>
+  </data>
+  <data name="LblEvidenciaFotograficaCierre" xml:space="preserve">
+    <value>照片證據（可選）</value>
+  </data>
+  <data name="LblConsultandoSolicitud" xml:space="preserve">
+    <value>諮詢結束請求......</value>
+  </data>
+  <data name="LblNotifProponerCierreAlerta" xml:space="preserve">
+    <value>您附近的市民警示已被提議關閉。你有24小時投票。</value>
+  </data>
+  <data name="Alertaciudadana" xml:space="preserve">
+    <value>市民警示</value>
+  </data>
+  <data name="Alarm_14" xml:space="preserve">
+    <value>市民警示</value>
+  </data>
+  <data name="LblVerAlertaCercana" xml:space="preserve">
+    <value>看{0} {1}離你遠一點</value>
+  </data>
+  <data name="LblVerAlerta" xml:space="preserve">
+    <value>查看警報詳情</value>
+  </data>
+  <data name="LblMensajeDestinatario" xml:space="preserve">
+    <value>訊息接收者</value>
+  </data>
+  <data name="LblMensajeRemitente" xml:space="preserve">
+    <value>訊息發送器</value>
+  </data>
+  <data name="LblDescripcionInicial_Duplicate[1]" xml:space="preserve">
+    <value>歡迎來到 SOSpect，您的社區安全應用程式。我們會一步步示範給你看。</value>
+  </data>
+  <data name="SeguimientoUbicacionTitulo" xml:space="preserve">
+    <value>SOSpect 主動</value>
+  </data>
+  <data name="SeguimientoUbicacionMensaje" xml:space="preserve">
+    <value>監測附近警報</value>
+  </data>
+  <data name="PermisoUbicacionFondoTitulo" xml:space="preserve">
+    <value>背景位置</value>
+  </data>
+  <data name="PermisoUbicacionFondoMensaje" xml:space="preserve">
+    <value>即使應用程式關閉，SOSpect 仍需存取您的位置，以提醒您附近的風險區域。你想允許存取嗎？</value>
+  </data>
+  <data name="LblIntervaloMonitoreoBackground" xml:space="preserve">
+    <value>安全監控間隔</value>
+  </data>
+  <data name="LblDescripcionIntervaloBackground" xml:space="preserve">
+    <value>您希望 SOSpect 多久檢查您是否抵達安全面臨重大風險的區域並通知您？</value>
+  </data>
+  <data name="LblNoHayAlarmas" xml:space="preserve">
+    <value>你現在這裡沒有警報。</value>
+  </data>
+  <data name="NotificacionServicioTitulo" xml:space="preserve">
+    <value>SOSpect 主動</value>
+  </data>
+  <data name="NotificacionServicioTexto" xml:space="preserve">
+    <value>監測附近警報</value>
+  </data>
+  <data name="NotificacionCanalNombre" xml:space="preserve">
+    <value>位置追蹤</value>
+  </data>
+  <data name="NotificacionCanalDescripcion" xml:space="preserve">
+    <value>SOSpect 會監控您的位置，提醒您風險區域</value>
+  </data>
+  <data name="LabelPermitir" xml:space="preserve">
+    <value>允許</value>
+  </data>
+  <data name="LabelAhoraNo" xml:space="preserve">
+    <value>現在不行</value>
+  </data>
+  <data name="OptimizacionBateriaTitulo" xml:space="preserve">
+    <value>電池優化</value>
+  </data>
+  <data name="OptimizacionBateriaMensaje" xml:space="preserve">
+    <value>為了讓 SOSpect 即使關閉 App 也能保護你，它需要你關閉電池優化。這讓監控服務能夠持續運作。你想允許嗎？</value>
+  </data>
+  <data name="LblUsuarioID" xml:space="preserve">
+    <value>使用者ID：</value>
+  </data>
+  <data name="SeguirUsuario" xml:space="preserve">
+    <value>追蹤此用戶</value>
+  </data>
+  <data name="DejarDeSeguirUsuario" xml:space="preserve">
+    <value>取消追蹤</value>
+  </data>
+  <data name="SeguirExplicacion" xml:space="preserve">
+    <value>以下內容免費。你會在「追蹤」中看到他們的鬧鐘，沒有推播通知。</value>
+  </data>
+  <data name="SiguiendoExplicacion" xml:space="preserve">
+    <value>「追蹤」不會發送通知。緊急警報請使用「受保護」。</value>
+  </data>
+  <data name="PersonalizarParaTi" xml:space="preserve">
+    <value>為你量身訂做</value>
+  </data>
+  <data name="PaisesInteres" xml:space="preserve">
+    <value>關注國家</value>
+  </data>
+  <data name="TodosLosPaises" xml:space="preserve">
+    <value>所有國家</value>
+  </data>
+  <data name="LikeAlarma" xml:space="preserve">
+    <value>像是</value>
+  </data>
+  <data name="QuitarLikeAlarma" xml:space="preserve">
+    <value>我已經不喜歡了</value>
+  </data>
+  <data name="ReenviarAlarma" xml:space="preserve">
+    <value>前進</value>
+  </data>
+  <data name="QuitarReenvio" xml:space="preserve">
+    <value>取消轉發</value>
+  </data>
+  <data name="CompartirAlarma" xml:space="preserve">
+    <value>分享</value>
+  </data>
+  <data name="MarcarVerdadera" xml:space="preserve">
+    <value>這是真的</value>
+  </data>
+  <data name="MarcarFalsa" xml:space="preserve">
+    <value>這是錯誤的</value>
+  </data>
+  <data name="SeguirConfirmacion" xml:space="preserve">
+    <value>想追蹤這個用戶嗎？你會在「追蹤」動態中看到他們的鬧鐘。</value>
+  </data>
+  <data name="DejarDeSeguirConfirmacion" xml:space="preserve">
+    <value>要取消追蹤這個用戶嗎？</value>
+  </data>
+  <data name="LblAdvertenciaLimiteAlto" xml:space="preserve">
+    <value>較高的限制會影響慢速裝置的效能。</value>
+  </data>
+  <data name="MensajeSeguirUsuario" xml:space="preserve">
+    <value>現在你追蹤這個用戶。你的警報會出現在「追蹤」標籤中。請注意，追蹤用戶不會產生推播通知;要收到緊急警報，可以考慮將他們加入為受保護。</value>
+  </data>
+  <data name="PublicarEnX" xml:space="preserve">
+    <value>發文到 X（Twitter）</value>
+  </data>
+  <data name="PublicarEnFacebook" xml:space="preserve">
+    <value>發文到 Facebook</value>
+  </data>
+  <data name="TextoCompartirAlarmaIntro" xml:space="preserve">
+    <value>🚨 我所在地區又發布了新的警報！
+分享於SOSpect，一個社群應用程式，旨在讓我們在面對犯罪與危險時保持資訊更新與團結。
+👉 詳情請參閱：</value>
+  </data>
+  <data name="PromoConfirmaUbicacion" xml:space="preserve">
+    <value>確認你想啟動促銷活動的地點</value>
+  </data>
+  <data name="PromoConfirmaUbicacionModal" xml:space="preserve">
+    <value>點擊地圖即可調整促銷活動啟動的精確地點</value>
+  </data>
+  <data name="PromoBotonConfirmarUbicacion" xml:space="preserve">
+    <value>確認位置</value>
+  </data>
+  <data name="LblUsuarios" xml:space="preserve">
+    <value>使用者</value>
+  </data>
+  <data name="TituloAutoridadesResponsables" xml:space="preserve">
+    <value>負責機關</value>
+  </data>
+  <data name="AutoridadesResponsablesDescripcion" xml:space="preserve">
+    <value>負責此區域安全的公職人員</value>
+  </data>
+  <data name="LblVerAutoridadesResponsables" xml:space="preserve">
+    <value>請參閱相關主管機關</value>
+  </data>
+  <data name="AlarmasPoliticasUltimos30d" xml:space="preserve">
+    <value>30天安全警報</value>
+  </data>
+  <data name="LblEmail" xml:space="preserve">
+    <value>電子郵件</value>
+  </data>
+  <data name="LblTelefono" xml:space="preserve">
+    <value>電話</value>
+  </data>
+  <data name="LblSitioWeb" xml:space="preserve">
+    <value>網站</value>
+  </data>
+  <data name="Cargo_1" xml:space="preserve">
+    <value>總統</value>
+  </data>
+  <data name="Cargo_2" xml:space="preserve">
+    <value>州長</value>
+  </data>
+  <data name="Cargo_3" xml:space="preserve">
+    <value>市長</value>
+  </data>
+  <data name="Cargo_4" xml:space="preserve">
+    <value>市長</value>
+  </data>
+  <data name="LblResolucion" xml:space="preserve">
+    <value>解決方法</value>
+  </data>
+  <data name="LblVerReporte" xml:space="preserve">
+    <value>·查看→報告</value>
+  </data>
+  <data name="LblAlarmasAbiertas" xml:space="preserve">
+    <value>開啟警報</value>
+  </data>
+  <data name="LblAlarmasCerradas" xml:space="preserve">
+    <value>警報已關閉</value>
+  </data>
+  <data name="LblTiempoPromedioResolucion" xml:space="preserve">
+    <value>平均解析度時間</value>
+  </data>
+  <data name="LblDias" xml:space="preserve">
+    <value>日子</value>
+  </data>
+  <data name="LblTituloReporteAutoridad" xml:space="preserve">
+    <value>表現報告</value>
+  </data>
+  <data name="LblReporteAutoridadNota" xml:space="preserve">
+    <value>數據每日更新於世界協調時間0：00</value>
+  </data>
+  <data name="LblTiposDeAlarma" xml:space="preserve">
+    <value>報告警報的類型</value>
+  </data>
+  <data name="LblLikes" xml:space="preserve">
+    <value>喜歡</value>
+  </data>
+  <data name="LblReenvios" xml:space="preserve">
+    <value>轉發</value>
+  </data>
+  <data name="LblMarcarRutaEscapeOpcional" xml:space="preserve">
+    <value>馬克逃亡者的逃亡路線（可選）</value>
+  </data>
+  <data name="LblCalificaGestionPolitico" xml:space="preserve">
+    <value>評價此權威的表現</value>
+  </data>
+  <data name="LblAprobacionCiudadana" xml:space="preserve">
+    <value>公民認可</value>
+  </data>
+  <data name="LblVotantesAprobacion" xml:space="preserve">
+    <value>選民</value>
+  </data>
+  <data name="LblEstrella1" xml:space="preserve">
+    <value>非常糟糕</value>
+  </data>
+  <data name="LblEstrella5" xml:space="preserve">
+    <value>太好了</value>
+  </data>
+  <data name="LblAprobacionSOSpect" xml:space="preserve">
+    <value>公民認可</value>
+  </data>
+  <data name="LblVerReporteCorto" xml:space="preserve">
+    <value>查看→報告</value>
+  </data>
+  <data name="LblNuevaDescripcion" xml:space="preserve">
+    <value>新描述</value>
+  </data>
+  <data name="LblVeracidadAlarma" xml:space="preserve">
+    <value>真實性警報</value>
+  </data>
+  <data name="LblVotoPendienteEnCierre" xml:space="preserve">
+    <value>你缺少投票來判斷這個警報是否能被關閉</value>
+  </data>
+  <data name="MsgYaVotasteCierre" xml:space="preserve">
+    <value>你不能再投票了，你已經投過這個警報了</value>
+  </data>
+  <data name="MsgEresProponenteCierre" xml:space="preserve">
+    <value>你是申請關閉的人，你不能投票</value>
+  </data>
+  <data name="LblAlarmaEnVotacionCierre" xml:space="preserve">
+    <value>這項警報正在進行投票中</value>
+  </data>
+  <data name="LblVerHistorialAlarma" xml:space="preserve">
+    <value>查看警報歷史</value>
+  </data>
+  <data name="LblResultadosOcultos" xml:space="preserve">
+    <value>投票後會顯示結果</value>
+  </data>
+  <data name="LabelNickname" xml:space="preserve">
+    <value>別名/綽號：</value>
+  </data>
+  <data name="LabelNicknameHint" xml:space="preserve">
+    <value>給使用者一個別名或暱稱，這樣你日後就能認出他們</value>
+  </data>
+  <data name="LabelNicknameObligatorio" xml:space="preserve">
+    <value>別名或綽號是必須的</value>
+  </data>
+  <data name="MsgSolicitudProtegidoPendiente" xml:space="preserve">
+    <value>此用戶已有一個待審核申請。請等申請通過或被拒絕後再提交新的。</value>
+  </data>
+  <data name="LblSuspensionActiva" xml:space="preserve">
+    <value>通知應使用者要求暫時暫停</value>
+  </data>
+  <data name="LabelAlertas" xml:space="preserve">
+    <value>警報</value>
+  </data>
+  <data name="LblRankingPoliticosLocales" xml:space="preserve">
+    <value>地方政治排名</value>
+  </data>
+  <data name="LblRankingDescripcion" xml:space="preserve">
+    <value>比較地方政治人物與不同公民指標的表現</value>
+  </data>
+  <data name="LblSeleccionaMetrica" xml:space="preserve">
+    <value>選擇一個指標</value>
+  </data>
+  <data name="LblTop5Mejores" xml:space="preserve">
+    <value>前五名最佳</value>
+  </data>
+  <data name="LblTop5Peores" xml:space="preserve">
+    <value>前五名最差</value>
+  </data>
+  <data name="LblSinDatos" xml:space="preserve">
+    <value>無資料可用</value>
+  </data>
+  <data name="LblMetricaPctResolucion" xml:space="preserve">
+    <value>警報解析度百分比</value>
+  </data>
+  <data name="LblMetricaCntAlarmas" xml:space="preserve">
+    <value>報告的警報總數</value>
+  </data>
+  <data name="LblMetricaCntLikes" xml:space="preserve">
+    <value>獲得的讚</value>
+  </data>
+  <data name="LblMetricaCntReenvios" xml:space="preserve">
+    <value>警報轉發</value>
+  </data>
+  <data name="LblMetricaAvgDias" xml:space="preserve">
+    <value>平均解決天數</value>
+  </data>
+  <data name="LblMetricaAprobacion" xml:space="preserve">
+    <value>公民認可</value>
+  </data>
+  <data name="LblCargandoRanking" xml:space="preserve">
+    <value>載入排名......</value>
+  </data>
+  <data name="OptRankingPoliticosLocales" xml:space="preserve">
+    <value>地方政治排名</value>
+  </data>
+  <data name="LblVerRankingPoliticos" xml:space="preserve">
+    <value>參見地方政治人物排名</value>
+  </data>
+  <data name="LblMetricaScoreGestion" xml:space="preserve">
+    <value>管理分數</value>
+  </data>
+  <data name="LblCriteriosGestionTitulo" xml:space="preserve">
+    <value>管理如何衡量？</value>
+  </data>
+  <data name="LblCriterioAlarmasReales" xml:space="preserve">
+    <value>只計算真實警報（確認的誤警報不計入）</value>
+  </data>
+  <data name="LblCriterioPremioViralidad" xml:space="preserve">
+    <value>關閉警報會受到獎勵，尤其是那些擴散度高的警報</value>
+  </data>
+  <data name="LblCriterioPenalizacionAbiertas" xml:space="preserve">
+    <value>持續開啟數天且未關閉的警報會受到懲罰，尤其是病毒警報</value>
+  </data>
+  <data name="LblCriterioScoreFinal" xml:space="preserve">
+    <value>最終分數介於 0 到 100 之間，結合解析度、及時性及關鍵警報管理</value>
+  </data>
+  <data name="LblCriterioBaseHistorial" xml:space="preserve">
+    <value>分數的基礎是其轄區內歷史上關閉的警報百分比</value>
+  </data>
+  <data name="LblExpiraEl" xml:space="preserve">
+    <value>過期日期</value>
+  </data>
+  <data name="LblDashboardMiEmprendimiento" xml:space="preserve">
+    <value>我的創業經歷</value>
+  </data>
+  <data name="LblPuestoEnPais" xml:space="preserve">
+    <value>{1} 排名為 #{0}</value>
+  </data>
+  <data name="LblMejorEmprendedor" xml:space="preserve">
+    <value>全國最佳</value>
+  </data>
+  <data name="LblPeorEmprendedor" xml:space="preserve">
+    <value>有更多改進的機會</value>
+  </data>
+  <data name="LblVerMasEstadisticas" xml:space="preserve">
+    <value>查看更多統計數據</value>
+  </data>
+  <data name="LblComparativoEnPais" xml:space="preserve">
+    <value>你所在國家的比較</value>
+  </data>
+  <data name="LblTiempoRespuesta" xml:space="preserve">
+    <value>回答。平均</value>
+  </data>
+  <data name="LblSatisfaccion" xml:space="preserve">
+    <value>滿足感</value>
+  </data>
+  <data name="LblChatsMes" xml:space="preserve">
+    <value>本月聊天</value>
+  </data>
+  <data name="LblTransacciones" xml:space="preserve">
+    <value>成功交易</value>
+  </data>
+  <data name="LblTuPuntaje" xml:space="preserve">
+    <value>你</value>
+  </data>
+  <data name="LabelContinuar" xml:space="preserve">
+    <value>繼續</value>
+  </data>
+  <data name="LblDashboardEmprendedorTitulo" xml:space="preserve">
+    <value>舉報我的創業經歷</value>
+  </data>
+  <data name="OptDashboardMiEmprendimiento" xml:space="preserve">
+    <value>舉報我的創業經歷</value>
+  </data>
+  <data name="LblSeleccionaEmprendimiento" xml:space="preserve">
+    <value>選擇新創公司</value>
+  </data>
+  <data name="MsgUsarDatosUltimaPromocion" xml:space="preserve">
+    <value>你想填寫最新推出促銷活動的表格嗎？</value>
+  </data>
+  <data name="LblSi" xml:space="preserve">
+    <value>是的</value>
+  </data>
+  <data name="LblNo" xml:space="preserve">
+    <value>不</value>
+  </data>
+  <data name="LblDashboardSinDatosTitulo" xml:space="preserve">
+    <value>沒有可用的指標</value>
+  </data>
+  <data name="LblDashboardSinDatosDescripcion" xml:space="preserve">
+    <value>這項計畫目前尚未有計算出的指標。當新晉升或首次晉升尚未結束時，會發生這種情況。</value>
   </data>
 </root>

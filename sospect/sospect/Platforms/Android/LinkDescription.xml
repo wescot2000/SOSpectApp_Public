@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<linker>
+  <!-- Preservar COMPLETAMENTE Microsoft.Maui.Controls -->
+  <assembly fullname="Microsoft.Maui.Controls">
+    <type fullname="*" preserve="all" />
+  </assembly>
+
+  <!-- Preservar COMPLETAMENTE Microsoft.Maui -->
+  <assembly fullname="Microsoft.Maui">
+    <type fullname="*" preserve="all" />
+  </assembly>
+
+  <!-- Preservar Microsoft.Maui.Graphics -->
+  <assembly fullname="Microsoft.Maui.Graphics">
+    <type fullname="*" preserve="all" />
+  </assembly>
+
+  <!-- Preservar Microsoft.Maui.Essentials -->
+  <assembly fullname="Microsoft.Maui.Essentials">
+    <type fullname="*" preserve="all" />
+  </assembly>
+
+  <!-- Preservar tu aplicación -->
+  <assembly fullname="sospect">
+    <type fullname="*" preserve="all" />
+  </assembly>
+
+  <!-- Preservar System.Drawing -->
+  <assembly fullname="System.Drawing.Primitives">
+    <type fullname="*" preserve="all" />
+  </assembly>
+
+  <!-- Preservar tipos específicos problemáticos -->
+  <assembly fullname="Microsoft.Maui.Controls">
+    <type fullname="Microsoft.Maui.Controls.VisualElement" preserve="all">
+      <method signature="System.Void .cctor()" preserve="all" />
+    </type>
+    <type fullname="Microsoft.Maui.Controls.Color" preserve="all" />
+    <type fullname="Microsoft.Maui.Graphics.Color" preserve="all" />
+  </assembly>
+
+  <!-- Preservar CommunityToolkit.Maui para evitar problemas con Camera -->
+  <assembly fullname="CommunityToolkit.Maui">
+    <type fullname="*" preserve="all" />
+  </assembly>
+
+  <assembly fullname="CommunityToolkit.Maui.Core">
+    <type fullname="*" preserve="all" />
+    <!-- Preservación específica para CameraManager y sus clases internas -->
+    <type fullname="CommunityToolkit.Maui.Core.CameraManager" preserve="all">
+      <method signature="*" preserve="all" />
+      <field signature="*" preserve="all" />
+    </type>
+    <type fullname="CommunityToolkit.Maui.Core.CameraManager+ImageCallBack" preserve="all">
+      <method signature="*" preserve="all" />
+      <field signature="*" preserve="all" />
+    </type>
+  </assembly>
+
+  <assembly fullname="CommunityToolkit.Maui.Camera">
+    <type fullname="*" preserve="all" />
+  </assembly>
+</linker>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>UIDeviceFamily</key>
+    <array>
+      <integer>1</integer>
+      <integer>2</integer>
+    </array>
+    <key>UISupportedInterfaceOrientations</key>
+    <array>
+      <string>UIInterfaceOrientationPortrait</string>
+      <string>UIInterfaceOrientationPortraitUpsideDown</string>
+      <string>UIInterfaceOrientationLandscapeLeft</string>
+      <string>UIInterfaceOrientationLandscapeRight</string>
+    </array>
+    <key>UISupportedInterfaceOrientations~ipad</key>
+    <array>
+      <string>UIInterfaceOrientationPortrait</string>
+      <string>UIInterfaceOrientationPortraitUpsideDown</string>
+      <string>UIInterfaceOrientationLandscapeLeft</string>
+      <string>UIInterfaceOrientationLandscapeRight</string>
+    </array>
+    <key>MinimumOSVersion</key>
+    <string>15.0</string>
+    <key>CFBundleDisplayName</key>
+    <string>SOSpect</string>
+    <key>UIUserInterfaceStyle</key>
+    <string>Dark</string>
+    <key>CFBundleIconName</key>
+    <string>AppIcon</string>
+
+    <key>CFBundleURLTypes</key>
+    <array>
+      <dict>
+        <key>CFBundleTypeRole</key>
+        <string>Editor</string>
+        <key>CFBundleURLName</key>
+        <string>com.apple.developer.associated-domains</string>
+        <key>CFBundleURLSchemes</key>
+        <array>
+          <string>appleauth</string>
+        </array>
+      </dict>
+      <dict>
+        <key>CFBundleTypeRole</key>
+        <string>Editor</string>
+        <key>CFBundleURLName</key>
+        <string>sospect</string>
+        <key>CFBundleURLSchemes</key>
+        <array>
+          <string>sospect</string>
+        </array>
+      </dict>
+    </array>
+
+    <key>com.apple.developer.associated-domains</key>
+    <array>
+      <!-- Universal Links: https://www.sospect.com/a/{id} abrirá la app directamente -->
+      <string>applinks:www.sospect.com</string>
+    </array>
+
+    <key>UIBackgroundModes</key>
+    <array>
+      <string>remote-notification</string>
+      <string>location</string>
+    </array>
+
+    <key>GADApplicationIdentifier</key>
+    <string><IOS_ADMOB_APP_ID></string>
+
+    <key>NSUserTrackingUsageDescription</key>
+    <string>SOSpect utiliza este identificador para mostrarte anuncios personalizados.</string>
+
+    <key>CFBundleIdentifier</key>
+    <string>com.wescotcorp.sospect</string>
+
+    <key>UILaunchStoryboardName</key>
+    <string>LaunchScreen</string>
+    <key>CFBundleName</key>
+    <string>SOSpect</string>
+
+    <key>XSAppIconAssets</key>
+    <string>Assets.xcassets/AppIcon.appiconset</string>
+
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>SOSpect necesita acceso a tu galería de fotos para adjuntar imágenes a tus reportes de alarma.</string>
+    <key>NSPhotoLibraryAddUsageDescription</key>
+    <string>SOSpect necesita permiso para guardar fotos y videos capturados en tu galería.</string>
+    <key>NSCameraUsageDescription</key>
+    <string>SOSpect necesita acceso a la cámara para capturar fotos y videos de incidentes.</string>
+    <key>NSMicrophoneUsageDescription</key>
+    <string>SOSpect necesita acceso al micrófono para grabar videos con audio de incidentes.</string>
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>SOSpect necesita tu ubicación para mostrarte alarmas cercanas y mantenerte seguro.</string>
+    <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+    <string>SOSpect necesita acceso continuo a tu ubicación para notificarte sobre alarmas cercanas incluso cuando la app está cerrada.</string>
+    <key>NSLocationAlwaysUsageDescription</key>
+    <string>SOSpect requiere ubicación en segundo plano para enviarte alertas de seguridad importantes cuando la app no está activa.</string>
+
+    <key>NSAppTransportSecurity</key>
+    <dict>
+      <key>NSExceptionDomains</key>
+      <dict>
+        <key>localhost:7079</key>
+        <dict>
+          <key>NSExceptionAllowsInsecureHTTPLoads</key>
+          <true/>
+          <key>NSExceptionRequiresForwardSecrecy</key>
+          <false/>
+          <key>NSIncludesSubdomains</key>
+          <true/>
+        </dict>
+      </dict>
+      <key>NSAllowsArbitraryLoads</key>
+      <true/>
+      <key>NSAllowsLocalNetworking</key>
+      <true/>
+    </dict>
+
+    <key>UIAppFonts</key>
+    <array>
+      <string>Font Awesome 6 Free-Regular-400.otf</string>
+      <string>icomoon.ttf</string>
+    </array>
+
+    <key>LSApplicationQueriesSchemes</key>
+    <array>
+      <string>waze</string>
+    </array>
+
+    <key>FirebaseAppDelegateProxyEnabled</key>
+    <false/>
+
+    <key>com.apple.developer.applesignin</key>
+    <array>
+      <string>Default</string>
+    </array>
+  </dict>
+</plist>

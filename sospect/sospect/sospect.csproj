@@ -1,184 +1,360 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Project Sdk="Microsoft.NET.Sdk">
+﻿ <Project Sdk="Microsoft.NET.Sdk">
+
 	<PropertyGroup>
-		<TargetFramework>netstandard2.0</TargetFramework>
-		<ProduceReferenceAssembly>true</ProduceReferenceAssembly>
-		<BuildWithMSBuildOnMono>true</BuildWithMSBuildOnMono>
-	</PropertyGroup>
-	<PropertyGroup>
+		<ValidateXcodeVersion>false</ValidateXcodeVersion>
+		<TargetFrameworks>net10.0-android;net10.0-ios;net10.0-maccatalyst</TargetFrameworks>
+		<TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net10.0-windows10.0.19041.0</TargetFrameworks>
+		<!-- Uncomment to also build the tizen app. You will need to install tizen by following this: https://github.com/Samsung/Tizen.NET -->
+		<!-- <TargetFrameworks>$(TargetFrameworks);net8.0-tizen</TargetFrameworks> -->
+
+		<!-- Note for MacCatalyst:
+		The default runtime is maccatalyst-x64, except in Release config, in which case the default is maccatalyst-x64;maccatalyst-arm64.
+		When specifying both architectures, use the plural <RuntimeIdentifiers> instead of the singular <RuntimeIdentifier>.
+		The Mac App Store will NOT accept apps with ONLY maccatalyst-arm64 indicated;
+		either BOTH runtimes must be indicated or ONLY macatalyst-x64. -->
+		<!-- For example: <RuntimeIdentifiers>maccatalyst-x64;maccatalyst-arm64</RuntimeIdentifiers> -->
+
+		<OutputType>Exe</OutputType>
+		<RootNamespace>sospect</RootNamespace>
+		<UseMaui>true</UseMaui>
+		<SingleProject>true</SingleProject>
+		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
-		<LangVersion>8.0</LangVersion>
+
+		<!-- Display name -->
+		<ApplicationTitle>SOSpect</ApplicationTitle>
+
+		<!-- App Identifier -->
+		<ApplicationId>com.wescotcorp.sospect</ApplicationId>
+
+		<!-- Versions -->
+    <ApplicationDisplayVersion>2.1.79</ApplicationDisplayVersion>
+    <ApplicationVersion>79</ApplicationVersion>
+    <PackageVersion>2.1.79</PackageVersion>
+
+    <AndroidVersionCode>79</AndroidVersionCode>
+    <AndroidVersionName>2.1.79</AndroidVersionName>
+    
+    <!-- Firma Android: se aplica a Debug y Release.
+         Mientras la app está en fase de arranque (un solo desarrollador) se usa el mismo keystore
+         de producción en todas las configuraciones — mismo SHA-1 registrado en Firebase/Google.
+         Las variables se inyectan por máquina (Directory.Build.props local, no versionado) o por CI/CD. -->
+    <AndroidKeyStore>true</AndroidKeyStore>
+    <AndroidSigningKeyStore>$(AndroidSigningKeyStore)</AndroidSigningKeyStore>
+    <AndroidSigningKeyAlias>$(AndroidSigningKeyAlias)</AndroidSigningKeyAlias>
+    <AndroidSigningKeyPass>$(AndroidSigningKeyPass)</AndroidSigningKeyPass>
+    <AndroidSigningStorePass>$(AndroidSigningStorePass)</AndroidSigningStorePass>
+
+	<AndroidMinSdkVersion>23</AndroidMinSdkVersion>
+	<AndroidTargetSdkVersion>35</AndroidTargetSdkVersion>
+	<AndroidCompileSdkVersion>35</AndroidCompileSdkVersion>
+
+    <AndroidEnableMultiDex>true</AndroidEnableMultiDex>
+    <AndroidDexTool>d8</AndroidDexTool>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">15.0</SupportedOSPlatformVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'maccatalyst'">13.1</SupportedOSPlatformVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">23.0</SupportedOSPlatformVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</SupportedOSPlatformVersion>
+		<TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</TargetPlatformMinVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
+    <MauiGenerateSplashScreen>false</MauiGenerateSplashScreen>
 	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-		<DebugType>portable</DebugType>
-		<DebugSymbols>true</DebugSymbols>
-	</PropertyGroup>
-	<ItemGroup>
-		<PackageReference Include="Sharpnado.MaterialFrame" Version="1.3.0" />
-		<PackageReference Include="Xamarin.Forms" Version="5.0.0.2545" />
-		<PackageReference Include="Xamarin.Essentials" Version="1.7.3" />
-		<PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
-		<PackageReference Include="MvvmLightLibs" Version="5.4.1.1" />
-		<PackageReference Include="Xamarin.Forms.Maps" Version="5.0.0.2545" />
-		<PackageReference Include="Rg.Plugins.Popup" Version="2.1.0" />
-		<PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.27.0" />
-		<PackageReference Include="Plugin.InAppBilling" Version="6.7.0" />
-		<PackageReference Include="Microcharts" Version="0.9.5.9" />
-		<PackageReference Include="Microcharts.Forms" Version="0.9.5.9" />
-		<PackageReference Include="Microsoft.AppCenter.Crashes" Version="5.0.2" />
-		<PackageReference Include="Microsoft.AppCenter.Analytics" Version="5.0.2" />
+
+  <PropertyGroup Condition="'$(TargetFramework)' == 'net10.0-ios'">
+    <CreateBindingResourcePackage>false</CreateBindingResourcePackage>
+    <EnableDefaultCodesignEntitlements>false</EnableDefaultCodesignEntitlements>
+    <CodesignEntitlements>Platforms\iOS\Entitlements.plist</CodesignEntitlements>
+    <CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">
+    <!-- Usar LaunchScreen.storyboard nativo para splash a pantalla completa -->
+    <MauiGenerateSplashScreen>false</MauiGenerateSplashScreen>
+  </PropertyGroup>
+
+  <ItemGroup Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">
+    <BundleResource Include="Platforms\iOS\LaunchScreen.storyboard" />
+  </ItemGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net10.0-android|AnyCPU'">
+    <EmbedAssembliesIntoApk>True</EmbedAssembliesIntoApk>
+    <AndroidLinkMode>None</AndroidLinkMode>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net10.0-android|AnyCPU'">
+    <!-- NUCLEAR: Desactivar ABSOLUTAMENTE TODO -->
+    <AndroidLinkMode>None</AndroidLinkMode>
+    <AndroidLinkSkip>true</AndroidLinkSkip>
+    <PublishTrimmed>false</PublishTrimmed>
+    <TrimMode>none</TrimMode>
+    <EnableLLVM>false</EnableLLVM>
+
+    <!-- Desactivar AOT -->
+    <RunAOTCompilation>false</RunAOTCompilation>
+    <AndroidEnableProfiledAot>false</AndroidEnableProfiledAot>
+    <AotAssemblies>false</AotAssemblies>
+
+    <!-- Bundle -->
+    <AndroidPackageFormat>aab</AndroidPackageFormat>
+
+    <!-- Debugging -->
+    <DebugType>portable</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+
+    <!-- Desactivar Proguard temporalmente -->
+    <AndroidEnableProguard>false</AndroidEnableProguard>
+
+    <!-- Evitar optimizaciones -->
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+    <AndroidStripILAfterAOT>false</AndroidStripILAfterAOT>
+
+    <!-- CRITICO: Preservar reflection -->
+    <MtouchLink>None</MtouchLink>
+    <AndroidSkipBindingConflictChecks>true</AndroidSkipBindingConflictChecks>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">
+    <MauiGenerateSplashScreen>false</MauiGenerateSplashScreen>
+    <!-- Configurar splash screen nativo para Android 12+ -->
+    <AndroidEnableSGenConcurrent>true</AndroidEnableSGenConcurrent>
+  </PropertyGroup>
+
+		<ItemGroup>
+			<!-- App Icon -->
+      <MauiIcon Include="Resources\AppIcon\icon.png" Color="#000000" BaseSize="192,192" />
+      
+      <!-- SPLASH para iOS: se usa LaunchScreen.storyboard nativo (ver Platforms/iOS/LaunchScreen.storyboard).
+           La imagen se sirve desde Platforms/iOS/Assets.xcassets/splash_sospect.imageset/
+           NO usar MauiSplashScreen para iOS porque genera un segundo storyboard pequeño en paralelo. -->
+
+      <!-- Images -->
+			<MauiImage Include="Resources\Images\*" />
+			<!-- Custom Fonts -->
+      <MauiFont Include="Resources\Fonts\icomoon.ttf" />
+      <MauiFont Include="Resources\Fonts\OpenSans-Regular.ttf" />
+      <MauiFont Include="Resources\Fonts\OpenSans-Semibold.ttf" />
+			<!-- Raw Assets -->
+			<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
+		</ItemGroup>
+
+  <ItemGroup Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">
+    <None Remove="Platforms\Android\Resources\drawable\splash_sospect.png" />
+    <None Remove="Platforms\Android\Resources\drawable-hdpi\splash_sospect.png" />
+    <None Remove="Platforms\Android\Resources\drawable-ldpi\splash_sospect.png" />
+    <None Remove="Platforms\Android\Resources\drawable-mdpi\splash_sospect.png" />
+    <None Remove="Platforms\Android\Resources\drawable-xhdpi\splash_sospect.png" />
+    <None Remove="Platforms\Android\Resources\drawable-xxhdpi\splash_sospect.png" />
+    <None Remove="Platforms\Android\Resources\drawable-xxxhdpi\splash_sospect.png" />
+    <AndroidAsset Include="Resources\Fonts\icomoon.ttf">
+      <LogicalName>Fonts/icomoon.ttf</LogicalName>
+    </AndroidAsset>
+
+    <AndroidAsset Include="Resources\Fonts\icomoon.ttf">
+      <LogicalName>assets/icomoon.ttf</LogicalName>
+    </AndroidAsset>
+    
+  </ItemGroup>
+
+  <ItemGroup Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">
+    <AndroidResource Include="Resources\AppIcon\icon.png">
+      <LogicalName>drawable\splash_icon.png</LogicalName>
+    </AndroidResource>
+    <AndroidResource Include="Platforms\Android\Resources\drawable\ic_notificacionespush.png" />
+    <AndroidResource Include="Platforms\Android\Resources\drawable-hdpi\ic_notificacionespush.png" />
+    <AndroidResource Include="Platforms\Android\Resources\drawable-ldpi\ic_notificacionespush.png" />
+    <AndroidResource Include="Platforms\Android\Resources\drawable-mdpi\ic_notificacionespush.png" />
+    <AndroidResource Include="Platforms\Android\Resources\drawable-xhdpi\ic_notificacionespush.png" />
+    <AndroidResource Include="Platforms\Android\Resources\drawable-xxhdpi\ic_notificacionespush.png" />
+    <AndroidResource Include="Platforms\Android\Resources\drawable-xxxhdpi\ic_notificacionespush.png" />
+  </ItemGroup>
+  
+  <ItemGroup Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">
+    <LinkDescription Include="Platforms\Android\LinkDescription.xml" />
 	</ItemGroup>
+
 	<ItemGroup>
-		<None Remove="Views\" />
-		<None Remove="Xamarin.Auth" />
-		<None Remove="AppConstants\" />
-		<None Remove="AuthHelpers\" />
-		<None Remove="Newtonsoft.Json" />
-		<None Remove="Plugin.FacebookClient" />
-		<None Remove="Models\" />
-		<None Remove="Services\" />
-		<None Remove="ViewModels\" />
-		<None Remove="MvvmLightLibs" />
-		<None Remove="Xamarin.Forms.Maps" />
-		<None Remove="Rg.Plugins.Popup" />
-		<None Remove="Popups\" />
-		<None Remove="ThriveGmbH.BottomNavigationBar.XF" />
-		<None Remove="Interfaces\" />
-		<None Remove="Resources\" />
-		<None Remove="Resources\Fonts\" />
-		<None Remove="CustomRenderers\" />
-		<None Remove="AWSSDK.CognitoIdentity" />
-		<None Remove="Utils\" />
-		<None Remove="AWSSDK.SimpleNotificationService" />
-		<None Remove="Shiny" />
-		<None Remove="Extensions\" />
-		<None Remove="System.IdentityModel.Tokens.Jwt" />
-		<None Remove="TemplateSelectors\" />
-		<None Remove="Converters\" />
+	  <AndroidResource Remove="Platforms\Android\Resources\values\styles.xml" />
 	</ItemGroup>
+
 	<ItemGroup>
-		<Folder Include="Resources\es.lproj\" />
-		<Folder Include="AppConstants\" />
-		<Folder Include="AuthHelpers\" />
-		<Folder Include="Services\" />
-		<Folder Include="Interfaces\" />
-		<Folder Include="Resources\Fonts\" />
-		<Folder Include="CustomRenderers\" />
-		<Folder Include="Utils\" />
-		<Folder Include="Extensions\" />
-		<Folder Include="TemplateSelectors\" />
+	  <MauiAsset Remove="Resources\Raw\map_style.json" />
 	</ItemGroup>
+
 	<ItemGroup>
-	  <Compile Update="Popups\SuperPowersPopupPage.xaml.cs">
-	    <SubType>Code</SubType>
-	    <DependentUpon>SuperPowersPopupPage.xaml</DependentUpon>
-	  </Compile>
-	  <Compile Update="Popups\ProtegidosPopupPage.xaml.cs">
-	    <DependentUpon>ProtegidosPopupPage.xaml</DependentUpon>
-	  </Compile>
-	  <Compile Update="Resources\AppResources.Designer.cs">
-	    <DesignTime>True</DesignTime>
-	    <AutoGen>True</AutoGen>
-	    <DependentUpon>AppResources.resx</DependentUpon>
-	  </Compile>
-	  <Compile Update="Views\TextAnalyticsPage.xaml.cs">
-	    <DependentUpon>TextAnalyticsPage.xaml</DependentUpon>
-	  </Compile>
-	  <Compile Update="Views\PredictiveReportPage.xaml.cs">
-	    <DependentUpon>PredictiveReportPage.xaml</DependentUpon>
-	  </Compile>
-	  <Compile Update="Views\TimeEvolutionReportPage.xaml.cs">
-	    <DependentUpon>TimeEvolutionReportPage.xaml</DependentUpon>
-	  </Compile>
-	  <Compile Update="Views\HeatReportPage.xaml.cs">
-	    <SubType>Code</SubType>
-	    <DependentUpon>HeatReportPage.xaml</DependentUpon>
-	  </Compile>
-	  <Compile Update="Views\InternetRequiredForApp.xaml.cs">
-	    <DependentUpon>InternetRequiredForApp.xaml</DependentUpon>
-	  </Compile>
-	  <Compile Update="Views\SuspendedAccountPage.xaml.cs">
-	    <DependentUpon>SuspendedAccountPage.xaml</DependentUpon>
-	  </Compile>
-	  <Compile Update="Views\TutorialPopupPage.xaml.cs">
-	    <DependentUpon>TutorialPopupPage.xaml</DependentUpon>
-	  </Compile>
-	  <Compile Update="Views\ConfirmationPage.xaml.cs">
-	    <DependentUpon>ConfirmationPage.xaml</DependentUpon>
-	  </Compile>
-	  <Compile Update="Views\SubscriptionsPage.xaml.cs">
-	    <DependentUpon>SubscriptionsPage.xaml</DependentUpon>
-	  </Compile>
-	  <Compile Update="Views\TermsAndConditionsPage.xaml.cs">
-	    <DependentUpon>TermsAndConditionsPage.xaml</DependentUpon>
-	  </Compile>
-	  <Compile Update="Views\SubscriptionValuesPage.xaml.cs">
-	    <DependentUpon>SubscriptionValuesPage.xaml</DependentUpon>
-	  </Compile>
-	  <Compile Update="Views\AboutPage.xaml.cs">
-	    <DependentUpon>AboutPage.xaml</DependentUpon>
-	  </Compile>
-	  <Compile Update="Views\MyProtectorsPage.xaml.cs">
-	    <DependentUpon>MyProtectorsPage.xaml</DependentUpon>
-	  </Compile>
-	  <Compile Update="Views\ProtectedUsersPage.xaml.cs">
-	    <DependentUpon>ProtectedUsersPage.xaml</DependentUpon>
-	  </Compile>
-	  <Compile Update="Views\CompleteSubscriptionPage.xaml.cs">
-	    <DependentUpon>CompleteSubscriptionPage.xaml</DependentUpon>
-	  </Compile>
-	  <Compile Update="Views\MensajeDetallePage.xaml.cs">
-	    <DependentUpon>MensajeDetallePage.xaml</DependentUpon>
-	  </Compile>
-	  <Compile Update="Views\MensajesPage.xaml.cs">
-	    <DependentUpon>MensajesPage.xaml</DependentUpon>
-	  </Compile>
-	  <Compile Update="Views\AlarmRadiusPage.xaml.cs">
-	    <SubType>Code</SubType>
-	    <DependentUpon>AlarmRadiusPage.xaml</DependentUpon>
-	  </Compile>
-	  <Compile Update="Views\ProtectedSubscriptionPage.xaml.cs">
-	    <DependentUpon>ProtectedSubscriptionPage.xaml</DependentUpon>
-	  </Compile>
-	  <Compile Update="Views\AprobarSolicitudesPage.xaml.cs">
-	    <SubType>Code</SubType>
-	    <DependentUpon>AprobarSolicitudesPage.xaml</DependentUpon>
-	  </Compile>
-	  <Compile Update="Views\ZoneSubscriptionPage.xaml.cs">
-	    <DependentUpon>ZoneSubscriptionPage.xaml</DependentUpon>
-	  </Compile>
-	  <Compile Update="Views\PurchaseSuperPowersPage.xaml.cs">
-	    <DependentUpon>PurchaseSuperPowersPage.xaml</DependentUpon>
-	  </Compile>
-	  <Compile Update="Views\MenuPage.xaml.cs">
-	    <SubType>Code</SubType>
-	    <DependentUpon>MenuPage.xaml</DependentUpon>
-	  </Compile>
+	  <None Remove="Platforms\Android\google-services.json" />
+	  <None Remove="Platforms\Android\LinkDescription.xml" />
+	  <None Remove="Platforms\Android\Proguard\proguard.cfg" />
+	  <None Remove="Platforms\Android\Resources\drawable\amarillopleitocallejero.png" />
+	  <None Remove="Platforms\Android\Resources\drawable\AzulPersonaPerdida.png" />
+	  <None Remove="Platforms\Android\Resources\drawable\ClosedAlarmPin.png" />
+	  <None Remove="Platforms\Android\Resources\drawable\DangerPin.png" />
+	  <None Remove="Platforms\Android\Resources\drawable\DireccionEscapeSospechoso.png" />
+	  <None Remove="Platforms\Android\Resources\drawable\DireccionEscapeSospechosoCerrada.png" />
+	  <None Remove="Platforms\Android\Resources\drawable\dropdown_icon.png" />
+	  <None Remove="Platforms\Android\Resources\drawable\man_officer_police_icon.png" />
+	  <None Remove="Platforms\Android\Resources\drawable\man_officer_police_icon_grey.png" />
+	  <None Remove="Platforms\Android\Resources\drawable\NaranjaAdvertenciaPeligro.png" />
+	  <None Remove="Platforms\Android\Resources\drawable\NegroDisturbiosProtestas.png" />
+	  <None Remove="Platforms\Android\Resources\drawable\PurpuraViolenciaIntrafamiliar.png" />
+	  <None Remove="Platforms\Android\Resources\drawable\RojoDelitoCrimen.png" />
+	  <None Remove="Platforms\Android\Resources\drawable\RosadoAcosoCallejero.png" />
+	  <None Remove="Platforms\Android\Resources\drawable\splash_sospect.png" />
+	  <None Remove="Platforms\Android\Resources\drawable\user_location.png" />
+	  <None Remove="Platforms\Android\Resources\drawable\user_location2.png" />
+	  <None Remove="Platforms\Android\Resources\drawable\VerdeAcompanamientoVisual.png" />
+	  <None Remove="Platforms\Android\Resources\drawable\VerdeAzulMascotaPerdida.png" />
+	  <None Remove="Platforms\Android\Resources\drawable\verified.png" />
+	  <None Remove="Platforms\Android\Resources\drawable\WarningPin.png" />
+	  <None Remove="Platforms\Android\Resources\mipmap-hdpi\icon.png" />
+	  <None Remove="Platforms\Android\Resources\mipmap-hdpi\icon_adaptive_back.png" />
+	  <None Remove="Platforms\Android\Resources\mipmap-hdpi\icon_adaptive_fore.png" />
+	  <None Remove="Platforms\Android\Resources\mipmap-hdpi\launcher_foreground.png" />
+	  <None Remove="Platforms\Android\Resources\mipmap-mdpi\icon.png" />
+	  <None Remove="Platforms\Android\Resources\mipmap-mdpi\icon_adaptive_back.png" />
+	  <None Remove="Platforms\Android\Resources\mipmap-mdpi\icon_adaptive_fore.png" />
+	  <None Remove="Platforms\Android\Resources\mipmap-mdpi\launcher_foreground.png" />
+	  <None Remove="Platforms\Android\Resources\mipmap-xhdpi\icon.png" />
+	  <None Remove="Platforms\Android\Resources\mipmap-xhdpi\icon_adaptive_back.png" />
+	  <None Remove="Platforms\Android\Resources\mipmap-xhdpi\icon_adaptive_fore.png" />
+	  <None Remove="Platforms\Android\Resources\mipmap-xhdpi\launcher_foreground.png" />
+	  <None Remove="Platforms\Android\Resources\mipmap-xxhdpi\icon.png" />
+	  <None Remove="Platforms\Android\Resources\mipmap-xxhdpi\icon_adaptive_back.png" />
+	  <None Remove="Platforms\Android\Resources\mipmap-xxhdpi\icon_adaptive_fore.png" />
+	  <None Remove="Platforms\Android\Resources\mipmap-xxhdpi\launcher_foreground.png" />
+	  <None Remove="Platforms\Android\Resources\mipmap-xxxhdpi\icon.png" />
+	  <None Remove="Platforms\Android\Resources\mipmap-xxxhdpi\icon_adaptive_back.png" />
+	  <None Remove="Platforms\Android\Resources\mipmap-xxxhdpi\icon_adaptive_fore.png" />
+	  <None Remove="Platforms\Android\Resources\mipmap-xxxhdpi\launcher_foreground.png" />
+	  <None Remove="Platforms\Android\Resources\values\colors.xml" />
+	  <None Remove="Resources\Images\splash_sospect.png" />
 	</ItemGroup>
+
 	<ItemGroup>
-	  <EmbeddedResource Update="Popups\SuperPowersPopupPage.xaml">
-	    <SubType>Designer</SubType>
-	    <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-	  </EmbeddedResource>
-	  <EmbeddedResource Update="Resources\AppResources.resx">
-	    <Generator>PublicResXFileCodeGenerator</Generator>
-	    <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
-	  </EmbeddedResource>
-	  <EmbeddedResource Update="Views\HeatReportPage.xaml">
-	    <SubType>Designer</SubType>
-	    <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-	  </EmbeddedResource>
-	  <EmbeddedResource Update="Views\MenuPage.xaml">
-	    <SubType>Designer</SubType>
-	    <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-	  </EmbeddedResource>
-	  <EmbeddedResource Update="Views\AlarmRadiusPage.xaml">
-	    <SubType>Designer</SubType>
-	    <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-	  </EmbeddedResource>
-	  <EmbeddedResource Update="Views\AprobarSolicitudesPage.xaml">
-	    <SubType>Designer</SubType>
-	    <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-	  </EmbeddedResource>
+	  <AndroidAsset Include="Platforms\iOS\Resources\map_style.json" />
 	</ItemGroup>
+
+  <ItemGroup>
+    <BundleResource Include="Platforms\iOS\GoogleService-Info.plist">
+      <Link>GoogleService-Info.plist</Link>
+    </BundleResource>
+  </ItemGroup>
+
+	<ItemGroup>
+	  <GoogleServicesJson Include="Platforms\Android\google-services.json">
+	    <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+	  </GoogleServicesJson>
+	</ItemGroup>
+
+	<ItemGroup>
+    <PackageReference Include="CommunityToolkit.Maui.Camera" Version="6.0.0" />
+    <PackageReference Include="Camera.MAUI" Version="1.5.1" />
+    <PackageReference Include="Xamarin.Build.Download" Version="0.11.4" />
+		<PackageReference Include="CommunityToolkit.Maui" Version="14.0.0" />
+		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.0" />
+		<PackageReference Include="Microcharts.Maui" Version="1.0.1" />
+		<PackageReference Include="Microsoft.Maui.Controls" Version="10.0.31" />
+		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="10.0.31" />
+		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="10.0.3" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+		<!-- Plugin.FirebasePushNotifications movido al ItemGroup de Android (no soporta net10.0 multiplataforma) -->
+		<PackageReference Include="Plugin.InAppBilling" Version="10.0.0" />
+		<PackageReference Include="Plugin.AdMob" Version="3.0.2" />
+		<PackageReference Include="Jc.GMA.iOS" Version="12.7.1" />
+		<PackageReference Include="Jc.UMP.iOS" Version="2.7.5" />
+		<PackageReference Include="SkiaSharp.Views.Maui.Controls" Version="3.119.2" />
+		<PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.15.0" />
+		<PackageReference Include="Microsoft.Maui.Controls.Maps" Version="10.0.31" />
+		<!-- Xamarin.Firebase.iOS.AdMob removido: reemplazado por Plugin.AdMob multiplataforma -->
+        </ItemGroup>
+
+	<!-- Workaround: Compose.Runtime.Annotation duplicado entre .Android y .Jvm -->
+	<!-- Ref: https://github.com/dotnet/android-libraries/issues/1341 -->
+	<ItemGroup Condition="'$(TargetFramework)' == 'net10.0-android'">
+		<PackageReference Include="Xamarin.AndroidX.Compose.Runtime.Annotation.Jvm" Version="1.10.0.1" ExcludeAssets="all" />
+	</ItemGroup>
+
+	<!-- ANDROID PACKAGES - UNIFICADO -->
+	<ItemGroup Condition="'$(TargetFramework)' == 'net10.0-android'">
+		<!-- Firebase packages -->
+		<PackageReference Include="Plugin.FirebasePushNotifications" Version="4.0.23-pre" />
+		<PackageReference Include="Xamarin.AndroidX.Core.SplashScreen" Version="1.0.1.17" />
+		<PackageReference Include="Xamarin.Firebase.Analytics" Version="123.0.0.1" />
+		<PackageReference Include="Xamarin.Firebase.Crashlytics" Version="120.0.0.1" />
+		<PackageReference Include="Xamarin.Firebase.Messaging" Version="124.1.2" />
+		<PackageReference Include="Xamarin.GooglePlayServices.Base" Version="118.9.0" />
+		<!-- BILLING: Requerido por Plugin.InAppBilling 10.0.0 -->
+		<PackageReference Include="Xamarin.Android.Google.BillingClient" Version="8.1.0" />
+
+		<!-- AndroidX packages - versiones alineadas con dependencias transitivas de MAUI 10 -->
+		<PackageReference Include="Xamarin.AndroidX.Fragment" Version="1.8.9.1" />
+		<PackageReference Include="Xamarin.AndroidX.Fragment.Ktx" Version="1.8.9.1" />
+		<PackageReference Include="Xamarin.AndroidX.SavedState" Version="1.4.0.1" />
+		<PackageReference Include="Xamarin.AndroidX.SavedState.SavedState.Ktx" Version="1.4.0.1" />
+		<PackageReference Include="Xamarin.AndroidX.Collection" Version="1.5.0.4" />
+		<PackageReference Include="Xamarin.AndroidX.Collection.Ktx" Version="1.5.0.4" />
+		<PackageReference Include="Xamarin.AndroidX.Activity" Version="1.12.2.1" />
+
+		<!-- Lifecycle packages alineados con MAUI 10 -->
+		<PackageReference Include="Xamarin.AndroidX.Lifecycle.LiveData" Version="2.10.0.1" />
+		<PackageReference Include="Xamarin.AndroidX.Lifecycle.LiveData.Core" Version="2.10.0.1" />
+		<PackageReference Include="Xamarin.AndroidX.Lifecycle.LiveData.Core.Ktx" Version="2.10.0.1" />
+		<PackageReference Include="Xamarin.AndroidX.Lifecycle.Process" Version="2.10.0.1" />
+		<PackageReference Include="Xamarin.AndroidX.Lifecycle.Runtime" Version="2.10.0.1" />
+	</ItemGroup>
+
+	<!-- Xamarin.Firebase.iOS.* removidos: incompatibles con .NET 9 -->
+
+  <ItemGroup Condition="'$(Configuration)' == 'Release' AND $([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">
+    <AndroidProguardConfigFiles Include="Platforms\Android\Proguard\proguard.cfg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <MauiImage Update="Resources\Images\sospecticon.png">
+      <Color>#000000</Color>
+      <BaseSize>192,192</BaseSize>
+    </MauiImage>
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <MauiXaml Update="Views\DescribirAlarmaPage.xaml">
+      <Generator></Generator>
+    </MauiXaml>
+    <MauiXaml Update="Views\Popups\CameraPopup.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </MauiXaml>
+    <MauiXaml Update="Views\Popups\ModernAlertPopup.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </MauiXaml>
+    <MauiXaml Update="Views\Popups\RelationshipPickerPopup.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </MauiXaml>
+    <MauiXaml Update="Views\Popups\TipoAlarmaPickerPopup.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </MauiXaml>
+    <MauiXaml Update="Views\TutorialOverlayPage.xaml">
+      <Generator></Generator>
+    </MauiXaml>
+  </ItemGroup>
+
+  <!-- Limpiar atributos extendidos antes de codesign (iOS - solo macOS) -->
+  <Target Name="_CleanExtendedAttributesBeforeCodesign"
+          Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios' AND $([MSBuild]::IsOSPlatform('OSX'))"
+          BeforeTargets="_CodesignAppBundle">
+    <Message Text="&gt;&gt;&gt; Cleaning xattrs from $(AppBundleDir)" Importance="high" />
+    <Exec Command="xattr -cr &quot;$(AppBundleDir)&quot;" />
+  </Target>
+
+  <!-- Plugin.AdMob: enlazar bibliotecas Swift del Google Mobile Ads SDK para iOS -->
+  <Target Name="LinkSwiftLibraries" Condition="'$(TargetFramework)' == 'net10.0-ios' AND $([MSBuild]::IsOSPlatform('OSX'))" AfterTargets="_SayHello">
+    <PropertyGroup>
+      <_SwiftLibPath>$(HOME)/Library/Developer/Xcode/DerivedData</_SwiftLibPath>
+    </PropertyGroup>
+    <ItemGroup>
+      <_SwiftLibSearchPath Include="/usr/lib/swift" />
+    </ItemGroup>
+  </Target>
+
 </Project>

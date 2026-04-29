@@ -37,11 +37,24 @@ namespace sospect.Models
         [JsonProperty("texto_renovable")]
         public string texto_renovable { get; set; }
 
+        /// <summary>
+        /// Tipo de suscripción (FK a tiposubscripcion)
+        /// </summary>
+        [JsonProperty("tipo_subscr_id")]
+        public int tipo_subscr_id { get; set; }
+
+        /// <summary>
+        /// Indica si es una suscripción de tipo promoción local
+        /// Se usa para determinar comportamiento de la tarjeta (sin botones renovar/cancelar, clicable)
+        /// </summary>
+        [JsonProperty("es_promocion")]
+        public bool es_promocion { get; set; }
+
         public string CombinedFlags
         {
             get
             {
-                return $"{flag_subscr_vencida},{flag_renovable}";
+                return $"{flag_subscr_vencida},{flag_renovable},{es_promocion}";
             }
         }
     }

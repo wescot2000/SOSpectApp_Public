@@ -8,12 +8,13 @@ using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using sospect.Helpers;
+using sospect.Interfaces;
 using sospect.Models;
 using sospect.Services;
 using sospect.Utils;
 using sospect.Views;
-using Xamarin.Essentials;
-using Xamarin.Forms;
+using Microsoft.Maui.Storage;
+using Microsoft.Maui.Controls;
 
 namespace sospect.ViewModels
 {
@@ -82,12 +83,8 @@ namespace sospect.ViewModels
             {
                 var LabelError = TranslateExtension.Translate("LabelError");
                 var LabelOK = TranslateExtension.Translate("LabelOK");
-                await Application.Current.MainPage.DisplayAlert(LabelError, ex.Message, LabelOK);
-                var properties = new Dictionary<string, string> {
-                        { "Object", "CompleteSubscriptionPageViewModel" },
-                        { "Method", "ObtenerValoresDeSubscripcion" }
-                    };
-                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
+                await ModernAlerts.ShowError(LabelError, ex.Message);
+                CrashlyticsHelper.LogError(ex, "CompleteSubscriptionPageViewModel", "LoadSubscriptionValues");
             }
             finally
             {
@@ -110,15 +107,15 @@ namespace sospect.ViewModels
                 var LabelError = TranslateExtension.Translate("LabelError");
                 var LabelExito = TranslateExtension.Translate("LabelExito");
                 var LabelOK = TranslateExtension.Translate("LabelOK");
-                var LblSubscripcionFallida = TranslateExtension.Translate("LblSubscripcionFallida");
+                //var LblSubscripcionFallida = TranslateExtension.Translate("LblSubscripcionFallida");
                 var LblSubscripcionCompletada = TranslateExtension.Translate("LblSubscripcionCompletada");
 
                 if (_parametros.SaldoPoderes < _poderesRequeridos)
                 {
-                    var answer = await Application.Current.MainPage.DisplayAlert(saldoPoderesInsuficiente, "", comprarPoderes, cancelar);
+                    var answer = await ModernAlerts.ShowConfirmation(saldoPoderesInsuficiente, "", comprarPoderes, cancelar, false);
                     if (answer)
                     {
-                        await Application.Current.MainPage.Navigation.PushAsync(new PurchaseSuperPowersPage());
+                        await GetCurrentTabNavigation().PushAsync(new PurchaseSuperPowersPage());
                     }
                     return;
                 }
@@ -130,33 +127,50 @@ namespace sospect.ViewModels
                 };
 
                 IsRunning = true;
+                bool navigatedAway = false;
                 try
                 {
                     var response = await ApiService.CompletarSubscripcion(request);
                     if (response.IsSuccess)
                     {
-                        await Application.Current.MainPage.DisplayAlert(LabelExito, LblSubscripcionCompletada, LabelOK);
+                        await ModernAlerts.ShowSuccess(LabelExito, LblSubscripcionCompletada);
+                        navigatedAway = true;
+                        await GetCurrentTabNavigation().PopAsync();
+                        _ = HomeViewModel.RefrescarParametrosAsync();
                         MessagingCenter.Send(this, "DatosActualizados");
-                        await Application.Current.MainPage.Navigation.PopToRootAsync();
                     }
                     else
                     {
-                        await Application.Current.MainPage.DisplayAlert(LabelError, LblSubscripcionFallida, LabelOK);
+                        await ModernAlerts.ShowError(LabelError, response.Message);
+                        //await Application.Current.MainPage.DisplayAlert(LabelError, LblSubscripcionFallida, LabelOK);
                     }
                 }
                 catch (Exception ex)
                 {
-                    var properties = new Dictionary<string, string> {
-                        { "Object", "CompleteSubscriptionPageViewModel" },
-                        { "Method", "CompletarSubscripcion" }
-                    };
-                    Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
+                    if (!navigatedAway)
+                    {
+                        var MensajeError = TranslateExtension.Translate("MensajeError");
+                        var LabelInformacion = TranslateExtension.Translate("LabelInformacion");
+                        await ModernAlerts.ShowWarning(LabelInformacion, MensajeError);
+                    }
+                    CrashlyticsHelper.LogError(ex, "CompleteSubscriptionPageViewModel", "CompleteSubscription");
                 }
                 finally
                 {
                     IsRunning = false;
                 }               
             }
+        }
+
+        private INavigation GetCurrentTabNavigation()
+        {
+            if (Application.Current.MainPage is TabbedPage tabbedPage)
+            {
+                if (tabbedPage.CurrentPage is NavigationPage navPage)
+                    return navPage.Navigation;
+                return tabbedPage.CurrentPage?.Navigation ?? tabbedPage.Navigation;
+            }
+            return Application.Current.MainPage.Navigation;
         }
 
         public async Task LoadApprovedSubscriptions()
@@ -173,11 +187,7 @@ namespace sospect.ViewModels
             }
             catch (Exception ex)
             {
-                var properties = new Dictionary<string, string> {
-                        { "Object", "CompleteSubscriptionPageViewModel" },
-                        { "Method", "ObtenerSolicitudesAprobadas" }
-                    };
-                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
+                CrashlyticsHelper.LogError(ex, "CompleteSubscriptionPageViewModel", "LoadApprovedSubscriptions");
             }
             finally
             {

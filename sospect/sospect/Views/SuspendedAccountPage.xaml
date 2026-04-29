@@ -1,50 +1,82 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="sospect.Views.SuspendedAccountPage"
              xmlns:fonts="clr-namespace:sospect.Resources.Fonts;assembly=sospect"
              xmlns:helpers="clr-namespace:sospect.Helpers"
-             BackgroundColor="White"
+             BackgroundColor="#F8F9FA"
              Title="{helpers:TranslateExtension Text='LblTitleCuentaSuspendida'}">
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
 
-        <Label
-            Grid.Row="0" Grid.Column="1"
-               Text="{helpers:TranslateExtension Text='LblCuentaSuspendida'}"
-               FontSize="Medium"
-               FontAttributes="Bold"
-               HorizontalOptions="CenterAndExpand"
-               VerticalOptions="CenterAndExpand" 
-               HorizontalTextAlignment="Center"
-               TextColor="Red"/>
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="20">
 
-        <StackLayout Grid.Row="1" Grid.Column="1" VerticalOptions="Center">
-            <Label 
-                   Text="{helpers:TranslateExtension Text='LblFechaFinSuspension'}"
-                   FontSize="Small"
-                   FontAttributes="Bold"
-                   HorizontalOptions="Center"
-                   VerticalOptions="Center" 
-                   HorizontalTextAlignment="Center"
-                   VerticalTextAlignment="Center"
-                   TextColor="Gray"/>
-            <Label Text="{Binding FechaFinSuspension}"
-                   FontSize="Small"
-                   FontAttributes="Bold"
-                   HorizontalOptions="Center"
-                   VerticalOptions="Center" 
-                   HorizontalTextAlignment="Center"
-                   VerticalTextAlignment="Center"
-                   TextColor="Gray"></Label>
-        </StackLayout>
-    </Grid>
+            <!-- Card de Información de Suspensión -->
+            <Frame BackgroundColor="White"
+                   CornerRadius="16"
+                   HasShadow="True"
+                   Padding="0"
+                   BorderColor="Transparent">
+                <Grid Padding="24" RowSpacing="20">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <!-- Icono de Advertencia -->
+                    <Frame Grid.Row="0"
+                           WidthRequest="80"
+                           HeightRequest="80"
+                           CornerRadius="40"
+                           BackgroundColor="#FFF3E0"
+                           HasShadow="False"
+                           Padding="0"
+                           HorizontalOptions="Center"
+                           BorderColor="Transparent">
+                        <Label Text="{x:Static fonts:IconFont.ShieldHalved}"
+                               FontFamily="{StaticResource IcoMoonFamily}"
+                               FontSize="40"
+                               TextColor="#E74C3C"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center"/>
+                    </Frame>
+
+                    <!-- Mensaje de Cuenta Suspendida -->
+                    <Label Grid.Row="1"
+                           Text="{helpers:TranslateExtension Text='LblCuentaSuspendida'}"
+                           FontSize="20"
+                           FontAttributes="Bold"
+                           HorizontalOptions="Center"
+                           HorizontalTextAlignment="Center"
+                           TextColor="#E74C3C"
+                           Margin="0,0,0,10"/>
+
+                    <!-- Información de Fecha -->
+                    <VerticalStackLayout Grid.Row="2" Spacing="8">
+                        <Label Text="{helpers:TranslateExtension Text='LblFechaFinSuspension'}"
+                               FontSize="14"
+                               HorizontalOptions="Center"
+                               HorizontalTextAlignment="Center"
+                               TextColor="#7F8C8D"/>
+
+                        <Frame BackgroundColor="#F8F9FA"
+                               CornerRadius="8"
+                               HasShadow="False"
+                               Padding="12,8"
+                               HorizontalOptions="Center"
+                               BorderColor="Transparent">
+                            <Label Text="{Binding FechaFinSuspension}"
+                                   FontSize="16"
+                                   FontAttributes="Bold"
+                                   HorizontalOptions="Center"
+                                   HorizontalTextAlignment="Center"
+                                   TextColor="#2C3E50"/>
+                        </Frame>
+                    </VerticalStackLayout>
+
+                </Grid>
+            </Frame>
+
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

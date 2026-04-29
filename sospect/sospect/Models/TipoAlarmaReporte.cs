@@ -28,13 +28,47 @@ namespace sospect.Models
         [JsonProperty("fecha_fin_reporte")]
         public DateTime FechaFinReporte { get; set; }
 
+        // 2026-04-12: ResourceManager estático Lazy para evitar fallo en iOS donde
+        //             crear una nueva instancia por getter causa null silencioso.
+        private static readonly Lazy<ResourceManager> _resMgr =
+            new Lazy<ResourceManager>(() => new ResourceManager(
+                "sospect.Resources.AppResources",
+                typeof(TipoAlarmaReporte).GetTypeInfo().Assembly));
+
         public string DescripcionTraducida
         {
             get
             {
                 string key = $"Alarm_{TipoalarmaId}";
-                ResourceManager resourceManager = new ResourceManager("sospect.Resources.AppResources", typeof(App).GetTypeInfo().Assembly);
-                return resourceManager.GetString(key, CultureInfo.CurrentCulture);
+                try
+                {
+                    var culture = CultureInfo.CurrentCulture;
+                    Console.WriteLine($"[TipoAlarmaReporte] key={key} culture={culture.Name}");
+
+                    string result = _resMgr.Value.GetString(key, culture);
+                    if (!string.IsNullOrEmpty(result))
+                    {
+                        Console.WriteLine($"[TipoAlarmaReporte] GetString='{result}'");
+                        return result;
+                    }
+
+                    // Fallback 1: cultura invariante (neutro) — cubre iOS con es-CO, es-US, etc.
+                    string neutral = _resMgr.Value.GetString(key, CultureInfo.InvariantCulture);
+                    if (!string.IsNullOrEmpty(neutral))
+                    {
+                        Console.WriteLine($"[TipoAlarmaReporte] GetString(neutral)='{neutral}'");
+                        return neutral;
+                    }
+
+                    // Fallback 2: descripción del servidor
+                    Console.WriteLine($"[TipoAlarmaReporte] GetString=NULL, usando Descripcion='{Descripcion}'");
+                    return !string.IsNullOrEmpty(Descripcion) ? Descripcion : key;
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"[TipoAlarmaReporte] EXCEPCION key={key}: {ex.GetType().Name} - {ex.Message}");
+                    return !string.IsNullOrEmpty(Descripcion) ? Descripcion : key;
+                }
             }
         }
     }

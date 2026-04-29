@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<toolkit:Popup
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    xmlns:helpers="clr-namespace:sospect.Helpers"
+    xmlns:Converters="clr-namespace:sospect.Converters"
+    CanBeDismissedByTappingOutsideOfPopup="False"
+    x:Class="sospect.Views.Popups.ConfirmarLanzarAlarmaEnUbicacionActual">
+
+    <Frame CornerRadius="10"
+           VerticalOptions="Center"
+           HorizontalOptions="Center"
+           BackgroundColor="White"
+           Padding="20"
+           HasShadow="True"
+           WidthRequest="350"
+           MinimumWidthRequest="300"
+           MaximumWidthRequest="400">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <!-- Row 5: fotos -->
+                <RowDefinition Height="Auto"/>
+                <!-- Row 6: botón ruta de escape (opcional, solo crimen cometido) -->
+                <RowDefinition Height="Auto"/>
+                <!-- Row 7: compartir en redes sociales -->
+                <RowDefinition Height="Auto"/>
+                <!-- Row 8: botones OK / Cancelar -->
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Label Grid.Column="0"
+                   Grid.Row="0"
+                   Grid.ColumnSpan="2"
+                   Text="{helpers:TranslateExtension Text='LabelAlerta'}"
+                   FontAttributes="Bold"
+                   TextColor="Gray"
+                   FontSize="18"
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="Center"/>
+
+            <Label Grid.Column="0"
+                   Grid.Row="1"
+                   Grid.ColumnSpan="2"
+                   TextColor="Gray"
+                   Text="{helpers:TranslateExtension Text='CrearEnUbicacionActual'}"
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="Center"/>
+
+            <Label Grid.Column="0"
+                   Grid.Row="2"
+                   Margin="0,20,0,5"
+                   TextColor="Gray"
+                   Grid.ColumnSpan="2"
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="Center"
+                   Text="{helpers:TranslateExtension Text='LabelTipoAlarma'}"/>
+
+            <!-- Selector moderno personalizado en lugar del Picker básico -->
+            <Grid Grid.Row="3" 
+                  Grid.ColumnSpan="2"
+                  HeightRequest="45"
+                  Margin="0,5,0,5">
+
+                <Border StrokeThickness="1"
+                        Stroke="#E0E0E0"
+                        BackgroundColor="White"
+                        Padding="15,12">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="8"/>
+                    </Border.StrokeShape>
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnTipoAlarmaTapped" />
+                    </Border.GestureRecognizers>
+
+                    <Grid IsEnabled="{Binding IsInitialized}">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Label Grid.Column="0"
+                               Text="{Binding TipoAlarmaSeleccionado.DescripcionTraducida, FallbackValue='Seleccionar tipo de alarma'}"
+                               TextColor="Black"
+                               FontSize="16"
+                               VerticalTextAlignment="Center"
+                               HorizontalTextAlignment="Center"/>
+
+                        <Label Grid.Column="1"
+                               Text="▼"
+                               TextColor="#666666"
+                               FontSize="12"
+                               VerticalTextAlignment="Center"
+                               HorizontalTextAlignment="Center"/>
+                    </Grid>
+                </Border>
+
+                <Border IsVisible="{Binding IsInitialized, Converter={StaticResource InverseBooleanConverter}}"
+                        BackgroundColor="#F0F0F0"
+                        Opacity="0.9"
+                        StrokeThickness="0">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="8"/>
+                    </Border.StrokeShape>
+                    <StackLayout Orientation="Horizontal" 
+                               HorizontalOptions="Center" 
+                               VerticalOptions="Center">
+                        <ActivityIndicator IsRunning="True" 
+                                         Color="#1465bb" 
+                                         WidthRequest="20" 
+                                         HeightRequest="20"/>
+                        <Label Text="{helpers:TranslateExtension Text='LblCargandoTiposAlarma'}" 
+                               TextColor="#666666" 
+                               FontSize="14" 
+                               VerticalOptions="Center"
+                               Margin="5,0,0,0"/>
+                    </StackLayout>
+                </Border>
+            </Grid>
+
+            <!-- Campo de descripción con botón de cámara integrado -->
+            <Grid Grid.Column="0"
+                  Grid.Row="4"
+                  Grid.ColumnSpan="2"
+                  Margin="0,10,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <Entry Grid.Column="0"
+                       BackgroundColor="#F5F5F5"
+                       TextColor="Black"
+                       FontSize="14"
+                       Placeholder="{helpers:TranslateExtension Text='LblTocaAgregarDescripcion'}"
+                       PlaceholderColor="#999999"
+                       Text="{Binding DescripcionAlarma}"
+                       MaxLength="450"
+                       VerticalOptions="Center"
+                       HorizontalOptions="FillAndExpand"/>
+
+                <!-- Botón de cámara integrado - VERSIÓN MEJORADA -->
+                <Border Grid.Column="1"
+                    StrokeThickness="1"
+                    Stroke="#1465bb"
+                    BackgroundColor="White"
+                    Margin="8,0,0,0"
+                    HeightRequest="44"
+                    WidthRequest="44">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="8"/>
+                    </Border.StrokeShape>
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnCameraButtonTapped"/>
+                    </Border.GestureRecognizers>
+
+                    <!-- Icono de cámara usando Unicode estándar -->
+                    <Label Text="📷" 
+                       FontSize="24"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center"/>
+                </Border>
+            </Grid>
+
+            <!-- NUEVA FILA: Vista previa de fotos/videos seleccionados -->
+            <ScrollView Grid.Row="5"
+                        Grid.ColumnSpan="2"
+                        Orientation="Horizontal"
+                        HeightRequest="80"
+                        Margin="0,5,0,0"
+                        IsVisible="{Binding HasMediaFiles}">
+                <HorizontalStackLayout Spacing="8">
+                    <CollectionView ItemsSource="{Binding MediaFiles}"
+                                    ItemsLayout="HorizontalList"
+                                    HeightRequest="76">
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <Border StrokeThickness="1"
+                                        Stroke="#E0E0E0"
+                                        HeightRequest="70"
+                                        WidthRequest="70"
+                                        Margin="2">
+                                    <Border.StrokeShape>
+                                        <RoundRectangle CornerRadius="8"/>
+                                    </Border.StrokeShape>
+                                    <Grid>
+                                        <!-- Thumbnail de la imagen/video -->
+                                        <Image Source="{Binding ThumbnailPath}"
+                                               Aspect="AspectFill"/>
+
+                                        <!-- Overlay para videos -->
+                                        <Label Text="▶"
+                                               FontSize="24"
+                                               TextColor="White"
+                                               HorizontalOptions="Center"
+                                               VerticalOptions="Center"
+                                               IsVisible="{Binding IsVideo}"/>
+
+                                        <!-- Botón X para eliminar -->
+                                        <Border BackgroundColor="#80000000"
+                                                HeightRequest="24"
+                                                WidthRequest="24"
+                                                HorizontalOptions="End"
+                                                VerticalOptions="Start"
+                                                Margin="4">
+                                            <Border.StrokeShape>
+                                                <RoundRectangle CornerRadius="12"/>
+                                            </Border.StrokeShape>
+                                            <Border.GestureRecognizers>
+                                                <TapGestureRecognizer 
+                                                    Command="{Binding Source={RelativeSource AncestorType={x:Type toolkit:Popup}}, Path=BindingContext.RemoveMediaCommand}"
+                                                    CommandParameter="{Binding .}"/>
+                                            </Border.GestureRecognizers>
+                                            <Label Text="✕"
+                                                   FontSize="14"
+                                                   TextColor="White"
+                                                   HorizontalTextAlignment="Center"
+                                                   VerticalTextAlignment="Center"/>
+                                        </Border>
+                                    </Grid>
+                                </Border>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                </HorizontalStackLayout>
+            </ScrollView>
+
+            <!-- Botón de ruta de escape (solo visible cuando tipo alarma == crimen cometido) -->
+            <Button Grid.Row="6"
+                    Grid.ColumnSpan="2"
+                    Margin="0,10,0,0"
+                    Text="{helpers:TranslateExtension Text='LblMarcarRutaEscapeOpcional'}"
+                    BackgroundColor="#FFECB3"
+                    TextColor="#D32F2F"
+                    FontSize="14"
+                    FontAttributes="Bold"
+                    CornerRadius="10"
+                    HeightRequest="44"
+                    BorderColor="#FFB74D"
+                    BorderWidth="1"
+                    IsVisible="{Binding MostrarBotonPuntoHuida}"
+                    Clicked="OnMarcarRutaEscapeTapped"/>
+
+            <!-- Opciones de compartir en redes sociales -->
+            <StackLayout Grid.Row="7" Grid.ColumnSpan="2" Margin="0,12,0,0" Spacing="6">
+                <Grid ColumnDefinitions="Auto,*">
+                    <CheckBox Grid.Column="0"
+                              IsChecked="{Binding CompartirEnX, Mode=TwoWay}"
+                              Color="#1DA1F2" />
+                    <Label Grid.Column="1"
+                           Text="{helpers:TranslateExtension Text='PublicarEnX'}"
+                           FontSize="14" TextColor="#333333"
+                           VerticalOptions="Center" />
+                </Grid>
+                <Grid ColumnDefinitions="Auto,*">
+                    <CheckBox Grid.Column="0"
+                              IsChecked="{Binding CompartirEnFacebook, Mode=TwoWay}"
+                              Color="#1877F2" />
+                    <Label Grid.Column="1"
+                           Text="{helpers:TranslateExtension Text='PublicarEnFacebook'}"
+                           FontSize="14" TextColor="#333333"
+                           VerticalOptions="Center" />
+                </Grid>
+            </StackLayout>
+
+            <Button Grid.Column="0"
+                    Grid.Row="8"
+                    Margin="0,20,5,0"
+                    Text="{helpers:TranslateExtension Text='LabelOK'}"
+                    HeightRequest="45"
+                    CornerRadius="22"
+                    BackgroundColor="#1465bb"
+                    VerticalOptions="Center"
+                    Command="{Binding RegistrarAlarmaCommand}"
+                    IsEnabled="{Binding IsInitialized}"
+                    TextColor="White"/>
+
+            <Button Grid.Column="1"
+                    Margin="5,20,0,0"
+                    Grid.Row="8"
+                    Text="{helpers:TranslateExtension Text='LabelCancelar'}"
+                    HeightRequest="45"
+                    CornerRadius="22"
+                    Clicked="Cancelar_Alarma"
+                    VerticalOptions="Center"
+                    BackgroundColor="#1465bb"
+                    TextColor="White"/>
+        </Grid>
+    </Frame>
+</toolkit:Popup>

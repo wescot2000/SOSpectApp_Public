@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<toolkit:Popup xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+               xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+               xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+               xmlns:fonts="clr-namespace:sospect.Resources.Fonts;assembly=sospect"
+               x:Class="sospect.Views.Popups.VerFotoPopup"
+               CanBeDismissedByTappingOutsideOfPopup="False">
+
+    <Border x:Name="PopupBorder"
+            BackgroundColor="Black"
+            StrokeThickness="0"
+            StrokeShape="RoundRectangle 12"
+            Padding="0"
+            WidthRequest="350"
+            HeightRequest="500"
+            VerticalOptions="Center"
+            HorizontalOptions="Center">
+
+        <Grid RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <!-- Header con timestamp, botón pantalla completa y botón cerrar -->
+            <Grid x:Name="HeaderGrid" Grid.Row="0" BackgroundColor="#1A1A1A" Padding="15,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <Label Grid.Column="0"
+                       Text="{Binding Titulo}"
+                       TextColor="White"
+                       FontSize="14"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Start"
+                       LineBreakMode="TailTruncation"/>
+
+                <!-- Botón pantalla completa / salir de fullscreen -->
+                <ImageButton Grid.Column="1"
+                             x:Name="BtnFullscreen"
+                             HorizontalOptions="End"
+                             VerticalOptions="Center"
+                             BackgroundColor="Transparent"
+                             HeightRequest="32"
+                             WidthRequest="32"
+                             Margin="0,0,8,0"
+                             Clicked="OnFullscreenClicked">
+                    <ImageButton.Source>
+                        <FontImageSource FontFamily="{StaticResource IcoMoonFamily}"
+                                        Color="White"
+                                        Glyph="{x:Static fonts:IconFont.Expand}"
+                                        Size="18" />
+                    </ImageButton.Source>
+                </ImageButton>
+
+                <ImageButton Grid.Column="2"
+                             HorizontalOptions="End"
+                             VerticalOptions="Center"
+                             BackgroundColor="Transparent"
+                             HeightRequest="32"
+                             WidthRequest="32"
+                             Clicked="OnCerrarClicked">
+                    <ImageButton.Source>
+                        <FontImageSource FontFamily="{StaticResource IcoMoonFamily}"
+                                        Color="White"
+                                        Glyph="{x:Static fonts:IconFont.Xmark}"
+                                        Size="20" />
+                    </ImageButton.Source>
+                </ImageButton>
+            </Grid>
+
+            <!-- Modo Single: Imagen o Video único -->
+            <Grid Grid.Row="1" BackgroundColor="Black" IsVisible="{Binding ModoSingle}">
+                <!-- Contenedor de imagen con zoom y gestos -->
+                <Grid x:Name="SingleImageContainer"
+                      BackgroundColor="Black"
+                      IsVisible="{Binding EsImagen}"
+                      IsClippedToBounds="True">
+                    <Image x:Name="SingleImage"
+                           Source="{Binding UrlFoto}"
+                           Aspect="AspectFit"
+                           HorizontalOptions="Fill"
+                           VerticalOptions="Fill">
+                        <Image.GestureRecognizers>
+                            <PinchGestureRecognizer PinchUpdated="OnSingleImagePinchUpdated"/>
+                            <PanGestureRecognizer PanUpdated="OnSingleImagePanUpdated"/>
+                            <TapGestureRecognizer NumberOfTapsRequired="2" Tapped="OnImageDoubleTapped"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+                </Grid>
+
+                <!-- WebView para reproducir video -->
+                <WebView x:Name="videoWebView"
+                         HorizontalOptions="Fill"
+                         VerticalOptions="Fill"
+                         IsVisible="{Binding EsVideo}"
+                         BackgroundColor="Black"/>
+            </Grid>
+
+            <!-- Modo Múltiple: CarouselView con swipe -->
+            <Grid Grid.Row="1" BackgroundColor="Black" IsVisible="{Binding ModoMultiple}">
+                <CarouselView x:Name="mediaCarousel"
+                              ItemsSource="{Binding Fotos}"
+                              IndicatorView="indicatorView"
+                              HorizontalOptions="Fill"
+                              VerticalOptions="Fill"
+                              BackgroundColor="Black"
+                              IsSwipeEnabled="True">
+                    <CarouselView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid BackgroundColor="Black" IsClippedToBounds="True">
+                                <!-- Imagen con gestos de zoom -->
+                                <Grid BackgroundColor="Black"
+                                      IsVisible="{Binding EsImagen}"
+                                      IsClippedToBounds="True">
+                                    <Image Source="{Binding UrlFoto}"
+                                           Aspect="AspectFit"
+                                           HorizontalOptions="Fill"
+                                           VerticalOptions="Fill">
+                                        <Image.GestureRecognizers>
+                                            <PinchGestureRecognizer PinchUpdated="OnCarouselImagePinchUpdated"/>
+                                            <TapGestureRecognizer NumberOfTapsRequired="2" Tapped="OnImageDoubleTapped"/>
+                                        </Image.GestureRecognizers>
+                                    </Image>
+                                </Grid>
+
+                                <!-- WebView para video con HTML pregenerado -->
+                                <WebView Source="{Binding HtmlSource}"
+                                         HorizontalOptions="Fill"
+                                         VerticalOptions="Fill"
+                                         IsVisible="{Binding EsVideo}"
+                                         BackgroundColor="Black"/>
+                            </Grid>
+                        </DataTemplate>
+                    </CarouselView.ItemTemplate>
+                </CarouselView>
+
+                <!-- Indicadores de posición (puntos) -->
+                <IndicatorView x:Name="indicatorView"
+                               IndicatorColor="Gray"
+                               SelectedIndicatorColor="White"
+                               HorizontalOptions="Center"
+                               VerticalOptions="End"
+                               Margin="0,0,0,20"
+                               IsVisible="{Binding MostrarIndicadores}"/>
+            </Grid>
+
+            <!-- Footer: en modo single muestra info de archivo, en modo múltiple muestra descripción -->
+            <Grid x:Name="FooterGrid" Grid.Row="2" BackgroundColor="#1A1A1A" Padding="15,10">
+                <!-- Footer modo single -->
+                <Grid IsVisible="{Binding ModoSingle}">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+
+                    <StackLayout Grid.Column="0" VerticalOptions="Center">
+                        <Label Text="{Binding FechaSubida, StringFormat='{0:dd/MM/yyyy HH:mm}'}"
+                               TextColor="LightGray"
+                               FontSize="12"/>
+                        <Label Text="{Binding TamanoFormatted}"
+                               TextColor="LightGray"
+                               FontSize="11"
+                               IsVisible="{Binding TieneTamano}"/>
+                    </StackLayout>
+
+                    <Label Grid.Column="1"
+                           Text="{Binding DimensionesFormatted}"
+                           TextColor="LightGray"
+                           FontSize="11"
+                           VerticalOptions="Center"
+                           IsVisible="{Binding TieneDimensiones}"/>
+                </Grid>
+
+                <!-- Footer modo múltiple: descripción del usuario -->
+                <Label IsVisible="{Binding ModoMultiple}"
+                       Text="{Binding TextoDescripcion}"
+                       TextColor="LightGray"
+                       FontSize="13"
+                       LineBreakMode="WordWrap"
+                       MaxLines="3"
+                       VerticalOptions="Center"/>
+            </Grid>
+
+            <!-- Overlay fullscreen: controles flotantes sobre la imagen (visible solo en fullscreen) -->
+            <Grid x:Name="FullscreenOverlay"
+                  Grid.RowSpan="3"
+                  IsVisible="False"
+                  VerticalOptions="Start"
+                  HorizontalOptions="Fill"
+                  Padding="12,48,12,0">
+                <Grid HorizontalOptions="End" VerticalOptions="Start">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+
+                    <!-- Botón salir fullscreen -->
+                    <Border Grid.Column="0"
+                            BackgroundColor="#99000000"
+                            StrokeThickness="0"
+                            StrokeShape="RoundRectangle 20"
+                            Padding="8"
+                            Margin="0,0,8,0">
+                        <ImageButton BackgroundColor="Transparent"
+                                     HeightRequest="28"
+                                     WidthRequest="28"
+                                     Clicked="OnFullscreenClicked">
+                            <ImageButton.Source>
+                                <FontImageSource FontFamily="{StaticResource IcoMoonFamily}"
+                                                Color="White"
+                                                Glyph="{x:Static fonts:IconFont.Compress}"
+                                                Size="18" />
+                            </ImageButton.Source>
+                        </ImageButton>
+                    </Border>
+
+                    <!-- Botón cerrar -->
+                    <Border Grid.Column="1"
+                            BackgroundColor="#99000000"
+                            StrokeThickness="0"
+                            StrokeShape="RoundRectangle 20"
+                            Padding="8">
+                        <ImageButton BackgroundColor="Transparent"
+                                     HeightRequest="28"
+                                     WidthRequest="28"
+                                     Clicked="OnCerrarClicked">
+                            <ImageButton.Source>
+                                <FontImageSource FontFamily="{StaticResource IcoMoonFamily}"
+                                                Color="White"
+                                                Glyph="{x:Static fonts:IconFont.Xmark}"
+                                                Size="20" />
+                            </ImageButton.Source>
+                        </ImageButton>
+                    </Border>
+                </Grid>
+            </Grid>
+        </Grid>
+    </Border>
+</toolkit:Popup>

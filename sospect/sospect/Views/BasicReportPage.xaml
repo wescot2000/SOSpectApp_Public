@@ -1,119 +1,234 @@
-﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="sospect.Views.BasicReportPage"
              xmlns:converters="clr-namespace:sospect.Converters"
              xmlns:fonts="clr-namespace:sospect.Resources.Fonts;assembly=sospect"
              xmlns:helpers="clr-namespace:sospect.Helpers"
-             xmlns:ads="clr-namespace:sospect.CustomRenderers"
-             xmlns:charts="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
-             BackgroundColor="White"
+             xmlns:admob="clr-namespace:Plugin.AdMob;assembly=Plugin.AdMob"
+             BackgroundColor="#F8F9FA"
              Title="{helpers:TranslateExtension Text='LblReporteBasicoSospect'}">
+
     <ContentPage.Resources>
         <ResourceDictionary>
             <converters:InverseBooleanConverter x:Key="InverseBooleanConverter"/>
-            <converters:SKColorToXamarinColorConverter x:Key="ColorConverter"/>
+
+            <Style x:Key="HeaderCardStyle" TargetType="Frame">
+                <Setter Property="BackgroundColor" Value="White" />
+                <Setter Property="HasShadow" Value="True" />
+                <Setter Property="CornerRadius" Value="16" />
+                <Setter Property="Padding" Value="20" />
+                <Setter Property="Margin" Value="16,16,16,8" />
+                <Setter Property="BorderColor" Value="Transparent" />
+            </Style>
+
+            <Style x:Key="MenuItemStyle" TargetType="Frame">
+                <Setter Property="BackgroundColor" Value="White" />
+                <Setter Property="HasShadow" Value="True" />
+                <Setter Property="CornerRadius" Value="12" />
+                <Setter Property="Padding" Value="16" />
+                <Setter Property="Margin" Value="16,6" />
+                <Setter Property="BorderColor" Value="Transparent" />
+                <Setter Property="MinimumHeightRequest" Value="70" />
+            </Style>
+
+            <Style x:Key="MenuIconStyle" TargetType="Label">
+                <Setter Property="FontFamily" Value="{StaticResource IcoMoonFamily}" />
+                <Setter Property="FontSize" Value="28" />
+                <Setter Property="TextColor" Value="#27AE60" />
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="WidthRequest" Value="50" />
+            </Style>
+
+            <Style x:Key="MenuTextStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="16" />
+                <Setter Property="TextColor" Value="#2C3E50" />
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="LineBreakMode" Value="WordWrap" />
+                <Setter Property="MaxLines" Value="2" />
+            </Style>
+
+            <Style x:Key="DescriptionTextStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="14" />
+                <Setter Property="TextColor" Value="#7F8C8D" />
+                <Setter Property="LineBreakMode" Value="WordWrap" />
+                <Setter Property="HorizontalTextAlignment" Value="Start" />
+                <Setter Property="LineHeight" Value="1.4" />
+                <Setter Property="Margin" Value="0,0,0,12" />
+            </Style>
+
+            <Style x:Key="RangeInfoStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="12" />
+                <Setter Property="TextColor" Value="#95A5A6" />
+                <Setter Property="FontAttributes" Value="Italic" />
+                <Setter Property="HorizontalTextAlignment" Value="Start" />
+            </Style>
+
+            <Style x:Key="ExpandIconStyle" TargetType="Label">
+                <Setter Property="FontFamily" Value="{StaticResource IcoMoonFamily}" />
+                <Setter Property="FontSize" Value="18" />
+                <Setter Property="TextColor" Value="#27AE60" />
+                <Setter Property="HorizontalOptions" Value="End" />
+                <Setter Property="VerticalOptions" Value="Center" />
+            </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-    <ScrollView>
-        <StackLayout Margin="20">
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                </Grid.RowDefinitions>
 
-                <Label
-                    Grid.Row="0"
-                    Text="{helpers:TranslateExtension Text='LblReporteBasicoDescripcion'}"
-                    IsVisible="{Binding Expandir}"
-                    Margin="0,20,0,20"
-                    FontSize="Medium"
-                    HorizontalOptions="CenterAndExpand"
-                    VerticalOptions="StartAndExpand" 
-                    HorizontalTextAlignment="Start"
-                    TextColor="Black">
-                    <Label.GestureRecognizers>
-                        <TapGestureRecognizer
-                            Command="{Binding ExpandirCommand}" />
-                    </Label.GestureRecognizers>
-                </Label>
+        <ScrollView Grid.Row="0">
+            <StackLayout Spacing="0">
 
-                <Label
-                    Grid.Row="0" 
-                    Text="{helpers:TranslateExtension Text='LblReporteBasicoDescripcionCorta'}"
-                    IsVisible="{Binding Expandir, Converter={StaticResource InverseBooleanConverter}}"
-                    Margin="0,20,0,20"
-                    FontSize="Medium"
-                    HorizontalOptions="CenterAndExpand"
-                    VerticalOptions="StartAndExpand" 
-                    HorizontalTextAlignment="Start"
-                    TextColor="Black">
-                    <Label.GestureRecognizers>
-                        <TapGestureRecognizer
-                            Command="{Binding ExpandirCommand}" />
-                    </Label.GestureRecognizers>
-                </Label>
+                <!-- Header Card con descripción expandible -->
+                <Frame Style="{StaticResource HeaderCardStyle}">
+                    <StackLayout Spacing="8">
+                        <!-- Título con icono de expansión -->
+                        <Grid>
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding ExpandirCommand}" />
+                            </Grid.GestureRecognizers>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
 
-                <Label
-                    Grid.Row="1"
-                    Text="{helpers:TranslateExtension Text='LblRangoReporte'}"
-                    FontSize="Small"
-                    HorizontalOptions="CenterAndExpand"
-                    VerticalOptions="StartAndExpand" 
-                    HorizontalTextAlignment="Start"
-                    TextColor="Gray"/>
+                            <Label Grid.Column="0"
+                                   Text="{helpers:TranslateExtension Text='LblReporteBasicoSospect'}"
+                                   FontSize="18"
+                                   FontAttributes="Bold"
+                                   TextColor="#27AE60"
+                                   VerticalOptions="Center" />
 
-                <Frame Grid.Row="2" Padding="5" BorderColor="Black" BackgroundColor="LightGray" Margin="0,15,0,0" HorizontalOptions="Center" HeightRequest="35" WidthRequest="380" CornerRadius="10">
-                    <Frame.GestureRecognizers>
-                        <TapGestureRecognizer Command="{Binding TipoAlarmasCommand}" NumberOfTapsRequired="1" />
-                    </Frame.GestureRecognizers>
-                        <Label Text="{helpers:TranslateExtension Text='OptVolumenAlarmas'}"
-                           TextColor="Black"
-                           LineBreakMode="WordWrap"
-                           HorizontalOptions="CenterAndExpand"
-                           VerticalOptions="CenterAndExpand"
-                           HorizontalTextAlignment="Center"
-                           VerticalTextAlignment="Center" />
+                            <!-- Icono de expandir/contraer -->
+                            <Label Grid.Column="1"
+                                   Text="{x:Static fonts:IconFont.ChevronDown}"
+                                   Style="{StaticResource ExpandIconStyle}"
+                                   IsVisible="{Binding Expandir, Converter={StaticResource InverseBooleanConverter}}" />
+                            <Label Grid.Column="1"
+                                   Text="{x:Static fonts:IconFont.ChevronUp}"
+                                   Style="{StaticResource ExpandIconStyle}"
+                                   IsVisible="{Binding Expandir}" />
+                        </Grid>
+
+                        <!-- Descripción completa (expandida) -->
+                        <Label Text="{helpers:TranslateExtension Text='LblReporteBasicoDescripcion'}"
+                               IsVisible="{Binding Expandir}"
+                               Style="{StaticResource DescriptionTextStyle}">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding ExpandirCommand}" />
+                            </Label.GestureRecognizers>
+                        </Label>
+
+                        <!-- Descripción corta (contraída) -->
+                        <Label Text="{helpers:TranslateExtension Text='LblReporteBasicoDescripcionCorta'}"
+                               IsVisible="{Binding Expandir, Converter={StaticResource InverseBooleanConverter}}"
+                               Style="{StaticResource DescriptionTextStyle}">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding ExpandirCommand}" />
+                            </Label.GestureRecognizers>
+                        </Label>
+
+                        <!-- Información del rango -->
+                        <Label Text="{helpers:TranslateExtension Text='LblRangoReporte'}"
+                               Style="{StaticResource RangeInfoStyle}" />
+                    </StackLayout>
                 </Frame>
 
-                <Frame Grid.Row="3" Padding="5" BorderColor="Black" BackgroundColor="LightGray" Margin="0,15,0,0" HorizontalOptions="Center" HeightRequest="35" WidthRequest="380" CornerRadius="10">
-                    <Frame.GestureRecognizers>
-                        <TapGestureRecognizer Command="{Binding EfectividadAlarmasCommand}" NumberOfTapsRequired="1" />
-                    </Frame.GestureRecognizers>
-                        <Label Text="{helpers:TranslateExtension Text='OptEfectividadAlarmas'}"
-                           TextColor="Black"
-                           LineBreakMode="WordWrap"
-                           HorizontalOptions="CenterAndExpand"
-                           VerticalOptions="CenterAndExpand"
-                           HorizontalTextAlignment="Center"
-                           VerticalTextAlignment="Center" />
-                </Frame>
+                <!-- Opciones del reporte básico -->
+                <StackLayout Spacing="0" Margin="0,8,0,16">
 
-                <Frame Grid.Row="4" Padding="5" BorderColor="Black" BackgroundColor="LightGray" Margin="0,15,0,0" HorizontalOptions="Center" HeightRequest="35" WidthRequest="380" CornerRadius="10">
-                    <Frame.GestureRecognizers>
-                        <TapGestureRecognizer Command="{Binding MetricasBasicasCommand}" NumberOfTapsRequired="1" />
-                    </Frame.GestureRecognizers>
-                        <Label Text="{helpers:TranslateExtension Text='OptMetricasBasicas'}"
-                           TextColor="Black"
-                           LineBreakMode="WordWrap"
-                           HorizontalOptions="CenterAndExpand"
-                           VerticalOptions="CenterAndExpand"
-                           HorizontalTextAlignment="Center"
-                           VerticalTextAlignment="Center" />
-                </Frame>
+                    <!-- Historial de Alertas -->
+                    <Frame Style="{StaticResource MenuItemStyle}" IsVisible="False">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding HistorialCommand}" />
+                        </Frame.GestureRecognizers>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="60" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0" 
+                                   Text="{x:Static fonts:IconFont.Clock}"
+                                   Style="{StaticResource MenuIconStyle}" />
+                            <Label Grid.Column="1" 
+                                   Text="{helpers:TranslateExtension Text='LblHistorialAlertas'}"
+                                   Style="{StaticResource MenuTextStyle}"
+                                   Margin="8,0,0,0" />
+                        </Grid>
+                    </Frame>
 
-            </Grid>
-        </StackLayout>
-    </ScrollView>
-    <Grid BackgroundColor="LightGray" Grid.Row="1" HeightRequest="90">
-            <ads:AdBanner></ads:AdBanner>
+                    <!-- Volumen de Alarmas -->
+                    <Frame Style="{StaticResource MenuItemStyle}">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding TipoAlarmasCommand}" />
+                        </Frame.GestureRecognizers>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="60" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0" 
+                                   Text="{x:Static fonts:IconFont.ChartPie}"
+                                   Style="{StaticResource MenuIconStyle}" />
+                            <Label Grid.Column="1" 
+                                   Text="{helpers:TranslateExtension Text='OptVolumenAlarmas'}"
+                                   Style="{StaticResource MenuTextStyle}"
+                                   Margin="8,0,0,0" />
+                        </Grid>
+                    </Frame>
+
+                    <!-- Efectividad de Alarmas -->
+                    <Frame Style="{StaticResource MenuItemStyle}">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding EfectividadAlarmasCommand}" />
+                        </Frame.GestureRecognizers>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="60" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0" 
+                                   Text="{x:Static fonts:IconFont.Check}"
+                                   Style="{StaticResource MenuIconStyle}" />
+                            <Label Grid.Column="1" 
+                                   Text="{helpers:TranslateExtension Text='OptEfectividadAlarmas'}"
+                                   Style="{StaticResource MenuTextStyle}"
+                                   Margin="8,0,0,0" />
+                        </Grid>
+                    </Frame>
+
+                    <!-- Métricas Básicas -->
+                    <Frame Style="{StaticResource MenuItemStyle}">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding MetricasBasicasCommand}" />
+                        </Frame.GestureRecognizers>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="60" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0" 
+                                   Text="{x:Static fonts:IconFont.ChartLine}"
+                                   Style="{StaticResource MenuIconStyle}" />
+                            <Label Grid.Column="1" 
+                                   Text="{helpers:TranslateExtension Text='OptMetricasBasicas'}"
+                                   Style="{StaticResource MenuTextStyle}"
+                                   Margin="8,0,0,0" />
+                        </Grid>
+                    </Frame>
+
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+
+        <!-- Banner publicitario -->
+        <Grid BackgroundColor="LightGray" Grid.Row="1" HeightRequest="90">
+            <admob:BannerAd AdSize="LargeBanner" />
         </Grid>
     </Grid>
 </ContentPage>

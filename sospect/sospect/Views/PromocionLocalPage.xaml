@@ -1,0 +1,526 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:helpers="clr-namespace:sospect.Helpers"
+    x:Class="sospect.Views.PromocionLocalPage"
+    Title="{helpers:TranslateExtension Text='PromocionLocal'}"
+    BackgroundColor="White">
+
+    <ContentPage.Resources>
+        <Style x:Key="SectionLabelStyle" TargetType="Label">
+            <Setter Property="TextColor" Value="#333333" />
+            <Setter Property="FontSize" Value="15" />
+            <Setter Property="FontAttributes" Value="Bold" />
+            <Setter Property="Margin" Value="0,15,0,8" />
+        </Style>
+
+        <Style x:Key="ModernFrameStyle" TargetType="Frame">
+            <Setter Property="BorderColor" Value="#E0E0E0" />
+            <Setter Property="BackgroundColor" Value="White" />
+            <Setter Property="Padding" Value="12,10" />
+            <Setter Property="CornerRadius" Value="8" />
+            <Setter Property="HasShadow" Value="False" />
+        </Style>
+
+        <Style x:Key="ModernEditorStyle" TargetType="Editor">
+            <Setter Property="BackgroundColor" Value="Transparent" />
+            <Setter Property="TextColor" Value="Black" />
+            <Setter Property="FontSize" Value="16" />
+            <Setter Property="PlaceholderColor" Value="#999999" />
+        </Style>
+    </ContentPage.Resources>
+
+    <!-- Grid de 2 filas: ScrollView con el formulario + Footer fijo con botón -->
+    <Grid RowDefinitions="*,Auto">
+
+        <!-- Fila 0: ScrollView con el formulario -->
+        <ScrollView Grid.Row="0" VerticalScrollBarVisibility="Always" Padding="20,8,20,10">
+            <StackLayout Spacing="10">
+
+                <!-- Saldo y Costo -->
+                <Frame BackgroundColor="#4CAF50" BorderColor="Transparent" CornerRadius="12" Padding="15" HasShadow="True">
+                    <StackLayout Spacing="5">
+                        <Label x:Name="LblSaldoActual"
+                               Text="{helpers:TranslateExtension Text='PromoSaldoActual'}"
+                               TextColor="White"
+                               FontSize="20"
+                               FontAttributes="Bold"
+                               HorizontalTextAlignment="Center"/>
+
+                        <Label x:Name="LblCostoActual"
+                               Text="{helpers:TranslateExtension Text='PromoCostoActual'}"
+                               TextColor="White"
+                               FontSize="14"
+                               HorizontalTextAlignment="Center"/>
+
+                        <Label x:Name="LblSaldoDespues"
+                               Text="{helpers:TranslateExtension Text='PromoSaldoDespues'}"
+                               TextColor="White"
+                               FontSize="14"
+                               HorizontalTextAlignment="Center"/>
+                    </StackLayout>
+                </Frame>
+
+                <!-- Advertencias -->
+                <Frame BackgroundColor="#FFF3CD" BorderColor="#FFEEBA" CornerRadius="8" Padding="12" HasShadow="False">
+                    <StackLayout Spacing="8">
+                        <Label Text="{helpers:TranslateExtension Text='PromoWarningImmutable'}"
+                               TextColor="#856404"
+                               FontSize="13"/>
+
+                        <Label Text="{helpers:TranslateExtension Text='PromoWarningNoCancellation'}"
+                               TextColor="#856404"
+                               FontSize="13"/>
+                    </StackLayout>
+                </Frame>
+
+                <!-- Guidance -->
+                <Label Text="{helpers:TranslateExtension Text='PromoGuidance'}"
+                       TextColor="#666"
+                       FontSize="12"
+                       FontAttributes="Italic"
+                       Margin="0,5,0,5"/>
+
+                <!-- Ejemplo de Promoción -->
+                <Frame BackgroundColor="#E3F2FD" BorderColor="#2196F3" CornerRadius="8" Padding="12" HasShadow="False" Margin="0,0,0,10">
+                    <Label Text="{helpers:TranslateExtension Text='PromoEjemplo'}"
+                           TextColor="#1565C0"
+                           FontSize="13"
+                           FontAttributes="Italic"/>
+                </Frame>
+
+                <!-- SECCIÓN 1: VERIFICACIÓN DE NIT -->
+                <Label Text="{helpers:TranslateExtension Text='PromoVerificarNIT'}"
+                       Style="{StaticResource SectionLabelStyle}"/>
+
+                <Frame BackgroundColor="#E3F2FD" CornerRadius="8" Padding="12" Margin="0,10,0,10">
+                    <StackLayout Spacing="10">
+                        <!-- Entry para NIT -->
+                        <Entry Placeholder="{helpers:TranslateExtension Text='PromoPlaceholderNIT'}"
+                               Text="{Binding NitCedulaPropietario}"
+                               Keyboard="Numeric"
+                               BackgroundColor="White"
+                               TextColor="Black"
+                               PlaceholderColor="#757575"/>
+
+                        <!-- Botón Verificar -->
+                        <Button Text="{helpers:TranslateExtension Text='PromoBotonVerificarNIT'}"
+                                Command="{Binding VerificarNITCommand}"
+                                BackgroundColor="#1976D2"
+                                TextColor="White"
+                                CornerRadius="5"
+                                HeightRequest="45"/>
+
+                        <!-- Mensaje de verificación -->
+                        <Label Text="{Binding MensajeVerificacionNIT}"
+                               TextColor="{Binding ColorMensajeNIT}"
+                               FontSize="14"
+                               FontAttributes="Bold"
+                               LineBreakMode="WordWrap"/>
+
+                        <!-- Checkbox declaración (solo para NIT nuevos) -->
+                        <StackLayout Orientation="Horizontal"
+                                     Spacing="10"
+                                     IsVisible="{Binding MostrarCheckboxPropietario}">
+                            <CheckBox IsChecked="{Binding DeclaroPropietario}"
+                                      Color="#1976D2"/>
+                            <Label Text="{helpers:TranslateExtension Text='PromoDeclaroPropietario'}"
+                                   FontSize="13"
+                                   TextColor="#424242"
+                                   VerticalOptions="Center"
+                                   LineBreakMode="WordWrap"
+                                   HorizontalOptions="FillAndExpand"/>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+
+                <!-- SECCIÓN 2: DATOS DEL EMPRENDIMIENTO (Solo visible después de verificación) -->
+                <StackLayout x:Name="SeccionDatosEmprendimiento"
+                             IsVisible="{Binding NitVerificado}"
+                             Spacing="10">
+
+                    <Label Text="{helpers:TranslateExtension Text='PromoDatosEmprendimiento'}"
+                           Style="{StaticResource SectionLabelStyle}"/>
+
+                    <Frame BackgroundColor="#FFF3E0" CornerRadius="8" Padding="12" Margin="0,0,0,10">
+                        <StackLayout Spacing="10">
+                            <!-- Nombre Emprendimiento -->
+                            <Entry Placeholder="{helpers:TranslateExtension Text='PromoPlaceholderNombreEmprendimiento'}"
+                                   Text="{Binding NombreEmprendimiento}"
+                                   IsEnabled="{Binding CamposEmprendimientoHabilitados}"
+                                   BackgroundColor="White"
+                                   TextColor="Black"
+                                   PlaceholderColor="#757575"/>
+
+                            <!-- Nombre Propietario -->
+                            <Entry Placeholder="{helpers:TranslateExtension Text='PromoPlaceholderNombrePropietario'}"
+                                   Text="{Binding NombrePropietario}"
+                                   IsEnabled="{Binding CamposEmprendimientoHabilitados}"
+                                   BackgroundColor="White"
+                                   TextColor="Black"
+                                   PlaceholderColor="#757575"/>
+
+                            <!-- LOGO DEL EMPRENDIMIENTO (Movido aquí) -->
+                            <Label Text="{helpers:TranslateExtension Text='PromoLogoOpcional'}"
+                                   TextColor="#333333"
+                                   FontSize="14"
+                                   FontAttributes="Bold"
+                                   Margin="0,10,0,5"/>
+
+                            <StackLayout Orientation="Horizontal" Spacing="10">
+                                <Switch x:Name="SwitchLogo"
+                                        Toggled="OnLogoToggled"/>
+                                <Label x:Name="LblLogoText"
+                                       Text="{helpers:TranslateExtension Text='PromoAgregarLogo'}"
+                                       TextColor="#333333"
+                                       VerticalTextAlignment="Center"/>
+                            </StackLayout>
+
+                            <!-- Contenedor de logo (visible solo si está activado) -->
+                            <StackLayout x:Name="LogoContainer"
+                                         IsVisible="False"
+                                         Spacing="8">
+                                <!-- Info sobre logo guardado -->
+                                <Label x:Name="LblInfoLogoGuardado"
+                                       IsVisible="False"
+                                       Text="{helpers:TranslateExtension Text='PromoUsandoLogoGuardado'}"
+                                       FontSize="11"
+                                       TextColor="#4CAF50"
+                                       HorizontalTextAlignment="Center"/>
+
+                                <Image x:Name="ImgLogoPreview"
+                                       IsVisible="False"
+                                       HeightRequest="120"
+                                       Aspect="AspectFit"
+                                       Margin="0,10,0,0"/>
+
+                                <Button x:Name="BtnAgregarLogo"
+                                        Text="{helpers:TranslateExtension Text='PromoAgregarLogoImagen'}"
+                                        BackgroundColor="#FF9800"
+                                        TextColor="White"
+                                        FontSize="14"
+                                        CornerRadius="8"
+                                        Padding="10"
+                                        IsEnabled="{Binding LogoHabilitadoEdicion}"
+                                        Clicked="OnAgregarLogoClicked"/>
+
+                                <Label x:Name="LblInfoGuardarLogo"
+                                       Text="{helpers:TranslateExtension Text='PromoLogoSeGuardara'}"
+                                       FontSize="10"
+                                       TextColor="#666"
+                                       FontAttributes="Italic"
+                                       HorizontalTextAlignment="Center"
+                                       Margin="0,5,0,0"/>
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+
+                <!-- 1. CONTENIDO PROMOCIONAL -->
+                <Label Text="{helpers:TranslateExtension Text='PromoContenidoPromocional'}"
+                       Style="{StaticResource SectionLabelStyle}"/>
+
+                <Frame Style="{StaticResource ModernFrameStyle}">
+                    <Editor x:Name="EditorDescripcion"
+                            Placeholder="{helpers:TranslateExtension Text='PromoDescribePromocion'}"
+                            MaxLength="500"
+                            HeightRequest="100"
+                            Style="{StaticResource ModernEditorStyle}"
+                            TextChanged="OnDescripcionChanged"/>
+                </Frame>
+
+                <Label x:Name="LblCaracteresRestantes"
+                       Text=""
+                       TextColor="#999"
+                       FontSize="11"
+                       HorizontalTextAlignment="End"/>
+
+                <!-- 2. MULTIMEDIA -->
+                <Label Text="{helpers:TranslateExtension Text='PromoMultimedia'}"
+                       Style="{StaticResource SectionLabelStyle}"/>
+
+                <StackLayout x:Name="MultimediaContainer" Spacing="8">
+                    <!-- Se llenará dinámicamente en code-behind -->
+                </StackLayout>
+
+                <Button x:Name="BtnAgregarMultimedia"
+                        Text="{helpers:TranslateExtension Text='PromoAgregarMultimedia'}"
+                        BackgroundColor="#2196F3"
+                        TextColor="White"
+                        FontSize="14"
+                        CornerRadius="8"
+                        Padding="10"
+                        Clicked="OnAgregarMultimediaClicked"
+                        Margin="0,5,0,10"/>
+
+                <!-- 3. ALCANCE GEOGRÁFICO -->
+                <Label Text="{helpers:TranslateExtension Text='PromoAlcanceGeografico'}"
+                       Style="{StaticResource SectionLabelStyle}"/>
+
+                <Slider x:Name="SliderRadio"
+                        Minimum="100"
+                        Maximum="5000"
+                        Value="100"
+                        ValueChanged="OnRadioChanged"
+                        ThumbColor="#4CAF50"
+                        MinimumTrackColor="#4CAF50"
+                        MaximumTrackColor="#CCCCCC"
+                        HeightRequest="30"/>
+
+                <Label x:Name="LblRadioMetros"
+                       Text=""
+                       FontSize="14"
+                       HorizontalTextAlignment="Center"/>
+
+                <Label x:Name="LblUsuariosDisponibles"
+                       Text="{helpers:TranslateExtension Text='LabelCargando'}"
+                       FontSize="13"
+                       FontAttributes="Bold"
+                       TextColor="#FF9800"
+                       HorizontalTextAlignment="Center"
+                       Margin="0,5,0,0"/>
+
+                <!-- 4. DURACIÓN -->
+                <Label Text="{helpers:TranslateExtension Text='PromoDuracion'}"
+                       Style="{StaticResource SectionLabelStyle}"/>
+
+                <Slider x:Name="SliderDuracion"
+                        Minimum="1"
+                        Maximum="30"
+                        Value="1"
+                        ValueChanged="OnDuracionChanged"
+                        ThumbColor="#4CAF50"
+                        MinimumTrackColor="#4CAF50"
+                        MaximumTrackColor="#CCCCCC"
+                        HeightRequest="30"/>
+
+                <Label x:Name="LblDuracionDias"
+                       Text=""
+                       FontSize="14"
+                       HorizontalTextAlignment="Center"/>
+
+                <!-- 5. ACEPTACIÓN DE TÉRMINOS PARA CHAT -->
+                <Label Text="{helpers:TranslateExtension Text='PromoTerminosCondiciones'}"
+                       Style="{StaticResource SectionLabelStyle}"/>
+
+                <Frame Style="{StaticResource ModernFrameStyle}" BackgroundColor="#FFF9C4">
+                    <StackLayout Spacing="10">
+                        <StackLayout Orientation="Horizontal" Spacing="10">
+                            <Switch x:Name="SwitchTerminosChat"
+                                    Toggled="OnTerminosChatToggled"
+                                    ThumbColor="#FF5722"
+                                    OnColor="#4CAF50"/>
+                            <Label VerticalTextAlignment="Center"
+                                   LineBreakMode="WordWrap"
+                                   HorizontalOptions="FillAndExpand">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="{helpers:TranslateExtension Text='PromoAceptoTerminos'}"
+                                              FontAttributes="Bold"
+                                              TextColor="#333"/>
+                                        <Span Text=" "/>
+                                        <Span Text="{helpers:TranslateExtension Text='PromoTerminosObligatorios'}"
+                                              FontSize="12"
+                                              TextColor="#666"/>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </StackLayout>
+
+                        <!-- Lista de términos del proveedor -->
+                        <StackLayout Spacing="8" Margin="10,10,0,0">
+                            <Label FontSize="12" TextColor="#555">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="• " FontAttributes="Bold"/>
+                                        <Span Text="{helpers:TranslateExtension Text='PromoTerminoProveedor1'}"/>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+
+                            <Label FontSize="12" TextColor="#555">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="• " FontAttributes="Bold"/>
+                                        <Span Text="{helpers:TranslateExtension Text='PromoTerminoProveedor2'}"/>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+
+                            <Label FontSize="12" TextColor="#555">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="• " FontAttributes="Bold"/>
+                                        <Span Text="{helpers:TranslateExtension Text='PromoTerminoProveedor3'}"/>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+
+                            <Label FontSize="12" TextColor="#555">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="• " FontAttributes="Bold"/>
+                                        <Span Text="{helpers:TranslateExtension Text='PromoTerminoProveedor4'}"/>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+
+                <!-- 6. OPCIONES DE CONTACTO -->
+                <Label Text="{helpers:TranslateExtension Text='PromoOpcionesContacto'}"
+                       Style="{StaticResource SectionLabelStyle}"/>
+
+                <Frame Style="{StaticResource ModernFrameStyle}">
+                    <StackLayout Spacing="10">
+                        <StackLayout Orientation="Horizontal" Spacing="10">
+                            <Switch x:Name="SwitchContacto"
+                                    Toggled="OnContactoToggled"/>
+                            <Label x:Name="LblContactoText"
+                                   Text="{helpers:TranslateExtension Text='PromoHabilitarChatPrivado'}"
+                                   TextColor="#333333"
+                                   VerticalTextAlignment="Center"/>
+                        </StackLayout>
+
+                        <StackLayout Orientation="Horizontal" Spacing="10" IsVisible="False">
+                            <Switch x:Name="SwitchDomicilio"
+                                    Toggled="OnDomicilioToggled"/>
+                            <Label x:Name="LblDomicilioText"
+                                   Text="{helpers:TranslateExtension Text='PromoPermitirDomicilio'}"
+                                   TextColor="#333333"
+                                   VerticalTextAlignment="Center"/>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+
+                <!-- 7. NOTIFICACIONES PUSH -->
+                <Label Text="{helpers:TranslateExtension Text='PromoNotificacionesPush'}"
+                       Style="{StaticResource SectionLabelStyle}"/>
+
+                <Frame Style="{StaticResource ModernFrameStyle}">
+                    <StackLayout Spacing="10">
+                        <StackLayout Orientation="Horizontal" Spacing="10">
+                            <Switch x:Name="SwitchPush"
+                                    Toggled="OnPushToggled"/>
+                            <Label Text="{helpers:TranslateExtension Text='PromoEnviarPush'}"
+                                   TextColor="#333333"
+                                   VerticalTextAlignment="Center"/>
+                        </StackLayout>
+
+                        <!-- Contenedor de push (visible solo si está activado) -->
+                        <StackLayout x:Name="PushContainer"
+                                     IsVisible="False"
+                                     Spacing="10">
+
+                            <Slider x:Name="SliderUsuariosPush"
+                                    Minimum="0"
+                                    Maximum="100"
+                                    Value="0"
+                                    ValueChanged="OnUsuariosPushChanged"
+                                    ThumbColor="#FF9800"
+                                    MinimumTrackColor="#FF9800"
+                                    MaximumTrackColor="#CCCCCC"
+                                    HeightRequest="30"/>
+
+                            <Label x:Name="LblNotificarA"
+                                   Text=""
+                                   FontSize="14"
+                                   FontAttributes="Bold"
+                                   TextColor="#333333"
+                                   HorizontalTextAlignment="Center"/>
+
+                            <Label x:Name="LblCostoPush"
+                                   Text=""
+                                   FontSize="11"
+                                   TextColor="#666"
+                                   HorizontalTextAlignment="Center"/>
+
+                            <!-- Info sobre priorización de usuarios -->
+                            <Frame BackgroundColor="#E3F2FD"
+                                   BorderColor="#2196F3"
+                                   CornerRadius="8"
+                                   Padding="10"
+                                   HasShadow="False"
+                                   Margin="0,5,0,5">
+                                <Label Text="{helpers:TranslateExtension Text='PromoPrioridadNotificaciones'}"
+                                       TextColor="#0D47A1"
+                                       FontSize="11"
+                                       LineBreakMode="WordWrap"/>
+                            </Frame>
+
+                            <Label Text="{helpers:TranslateExtension Text='PromoTextoPush'}"
+                                   FontSize="13"
+                                   TextColor="#333"/>
+
+                            <Frame Style="{StaticResource ModernFrameStyle}">
+                                <Editor x:Name="EditorTextoPush"
+                                        Placeholder="{helpers:TranslateExtension Text='PromoPlaceholderTextoPush'}"
+                                        MaxLength="200"
+                                        HeightRequest="60"
+                                        TextChanged="OnTextoPushChanged"
+                                        Style="{StaticResource ModernEditorStyle}"/>
+                            </Frame>
+
+                            <Label x:Name="LblContadorTextoPush"
+                                   Text=""
+                                   FontSize="11"
+                                   TextColor="#999"
+                                   HorizontalTextAlignment="End"
+                                   Margin="0,2,0,0"/>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+
+            </StackLayout>
+        </ScrollView>
+
+        <!-- Fila 1: BOTÓN FIJO EN LA PARTE INFERIOR -->
+        <Frame Grid.Row="1"
+               BackgroundColor="White"
+               BorderColor="#E0E0E0"
+               CornerRadius="0"
+               Padding="20,15,20,15"
+               HasShadow="True">
+
+            <StackLayout Spacing="10">
+                <!-- Costo Total -->
+                <Label x:Name="LblCostoTotal"
+                       Text=""
+                       FontSize="18"
+                       FontAttributes="Bold"
+                       TextColor="#333"
+                       HorizontalTextAlignment="Center"/>
+
+                <!-- Botón -->
+                <Button x:Name="BtnLanzar"
+                        Text="{helpers:TranslateExtension Text='PromoLanzarPromocion'}"
+                        BackgroundColor="#4CAF50"
+                        TextColor="White"
+                        FontSize="16"
+                        FontAttributes="Bold"
+                        CornerRadius="8"
+                        HeightRequest="50"
+                        Clicked="OnLanzarClicked"/>
+
+                <!-- Mensaje de déficit (oculto por defecto) -->
+                <Label x:Name="LblDeficit"
+                       IsVisible="False"
+                       TextColor="Red"
+                       FontSize="13"
+                       FontAttributes="Bold"
+                       HorizontalTextAlignment="Center"/>
+            </StackLayout>
+        </Frame>
+
+        <!-- Indicador de carga (oculto por defecto) -->
+        <ActivityIndicator x:Name="LoadingIndicator"
+                           Grid.RowSpan="2"
+                           IsRunning="False"
+                           IsVisible="False"
+                           Color="#4CAF50"
+                           VerticalOptions="Center"
+                           HorizontalOptions="Center"/>
+    </Grid>
+</ContentPage>

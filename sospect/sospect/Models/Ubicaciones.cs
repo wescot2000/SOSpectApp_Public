@@ -8,6 +8,10 @@ namespace sospect.Models
         public double longitud { get; set; }
         public string Idioma { get; set; }
         public string PantallaOrigen { get; set; }
+        public string Pais { get; set; }
+
+        // NUEVO: Pestaña seleccionada en el diseño Twitter/X ("ParaTi" o "Siguiendo")
+        public string TabSeleccionada { get; set; }
     }
 }
 

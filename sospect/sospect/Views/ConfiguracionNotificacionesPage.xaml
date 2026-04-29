@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="sospect.Views.ConfiguracionNotificacionesPage"
+             xmlns:helpers="clr-namespace:sospect.Helpers"
+             xmlns:converters="clr-namespace:sospect.Converters"
+             xmlns:fonts="clr-namespace:sospect.Resources.Fonts;assembly=sospect"
+             BackgroundColor="#F8F9FA"
+             Title="{helpers:TranslateExtension Text='LblConfigNotificaciones'}">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:InverseBooleanConverter x:Key="InverseBooleanConverter" />
+
+            <Style x:Key="ConfigCardStyle" TargetType="Frame">
+                <Setter Property="BackgroundColor" Value="White" />
+                <Setter Property="HasShadow" Value="True" />
+                <Setter Property="CornerRadius" Value="12" />
+                <Setter Property="Padding" Value="20" />
+                <Setter Property="Margin" Value="16" />
+                <Setter Property="BorderColor" Value="Transparent" />
+            </Style>
+
+            <Style x:Key="DescriptionStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="14" />
+                <Setter Property="TextColor" Value="#7F8C8D" />
+                <Setter Property="LineHeight" Value="1.4" />
+                <Setter Property="Margin" Value="0,0,0,20" />
+            </Style>
+
+            <Style x:Key="SwitchItemStyle" TargetType="Grid">
+                <Setter Property="Padding" Value="0,12" />
+            </Style>
+
+            <Style x:Key="SwitchLabelStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="15" />
+                <Setter Property="TextColor" Value="#2C3E50" />
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="LineBreakMode" Value="WordWrap" />
+            </Style>
+
+            <Style x:Key="SectionTitleStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="13" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="TextColor" Value="#7F8C8D" />
+                <Setter Property="Margin" Value="0,16,0,8" />
+            </Style>
+
+            <Style x:Key="PickerFrameStyle" TargetType="Frame">
+                <Setter Property="BorderColor" Value="#BDC3C7" />
+                <Setter Property="BackgroundColor" Value="White" />
+                <Setter Property="HasShadow" Value="False" />
+                <Setter Property="CornerRadius" Value="8" />
+                <Setter Property="Padding" Value="12,0" />
+                <Setter Property="HeightRequest" Value="44" />
+            </Style>
+
+            <Style x:Key="SaveButtonStyle" TargetType="Frame">
+                <Setter Property="BackgroundColor" Value="#27AE60" />
+                <Setter Property="HasShadow" Value="False" />
+                <Setter Property="CornerRadius" Value="8" />
+                <Setter Property="Padding" Value="0" />
+                <Setter Property="MinimumHeightRequest" Value="50" />
+                <Setter Property="BorderColor" Value="Transparent" />
+                <Setter Property="Margin" Value="0,24,0,0" />
+            </Style>
+
+            <Style x:Key="SaveButtonLabelStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="16" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="HorizontalTextAlignment" Value="Center" />
+                <Setter Property="VerticalTextAlignment" Value="Center" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Grid>
+        <ScrollView>
+            <StackLayout Spacing="0">
+                <!-- Card de configuración -->
+                <Frame Style="{StaticResource ConfigCardStyle}">
+                    <StackLayout Spacing="0">
+                        <!-- Descripción -->
+                        <Label Text="{helpers:TranslateExtension Text='LblDescripcionConfNotificaciones'}"
+                               Style="{StaticResource DescriptionStyle}" />
+
+                        <!-- Opciones con switches -->
+                        <StackLayout Spacing="0">
+                            <!-- Alarmas cercanas -->
+                            <Grid Style="{StaticResource SwitchItemStyle}">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.Column="0" 
+                                       Text="{helpers:TranslateExtension Text='LblNotifAlarmasCercanas'}"
+                                       Style="{StaticResource SwitchLabelStyle}" />
+                                <Switch Grid.Column="1" 
+                                        IsToggled="{Binding RecibirAlarmasCercanas}"
+                                        OnColor="#27AE60" />
+                            </Grid>
+                            <BoxView HeightRequest="1" BackgroundColor="#E8E8E8" />
+
+                            <!-- Alarmas de protegidos -->
+                            <Grid Style="{StaticResource SwitchItemStyle}">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.Column="0" 
+                                       Text="{helpers:TranslateExtension Text='LblNotifAlarmasProtegidos'}"
+                                       Style="{StaticResource SwitchLabelStyle}" />
+                                <Switch Grid.Column="1" 
+                                        IsToggled="{Binding RecibirAlarmasProtegidos}"
+                                        OnColor="#27AE60" />
+                            </Grid>
+                            <BoxView HeightRequest="1" BackgroundColor="#E8E8E8" />
+
+                            <!-- Alarmas de zonas -->
+                            <Grid Style="{StaticResource SwitchItemStyle}">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.Column="0" 
+                                       Text="{helpers:TranslateExtension Text='LblNotifAlarmasZonas'}"
+                                       Style="{StaticResource SwitchLabelStyle}" />
+                                <Switch Grid.Column="1" 
+                                        IsToggled="{Binding RecibirAlarmasZonasVigilancia}"
+                                        OnColor="#27AE60" />
+                            </Grid>
+
+                            <!-- Alarmas de autoridad (solo para policía) -->
+                            <StackLayout IsVisible="{Binding Flag_es_policia}">
+                                <BoxView HeightRequest="1" BackgroundColor="#E8E8E8" />
+                                <Grid Style="{StaticResource SwitchItemStyle}">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
+                                    <Label Grid.Column="0" 
+                                           Text="{helpers:TranslateExtension Text='LblNotifAlarmasAutoridadComp'}"
+                                           Style="{StaticResource SwitchLabelStyle}" />
+                                    <Switch Grid.Column="1" 
+                                            x:Name="switchAutoridad"
+                                            IsToggled="{Binding RecibirAlarmasAutoridad}"
+                                            OnColor="#27AE60" />
+                                </Grid>
+                            </StackLayout>
+                        </StackLayout>
+
+                        <!-- Selector de días (solo cuando está desactivada la autoridad) -->
+                        <StackLayout IsVisible="{Binding RecibirAlarmasAutoridad, Converter={StaticResource InverseBooleanConverter}}"
+                                     Spacing="8">
+                            <Label Text="{helpers:TranslateExtension Text='LblCantDiasNotifApagada'}"
+                                   IsVisible="{Binding Flag_es_policia}"
+                                   Style="{StaticResource SectionTitleStyle}" />
+
+                            <Frame Style="{StaticResource PickerFrameStyle}"
+                                   IsVisible="{Binding Flag_es_policia}">
+                                <Grid>
+                                    <Picker x:Name="diasPicker"
+                                            BackgroundColor="Transparent"
+                                            TextColor="#2C3E50"
+                                            SelectedIndex="{Binding DiasSinNotificaciones, Mode=TwoWay}"
+                                            ItemsSource="{Binding DiasOptions}" />
+                                    <Label Text="{x:Static fonts:IconFont.ChevronDown}"
+                                           FontFamily="{StaticResource IcoMoonFamily}"
+                                           FontSize="16"
+                                           TextColor="#7F8C8D"
+                                           HorizontalOptions="End"
+                                           VerticalOptions="Center"
+                                           Margin="0,0,8,0"
+                                           InputTransparent="True" />
+                                </Grid>
+                            </Frame>
+                        </StackLayout>
+
+                        <!-- Selector de intervalo de monitoreo en background -->
+                        <StackLayout Spacing="8" Margin="0,16,0,0">
+                            <Label Text="{helpers:TranslateExtension Text='LblIntervaloMonitoreoBackground'}"
+                                   Style="{StaticResource SectionTitleStyle}" />
+
+                            <Label Text="{helpers:TranslateExtension Text='LblDescripcionIntervaloBackground'}"
+                                   FontSize="12"
+                                   TextColor="#95A5A6"
+                                   LineHeight="1.3"
+                                   Margin="0,0,0,8" />
+
+                            <Frame Style="{StaticResource PickerFrameStyle}">
+                                <Grid>
+                                    <Picker x:Name="intervaloBackgroundPicker"
+                                            BackgroundColor="Transparent"
+                                            TextColor="#2C3E50"
+                                            SelectedItem="{Binding IntervaloBackgroundSeleccionado, Mode=TwoWay}"
+                                            ItemsSource="{Binding IntervalosBackgroundOptions}" />
+                                    <Label Text="{x:Static fonts:IconFont.ChevronDown}"
+                                           FontFamily="{StaticResource IcoMoonFamily}"
+                                           FontSize="16"
+                                           TextColor="#7F8C8D"
+                                           HorizontalOptions="End"
+                                           VerticalOptions="Center"
+                                           Margin="0,0,8,0"
+                                           InputTransparent="True" />
+                                </Grid>
+                            </Frame>
+                        </StackLayout>
+
+                        <!-- Botón Guardar -->
+                        <Frame Style="{StaticResource SaveButtonStyle}">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding GuardarConfiguracionCommand}" />
+                            </Frame.GestureRecognizers>
+                            <Label Text="{helpers:TranslateExtension Text='CmdGuardarConfiguracion'}" 
+                                   Style="{StaticResource SaveButtonLabelStyle}" />
+                        </Frame>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+        </ScrollView>
+
+        <!-- Loading overlay -->
+        <Grid BackgroundColor="#80000000"
+              IsVisible="{Binding IsRunning}">
+            <ActivityIndicator VerticalOptions="Center"
+                               HorizontalOptions="Center"
+                               HeightRequest="50"
+                               WidthRequest="50"
+                               Color="#4A90E2"
+                               IsRunning="{Binding IsRunning}" />
+        </Grid>
+    </Grid>
+</ContentPage>

@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:helpers="clr-namespace:sospect.Helpers"
+    x:Class="sospect.Views.CierreMascotaPage"
+    Title="{helpers:TranslateExtension Text='LblTituloCierreMascota'}"
+    BackgroundColor="White">
+
+    <Grid>
+        <!-- Contenido principal scrolleable -->
+        <ScrollView Padding="16" VerticalScrollBarVisibility="Default">
+            <StackLayout Spacing="20" Padding="0">
+
+                <!-- Cabecera -->
+                <StackLayout Spacing="6">
+                    <Label Text="{helpers:TranslateExtension Text='LblEstasSeguroCerrar'}"
+                           TextColor="#1a1a1a"
+                           FontAttributes="Bold"
+                           FontSize="16"
+                           HorizontalTextAlignment="Center"
+                           LineBreakMode="WordWrap"/>
+
+                    <Label Text="{helpers:TranslateExtension Text='LblAccionSinDeshacer'}"
+                           TextColor="#666666"
+                           FontSize="13"
+                           HorizontalTextAlignment="Center"
+                           LineBreakMode="WordWrap"/>
+                </StackLayout>
+
+                <!-- Descripcion de cierre -->
+                <StackLayout Spacing="8">
+                    <Label Text="{helpers:TranslateExtension Text='LblDescripcionCierre'}"
+                           TextColor="#333333"
+                           FontSize="16"
+                           FontAttributes="Bold"
+                           HorizontalTextAlignment="Start"/>
+
+                    <Border BackgroundColor="#f8f9fa"
+                            Stroke="#e9ecef"
+                            StrokeThickness="1"
+                            StrokeShape="RoundRectangle 8"
+                            Padding="12">
+                        <Editor x:Name="DescripcionEditor"
+                                BackgroundColor="Transparent"
+                                TextColor="#1a1a1a"
+                                MaxLength="450"
+                                Text="{Binding DescripcionCierre}"
+                                HeightRequest="80"
+                                FontSize="15"
+                                Placeholder="{helpers:TranslateExtension Text='LblPlaceholderDescripcionCierre'}"/>
+                    </Border>
+
+                    <Label Text="{Binding Path=Text.Length, Source={x:Reference DescripcionEditor}, StringFormat='{0}/450'}"
+                           FontSize="12"
+                           TextColor="#6c757d"
+                           HorizontalOptions="End"/>
+                </StackLayout>
+
+                <!-- Zona de fotos y videos -->
+                <StackLayout Spacing="8">
+                    <Label Text="{helpers:TranslateExtension Text='LblFotosVideos'}"
+                           TextColor="#333333"
+                           FontSize="16"
+                           FontAttributes="Bold"
+                           HorizontalTextAlignment="Start"/>
+
+                    <Border BackgroundColor="#f8f9fa"
+                            Stroke="#e9ecef"
+                            StrokeThickness="1"
+                            StrokeShape="RoundRectangle 8"
+                            Padding="8"
+                            MinimumHeightRequest="100">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+
+                            <!-- Botón para agregar media (abre selector: foto/video/galería) -->
+                            <Border Grid.Row="0"
+                                    BackgroundColor="#007AFF"
+                                    StrokeThickness="0"
+                                    StrokeShape="RoundRectangle 8"
+                                    Padding="12,8"
+                                    HeightRequest="40"
+                                    HorizontalOptions="Center">
+                                <Border.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="OnCameraButtonTapped"/>
+                                </Border.GestureRecognizers>
+                                <HorizontalStackLayout Spacing="6">
+                                    <Label Text="&#x1F4F7;" FontSize="16" VerticalOptions="Center"/>
+                                    <Label Text="{helpers:TranslateExtension Text='LblAgregarMedia'}"
+                                           TextColor="White" FontSize="13" VerticalOptions="Center"/>
+                                </HorizontalStackLayout>
+                            </Border>
+
+                            <!-- Thumbnails de archivos seleccionados -->
+                            <ScrollView Grid.Row="1"
+                                        Orientation="Horizontal"
+                                        HorizontalScrollBarVisibility="Default"
+                                        IsVisible="{Binding HasMediaFiles}"
+                                        Margin="0,8,0,0">
+                                <HorizontalStackLayout BindableLayout.ItemsSource="{Binding MediaFiles}" Spacing="8">
+                                    <BindableLayout.ItemTemplate>
+                                        <DataTemplate>
+                                            <Grid WidthRequest="80" HeightRequest="80">
+                                                <Border StrokeShape="RoundRectangle 8"
+                                                        StrokeThickness="1"
+                                                        Stroke="#dee2e6">
+                                                    <Image Source="{Binding ThumbnailPath}"
+                                                           Aspect="AspectFill"
+                                                           WidthRequest="80"
+                                                           HeightRequest="80"/>
+                                                </Border>
+
+                                                <Label Text="&#x25B6;"
+                                                       FontSize="20"
+                                                       TextColor="White"
+                                                       HorizontalOptions="Center"
+                                                       VerticalOptions="Center"
+                                                       IsVisible="{Binding IsVideo}"/>
+
+                                                <Border BackgroundColor="#dc3545"
+                                                        StrokeThickness="0"
+                                                        StrokeShape="RoundRectangle 10"
+                                                        WidthRequest="20"
+                                                        HeightRequest="20"
+                                                        HorizontalOptions="End"
+                                                        VerticalOptions="Start"
+                                                        Margin="0,-4,-4,0">
+                                                    <Border.GestureRecognizers>
+                                                        <TapGestureRecognizer
+                                                            Command="{Binding Source={RelativeSource AncestorType={x:Type ContentPage}}, Path=BindingContext.RemoveMediaCommand}"
+                                                            CommandParameter="{Binding .}"/>
+                                                    </Border.GestureRecognizers>
+                                                    <Label Text="X"
+                                                           TextColor="White"
+                                                           FontSize="10"
+                                                           FontAttributes="Bold"
+                                                           HorizontalOptions="Center"
+                                                           VerticalOptions="Center"/>
+                                                </Border>
+                                            </Grid>
+                                        </DataTemplate>
+                                    </BindableLayout.ItemTemplate>
+                                </HorizontalStackLayout>
+                            </ScrollView>
+                        </Grid>
+                    </Border>
+                </StackLayout>
+
+                <!-- Toggle: Se recupero la mascota -->
+                <StackLayout Spacing="16">
+                    <Border BackgroundColor="#f8f9fa"
+                            Stroke="#e9ecef"
+                            StrokeThickness="1"
+                            StrokeShape="RoundRectangle 8"
+                            Padding="16,12">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+
+                            <StackLayout Grid.Column="0" VerticalOptions="Center">
+                                <Label Text="{helpers:TranslateExtension Text='LblMascotaRecuperada'}"
+                                       TextColor="#333333"
+                                       FontSize="15"
+                                       FontAttributes="Bold"/>
+                                <Label Text="{helpers:TranslateExtension Text='LblDescripcionMascotaRecuperada'}"
+                                       TextColor="#666666"
+                                       FontSize="12"/>
+                            </StackLayout>
+
+                            <Switch Grid.Column="1"
+                                    IsToggled="{Binding FlagMascotaRecuperada}"
+                                    OnColor="#34C759"
+                                    ThumbColor="White"/>
+                        </Grid>
+                    </Border>
+                </StackLayout>
+
+                <!-- Botones de accion -->
+                <Grid ColumnSpacing="16" Margin="0,12,0,20">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Button Grid.Column="0"
+                            Text="{helpers:TranslateExtension Text='LabelCancelar'}"
+                            BackgroundColor="#f8f9fa"
+                            TextColor="#495057"
+                            FontSize="15"
+                            FontAttributes="Bold"
+                            CornerRadius="12"
+                            HeightRequest="44"
+                            BorderColor="#dee2e6"
+                            BorderWidth="1"
+                            Command="{Binding CancelarCommand}"/>
+
+                    <Button Grid.Column="1"
+                            Text="{helpers:TranslateExtension Text='LblConfirmarCierre'}"
+                            BackgroundColor="#dc3545"
+                            TextColor="White"
+                            FontSize="15"
+                            FontAttributes="Bold"
+                            CornerRadius="12"
+                            HeightRequest="44"
+                            Command="{Binding ConfirmarCierreCommand}"/>
+                </Grid>
+
+            </StackLayout>
+        </ScrollView>
+
+        <!-- Loading overlay -->
+        <Grid BackgroundColor="#80000000"
+              IsVisible="{Binding IsRunning}">
+            <Border BackgroundColor="White"
+                    StrokeThickness="0"
+                    StrokeShape="RoundRectangle 12"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    Padding="32,24">
+                <StackLayout Orientation="Horizontal" Spacing="16">
+                    <ActivityIndicator Color="#007AFF"
+                                       IsRunning="{Binding IsRunning}"
+                                       HeightRequest="24"
+                                       WidthRequest="24"/>
+                    <Label Text="{helpers:TranslateExtension Text='LblCerrandoAlarma'}"
+                           TextColor="#333333"
+                           FontSize="16"
+                           VerticalOptions="Center"/>
+                </StackLayout>
+            </Border>
+        </Grid>
+    </Grid>
+</ContentPage>

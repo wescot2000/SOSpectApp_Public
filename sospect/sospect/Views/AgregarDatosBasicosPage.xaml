@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="sospect.Views.AgregarDatosBasicosPage"
+             xmlns:fonts="clr-namespace:sospect.Resources.Fonts;assembly=sospect"
+             xmlns:helpers="clr-namespace:sospect.Helpers"
+             BackgroundColor="#F8F9FA"
+             Title="{helpers:TranslateExtension Text='LabelTitleDatosBasicos'}">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="SectionHeaderStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="#2C3E50" />
+                <Setter Property="FontSize" Value="15" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="Margin" Value="0,16,0,8" />
+            </Style>
+
+            <Style x:Key="InputFrameStyle" TargetType="Frame">
+                <Setter Property="BackgroundColor" Value="White" />
+                <Setter Property="BorderColor" Value="#BDC3C7" />
+                <Setter Property="CornerRadius" Value="8" />
+                <Setter Property="Padding" Value="12,8" />
+                <Setter Property="HasShadow" Value="False" />
+            </Style>
+
+            <Style x:Key="ErrorLabelStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="#E74C3C" />
+                <Setter Property="FontSize" Value="12" />
+                <Setter Property="Margin" Value="4,4,0,0" />
+            </Style>
+
+            <Style x:Key="SaveButtonStyle" TargetType="Frame">
+                <Setter Property="BackgroundColor" Value="#27AE60" />
+                <Setter Property="BorderColor" Value="Transparent" />
+                <Setter Property="CornerRadius" Value="12" />
+                <Setter Property="Padding" Value="0" />
+                <Setter Property="HasShadow" Value="True" />
+                <Setter Property="HeightRequest" Value="54" />
+                <Setter Property="Margin" Value="0,24,0,0" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Grid>
+        <ScrollView>
+            <StackLayout Spacing="0" Padding="20">
+
+                <!-- Instrucciones -->
+                <Frame BackgroundColor="#E8F4FD" 
+                       BorderColor="Transparent" 
+                       CornerRadius="12" 
+                       Padding="16" 
+                       HasShadow="False"
+                       Margin="0,0,0,16">
+                    <Grid ColumnSpacing="12">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <Label Grid.Column="0"
+                               FontFamily="{StaticResource IcoMoonFamily}"
+                               Text="{x:Static fonts:IconFont.CircleInfo}"
+                               FontSize="22"
+                               TextColor="#3498DB"
+                               VerticalOptions="Start"
+                               Margin="0,2,0,0" />
+
+                        <Label Grid.Column="1"
+                               Text="{helpers:TranslateExtension Text='LabelInstruccionesDatosBasicos'}"
+                               TextColor="#2C3E50"
+                               FontSize="14"
+                               LineBreakMode="WordWrap"
+                               VerticalOptions="Center" />
+                    </Grid>
+                </Frame>
+
+                <!-- Nombres -->
+                <Label Text="{helpers:TranslateExtension Text='LabelNombres'}" 
+                       Style="{StaticResource SectionHeaderStyle}" />
+                <Frame Style="{StaticResource InputFrameStyle}">
+                    <Entry x:Name="NombresEntry" 
+                           BackgroundColor="Transparent" 
+                           TextColor="#2C3E50" 
+                           Text="{Binding Nombres}" 
+                           TextChanged="OnNombresTextChanged"
+                           Placeholder="Albert" />
+                </Frame>
+                <Label x:Name="NombresErrorLabel" 
+                       Style="{StaticResource ErrorLabelStyle}"
+                       IsVisible="False" 
+                       Text="{helpers:TranslateExtension Text='LabelValidacionNombres'}" />
+
+                <!-- Apellidos -->
+                <Label Text="{helpers:TranslateExtension Text='LabelApellidos'}" 
+                       Style="{StaticResource SectionHeaderStyle}" />
+                <Frame Style="{StaticResource InputFrameStyle}">
+                    <Entry x:Name="ApellidosEntry" 
+                           BackgroundColor="Transparent" 
+                           TextColor="#2C3E50" 
+                           Text="{Binding Apellidos}" 
+                           TextChanged="OnApellidosTextChanged"
+                           Placeholder="Einstein" />
+                </Frame>
+                <Label x:Name="ApellidosErrorLabel" 
+                       Style="{StaticResource ErrorLabelStyle}"
+                       IsVisible="False" 
+                       Text="{helpers:TranslateExtension Text='LabelValidacionApellidos'}" />
+
+                <!-- Número Móvil -->
+                <Label Text="{helpers:TranslateExtension Text='LabelNumeroMovil'}" 
+                       Style="{StaticResource SectionHeaderStyle}" />
+                <Frame Style="{StaticResource InputFrameStyle}">
+                    <Entry x:Name="NumeroMovilEntry" 
+                           BackgroundColor="Transparent" 
+                           TextColor="#2C3E50" 
+                           Keyboard="Telephone" 
+                           Text="{Binding NumeroMovil}" 
+                           TextChanged="OnNumeroMovilTextChanged"
+                           Placeholder="255 123 4567" />
+                </Frame>
+                <Label x:Name="NumeroMovilErrorLabel" 
+                       Style="{StaticResource ErrorLabelStyle}"
+                       IsVisible="False" 
+                       Text="{helpers:TranslateExtension Text='LabelValidacionCelular'}" />
+
+                <!-- Email -->
+                <Label Text="{helpers:TranslateExtension Text='LabelEmail'}" 
+                       Style="{StaticResource SectionHeaderStyle}" />
+                <Frame Style="{StaticResource InputFrameStyle}">
+                    <Entry x:Name="EmailEntry" 
+                           BackgroundColor="Transparent" 
+                           TextColor="#2C3E50" 
+                           Keyboard="Email" 
+                           Text="{Binding Email}" 
+                           TextChanged="OnEmailTextChanged"
+                           Placeholder="example@mail.com" />
+                </Frame>
+                <Label x:Name="EmailErrorLabel" 
+                       Style="{StaticResource ErrorLabelStyle}"
+                       IsVisible="False" 
+                       Text="{helpers:TranslateExtension Text='LabelValidacionEmail'}" />
+
+                <!-- País (Picker — ISO alpha-2, muestra nombre legible) -->
+                <!-- MODIFICADO 2026-02-26: reemplaza Entry de texto libre -->
+                <Label Text="{helpers:TranslateExtension Text='LabelPais'}"
+                       Style="{StaticResource SectionHeaderStyle}" />
+                <Frame Style="{StaticResource InputFrameStyle}">
+                    <Picker ItemsSource="{Binding PaisesDisponibles}"
+                            SelectedItem="{Binding PaisSeleccionado, Mode=TwoWay}"
+                            ItemDisplayBinding="{Binding NombreEs}"
+                            BackgroundColor="Transparent"
+                            TextColor="#2C3E50" />
+                </Frame>
+                <Label x:Name="PaisErrorLabel"
+                       Style="{StaticResource ErrorLabelStyle}"
+                       IsVisible="False"
+                       Text="{helpers:TranslateExtension Text='LabelValidacionPais'}" />
+
+                <!-- Documento de Identificación -->
+                <Label Text="{helpers:TranslateExtension Text='LabelDocumentoIdentificacion'}" 
+                       Style="{StaticResource SectionHeaderStyle}" />
+                <Frame Style="{StaticResource InputFrameStyle}">
+                    <Entry x:Name="NationalIdEntry" 
+                           BackgroundColor="Transparent" 
+                           TextColor="#2C3E50" 
+                           Text="{Binding NationalId}" 
+                           TextChanged="OnNationalIdTextChanged"
+                           Placeholder="12345678" />
+                </Frame>
+                <Label x:Name="NationalIdErrorLabel" 
+                       Style="{StaticResource ErrorLabelStyle}"
+                       IsVisible="False" 
+                       Text="{helpers:TranslateExtension Text='LabelValidacionDocumento'}" />
+
+                <!-- Botón Guardar -->
+                <Frame Style="{StaticResource SaveButtonStyle}">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding SaveBasicDataCommand}" />
+                    </Frame.GestureRecognizers>
+                    <Label Text="{helpers:TranslateExtension Text='LabelGuardarDatosBasicos'}"
+                           TextColor="White"
+                           FontSize="16"
+                           FontAttributes="Bold"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center" />
+                </Frame>
+
+                <!-- Resultado -->
+                <Label x:Name="ResultLabel" 
+                       Text="{Binding ResultText}" 
+                       TextColor="#27AE60"
+                       FontSize="14"
+                       HorizontalTextAlignment="Center"
+                       Margin="0,16,0,0"
+                       IsVisible="{Binding IsResultVisible}" />
+
+                <BoxView HeightRequest="20" Color="Transparent" />
+
+            </StackLayout>
+        </ScrollView>
+
+        <!-- Loading overlay -->
+        <Grid BackgroundColor="Black"
+              Opacity="0.5"
+              HorizontalOptions="FillAndExpand"
+              VerticalOptions="FillAndExpand"
+              IsVisible="{Binding IsRunning}">
+            <ActivityIndicator VerticalOptions="Center"
+                               HorizontalOptions="Center"
+                               HeightRequest="50"
+                               WidthRequest="50"
+                               Color="#27AE60"
+                               IsRunning="{Binding IsRunning}" />
+        </Grid>
+    </Grid>
+</ContentPage>

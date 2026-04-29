@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 using System.Windows.Input;
 using Newtonsoft.Json;
 using sospect.Models;
-using Xamarin.Forms;
+using Microsoft.Maui.Controls;
 using sospect.Services;
 using System.Threading.Tasks;
 using sospect.Utils;
@@ -13,6 +13,7 @@ using sospect.Helpers;
 using sospect.AuthHelpers;
 using System.Linq;
 using System.Collections.Generic;
+using sospect.Interfaces;
 
 namespace sospect.ViewModels
 {
@@ -25,15 +26,13 @@ namespace sospect.ViewModels
             get { return Solicitudes == null || !Solicitudes.Any(); }
         }
 
-
-
         private AprobarRechazarSolicitudModel _RegistroSolicitudPendiente;
         public AprobarRechazarSolicitudModel RegistroSolicitudPendiente
         {
             get { return _RegistroSolicitudPendiente; }
             set { SetProperty(ref _RegistroSolicitudPendiente, value); }
         }
-        
+
         public ObservableCollection<Solicitud> Solicitudes { get; set; }
 
         public AprobarSolicitudesPageViewModel()
@@ -47,11 +46,10 @@ namespace sospect.ViewModels
 
         private async void Aprobar(Solicitud solicitud)
         {
-            var LabelError = TranslateExtension.Translate("LabelError");
-            var LabelExito = TranslateExtension.Translate("LabelExito");
-            var LabelOK = TranslateExtension.Translate("LabelOK");
-            var MensajeErrorAprobando = TranslateExtension.Translate("MensajeErrorAprobando");
-            var LblSolicitudAprobada = TranslateExtension.Translate("LblSolicitudAprobada");
+            var LabelError = await TranslateExtension.TranslateAsync("LabelError");
+            var LabelExito = await TranslateExtension.TranslateAsync("LabelExito");
+            var LabelOK = await TranslateExtension.TranslateAsync("LabelOK");
+            var LblSolicitudAprobada = await TranslateExtension.TranslateAsync("LblSolicitudAprobada");
 
             AprobarRechazarSolicitudModel requestModel = new AprobarRechazarSolicitudModel
             {
@@ -66,22 +64,21 @@ namespace sospect.ViewModels
                 ResponseMessage response = await ApiService.AprobarSolicitudAsync(requestModel);
                 if (response.IsSuccess)
                 {
-                    await Application.Current.MainPage.DisplayAlert(LabelExito, LblSolicitudAprobada, LabelOK);
+                    await ModernAlerts.ShowSuccess(LabelExito, LblSolicitudAprobada);
                     Solicitudes.Remove(solicitud);
                     OnPropertyChanged(nameof(IsListEmpty));
                 }
                 else
                 {
-                    await Application.Current.MainPage.DisplayAlert(LabelError, MensajeErrorAprobando, LabelOK);
+                    await ModernAlerts.ShowError(LabelError, response.Message);
                 }
             }
             catch (System.Exception ex)
             {
-                var properties = new Dictionary<string, string> {
-                        { "Object", "AprobarRechazarSolicitudModel" },
-                        { "Method", "AprobarSolicitudAsync" }
-                    };
-                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
+                CrashlyticsHelper.LogError(ex, "AprobarSolicitudesPageViewModel", "Aprobar");
+
+                // Mostrar mensaje de error al usuario
+                await ModernAlerts.ShowError(LabelError, ex.Message);
             }
             finally
             {
@@ -91,16 +88,24 @@ namespace sospect.ViewModels
 
         private async void Rechazar(Solicitud solicitud)
         {
-            var LabelError = TranslateExtension.Translate("LabelError");
-            var LabelExito = TranslateExtension.Translate("LabelExito");
-            var LabelOK = TranslateExtension.Translate("LabelOK");
-            var MensajeErrorRechazando = TranslateExtension.Translate("MensajeErrorRechazando");
-            var LblSolicitudRechazada = TranslateExtension.Translate("LblSolicitudRechazada");
+            var LabelError = await TranslateExtension.TranslateAsync("LabelError");
+            var LabelExito = await TranslateExtension.TranslateAsync("LabelExito");
+            var LabelOK = await TranslateExtension.TranslateAsync("LabelOK");
+            var MensajeErrorRechazando = await TranslateExtension.TranslateAsync("MensajeErrorRechazando");
+            var LblSolicitudRechazada = await TranslateExtension.TranslateAsync("LblSolicitudRechazada");
+
+            // Validación de entrada
+            if (solicitud == null)
+            {
+                await ModernAlerts.ShowError(LabelError, "Solicitud no válida");
+                return;
+            }
 
             AprobarRechazarSolicitudModel requestModel = new AprobarRechazarSolicitudModel
             {
                 p_user_id_thirdparty_protegido = solicitud.user_id_thirdparty,
-                p_user_id_thirdparty_protector = RegistroSolicitudPendiente.p_user_id_thirdparty_protector,
+                // CORRECCIÓN CRÍTICA: Usar solicitud.user_id_thirdparty_protector en lugar de RegistroSolicitudPendiente
+                p_user_id_thirdparty_protector = solicitud.user_id_thirdparty_protector,
                 Idioma = IdiomUtil.ObtenerCodigoDeIdioma()
             };
 
@@ -110,22 +115,22 @@ namespace sospect.ViewModels
                 ResponseMessage response = await ApiService.RechazarSolicitudAsync(requestModel);
                 if (response.IsSuccess)
                 {
-                    await Application.Current.MainPage.DisplayAlert(LabelExito, LblSolicitudRechazada, LabelOK);
+                    // CORRECCIÓN: Mostrar mensaje de éxito en lugar de error
+                    await ModernAlerts.ShowSuccess(LabelExito, LblSolicitudRechazada);
                     Solicitudes.Remove(solicitud);
                     OnPropertyChanged(nameof(IsListEmpty));
                 }
                 else
                 {
-                    await Application.Current.MainPage.DisplayAlert(LabelError, MensajeErrorRechazando, LabelOK);
+                    await ModernAlerts.ShowError(LabelError, response.Message ?? MensajeErrorRechazando);
                 }
             }
             catch (System.Exception ex)
             {
-                var properties = new Dictionary<string, string> {
-                        { "Object", "AprobarRechazarSolicitudModel" },
-                        { "Method", "RechazarSolicitudAsync" }
-                    };
-                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
+                CrashlyticsHelper.LogError(ex, "AprobarSolicitudesPageViewModel", "Rechazar");
+
+                // Mostrar mensaje de error genérico al usuario
+                await ModernAlerts.ShowError(LabelError, MensajeErrorRechazando);
             }
             finally
             {
@@ -138,23 +143,35 @@ namespace sospect.ViewModels
             IsRunning = true;
             try
             {
+                // Validación de usuario
+                if (App.persona?.user_id_thirdparty == null)
+                {
+                    CrashlyticsHelper.LogError(new System.InvalidOperationException("App.persona o user_id_thirdparty es null"),
+                        "AprobarSolicitudesPageViewModel", "CargarSolicitudes");
+                    return;
+                }
+
                 ApiResponse response = await ApiService.ObtenerSolicitudesPendientes(App.persona.user_id_thirdparty);
-                if (response.IsSuccess)
+                if (response.IsSuccess && response.Data != null)
                 {
                     foreach (var solicitud in response.Data)
                     {
-                        Solicitudes.Add(solicitud);
+                        if (solicitud != null)
+                        {
+                            Solicitudes.Add(solicitud);
+                        }
                     }
                     OnPropertyChanged(nameof(IsListEmpty));
+                }
+                else
+                {
+                    CrashlyticsHelper.LogError(new System.InvalidOperationException("Failed to load solicitudes"),
+                        "AprobarSolicitudesPageViewModel", "CargarSolicitudes");
                 }
             }
             catch (System.Exception ex)
             {
-                var properties = new Dictionary<string, string> {
-                        { "Object", "AprobarRechazarSolicitudModel" },
-                        { "Method", "ObtenerSolicitudesPendientes" }
-                    };
-                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
+                CrashlyticsHelper.LogError(ex, "AprobarSolicitudesPageViewModel", "CargarSolicitudes");
             }
             finally
             {

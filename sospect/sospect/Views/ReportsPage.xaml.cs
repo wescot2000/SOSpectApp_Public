@@ -1,23 +1,27 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Windows.Input;
 using sospect.ViewModels;
-using Xamarin.Forms;
-using sospect.Popups;
+using Microsoft.Maui.Controls;
+using sospect.Views.Popups;
 
 namespace sospect.Views
 {
     public partial class ReportsPage : ContentPage
     {
         private ReportsPageViewModel _viewModel;
+
         public ReportsPage()
         {
             InitializeComponent();
-
-            BindingContext = new ReportsPageViewModel(Navigation);
-
+            _viewModel = new ReportsPageViewModel(Navigation);
+            BindingContext = _viewModel;
         }
 
+        protected override async void OnAppearing()
+        {
+            base.OnAppearing();
+            await _viewModel.CargarDashboardEmprendedorAsync();
+        }
     }
 }
-

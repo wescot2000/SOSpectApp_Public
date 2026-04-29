@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:helpers="clr-namespace:sospect.Helpers"
+    xmlns:fonts="clr-namespace:sospect.Resources.Fonts;assembly=sospect"
+    xmlns:converters="clr-namespace:sospect.Converters"
+    x:Class="sospect.Views.Controls.AlarmCardFooter">
+
+    <ContentView.Resources>
+        <ResourceDictionary>
+            <converters:FlagPropietarioAlarmaToTextConverter x:Key="FlagPropietarioAlarmaToTextConverter" />
+            <converters:BooleanNegatorConverter x:Key="BooleanNegatorConverter" />
+            <converters:MultiBoolToVisibilityConverter x:Key="MultiBoolToVisibilityConverter" />
+
+            <Style x:Key="CardMetaStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="12" />
+                <Setter Property="TextColor" Value="Gray" />
+            </Style>
+
+            <Style x:Key="StatusLabelStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="12" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="HorizontalOptions" Value="End" />
+            </Style>
+        </ResourceDictionary>
+    </ContentView.Resources>
+
+    <StackLayout Spacing="6" Margin="12,0,12,12">
+        <!-- Credibilidad -->
+        <Label Text="{Binding CredibilidadAlarma}"
+               Style="{StaticResource CardMetaStyle}"
+               FontAttributes="Bold"
+               TextColor="#1A1A1A" />
+
+        <!-- Status Row: Propietario y Estado -->
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+
+            <Label Grid.Column="0"
+                   Text="{Binding flag_propietario_alarma, Converter={StaticResource FlagPropietarioAlarmaToTextConverter}}"
+                   Style="{StaticResource CardMetaStyle}" />
+
+            <!-- Estado Activa -->
+            <Label Grid.Column="1"
+                   Text="{helpers:TranslateExtension Text='LblAlarmaActiva'}"
+                   Style="{StaticResource StatusLabelStyle}"
+                   TextColor="Green"
+                   IsVisible="{Binding EsAlarmaActiva}" />
+
+            <!-- Estado Cerrada -->
+            <Label Grid.Column="1"
+                   Text="{helpers:TranslateExtension Text='AlarmaCerrada'}"
+                   Style="{StaticResource StatusLabelStyle}"
+                   TextColor="Red"
+                   IsVisible="{Binding EsAlarmaActiva, Converter={StaticResource BooleanNegatorConverter}}" />
+        </Grid>
+
+        <!-- Información Adicional -->
+        <StackLayout Spacing="3">
+            <!-- Alarma con captura -->
+            <Label Text="{helpers:TranslateExtension Text='LblAlarmaConCaptura'}"
+                   Style="{StaticResource CardMetaStyle}"
+                   TextColor="Orange"
+                   FontAttributes="Bold"
+                   IsVisible="{Binding Flag_hubo_captura}" />
+
+            <!-- Agentes atendiendo -->
+            <StackLayout Orientation="Horizontal"
+                        IsVisible="{Binding flag_alarma_siendo_atendida}"
+                        Spacing="5">
+                <Label Text="{helpers:TranslateExtension Text='LblAgentesAtendiendo'}"
+                       Style="{StaticResource CardMetaStyle}"
+                       TextColor="Blue"
+                       FontAttributes="Bold" />
+                <Label Text="{Binding cantidad_agentes_atendiendo}"
+                       Style="{StaticResource CardMetaStyle}"
+                       TextColor="Blue"
+                       FontAttributes="Bold" />
+            </StackLayout>
+
+            <!-- Red de confianza destacada -->
+            <Label Text="{helpers:TranslateExtension Text='LabelAlarmaDeRedConfianza'}"
+                   Style="{StaticResource CardMetaStyle}"
+                   TextColor="Green"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   IsVisible="{Binding flag_red_confianza}" />
+        </StackLayout>
+    </StackLayout>
+</ContentView>

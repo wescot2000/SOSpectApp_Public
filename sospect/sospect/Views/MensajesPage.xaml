@@ -1,92 +1,188 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:fonts="clr-namespace:sospect.Resources.Fonts;assembly=sospect"
              xmlns:helpers="clr-namespace:sospect.Helpers"
-             xmlns:ads="clr-namespace:sospect.CustomRenderers"
-             BackgroundColor="White"
+             BackgroundColor="#F8F9FA"
+             xmlns:admob="clr-namespace:Plugin.AdMob;assembly=Plugin.AdMob"
              Title="{helpers:TranslateExtension Text='LblMensajes'}"
              x:Class="sospect.Views.MensajesPage">
-    <ContentPage.Content>
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="*" />
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-            </Grid.RowDefinitions>
-            <StackLayout Grid.Row="0" Margin="0,20,0,0">
-                <Label Text="{helpers:TranslateExtension Text='LblMensajes'}" TextColor="Gray" FontSize="Large" FontAttributes="Bold" HorizontalOptions="Center" />
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="CardStyle" TargetType="Frame">
+                <Setter Property="BackgroundColor" Value="White"/>
+                <Setter Property="CornerRadius" Value="12"/>
+                <Setter Property="HasShadow" Value="True"/>
+                <Setter Property="Padding" Value="16"/>
+                <Setter Property="Margin" Value="16,8"/>
+                <Setter Property="BorderColor" Value="Transparent"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <ScrollView Grid.Row="0">
+            <StackLayout Spacing="0" Padding="0,8">
+
+                <!-- Header -->
+                <Frame Style="{StaticResource CardStyle}" Margin="16,8,16,16">
+                    <StackLayout Spacing="12">
+                        <Label Text="{x:Static fonts:IconFont.Envelope}"
+                               FontFamily="{StaticResource IcoMoonFamily}"
+                               FontSize="40"
+                               TextColor="#4A90E2"
+                               HorizontalOptions="Center"/>
+                        <Label Text="{helpers:TranslateExtension Text='LblMensajes'}"
+                               FontSize="20"
+                               FontAttributes="Bold"
+                               TextColor="#2C3E50"
+                               HorizontalTextAlignment="Center"/>
+                    </StackLayout>
+                </Frame>
+
+                <!-- Encabezado de lista -->
+                <Frame Style="{StaticResource CardStyle}" 
+                       Padding="16,12"
+                       BackgroundColor="#E3F2FD"
+                       Margin="16,0">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="0" 
+                               Text="{helpers:TranslateExtension Text='LblAsunto'}" 
+                               TextColor="#1976D2" 
+                               FontSize="14" 
+                               FontAttributes="Bold"/>
+                        <Label Grid.Column="1" 
+                               Text="{helpers:TranslateExtension Text='LblFechaMensaje'}" 
+                               TextColor="#1976D2" 
+                               FontSize="14" 
+                               FontAttributes="Bold"/>
+                    </Grid>
+                </Frame>
+
+                <!-- Lista de mensajes -->
                 <ListView x:Name="MessagesListView"
-                      ItemsSource="{Binding Messages}"
-                      BackgroundColor="White"
-                      HasUnevenRows="True"
-                      ItemTapped="MessagesListView_ItemTapped">
-                    <ListView.Header>
-                        <Grid Margin="0,20,0,0">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*"></ColumnDefinition>
-                                <ColumnDefinition Width="auto"></ColumnDefinition>
-                            </Grid.ColumnDefinitions>
-                            <Label Text="{helpers:TranslateExtension Text='LblAsunto'}" TextColor="Gray" FontSize="Small" FontAttributes="Bold" HorizontalTextAlignment="Start"></Label>
-                            <Label Text="{helpers:TranslateExtension Text='LblFechaMensaje'}" TextColor="Gray" FontSize="Small" FontAttributes="Bold" HorizontalTextAlignment="End"></Label>
-                        </Grid>
-                    </ListView.Header>
+                          ItemsSource="{Binding Messages}"
+                          BackgroundColor="Transparent"
+                          HasUnevenRows="True"
+                          ItemTapped="MessagesListView_ItemTapped"
+                          SeparatorVisibility="None"
+                          SelectionMode="None">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
-                                <Grid Margin="0,20,0,0">
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="*"/>
-                                        <ColumnDefinition Width="Auto"/>
-                                    </Grid.ColumnDefinitions>
-                                    <Label FontAttributes="{Binding estado, Converter={StaticResource BooleanToFontAttributeConverter}}" FontSize="Small" TextColor="Gray" Text="{Binding asunto}" Grid.Column="0"/>
-                                    <Label FontAttributes="{Binding estado, Converter={StaticResource BooleanToFontAttributeConverter}}" FontSize="Small" TextColor="Gray" Text="{Binding fecha_mensaje}" Grid.Column="1"/>
-                                </Grid>
+                                <Frame Style="{StaticResource CardStyle}">
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                        </Grid.ColumnDefinitions>
+
+                                        <Label Grid.Column="0"
+                                               FontAttributes="{Binding estado, Converter={StaticResource BooleanToFontAttributeConverter}}" 
+                                               FontSize="15" 
+                                               TextColor="#2C3E50" 
+                                               Text="{Binding asunto}"
+                                               LineBreakMode="TailTruncation"
+                                               VerticalOptions="Center"/>
+
+                                        <Label Grid.Column="1"
+                                               FontAttributes="{Binding estado, Converter={StaticResource BooleanToFontAttributeConverter}}" 
+                                               FontSize="13" 
+                                               TextColor="#7F8C8D" 
+                                               Text="{Binding fecha_mensaje}"
+                                               VerticalOptions="Center"
+                                               Margin="8,0,0,0"/>
+                                    </Grid>
+                                </Frame>
                             </ViewCell>
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
-                <Label
-                x:Name="EmptyListLabel"
-                Text="{helpers:TranslateExtension Text='LblNoHayRegistros'}"
-                FontSize="18"
-                TextColor="Gray"
-                HorizontalOptions="Center"
-                VerticalOptions="Center"
-                IsVisible="{Binding IsListEmpty}" />
-                
+
+                <!-- Mensaje de lista vacía -->
+                <Frame x:Name="EmptyListFrame"
+                       Style="{StaticResource CardStyle}"
+                       Margin="16,40,16,16"
+                       IsVisible="{Binding IsListEmpty}">
+                    <StackLayout Spacing="16">
+                        <Label Text="{x:Static fonts:IconFont.Envelope}"
+                               FontFamily="{StaticResource IcoMoonFamily}"
+                               FontSize="60"
+                               TextColor="#BDC3C7"
+                               HorizontalOptions="Center"/>
+                        <Label Text="{helpers:TranslateExtension Text='LblNoHayRegistros'}"
+                               FontSize="16"
+                               TextColor="#7F8C8D"
+                               HorizontalTextAlignment="Center"/>
+                    </StackLayout>
+                </Frame>
+
             </StackLayout>
+        </ScrollView>
 
-            <Frame Padding="5" BorderColor="Black" BackgroundColor="LightGray" Margin="0,15,0,0" HorizontalOptions="Center" HeightRequest="35" WidthRequest="380" CornerRadius="10" Grid.Row="1">
-                <Frame.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding MarkAllAsReadCommand}" NumberOfTapsRequired="1" />
-                </Frame.GestureRecognizers>
-                <Label Text="{helpers:TranslateExtension Text='LblMarcarLeidos'}"
-                       TextColor="Black"
-                       LineBreakMode="WordWrap"
-                       HorizontalOptions="CenterAndExpand"
-                       VerticalOptions="CenterAndExpand"
-                       HorizontalTextAlignment="Center"
-                       VerticalTextAlignment="Center" />
-            </Frame>
+        <!-- Botón marcar como leídos -->
+        <Frame Grid.Row="1" 
+               Padding="16" 
+               BackgroundColor="#4A90E2" 
+               Margin="16,8,16,8" 
+               CornerRadius="12" 
+               HasShadow="True"
+               BorderColor="Transparent"
+               HeightRequest="60">
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding MarkAllAsReadCommand}"/>
+            </Frame.GestureRecognizers>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="0"
+                       Text="{x:Static fonts:IconFont.Check}"
+                       FontFamily="{StaticResource IcoMoonFamily}"
+                       FontSize="20"
+                       TextColor="White"
+                       VerticalOptions="Center"
+                       Margin="0,0,12,0"/>
+                <Label Grid.Column="1"
+                       Text="{helpers:TranslateExtension Text='LblMarcarLeidos'}"
+                       TextColor="White"
+                       FontSize="16"
+                       FontAttributes="Bold"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Start"/>
+            </Grid>
+        </Frame>
 
-            <Grid BackgroundColor="Black"
-                  Opacity="0.5"
-                  HorizontalOptions="FillAndExpand"
-                  VerticalOptions="FillAndExpand"
-                  Grid.Row="0"
-                  IsVisible="{Binding IsRunning}">
-                <ActivityIndicator VerticalOptions="Center"
-                                   HorizontalOptions="Center"
-                                   HeightRequest="50"
-                                   WidthRequest="50"
-                                   Color="DarkBlue"
-                                   IsRunning="{Binding IsRunning}">
-                </ActivityIndicator>
-            </Grid>
-            <Grid BackgroundColor="LightGray" Grid.Row="2" HeightRequest="90">
-                <ads:AdBanner></ads:AdBanner>
-            </Grid>
+        <!-- Indicador de carga -->
+        <Grid Grid.Row="0"
+              BackgroundColor="Black"
+              Opacity="0.5"
+              HorizontalOptions="FillAndExpand"
+              VerticalOptions="FillAndExpand"
+              IsVisible="{Binding IsRunning}">
+            <ActivityIndicator VerticalOptions="Center"
+                               HorizontalOptions="Center"
+                               HeightRequest="50"
+                               WidthRequest="50"
+                               Color="#4A90E2"
+                               IsRunning="{Binding IsRunning}"/>
         </Grid>
-    </ContentPage.Content>
+
+        <!-- Banner publicitario -->
+        <Grid BackgroundColor="LightGray" Grid.Row="2" HeightRequest="90">
+            <admob:BannerAd AdSize="LargeBanner" />
+        </Grid>
+    </Grid>
 </ContentPage>

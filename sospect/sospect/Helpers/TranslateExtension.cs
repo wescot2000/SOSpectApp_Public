@@ -1,13 +1,14 @@
-﻿using System;
+using System;
 using System.Globalization;
 using System.Reflection;
 using System.Resources;
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
+using System.Threading.Tasks;
+using Microsoft.Maui.Controls;
+using Microsoft.Maui.Controls.Xaml;
 
 namespace sospect.Helpers
 {
-    [ContentProperty("Text")]
+    [ContentProperty(nameof(Text))]
     public class TranslateExtension : IMarkupExtension
     {
         readonly CultureInfo ci;
@@ -21,6 +22,11 @@ namespace sospect.Helpers
         }
 
         public string Text { get; set; }
+
+        public static async Task<string> TranslateAsync(string key)
+        {
+            return await Task.Run(() => Translate(key));
+        }
 
         public static string Translate(string key)
         {

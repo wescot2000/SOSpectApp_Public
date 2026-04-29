@@ -23,6 +23,9 @@ namespace sospect.Models
             }
         }
         public DateTime fecha_mensaje { get; set; }
+        // Rediseño 2026-02-08: Metadata para preview enriquecido en lista
+        public int? tipoalarma_id { get; set; }
+        public string url_foto { get; set; }
 
         public event PropertyChangedEventHandler PropertyChanged;
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)

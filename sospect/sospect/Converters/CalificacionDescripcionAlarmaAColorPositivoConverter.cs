@@ -1,6 +1,6 @@
-﻿using System;
+using System;
 using System.Globalization;
-using Xamarin.Forms;
+using Microsoft.Maui.Controls;
 
 namespace sospect.Converters
 {
@@ -12,13 +12,13 @@ namespace sospect.Converters
             switch (value?.ToString())
             {
                 case "Positivo":
-                    return Color.Blue;
+                    return Colors.Blue;
                 case "Negativo":
-                    return Color.Gray;
+                    return Colors.Gray;
                 case "Apagado":
-                    return Color.Gray;
+                    return Colors.Gray;
                 default:
-                    return Color.Red;
+                    return Colors.Red;
             }
         }
 
@@ -28,4 +28,3 @@ namespace sospect.Converters
         }
     }
 }
-

@@ -1,6 +1,6 @@
 ﻿using sospect.ViewModels;
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
+using Microsoft.Maui.Controls;
+using Microsoft.Maui.Controls.Xaml;
 
 namespace sospect.Views
 {

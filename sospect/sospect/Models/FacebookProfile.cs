@@ -1,6 +1,5 @@
 ﻿using System;
 using System.ComponentModel;
-using Xamarin.Forms;
 
 namespace sospect.Models
 {
@@ -9,6 +8,12 @@ namespace sospect.Models
         public string FullName { get; set; }
         public string Email { get; set; }
         public string Token { get; set; }
+
         public event PropertyChangedEventHandler PropertyChanged;
+
+        protected void OnPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
     }
 }

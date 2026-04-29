@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+using System;
 using System.Globalization;
-using Xamarin.Forms;
+using Microsoft.Maui.Controls;
 
 namespace sospect.Converters
 {
@@ -13,6 +11,14 @@ namespace sospect.Converters
             var flags = ((string)value).Split(',');
             var flag_subscr_vencida = bool.Parse(flags[0]);
             var flag_renovable = bool.Parse(flags[1]);
+            // Tercer parámetro: es_promocion (oculta botón renovar para promociones)
+            var es_promocion = flags.Length > 2 && bool.Parse(flags[2]);
+
+            // Las promociones NO muestran botón de renovar
+            if (es_promocion)
+            {
+                return false;
+            }
 
             if (flag_subscr_vencida && !flag_renovable)
             {

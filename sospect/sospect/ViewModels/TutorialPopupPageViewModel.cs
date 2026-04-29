@@ -1,12 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using Xamarin.Forms;
+using Microsoft.Maui.Controls;
 
 namespace sospect.ViewModels
 {
     public class TutorialPopupPageViewModel : BaseViewModel
     {
+        private int _delay;
+        public int Delay
+        {
+            get { return _delay; }
+            set { SetProperty(ref _delay, value); }
+        }
+
         private string _tutorialText;
 
         public string TutorialText
@@ -47,9 +54,9 @@ namespace sospect.ViewModels
             set { SetProperty(ref _frameRightMargin, value); }
         }
 
-        private string _labelAlignment;
+        private TextAlignment _labelAlignment;
 
-        public string LabelAlignment
+        public TextAlignment LabelAlignment
         {
             get { return _labelAlignment; }
             set { SetProperty(ref _labelAlignment, value); }

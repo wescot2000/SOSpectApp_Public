@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <!-- SOLO configuración del Splash Screen (Android 12+) -->
+  <style name="Maui.SplashTheme" parent="Theme.SplashScreen">
+    <!-- Color de fondo del splash -->
+    <item name="android:windowSplashScreenBackground">#000000</item>
+    <!-- Icono del splash - MANTENER EL QUE FUNCIONA CON GOOGLE -->
+    <item name="android:windowSplashScreenAnimatedIcon">@drawable/splash_icon</item>
+    <!-- Pasar al tema principal después del splash -->
+    <item name="postSplashScreenTheme">@style/MainTheme</item>
+  </style>
+  <style name="MainTheme" parent="MainTheme.Base">
+  </style>
+</resources>

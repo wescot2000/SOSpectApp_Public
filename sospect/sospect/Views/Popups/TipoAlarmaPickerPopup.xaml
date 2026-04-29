@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<toolkit:Popup
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    xmlns:helpers="clr-namespace:sospect.Helpers"
+    xmlns:converters="clr-namespace:sospect.Converters"
+    CanBeDismissedByTappingOutsideOfPopup="True"
+    x:Class="sospect.Views.Popups.TipoAlarmaPickerPopup"
+    x:Name="popup">
+
+    <toolkit:Popup.Resources>
+        <ResourceDictionary>
+            <converters:ImageResourceConverter x:Key="ImageResourceConverter"/>
+        </ResourceDictionary>
+    </toolkit:Popup.Resources>
+
+    <Frame CornerRadius="15"
+           VerticalOptions="Center"
+           HorizontalOptions="Center"
+           BackgroundColor="White"
+           Padding="0"
+           HasShadow="True"
+           WidthRequest="450"
+           MaximumHeightRequest="700">
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <!-- Header -->
+            <Border Grid.Row="0"
+                    BackgroundColor="#1465bb"
+                    StrokeThickness="0"
+                    Padding="20,15">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="15,15,0,0"/>
+                </Border.StrokeShape>
+                <Label Text="{helpers:TranslateExtension Text='LabelTipoAlarma'}"
+                       TextColor="White"
+                       FontSize="18"
+                       FontAttributes="Bold"
+                       HorizontalTextAlignment="Center"/>
+            </Border>
+
+            <!-- Nota informativa -->
+            <Border Grid.Row="1"
+                    BackgroundColor="#E3F2FD"
+                    StrokeThickness="0"
+                    Padding="15,10"
+                    Margin="15,15,15,0">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="8"/>
+                </Border.StrokeShape>
+                <Label Text="{helpers:TranslateExtension Text='InfoPorcentajesBasadosUltimos30Dias'}"
+                       TextColor="#1976D2"
+                       FontSize="11"
+                       HorizontalTextAlignment="Center"
+                       LineBreakMode="WordWrap"/>
+            </Border>
+
+            <!-- Tipos Característicos (Warning y Crime) -->
+            <StackLayout Grid.Row="2" Padding="15,15,15,5" Spacing="10">
+                <Label Text="{helpers:TranslateExtension Text='TiposCaracteristicosSOSpect'}"
+                       FontSize="14"
+                       FontAttributes="Bold"
+                       TextColor="#1465bb"/>
+
+                <Grid x:Name="GridTiposCaracteristicos"
+                      ColumnDefinitions="*,*"
+                      RowDefinitions="Auto"
+                      ColumnSpacing="10">
+                    <!-- Se pobla dinámicamente con Warning y Crime -->
+                </Grid>
+            </StackLayout>
+
+            <!-- Otros Tipos (Ordenados por Porcentaje) - incluye Promoción al final -->
+            <StackLayout Grid.Row="3" Padding="15,10" Spacing="10">
+                <Label Text="{helpers:TranslateExtension Text='OtrosTiposOrdenadosPopularidad'}"
+                       FontSize="14"
+                       FontAttributes="Bold"
+                       TextColor="#1465bb"/>
+
+                <ScrollView MaximumHeightRequest="280">
+                    <StackLayout x:Name="StackOtrosTipos" Spacing="10">
+                        <!-- Grid de otros tipos -->
+                        <Grid x:Name="GridOtrosTipos"
+                              ColumnDefinitions="*,*"
+                              RowDefinitions="Auto"
+                              ColumnSpacing="10"
+                              RowSpacing="10">
+                            <!-- Se pobla dinámicamente con otros tipos -->
+                        </Grid>
+
+                        <!-- Promoción Local (dentro del ScrollView, al final) -->
+                        <StackLayout x:Name="StackPromocion" Spacing="10" Margin="0,10,0,0">
+                            <BoxView HeightRequest="1" BackgroundColor="#E0E0E0" Margin="0,0,0,10"/>
+
+                            <Grid x:Name="GridPromocion"
+                                  ColumnDefinitions="*"
+                                  RowDefinitions="Auto">
+                                <!-- Se pobla dinámicamente con Promoción Local -->
+                            </Grid>
+                        </StackLayout>
+                    </StackLayout>
+                </ScrollView>
+            </StackLayout>
+
+            <!-- Botón Cancelar -->
+            <Border Grid.Row="4"
+                    BackgroundColor="#F8F9FA"
+                    StrokeThickness="0"
+                    Padding="15">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="0,0,15,15"/>
+                </Border.StrokeShape>
+                <Button Text="{helpers:TranslateExtension Text='LabelCancelar'}"
+                        BackgroundColor="#1465bb"
+                        TextColor="White"
+                        FontSize="16"
+                        FontAttributes="Bold"
+                        CornerRadius="8"
+                        Clicked="OnCancelTapped"/>
+            </Border>
+        </Grid>
+    </Frame>
+</toolkit:Popup>

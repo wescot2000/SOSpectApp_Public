@@ -19,5 +19,7 @@ namespace sospect.Models
         public string login_protegido { get; set; }
         public DateTime fecha_activacion { get; set; }
         public DateTime fecha_finalizacion { get; set; }
+        public bool flag_suspension_activa { get; set; }
+        public DateTime? fecha_fin_suspension { get; set; }
     }
 }

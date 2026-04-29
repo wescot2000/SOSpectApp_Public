@@ -7,12 +7,13 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using sospect.Models;
 using Newtonsoft.Json;
-using Xamarin.Forms;
+using Microsoft.Maui.Controls;
 using sospect.Services;
 using sospect.Utils;
 using sospect.Helpers;
 using sospect.Views;
 using System.Collections.Specialized;
+using sospect.Interfaces;
 
 namespace sospect.ViewModels
 {
@@ -20,6 +21,7 @@ namespace sospect.ViewModels
     {
         private ObservableCollection<ProtectedUserData> _ProtectedUsers;
         private bool _isListEmpty;
+
         public ObservableCollection<ProtectedUserData> ProtectedUsers
         {
             get => this._ProtectedUsers;
@@ -33,12 +35,29 @@ namespace sospect.ViewModels
             ProtectedUsers = new ObservableCollection<ProtectedUserData>();
             DeleteProtectedUserCommand = new Command<ProtectedUserData>(DeleteProtectedUserAsync);
             ProtectedUsers.CollectionChanged += OnProtectedUserChanged;
+
+            // Inicializar IsListEmpty en true
+            IsListEmpty = true;
+
             _ = Task.Run(() => LoadProtectedUsersAsync());
         }
 
         private void OnProtectedUserChanged(object sender, NotifyCollectionChangedEventArgs e)
         {
             IsListEmpty = ProtectedUsers.Count == 0;
+        }
+
+        /// <summary>
+        /// Obtiene la navegación del tab activo cuando MainPage es TabbedPage.
+        /// Necesario porque estas páginas se pushearon en el NavigationPage del tab,
+        /// no en App.Current.MainPage.Navigation.
+        /// </summary>
+        private INavigation GetTabNavigation()
+        {
+            if (Application.Current.MainPage is TabbedPage tabbedPage &&
+                tabbedPage.CurrentPage is NavigationPage navPage)
+                return navPage.Navigation;
+            return Application.Current.MainPage.Navigation;
         }
 
         public bool IsListEmpty
@@ -53,27 +72,32 @@ namespace sospect.ViewModels
             try
             {
                 var users = await ApiService.GetProtectedUsersAsync();
-                
 
-                if (users.Any())
+                // SIEMPRE actualizar la colección (incluso si está vacía)
+                if (users != null && users.Any())
                 {
                     ProtectedUsers = new ObservableCollection<ProtectedUserData>(users);
-                    IsListEmpty = ProtectedUsers.Count == 0;
                 }
+                else
+                {
+                    ProtectedUsers = new ObservableCollection<ProtectedUserData>();
+                }
+
+                // Forzar actualización (por si CollectionChanged no se dispara)
+                IsListEmpty = ProtectedUsers.Count == 0;
             }
             catch (Exception ex)
             {
-                var properties = new Dictionary<string, string> {
-                        { "Object", "ProtectedUsersViewModel" },
-                        { "Method", "LoadProtectedUsersAsync" }
-                        };
-                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
+                CrashlyticsHelper.LogError(ex, "ProtectedUsersViewModel", "LoadProtectedUsersAsync");
+
+                // En error, vaciar lista
+                ProtectedUsers = new ObservableCollection<ProtectedUserData>();
+                IsListEmpty = true;
             }
             finally
             {
                 IsRunning = false;
             }
-            
         }
 
         private async void DeleteProtectedUserAsync(ProtectedUserData user)
@@ -85,9 +109,10 @@ namespace sospect.ViewModels
             {
                 if (confirmed)
                 {
-                    var LblSubscrEliminada = TranslateExtension.Translate("LblSubscrEliminada");
-                    var LblSubsEliminadaExitosamente = TranslateExtension.Translate("LblSubsEliminadaExitosamente");
-                    var LabelOK = TranslateExtension.Translate("LabelOK");
+                    var LblSubscrEliminada = await TranslateExtension.TranslateAsync("LblSubscrEliminada");
+                    var LabelError = await TranslateExtension.TranslateAsync("LabelError");
+                    var LblSubsEliminadaExitosamente = await TranslateExtension.TranslateAsync("LblSubsEliminadaExitosamente");
+                    var LabelOK = await TranslateExtension.TranslateAsync("LabelOK");
                     EliminarProtegidoRequest eliminarProtegidoRequest = new EliminarProtegidoRequest()
                     {
                         p_user_id_thirdparty_protector = App.persona.user_id_thirdparty,
@@ -98,32 +123,45 @@ namespace sospect.ViewModels
                     if (user != null)
                     {
                         IsRunning = true;
+                        bool navigatedAway = false;
                         try
                         {
                             ResponseMessage response = await ApiService.DeleteProtectedUserAsync(eliminarProtegidoRequest);
-                            
+
                             if (response.IsSuccess)
                             {
-                                await App.Current.MainPage.DisplayAlert(LblSubscrEliminada, LblSubsEliminadaExitosamente, LabelOK);
-                                ProtectedUsers.Remove(user);
+                                var LabelInformacion = await TranslateExtension.TranslateAsync("LabelInformacion");
+                                await ModernAlerts.ShowSuccess(LabelInformacion, LblSubsEliminadaExitosamente);
+                                navigatedAway = true;
+                                if (App.Current.MainPage.Navigation.ModalStack.Count > 0)
+                                    await App.Current.MainPage.Navigation.PopModalAsync();
+                                await GetTabNavigation().PopToRootAsync();
+                                return;
+                            }
+                            else
+                            {
+                                await ModernAlerts.ShowError(LabelError, response.Message);
                             }
                         }
                         catch (Exception ex)
                         {
-                            var properties = new Dictionary<string, string> {
-                                    { "Object", "ProtectedUsersViewModel" },
-                                    { "Method", "DeleteProtectedUserAsync" }
-                                };
-                            Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
+                            if (!navigatedAway)
+                            {
+                                var LabelInformacion = await TranslateExtension.TranslateAsync("LabelInformacion");
+                                var MensajeError = await TranslateExtension.TranslateAsync("MensajeError");
+                                await ModernAlerts.ShowWarning(LabelInformacion, MensajeError);
+                            }
+                            CrashlyticsHelper.LogError(ex, "ProtectedUsersViewModel", "DeleteProtectedUserAsync");
                         }
                         finally
                         {
                             IsRunning = false;
                         }
-                        
                     }
                 }
-                await App.Current.MainPage.Navigation.PopModalAsync();
+                // Solo cerrar el modal si la navegación exitosa no lo cerró ya
+                if (App.Current.MainPage.Navigation.ModalStack.Count > 0)
+                    await App.Current.MainPage.Navigation.PopModalAsync();
             };
 
             await App.Current.MainPage.Navigation.PushModalAsync(confirmationPage);

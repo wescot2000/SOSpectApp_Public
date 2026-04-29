@@ -1,37 +1,54 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.Net.Http;
 using System.Threading.Tasks;
+using sospect.Interfaces;
 using sospect.Services;
 using sospect.Utils;
-using Xamarin.Essentials;
-using Xamarin.Forms;
+using sospect.Views;
+using Microsoft.Maui.Storage;
+using Microsoft.Maui.Controls;
+using Microsoft.Maui.ApplicationModel;
+using static System.Net.WebRequestMethods;
+using sospect.Helpers;
 
 namespace sospect.AuthHelpers
 {
     public class JWTHttpClient : HttpClient
     {
-        public static string Token
+        public static async Task<string> GetTokenAsync()
         {
-            get => Xamarin.Essentials.Preferences.Get("access_token", "");
-            set => Xamarin.Essentials.Preferences.Set("access_token", value);
+            return await SecureStorage.GetAsync("access_token");
+        }
+
+        public static async Task SetTokenAsync(string value)
+        {
+            await SecureStorage.SetAsync("access_token", value);
         }
 
         public JWTHttpClient()
         {
-            // Set your base address
-            //BaseAddress = new Uri(AppConfiguration.ApiHost);
-            if (!string.IsNullOrEmpty(Token))
-            {
-                DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", JWTHttpClient.Token);
-            }
+            InitializeClient().ConfigureAwait(false);
         }
 
         public JWTHttpClient(HttpMessageHandler handler, bool disposeHandler) : base(handler, disposeHandler)
         {
-            if (!string.IsNullOrEmpty(Token))
+            InitializeClient().ConfigureAwait(false);
+        }
+
+        private async Task InitializeClient()
+        {
+            var token = await GetTokenAsync();
+            Console.WriteLine($"[JWTHttpClient] InitializeClient - Token presente: {!string.IsNullOrEmpty(token)}");
+            if (!string.IsNullOrEmpty(token))
             {
-                DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", JWTHttpClient.Token);
+                DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", token);
+                Console.WriteLine($"[JWTHttpClient] Authorization header configurado");
+            }
+            else
+            {
+                Console.WriteLine($"[JWTHttpClient] WARNING: Token vacío, no se configuró Authorization header");
             }
         }
 
@@ -42,59 +59,152 @@ namespace sospect.AuthHelpers
         /// True is successful or unnecessary
         /// False is unsuccessful or a failure
         /// </returns>
-        public bool CheckRefresh()
+        public async Task<bool> CheckRefresh()
         {
-            // Determine if your token is expired, if so refresh
-            var handler = new JwtSecurityTokenHandler();
-            var Readedtoken = handler.ReadJwtToken(Token);
-            DateTime expdate = Readedtoken.ValidTo;
+            var token = await GetTokenAsync();
 
-            if (expdate < DateTime.UtcNow)
+            if (string.IsNullOrEmpty(token))
+            {
+                Console.WriteLine("[JWTHttpClient] CheckRefresh: Token vacío");
+                // Si el token no existe, considerar que necesita refresco
                 return true;
-            return false;
+            }
+
+            try
+            {
+                // Determinar si el token está expirado, si es así, refrescar
+                var handler = new JwtSecurityTokenHandler();
+                var readedToken = handler.ReadJwtToken(token);
+                DateTime expdate = readedToken.ValidTo;
+
+                Console.WriteLine($"[JWTHttpClient] CheckRefresh: Token expira {expdate:yyyy-MM-dd HH:mm:ss} UTC, Ahora: {DateTime.UtcNow:yyyy-MM-dd HH:mm:ss} UTC");
+
+                if (expdate < DateTime.UtcNow)
+                {
+                    Console.WriteLine("[JWTHttpClient] CheckRefresh: Token EXPIRADO");
+                    return true;
+                }
+
+                Console.WriteLine("[JWTHttpClient] CheckRefresh: Token VÁLIDO");
+                return false;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"[JWTHttpClient] CheckRefresh ERROR: {ex.Message}");
+                return true;
+            }
         }
 
         public async Task<HttpResponseMessage> GetAPIAsync(string path)
         {
-            // Check our Token using CheckRefresh
             try
             {
+                // CORRECCIÓN: Verificar que SÍ hay conexión (no negar la condición)
                 if (InternetUtil.IsConnected)
                 {
-                    return new HttpResponseMessage() { Content = new StringContent("") };
+                    var token = await GetTokenAsync();
+
+                    // Si el token está vacío o expirado, retornar Unauthorized
+                    if (string.IsNullOrEmpty(token) || await CheckRefresh())
+                    {
+                        System.Diagnostics.Debug.WriteLine($"GetAPIAsync: Token inválido o expirado para {path}");
+                        return new HttpResponseMessage(System.Net.HttpStatusCode.Unauthorized)
+                        {
+                            Content = new StringContent("")
+                        };
+                    }
+
+                    // Asegurar que el header de autorización esté configurado
+                    DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", token);
+
+                    var response = await GetAsync(path);
+
+                    if (response.StatusCode == System.Net.HttpStatusCode.Unauthorized)
+                    {
+                        System.Diagnostics.Debug.WriteLine($"GetAPIAsync: Respuesta Unauthorized del servidor para {path}");
+                    }
+
+                    return response;
                 }
-                //Si es true se debe refrescar el token para realizar la petición
-                if (CheckRefresh())
+
+                // Si NO hay conexión, retornar error de red
+                System.Diagnostics.Debug.WriteLine($"GetAPIAsync: Sin conexión para {path}");
+                return new HttpResponseMessage(System.Net.HttpStatusCode.ServiceUnavailable)
                 {
-                    App.Current.MainPage = new NavigationPage(new Views.LoginPage());
-                    return new HttpResponseMessage() { Content = new StringContent("") };
-                }
-                else
-                {
-                    return await GetAsync(path);
-                }
+                    Content = new StringContent("")
+                };
+            }
+            catch (HttpRequestException httpEx)
+            {
+                CrashlyticsHelper.LogError(httpEx, "JWTHttpClient", "GetAPIAsync");
+                throw;
+            }
+            catch (TaskCanceledException tcEx)
+            {
+                CrashlyticsHelper.LogError(tcEx, "JWTHttpClient", "GetAPIAsync");
+                throw;
             }
             catch (Exception ex)
             {
+                CrashlyticsHelper.LogError(ex, "JWTHttpClient", "GetAPIAsync");
                 throw new TokenException("Error refreshing token", ex);
             }
         }
 
         public async Task<HttpResponseMessage> PostAPIAsync(string path, HttpContent content)
         {
-            //Si es true se debe refrescar el token para realizar la petición
-            if (InternetUtil.IsConnected)
+            try
             {
-                return new HttpResponseMessage() { Content = new StringContent("") };
+                // CORRECCIÓN: Verificar que SÍ hay conexión (no negar la condición)
+                if (InternetUtil.IsConnected)
+                {
+                    var token = await GetTokenAsync();
+
+                    // Si el token está vacío o expirado, retornar Unauthorized
+                    if (string.IsNullOrEmpty(token) || await CheckRefresh())
+                    {
+                        Console.WriteLine($"[JWTHttpClient] PostAPIAsync: Token inválido o expirado para {path}");
+                        return new HttpResponseMessage(System.Net.HttpStatusCode.Unauthorized)
+                        {
+                            Content = new StringContent("")
+                        };
+                    }
+
+                    // Asegurar que el header de autorización esté configurado
+                    DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", token);
+                    Console.WriteLine($"[JWTHttpClient] PostAPIAsync: Authorization header configurado para {path}");
+
+                    var response = await PostAsync(path, content);
+
+                    if (response.StatusCode == System.Net.HttpStatusCode.Unauthorized)
+                    {
+                        System.Diagnostics.Debug.WriteLine($"PostAPIAsync: Respuesta Unauthorized del servidor para {path}");
+                    }
+
+                    return response;
+                }
+
+                // Si NO hay conexión, retornar error de red
+                System.Diagnostics.Debug.WriteLine($"PostAPIAsync: Sin conexión para {path}");
+                return new HttpResponseMessage(System.Net.HttpStatusCode.ServiceUnavailable)
+                {
+                    Content = new StringContent("")
+                };
             }
-            if (CheckRefresh())
+            catch (HttpRequestException httpEx)
             {
-                App.Current.MainPage = new NavigationPage(new Views.LoginPage());
-                return new HttpResponseMessage() { Content = new StringContent("") };
+                CrashlyticsHelper.LogError(httpEx, "JWTHttpClient", "PostAPIAsync");
+                throw;
             }
-            else
+            catch (TaskCanceledException tcEx)
             {
-                return await PostAsync(path, content);
+                CrashlyticsHelper.LogError(tcEx, "JWTHttpClient", "PostAPIAsync");
+                throw;
+            }
+            catch (Exception ex)
+            {
+                CrashlyticsHelper.LogError(ex, "JWTHttpClient", "PostAPIAsync");
+                throw new TokenException("Error refreshing token", ex);
             }
         }
 
@@ -102,17 +212,15 @@ namespace sospect.AuthHelpers
         {
             public TokenException() : base()
             {
-
             }
+
             public TokenException(string msg) : base(msg)
             {
-
             }
+
             public TokenException(string msg, Exception inner) : base(msg, inner)
             {
-
             }
         }
     }
 }
-

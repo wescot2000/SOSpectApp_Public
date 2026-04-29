@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<toolkit:Popup
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    xmlns:helpers="clr-namespace:sospect.Helpers"
+    CanBeDismissedByTappingOutsideOfPopup="False"
+    x:Class="sospect.Views.Popups.CerrarAlarmaPopUp">
+
+    <Grid BackgroundColor="Transparent">
+        <!-- Contenedor principal del popup -->
+        <Border BackgroundColor="White"
+                StrokeThickness="0"
+                StrokeShape="RoundRectangle 16"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                Margin="0"
+                WidthRequest="330"
+                MaximumHeightRequest="550">
+
+            <ScrollView Padding="12" VerticalScrollBarVisibility="Never">
+                <StackLayout Spacing="20" Padding="0">
+
+                    <!-- Cabecera del popup -->
+                    <StackLayout Spacing="6">
+                        <Label Text="{helpers:TranslateExtension Text='LblEstasSeguroCerrar'}" 
+                               TextColor="#1a1a1a" 
+                               FontAttributes="Bold" 
+                               FontSize="16"
+                               HorizontalTextAlignment="Center"
+                               LineBreakMode="WordWrap"/>
+
+                        <Label Text="{helpers:TranslateExtension Text='LblAccionSinDeshacer'}" 
+                               TextColor="#666666" 
+                               FontSize="13"
+                               HorizontalTextAlignment="Center"
+                               LineBreakMode="WordWrap"/>
+                    </StackLayout>
+
+                    <!-- Descripción de cierre -->
+                    <StackLayout Spacing="8">
+                        <Label Text="{helpers:TranslateExtension Text='LblDescripcionCierre'}" 
+                               TextColor="#333333" 
+                               FontSize="16"
+                               FontAttributes="Bold"
+                               HorizontalTextAlignment="Start"/>
+
+                        <!-- Editor con border moderno -->
+                        <Border BackgroundColor="#f8f9fa"
+                                Stroke="#e9ecef"
+                                StrokeThickness="1"
+                                StrokeShape="RoundRectangle 8"
+                                Padding="12">
+                            <Editor x:Name="DescripcionEditor"
+                                    BackgroundColor="Transparent"
+                                    TextColor="#1a1a1a"
+                                    MaxLength="450"
+                                    Text="{Binding DescripcionCierre}"
+                                    HeightRequest="80"
+                                    FontSize="15"
+                                    Placeholder="{helpers:TranslateExtension Text='LblPlaceholderDescripcionCierre'}"/>
+                        </Border>
+
+                        <Label Text="{Binding Path=Text.Length, Source={x:Reference DescripcionEditor}, StringFormat='{0}/450'}" 
+                               FontSize="12"
+                               TextColor="#6c757d" 
+                               HorizontalOptions="End"/>
+                    </StackLayout>
+
+                    <!-- Opciones con switches modernos -->
+                    <StackLayout Spacing="16">
+
+                        <!-- Falsa alarma -->
+                        <Border BackgroundColor="#f8f9fa"
+                                Stroke="#e9ecef"
+                                StrokeThickness="1"
+                                StrokeShape="RoundRectangle 8"
+                                Padding="16,12">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+
+                                <StackLayout Grid.Column="0" VerticalOptions="Center">
+                                    <Label Text="{helpers:TranslateExtension Text='LblEraFalsaAlarma'}"
+                                           TextColor="#333333"
+                                           FontSize="15"
+                                           FontAttributes="Bold"/>
+                                    <Label Text="{helpers:TranslateExtension Text='LblDescripcionFalsaAlarma'}"
+                                           TextColor="#666666"
+                                           FontSize="12"/>
+                                </StackLayout>
+
+                                <Switch x:Name="FalsaAlarmaSwitch" 
+                                        Grid.Column="1"
+                                        IsToggled="{Binding FlagEsFalsaAlarma}" 
+                                        OnColor="#007AFF"
+                                        ThumbColor="White"
+                                        Toggled="OnFalsaAlarmaToggled"/>
+                            </Grid>
+                        </Border>
+
+                        <!-- Hubo captura -->
+                        <Border BackgroundColor="#f8f9fa"
+                                Stroke="#e9ecef"
+                                StrokeThickness="1"
+                                StrokeShape="RoundRectangle 8"
+                                Padding="16,12">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+
+                                <StackLayout Grid.Column="0" VerticalOptions="Center">
+                                    <Label Text="{helpers:TranslateExtension Text='LblHuboCaptura'}"
+                                           TextColor="#333333"
+                                           FontSize="15"
+                                           FontAttributes="Bold"/>
+                                    <Label Text="{helpers:TranslateExtension Text='LblDescripcionCaptura'}"
+                                           TextColor="#666666"
+                                           FontSize="12"/>
+                                </StackLayout>
+
+                                <Switch x:Name="CapturaSwitch" 
+                                        Grid.Column="1"
+                                        IsToggled="{Binding FlagHuboCaptura}" 
+                                        OnColor="#34C759"
+                                        ThumbColor="White"
+                                        Toggled="OnHuboCapturaToggled"/>
+                            </Grid>
+                        </Border>
+                    </StackLayout>
+
+                    <!-- Botones de acción -->
+                    <Grid ColumnSpacing="16" Margin="0,12,0,0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <!-- Botón Cancelar -->
+                        <Button Grid.Column="0"
+                                Text="{helpers:TranslateExtension Text='LabelCancelar'}"
+                                BackgroundColor="#f8f9fa"
+                                TextColor="#495057"
+                                FontSize="15"
+                                FontAttributes="Bold"
+                                CornerRadius="12"
+                                HeightRequest="44"
+                                BorderColor="#dee2e6"
+                                BorderWidth="1"
+                                Command="{Binding CancelarCommand}"/>
+
+                        <!-- Botón Confirmar -->
+                        <Button Grid.Column="1"
+                                Text="{helpers:TranslateExtension Text='LblConfirmarCierre'}"
+                                BackgroundColor="#dc3545"
+                                TextColor="White"
+                                FontSize="15"
+                                FontAttributes="Bold"
+                                CornerRadius="12"
+                                HeightRequest="44"
+                                Command="{Binding ConfirmarCierreCommand}"/>
+                    </Grid>
+
+                </StackLayout>
+            </ScrollView>
+        </Border>
+
+        <!-- Loading overlay -->
+        <Grid BackgroundColor="#80000000"
+              IsVisible="{Binding IsRunning}">
+            <Border BackgroundColor="White"
+                    StrokeThickness="0"
+                    StrokeShape="RoundRectangle 12"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    Padding="32,24">
+                <StackLayout Orientation="Horizontal" Spacing="16">
+                    <ActivityIndicator Color="#007AFF"
+                                       IsRunning="{Binding IsRunning}"
+                                       HeightRequest="24"
+                                       WidthRequest="24"/>
+                    <Label Text="{helpers:TranslateExtension Text='LblCerrandoAlarma'}"
+                           TextColor="#333333"
+                           FontSize="16"
+                           VerticalOptions="Center"/>
+                </StackLayout>
+            </Border>
+        </Grid>
+    </Grid>
+</toolkit:Popup>

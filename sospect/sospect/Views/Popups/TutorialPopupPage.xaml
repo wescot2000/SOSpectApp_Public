@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<toolkit:Popup xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             x:Class="sospect.Views.Popups.TutorialPopupPage"
+             CanBeDismissedByTappingOutsideOfPopup="True">
+    <toolkit:Popup.Content>
+        <Frame BackgroundColor="#A0000000"
+               Padding="10"
+               HasShadow="True"
+               HorizontalOptions="{Binding FrameHorizontalOptions}"
+               VerticalOptions="{Binding FrameVerticalOptions}"
+               WidthRequest="{Binding FrameWidthRequest}"
+               HeightRequest="{Binding FrameHeightRequest}"
+               Margin="{Binding FrameMargin}">
+            <Grid x:Name="ClickableGrid">
+                <ScrollView>
+                    <Label Text="{Binding TutorialText}"
+                       TextColor="White"
+                       FontSize="Small"
+                       HorizontalOptions="Start"
+                       VerticalOptions="Start" 
+                       HorizontalTextAlignment="{Binding LabelAlignment}"
+                       Margin="0,0,0,0" />
+                </ScrollView>
+            </Grid>
+        </Frame>
+    </toolkit:Popup.Content>
+</toolkit:Popup>

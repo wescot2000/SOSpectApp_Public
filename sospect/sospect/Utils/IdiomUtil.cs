@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Globalization;
 
 namespace sospect.Utils
@@ -13,4 +13,3 @@ namespace sospect.Utils
         }
     }
 }
-

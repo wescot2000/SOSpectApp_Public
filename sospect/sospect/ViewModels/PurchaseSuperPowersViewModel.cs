@@ -1,11 +1,6 @@
 ﻿using System.Collections.ObjectModel;
-using System.ComponentModel;
-using System.Net.Http;
-using System.Runtime.CompilerServices;
-using System.Threading.Tasks;
 using System.Windows.Input;
-using Newtonsoft.Json;
-using Xamarin.Forms;
+using Microsoft.Maui.Controls;
 using sospect.Models;
 using sospect.Services;
 using sospect.Utils;
@@ -14,7 +9,7 @@ using System.Collections.Generic;
 using Plugin.InAppBilling;
 using System.Linq;
 using sospect.Helpers;
-
+using sospect.Interfaces;
 
 namespace sospect.ViewModels
 {
@@ -22,22 +17,30 @@ namespace sospect.ViewModels
     {
         public ObservableCollection<SuperPower> SuperPowers { get; set; }
         public ICommand PurchaseCommand { get; set; }
-
-        public ICommand ConsumirCommand { get; set; }
-
-
         public bool IsPurchaseProcessing { get; set; }
+
+        private bool _isRunning;
+        public bool IsRunning
+        {
+            get => _isRunning;
+            set
+            {
+                _isRunning = value;
+                OnPropertyChanged(nameof(IsRunning));
+            }
+        }
 
         public PurchaseSuperPowersViewModel()
         {
             var LabelOK = TranslateExtension.Translate("LabelOK");
             var LabelInformacion = TranslateExtension.Translate("LabelInformacion");
             var MensajeError = TranslateExtension.Translate("MensajeError");
+
             PurchaseCommand = new Command<SuperPower>(async (superPower) =>
             {
                 if (IsPurchaseProcessing)
                 {
-                    return; // Retorna si una compra ya está en curso
+                    return;
                 }
 
                 IsPurchaseProcessing = true;
@@ -47,232 +50,358 @@ namespace sospect.ViewModels
                 }
                 catch (Exception ex)
                 {
-                    await App.Current.MainPage.DisplayAlert(LabelInformacion, MensajeError, LabelOK);
-                    var properties = new Dictionary<string, string> {
-                        { "Object", "PurchaseSuperPowersViewModel" },
-                        { "Method", "PurchaseSuperPowerAsync" }
-                    };
-                    Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
+                    await ModernAlerts.ShowWarning(LabelInformacion, MensajeError);
+                    CrashlyticsHelper.LogError(ex, "PurchaseSuperPowersViewModel", "PurchaseCommand");
                 }
                 finally
                 {
                     IsPurchaseProcessing = false;
                 }
-                
             }, (superPower) => !IsPurchaseProcessing);
-
-            ConsumirCommand = new Command(async () =>
-            {
-                if (IsPurchaseProcessing)
-                {
-                    return; // Retorna si una compra ya está en curso
-                }
-
-                IsPurchaseProcessing = true;
-                try
-                {
-                    await ConsumirPowerAsync();
-                }
-                catch (Exception ex)
-                {
-                    await App.Current.MainPage.DisplayAlert(LabelInformacion, MensajeError, LabelOK);
-                    var properties = new Dictionary<string, string> {
-                        { "Object", "PurchaseSuperPowersViewModel" },
-                        { "Method", "ConsumirPowerAsync" }
-                    };
-                    Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
-                }
-                finally
-                {
-                    IsPurchaseProcessing = false;
-                }
-            }, () => !IsPurchaseProcessing);
 
             SuperPowers = new ObservableCollection<SuperPower>();
             _ = Task.Run(async () => await GetSuperPowersAndRequestDetailsAsync());
         }
 
-        public async Task ConsumirPowerAsync()
+        public async Task GetSuperPowersAndRequestDetailsAsync()
         {
-            var connected = await CrossInAppBilling.Current.ConnectAsync();
-            //await CrossInAppBilling.Current.ConsumePurchaseAsync("11", "iaicfcfdlnjljbacflocfjdd.AO-J1OyeQiOlK-L87XrdRNYfNmQ5W9tWXxuPCBOY1rzK35CapD-Z9RnDVuvCNXh0SYlT6mA4imKAeEvJRytK7pOCu_AuAUSCM56nzPpfthsIrqhOE0teQcg");
-            //await CrossInAppBilling.Current.ConsumePurchaseAsync("11", "okkmbcbeokhjgoedbelikbgk.AO-J1OxY9PiH6obwd0bdPBdACzPDsi9XzFKFQXc5xaXpQUesriaIBFNXgdeNBXbuOGrTJQ435LM05haOBD6a5mk3Gfb-2APb3PLmZFhf2vKAIHpFd3lFDu4");
-            await CrossInAppBilling.Current.DisconnectAsync();
-        }
-            public async Task GetSuperPowersAndRequestDetailsAsync()
-        {
-            var LabelOK = TranslateExtension.Translate("LabelOK");
-            var LabelInformacion = TranslateExtension.Translate("LabelInformacion");
-            var MensajeError = TranslateExtension.Translate("MensajeError");
-            IsRunning = true;
+            var LabelOK = await TranslateExtension.TranslateAsync("LabelOK");
+            var LabelInformacion = await TranslateExtension.TranslateAsync("LabelInformacion");
+            var MensajeError = await TranslateExtension.TranslateAsync("MensajeError");
+
+            MainThread.BeginInvokeOnMainThread(() => IsRunning = true);
+
             try
             {
+                System.Diagnostics.Debug.WriteLine("=== INICIANDO CARGA DE PRODUCTOS ===");
+
                 var superPowersResponse = await ApiService.ObtenerValoresPoderes();
-                
 
-                if (superPowersResponse != null)
+                if (superPowersResponse != null && superPowersResponse.Any())
                 {
-                    List<string> identifiers = new List<string>();
-                    foreach (var superPower in superPowersResponse)
+                    System.Diagnostics.Debug.WriteLine($"Productos obtenidos de la BD: {superPowersResponse.Count}");
+
+                    foreach (var power in superPowersResponse)
                     {
-                        identifiers.Add(superPower.ProductId);
+                        System.Diagnostics.Debug.WriteLine($"  BD ProductId: '{power.ProductId}', Cantidad: {power.cantidad_poderes}");
                     }
 
-                    var connected = await CrossInAppBilling.Current.ConnectAsync();
-                    if (!connected)
-                    {
-                        //No se pudo conectar al servicio de facturación
-                        //Puede ser que no esté disponible, o que el usuario esté bloqueado temporalmente, etc.
-                        return;
-                    }
-                    //string[] productids = new string[] { "11","12","13","14","15","16","17"};
-                    var products = await CrossInAppBilling.Current.GetProductInfoAsync(ItemType.InAppPurchaseConsumable, identifiers.ToArray());
+                    List<string> identifiers = superPowersResponse.Select(sp => sp.ProductId).ToList();
+                    var billing = CrossInAppBilling.Current;
 
-                    foreach (var product in products)
+                    try
                     {
-                        // Aquí, buscarías el poder correspondiente en la respuesta de la base de datos usando product.ProductId como identificador,
-                        // luego crearías un nuevo objeto SuperPower usando los datos de la base de datos y el precio localizado de la tienda.
-                        var correspondingPower = superPowersResponse.FirstOrDefault(p => p.ProductId == product.ProductId);
-                        if (correspondingPower != null)
+                        System.Diagnostics.Debug.WriteLine("Conectando al servicio de facturacion...");
+                        var connected = await billing.ConnectAsync();
+                        System.Diagnostics.Debug.WriteLine($"Estado de conexion: {connected}");
+
+                        if (!connected)
                         {
-                            SuperPowers.Add(new SuperPower
+                            System.Diagnostics.Debug.WriteLine("No conectado - Cargando productos mock");
+                            await LoadMockProducts(superPowersResponse);
+                            return;
+                        }
+
+                        await CheckAndConsumePendingPurchases();
+
+                        System.Diagnostics.Debug.WriteLine($"Solicitando informacion de {identifiers.Count} productos a la tienda...");
+                        System.Diagnostics.Debug.WriteLine("IDs solicitados: " + string.Join(", ", identifiers.Select(id => $"'{id}'")));
+
+                        // USAR ItemType.InAppPurchase (sin Consumable) como en Xamarin
+                        var products = await billing.GetProductInfoAsync(ItemType.InAppPurchase, identifiers.ToArray());
+
+                        if (products != null && products.Any())
+                        {
+                            System.Diagnostics.Debug.WriteLine($"Se obtuvieron {products.Count()} productos de la tienda");
+
+                            foreach (var product in products)
                             {
-                                ProductId = correspondingPower.ProductId,
-                                cantidad_poderes = correspondingPower.cantidad_poderes,
-                                valor_usd = correspondingPower.valor_usd,
-                                LocalizedPrice = product.LocalizedPrice
+                                System.Diagnostics.Debug.WriteLine($"  Tienda ProductId: '{product.ProductId}', Precio: {product.LocalizedPrice}");
+                            }
+
+                            var sortedProducts = products.OrderBy(p =>
+                            {
+                                if (int.TryParse(p.ProductId, out int productIdNum))
+                                {
+                                    return productIdNum;
+                                }
+                                return int.MaxValue;
+                            }).ToList();
+
+                            MainThread.BeginInvokeOnMainThread(() =>
+                            {
+                                SuperPowers.Clear();
+                                foreach (var product in sortedProducts)
+                                {
+                                    var correspondingPower = superPowersResponse.FirstOrDefault(p => p.ProductId == product.ProductId);
+                                    if (correspondingPower != null)
+                                    {
+                                        SuperPowers.Add(new SuperPower
+                                        {
+                                            ProductId = correspondingPower.ProductId,
+                                            cantidad_poderes = correspondingPower.cantidad_poderes,
+                                            valor_usd = correspondingPower.valor_usd,
+                                            LocalizedPrice = product.LocalizedPrice
+                                        });
+                                        System.Diagnostics.Debug.WriteLine($"  Agregado a UI: {correspondingPower.cantidad_poderes} poderes - {product.LocalizedPrice}");
+                                    }
+                                }
+                                System.Diagnostics.Debug.WriteLine($"Total productos en UI: {SuperPowers.Count}");
                             });
                         }
+                        else
+                        {
+                            System.Diagnostics.Debug.WriteLine("No se obtuvieron productos - Cargando mock");
+                            await LoadMockProducts(superPowersResponse);
+                        }
                     }
-
-                    // Recuerda siempre desconectarte del servicio de facturación después de utilizarlo
-                    await CrossInAppBilling.Current.DisconnectAsync();
+                    catch (Exception ex)
+                    {
+                        System.Diagnostics.Debug.WriteLine($"Error: {ex.GetType().Name} - {ex.Message}");
+                        CrashlyticsHelper.LogError(ex, "PurchaseSuperPowersViewModel", "GetSuperPowersAndRequestDetailsAsync");
+                        await LoadMockProducts(superPowersResponse);
+                    }
+                    finally
+                    {
+                        await billing.DisconnectAsync();
+                    }
                 }
             }
             catch (Exception ex)
             {
-                await App.Current.MainPage.DisplayAlert(LabelInformacion, MensajeError, LabelOK);
-                var properties = new Dictionary<string, string> {
-                        { "Object", "PurchaseSuperPowersViewModel" },
-                        { "Method", "ConsumirPowerAsync" }
-                    };
-                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
+                System.Diagnostics.Debug.WriteLine($"Error general: {ex.Message}");
+                await ModernAlerts.ShowWarning(LabelInformacion, MensajeError);
+                CrashlyticsHelper.LogError(ex, "PurchaseSuperPowersViewModel", "GetSuperPowersAndRequestDetailsAsync");
             }
             finally
             {
-                IsRunning = false;
+                MainThread.BeginInvokeOnMainThread(() => IsRunning = false);
             }
-            
         }
 
-
-        public async Task<InAppBillingPurchase> BuyProductByProductId(string productId)
+        private async Task CheckAndConsumePendingPurchases()
         {
-            var billingResult = await CrossInAppBilling.Current.ConnectAsync();
-            if (!billingResult)
-            {
-                // handle connection error
-                return null;
-            }
-          
-            var product = SuperPowers.FirstOrDefault(p => p.ProductId == productId);
-
-            if (product == null)
-            {
-                // product not found
-                return null;
-            }
-
-            var purchase = await CrossInAppBilling.Current.PurchaseAsync(product.ProductId, ItemType.InAppPurchase, "payload");
-            if (purchase == null)
-            {
-                // handle purchase error
-                return null;
-            }
-
-            // purchase was successful, now return purchase token
-            await CrossInAppBilling.Current.DisconnectAsync();
-            return purchase;
-        }
-
-
-        private async Task PurchaseSuperPowerAsync(SuperPower superPower)
-        {
-            var LabelOK = TranslateExtension.Translate("LabelOK");
-            var LabelError = TranslateExtension.Translate("LabelError");
-            var LabelExito = TranslateExtension.Translate("LabelExito");
-            var LblCompraExitosa = TranslateExtension.Translate("LblCompraExitosa");
-            var LblCompraFallida = TranslateExtension.Translate("LblCompraFallida");
             try
             {
-                string userId = App.persona.user_id_thirdparty; // Reemplazar con el ID de usuario real
-                string ipTransaccion = InternetUtil.GetPublicIpAddress(); // Reemplazar con la IP de la transacción real
+                var billing = CrossInAppBilling.Current;
+                var purchases = await billing.GetPurchasesAsync(ItemType.InAppPurchase);
 
-                // Primero intentamos comprar el producto
-                InAppBillingPurchase purchase = await BuyProductByProductId(superPower.ProductId);
-                // Usamos el identificador del producto para hacer la compra
-
-                // Asumiendo que si la compra fue exitosa, se habrá guardado el token de compra en un campo
-                if (purchase != null)
+                if (purchases != null && purchases.Any())
                 {
-                    // Solo si la compra fue exitosa, hacemos una llamada a la API para registrar la transacción
-                    CompraSuperPoderRequest compraRequest = new CompraSuperPoderRequest
+                    System.Diagnostics.Debug.WriteLine($"Compras pendientes: {purchases.Count()}");
+                    foreach (var purchase in purchases)
                     {
-                        p_user_id_thirdparty = userId,
-                        cantidad = superPower.cantidad_poderes,
-                        valor = superPower.valor_usd,
-                        ip_transaccion = ipTransaccion,
-                        p_tipo_transaccion = "Compra",
-                        p_purchase_token = purchase.PurchaseToken
-                    };
-
-                    IsRunning = true;
-                    bool success = await ApiService.ComprarSuperPoder(compraRequest);
-                    IsRunning = false;
-
-                    if (success)
-                    {
-                        var billingResult = await CrossInAppBilling.Current.ConnectAsync();
-                        if (billingResult)
+                        if (purchase.State == PurchaseState.Purchased)
                         {
-                            await CrossInAppBilling.Current.ConsumePurchaseAsync(purchase.ProductId,purchase.PurchaseToken);
-                            await CrossInAppBilling.Current.DisconnectAsync();
+                            System.Diagnostics.Debug.WriteLine($"  Consumiendo: {purchase.ProductId}");
+                            await billing.ConsumePurchaseAsync(purchase.ProductId, purchase.PurchaseToken);
                         }
-
-                        await App.Current.MainPage.DisplayAlert(LabelExito, LblCompraExitosa, LabelOK);
-
-                    }
-                    else
-                    {
-
-                        await App.Current.MainPage.DisplayAlert(LabelError, LblCompraFallida, LabelOK);
-                        //CompraSuperPoderRequest compraRequestFallida = new CompraSuperPoderRequest
-                        //{
-                        //    p_user_id_thirdparty = userId,
-                        //    cantidad = superPower.cantidad_poderes,
-                        //    valor = superPower.valor_usd,
-                        //    ip_transaccion = ipTransaccion,
-                        //    p_tipo_transaccion = "FalloCompra",
-                        //    p_purchase_token = null
-                        //};
-
-                        //IsRunning = true;
-                        //    await ApiService.RegistrarFalloCompra(compraRequest);
-                        //IsRunning = false;
                     }
                 }
-
             }
             catch (Exception ex)
             {
-                await App.Current.MainPage.DisplayAlert(LabelError, ex.Message, LabelOK);
-                var properties = new Dictionary<string, string> {
-                        { "Object", "PurchaseSuperPowersViewModel" },
-                        { "Method", "PurchaseSuperPowerAsync" }
-                    };
-                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
+                System.Diagnostics.Debug.WriteLine($"Error verificando compras: {ex.Message}");
+                CrashlyticsHelper.LogError(ex, "PurchaseSuperPowersViewModel", "CheckAndConsumePendingPurchases");
             }
-            
+        }
+
+        private async Task LoadMockProducts(List<SuperPower> superPowersResponse)
+        {
+            var sortedPowers = superPowersResponse.OrderBy(p => p.cantidad_poderes).ToList();
+
+            MainThread.BeginInvokeOnMainThread(() =>
+            {
+                SuperPowers.Clear();
+                foreach (var power in sortedPowers)
+                {
+                    SuperPowers.Add(new SuperPower
+                    {
+                        ProductId = power.ProductId,
+                        cantidad_poderes = power.cantidad_poderes,
+                        valor_usd = power.valor_usd,
+                        LocalizedPrice = $"${power.valor_usd:F2} USD"
+                    });
+                }
+            });
+
+            await Task.CompletedTask;
+        }
+
+        private async Task PurchaseSuperPowerAsync(SuperPower superPower)
+        {
+            var LabelOK = await TranslateExtension.TranslateAsync("LabelOK");
+            var LabelError = await TranslateExtension.TranslateAsync("LabelError");
+            var LabelExito = await TranslateExtension.TranslateAsync("LabelExito");
+            var LblCompraExitosa = await TranslateExtension.TranslateAsync("LblCompraExitosa");
+            var LblCompraFallida = await TranslateExtension.TranslateAsync("LblCompraFallida");
+
+            MainThread.BeginInvokeOnMainThread(() => IsRunning = true);
+
+            try
+            {
+                string userId = App.persona.user_id_thirdparty;
+                string ipTransaccion = InternetUtil.GetPublicIpAddress();
+
+                System.Diagnostics.Debug.WriteLine("=== INICIANDO COMPRA ===");
+                System.Diagnostics.Debug.WriteLine($"ProductId: '{superPower.ProductId}'");
+                System.Diagnostics.Debug.WriteLine($"Usuario: {userId}");
+
+                var billing = CrossInAppBilling.Current;
+                var connected = await billing.ConnectAsync();
+
+                if (!connected)
+                {
+                    System.Diagnostics.Debug.WriteLine("No se pudo conectar");
+                    await ModernAlerts.ShowError(LabelError, "No se pudo conectar al servicio de facturacion");
+                    return;
+                }
+
+                try
+                {
+                    var existingPurchases = await billing.GetPurchasesAsync(ItemType.InAppPurchase);
+                    var pendingPurchase = existingPurchases?.FirstOrDefault(p => p.ProductId == superPower.ProductId && p.State == PurchaseState.Purchased);
+
+                    if (pendingPurchase != null)
+                    {
+                        System.Diagnostics.Debug.WriteLine("Consumiendo compra pendiente...");
+                        await billing.ConsumePurchaseAsync(pendingPurchase.ProductId, pendingPurchase.PurchaseToken);
+                    }
+
+                    System.Diagnostics.Debug.WriteLine("Iniciando PurchaseAsync...");
+
+                    // CRÍTICO: Usar ItemType.InAppPurchase con payload (como Xamarin)
+                    var purchase = await billing.PurchaseAsync(superPower.ProductId, ItemType.InAppPurchase, "payload");
+
+                    if (purchase == null)
+                    {
+                        System.Diagnostics.Debug.WriteLine("Compra retorno null");
+                        await ModernAlerts.ShowWarning(LabelError, "Compra cancelada");
+                        return;
+                    }
+
+                    System.Diagnostics.Debug.WriteLine($"Estado: {purchase.State}");
+
+                    if (purchase.State == PurchaseState.Purchased)
+                    {
+                        System.Diagnostics.Debug.WriteLine("Registrando en backend...");
+
+                        CompraSuperPoderRequest compraRequest = new CompraSuperPoderRequest
+                        {
+                            p_user_id_thirdparty = userId,
+                            cantidad = superPower.cantidad_poderes,
+                            valor = superPower.valor_usd,
+                            ip_transaccion = ipTransaccion,
+                            p_tipo_transaccion = "Compra",
+                            p_purchase_token = purchase.PurchaseToken
+                        };
+
+                        bool success = await ApiService.ComprarSuperPoder(compraRequest);
+
+                        if (success)
+                        {
+                            System.Diagnostics.Debug.WriteLine("Consumiendo compra...");
+                            var consumeResult = await billing.ConsumePurchaseAsync(purchase.ProductId, purchase.PurchaseToken);
+
+                            if (consumeResult != null)
+                            {
+                                System.Diagnostics.Debug.WriteLine("Compra exitosa");
+                                await ModernAlerts.ShowSuccess(LabelExito, LblCompraExitosa);
+                            }
+                            else
+                            {
+                                System.Diagnostics.Debug.WriteLine("Error consumiendo");
+                                await ModernAlerts.ShowWarning(LabelError, "Compra registrada pero no consumida. Contacte soporte.");
+                            }
+                        }
+                        else
+                        {
+                            System.Diagnostics.Debug.WriteLine("Error en backend");
+                            await ModernAlerts.ShowError(LabelError, LblCompraFallida);
+                        }
+                    }
+                    else if (purchase.State == PurchaseState.Canceled)
+                    {
+                        await ModernAlerts.ShowWarning(LabelError, "Compra cancelada");
+                    }
+                    else if (purchase.State == PurchaseState.PaymentPending)
+                    {
+                        await ModernAlerts.ShowWarning(LabelError, "Pago pendiente");
+                    }
+                }
+                catch (InAppBillingPurchaseException purchaseEx)
+                {
+                    System.Diagnostics.Debug.WriteLine($"InAppBillingPurchaseException: {purchaseEx.PurchaseError}");
+                    System.Diagnostics.Debug.WriteLine($"   Mensaje: {purchaseEx.Message}");
+
+                    CrashlyticsHelper.LogError(purchaseEx, "PurchaseSuperPowersViewModel", "PurchaseSuperPowerAsync");
+
+                    string message = purchaseEx.PurchaseError switch
+                    {
+                        PurchaseError.BillingUnavailable => "Servicio no disponible",
+                        PurchaseError.DeveloperError => "Error de configuracion. Verifica Google Play Console",
+                        PurchaseError.ItemUnavailable => "Producto no disponible",
+                        PurchaseError.UserCancelled => "Compra cancelada",
+                        PurchaseError.AlreadyOwned => "Compra pendiente detectada",
+                        PurchaseError.InvalidProduct => "Producto invalido",
+                        _ => $"Error: {purchaseEx.Message}"
+                    };
+
+                    await ModernAlerts.ShowError(LabelError, message);
+
+                    if (purchaseEx.PurchaseError == PurchaseError.AlreadyOwned)
+                    {
+                        await TryConsumePendingPurchases(superPower.ProductId);
+                    }
+                }
+                finally
+                {
+                    await billing.DisconnectAsync();
+                }
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine($"Exception: {ex.GetType().Name} - {ex.Message}");
+                CrashlyticsHelper.LogError(ex, "PurchaseSuperPowersViewModel", "PurchaseSuperPowerAsync");
+                await ModernAlerts.ShowError(LabelError, "Error inesperado");
+            }
+            finally
+            {
+                MainThread.BeginInvokeOnMainThread(() => IsRunning = false);
+            }
+        }
+
+        private async Task TryConsumePendingPurchases(string productId)
+        {
+            try
+            {
+                var billing = CrossInAppBilling.Current;
+                var connected = await billing.ConnectAsync();
+
+                if (connected)
+                {
+                    try
+                    {
+                        var purchases = await billing.GetPurchasesAsync(ItemType.InAppPurchase);
+                        var pendingPurchase = purchases?.FirstOrDefault(p => p.ProductId == productId);
+
+                        if (pendingPurchase != null)
+                        {
+                            await billing.ConsumePurchaseAsync(pendingPurchase.ProductId, pendingPurchase.PurchaseToken);
+                            await ModernAlerts.ShowSuccess("Exito", "Compra pendiente procesada");
+                        }
+                    }
+                    finally
+                    {
+                        await billing.DisconnectAsync();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine($"Error: {ex.Message}");
+                CrashlyticsHelper.LogError(ex, "PurchaseSuperPowersViewModel", "TryConsumePendingPurchases");
+            }
         }
     }
 }

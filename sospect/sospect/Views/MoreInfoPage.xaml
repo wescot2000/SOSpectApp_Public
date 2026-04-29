@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="sospect.Views.MoreInfoPage"
+             xmlns:helpers="clr-namespace:sospect.Helpers"
+             xmlns:fonts="clr-namespace:sospect.Resources.Fonts;assembly=sospect"
+             BackgroundColor="#F8F9FA"
+             Title="{helpers:TranslateExtension Text='LabelTitleMasInformacion'}">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="SectionHeaderStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="20"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="TextColor" Value="#2C3E50"/>
+                <Setter Property="Margin" Value="0,0,0,12"/>
+            </Style>
+
+            <Style x:Key="SubsectionTitleStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="16"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="TextColor" Value="#4A90E2"/>
+                <Setter Property="Margin" Value="0,0,0,8"/>
+            </Style>
+
+            <Style x:Key="BodyTextStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="15"/>
+                <Setter Property="TextColor" Value="#7F8C8D"/>
+                <Setter Property="LineHeight" Value="1.4"/>
+                <Setter Property="Margin" Value="0,0,0,16"/>
+            </Style>
+
+            <Style x:Key="CardStyle" TargetType="Frame">
+                <Setter Property="BackgroundColor" Value="White"/>
+                <Setter Property="CornerRadius" Value="12"/>
+                <Setter Property="HasShadow" Value="True"/>
+                <Setter Property="Padding" Value="20"/>
+                <Setter Property="Margin" Value="16,8"/>
+                <Setter Property="BorderColor" Value="Transparent"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ScrollView>
+        <StackLayout Padding="0,8" Spacing="0">
+
+            <!-- Header -->
+            <Frame Style="{StaticResource CardStyle}" Margin="16,8,16,16">
+                <StackLayout Spacing="12">
+                    <Label Text="{x:Static fonts:IconFont.Info}"
+                           FontFamily="{StaticResource IcoMoonFamily}"
+                           FontSize="40"
+                           TextColor="#4A90E2"
+                           HorizontalOptions="Center"/>
+                    <Label Text="{helpers:TranslateExtension Text='LabelTitleMasInformacion'}"
+                           FontSize="20"
+                           FontAttributes="Bold"
+                           TextColor="#2C3E50"
+                           HorizontalTextAlignment="Center"/>
+                </StackLayout>
+            </Frame>
+
+            <!-- Sección 1: ¿Qué es Red de Confianza? -->
+            <Frame Style="{StaticResource CardStyle}">
+                <StackLayout Spacing="8">
+                    <Label Text="{helpers:TranslateExtension Text='LabelQueEsRedConfianza'}"
+                           Style="{StaticResource SectionHeaderStyle}"/>
+                    <Label Text="{helpers:TranslateExtension Text='LabelQueEsRedConfianzaDesc'}"
+                           Style="{StaticResource BodyTextStyle}"/>
+                </StackLayout>
+            </Frame>
+
+            <!-- Sección 2: Funcionamiento -->
+            <Frame Style="{StaticResource CardStyle}">
+                <StackLayout Spacing="8">
+                    <Label Text="{helpers:TranslateExtension Text='LabelFuncionamientoRed'}"
+                           Style="{StaticResource SectionHeaderStyle}"/>
+
+                    <!-- 1. Identificación -->
+                    <Label Text="{helpers:TranslateExtension Text='Label1IdentificacionUsuarios'}"
+                           Style="{StaticResource SubsectionTitleStyle}"/>
+                    <Label Text="{helpers:TranslateExtension Text='Label1IdentificacionUsuariosDesc'}"
+                           Style="{StaticResource BodyTextStyle}"/>
+
+                    <!-- 2. Privacidad -->
+                    <Label Text="{helpers:TranslateExtension Text='Label2Privacidad'}"
+                           Style="{StaticResource SubsectionTitleStyle}"/>
+                    <Label Text="{helpers:TranslateExtension Text='Label2PrivacidadDesc'}"
+                           Style="{StaticResource BodyTextStyle}"/>
+
+                    <!-- 3. Composición -->
+                    <Label Text="{helpers:TranslateExtension Text='Label3ComposicionRed'}"
+                           Style="{StaticResource SubsectionTitleStyle}"/>
+                    <Label Text="{helpers:TranslateExtension Text='Label3ComposicionRedDesc'}"
+                           Style="{StaticResource BodyTextStyle}"/>
+
+                    <!-- 4. Datos Inalterables -->
+                    <Label Text="{helpers:TranslateExtension Text='Label4DatosInalterables'}"
+                           Style="{StaticResource SubsectionTitleStyle}"/>
+                    <Label Text="{helpers:TranslateExtension Text='Label4DatosInalterablesDesc'}"
+                           Style="{StaticResource BodyTextStyle}"
+                           Margin="0,0,0,0"/>
+                </StackLayout>
+            </Frame>
+
+            <!-- Sección 3: Recomendaciones -->
+            <Frame Style="{StaticResource CardStyle}">
+                <StackLayout Spacing="8">
+                    <Label Text="{helpers:TranslateExtension Text='LabelRecomendacionesRed'}"
+                           Style="{StaticResource SectionHeaderStyle}"/>
+
+                    <!-- 1. Verifica Identidad -->
+                    <Label Text="{helpers:TranslateExtension Text='Label1VerificaIdentidad'}"
+                           Style="{StaticResource SubsectionTitleStyle}"/>
+                    <Label Text="{helpers:TranslateExtension Text='Label1VerificaIdentidadDesc'}"
+                           Style="{StaticResource BodyTextStyle}"/>
+
+                    <!-- 2. Revisa Info -->
+                    <Label Text="{helpers:TranslateExtension Text='Label2RevisaInfo'}"
+                           Style="{StaticResource SubsectionTitleStyle}"/>
+                    <Label Text="{helpers:TranslateExtension Text='Label2RevisaInfoDesc'}"
+                           Style="{StaticResource BodyTextStyle}"/>
+
+                    <!-- 3. Responsabilidad Agregador -->
+                    <Label Text="{helpers:TranslateExtension Text='Label3ResponsabilidadAgregador'}"
+                           Style="{StaticResource SubsectionTitleStyle}"/>
+                    <Label Text="{helpers:TranslateExtension Text='Label3ResponsabilidadAgregadorDesc'}"
+                           Style="{StaticResource BodyTextStyle}"
+                           Margin="0,0,0,0"/>
+                </StackLayout>
+            </Frame>
+
+            <!-- Sección 4: Recomendaciones Adicionales -->
+            <Frame Style="{StaticResource CardStyle}" Margin="16,8,16,24">
+                <StackLayout Spacing="8">
+                    <Label Text="{helpers:TranslateExtension Text='LabelRecomendacionesAdicionales'}"
+                           Style="{StaticResource SectionHeaderStyle}"/>
+
+                    <!-- 1. Investigación -->
+                    <Label Text="{helpers:TranslateExtension Text='Label1InvestigacionAlarmas'}"
+                           Style="{StaticResource SubsectionTitleStyle}"/>
+                    <Label Text="{helpers:TranslateExtension Text='Label1InvestigacionAlarmasDesc'}"
+                           Style="{StaticResource BodyTextStyle}"/>
+
+                    <!-- 2. Implicaciones -->
+                    <Label Text="{helpers:TranslateExtension Text='Label2ImplicacionesAgregador'}"
+                           Style="{StaticResource SubsectionTitleStyle}"/>
+                    <Label Text="{helpers:TranslateExtension Text='Label2ImplicacionesAgregadorDesc'}"
+                           Style="{StaticResource BodyTextStyle}"/>
+
+                    <!-- 3. Eliminación -->
+                    <Label Text="{helpers:TranslateExtension Text='Label3EliminacionDatos'}"
+                           Style="{StaticResource SubsectionTitleStyle}"/>
+                    <Label Text="{helpers:TranslateExtension Text='Label3EliminacionDatosDesc'}"
+                           Style="{StaticResource BodyTextStyle}"
+                           Margin="0,0,0,0"/>
+                </StackLayout>
+            </Frame>
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

@@ -5,47 +5,109 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Input;
-using Rg.Plugins.Popup.Services;
+using CommunityToolkit.Maui.Views;
 using sospect.Helpers;
+using sospect.Interfaces;
 using sospect.Models;
 using sospect.Services;
 using sospect.Utils;
 using sospect.Views;
-using Xamarin.Essentials;
-using Xamarin.Forms;
+using Microsoft.Maui.ApplicationModel;
+using Microsoft.Maui.ApplicationModel.Communication;
+using Microsoft.Maui.Controls;
 
 namespace sospect.ViewModels
 {
     public class ManualUsuarioViewModel : BaseViewModel
     {
+        // Lista actualizada con TODOS los idiomas soportados en el servidor
         private List<string> supportedLanguageCodes = new List<string>
-            {
-                "es",
-                "af",
-                "ar",
-                "de",
-                "fr",
-                "hi",
-                "hy",
-                "it",
-                "ja",
-                "ko",
-                "pl",
-                "pt",
-                "ru"
-            };
+        {
+            // Idiomas originales
+            "es", "af", "ar", "de", "fr", "hi", "hy", "it", "ja", "ko", "pl", "pt", "ru",
+            
+            // Nuevos idiomas agregados
+            "am",  // Amárico
+            "bg",  // Búlgaro
+            "bn",  // Bengalí
+            "bo",  // Tibetano
+            "bs",  // Bosnio
+            "ca",  // Catalán
+            "cs",  // Checo
+            "da",  // Danés
+            "el",  // Griego
+            "en",  // Inglés
+            "et",  // Estonio
+            "fa",  // Persa
+            "fi",  // Finlandés
+            "fj",  // Fiyiano
+            "fo",  // Feroés
+            "ga",  // Irlandés
+            "gl",  // Gallego
+            "he",  // Hebreo
+            "hr",  // Croata
+            "ht",  // Criollo haitiano
+            "hu",  // Húngaro
+            "id",  // Indonesio
+            "is",  // Islandés
+            "ka",  // Georgiano
+            "kk",  // Kazajo
+            "kn",  // Canarés
+            "ku",  // Kurdo
+            "lo",  // Lao
+            "lt",  // Lituano
+            "mk",  // Macedonio
+            "ml",  // Malayalam
+            "mn",  // Mongol
+            "mr",  // Maratí
+            "ms",  // Malayo
+            "ne",  // Nepalí
+            "no",  // Noruego
+            "pa",  // Panyabí
+            "ro",  // Rumano
+            "sk",  // Eslovaco
+            "sl",  // Esloveno
+            "so",  // Somalí
+            "sq",  // Albanés
+            "sr",  // Serbio
+            "sv",  // Sueco
+            "te",  // Telugu
+            "th",  // Tailandés
+            "tk",  // Turcomano
+            "tr",  // Turco
+            "ty",  // Tahitiano
+            "uk",  // Ucraniano
+            "ur",  // Urdu
+            "uz",  // Uzbeko
+            "vi",  // Vietnamita
+            "xh",  // Xhosa
+            "zh"   // Chino
+        };
 
         public string UrlManualUsuario
         {
             get
             {
-                var deviceLanguageCode = IdiomUtil.ObtenerCodigoDeIdioma();
-                if (!supportedLanguageCodes.Contains(deviceLanguageCode))
+                try
                 {
-                    deviceLanguageCode = "en"; // default to English
-                }
+                    var deviceLanguageCode = IdiomUtil.ObtenerCodigoDeIdioma();
 
-                return $"https://www.wescotcorporation.com/usermanual/{deviceLanguageCode}.pdf";
+                    // Si el idioma del dispositivo no está soportado, usar inglés por defecto
+                    if (!supportedLanguageCodes.Contains(deviceLanguageCode))
+                    {
+                        deviceLanguageCode = "en";
+                    }
+
+                    return $"https://sospect-s3-data-bucket-prod.s3.us-east-1.amazonaws.com/manuals/{deviceLanguageCode}.pdf";
+                }
+                catch (Exception ex)
+                {
+                    // En caso de error, devolver URL con idioma inglés por defecto
+                    LogError(ex, "UrlManualUsuario", new Dictionary<string, string> {
+                        { "Issue", "Error getting device language code" }
+                    });
+                    return "https://sospect-s3-data-bucket-prod.s3.us-east-1.amazonaws.com/manuals/en.pdf";
+                }
             }
         }
 
@@ -57,13 +119,22 @@ namespace sospect.ViewModels
 
         public ICommand SendEmailCommand => new Command(async () => await SendEmail());
 
+        private void LogError(Exception ex, string method, Dictionary<string, string> additionalProperties = null)
+        {
+            try
+            {
+                CrashlyticsHelper.LogError(ex, "ManualUsuarioViewModel", method);
+            }
+            catch (Exception logEx)
+            {
+                // Si incluso el logging falla, usar Debug.WriteLine como última opción
+                System.Diagnostics.Debug.WriteLine($"Failed to log error in {method}: {logEx.Message}");
+                System.Diagnostics.Debug.WriteLine($"Original error: {ex.Message}");
+            }
+        }
+
         async Task SendEmail()
         {
-            var LabelError = TranslateExtension.Translate("LabelError");
-            var LabelOK = TranslateExtension.Translate("LabelOK");
-            var LblErrorCorreoDispositivo = TranslateExtension.Translate("LblErrorCorreoDispositivo");
-            var LblErrorCorreo = TranslateExtension.Translate("LblErrorCorreo");
-
             try
             {
                 var message = new EmailMessage
@@ -71,47 +142,73 @@ namespace sospect.ViewModels
                     To = new List<string> { "soporte@wescot.com.co" },
                 };
 
-                await Email.ComposeAsync(message);
+                await Email.Default.ComposeAsync(message);
             }
             catch (FeatureNotSupportedException fbsEx)
             {
                 // Email no es compatible en este dispositivo
-                await Application.Current.MainPage.DisplayAlert(LabelError, LblErrorCorreoDispositivo, LabelOK);
-                var properties = new Dictionary<string, string> {
-                        { "Object", "ManualUsuarioViewModel" },
-                        { "Method", "SendEmail-FeatureNotSupportedException" }
-                    };
-                Microsoft.AppCenter.Crashes.Crashes.TrackError(fbsEx, properties);
+                var LabelError = await TranslateExtension.TranslateAsync("LabelError");
+                var LblErrorCorreoDispositivo = await TranslateExtension.TranslateAsync("LblErrorCorreoDispositivo");
+                await ModernAlerts.ShowError(LabelError, LblErrorCorreoDispositivo);
+                LogError(fbsEx, "SendEmail-FeatureNotSupportedException");
             }
             catch (Exception ex)
             {
-                // Algun otro error ocurrió
-                await Application.Current.MainPage.DisplayAlert(LabelError, LblErrorCorreo + ex.Message, LabelOK);
-                var properties = new Dictionary<string, string> {
-                        { "Object", "ManualUsuarioViewModel" },
-                        { "Method", "SendEmail" }
-                    };
-                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
+                // Algún otro error ocurrió
+                var LabelError = await TranslateExtension.TranslateAsync("LabelError");
+                var LblErrorCorreo = await TranslateExtension.TranslateAsync("LblErrorCorreo");
+                await ModernAlerts.ShowError(LabelError, $"{LblErrorCorreo}: {ex.Message}");
+                LogError(ex, "SendEmail", new Dictionary<string, string> {
+                    { "ErrorType", ex.GetType().Name }
+                });
             }
         }
 
-
-
         async Task OpenSospectWebPage()
         {
-            await Xamarin.Essentials.Browser.OpenAsync("https://www.wescotcorporation.com/sospect.html", Xamarin.Essentials.BrowserLaunchMode.SystemPreferred);
+            try
+            {
+                await Browser.OpenAsync("https://www.wescotcorporation.com/sospect.html", BrowserLaunchMode.SystemPreferred);
+            }
+            catch (Exception ex)
+            {
+                var LabelError = await TranslateExtension.TranslateAsync("LabelError");
+                var LblErrorNavegador = await TranslateExtension.TranslateAsync("LblErrorNavegador");
+                await ModernAlerts.ShowError(LabelError, $"{LblErrorNavegador}: {ex.Message}");
+                LogError(ex, "OpenSospectWebPage");
+            }
         }
 
         async Task OpenWebPage()
         {
-            await Xamarin.Essentials.Browser.OpenAsync(UrlManualUsuario, Xamarin.Essentials.BrowserLaunchMode.SystemPreferred);
+            try
+            {
+                await Browser.OpenAsync(UrlManualUsuario, BrowserLaunchMode.SystemPreferred);
+            }
+            catch (Exception ex)
+            {
+                var LabelError = await TranslateExtension.TranslateAsync("LabelError");
+                var LblErrorManual = await TranslateExtension.TranslateAsync("LblErrorManual");
+                await ModernAlerts.ShowError(LabelError, $"{LblErrorManual}: {ex.Message}");
+                LogError(ex, "OpenWebPage", new Dictionary<string, string> {
+                    { "Url", UrlManualUsuario }
+                });
+            }
         }
 
         async Task OpenWebPageWescot()
         {
-            await Xamarin.Essentials.Browser.OpenAsync("http://www.wescotcorporation.com", Xamarin.Essentials.BrowserLaunchMode.SystemPreferred);
+            try
+            {
+                await Browser.OpenAsync("http://www.wescotcorporation.com", BrowserLaunchMode.SystemPreferred);
+            }
+            catch (Exception ex)
+            {
+                var LabelError = await TranslateExtension.TranslateAsync("LabelError");
+                var LblErrorSitioWeb = await TranslateExtension.TranslateAsync("LblErrorSitioWeb");
+                await ModernAlerts.ShowError(LabelError, $"{LblErrorSitioWeb}: {ex.Message}");
+                LogError(ex, "OpenWebPageWescot");
+            }
         }
-
     }
 }
-

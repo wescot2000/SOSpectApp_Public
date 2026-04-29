@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:fonts="clr-namespace:sospect.Resources.Fonts;assembly=sospect"
+             x:Class="sospect.Views.DisadvantagesPage"
+             xmlns:helpers="clr-namespace:sospect.Helpers"
+             BackgroundColor="#F8F9FA"
+             Title="{helpers:TranslateExtension Text='LabelDesventajasTitle'}">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <!-- Estilo para títulos de sección -->
+            <Style x:Key="SectionTitleStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="18"/>
+                <Setter Property="TextColor" Value="#2C3E50"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="Margin" Value="0,0,0,8"/>
+            </Style>
+
+            <!-- Estilo para descripciones -->
+            <Style x:Key="DescriptionStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="15"/>
+                <Setter Property="TextColor" Value="#7F8C8D"/>
+                <Setter Property="LineHeight" Value="1.4"/>
+                <Setter Property="Margin" Value="0,0,0,0"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ScrollView>
+        <StackLayout Padding="16" Spacing="16">
+
+            <!-- Header con ícono -->
+            <Frame BackgroundColor="White" 
+                   CornerRadius="12" 
+                   HasShadow="True"
+                   Padding="20"
+                   Margin="0,0,0,8">
+                <StackLayout Spacing="12">
+                    <Label Text="{x:Static fonts:IconFont.TriangleExclamation}"
+                           FontFamily="{StaticResource IcoMoonFamily}"
+                           FontSize="40"
+                           TextColor="#E74C3C"
+                           HorizontalOptions="Center"/>
+                    <Label Text="{helpers:TranslateExtension Text='LabelDesventajasSubTitle'}"
+                           FontSize="20"
+                           TextColor="#2C3E50"
+                           FontAttributes="Bold"
+                           HorizontalTextAlignment="Center"/>
+                </StackLayout>
+            </Frame>
+
+            <!-- Sección 1: Investigación -->
+            <Frame BackgroundColor="White" 
+                   CornerRadius="12" 
+                   HasShadow="True"
+                   Padding="20"
+                   Margin="0">
+                <StackLayout Spacing="8">
+                    <Label Text="{helpers:TranslateExtension Text='LabelDV1Investigacion'}"
+                           Style="{StaticResource SectionTitleStyle}"/>
+                    <Label Text="{helpers:TranslateExtension Text='LabelDV1InvestigacionDesc'}"
+                           Style="{StaticResource DescriptionStyle}"/>
+                </StackLayout>
+            </Frame>
+
+            <!-- Sección 2: Requisitos -->
+            <Frame BackgroundColor="White" 
+                   CornerRadius="12" 
+                   HasShadow="True"
+                   Padding="20"
+                   Margin="0">
+                <StackLayout Spacing="8">
+                    <Label Text="{helpers:TranslateExtension Text='LabelDV2Requisitos'}"
+                           Style="{StaticResource SectionTitleStyle}"/>
+                    <Label Text="{helpers:TranslateExtension Text='LabelDV2RequisitosDesc'}"
+                           Style="{StaticResource DescriptionStyle}"/>
+                </StackLayout>
+            </Frame>
+
+            <!-- Sección 3: Implicación Agregador -->
+            <Frame BackgroundColor="White" 
+                   CornerRadius="12" 
+                   HasShadow="True"
+                   Padding="20"
+                   Margin="0">
+                <StackLayout Spacing="8">
+                    <Label Text="{helpers:TranslateExtension Text='LabelDV3ImplicacionAgregador'}"
+                           Style="{StaticResource SectionTitleStyle}"/>
+                    <Label Text="{helpers:TranslateExtension Text='LabelDV3ImplicacionAgregadorDesc'}"
+                           Style="{StaticResource DescriptionStyle}"/>
+                </StackLayout>
+            </Frame>
+
+            <!-- Sección 4: Borrado Información -->
+            <Frame BackgroundColor="White" 
+                   CornerRadius="12" 
+                   HasShadow="True"
+                   Padding="20"
+                   Margin="0">
+                <StackLayout Spacing="8">
+                    <Label Text="{helpers:TranslateExtension Text='LabelDV4BorradoInformacion'}"
+                           Style="{StaticResource SectionTitleStyle}"/>
+                    <Label Text="{helpers:TranslateExtension Text='LabelDV4BorradoInformacionDesc'}"
+                           Style="{StaticResource DescriptionStyle}"/>
+                </StackLayout>
+            </Frame>
+
+            <!-- Sección 5: Responsabilidad -->
+            <Frame BackgroundColor="White" 
+                   CornerRadius="12" 
+                   HasShadow="True"
+                   Padding="20"
+                   Margin="0,0,0,16">
+                <StackLayout Spacing="8">
+                    <Label Text="{helpers:TranslateExtension Text='LabelDV5Responsabilidad'}"
+                           Style="{StaticResource SectionTitleStyle}"/>
+                    <Label Text="{helpers:TranslateExtension Text='LabelDV5ResponsabilidadDesc'}"
+                           Style="{StaticResource DescriptionStyle}"/>
+                </StackLayout>
+            </Frame>
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

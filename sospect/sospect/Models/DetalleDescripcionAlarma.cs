@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Globalization;
+using System.Linq;
 using System.Runtime.CompilerServices;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
@@ -38,12 +39,28 @@ namespace sospect.Models
         public bool PropietarioDescripcion { get; set; }
 
         [JsonProperty("fechadescripcion")]
-        public DateTimeOffset Fechadescripcion { get; set; }
+        public DateTime Fechadescripcion { get; set; }
+        public DateTime FechadescripcionLocal => Fechadescripcion.ToLocalTime();
 
         [JsonProperty("esAlarmaActiva")]
         public bool esAlarmaActiva { get; set; }
 
-        public event PropertyChangedEventHandler PropertyChanged;
+        [JsonProperty("flag_red_confianza")]
+        public bool flag_red_confianza { get; set; }
+
+        private bool _flagRedConfianza;
+        public bool FlagRedConfianza
+        {
+            get => _flagRedConfianza;
+            set => SetProperty(ref _flagRedConfianza, value);
+        }
+
+        private string _textoFlagRedConfianza;
+        public string TextoFlagRedConfianza
+        {
+            get => _textoFlagRedConfianza;
+            set => SetProperty(ref _textoFlagRedConfianza, value);
+        }
 
         private string _CalificacionOtrasDescripciones;
 
@@ -51,18 +68,7 @@ namespace sospect.Models
         public string CalificacionOtrasDescripciones
         {
             get => this._CalificacionOtrasDescripciones;
-            set => this.SetValue(ref this._CalificacionOtrasDescripciones, value);
-        }
-
-        protected void SetValue<T>(ref T backingField, T value, [CallerMemberName] string propertyName = null)
-        {
-            if (EqualityComparer<T>.Default.Equals(backingField, value))
-            {
-                return;
-            }
-
-            backingField = value;
-            OnPropertyChanged(propertyName);
+            set => this.SetProperty(ref this._CalificacionOtrasDescripciones, value);
         }
 
         private long _CalificacionDescripcion;
@@ -71,13 +77,52 @@ namespace sospect.Models
         public long CalificacionDescripcion
         {
             get => this._CalificacionDescripcion;
-            set => this.SetValue(ref this._CalificacionDescripcion, value);
+            set => this.SetProperty(ref this._CalificacionDescripcion, value);
+        }
+
+        protected void SetProperty<T>(ref T backingField, T value, [CallerMemberName] string propertyName = null)
+        {
+            if (EqualityComparer<T>.Default.Equals(backingField, value))
+                return;
+
+            backingField = value;
+            OnPropertyChanged(propertyName);
         }
 
         protected void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        // Nueva propiedad para fotos
+        private List<FotoDescripcionAlarma> _fotos = new List<FotoDescripcionAlarma>();
+
+        [JsonProperty("fotos")]
+        public List<FotoDescripcionAlarma> Fotos
+        {
+            get
+            {
+                System.Diagnostics.Debug.WriteLine($"[MAUI GETTER] Descripcion {Iddescripcion} - Getter llamado, count: {_fotos?.Count ?? 0}");
+                return _fotos;
+            }
+            set
+            {
+                System.Diagnostics.Debug.WriteLine($"[MAUI SETTER] Descripcion {Iddescripcion} - Setter llamado con {value?.Count ?? 0} fotos");
+                if (value != null && value.Any())
+                {
+                    System.Diagnostics.Debug.WriteLine($"[MAUI SETTER] Primera foto - ID: {value[0].FotoId}, URL: {value[0].UrlFoto}");
+                }
+                SetProperty(ref _fotos, value ?? new List<FotoDescripcionAlarma>());
+            }
+        }
+
+        // Propiedad calculada para saber si hay fotos
+        public bool TieneFotos => _fotos != null && _fotos.Any();
+
+        // CATEGORÍA DE ALARMA (13-03-2026) - Para botón "Ver autoridades responsables"
+        [JsonProperty("categoria_alarma_id")]
+        public int? CategoriaAlarmaId { get; set; }
     }
 }
-

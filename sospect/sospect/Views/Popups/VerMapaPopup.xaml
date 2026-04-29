@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<toolkit:Popup
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    xmlns:helpers="clr-namespace:sospect.Helpers"
+    x:Class="sospect.Views.Popups.VerMapaPopup"
+    CanBeDismissedByTappingOutsideOfPopup="True"
+    x:Name="popup">
+
+    <!-- Frame principal con diseño responsivo -->
+    <Frame CornerRadius="15"
+           VerticalOptions="Center"
+           HorizontalOptions="Center"
+           BackgroundColor="White"
+           Padding="0"
+           HasShadow="True"
+           MinimumWidthRequest="320"
+           MaximumWidthRequest="400"
+           WidthRequest="{OnIdiom Phone=320, Tablet=380, Desktop=400}"
+           Margin="20">
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <!-- Header -->
+                <RowDefinition Height="Auto"/>
+                <!-- Content -->
+                <RowDefinition Height="Auto"/>
+                <!-- Footer/Buttons -->
+            </Grid.RowDefinitions>
+
+            <!-- Header con diseño consistente -->
+            <Border Grid.Row="0" 
+                    BackgroundColor="#1465bb" 
+                    StrokeThickness="0"
+                    Padding="{OnIdiom Phone='20,15', Tablet='25,18', Desktop='30,20'}">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="15,15,0,0"/>
+                </Border.StrokeShape>
+
+                <!-- Layout más flexible para el título -->
+                <StackLayout Orientation="Vertical" 
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"
+                           Spacing="8">
+                    <!-- Icono de mapa -->
+                    <Label Text="🗺️"
+                           FontSize="{OnIdiom Phone=20, Tablet=24, Desktop=26}"
+                           HorizontalTextAlignment="Center"/>
+
+                    <!-- Título con word wrap mejorado -->
+                    <Label Text="{helpers:TranslateExtension Text='LblQueAccionRealizar'}"
+                           TextColor="White"
+                           FontSize="{OnIdiom Phone=16, Tablet=18, Desktop=20}"
+                           FontAttributes="Bold"
+                           HorizontalTextAlignment="Center"
+                           VerticalTextAlignment="Center"
+                           LineBreakMode="WordWrap"
+                           MaxLines="2"
+                           Margin="5,0"/>
+                </StackLayout>
+            </Border>
+
+            <!-- Contenido principal -->
+            <StackLayout Grid.Row="1"
+                        Spacing="20"
+                        Padding="{OnIdiom Phone='20,25', Tablet='25,30', Desktop='30,35'}">
+
+                <!-- Contenedor de botones con layout adaptativo -->
+                <Grid x:Name="ButtonsContainer"
+                      ColumnDefinitions="{OnIdiom Phone='*,10,*', Tablet='*,15,*', Desktop='*,20,*'}"
+                      RowDefinitions="Auto,10,Auto"
+                      RowSpacing="0">
+
+                    <!-- Botón Ver en Mapa -->
+                    <Border Grid.Column="0" Grid.Row="0"
+                            BackgroundColor="#4299E1"
+                            StrokeThickness="0"
+                            Padding="{OnIdiom Phone='16,14', Tablet='20,16', Desktop='24,18'}"
+                            HorizontalOptions="FillAndExpand">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="12"/>
+                        </Border.StrokeShape>
+
+                        <Border.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding VerEnMapaCommand}" />
+                        </Border.GestureRecognizers>
+
+                        <!-- Efectos visuales mejorados -->
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup Name="CommonStates">
+                                <VisualState Name="Normal">
+                                    <VisualState.Setters>
+                                        <Setter Property="Opacity" Value="1" />
+                                        <Setter Property="Scale" Value="1" />
+                                    </VisualState.Setters>
+                                </VisualState>
+                                <VisualState Name="Pressed">
+                                    <VisualState.Setters>
+                                        <Setter Property="Opacity" Value="0.8" />
+                                        <Setter Property="Scale" Value="0.95" />
+                                    </VisualState.Setters>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+
+                        <StackLayout Orientation="Vertical" 
+                                   Spacing="6"
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="Center">
+                            <Label Text="📱"
+                                   FontSize="{OnIdiom Phone=20, Tablet=24, Desktop=26}"
+                                   HorizontalTextAlignment="Center"/>
+                            <Label Text="{helpers:TranslateExtension Text='LblVerEnMapa'}"
+                                   TextColor="White"
+                                   FontSize="{OnIdiom Phone=14, Tablet=16, Desktop=18}"
+                                   FontAttributes="Bold"
+                                   HorizontalTextAlignment="Center"
+                                   VerticalTextAlignment="Center"
+                                   LineBreakMode="WordWrap" />
+                        </StackLayout>
+                    </Border>
+
+                    <!-- Botón Ir al Punto -->
+                    <Border Grid.Column="2" Grid.Row="0"
+                            BackgroundColor="#48BB78"
+                            StrokeThickness="0"
+                            Padding="{OnIdiom Phone='16,14', Tablet='20,16', Desktop='24,18'}"
+                            HorizontalOptions="FillAndExpand">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="12"/>
+                        </Border.StrokeShape>
+
+                        <Border.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding IrAPuntoCommand}" />
+                        </Border.GestureRecognizers>
+
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup Name="CommonStates">
+                                <VisualState Name="Normal">
+                                    <VisualState.Setters>
+                                        <Setter Property="Opacity" Value="1" />
+                                        <Setter Property="Scale" Value="1" />
+                                    </VisualState.Setters>
+                                </VisualState>
+                                <VisualState Name="Pressed">
+                                    <VisualState.Setters>
+                                        <Setter Property="Opacity" Value="0.8" />
+                                        <Setter Property="Scale" Value="0.95" />
+                                    </VisualState.Setters>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+
+                        <StackLayout Orientation="Vertical" 
+                                   Spacing="6"
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="Center">
+                            <Label Text="🧭"
+                                   FontSize="{OnIdiom Phone=20, Tablet=24, Desktop=26}"
+                                   HorizontalTextAlignment="Center"/>
+                            <Label Text="{helpers:TranslateExtension Text='LblIrAlPunto'}"
+                                   TextColor="White"
+                                   FontSize="{OnIdiom Phone=14, Tablet=16, Desktop=18}"
+                                   FontAttributes="Bold"
+                                   HorizontalTextAlignment="Center"
+                                   VerticalTextAlignment="Center"
+                                   LineBreakMode="WordWrap" />
+                        </StackLayout>
+                    </Border>
+                </Grid>
+            </StackLayout>
+
+            <!-- Footer con botón cancelar (opcional) -->
+            <Border Grid.Row="2" 
+                    BackgroundColor="#F8F9FA" 
+                    StrokeThickness="0"
+                    Padding="{OnIdiom Phone='15,12', Tablet='18,15', Desktop='20,18'}">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="0,0,15,15"/>
+                </Border.StrokeShape>
+
+                <Button Text="{helpers:TranslateExtension Text='LabelCancelar'}"
+                        BackgroundColor="Transparent"
+                        TextColor="#666666"
+                        FontSize="{OnIdiom Phone=16, Tablet=18, Desktop=20}"
+                        BorderWidth="0"
+                        Command="{Binding CerrarPopupCommand}"
+                        HorizontalOptions="Center"/>
+            </Border>
+
+            <!-- Loading Overlay mejorado y responsivo -->
+            <Grid Grid.Row="0"
+                  Grid.RowSpan="3"
+                  BackgroundColor="#AA000000"
+                  IsVisible="{Binding IsRunning}"
+                  HorizontalOptions="FillAndExpand"
+                  VerticalOptions="FillAndExpand">
+
+                <Border BackgroundColor="White"
+                        StrokeThickness="0"
+                        Padding="{OnIdiom Phone='20,15', Tablet='25,18', Desktop='30,20'}"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="12"/>
+                    </Border.StrokeShape>
+
+                    <StackLayout Orientation="Horizontal" 
+                               Spacing="{OnIdiom Phone=12, Tablet=15, Desktop=18}">
+                        <ActivityIndicator IsRunning="{Binding IsRunning}"
+                                         Color="#1465bb"
+                                         WidthRequest="{OnIdiom Phone=24, Tablet=28, Desktop=32}"
+                                         HeightRequest="{OnIdiom Phone=24, Tablet=28, Desktop=32}" />
+                        <Label Text="{helpers:TranslateExtension Text='LblProcesando'}"
+                               TextColor="#2D3748"
+                               FontSize="{OnIdiom Phone=14, Tablet=16, Desktop=18}"
+                               VerticalOptions="Center" />
+                    </StackLayout>
+                </Border>
+            </Grid>
+        </Grid>
+    </Frame>
+</toolkit:Popup>

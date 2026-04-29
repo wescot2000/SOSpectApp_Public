@@ -1,23 +1,36 @@
-﻿using System;
+using System;
+using System.Collections.Generic;
 using System.Net;
 using System.Threading.Tasks;
-using Xamarin.Essentials;
+using Microsoft.Maui.Networking;
+using MauiNetworkAccess = Microsoft.Maui.Networking.NetworkAccess;
+using sospect.Interfaces;
+using sospect.Helpers;
 
 namespace sospect.Utils
 {
     public static class InternetUtil
     {
-        private static bool isConnected;
+        private static bool? _isConnected = null;
 
         public static bool IsConnected
         {
-            get { return isConnected; }
+            get
+            {
+                // CORRECCIÓN: Inicializar en el primer acceso si no se ha establecido
+                if (_isConnected == null)
+                {
+                    CheckConnectivity();
+                }
+                return _isConnected ?? false;
+            }
         }
 
         private static void CheckConnectivity()
         {
-            var current = Connectivity.NetworkAccess;
-            isConnected = current == NetworkAccess.Internet;
+            var current = Connectivity.Current.NetworkAccess;
+            _isConnected = current == MauiNetworkAccess.Internet;
+            System.Diagnostics.Debug.WriteLine($"InternetUtil.CheckConnectivity: NetworkAccess={current}, IsConnected={_isConnected}");
         }
 
         internal static async void Connectivity_ConnectivityChanged(object sender, ConnectivityChangedEventArgs e)
@@ -42,10 +55,11 @@ namespace sospect.Utils
             }
             catch (Exception ex)
             {
-                // Manejar excepción
+                System.Diagnostics.Debug.WriteLine($"Error en InternetUtil.GetPublicIpAddress: {ex.Message}");
+                CrashlyticsHelper.LogError(ex, "InternetUtil", "GetPublicIpAddress");
+                // Mantener el código existente del catch...
             }
             return ipAddress;
         }
     }
 }
-

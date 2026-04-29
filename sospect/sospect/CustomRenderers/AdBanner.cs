@@ -1,5 +1,4 @@
-﻿using System;
-using Xamarin.Forms;
+using Microsoft.Maui.Controls;
 
 namespace sospect.CustomRenderers
 {
@@ -10,4 +9,3 @@ namespace sospect.CustomRenderers
         }
     }
 }
-

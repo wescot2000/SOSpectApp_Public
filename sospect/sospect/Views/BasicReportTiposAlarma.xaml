@@ -1,95 +1,165 @@
-﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                 x:Class="sospect.Views.BasicReportTiposAlarmaPage"
-                 xmlns:converters="clr-namespace:sospect.Converters"
-                 xmlns:fonts="clr-namespace:sospect.Resources.Fonts;assembly=sospect"
-                 xmlns:helpers="clr-namespace:sospect.Helpers"
-                 xmlns:ads="clr-namespace:sospect.CustomRenderers"
-                 xmlns:charts="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
-                 BackgroundColor="White"
-                 Title="{helpers:TranslateExtension Text='LblReporteBasicoSospect'}">
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="sospect.Views.BasicReportTiposAlarmaPage"
+             xmlns:converters="clr-namespace:sospect.Converters"
+             xmlns:fonts="clr-namespace:sospect.Resources.Fonts;assembly=sospect"
+             xmlns:helpers="clr-namespace:sospect.Helpers"
+             xmlns:admob="clr-namespace:Plugin.AdMob;assembly=Plugin.AdMob"
+             xmlns:charts="clr-namespace:Microcharts.Maui;assembly=Microcharts.Maui"
+             BackgroundColor="#F8F9FA"
+             Title="{helpers:TranslateExtension Text='LblReporteBasicoSospect'}">
+
     <ContentPage.Resources>
         <ResourceDictionary>
             <converters:InverseBooleanConverter x:Key="InverseBooleanConverter"/>
             <converters:SKColorToXamarinColorConverter x:Key="ColorConverter"/>
+
+            <Style x:Key="ReportCardStyle" TargetType="Frame">
+                <Setter Property="BackgroundColor" Value="White" />
+                <Setter Property="HasShadow" Value="True" />
+                <Setter Property="CornerRadius" Value="12" />
+                <Setter Property="Padding" Value="20" />
+                <Setter Property="Margin" Value="16" />
+                <Setter Property="BorderColor" Value="Transparent" />
+            </Style>
+
+            <Style x:Key="TitleStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="22" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="TextColor" Value="#27AE60" />
+                <Setter Property="Margin" Value="0,0,0,12" />
+            </Style>
+
+            <Style x:Key="DescriptionStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="14" />
+                <Setter Property="TextColor" Value="#2C3E50" />
+                <Setter Property="LineHeight" Value="1.4" />
+                <Setter Property="Margin" Value="0,0,0,16" />
+            </Style>
+
+            <Style x:Key="RangeInfoStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="12" />
+                <Setter Property="TextColor" Value="#7F8C8D" />
+                <Setter Property="FontAttributes" Value="Italic" />
+                <Setter Property="Margin" Value="0,0,0,20" />
+            </Style>
+
+            <Style x:Key="ChartContainerStyle" TargetType="Frame">
+                <Setter Property="BackgroundColor" Value="#F8F9FA" />
+                <Setter Property="HasShadow" Value="False" />
+                <Setter Property="CornerRadius" Value="8" />
+                <Setter Property="Padding" Value="10" />
+                <Setter Property="Margin" Value="0,0,0,20" />
+                <Setter Property="BorderColor" Value="Transparent" />
+            </Style>
+
+            <Style x:Key="LegendItemLabelStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="13" />
+                <Setter Property="TextColor" Value="#2C3E50" />
+                <Setter Property="VerticalTextAlignment" Value="Center" />
+                <Setter Property="Margin" Value="6,0,0,0" />
+            </Style>
+
+            <Style x:Key="LegendItemPercentStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="14" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="TextColor" Value="#2C3E50" />
+                <Setter Property="HorizontalOptions" Value="End" />
+                <Setter Property="VerticalTextAlignment" Value="Center" />
+            </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-        <ScrollView>
-            <StackLayout Margin="20" >
-                <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="Auto"/>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
 
-                    <Label Grid.Row="0" Margin="0,20,0,0"  Grid.Column="0" Grid.ColumnSpan="3" TextColor="Gray" Text="{helpers:TranslateExtension Text='LblParticipacionTpAlarma'}" FontAttributes="Bold" FontSize="Large" />
+        <ScrollView Grid.Row="0">
+            <StackLayout Spacing="0">
+                <!-- Card principal -->
+                <Frame Style="{StaticResource ReportCardStyle}">
+                    <StackLayout Spacing="12">
+                        <!-- Título -->
+                        <Label Text="{helpers:TranslateExtension Text='LblParticipacionTpAlarma'}"
+                               Style="{StaticResource TitleStyle}" />
 
-                    <Label
-                        Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3"
-                        Text="{helpers:TranslateExtension Text='LblDescripcionRepTipoAlarma'}"
-                        Margin="0,20,0,20"
-                        FontSize="Medium"
-                        HorizontalOptions="CenterAndExpand"
-                        VerticalOptions="StartAndExpand" 
-                        HorizontalTextAlignment="Start"
-                        TextColor="Black">
-                    </Label>
+                        <!-- Descripción -->
+                        <Label Text="{helpers:TranslateExtension Text='LblDescripcionRepTipoAlarma'}"
+                               Style="{StaticResource DescriptionStyle}" />
 
-                    <Label
-                        Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3"
-                        Text="{helpers:TranslateExtension Text='LblRangoReporte'}"
-                        FontSize="Small"
-                        HorizontalOptions="CenterAndExpand"
-                        VerticalOptions="StartAndExpand" 
-                        HorizontalTextAlignment="Start"
-                        TextColor="Gray"/>
+                        <!-- Rango del reporte -->
+                        <Label Text="{helpers:TranslateExtension Text='LblRangoReporte'}"
+                               Style="{StaticResource RangeInfoStyle}" />
 
-                    <!-- Sección de TiposAlarmaReporte -->
-                    
-                    <charts:ChartView 
-                        Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" HeightRequest="300" WidthRequest="300" BackgroundColor="Gray"
-                        Chart="{Binding Chart}"/>
-                    
-                    <CollectionView Margin="0,20,0,10" BackgroundColor="White" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3" ItemsSource="{Binding TiposAlarmaReporte}">
-                        <CollectionView.ItemTemplate>
-                            <DataTemplate>
-                                <Grid>
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="Auto" />
-                                        <RowDefinition Height="1" />
-                                    </Grid.RowDefinitions>
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="3*" />
-                                        <ColumnDefinition Width="*" />
-                                    </Grid.ColumnDefinitions>
+                        <!-- Gráfico de pastel -->
+                        <Frame Style="{StaticResource ChartContainerStyle}">
+                            <charts:ChartView 
+                                HeightRequest="280" 
+                                WidthRequest="280"
+                                HorizontalOptions="Center"
+                                Chart="{Binding Chart}"/>
+                        </Frame>
 
-                                    <StackLayout Orientation="Horizontal" Grid.ColumnSpan="2">
-                                        <Label FontSize="Small" Text="{Binding TipoAlarma.DescripcionTraducida}" TextColor="{Binding Color, Converter={StaticResource ColorConverter}}" />
-                                        <Label FontSize="Small" TextColor="Black" Text="{Binding TipoAlarma.Participacion, StringFormat='{0:P}'}" HorizontalOptions="EndAndExpand"/>
-                                    </StackLayout>
-                                    <BoxView Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" HeightRequest="1" BackgroundColor="Black" />
-                                </Grid>
-                            </DataTemplate>
-                        </CollectionView.ItemTemplate>
-                    </CollectionView>
-                </Grid>
+                        <!-- Leyenda del gráfico -->
+                        <StackLayout Spacing="0">
+                            <Label Text="{helpers:TranslateExtension Text='LblLeyenda'}"
+                                   FontSize="16"
+                                   FontAttributes="Bold"
+                                   TextColor="#2C3E50"
+                                   Margin="0,0,0,12" />
+
+                            <!-- 2026-04-12: BindableLayout reemplaza CollectionView.
+                                 CollectionView dentro de ScrollView no calcula altura en iOS
+                                 (.NET MAUI known issue). BindableLayout en StackLayout no tiene ese problema. -->
+                            <StackLayout BindableLayout.ItemsSource="{Binding TiposAlarmaReporte}" Spacing="0">
+                                <BindableLayout.ItemTemplate>
+                                    <DataTemplate>
+                                        <StackLayout Spacing="0">
+                                            <Grid Padding="0,8">
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="12" />
+                                                    <ColumnDefinition Width="*" />
+                                                    <ColumnDefinition Width="Auto" />
+                                                </Grid.ColumnDefinitions>
+
+                                                <!-- Indicador de color -->
+                                                <BoxView Grid.Column="0"
+                                                         WidthRequest="12"
+                                                         HeightRequest="12"
+                                                         CornerRadius="6"
+                                                         Color="{Binding Color, Converter={StaticResource ColorConverter}}"
+                                                         VerticalOptions="Center" />
+
+                                                <!-- Descripción del tipo de alarma -->
+                                                <!-- 2026-04-12: Binding directo (no anidado) para evitar fallo en iOS
+                                                     con BindableLayout. Ver TipoAlarmaReporteConColor.DescripcionTraducida -->
+                                                <Label Grid.Column="1"
+                                                       Text="{Binding DescripcionTraducida}"
+                                                       Style="{StaticResource LegendItemLabelStyle}" />
+
+                                                <!-- Porcentaje -->
+                                                <Label Grid.Column="2"
+                                                       Text="{Binding ParticipacionTexto}"
+                                                       Style="{StaticResource LegendItemPercentStyle}" />
+                                            </Grid>
+                                            <BoxView HeightRequest="1"
+                                                     BackgroundColor="#E8E8E8" />
+                                        </StackLayout>
+                                    </DataTemplate>
+                                </BindableLayout.ItemTemplate>
+                            </StackLayout>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
             </StackLayout>
         </ScrollView>
+
+        <!-- Banner publicitario -->
         <Grid BackgroundColor="LightGray" Grid.Row="1" HeightRequest="90">
-            <ads:AdBanner></ads:AdBanner>
+            <admob:BannerAd AdSize="LargeBanner" />
         </Grid>
     </Grid>
 </ContentPage>

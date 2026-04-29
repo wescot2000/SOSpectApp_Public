@@ -1,9 +1,9 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:helpers="clr-namespace:sospect.Helpers"
              xmlns:converters="clr-namespace:sospect.Converters"
-             BackgroundColor="White"
+             BackgroundColor="#F8F9FA"
              x:Class="sospect.Views.SubscriptionsPage"
              Title="{helpers:TranslateExtension Text='LblMisSubscripciones'}">
     <ContentPage.Resources>
@@ -11,109 +11,203 @@
             <converters:BoolToColorConverter x:Key="BoolToColorConverter" />
             <converters:BoolToButtonVisibilityRenewConverter x:Key="BoolToButtonVisibilityRenewConverter" />
             <converters:BoolToButtonVisibilityCancelConverter x:Key="BoolToButtonVisibilityCancelConverter" />
+            <converters:SubscriptionBorderColorConverter x:Key="SubscriptionBorderColorConverter" />
+            <converters:SubscriptionBackgroundColorConverter x:Key="SubscriptionBackgroundColorConverter" />
+            <converters:SubscriptionTextColorConverter x:Key="SubscriptionTextColorConverter" />
+
+            <Style x:Key="CardTitleStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="11"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="TextTransform" Value="Uppercase"/>
+                <Setter Property="Opacity" Value="0.7"/>
+            </Style>
+
+            <Style x:Key="CardValueStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="14"/>
+                <Setter Property="LineBreakMode" Value="WordWrap"/>
+            </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
     <ContentPage.Content>
         <Grid>
-            <Grid Margin="0,20,0,0">
-                <ListView x:Name="SubscriptionsListView" BackgroundColor="White" ItemsSource="{Binding Subscriptions}" HasUnevenRows="True" SelectionMode="None">
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <ViewCell>
-                                <Frame BackgroundColor="White" Padding="5" Margin="5" CornerRadius="10" HasShadow="True">
-                                    <Grid>
-                                        <Grid.RowDefinitions>
-                                            <RowDefinition Height="Auto" />
-                                            <RowDefinition Height="Auto" />
-                                            <RowDefinition Height="Auto" />
-                                            <RowDefinition Height="Auto" />
-                                            <RowDefinition Height="Auto" />
-                                            <RowDefinition Height="Auto" />
-                                            <RowDefinition Height="Auto" />
-                                            <RowDefinition Height="Auto" />
-                                        </Grid.RowDefinitions>
-                                        <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="Auto" />
-                                            <ColumnDefinition Width="*" />
-                                        </Grid.ColumnDefinitions>
+            <!-- Usar CollectionView en lugar de ListView para evitar bug de scroll infinito -->
+            <CollectionView x:Name="SubscriptionsCollectionView"
+                            BackgroundColor="#F8F9FA"
+                            ItemsSource="{Binding Subscriptions}"
+                            SelectionMode="None"
+                            Margin="12,16,12,16">
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Vertical" ItemSpacing="16"/>
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <!-- Tarjeta de suscripcion con borde de color segun tipo -->
+                        <Border BackgroundColor="{Binding CombinedFlags, Converter={StaticResource SubscriptionBackgroundColorConverter}}"
+                                Padding="0"
+                                StrokeShape="RoundRectangle 16"
+                                Stroke="{Binding CombinedFlags, Converter={StaticResource SubscriptionBorderColorConverter}}"
+                                StrokeThickness="3">
+                            <Border.Shadow>
+                                <Shadow Brush="Black" Offset="0,4" Radius="8" Opacity="0.15"/>
+                            </Border.Shadow>
+                            <!-- TapGestureRecognizer para navegar al detalle de promociones -->
+                            <Border.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding Source={x:Reference SubscriptionsCollectionView}, Path=BindingContext.VerDetalleSubscripcionCommand}"
+                                                      CommandParameter="{Binding .}"/>
+                            </Border.GestureRecognizers>
 
-                                        <Label Text="{helpers:TranslateExtension Text='LblidUsuario'}" FontSize="Small" FontAttributes="Bold" Grid.Row="0" Grid.Column="0" TextColor="{Binding flag_subscr_vencida, Converter={StaticResource BoolToColorConverter}}"/>
-                                        <Label Text="{Binding user_id_thirdparty}" Grid.Row="0"  FontSize="Small" Grid.Column="1" TextColor="{Binding flag_subscr_vencida, Converter={StaticResource BoolToColorConverter}}"/>
+                            <Grid RowDefinitions="Auto,*,Auto">
 
-                                        <Label Text="{helpers:TranslateExtension Text='LblTipo'}"  FontSize="Small" FontAttributes="Bold" Grid.Row="1" Grid.Column="0" TextColor="{Binding flag_subscr_vencida, Converter={StaticResource BoolToColorConverter}}"/>
-                                        <Label Text="{Binding descripcion_tipo}" Grid.Row="1"  FontSize="Small" Grid.Column="1" TextColor="{Binding flag_subscr_vencida, Converter={StaticResource BoolToColorConverter}}"/>
+                                <!-- Header con tipo de suscripcion -->
+                                <Border Grid.Row="0"
+                                        BackgroundColor="{Binding CombinedFlags, Converter={StaticResource SubscriptionBorderColorConverter}}"
+                                        Padding="16,12"
+                                        StrokeThickness="0"
+                                        StrokeShape="RoundRectangle 13,13,0,0">
+                                    <Label Text="{Binding descripcion_tipo}"
+                                           FontSize="15"
+                                           FontAttributes="Bold"
+                                           TextColor="White"
+                                           HorizontalOptions="Start"/>
+                                </Border>
 
-                                        <Label Text="{helpers:TranslateExtension Text='LblDescripcionPuntos'}"  FontSize="Small" FontAttributes="Bold" Grid.Row="2" Grid.Column="0" TextColor="{Binding flag_subscr_vencida, Converter={StaticResource BoolToColorConverter}}"/>
-                                        <Label Text="{Binding descripcion}" Grid.Row="2"  FontSize="Small" Grid.Column="1" TextColor="{Binding flag_subscr_vencida, Converter={StaticResource BoolToColorConverter}}"/>
+                                <!-- Contenido de la tarjeta -->
+                                <StackLayout Grid.Row="1" Padding="16,12,16,12" Spacing="10">
 
-                                        <Label Text="{helpers:TranslateExtension Text='LblFechaFinPuntos'}"  FontSize="Small" FontAttributes="Bold" Grid.Row="3" Grid.Column="0" TextColor="{Binding flag_subscr_vencida, Converter={StaticResource BoolToColorConverter}}"/>
-                                        <Label Text="{Binding fecha_finalizacion}" Grid.Row="3"  FontSize="Small" Grid.Column="1" TextColor="{Binding flag_subscr_vencida, Converter={StaticResource BoolToColorConverter}}"/>
+                                    <!-- Descripcion -->
+                                    <StackLayout Spacing="2">
+                                        <Label Text="{helpers:TranslateExtension Text='LblDescripcionPuntos'}"
+                                               Style="{StaticResource CardTitleStyle}"
+                                               TextColor="{Binding CombinedFlags, Converter={StaticResource SubscriptionTextColorConverter}}"/>
+                                        <Label Text="{Binding descripcion}"
+                                               Style="{StaticResource CardValueStyle}"
+                                               FontAttributes="Bold"
+                                               TextColor="{Binding CombinedFlags, Converter={StaticResource SubscriptionTextColorConverter}}"/>
+                                    </StackLayout>
 
-                                        <Label Text="{helpers:TranslateExtension Text='LblPoderesPuntos'}"  FontSize="Small" FontAttributes="Bold" Grid.Row="4" Grid.Column="0" TextColor="{Binding flag_subscr_vencida, Converter={StaticResource BoolToColorConverter}}"/>
-                                        <Label Text="{Binding poderes_renovacion}" Grid.Row="4"  FontSize="Small" Grid.Column="1" TextColor="{Binding flag_subscr_vencida, Converter={StaticResource BoolToColorConverter}}"/>
+                                    <!-- Grid con Fecha y Poderes -->
+                                    <Grid ColumnDefinitions="*,*" ColumnSpacing="16">
+                                        <StackLayout Spacing="2" Grid.Column="0">
+                                            <Label Text="{helpers:TranslateExtension Text='LblFechaFinPuntos'}"
+                                                   Style="{StaticResource CardTitleStyle}"
+                                                   TextColor="{Binding CombinedFlags, Converter={StaticResource SubscriptionTextColorConverter}}"/>
+                                            <Label Text="{Binding fecha_finalizacion, StringFormat='{0:dd/MM/yyyy}'}"
+                                                   Style="{StaticResource CardValueStyle}"
+                                                   TextColor="{Binding CombinedFlags, Converter={StaticResource SubscriptionTextColorConverter}}"/>
+                                        </StackLayout>
 
-                                        <Label Text="{helpers:TranslateExtension Text='LblEsRenovable'}"  FontSize="Small" FontAttributes="Bold" Grid.Row="5" Grid.Column="0" TextColor="{Binding flag_subscr_vencida, Converter={StaticResource BoolToColorConverter}}"/>
-                                        <Label LineBreakMode="WordWrap" Text="{Binding texto_renovable}"  FontSize="Small" Grid.Row="5" Grid.Column="1" TextColor="{Binding flag_subscr_vencida, Converter={StaticResource BoolToColorConverter}}"/>
-
-                                        <Label Text="{helpers:TranslateExtension Text='LblObsSubs'}"  FontSize="Small" FontAttributes="Bold" Grid.Row="6" Grid.Column="0" TextColor="{Binding flag_subscr_vencida, Converter={StaticResource BoolToColorConverter}}"/>
-                                        <Label LineBreakMode="WordWrap" Text="{Binding observ_subscripcion}"  FontSize="Small" Grid.Row="6" Grid.Column="1" TextColor="{Binding flag_subscr_vencida, Converter={StaticResource BoolToColorConverter}}"/>
-
-                                        <StackLayout Orientation="Horizontal" Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2">
-
-                                            <Frame Grid.Row="2" Grid.ColumnSpan="2" Padding="5" BorderColor="Black" BackgroundColor="LightGray" Margin="0,20,0,0" HorizontalOptions="Center" HeightRequest="35" WidthRequest="350" CornerRadius="10" IsVisible="{Binding CombinedFlags, Converter={StaticResource BoolToButtonVisibilityRenewConverter}}" >
-                                            <Frame.GestureRecognizers>
-                                                <TapGestureRecognizer Command="{Binding Source={x:Reference SubscriptionsListView}, Path=BindingContext.RenewSubscriptionCommand}" CommandParameter="{Binding .}" NumberOfTapsRequired="1" />
-                                            </Frame.GestureRecognizers>
-                                            <Label Text="{helpers:TranslateExtension Text='LblRenovar'}" 
-                                                   TextColor="Black"
-                                                   LineBreakMode="WordWrap"
-                                                   HorizontalOptions="CenterAndExpand"
-                                                   VerticalOptions="CenterAndExpand"
-                                                   HorizontalTextAlignment="Center"
-                                                   VerticalTextAlignment="Center" />
-                                            </Frame>
-
-                                            <Frame Grid.Row="2" Grid.ColumnSpan="2" Padding="5" BorderColor="Black" BackgroundColor="LightGray" Margin="0,20,0,0" HorizontalOptions="Center" HeightRequest="35" WidthRequest="350" CornerRadius="10" IsVisible="{Binding CombinedFlags, Converter={StaticResource BoolToButtonVisibilityCancelConverter}}" >
-                                            <Frame.GestureRecognizers>
-                                                <TapGestureRecognizer Command="{Binding Source={x:Reference SubscriptionsListView}, Path=BindingContext.CancelSubscriptionCommand}" CommandParameter="{Binding .}" NumberOfTapsRequired="1" />
-                                            </Frame.GestureRecognizers>
-                                            <Label Text="{helpers:TranslateExtension Text='LblCancelarSubscripcion'}" 
-                                                   TextColor="Black"
-                                                   LineBreakMode="WordWrap"
-                                                   HorizontalOptions="CenterAndExpand"
-                                                   VerticalOptions="CenterAndExpand"
-                                                   HorizontalTextAlignment="Center"
-                                                   VerticalTextAlignment="Center" />
-                                            </Frame>
-
+                                        <StackLayout Spacing="2" Grid.Column="1">
+                                            <Label Text="{helpers:TranslateExtension Text='LblPoderesPuntos'}"
+                                                   Style="{StaticResource CardTitleStyle}"
+                                                   TextColor="{Binding CombinedFlags, Converter={StaticResource SubscriptionTextColorConverter}}"/>
+                                            <Label Text="{Binding poderes_renovacion}"
+                                                   Style="{StaticResource CardValueStyle}"
+                                                   TextColor="{Binding CombinedFlags, Converter={StaticResource SubscriptionTextColorConverter}}"/>
                                         </StackLayout>
                                     </Grid>
-                                </Frame>
-                            </ViewCell>
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>
-                <Label
-                x:Name="EmptyListLabel"
-                Text="{helpers:TranslateExtension Text='LblNoHayRegistros'}"
-                FontSize="18"
-                TextColor="Gray"
-                HorizontalOptions="Center"
-                VerticalOptions="Center"
-                IsVisible="{Binding IsListEmpty}" />
-            </Grid>
-            <Grid BackgroundColor="Black"
-                  Opacity="0.5"
-                  HorizontalOptions="FillAndExpand"
-                  VerticalOptions="FillAndExpand"
+
+                                    <!-- Renovable y Observaciones -->
+                                    <Grid ColumnDefinitions="*,*" ColumnSpacing="16">
+                                        <StackLayout Spacing="2" Grid.Column="0">
+                                            <Label Text="{helpers:TranslateExtension Text='LblEsRenovable'}"
+                                                   Style="{StaticResource CardTitleStyle}"
+                                                   TextColor="{Binding CombinedFlags, Converter={StaticResource SubscriptionTextColorConverter}}"/>
+                                            <Label Text="{Binding texto_renovable}"
+                                                   Style="{StaticResource CardValueStyle}"
+                                                   TextColor="{Binding CombinedFlags, Converter={StaticResource SubscriptionTextColorConverter}}"/>
+                                        </StackLayout>
+
+                                        <StackLayout Spacing="2" Grid.Column="1">
+                                            <Label Text="{helpers:TranslateExtension Text='LblObsSubs'}"
+                                                   Style="{StaticResource CardTitleStyle}"
+                                                   TextColor="{Binding CombinedFlags, Converter={StaticResource SubscriptionTextColorConverter}}"/>
+                                            <Label Text="{Binding observ_subscripcion}"
+                                                   Style="{StaticResource CardValueStyle}"
+                                                   TextColor="{Binding CombinedFlags, Converter={StaticResource SubscriptionTextColorConverter}}"/>
+                                        </StackLayout>
+                                    </Grid>
+
+                                </StackLayout>
+
+                                <!-- Footer con botones (solo para suscripciones no promocionales) -->
+                                <StackLayout Grid.Row="2" Spacing="8" Padding="16,0,16,16">
+
+                                    <!-- Boton Renovar -->
+                                    <Border BackgroundColor="#27AE60"
+                                            Padding="14"
+                                            StrokeShape="RoundRectangle 10"
+                                            Stroke="Transparent"
+                                            StrokeThickness="0"
+                                            IsVisible="{Binding CombinedFlags, Converter={StaticResource BoolToButtonVisibilityRenewConverter}}">
+                                        <Border.GestureRecognizers>
+                                            <TapGestureRecognizer Command="{Binding Source={x:Reference SubscriptionsCollectionView}, Path=BindingContext.RenewSubscriptionCommand}"
+                                                                  CommandParameter="{Binding .}"/>
+                                        </Border.GestureRecognizers>
+                                        <Label Text="{helpers:TranslateExtension Text='LblRenovar'}"
+                                               TextColor="White"
+                                               FontSize="15"
+                                               FontAttributes="Bold"
+                                               VerticalOptions="Center"
+                                               HorizontalOptions="Center"/>
+                                    </Border>
+
+                                    <!-- Boton Cancelar -->
+                                    <Border BackgroundColor="#E74C3C"
+                                            Padding="14"
+                                            StrokeShape="RoundRectangle 10"
+                                            Stroke="Transparent"
+                                            StrokeThickness="0"
+                                            IsVisible="{Binding CombinedFlags, Converter={StaticResource BoolToButtonVisibilityCancelConverter}}">
+                                        <Border.GestureRecognizers>
+                                            <TapGestureRecognizer Command="{Binding Source={x:Reference SubscriptionsCollectionView}, Path=BindingContext.CancelSubscriptionCommand}"
+                                                                  CommandParameter="{Binding .}"/>
+                                        </Border.GestureRecognizers>
+                                        <Label Text="{helpers:TranslateExtension Text='LblCancelarSubscripcion'}"
+                                               TextColor="White"
+                                               FontSize="15"
+                                               FontAttributes="Bold"
+                                               VerticalOptions="Center"
+                                               HorizontalOptions="Center"/>
+                                    </Border>
+
+                                </StackLayout>
+
+                            </Grid>
+                        </Border>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+
+                <!-- Empty view cuando no hay suscripciones -->
+                <CollectionView.EmptyView>
+                    <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Padding="20">
+                        <Label Text="{helpers:TranslateExtension Text='LblNoHayRegistros'}"
+                               FontSize="18"
+                               TextColor="#7F8C8D"
+                               HorizontalOptions="Center"/>
+                    </StackLayout>
+                </CollectionView.EmptyView>
+            </CollectionView>
+
+            <!-- Loading overlay -->
+            <Grid BackgroundColor="#80000000"
                   IsVisible="{Binding IsRunning}">
-                <ActivityIndicator VerticalOptions="Center"
-                                   HorizontalOptions="Center"
-                                   HeightRequest="50"
-                                   WidthRequest="50"
-                                   Color="DarkBlue"
-                                   IsRunning="{Binding IsRunning}">
-                </ActivityIndicator>
+                <Border BackgroundColor="White"
+                        Padding="30"
+                        StrokeShape="RoundRectangle 16"
+                        Stroke="Transparent"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center">
+                    <StackLayout Spacing="15">
+                        <ActivityIndicator HeightRequest="50"
+                                           WidthRequest="50"
+                                           Color="#9B59B6"
+                                           IsRunning="{Binding IsRunning}"/>
+                        <Label Text="Loading..."
+                               FontSize="14"
+                               TextColor="#7F8C8D"
+                               HorizontalOptions="Center"/>
+                    </StackLayout>
+                </Border>
             </Grid>
         </Grid>
     </ContentPage.Content>

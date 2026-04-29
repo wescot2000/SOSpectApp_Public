@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<toolkit:Popup
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    x:Class="sospect.Views.Popups.ProcessingPopup"
+    CanBeDismissedByTappingOutsideOfPopup="False">
+
+    <Frame CornerRadius="20"
+           BackgroundColor="#CC000000"
+           Padding="30"
+           HasShadow="True"
+           WidthRequest="250"
+           HeightRequest="150"
+           HorizontalOptions="Center"
+           VerticalOptions="Center">
+
+        <VerticalStackLayout VerticalOptions="Center"
+                            HorizontalOptions="Center"
+                            Spacing="20">
+
+            <!-- Indicador de actividad (spinner) -->
+            <ActivityIndicator IsRunning="True"
+                              Color="White"
+                              WidthRequest="50"
+                              HeightRequest="50"/>
+
+            <!-- Mensaje de procesamiento -->
+            <Label x:Name="LblMessage"
+                   TextColor="White"
+                   FontSize="16"
+                   HorizontalOptions="Center"
+                   HorizontalTextAlignment="Center"/>
+        </VerticalStackLayout>
+    </Frame>
+</toolkit:Popup>

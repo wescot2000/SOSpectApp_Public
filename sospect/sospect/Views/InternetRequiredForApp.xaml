@@ -1,50 +1,78 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="sospect.Views.InternetRequiredForApp"
-             xmlns:fonts="clr-namespace:sospect.Resources.Fonts;assembly=sospect"
              xmlns:helpers="clr-namespace:sospect.Helpers"
-             BackgroundColor="White"
+             xmlns:fonts="clr-namespace:sospect.Resources.Fonts;assembly=sospect"
+             BackgroundColor="#F8F9FA"
              Title="{helpers:TranslateExtension Text='LblNoTienesConexion'}">
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
 
-        <Label
-            Grid.Row="0" Grid.Column="1"
-               Text="{helpers:TranslateExtension Text='LblSinConexionDescripcion'}"
-               FontSize="Medium"
-               FontAttributes="Bold"
-               HorizontalOptions="CenterAndExpand"
-               VerticalOptions="CenterAndExpand" 
-               HorizontalTextAlignment="Center"
-               TextColor="Black"/>
+    <ScrollView>
+        <StackLayout Padding="16" Spacing="24" VerticalOptions="CenterAndExpand">
 
-        <StackLayout Grid.Row="1" Grid.Column="1" VerticalOptions="Center">  
-            <Label 
-                   Text="{helpers:TranslateExtension Text='LblExplicacionSinConexion'}"
-                   FontSize="Small"
-                   FontAttributes="Bold"
+            <!-- Ícono sin señal WiFi -->
+            <Label FontFamily="{StaticResource IcoMoonFamily}"
+                   Text="&#xf1eb;"
+                   FontSize="100"
+                   TextColor="#E74C3C"
                    HorizontalOptions="Center"
-                   VerticalOptions="Center" 
-                   HorizontalTextAlignment="Center"
-                   VerticalTextAlignment="Center"
-                   TextColor="Gray"/>
-            <Label Text="{helpers:TranslateExtension Text='LblSinConexionQueHacer'}"
-                   FontSize="Small"
-                   FontAttributes="Bold"
-                   HorizontalOptions="Center"
-                   VerticalOptions="Center" 
-                   HorizontalTextAlignment="Center"
-                   VerticalTextAlignment="Center"
-                   TextColor="Gray"></Label>
+                   Margin="0,60,0,0"/>
+
+            <!-- Título principal -->
+            <Frame BackgroundColor="White" 
+                   CornerRadius="12" 
+                   HasShadow="True"
+                   Padding="24"
+                   Margin="0">
+                <Label Text="{helpers:TranslateExtension Text='LblSinConexionDescripcion'}"
+                       FontSize="22"
+                       FontAttributes="Bold"
+                       TextColor="#2C3E50"
+                       HorizontalTextAlignment="Center"
+                       LineHeight="1.3"/>
+            </Frame>
+
+            <!-- Explicación -->
+            <Frame BackgroundColor="White" 
+                   CornerRadius="12" 
+                   HasShadow="True"
+                   Padding="20"
+                   Margin="0">
+                <StackLayout Spacing="16">
+                    <Label Text="&#xf05a;"
+                           FontFamily="{StaticResource IcoMoonFamily}"
+                           FontSize="28"
+                           TextColor="#3498DB"
+                           HorizontalOptions="Center"/>
+                    <Label Text="{helpers:TranslateExtension Text='LblExplicacionSinConexion'}"
+                           FontSize="16"
+                           TextColor="#7F8C8D"
+                           HorizontalTextAlignment="Center"
+                           LineHeight="1.4"/>
+                </StackLayout>
+            </Frame>
+
+            <!-- Qué hacer -->
+            <Frame BackgroundColor="White" 
+                   CornerRadius="12" 
+                   HasShadow="True"
+                   Padding="20"
+                   Margin="0,0,0,60">
+                <StackLayout Spacing="16">
+                    <Label Text="&#xf0eb;"
+                           FontFamily="{StaticResource IcoMoonFamily}"
+                           FontSize="28"
+                           TextColor="#27AE60"
+                           HorizontalOptions="Center"/>
+                    <Label Text="{helpers:TranslateExtension Text='LblSinConexionQueHacer'}"
+                           FontSize="16"
+                           FontAttributes="Bold"
+                           TextColor="#2C3E50"
+                           HorizontalTextAlignment="Center"
+                           LineHeight="1.4"/>
+                </StackLayout>
+            </Frame>
+
         </StackLayout>
-    </Grid>
+    </ScrollView>
 </ContentPage>

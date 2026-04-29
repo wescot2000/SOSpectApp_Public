@@ -1,11 +1,12 @@
-﻿using System;
+using System;
 namespace sospect
 {
     public static class AppConfiguration
     {
         public static bool IsDevelopment = false; // Cambia a 'false' para producción o basado en alguna condición
 
-        internal static string ApiHost = IsDevelopment ? "https://www.wescot.com.co:81" : "https://www.wescotcorp.com";
+        internal static string ApiHost = IsDevelopment ? "https://api.wescot.com.co" : "https://www.wescotcorp.com";
+        internal static string WebHost = IsDevelopment ? "https://dev.sospect.com" : "https://www.sospect.com";
 
         internal static string Login = "/Personas/LoginUser";
         internal static string RegisterUser = "/Personas/RegisterUser";
@@ -47,11 +48,46 @@ namespace sospect
         internal static string ComprobarVersionActiva = "/Versiones/ComprobarVersionActiva";
         internal static string ListarParticipacionTipoAlarma = "/Reportes/ListarParticipacionTipoAlarma";
         internal static string ListaMetricasBasicas = "/Reportes/ListaMetricasBasicas";
+        internal static string ListaMetricasPersonales = "/Reportes/ListaMetricasPersonales";
         internal static string ObtenerPromedioEfectivoAlarmas = "/Reportes/ObtenerPromedioEfectivoAlarmas";
         internal static string MarcarTodosComoLeidos = "/Mensajes/MarcarTodosComoLeidos";
         internal static string CerrarAlarma = "/Alarma/CerrarAlarma";
+        internal static string ProponerCierre = "/Alarma/ProponerCierre";
+        internal static string VotarCierre = "/Alarma/VotarCierre";
+        internal static string ObtenerSolicitudCierreActiva = "/Alarma/ObtenerSolicitudCierreActiva";
         internal static string AsignarAlarma = "/Alarma/AsignarAlarma";
+        internal static string ConsultarConfigNotificaciones = "/Parametros/ConsultaConfNotificaciones";
+        internal static string ActualizaConfNotificaciones = "/Parametros/ActualizaConfNotificaciones";
+        internal static string WipeUserData = "/Personas/WipeUserData";
+        internal static string HistorialAlarmasUbicacion = "/Alarma/HistorialAlarmasUbicacion";
+        internal static string LlenarInformacionInicial = "/personas/LlenarInformacionInicial";
+        internal static string AgregarUsuarioRedConfianza = "/personas/AgregarUsuarioRedConfianza";
+        internal static string ConsultarUsuarioParaRedConfianza = "/personas/ConsultarUsuarioParaRedConfianza";
+        internal static string ListarUsuariosRedConfianza = "/personas/ListarUsuariosRedConfianza";
+        internal static string SubirArchivoMultimedia = "/Alarma/SubirArchivoMultimedia";
+        internal static string PresignedUploadUrl = "/Alarma/PresignedUploadUrl";
+        internal static string ObtenerFeedParaTi = "/Ubicaciones/ObtenerFeedParaTi";
+        internal static string ObtenerFeedSiguiendo = "/Ubicaciones/ObtenerFeedSiguiendo";
 
+        // SOCIAL (23-02-2026)
+        internal static string SeguirUsuario = "/Social/SeguirUsuario";
+        internal static string DejarDeSeguirUsuario = "/Social/DejarDeSeguirUsuario";
+        internal static string EstasSiguiendo = "/Social/EstasSiguiendo";
+        internal static string DarLikeAlarma = "/Social/DarLikeAlarma";
+        internal static string QuitarLikeAlarma = "/Social/QuitarLikeAlarma";
+        internal static string ReenviarAlarma = "/Social/ReenviarAlarma";
+        internal static string QuitarReenvioAlarma = "/Social/QuitarReenvioAlarma";
+        internal static string ObtenerPaisesConUsuarios = "/Social/ObtenerPaisesConUsuarios";
+        internal static string ObtenerPaises = "/Parametros/ObtenerPaises";             // NUEVO 2026-02-26
+        internal static string ObtenerAlarmasPorZona = "/Ubicaciones/ObtenerAlarmasPorZona";
+        internal static string PinesMapa = "/Ubicaciones/PinesMapa";              // NUEVO 2026-03-01
+
+        // POLÍTICOS (2026-03-05)
+        internal static string ObtenerAutoridadesPorAlarma = "/Politicos/ObtenerAutoridadesPorAlarma";
+        internal static string ObtenerReportePolitico = "/Politicos/ObtenerReportePolitico";  // 2026-03-09
+        internal static string RegistrarAprobacion = "/Politicos/RegistrarAprobacion";         // 2026-03-28
+        internal static string ObtenerAprobacionPersona = "/Politicos/ObtenerAprobacionPersona"; // 2026-03-28
+        internal static string ObtenerRankingPoliticos = "/Politicos/ObtenerRankingPoliticos"; // 2026-04-07
     }
 }
 

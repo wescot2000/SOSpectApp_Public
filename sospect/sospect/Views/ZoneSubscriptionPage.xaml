@@ -1,59 +1,155 @@
-﻿<?xml version="1.0" encoding="UTF-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="sospect.Views.ZoneSubscriptionPage"
              xmlns:maps="clr-namespace:sospect.CustomRenderers"
+             xmlns:fonts="clr-namespace:sospect.Resources.Fonts;assembly=sospect"
              xmlns:helpers="clr-namespace:sospect.Helpers"
-             BackgroundColor="White"
+             BackgroundColor="#F8F9FA"
              Title="{helpers:TranslateExtension Text='ZonaVigilancia'}">
-    <Grid>
-        <StackLayout Padding="20">
-            <Label Text="{helpers:TranslateExtension Text='SeleccioneUbicacionVigilar'}"
-               FontAttributes="Bold"
-                TextColor="Gray"
-               FontSize="18" />
-            <maps:MiniMapa x:Name="miMiniMapa"
-                           HorizontalOptions="FillAndExpand"
-                            VerticalOptions="FillAndExpand"
-                            HeightRequest="320"
-                            MinimumHeightRequest="320"/>
-            <Label Text="{helpers:TranslateExtension Text='ExplicaZonaVigilancia'}"
-                   TextColor="Gray"
-               FontSize="14" />
-            <Label x:Name="LatitudeLabel"
-               Text="{Binding LatitudeLabel}"
-                   TextColor="Gray"
-               FontSize="14" />
-            <Label x:Name="LongitudeLabel"
-               Text="{Binding LongitudeLabel}"
-                   TextColor="Gray"
-               FontSize="14" />
 
-            <Frame x:Name="CreateZoneButton" Padding="5" BorderColor="Black" BackgroundColor="LightGray" Margin="0,40,0,0" HorizontalOptions="Center" HeightRequest="35" WidthRequest="350" CornerRadius="10">
-                <Frame.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding CreateZoneCommand}" CommandParameter="{x:Reference miMiniMapa}" NumberOfTapsRequired="1" />
-                </Frame.GestureRecognizers>
-                <Label Text="{helpers:TranslateExtension Text='CrearZonaV'}" 
-                       TextColor="Black"
-                       LineBreakMode="WordWrap"
-                       HorizontalOptions="CenterAndExpand"
-                       VerticalOptions="CenterAndExpand"
-                       HorizontalTextAlignment="Center"
-                       VerticalTextAlignment="Center" />
-                </Frame>
-        </StackLayout>
-        <Grid BackgroundColor="Black"
-                  Opacity="0.5"
-                  HorizontalOptions="FillAndExpand"
-                  VerticalOptions="FillAndExpand"
-                  IsVisible="{Binding IsRunning}">
-            <ActivityIndicator VerticalOptions="Center"
+    <!-- Grid exterior: * = contenido scrolleable, Auto = botón anclado abajo -->
+    <Grid RowDefinitions="*,Auto">
+
+        <!-- Fila 0: Contenido scrolleable (iOS: el ScrollView permite que el mapa sea interactivo) -->
+        <ScrollView Grid.Row="0">
+            <StackLayout Spacing="0">
+
+                <!-- Card de Instrucciones -->
+                <Frame BackgroundColor="White"
+                       CornerRadius="16"
+                       HasShadow="True"
+                       Padding="20"
+                       Margin="20,20,20,10"
+                       BorderColor="Transparent">
+                    <Grid ColumnSpacing="12">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Frame Grid.Column="0"
+                               WidthRequest="40"
+                               HeightRequest="40"
+                               CornerRadius="20"
+                               BackgroundColor="#E8F5E9"
+                               HasShadow="False"
+                               Padding="0"
+                               VerticalOptions="Start"
+                               BorderColor="Transparent">
+                            <Label Text="{x:Static fonts:IconFont.MapPin}"
+                                   FontFamily="{StaticResource IcoMoonFamily}"
+                                   FontSize="20"
+                                   TextColor="#27AE60"
                                    HorizontalOptions="Center"
-                                   HeightRequest="50"
-                                   WidthRequest="50"
-                                   Color="DarkBlue"
-                                   IsRunning="{Binding IsRunning}">
-            </ActivityIndicator>
+                                   VerticalOptions="Center"/>
+                        </Frame>
+
+                        <Label Grid.Column="1"
+                               Text="{helpers:TranslateExtension Text='SeleccioneUbicacionVigilar'}"
+                               FontSize="16"
+                               FontAttributes="Bold"
+                               TextColor="#2C3E50"
+                               LineBreakMode="WordWrap"
+                               VerticalOptions="Center"/>
+                    </Grid>
+                </Frame>
+
+                <!-- MAPA con altura fija -->
+                <Grid HeightRequest="320"
+                      Margin="20,10,20,10"
+                      BackgroundColor="White">
+                    <maps:MiniMapa x:Name="miMiniMapa"
+                                   HorizontalOptions="FillAndExpand"
+                                   VerticalOptions="FillAndExpand"/>
+                </Grid>
+
+                <!-- Card de Información -->
+                <Frame BackgroundColor="White"
+                       CornerRadius="16"
+                       HasShadow="True"
+                       Padding="20"
+                       Margin="20,10,20,10"
+                       BorderColor="Transparent">
+                    <VerticalStackLayout Spacing="12">
+                        <Label Text="{helpers:TranslateExtension Text='ExplicaZonaVigilancia'}"
+                               FontSize="14"
+                               LineBreakMode="WordWrap"
+                               TextColor="#7F8C8D"/>
+
+                        <Frame BackgroundColor="#F8F9FA"
+                               CornerRadius="8"
+                               HasShadow="False"
+                               Padding="12"
+                               BorderColor="Transparent">
+                            <VerticalStackLayout Spacing="6">
+                                <Label x:Name="LatitudeLabel"
+                                       Text="{Binding LatitudeLabel}"
+                                       FontSize="13"
+                                       TextColor="#2C3E50"/>
+                                <Label x:Name="LongitudeLabel"
+                                       Text="{Binding LongitudeLabel}"
+                                       FontSize="13"
+                                       TextColor="#2C3E50"/>
+                            </VerticalStackLayout>
+                        </Frame>
+                    </VerticalStackLayout>
+                </Frame>
+
+            </StackLayout>
+        </ScrollView>
+
+        <!-- Fila 1 (Auto): Botón siempre visible en la parte inferior -->
+        <Frame Grid.Row="1"
+               BackgroundColor="#27AE60"
+               CornerRadius="12"
+               HasShadow="True"
+               Padding="0"
+               HeightRequest="60"
+               Margin="20,10,20,20"
+               BorderColor="Transparent">
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding CreateZoneCommand}"
+                                      CommandParameter="{x:Reference miMiniMapa}" />
+            </Frame.GestureRecognizers>
+            <Grid Padding="16" ColumnSpacing="12">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Label Grid.Column="0"
+                       Text="{x:Static fonts:IconFont.Check}"
+                       FontFamily="{StaticResource IcoMoonFamily}"
+                       FontSize="22"
+                       TextColor="White"
+                       VerticalOptions="Center"/>
+
+                <Label Grid.Column="1"
+                       Text="{helpers:TranslateExtension Text='CrearZonaV'}"
+                       FontSize="15"
+                       FontAttributes="Bold"
+                       TextColor="White"
+                       LineBreakMode="WordWrap"
+                       VerticalOptions="Center"
+                       HorizontalTextAlignment="Center"/>
+            </Grid>
+        </Frame>
+
+        <!-- Loading Overlay -->
+        <Grid Grid.RowSpan="2"
+              BackgroundColor="Black"
+              Opacity="0.5"
+              HorizontalOptions="FillAndExpand"
+              VerticalOptions="FillAndExpand"
+              IsVisible="{Binding IsRunning}">
+            <ActivityIndicator VerticalOptions="Center"
+                               HorizontalOptions="Center"
+                               HeightRequest="50"
+                               WidthRequest="50"
+                               Color="#4A90E2"
+                               IsRunning="{Binding IsRunning}"/>
         </Grid>
+
     </Grid>
 </ContentPage>

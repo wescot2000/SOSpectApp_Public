@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:helpers="clr-namespace:sospect.Helpers"
+             x:Class="sospect.Views.ListaChatsPromocionPage"
+             Title="{helpers:TranslateExtension Text='LblChatsPromocion'}"
+             BackgroundColor="#F5F5F5">
+
+    <Grid RowDefinitions="*,Auto">
+
+        <!-- Lista de chats estilo WhatsApp -->
+        <CollectionView x:Name="ListaChats"
+                        Grid.Row="0"
+                        BackgroundColor="Transparent">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame Margin="8,4"
+                           Padding="12"
+                           CornerRadius="8"
+                           BackgroundColor="White"
+                           HasShadow="True"
+                           BorderColor="Transparent">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnChatItemTapped" />
+                        </Frame.GestureRecognizers>
+                        <Grid ColumnDefinitions="Auto,*,Auto" RowDefinitions="Auto,Auto">
+
+                            <!-- Icono de usuario (sin foto de perfil) -->
+                            <Border Grid.Column="0"
+                                    Grid.RowSpan="2"
+                                    StrokeShape="RoundRectangle 25"
+                                    Stroke="#E0E0E0"
+                                    StrokeThickness="1"
+                                    HeightRequest="50"
+                                    WidthRequest="50"
+                                    BackgroundColor="#E3F2FD"
+                                    VerticalOptions="Center"
+                                    Margin="0,0,12,0">
+                                <Label Text="&#x1F464;"
+                                       FontSize="24"
+                                       HorizontalOptions="Center"
+                                       VerticalOptions="Center"/>
+                            </Border>
+
+                            <!-- User ID del interesado (anonimizado) -->
+                            <Label Grid.Column="1"
+                                   Grid.Row="0"
+                                   Text="{Binding UsuarioAnonimizado}"
+                                   FontAttributes="Bold"
+                                   FontSize="13"
+                                   TextColor="#333"
+                                   LineBreakMode="CharacterWrap"
+                                   MaxLines="2"/>
+
+                            <!-- Último mensaje -->
+                            <Label Grid.Column="1"
+                                   Grid.Row="1"
+                                   Text="{Binding UltimoMensaje}"
+                                   FontSize="13"
+                                   TextColor="#666"
+                                   LineBreakMode="TailTruncation"
+                                   MaxLines="1"/>
+
+                            <!-- Fecha del último mensaje + punto de no leído -->
+                            <StackLayout Grid.Column="2"
+                                         Grid.RowSpan="2"
+                                         Spacing="4"
+                                         VerticalOptions="Center"
+                                         HorizontalOptions="End">
+                                <Label Text="{Binding FechaFormateada}"
+                                       FontSize="11"
+                                       TextColor="#999"
+                                       HorizontalOptions="End"/>
+                                <!-- Punto de no leído (solo visible si TieneNoLeidos=true) -->
+                                <Border IsVisible="{Binding TieneNoLeidos}"
+                                        StrokeShape="RoundRectangle 8"
+                                        Stroke="Transparent"
+                                        BackgroundColor="#25D366"
+                                        HeightRequest="16"
+                                        WidthRequest="16"
+                                        HorizontalOptions="End">
+                                    <Label Text="{Binding CantidadNoLeidos}"
+                                           FontSize="10"
+                                           TextColor="White"
+                                           FontAttributes="Bold"
+                                           HorizontalOptions="Center"
+                                           VerticalOptions="Center"/>
+                                </Border>
+                            </StackLayout>
+
+                        </Grid>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+
+            <!-- Vista vacía cuando no hay chats -->
+            <CollectionView.EmptyView>
+                <StackLayout VerticalOptions="Center"
+                             HorizontalOptions="Center"
+                             Padding="40">
+                    <Label Text="&#x1F4AC;"
+                           FontSize="60"
+                           HorizontalOptions="Center"/>
+                    <Label Text="{helpers:TranslateExtension Text='LblNoTienesChatsAun'}"
+                           FontSize="16"
+                           TextColor="#666"
+                           HorizontalTextAlignment="Center"
+                           Margin="0,16,0,0"/>
+                    <Label Text="Cuando un usuario interesado te contacte, aparecerá aquí"
+                           FontSize="13"
+                           TextColor="#999"
+                           HorizontalTextAlignment="Center"
+                           Margin="0,8,0,0"/>
+                </StackLayout>
+            </CollectionView.EmptyView>
+        </CollectionView>
+
+        <!-- Indicador de carga -->
+        <ActivityIndicator x:Name="LoadingIndicator"
+                           Grid.Row="0"
+                           IsRunning="False"
+                           IsVisible="False"
+                           VerticalOptions="Center"
+                           HorizontalOptions="Center"
+                           Color="#4CAF50"/>
+
+    </Grid>
+
+</ContentPage>

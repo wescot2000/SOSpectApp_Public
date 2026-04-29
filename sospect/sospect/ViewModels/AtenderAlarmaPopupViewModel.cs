@@ -4,24 +4,26 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using System.Threading.Tasks;
-using Rg.Plugins.Popup.Extensions;
+using CommunityToolkit.Maui.Views;
 using sospect.CustomRenderers;
 using sospect.Extensions;
 using sospect.Helpers;
+using sospect.Interfaces;
 using sospect.Models;
 using sospect.Resources;
 using sospect.Services;
 using sospect.Utils;
 using sospect.Views;
-using Xamarin.Forms;
+using Microsoft.Maui.Controls;
 
 namespace sospect.ViewModels
 {
     public class AtenderAlarmaPopupViewModel : BaseViewModel
     {
-        // Definición del comando para cancelar el PopUpPage
-        public Command CancelarCommand { get; set; }
+        // CRÍTICO: Referencia al popup para poder cerrarlo
+        private readonly Popup _currentPopup;
 
+        public Command CancelarCommand { get; set; }
         public Command ConfirmarAtencionCommand { get; set; }
 
         private DescribirAlarma _DescripcionAlarma;
@@ -31,80 +33,72 @@ namespace sospect.ViewModels
             set => this.SetValue(ref this._DescripcionAlarma, value);
         }
 
-        public AtenderAlarmaPopupViewModel(AlarmaCercana alarmaCercana)
+        // MODIFICADO: Constructor recibe referencia al popup
+        public AtenderAlarmaPopupViewModel(AlarmaCercana alarmaCercana, Popup popup = null)
         {
-            
+            _currentPopup = popup;
+
             DescripcionAlarma = new DescribirAlarma();
             DescripcionAlarma.alarma_id = alarmaCercana.alarma_id;
-            DescripcionAlarma.p_user_id_thirdparty = alarmaCercana.user_id_thirdparty;
+            DescripcionAlarma.p_user_id_thirdparty = App.persona.user_id_thirdparty;
 
             var LabelInformacion = TranslateExtension.Translate("LabelInformacion");
             var Insertiondone = TranslateExtension.Translate("Insertiondone");
             var LabelOK = TranslateExtension.Translate("LabelOK");
 
-            
             ConfirmarAtencionCommand = new Command(async () =>
             {
                 if (IsRunning) return;
 
                 var request = new AtenderAlarmaRequest()
                 {
-                    p_alarma_id = DescripcionAlarma.alarma_id, 
-                    p_user_id_thirdparty = DescripcionAlarma.p_user_id_thirdparty, 
-                    p_idioma = IdiomUtil.ObtenerCodigoDeIdioma() 
+                    p_alarma_id = DescripcionAlarma.alarma_id,
+                    p_user_id_thirdparty = DescripcionAlarma.p_user_id_thirdparty,
+                    p_idioma = IdiomUtil.ObtenerCodigoDeIdioma()
                 };
-                IsRunning = true;
+
+                MainThread.BeginInvokeOnMainThread(() => IsRunning = true);
+
                 try
                 {
                     ResponseMessage response = await ApiService.AtenderAlarma(request);
 
                     if (response.IsSuccess)
                     {
-                        await App.Current.MainPage.DisplayAlert(LabelInformacion, Insertiondone, LabelOK);
+                        // CRÍTICO: Cerrar popup ANTES de mostrar alert
+                        await _currentPopup?.CloseAsync();
 
-                        if (Rg.Plugins.Popup.Services.PopupNavigation.Instance.PopupStack.Any())
-                        {
-                            // Cerrar el PopUpPage
-                            await App.Current.MainPage.Navigation.PopPopupAsync();
-                        }
+                        await ModernAlerts.ShowSuccess(LabelInformacion, Insertiondone);
 
-                        // Redirigir al usuario a la página de inicio.
-                        // Asegúrate de que la navegación se haga correctamente a tu página de inicio.
-                        App.Current.MainPage = new NavigationPage(new SospectTabs());
+                        // Redirigir al usuario a la página de inicio
+                        Application.Current.MainPage = new SospectTabs();
                     }
                     else
                     {
-                        // Aquí puedes implementar cualquier acción en caso de error
-                        await App.Current.MainPage.DisplayAlert(LabelInformacion, response.Message, LabelOK);
+                        await ModernAlerts.ShowInfo(LabelInformacion, response.Message);
                     }
                 }
                 catch (Exception ex)
                 {
-                    var properties = new Dictionary<string, string> {
-                        { "Object", "AtenderAlarmaPopupViewModel" },
-                        { "Method", "ConfirmarAtencionCommand" }
-                    };
-                    await App.Current.MainPage.DisplayAlert(LabelInformacion, ex.Message, LabelOK);
-                    Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
+                    await ModernAlerts.ShowError(LabelInformacion, ex.Message);
+                    CrashlyticsHelper.LogError(ex, "AtenderAlarmaPopupViewModel", "ConfirmarAtencionCommand");
                 }
                 finally
                 {
-                    IsRunning = false;
+                    MainThread.BeginInvokeOnMainThread(() => IsRunning = false);
                 }
 
             }, () => !IsRunning);
 
-
-            // Asignación de la acción que se ejecutará al pulsar el botón de cancelar en el PopUpPage
+            // MODIFICADO: Cerrar popup al cancelar
             CancelarCommand = new Command(async () =>
             {
                 if (IsRunning) return;
-                // Cerrar el PopUpPage
-                await App.Current.MainPage.Navigation.PopPopupAsync();
-            }, () => !IsRunning);
 
+                // CRÍTICO: Cerrar el popup
+                await _currentPopup?.CloseAsync();
+
+            }, () => !IsRunning);
         }
     }
 }
-
-

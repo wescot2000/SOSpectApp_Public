@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="sospect.Views.ConfiguracionParaTiPage"
+             xmlns:helpers="clr-namespace:sospect.Helpers"
+             xmlns:vm="clr-namespace:sospect.ViewModels"
+             xmlns:converters="clr-namespace:sospect.Converters"
+             xmlns:fonts="clr-namespace:sospect.Resources.Fonts;assembly=sospect"
+             BackgroundColor="#F8F9FA"
+             Title="{helpers:TranslateExtension Text='PersonalizarParaTi'}">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:InverseBooleanConverter x:Key="InverseBooleanConverter" />
+
+            <Style x:Key="ConfigCardStyle" TargetType="Frame">
+                <Setter Property="BackgroundColor" Value="White" />
+                <Setter Property="HasShadow" Value="True" />
+                <Setter Property="CornerRadius" Value="12" />
+                <Setter Property="Padding" Value="20" />
+                <Setter Property="Margin" Value="16,8,16,8" />
+                <Setter Property="BorderColor" Value="Transparent" />
+            </Style>
+
+            <Style x:Key="SectionTitleStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="15" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="TextColor" Value="#2C3E50" />
+            </Style>
+
+            <Style x:Key="PickerFrameStyle" TargetType="Frame">
+                <Setter Property="Padding" Value="12,0" />
+                <Setter Property="HasShadow" Value="False" />
+                <Setter Property="CornerRadius" Value="8" />
+                <Setter Property="BorderColor" Value="#E0E0E0" />
+                <Setter Property="BackgroundColor" Value="White" />
+                <Setter Property="HeightRequest" Value="48" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Grid RowDefinitions="*,Auto">
+
+        <ScrollView Grid.Row="0">
+            <StackLayout Spacing="0" Padding="0,8,0,16">
+
+                <!-- ─── Cantidad de alarmas por refresco ─── -->
+                <Frame Style="{StaticResource ConfigCardStyle}">
+                    <StackLayout Spacing="8">
+                        <Label Text="{helpers:TranslateExtension Text='LblLimiteAlarmasFeed'}"
+                               Style="{StaticResource SectionTitleStyle}" />
+
+                        <Label Text="{helpers:TranslateExtension Text='LblDescripcionLimiteAlarmasFeed'}"
+                               FontSize="12"
+                               TextColor="#95A5A6"
+                               LineHeight="1.3"
+                               Margin="0,0,0,4" />
+
+                        <Frame Style="{StaticResource PickerFrameStyle}">
+                            <Grid>
+                                <Picker BackgroundColor="Transparent"
+                                        TextColor="#2C3E50"
+                                        SelectedItem="{Binding LimiteSeleccionado, Mode=TwoWay}"
+                                        ItemsSource="{Binding LimitesOptions}" />
+                                <Label Text="{x:Static fonts:IconFont.ChevronDown}"
+                                       FontFamily="{StaticResource IcoMoonFamily}"
+                                       FontSize="16"
+                                       TextColor="#7F8C8D"
+                                       HorizontalOptions="End"
+                                       VerticalOptions="Center"
+                                       Margin="0,0,8,0"
+                                       InputTransparent="True" />
+                            </Grid>
+                        </Frame>
+
+                        <!-- Advertencia rendimiento si límite > 100 -->
+                        <Label Text="{helpers:TranslateExtension Text='LblAdvertenciaLimiteAlto'}"
+                               FontSize="12"
+                               TextColor="#E67E22"
+                               IsVisible="{Binding MostrarAdvertenciaRendimiento}"
+                               Margin="0,4,0,0" />
+                    </StackLayout>
+                </Frame>
+
+                <!-- ─── Países de interés ─── -->
+                <Frame Style="{StaticResource ConfigCardStyle}">
+                    <StackLayout Spacing="8">
+                        <Label Text="{helpers:TranslateExtension Text='PaisesInteres'}"
+                               Style="{StaticResource SectionTitleStyle}" />
+
+                        <!-- Opción: Todos los países -->
+                        <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12" Padding="0,4">
+                            <CheckBox Grid.Column="0"
+                                      IsChecked="{Binding TodosLosPaisesSeleccionados, Mode=TwoWay}"
+                                      Color="#2980B9" />
+                            <Label Grid.Column="1"
+                                   Text="{helpers:TranslateExtension Text='TodosLosPaises'}"
+                                   FontSize="14"
+                                   TextColor="#2C3E50"
+                                   VerticalOptions="Center" />
+                        </Grid>
+
+                        <BoxView HeightRequest="1" BackgroundColor="#E0E0E0" Margin="0,4" />
+
+                        <!-- Encabezado de columna: etiqueta sobre el contador de usuarios -->
+                        <Grid ColumnDefinitions="Auto,*,Auto" ColumnSpacing="12" Margin="0,0,0,2">
+                            <Label Grid.Column="2"
+                                   Text="{helpers:TranslateExtension Text='LblUsuarios'}"
+                                   FontSize="11"
+                                   FontAttributes="Bold"
+                                   TextColor="#95A5A6"
+                                   VerticalOptions="Center" />
+                        </Grid>
+
+                        <!-- Lista de países -->
+                        <CollectionView ItemsSource="{Binding Paises}"
+                                        SelectionMode="None">
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid ColumnDefinitions="Auto,*,Auto" ColumnSpacing="12"
+                                          Padding="0,6">
+                                        <Grid.GestureRecognizers>
+                                            <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type vm:ConfiguracionParaTiViewModel}}, Path=TogglePaisCommand}"
+                                                                  CommandParameter="{Binding .}" />
+                                        </Grid.GestureRecognizers>
+                                        <CheckBox Grid.Column="0"
+                                                  IsChecked="{Binding Seleccionado, Mode=TwoWay}"
+                                                  Color="#2980B9"
+                                                  InputTransparent="True" />
+                                        <Label Grid.Column="1"
+                                               Text="{Binding Pais}"
+                                               FontSize="14"
+                                               TextColor="#2C3E50"
+                                               VerticalOptions="Center" />
+                                        <Label Grid.Column="2"
+                                               Text="{Binding CantidadFormateada, StringFormat='({0})'}"
+                                               FontSize="12"
+                                               TextColor="#7F8C8D"
+                                               VerticalOptions="Center" />
+                                    </Grid>
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
+                        </CollectionView>
+                    </StackLayout>
+                </Frame>
+
+            </StackLayout>
+        </ScrollView>
+
+        <!-- ─── Botón guardar ─── -->
+        <Button Grid.Row="1"
+                Text="{helpers:TranslateExtension Text='CmdGuardarConfiguracion'}"
+                Command="{Binding GuardarCommand}"
+                BackgroundColor="#2980B9"
+                TextColor="White"
+                FontAttributes="Bold"
+                FontSize="16"
+                CornerRadius="0"
+                HeightRequest="52"
+                IsEnabled="{Binding IsRunning, Converter={StaticResource InverseBooleanConverter}}" />
+
+    </Grid>
+
+</ContentPage>

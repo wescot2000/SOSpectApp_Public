@@ -1,7 +1,8 @@
 ﻿using System;
 using Newtonsoft.Json;
 using sospect.Models;
-using Xamarin.Essentials;
+using Microsoft.Maui.ApplicationModel;
+using Microsoft.Maui.Storage;
 
 namespace sospect.ViewModels
 {

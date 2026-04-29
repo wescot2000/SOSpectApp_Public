@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:helpers="clr-namespace:sospect.Helpers"
+    xmlns:converters="clr-namespace:sospect.Converters"
+    x:Class="sospect.Views.Controls.AlarmCardHeader">
+
+    <ContentView.Resources>
+        <ResourceDictionary>
+            <converters:VisibilityConverter x:Key="VisibilityConverter" />
+
+            <Style x:Key="UserNameStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="14" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="TextColor" Value="#1A1A1A" />
+            </Style>
+
+            <Style x:Key="DateStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="12" />
+                <Setter Property="TextColor" Value="Gray" />
+            </Style>
+
+            <Style x:Key="DescriptionStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="15" />
+                <Setter Property="TextColor" Value="#1A1A1A" />
+                <Setter Property="LineBreakMode" Value="WordWrap" />
+            </Style>
+        </ResourceDictionary>
+    </ContentView.Resources>
+
+    <StackLayout Spacing="6" Margin="12,12,12,0">
+        <!-- Usuario anonimizado (como username de Twitter) -->
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+
+            <Label Grid.Column="0"
+                   Text="{Binding usuario_anonimizado}"
+                   Style="{StaticResource UserNameStyle}"
+                   IsVisible="{Binding usuario_anonimizado, Converter={StaticResource VisibilityConverter}}" />
+
+            <Label Grid.Column="1"
+                   Text="{Binding fecha_alarma, StringFormat='{0:dd/MM/yyyy HH:mm}'}"
+                   Style="{StaticResource DateStyle}"
+                   HorizontalOptions="End" />
+        </Grid>
+
+        <!-- Descripción de la alarma (texto completo, sin truncar) -->
+        <Label Text="{Binding Descripcionalarma}"
+               Style="{StaticResource DescriptionStyle}"
+               LineBreakMode="WordWrap" />
+    </StackLayout>
+</ContentView>

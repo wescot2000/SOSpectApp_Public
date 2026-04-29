@@ -1,0 +1,19 @@
+<Project>
+  <!-- Workaround: .NET Android D8 task excede el límite de 32K chars de CreateProcess en Windows.
+       Acortar la ruta intermedia reduce la longitud de la línea de comandos de java.exe.
+       Este archivo NO se versiona (está en .gitignore) y es local por máquina.
+       Ref: https://github.com/dotnet/android/issues/9515 -->
+  <PropertyGroup>
+    <BaseIntermediateOutputPath>C:\b\sospect\</BaseIntermediateOutputPath>
+  </PropertyGroup>
+
+  <!-- Firma Android — valores locales de esta máquina (Windows).
+       El Mac mini tiene su propia copia de este archivo con rutas /Users/wescot/...
+       Este archivo NO se versiona (.gitignore). -->
+  <PropertyGroup>
+    <AndroidSigningKeyStore>C:\Users\wescot\Dropbox\personal\proyecto\Sospect\credentials\keys android front\sospectproduccion.keystore</AndroidSigningKeyStore>
+    <AndroidSigningKeyAlias>sospectproduccion</AndroidSigningKeyAlias>
+    <AndroidSigningKeyPass>S0sp3ct*$ndr0id2022</AndroidSigningKeyPass>
+    <AndroidSigningStorePass>S0sp3ct*$ndr0id2022</AndroidSigningStorePass>
+  </PropertyGroup>
+</Project>

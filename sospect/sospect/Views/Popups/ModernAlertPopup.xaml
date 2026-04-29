@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<toolkit:Popup
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    xmlns:helpers="clr-namespace:sospect.Helpers"
+    CanBeDismissedByTappingOutsideOfPopup="False"
+    x:Class="sospect.Views.Popups.ModernAlertPopup">
+
+    <Frame CornerRadius="20"
+           VerticalOptions="Center"
+           HorizontalOptions="Center"
+           BackgroundColor="White"
+           Padding="0"
+           HasShadow="True"
+           WidthRequest="320"
+           MinimumWidthRequest="280"
+           MaximumWidthRequest="400">
+
+        <Frame.Shadow>
+            <Shadow Brush="#000000"
+                    Opacity="0.15"
+                    Radius="20"
+                    Offset="0,8"/>
+        </Frame.Shadow>
+
+        <StackLayout Spacing="0">
+
+            <!-- Header con icono -->
+            <Frame BackgroundColor="{Binding HeaderColor}"
+                   CornerRadius="20"
+                   Padding="20,25,20,20"
+                   HasShadow="False"
+                   Margin="0">
+                <StackLayout Spacing="10"
+                            HorizontalOptions="Center">
+
+                    <!-- Icono principal -->
+                    <Frame BackgroundColor="White"
+                           CornerRadius="25"
+                           WidthRequest="50"
+                           HeightRequest="50"
+                           Padding="0"
+                           HorizontalOptions="Center"
+                           HasShadow="False">
+                        <Label Text="{Binding IconText}"
+                               FontSize="22"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center"
+                               TextColor="{Binding HeaderColor}"/>
+                    </Frame>
+
+                    <!-- Título -->
+                    <Label Text="{Binding Title}"
+                           FontSize="18"
+                           FontAttributes="Bold"
+                           TextColor="White"
+                           HorizontalTextAlignment="Center"/>
+                </StackLayout>
+            </Frame>
+
+            <!-- Contenido del mensaje -->
+            <StackLayout Padding="25,20,25,25"
+                        Spacing="20">
+
+                <!-- Mensaje principal -->
+                <Label Text="{Binding Message}"
+                       FontSize="15"
+                       TextColor="#333333"
+                       HorizontalTextAlignment="Center"
+                       LineBreakMode="WordWrap"/>
+
+                <!-- Botón principal -->
+                <Border StrokeThickness="0"
+                        BackgroundColor="{Binding ButtonColor}"
+                        Padding="0"
+                        HeightRequest="48">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="12"/>
+                    </Border.StrokeShape>
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnButtonTapped"/>
+                    </Border.GestureRecognizers>
+                    <Border.Shadow>
+                        <Shadow Brush="{Binding ButtonColor}"
+                                Opacity="0.3"
+                                Radius="6"
+                                Offset="0,3"/>
+                    </Border.Shadow>
+
+                    <Label Text="{Binding ButtonText}"
+                           FontSize="16"
+                           FontAttributes="Bold"
+                           TextColor="White"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"/>
+                </Border>
+
+                <!-- Botón secundario (opcional) -->
+                <Border IsVisible="{Binding HasSecondaryButton}"
+                        StrokeThickness="1"
+                        Stroke="#E0E0E0"
+                        BackgroundColor="White"
+                        Padding="0"
+                        HeightRequest="48">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="12"/>
+                    </Border.StrokeShape>
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnSecondaryButtonTapped"/>
+                    </Border.GestureRecognizers>
+
+                    <Label Text="{Binding SecondaryButtonText}"
+                           FontSize="16"
+                           TextColor="#666666"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"/>
+                </Border>
+                <Border IsVisible="{Binding HasTertiaryButton}"
+                    StrokeThickness="1"
+                    Stroke="#E0E0E0"
+                    BackgroundColor="White"
+                    Padding="0"
+                    HeightRequest="48">
+                                <Border.StrokeShape>
+                                    <RoundRectangle CornerRadius="12"/>
+                                </Border.StrokeShape>
+                                <Border.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="OnTertiaryButtonTapped"/>
+                                </Border.GestureRecognizers>
+
+                                <Label Text="{Binding TertiaryButtonText}"
+                       FontSize="16"
+                       TextColor="#666666"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"/>
+                </Border>
+            </StackLayout>
+        </StackLayout>
+    </Frame>
+</toolkit:Popup>

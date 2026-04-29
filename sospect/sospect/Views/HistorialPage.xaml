@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:fonts="clr-namespace:sospect.Resources.Fonts;assembly=sospect"
+    xmlns:helpers="clr-namespace:sospect.Helpers"
+    xmlns:admob="clr-namespace:Plugin.AdMob;assembly=Plugin.AdMob"
+    xmlns:converters="clr-namespace:sospect.Converters"
+    xmlns:selectors="clr-namespace:sospect.Selectors"
+    xmlns:templates="clr-namespace:sospect.Views.DataTemplates"
+    Title="SOSpect"
+    BackgroundColor="White"
+    x:Name="HistorialAlarmaList"
+    x:Class="sospect.Views.HistorialPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:FlagPropietarioAlarmaToTextConverter x:Key="FlagPropietarioAlarmaToTextConverter" />
+            <converters:MultiBoolToVisibilityConverter x:Key="MultiBoolToVisibilityConverter" />
+            <converters:BooleanNegatorConverter x:Key="BooleanNegatorConverter" />
+            <converters:VisibilityConverter x:Key="VisibilityConverter" />
+
+            <!-- DataTemplates for Twitter/X-style photo collages -->
+            <DataTemplate x:Key="NoPhotosTemplate">
+                <templates:NoPhotosTemplate />
+            </DataTemplate>
+
+            <DataTemplate x:Key="OnePhotoTemplate">
+                <templates:OnePhotoTemplate />
+            </DataTemplate>
+
+            <DataTemplate x:Key="TwoPhotosTemplate">
+                <templates:TwoPhotosTemplate />
+            </DataTemplate>
+
+            <DataTemplate x:Key="ThreePhotosTemplate">
+                <templates:ThreePhotosTemplate />
+            </DataTemplate>
+
+            <DataTemplate x:Key="FourPhotosTemplate">
+                <templates:FourPhotosTemplate />
+            </DataTemplate>
+
+            <DataTemplate x:Key="FivePlusPhotosTemplate">
+                <templates:FivePlusPhotosTemplate />
+            </DataTemplate>
+
+            <!-- DataTemplateSelector for photo collages -->
+            <selectors:AlarmCardTemplateSelector x:Key="AlarmCardTemplateSelector"
+                NoPhotosTemplate="{StaticResource NoPhotosTemplate}"
+                OnePhotoTemplate="{StaticResource OnePhotoTemplate}"
+                TwoPhotosTemplate="{StaticResource TwoPhotosTemplate}"
+                ThreePhotosTemplate="{StaticResource ThreePhotosTemplate}"
+                FourPhotosTemplate="{StaticResource FourPhotosTemplate}"
+                FivePlusPhotosTemplate="{StaticResource FivePlusPhotosTemplate}" />
+
+            <!-- Estilos responsivos modernos -->
+            <Style x:Key="CardTitleStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="16" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="LineBreakMode" Value="TailTruncation" />
+            </Style>
+
+            <Style x:Key="CardSubtitleStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="14" />
+                <Setter Property="TextColor" Value="DarkGray" />
+                <Setter Property="FontAttributes" Value="Bold" />
+            </Style>
+
+            <Style x:Key="CardBodyStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="14" />
+                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="LineBreakMode" Value="WordWrap" />
+                <Setter Property="TextTransform" Value="None" />
+            </Style>
+
+            <Style x:Key="CardMetaStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="12" />
+                <Setter Property="TextColor" Value="Gray" />
+                <Setter Property="FontAttributes" Value="None" />
+            </Style>
+
+            <Style x:Key="StatusLabelStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="12" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="HorizontalOptions" Value="End" />
+            </Style>
+
+            <Style x:Key="ActionButtonStyle" TargetType="ImageButton">
+                <Setter Property="HeightRequest" Value="35" />
+                <Setter Property="WidthRequest" Value="35" />
+                <Setter Property="BackgroundColor" Value="Transparent" />
+                <Setter Property="Padding" Value="5" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <Grid BackgroundColor="White" VerticalOptions="FillAndExpand" Margin="0,5,0,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="90" />
+            </Grid.RowDefinitions>
+
+            <!-- Header con título dinámico (sin pestañas) -->
+            <Grid Grid.Row="0" Padding="0" BackgroundColor="White" HeightRequest="48">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="3" />
+                </Grid.RowDefinitions>
+
+                <BoxView Grid.Row="0" BackgroundColor="White" />
+
+                <Label Grid.Row="0"
+                       Text="{helpers:Translate LblAlarmaRecibida}"
+                       TextColor="#1DA1F2"
+                       FontAttributes="Bold"
+                       FontSize="15"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center" />
+
+                <BoxView Grid.Row="1" BackgroundColor="#1DA1F2" />
+            </Grid>
+
+            <!-- RefreshView para pull-to-refresh estilo Twitter/X -->
+            <RefreshView Grid.Row="1"
+                         IsRefreshing="{Binding IsRefreshing}"
+                         Command="{Binding RefreshCommand}"
+                         RefreshColor="Blue">
+                <!-- CollectionView con DataTemplateSelector -->
+                <CollectionView
+                    BackgroundColor="White"
+                    Margin="8,0"
+                    ItemsSource="{Binding ListadoAlarmas}"
+                    SelectionMode="None"
+                    IsVisible="{Binding EmptyState, Converter={StaticResource BooleanNegatorConverter}}"
+                    ItemTemplate="{StaticResource AlarmCardTemplateSelector}">
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Vertical" ItemSpacing="8" />
+                </CollectionView.ItemsLayout>
+                </CollectionView>
+            </RefreshView>
+
+            <!-- Empty State -->
+            <Label x:Name="EmptyListLabel"
+                   Text="{helpers:TranslateExtension Text='LblNoHayRegistros'}"
+                   Grid.Row="1"
+                   FontSize="18"
+                   TextColor="Gray"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   IsVisible="{Binding EmptyState}" />
+
+            <!-- Ad Banner -->
+            <Grid BackgroundColor="LightGray" Grid.Row="2" HeightRequest="90">
+                <admob:BannerAd AdSize="LargeBanner" />
+            </Grid>
+
+            <!-- Loading Overlay mejorado -->
+            <Grid BackgroundColor="Black"
+                  Grid.RowSpan="3"
+                  Opacity="0.5"
+                  HorizontalOptions="FillAndExpand"
+                  VerticalOptions="FillAndExpand"
+                  IsVisible="{Binding IsRunning}">
+                <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Spacing="10">
+                    <ActivityIndicator VerticalOptions="Center"
+                                       HorizontalOptions="Center"
+                                       HeightRequest="50"
+                                       WidthRequest="50"
+                                       Color="White"
+                                       IsRunning="{Binding IsRunning}"/>
+                    <Label Text="Cargando..."
+                           TextColor="White"
+                           FontSize="14"
+                           HorizontalOptions="Center" />
+                </StackLayout>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

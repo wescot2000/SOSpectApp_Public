@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<toolkit:Popup
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    xmlns:cam="clr-namespace:Camera.MAUI;assembly=Camera.MAUI"
+    xmlns:helpers="clr-namespace:sospect.Helpers"
+    x:Class="sospect.Views.Popups.VideoCameraPopup">
+
+    <Frame CornerRadius="20"
+           BackgroundColor="Black"
+           Padding="0"
+           HasShadow="True"
+           WidthRequest="400"
+           HeightRequest="600"
+           HorizontalOptions="Center"
+           VerticalOptions="Center">
+
+        <Grid BackgroundColor="Black">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <!-- Indicador de tiempo de grabación -->
+            <Grid x:Name="recordingIndicatorPanel"
+                  Grid.Row="0"
+                  BackgroundColor="#80000000"
+                  Padding="10"
+                  IsVisible="False">
+                <HorizontalStackLayout HorizontalOptions="Center" Spacing="10">
+                    <Ellipse x:Name="recordingDot"
+                             Fill="Red"
+                             WidthRequest="12"
+                             HeightRequest="12"
+                             VerticalOptions="Center"/>
+                    <Label x:Name="timerLabel"
+                           Text="00:00"
+                           TextColor="White"
+                           FontSize="18"
+                           FontAttributes="Bold"
+                           VerticalOptions="Center"/>
+                </HorizontalStackLayout>
+            </Grid>
+
+            <!-- Vista previa de la cámara (Camera.MAUI) -->
+            <cam:CameraView x:Name="cameraView"
+                           Grid.Row="1"
+                           VerticalOptions="FillAndExpand"
+                           HorizontalOptions="FillAndExpand"/>
+
+            <!-- Controles inferiores -->
+            <Grid Grid.Row="2"
+                  BackgroundColor="#80000000"
+                  Padding="20">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <!-- Botón Cancelar -->
+                <Button x:Name="cancelButton"
+                        Grid.Column="0"
+                        Text="{helpers:TranslateExtension Text='LblCerrarCamara'}"
+                        FontSize="14"
+                        BackgroundColor="Transparent"
+                        TextColor="White"
+                        Clicked="OnCancelClicked"
+                        WidthRequest="80"
+                        HeightRequest="60"/>
+
+                <!-- Botón Grabar/Detener -->
+                <Border x:Name="recordButton"
+                        Grid.Column="1"
+                        StrokeThickness="4"
+                        Stroke="White"
+                        BackgroundColor="Red"
+                        WidthRequest="70"
+                        HeightRequest="70"
+                        HorizontalOptions="Center">
+                    <Border.StrokeShape>
+                        <RoundRectangle x:Name="recordButtonShape" CornerRadius="35"/>
+                    </Border.StrokeShape>
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnRecordButtonTapped"/>
+                    </Border.GestureRecognizers>
+                </Border>
+
+                <!-- Indicador de estado -->
+                <Label x:Name="statusLabel"
+                       Grid.Column="2"
+                       Text="{helpers:TranslateExtension Text='LblTocaParaGrabar'}"
+                       TextColor="#AAAAAA"
+                       FontSize="10"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       HorizontalTextAlignment="Center"/>
+            </Grid>
+
+            <!-- Overlay de procesamiento -->
+            <Grid x:Name="processingOverlay"
+                  Grid.RowSpan="3"
+                  BackgroundColor="#CC000000"
+                  IsVisible="False"
+                  VerticalOptions="FillAndExpand"
+                  HorizontalOptions="FillAndExpand">
+
+                <VerticalStackLayout VerticalOptions="Center"
+                                    HorizontalOptions="Center"
+                                    Spacing="20">
+
+                    <ActivityIndicator IsRunning="True"
+                                      Color="White"
+                                      WidthRequest="50"
+                                      HeightRequest="50"/>
+
+                    <Label x:Name="processingLabel"
+                           Text="{helpers:TranslateExtension Text='LblProcesandoVideo'}"
+                           TextColor="White"
+                           FontSize="16"
+                           HorizontalOptions="Center"/>
+                </VerticalStackLayout>
+            </Grid>
+        </Grid>
+    </Frame>
+</toolkit:Popup>

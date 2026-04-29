@@ -249,18 +249,6 @@
   <data name="DireccionEscape" xml:space="preserve">
     <value>Ilmoita epäillyn poistumisosoite.</value>
   </data>
-  <data name="DescripcionAlerta" xml:space="preserve">
-    <value>Kuulutuksen kuvaus</value>
-  </data>
-  <data name="DescripcionImplicado" xml:space="preserve">
-    <value>Kuulutukseen osallistuvan henkilön kuvaus</value>
-  </data>
-  <data name="DescripcionVehiculoImp" xml:space="preserve">
-    <value>Osallisena ollut ajoneuvo (tapauksen mukaan)</value>
-  </data>
-  <data name="ArmaImplicada" xml:space="preserve">
-    <value>Mukana ollut ase (tarvittaessa)</value>
-  </data>
   <data name="LabelRutaEscape" xml:space="preserve">
     <value>Epäilyttävä pakoreitti</value>
   </data>
@@ -660,9 +648,6 @@
   <data name="LblSaldoPoderesEs" xml:space="preserve">
     <value>Voimatasapainoni on:</value>
   </data>
-  <data name="LblUsuarioID" xml:space="preserve">
-    <value>Käyttäjätunnukseni on</value>
-  </data>
   <data name="LblAlertaReportadaPorMi" xml:space="preserve">
     <value>Ilmoittamani hälytys</value>
   </data>
@@ -690,23 +675,14 @@
   <data name="LblAlarmaNoGrave" xml:space="preserve">
     <value>Käytä keltaista painiketta asettaaksesi vähän vaaroja koskevia hälytyksiä ja varoittaaksesi yhteisöäsi tai suojelijoitasi. Voit valita hälytyksen tyypin ja merkitä sen tehdyksi rikokseksi. Tämä painike käynnistää hälytyksen tarkassa sijainnissasi, mikä on hyödyllistä, kun tarvitset apua. Voit myös valita kartalta pisteen löytääksesi hälytyksen vaarantamatta sijaintiasi.</value>
   </data>
-  <data name="LblCrimenCometido" xml:space="preserve">
-    <value>Punainen painike laukaisee luokan: rikos tehty hälytys. SOSpect ei vaadi sinua sisällyttämään luokkaa, koska aika on näissä tapauksissa tärkeä. Hälytys sijoitetaan automaattisesti tarkkaan sijaintiisi. Voit myös valita kartalta pisteen, johon kuulutus sijoitetaan, ja muuttaa sitten luokaksi tehdyn rikoksen.</value>
-  </data>
   <data name="LblDescripcionAlarmas" xml:space="preserve">
     <value>Alapalkin Kuvaile-vaihtoehdosta löydät luettelon sinun tai muiden tekemistä hälytyksistä. Jos olet luonut hälytyksen, voit lisätä kuvauksen. Jos hälytyksen on luonut joku muu, voit arvioida sen todenperäisyyden ja täydentää sen kuvausta. Ole varovainen! Jos annat vääriä tietoja tai virheellisiä luokituksia, tilisi voidaan jäädyttää. Lue käyttöehdot huolellisesti tämän välttämiseksi.</value>
   </data>
   <data name="LblDescripcionMensajes" xml:space="preserve">
     <value>Oikeassa yläkulmassa olevasta kellosta voit lukea viestisi, jotka sisältävät tilausilmoitukset ja viimeisimmät hälytykset. Tämä luettelo eroaa kuvausvaihtoehdosta, josta löydät viimeisimmät hälytykset suoraan.</value>
   </data>
-  <data name="LblDescripcionMenu" xml:space="preserve">
-    <value>Vasemmassa yläkulmassa olevasta hammaspyörästä löydät SOSpect-määritysvaihtoehdot. Voit ostaa valtuuksia ostaa tilauksia ja suojata perhettäsi tai laajentaa hälytyksen vastaanottosädettä. MUISTAA! Alussa annamme sinulle 80 voimaa, jotta voit ostaa kaksi tilausta alusta alkaen.</value>
-  </data>
   <data name="LblRecomendaciones" xml:space="preserve">
     <value>YHDESSÄ OLEMME VOITTAMATTOMIA! Hälytysten ja hälytysten vastaanottamisen perustoiminnot 100 metrin säteellä ovat ilmaisia, ja kun aloitat, annamme sinulle 2 tilausta. Pyydä yhteisöäsi ja perhettäsi käyttämään tätä ilmaista palvelua kasvavan rikollisuuden torjumiseksi. Voit pelastaa ihmishenkiä tai pelastua saamalla hälytyksen ajoissa. Kadonneiden ihmisten tai lemmikkien hälytysten kantama on 10 kilometriä ja väkivaltaisten mielenosoitusten 1 kilometri</value>
-  </data>
-  <data name="LblPromocion" xml:space="preserve">
-    <value>Muista lopuksi, että ansaitset valtakirjan jokaisesta SOSpectissä antamastasi totuudenmukaisesta arviosta, kun hälytysten äänestys sulkeutuu 90 minuutin kuluttua niiden asettamisesta. Useimmat ihmiset ovat rehellisiä ja yhdessä suojelemme toisiamme ja perheitämme. TERVETULOA SOSPECTIIN!</value>
   </data>
   <data name="LblDescripcionMapa" xml:space="preserve">
     <value>Voit milloin tahansa valita alapalkin vasemmalla puolella olevan "MAP" -vaihtoehdon, joka on SOSpectin lähtökohta. Sieltä voit tarkastella lähellä olevia hälytyksiä. Sijaintisi näkyy kartan keskellä, ja ympyrä edustaa sädettä, joka voi vaikuttaa sinuun. Oletuksena tämä säde on 100 metriä, mutta voit muokata sitä asetusvalikossa.</value>
@@ -1171,7 +1147,1938 @@ Napauta näyttöä jatkaaksesi...</value>
   <data name="Capturasrealizadasenunkilometroymedioalaredondademiubicacion" xml:space="preserve">
     <value>Puolitoista kilometriä tehdyt kaappaukset sijaintini ympärillä</value>
   </data>
+  <data name="LblErrorConexion" xml:space="preserve">
+    <value>Yhteysvirhe</value>
+  </data>
+  <data name="LblCierreSesion" xml:space="preserve">
+    <value>Uloskirjaus</value>
+  </data>
+  <data name="LblSinConexionDetalle" xml:space="preserve">
+    <value>Offline-tilassa, aktivoi yhteys ja käynnistä sovellus uudelleen</value>
+</data>
+  <data name="CmdGuardarConfiguracion" xml:space="preserve">
+    <value>Tallenna asetukset</value>
+  </data>
+  <data name="LblCantDiasNotifApagada" xml:space="preserve">
+    <value>Kuinka monta päivää haluan poistaa ilmoitukseni käytöstä toimivaltaisena viranomaisena</value>
+  </data>
+  <data name="LblNotifAlarmasCercanas" xml:space="preserve">
+    <value>Vastaanota ilmoituksia lähellä olevista hälytyksistä</value>
+  </data>
+  <data name="LblNotifAlarmasProtegidos" xml:space="preserve">
+    <value>Vastaanota ilmoituksia suojatuista hälytyksistä</value>
+  </data>
+  <data name="LblNotifAlarmasZonas" xml:space="preserve">
+    <value>Vastaanota ilmoituksia valvontavyöhykkeille sijoitetuista hälytyksistä</value>
+  </data>
+  <data name="LblNotifAlarmasAutoridadComp" xml:space="preserve">
+    <value>Vastaanotan hälytysilmoituksia toimivaltaisena viranomaisena</value>
+  </data>
+  <data name="LblDescripcionConfNotificaciones" xml:space="preserve">
+    <value>Tämä on nykyiset ilmoitusasetuksesi, kytke ne pois päältä tai päälle mieleiseksesi, jotta käyttökokemuksesi SOSpectissä olisi parempi ja parempi!</value>
+  </data>
+  <data name="LblConfNotifGuardadas" xml:space="preserve">
+    <value>Uudet asetukset tallennettiin onnistuneesti</value>
+  </data>
+  <data name="LblConfNotifNoSeGuarda" xml:space="preserve">
+    <value>Asetusten tallentaminen epäonnistui. Yritä uudelleen.</value>
+  </data>
+  <data name="LblConfigNotificaciones" xml:space="preserve">
+    <value>SOSpect-ilmoitusten määrittäminen</value>
+  </data>
+  <data name="LblFechaApagadoAutomaticoNotif" xml:space="preserve">
+    <value>Poliisin ilmoituksen sulkemispäivä:</value>
+  </data>
+  <data name="LblTiempoParaActivacionAutomatica" xml:space="preserve">
+    <value>Automaattiseen aktivointiin jäljellä oleva aika:</value>
+  </data>
+  <data name="LblCamposIncompletos" xml:space="preserve">
+    <value>Täytä kaikki kentät oikein.</value>
+  </data>
+  <data name="LblNoAplicable" xml:space="preserve">
+    <value>Ei sovellettavissa</value>
+  </data>
+  <data name="LblTiempoExpirado" xml:space="preserve">
+    <value>Aika umpeutunut</value>
+  </data>
+  <data name="LblCopiado" xml:space="preserve">
+    <value>Kopioida</value>
+  </data>
+  <data name="LblUsuarioCopiado" xml:space="preserve">
+    <value>Leikepöydälle kopioitu käyttäjätunnus</value>
+  </data>
   <data name="LblCondicionesCierreAlarma" xml:space="preserve">
-    <value>Voit sulkea hälytyksen vain, jos olet luonut sen tai jos sitä ei valvota</value>
+    <value>Ilmoita sulkemisen syy. Se sulkeutuu, jos olet luoja eikä se ole huomion kohteena.</value>
+  </data>
+  <data name="LabelCheckConnection" xml:space="preserve">
+    <value>SOSpect-versiota ei voitu vahvistaa Internet-yhteyden epäonnistumisen vuoksi. Tarkista liitettävyys.</value>
+  </data>
+  <data name="TocaParaAgregarInfo" xml:space="preserve">
+    <value>Napauta tätä lisätäksesi tietoja</value>
+  </data>
+  <data name="DescripcionAlerta" xml:space="preserve">
+    <value>Hälytyksen kuvaus (valinnainen)</value>
+  </data>
+  <data name="DescripcionImplicado" xml:space="preserve">
+    <value>Kuulutukseen osallistuvan henkilön kuvaus (valinnainen)</value>
+  </data>
+  <data name="DescripcionVehiculoImp" xml:space="preserve">
+    <value>Mukana oleva ajoneuvo (valinnainen)</value>
+  </data>
+  <data name="ArmaImplicada" xml:space="preserve">
+    <value>Mukana oleva ase (valinnainen)</value>
+  </data>
+  <data name="TocaAlarmaARevisar" xml:space="preserve">
+    <value>Napauta hälytystä, jonka haluat tarkistaa</value>
+  </data>
+  <data name="TocaAquiParaDescribir" xml:space="preserve">
+    <value>Napauta tätä lisätäksesi kuvauksen tai vuorovaikutuksen</value>
+  </data>
+  <data name="MostrarAlarmaEnMapa" xml:space="preserve">
+    <value>Näytä hälytys kartalla</value>
+  </data>
+  <data name="EsAlarmaVerdadera" xml:space="preserve">
+    <value>Onko hälytys totta?</value>
+  </data>
+  <data name="BorraDatosYCierraSesion" xml:space="preserve">
+    <value>Tietojen tyhjentäminen ja uloskirjautuminen</value>
+  </data>
+  <data name="ElValorNoCorrespondeAsuID" xml:space="preserve">
+    <value>Syötetty arvo ei vastaa käyttäjätunnustasi</value>
+  </data>
+  <data name="SeEliminaronTodosSusDatos" xml:space="preserve">
+    <value>Kaikki tietosi on poistettu, tämä istunto kirjataan ulos</value>
+  </data>
+  <data name="FailureDeletingData" xml:space="preserve">
+    <value>Käyttäjätietoja ei voitu poistaa, tietoja ei ole poistettu.</value>
+  </data>
+  <data name="LblAtencion" xml:space="preserve">
+    <value>TARKKAAVAISUUS!</value>
+  </data>
+  <data name="AdverBorradoDatos" xml:space="preserve">
+    <value>Varoitus: Tämä toiminto poistaa pysyvästi kaikki tietosi, mukaan lukien SOSpect-ostokset ja -tilaukset. Ostosten noutaminen on mahdollista vain yksityiskohtaisella pyynnöllä soporte@wescot.com.co, edellyttäen, että se tarkistetaan.</value>
+  </data>
+  <data name="ConfirmarBorradoDatosUsuario" xml:space="preserve">
+    <value>Vahvista tietojesi poistaminen syöttämällä käyttäjätunnuksesi (sijaitsee asetusvalikon yläosassa) ja painamalla OK. Tämä poistaa tietosi ja kirjaa sinut automaattisesti ulos.</value>
+  </data>
+  <data name="ColoqueSuIDUsuario" xml:space="preserve">
+    <value>Syötä käyttäjätunnuksesi tähän</value>
+  </data>
+  <data name="AccionNoPermitida" xml:space="preserve">
+    <value>Kielletty toiminta</value>
+  </data>
+  <data name="SoloAutoridadCompetente" xml:space="preserve">
+    <value>Vain toimivaltainen viranomainen voi reagoida hälytykseen, jos se on aktiivinen.</value>
+  </data>
+  <data name="SoloCreadorConfirmaAlarma" xml:space="preserve">
+    <value>Et voi vahvistaa hälytystä, jos olet tekijä tai jos se ei ole aktiivinen.</value>
+  </data>
+  <data name="SoloCreadorCierraAlarma" xml:space="preserve">
+    <value>Hälytyksen voi sulkea vain sen luoja, viranomaiset tai jos se on aktiivinen.</value>
+  </data>
+  <data name="IrAConfiguracion" xml:space="preserve">
+    <value>Siirry asetuksiin</value>
+  </data>
+  <data name="LblIgnorar" xml:space="preserve">
+    <value>Olla välittämättä</value>
+  </data>
+  <data name="LblImportante" xml:space="preserve">
+    <value>Tärkeä!</value>
+  </data>
+  <data name="SinNotifPodriasEstarEnRiesgo" xml:space="preserve">
+    <value>Ohitatko riskihälytykset? Ilman ilmoituksia saatat unohtaa tärkeitä ilmoituksia.</value>
+  </data>
+  <data name="LblCierreSesionDetalle" xml:space="preserve">
+    <value>Sinut on kirjattu ulos kirjautumalla sisään toisella laitteella tai ottamalla ilmoitukset käyttöön.</value>
+  </data>
+  <data name="LblAlarmaActiva" xml:space="preserve">
+    <value>Aktiivinen hälytys</value>
+  </data>
+  <data name="LblDescripcion" xml:space="preserve">
+    <value>Kuvaus: __________:</value>
+  </data>
+  <data name="LblHistorialAlertas" xml:space="preserve">
+    <value>Radion hälytyshistoria 3 km.</value>
+  </data>
+  <data name="LblTituloHistorialAlertas" xml:space="preserve">
+    <value>Hälytyshistoria viimeisten 30 päivän ajalta säteellä 3 km.</value>
+  </data>
+  <data name="LblVolverAtras" xml:space="preserve">
+    <value>Takaisin ylös</value>
+  </data>
+  <data name="LblTocaAgregarDescripcion" xml:space="preserve">
+    <value>Napauta tätä lisätäksesi kuvauksen (valinnainen)</value>
+  </data>
+  <data name="LabelSessionExpired" xml:space="preserve">
+    <value>Istuntosi on vanhentunut. Kirjaudu sisään uudelleen.</value>
+  </data>
+  <data name="LabelAlarmaDeRedConfianza" xml:space="preserve">
+    <value>Luotettavan verkon käyttäjän luoma hälytys</value>
+  </data>
+  <data name="LabelEscritoRedConfianza" xml:space="preserve">
+    <value>Kirjoittanut luotettu verkon käyttäjä</value>
+  </data>
+  <data name="LabelPertenecesRedConfianza" xml:space="preserve">
+    <value>Kuulut SOSpectin luotettuun verkostoon!</value>
+  </data>
+  <data name="LabelVentajasRedC" xml:space="preserve">
+    <value>Luotettuun verkkoon kuulumisen edut</value>
+  </data>
+  <data name="LabelV1UsuariosConfiables" xml:space="preserve">
+    <value>1. Luotettavien käyttäjien tunnistaminen ja todentaminen:</value>
+  </data>
+  <data name="LabelV1UsuariosConfiablesDesc" xml:space="preserve">
+    <value>Mekanismit sellaisten käyttäjien tunnistamiseksi ja todentamiseksi, jotka antavat jatkuvasti tarkkoja ja hyödyllisiä tietoja. Näin varmistetaan, että verkossa jaettava data on korkealaatuista ja luotettavaa.</value>
+  </data>
+  <data name="LabelV2AlertasPrioritarias" xml:space="preserve">
+    <value>2. Ensisijainen hälytys:</value>
+  </data>
+  <data name="LabelV2AlertasPrioritariasDesc" xml:space="preserve">
+    <value>Luotetun verkon vahvistettujen käyttäjien luomilla hälytyksillä on parempi näkyvyys ja prioriteetti. Tämä tarkoittaa, että he erottuvat alustalla, mikä mahdollistaa nopeamman ja tehokkaamman vastauksen yhteisöltä ja viranomaisilta.</value>
+  </data>
+  <data name="LabelV3RecompensasConfiabilidad" xml:space="preserve">
+    <value>3. Palkinnot luotettavuudesta:</value>
+  </data>
+  <data name="LabelV3RecompensasConfiabilidadDesc" xml:space="preserve">
+    <value>Kannusta luotettuja käyttäjiä sovelluksen sisäisillä palkinnoilla, kuten lisävoimilla tai premium-ominaisuuksilla. Tämä ei vain motivoi käyttäjiä säilyttämään luotettavuustilansa, vaan myös rikastuttaa heidän kokemustaan alustalla.</value>
+  </data>
+  <data name="LabelMasVentajas" xml:space="preserve">
+    <value>Lisää etuja:</value>
+  </data>
+  <data name="LabelMasVentajasDesc" xml:space="preserve">
+    <value>Luotettujen verkon käyttäjien luomat hälytykset näytetään vihreällä kehyksellä hälytysluettelossa ja merkillä, joka osoittaa, että hälytys on vahvistetulta käyttäjältä. Lisäksi kartalla oleva tappi on merkitty vihreällä, mikä osoittaa, että se on vahvistettu hälytys. Luotettujen verkon käyttäjien kommentit on myös korostettu vihreällä merkillä, joka osoittaa heidän luotettavan alkuperänsä.</value>
+  </data>
+  <data name="LabelObjetivoVentajas" xml:space="preserve">
+    <value>Luotettavan verkoston jäsenten odotetaan olevan kaukana rikollisuudesta, joten heidän hälytyksiään pidetään luotettavina ja niihin tulisi suhtautua vakavammin. Tämä edistää turvallisempaa yhteisöä ja tehokkaampaa reagointia hälytyksiin.</value>
+  </data>
+  <data name="LabelTitleVentajas" xml:space="preserve">
+    <value>Etuja</value>
+  </data>
+  <data name="LabelTitleDatosBasicos" xml:space="preserve">
+    <value>Perustietojen lisääminen</value>
+  </data>
+  <data name="LabelInstruccionesDatosBasicos" xml:space="preserve">
+    <value>Anna perustietosi liittyäksesi SOSpectin luotettuun verkostoon. Tee tämä vain, jos tunnet verkoston jäsenen, joka voi lisätä sinut. Varmista, että annat todellisia ja oikeita tietoja, koska et voi muokata niitä sen jälkeen, kun sinut on lisätty luotettuun verkkoon.</value>
+  </data>
+  <data name="LabelNombres" xml:space="preserve">
+    <value>Nimet:</value>
+  </data>
+  <data name="LabelApellidos" xml:space="preserve">
+    <value>Sukunimet:</value>
+  </data>
+  <data name="LabelNumeroMovil" xml:space="preserve">
+    <value>Matkapuhelinnumero:</value>
+  </data>
+  <data name="LabelEmail" xml:space="preserve">
+    <value>Sähköposti:</value>
+  </data>
+  <data name="LabelPais" xml:space="preserve">
+    <value>Maa:</value>
+  </data>
+  <data name="LabelDocumentoIdentificacion" xml:space="preserve">
+    <value>Kansallinen henkilöllisyystodistus:</value>
+  </data>
+  <data name="LabelGuardarDatosBasicos" xml:space="preserve">
+    <value>Tietojen tallentaminen tai päivittäminen</value>
+  </data>
+  <data name="LabelValidacionNombres" xml:space="preserve">
+    <value>Virheelliset nimet, vain kirjaimet ovat sallittuja.</value>
+  </data>
+  <data name="LabelValidacionApellidos" xml:space="preserve">
+    <value>Virheelliset sukunimet, vain kirjaimet ovat sallittuja.</value>
+  </data>
+  <data name="LabelValidacionCelular" xml:space="preserve">
+    <value>Virheellinen matkapuhelinnumero, vain numerot sallitaan.</value>
+  </data>
+  <data name="LabelValidacionEmail" xml:space="preserve">
+    <value>Virheellinen sähköpostiosoite.</value>
+  </data>
+  <data name="LabelValidacionPais" xml:space="preserve">
+    <value>Virheellinen maa, vain kirjaimet sallittu.</value>
+  </data>
+  <data name="LabelValidacionDocumento" xml:space="preserve">
+    <value>Virheellinen tunnus, vain aakkosnumeeriset merkit, pisteet ja yhdysmerkit sallitaan.</value>
+  </data>
+  <data name="LabelAgregarUsuarioRedTitle" xml:space="preserve">
+    <value>Lisää käyttäjä luotettuun verkkoon</value>
+  </data>
+  <data name="LabelEscribaIDUsuario" xml:space="preserve">
+    <value>Kirjoita suojattavan käyttäjän tunnus tähän:</value>
+  </data>
+  <data name="LabelConsultarDisponibilidad" xml:space="preserve">
+    <value>Tarkista saatavuus</value>
+  </data>
+  <data name="LabelAgregarUsuario" xml:space="preserve">
+    <value>Lisää käyttäjä</value>
+  </data>
+  <data name="LabelDesventajasTitle" xml:space="preserve">
+    <value>Haitat</value>
+  </data>
+  <data name="LabelDesventajasSubTitle" xml:space="preserve">
+    <value>Luottamusverkostoon kuulumisen haitat</value>
+  </data>
+  <data name="LabelDV1Investigacion" xml:space="preserve">
+    <value>1. Vastuuton hälytystutkinta:</value>
+  </data>
+  <data name="LabelDV1InvestigacionDesc" xml:space="preserve">
+    <value>Tapauksissa, joissa toimivaltaiset viranomaiset sitä vaativat, hälytykset voidaan tutkia, jos epäillään, että ne on asetettu vastuuttomasti tai valehtelevasti ja vaikuttavat muihin kansalaisiin.</value>
+  </data>
+  <data name="LabelDV2Requisitos" xml:space="preserve">
+    <value>2. SOSpect-varmennusvaatimukset:</value>
+  </data>
+  <data name="LabelDV2RequisitosDesc" xml:space="preserve">
+    <value>SOSpect varmistaa, että tutkintapyynnöllä on riittävät perusteet ennen tietojen toimittamista. Lisäksi tietojen toimittaminen evätään tapauksissa, jotka liittyvät hallituksiin tai viranomaisiin, jotka liittyvät diktatuureihin, laittomiin ryhmiin, mafioihin tai vastaaviin, hälytyksen aiheuttaneen käyttäjän suojelemiseksi.</value>
+  </data>
+  <data name="LabelDV3ImplicacionAgregador" xml:space="preserve">
+    <value>3. Aggregaattorin käyttäjän osallistuminen:</value>
+  </data>
+  <data name="LabelDV3ImplicacionAgregadorDesc" xml:space="preserve">
+    <value>Mahdollisessa tutkimuksessa toimivaltaiset viranomaiset voisivat vaatia käyttäjää, joka lisäsi hälytyksen luojan luotettuun verkkoon, tekemään yhteistyötä tutkimuksessa samoilla edellä mainituilla varoituksilla.</value>
+  </data>
+  <data name="LabelDV4BorradoInformacion" xml:space="preserve">
+    <value>4. Tietojen poistaminen:</value>
+  </data>
+  <data name="LabelDV4BorradoInformacionDesc" xml:space="preserve">
+    <value>Kun käyttäjä päättää poistaa tietonsa SOSpectistä ja poistaa sovelluksen, SOSpect poistaa ne 90 kalenteripäivän kuluttua varmistettuaan, etteivät toimivaltaiset viranomaiset ole tehneet valituksia käyttäjän tekemistä hälytyksistä.</value>
+  </data>
+  <data name="LabelDV5Responsabilidad" xml:space="preserve">
+    <value>5. Mahdollinen vastuu:</value>
+  </data>
+  <data name="LabelDV5ResponsabilidadDesc" xml:space="preserve">
+    <value>Luotettuun verkostoon kuulumiseen liittyy lisävastuu, koska jäsenten odotetaan lisäävän vain luotettuja käyttäjiä. Jos lisätään joku, joka ei täytä näitä standardeja, sillä voi olla kielteisiä seurauksia.</value>
+  </data>
+  <data name="LabelListarRedConfianzaTitle" xml:space="preserve">
+    <value>Luettelo luotetusta verkosta</value>
+  </data>
+  <data name="LabelNoHayUsuarioEnRed" xml:space="preserve">
+    <value>Verkossa ei ole luotettuja käyttäjiä</value>
+  </data>
+  <data name="LabelTitleMasInformacion" xml:space="preserve">
+    <value>Opi lisää</value>
+  </data>
+  <data name="LabelQueEsRedConfianza" xml:space="preserve">
+    <value>Mikä on luottamusverkosto?</value>
+  </data>
+  <data name="LabelQueEsRedConfianzaDesc" xml:space="preserve">
+    <value>SOSpectin luottamusverkosto on ominaisuus, jonka avulla käyttäjät voivat luoda luotettujen ihmisten piirin sovellukseen. Kun lisäät ihmisiä, jotka tunnet ja joihin luotat, ilmoituksiasi käsitellään tärkeämmällä prioriteetilla ja näkyvyydellä. Päätavoitteena on parantaa sovelluksen kautta annettujen hälytysten tehokkuutta ja luotettavuutta varmistamalla, että vahvistettujen käyttäjien hälytykset saavat tarvittavan huomion.</value>
+  </data>
+  <data name="LabelFuncionamientoRed" xml:space="preserve">
+    <value>Miten luottamusverkosto toimii?</value>
+  </data>
+  <data name="Label1IdentificacionUsuarios" xml:space="preserve">
+    <value>1. Luotettavien käyttäjien tunnistaminen:</value>
+  </data>
+  <data name="Label1IdentificacionUsuariosDesc" xml:space="preserve">
+    <value>Voit lisätä tuntemiasi ja luotettavia ihmisiä luotettuun verkostoosi. Tämä varmistaa, että ilmoituksesi katsotaan vahvistetuiksi sovelluksessa, merkitty vihreällä ja näkyvyyden parantamiseksi.</value>
+  </data>
+  <data name="Label2Privacidad" xml:space="preserve">
+    <value>2. Hälytysten yksityisyys:</value>
+  </data>
+  <data name="Label2PrivacidadDesc" xml:space="preserve">
+    <value>Huolimatta siitä, että luotetut verkkohälytykset ovat etusijalla, kaikki hälytykset pysyvät nimettöminä. Käyttäjien henkilöllisyyttä ja henkilötietoja ei paljasteta muille käyttäjille, mikä takaa yksityisyyden ja parantaa hälytysten tehokkuutta.</value>
+  </data>
+  <data name="Label3ComposicionRed" xml:space="preserve">
+    <value>3. Verkoston kokoonpano:</value>
+  </data>
+  <data name="Label3ComposicionRedDesc" xml:space="preserve">
+    <value>Verkoston odotetaan koostuvan ihmisistä, jotka ovat kaukana rikollisesta toiminnasta. Käyttäjien sisällyttäminen tähän verkkoon on käsiteltävä huolellisesti varmistaen, että vain luotettavia ihmisiä lisätään.</value>
+  </data>
+  <data name="Label4DatosInalterables" xml:space="preserve">
+    <value>4. Tietojen muuttumattomuus:</value>
+  </data>
+  <data name="Label4DatosInalterablesDesc" xml:space="preserve">
+    <value>Kun käyttäjä on lisätty luotettuun verkkoon, hän ei voi muuttaa perustietojaan tai tulla poistetuksi verkosta. Tämä sääntö toteutetaan verkon eheyden ja luotettavuuden ylläpitämiseksi.</value>
+  </data>
+  <data name="LabelRecomendacionesRed" xml:space="preserve">
+    <value>Suosituksia käyttäjien lisäämiseksi luotettuun verkkoon</value>
+  </data>
+  <data name="Label1VerificaIdentidad" xml:space="preserve">
+    <value>1. Vahvista henkilöllisyys:</value>
+  </data>
+  <data name="Label1VerificaIdentidadDesc" xml:space="preserve">
+    <value>Ennen kuin lisäät henkilön luotettuun verkostoosi, varmista, että tiedät ja vahvistat käyttäjän henkilöllisyyden. Koska hälytyksesi saavat erityiskohtelua, on erittäin tärkeää, että voit luottaa täysin antamiesi tietojen todenperäisyyteen.</value>
+  </data>
+  <data name="Label2RevisaInfo" xml:space="preserve">
+    <value>2. Tarkista perustiedot:</value>
+  </data>
+  <data name="Label2RevisaInfoDesc" xml:space="preserve">
+    <value>On tärkeää varmistaa, että käyttäjän perustiedot, kuten nimi, matkapuhelinnumero, sähköpostiosoite ja henkilötodistus, ovat oikein ja ajan tasalla.</value>
+  </data>
+  <data name="Label3ResponsabilidadAgregador" xml:space="preserve">
+    <value>3. Aggregaattorin vastuu:</value>
+  </data>
+  <data name="Label3ResponsabilidadAgregadorDesc" xml:space="preserve">
+    <value>Kun lisäät käyttäjän luotettuun verkkoon, otat vastuun siitä, että käyttäjän tiedot ovat tarkkoja. Tämä on elintärkeää verkon eheyden ylläpitämiseksi ja sen varmistamiseksi, että varmennetut hälytykset ovat korkealaatuisia ja luotettavia.</value>
+  </data>
+  <data name="LabelRecomendacionesAdicionales" xml:space="preserve">
+    <value>Muita varoituksia ja suosituksia</value>
+  </data>
+  <data name="Label1InvestigacionAlarmas" xml:space="preserve">
+    <value>1. Hälytyksen tutkinta:</value>
+  </data>
+  <data name="Label1InvestigacionAlarmasDesc" xml:space="preserve">
+    <value>Luotettavan verkon käyttäjän tekemä hälytys voidaan tutkia, jos toimivaltaiset viranomaiset sitä vaativat. SOSpect ryhtyy toimiin varmistaakseen pyynnön laillisuuden ennen tietojen luovuttamista ja kieltää tällaisen luovutuksen tapauksissa, joissa on mukana diktatuureihin, laittomiin ryhmiin, mafioihin tai vastaaviin liittyviä hallituksia tai yhteisöjä.</value>
+  </data>
+  <data name="Label2ImplicacionesAgregador" xml:space="preserve">
+    <value>2. Vaikutukset aggregaattorin käyttäjään:</value>
+  </data>
+  <data name="Label2ImplicacionesAgregadorDesc" xml:space="preserve">
+    <value>Tutkinnan yhteydessä hälytyksen luojan lisännyttä käyttäjää voidaan vaatia tekemään yhteistyötä, aina samojen oikeudellisten suojatoimien alaisena.</value>
+  </data>
+  <data name="Label3EliminacionDatos" xml:space="preserve">
+    <value>3. Tietojen poistoprosessi:</value>
+  </data>
+  <data name="Label3EliminacionDatosDesc" xml:space="preserve">
+    <value>Jos käyttäjä päättää poistaa tietonsa ja poistaa sovelluksen, SOSpect jatkaa tietojen poistamista 90 päivän kuluttua edellyttäen, että toimivaltaiset viranomaiset eivät ole tehneet valituksia käyttäjän antamista hälytyksistä.</value>
+  </data>
+  <data name="LabelTitleRedConfianza" xml:space="preserve">
+    <value>Luottamuksen verkosto</value>
+  </data>
+  <data name="LabelBienvenidoRedConfianza" xml:space="preserve">
+    <value>Tervetuloa luottamusverkostoon. Täällä voit lisätä tuntemiasi ja luotettavia ihmisiä, jolloin heidän hälytyksiään voidaan pitää vahvistettuina, merkitty vihreällä ja antaa enemmän merkitystä. Muista, että kaikki hälytykset pysyvät nimettöminä eikä kenenkään tietoja paljasteta.
+
+Luotettuun verkkoosi kuulumattomien henkilöiden hälytykset näkyvät harmaina. Verkoston odotetaan koostuvan luotettavista ihmisistä, jotka ovat kaukana rikollisesta toiminnasta.
+
+Lisäämiesi käyttäjien on annettava perustietonsa siirtymällä SOSpect-valikkoon ja täyttämällä tarvittavat tiedot. Aggregaattorina sinun vastuullasi on varmistaa näiden tietojen oikeellisuus. Kun käyttäjä on lisätty, hän ei voi muuttaa tietojaan tai tulla poistetuksi verkosta.</value>
+  </data>
+  <data name="LabelQuieroSaberMas" xml:space="preserve">
+    <value>HALUAN TIETÄÄ LISÄÄ</value>
+  </data>
+  <data name="LabelVentajasRed" xml:space="preserve">
+    <value>LUOTETTAVAN VERKON EDUT</value>
+  </data>
+  <data name="LabelDesventajasRed" xml:space="preserve">
+    <value>LUOTETTAVAN VERKON HAITAT</value>
+  </data>
+  <data name="LabelAgregarDatosBasicos" xml:space="preserve">
+    <value>Sisällytettävien perustietojen lisääminen tai muokkaaminen</value>
+  </data>
+  <data name="LabelAgregarUsuarioARed" xml:space="preserve">
+    <value>Käyttäjän lisääminen luotettuun verkkoon</value>
+  </data>
+  <data name="LabelListarUsuariosRed" xml:space="preserve">
+    <value>Luetteloi lisäämäni luotetut verkon käyttäjät</value>
+  </data>
+  <data name="Ellídernotieneelindicadordereddeconfianzaestablecidoenverdadero" xml:space="preserve">
+    <value>Johtajan luottamusverkoston ilmaisimen arvoksi ei ole määritetty tosi</value>
+  </data>
+  <data name="Unoomáscamposobligatoriossonnulos" xml:space="preserve">
+    <value>Yksi tai useampi pakollinen kenttä on tyhjä</value>
+  </data>
+  <data name="Elnuevousuarioyaperteneceaunareddeconfianza" xml:space="preserve">
+    <value>Uusi käyttäjä kuuluu jo luotettuun verkkoon</value>
+  </data>
+  <data name="Usuarioagregadoalareddeconfianzaconéxito" xml:space="preserve">
+    <value>Käyttäjä lisättiin luotettuun verkkoon onnistuneesti</value>
+  </data>
+  <data name="NoseencontróningúnusuarioconelIDdeusuariodetercerosproporcionado" xml:space="preserve">
+    <value>Käyttäjää ei löytynyt annetulla kolmannen osapuolen käyttäjätunnuksella</value>
+  </data>
+  <data name="Elusuarioyaespartedelareddeconfianza" xml:space="preserve">
+    <value>Käyttäjä kuuluu jo luotettuun verkkoon</value>
+  </data>
+  <data name="Lainformaciónpersonaldelusuarioqueseagregaráalareddeconfianzaestáincompleta" xml:space="preserve">
+    <value>Luotettuun verkkoon lisättävät käyttäjän henkilökohtaiset tiedot ovat puutteelliset</value>
+  </data>
+  <data name="Lainformaciónpersonaldelusuarioqueseagregaráalareddeconfianzaestácompletayelusuarioaúnnoformapartedelareddeconfianza" xml:space="preserve">
+    <value>Luotettuun verkkoon lisättävät käyttäjän henkilökohtaiset tiedot ovat valmiit, eikä käyttäjä ole vielä osa luotettua verkkoa</value>
+  </data>
+  <data name="Elusuarioyaformapartedelareddeconfianzaysuinformaciónnopuedemodificarse" xml:space="preserve">
+    <value>Käyttäjä on jo osa luotettua verkkoa, eikä hänen tietojaan voi muokata</value>
+  </data>
+  <data name="Informacióndelusuarioactualizadaexitosamente" xml:space="preserve">
+    <value>Käyttäjätietojen päivitys onnistui</value>
+  </data>
+  <data name="LabelGuardadoRedConfianza" xml:space="preserve">
+    <value>Valmistettu! Voit päivittää tietoja vain ennen luotettuun verkkoon liittymistä</value>
+  </data>
+  <data name="Userinformationupdatedsuccessfully" xml:space="preserve">
+    <value>Käyttäjätietojen päivitys onnistui</value>
+  </data>
+  <data name="Anerroroccurredwhileupdatinguserinformation" xml:space="preserve">
+    <value>Virhe päivitettäessä käyttäjätietoja</value>
+  </data>
+  <data name="Invalidmodelstateforuserinformation" xml:space="preserve">
+    <value>Käyttäjätietojen virheellinen mallin tila</value>
+  </data>
+  <data name="Userinformationretrievedsuccessfully" xml:space="preserve">
+    <value>Onnistuneesti haetut käyttäjätiedot</value>
+  </data>
+  <data name="NouserfoundwiththeprovidedthirdpartyuserID" xml:space="preserve">
+    <value>Käyttäjää ei löytynyt annetulla käyttäjätunnuksella</value>
+  </data>
+  <data name="Usersinthetrustnetworkretrievedsuccessfully" xml:space="preserve">
+    <value>Luotetut verkon käyttäjät palauttivat onnistuneesti</value>
+  </data>
+  <data name="Anerroroccurredwhileretrievingusersinthetrustnetwork" xml:space="preserve">
+    <value>Luotetun verkon käyttäjien noutaminen epäonnistui</value>
+  </data>
+  <data name="Useraddedtothetrustnetworksuccessfully" xml:space="preserve">
+    <value>Käyttäjän lisääminen luotettuun verkkoon onnistui</value>
+  </data>
+  <data name="Anerroroccurredwhileaddingtheusertothetrustnetwork" xml:space="preserve">
+    <value>Virhe lisättäessä käyttäjää luotettuun verkkoon</value>
+  </data>
+  <data name="LabelRestriccionApple" xml:space="preserve">
+    <value>Apple® iPhone®: lle ei ole sallittua ilmoittaa hälytystyyppejä "Rikos tai rikos", "Katutaistelu", "Mellakat tai mielenosoitukset" ja "Perheväkivalta", ennen kuin toimivaltaisten viranomaisten kanssa on sovittu.</value>
+  </data>
+  <data name="LblQueAccionRealizar" xml:space="preserve">
+    <value>Mitä haluat tehdä?</value>
+  </data>
+  <data name="LblVerEnMapa" xml:space="preserve">
+    <value>Näytä kartalla</value>
+  </data>
+  <data name="LblIrAlPunto" xml:space="preserve">
+    <value>Siirry tähän pisteeseen</value>
+  </data>
+  <data name="LblElegirApp" xml:space="preserve">
+    <value>Valitse sovellus</value>
+  </data>
+  <data name="LblMapas" xml:space="preserve">
+    <value>Kartat</value>
+  </data>
+  <data name="LblAnuncioPublicitario" xml:space="preserve">
+    <value>Laita ilmoitus</value>
+  </data>
+  <data name="LblErrorInicializandoParametros" xml:space="preserve">
+    <value>Käyttäjäparametreja ei voitu alustaa. Tarkista yhteytesi.</value>
+  </data>
+  <data name="LblMensajeCompraPoderes" xml:space="preserve">
+    <value>SOSpectin käyttö ei ole pakollista ostaa valtuuksia. Suurin osa ominaisuuksista on ilmaisia. Lisäksi voit saada valtaa äänestämällä totuudenmukaisesti yhteisösi hälytyksiä.</value>
+  </data>
+  <data name="LblCargandoTiposAlarma" xml:space="preserve">
+    <value>Ladataan hälytystyyppejä...</value>
+  </data>
+  <data name="LabelTocarParaDetalles" xml:space="preserve">
+    <value>Napauta saadaksesi lisätietoja</value>
+  </data>
+  <data name="LabelChat" xml:space="preserve">
+    <value>💬 Jutella</value>
+  </data>
+  <data name="LblLeeTerminosDetenidamente" xml:space="preserve">
+    <value>Lue ehdot huolellisesti</value>
+  </data>
+  <data name="LblVisualizacionSoloLectura" xml:space="preserve">
+    <value>Tarkastelet termejä vain luku -tilassa</value>
+  </data>
+  <data name="LblProcesando" xml:space="preserve">
+    <value>Käsittely...</value>
+  </data>
+  <data name="LabelSinAccesoAChat" xml:space="preserve">
+    <value>Chat ei ole käytettävissä tällä hetkellä</value>
+  </data>
+  <data name="LabelUbicacionNoDisponible" xml:space="preserve">
+    <value>Sijainti ei saatavilla</value>
+  </data>
+  <data name="LabelVerificaGPS" xml:space="preserve">
+    <value>Tarkista, että GPS on aktiivinen</value>
+  </data>
+  <data name="LabelReintentar" xml:space="preserve">
+    <value>Yritä</value>
+  </data>
+  <data name="LabelReiniciarApp" xml:space="preserve">
+    <value>Käynnistä sovellus uudelleen</value>
+  </data>
+  <data name="LabelGPSRequerido" xml:space="preserve">
+    <value>GPS vaaditaan</value>
+  </data>
+  <data name="LabelHabilitarUbicacion" xml:space="preserve">
+    <value>Ota sijainti käyttöön laitteen asetuksissa</value>
+  </data>
+  <data name="LabelIrAConfiguracion" xml:space="preserve">
+    <value>Siirry asetuksiin</value>
+  </data>
+  <data name="MsgTrasAlarmaSinRiesgo" xml:space="preserve">
+    <value>Jos sinulla on aikaa, kuvaile hälytystä, siitä on hyötyä naapureillesi!</value>
+  </data>
+  <data name="LabelSiguiente" xml:space="preserve">
+    <value>Seuraava</value>
+  </data>
+  <data name="LabelAnterior" xml:space="preserve">
+    <value>Edellinen</value>
+  </data>
+  <data name="LabelOmitir" xml:space="preserve">
+    <value>Jättää pois</value>
+  </data>
+  <data name="LabelFinalizar" xml:space="preserve">
+    <value>Loppu</value>
+  </data>
+  <data name="LabelConfirmarOmitir" xml:space="preserve">
+    <value>Ohita opetusohjelma</value>
+  </data>
+  <data name="LabelMensajeOmitir" xml:space="preserve">
+    <value>Oletko varma, että haluat ohittaa opetusohjelman? Voit katsoa sen uudelleen kirjautumalla ulos ja kirjautumalla takaisin sisään.</value>
+  </data>
+  <data name="LabelMensajeVolverVerTutorial" xml:space="preserve">
+    <value>Jos haluat katsoa tämän opetusohjelman uudelleen, kirjaudu ulos ja kirjaudu takaisin sovellukseen.</value>
+  </data>
+  <data name="LabelFelicitaciones" xml:space="preserve">
+    <value>Onnittelen!</value>
+  </data>
+  <data name="LabelTutorialCompletado" xml:space="preserve">
+    <value>Olet suorittanut SOSpect-opetusohjelman. Nyt olet valmis käyttämään sovellusta turvallisesti!</value>
+  </data>
+  <data name="LblDescripcionInicial" xml:space="preserve">
+    <value>Tervetuloa SOSpectiin, yhteisösi turvallisuussovellukseen. Näytämme sinulle, kuinka se toimii vaihe vaiheelta.</value>
+  </data>
+  <data name="LblDescripcionAlarmaNoGrave" xml:space="preserve">
+    <value>Oranssilla painikkeella voit ilmoittaa epäilyttävistä tilanteista, jotka vaativat huomiota, mutta eivät ole hätätilanteita.</value>
+  </data>
+  <data name="LblDescripcionCrimenCometido" xml:space="preserve">
+    <value>Punaisella painikkeella ilmoitetaan meneillään olevista tai juuri tapahtuneista rikoksista. Käytä vain vakavissa tilanteissa.</value>
+  </data>
+  <data name="LblDescripcionCompletaAlarmas" xml:space="preserve">
+    <value>Tässä osiossa voit tarkastella ja kuvata lähellä olevia hälytyksiä auttaaksesi muita yhteisön käyttäjiä.</value>
+  </data>
+  <data name="LabelParaQueSirveSospect" xml:space="preserve">
+    <value>Mikä on SOSpect?</value>
+  </data>
+  <data name="LblAspectosBasicos" xml:space="preserve">
+    <value>Perusasiat</value>
+  </data>
+  <data name="LblEnviaUnaAlerta" xml:space="preserve">
+    <value>Lähetä hälytys!</value>
+  </data>
+  <data name="LblCrimenCometido" xml:space="preserve">
+    <value>Punainen painike aktivoi hälytyksen kategoriasta: rikos tehty. SOSpect ei vaadi sinua sisällyttämään luokkaa, koska aika on näissä tapauksissa tärkeä. Hälytys sijoitetaan automaattisesti juuri sinun sijaintiisi. Voit myös valita kartalta pisteen hälytyksen tekemiseksi ja vaihtaa sitten luokaksi tehty rikos. (Ei saatavilla Applella maissa, joissa ei ole voimassa olevaa sopimusta)</value>
+  </data>
+  <data name="LblReportaUnCrimen" xml:space="preserve">
+    <value>Tee rikosilmoitus!</value>
+  </data>
+  <data name="LblExplicaLoSucedido" xml:space="preserve">
+    <value>Selitä, mitä tapahtui!</value>
+  </data>
+  <data name="LblRevisaTusNotificaciones" xml:space="preserve">
+    <value>Tarkista ilmoituksesi!</value>
+  </data>
+  <data name="LblAdministraTusConfiguraciones" xml:space="preserve">
+    <value>Hallitse asetuksiasi!</value>
+  </data>
+  <data name="LblPorSiFueraPoco" xml:space="preserve">
+    <value>... ja ikään kuin se ei olisi tarpeeksi...</value>
+  </data>
+  <data name="LblMuyImportante" xml:space="preserve">
+    <value>Erittäin tärkeää!</value>
+  </data>
+  <data name="LblParaFinalizar" xml:space="preserve">
+    <value>Ja lopuksi...</value>
+  </data>
+  <data name="LblQueAppUsar" xml:space="preserve">
+    <value>Mitä sovellusta haluat käyttää?</value>
+  </data>
+  <data name="LblDescripcionMenu" xml:space="preserve">
+    <value>Vasemmassa yläkulmassa olevasta vaihteesta löydät SOSpect-määritysvaihtoehdot. Voit ostaa sähköjä tilausten ostamiseen ja perheesi suojaamiseen tai hälytyksen vastaanottosäteen laajentamiseen.</value>
+  </data>
+  <data name="LblPromocion" xml:space="preserve">
+    <value>TÄRKEÄ! Kun aloitat, annamme sinulle 100 voimaa, jotta voit ostaa kaksi tilausta alusta alkaen.
+
+Muista lopuksi, että ansaitset valtakirjan jokaisesta SOSpectissä antamastasi totuudenmukaisesta luokituksesta, kun hälytysäänet sulkeutuvat 90 minuutin kuluttua niiden asettamisesta. Useimmat ihmiset ovat rehellisiä ja yhdessä suojelemme toisiamme ja perheitämme. TERVETULOA SOSPECTIIN!</value>
+  </data>
+  <data name="LabelErrorReiniciar" xml:space="preserve">
+    <value>Tapahtui odottamaton virhe. Käynnistä SOSpect uudelleen. Jos virhe jatkuu, ota yhteyttä soporte@wescot.com.co</value>
+  </data>
+  <data name="LblLeyenda" xml:space="preserve">
+    <value>Hälytystyypin raportti</value>
+  </data>
+  <data name="LabelDescribirAlarma" xml:space="preserve">
+    <value>Kuvaile hälytystä</value>
+  </data>
+  <data name="LblErrorNavegador" xml:space="preserve">
+    <value>Virhe selaimen avaamisessa</value>
+  </data>
+  <data name="LblErrorManual" xml:space="preserve">
+    <value>Virhe käyttöohjeen avaamisessa</value>
+  </data>
+  <data name="LblErrorSitioWeb" xml:space="preserve">
+    <value>Virhe verkkosivuston avaamisessa</value>
+  </data>
+  <data name="LabelMoreOptions" xml:space="preserve">
+    <value>Lisää vaihtoehtoja</value>
+  </data>
+  <data name="LblAgregarMedia" xml:space="preserve">
+    <value>Lisää kuva tai video</value>
+  </data>
+  <data name="LblTomarFoto" xml:space="preserve">
+    <value>Ota kuva</value>
+  </data>
+  <data name="LblSeleccionarFoto" xml:space="preserve">
+    <value>Valitse kuva kameran rullasta</value>
+  </data>
+  <data name="LblSeleccionarVideo" xml:space="preserve">
+    <value>Valitse video</value>
+  </data>
+  <data name="LblPermisoCamaraNecesario" xml:space="preserve">
+    <value>Kuvien ottamiseen tarvitaan kameran lupa</value>
+  </data>
+  <data name="LblCamaraNoDisponible" xml:space="preserve">
+    <value>Kameraa ei ole saatavilla tässä laitteessa</value>
+  </data>
+  <data name="LblCamaraNoCompatible" xml:space="preserve">
+    <value>Kamera ei ole yhteensopiva tämän laitteen kanssa</value>
+  </data>
+  <data name="LblTomarFotoAlarma" xml:space="preserve">
+    <value>Ota kuva hälytyksestä</value>
+  </data>
+  <data name="LblSeleccionarFotoAlarma" xml:space="preserve">
+    <value>Valitse kuva hälytykseen</value>
+  </data>
+  <data name="LblSeleccionarVideoAlarma" xml:space="preserve">
+    <value>Valitse video hälytykseen</value>
+  </data>
+  <data name="LblErrorCapturarFoto" xml:space="preserve">
+    <value>Kuvaa ei saatu</value>
+  </data>
+  <data name="LblErrorSeleccionarFoto" xml:space="preserve">
+    <value>Kuvaa ei voitu valita</value>
+  </data>
+  <data name="LblErrorSeleccionarVideo" xml:space="preserve">
+    <value>Videota ei voitu valita</value>
+  </data>
+  <data name="LblLimiteAlcanzado" xml:space="preserve">
+    <value>Raja saavutettu</value>
+  </data>
+  <data name="LblSoloPuedesAgregar" xml:space="preserve">
+    <value>Voit laskea yhteen vain</value>
+  </data>
+  <data name="LblFotosVideosPorAlarma" xml:space="preserve">
+    <value>Kuvat/Videot: Alarm</value>
+  </data>
+  <data name="LblArchivoMuyGrande" xml:space="preserve">
+    <value>Erittäin suuri tiedosto</value>
+  </data>
+  <data name="LblTamanoMaximo100MB" xml:space="preserve">
+    <value>Tiedosto on liian suuri. Maksimikoko: 100MB</value>
+  </data>
+  <data name="LblArchivoNoSeGuardo" xml:space="preserve">
+    <value>Tiedostoa ei tallennettu oikein</value>
+  </data>
+  <data name="LblErrorProcesarArchivo" xml:space="preserve">
+    <value>Tiedostoa ei voitu käsitellä</value>
+  </data>
+  <data name="LblCerrarCamara" xml:space="preserve">
+    <value>Sulkea</value>
+  </data>
+  <data name="LblCapturarFoto" xml:space="preserve">
+    <value>Sieppaus</value>
+  </data>
+  <data name="LblGuardandoAlarma" xml:space="preserve">
+    <value>Säästän hälytyksen...</value>
+  </data>
+  <data name="LblProcesandoFoto" xml:space="preserve">
+    <value>Käsittelen valokuvaa...</value>
+  </data>
+  <data name="LblSeleccionarOrigen" xml:space="preserve">
+    <value>Valitse valokuvan lähde</value>
+  </data>
+  <data name="LblSeleccioneAppNavegacion" xml:space="preserve">
+    <value>Valitse haluamasi navigointisovellus:</value>
+  </data>
+  <data name="LblLongPressForVideo" xml:space="preserve">
+    <value>Paina ja pidä pohjassa tallentaaksesi videon</value>
+  </data>
+  <data name="LblTomarFotoOVideo" xml:space="preserve">
+    <value>Ota valokuva tai video</value>
+  </data>
+  <data name="LblSeleccionarTipoMedia" xml:space="preserve">
+    <value>Valitse mediatyyppi</value>
+  </data>
+  <data name="LblGrabarVideo" xml:space="preserve">
+    <value>Tallenna video</value>
+  </data>
+  <data name="LblSospechosoCorto" xml:space="preserve">
+    <value>Epäluuloinen:</value>
+  </data>
+  <data name="LblVehiculoCorto" xml:space="preserve">
+    <value>Ajoneuvo:</value>
+  </data>
+  <data name="LblArmasCorto" xml:space="preserve">
+    <value>Aseet:</value>
+  </data>
+  <data name="LblPlaceholderDescripcionCierre" xml:space="preserve">
+    <value>Kuvaile lyhyesti hälytyksen sulkeutumista...</value>
+  </data>
+  <data name="LblDescripcionFalsaAlarma" xml:space="preserve">
+    <value>Hälytys ei ollut oikea tai se oli virhe</value>
+  </data>
+  <data name="LblDescripcionCaptura" xml:space="preserve">
+    <value>Saatiinko epäillyt kiinni?</value>
+  </data>
+  <data name="LblCerrandoAlarma" xml:space="preserve">
+    <value>Hälytys sulkeutuu...</value>
+  </data>
+  <data name="ParaTi" xml:space="preserve">
+    <value>Sinulle</value>
+  </data>
+  <data name="SiguiendoEnTuRadio" xml:space="preserve">
+    <value>Seuraaja/Alueellasi</value>
+  </data>
+  <data name="Advertencia" xml:space="preserve">
+    <value>Varoitus</value>
+  </data>
+  <data name="Crimen" xml:space="preserve">
+    <value>Rikos</value>
+  </data>
+  <data name="Riña" xml:space="preserve">
+    <value>Taistelu</value>
+  </data>
+  <data name="Mascota" xml:space="preserve">
+    <value>Maskotti</value>
+  </data>
+  <data name="Persona" xml:space="preserve">
+    <value>Henkilö</value>
+  </data>
+  <data name="Disturbios" xml:space="preserve">
+    <value>Mellakat</value>
+  </data>
+  <data name="Acompañamiento" xml:space="preserve">
+    <value>Säestys</value>
+  </data>
+  <data name="Intrafamiliar" xml:space="preserve">
+    <value>Sisäinen perhe</value>
+  </data>
+  <data name="Persecución" xml:space="preserve">
+    <value>Vaino</value>
+  </data>
+  <data name="Eventos" xml:space="preserve">
+    <value>Tapahtumat</value>
+  </data>
+  <data name="Compravotos" xml:space="preserve">
+    <value>Osta ääniä</value>
+  </data>
+  <data name="Votaciónforzada" xml:space="preserve">
+    <value>Pakotettu äänestys</value>
+  </data>
+  <data name="Ciudadana" xml:space="preserve">
+    <value>Citizen</value>
+  </data>
+  <data name="Compradevotos" xml:space="preserve">
+    <value>Äänien ostaminen</value>
+  </data>
+  <data name="Votaciónforzadaporgruposarmados" xml:space="preserve">
+    <value>Aseellisten ryhmien pakotettu äänestäminen</value>
+  </data>
+  <data name="FiltrarTiposDeAlarma" xml:space="preserve">
+    <value>Suodatinhälytystyypit</value>
+  </data>
+  <data name="AfectaMapaYParaTi" xml:space="preserve">
+    <value>Vaikutukset: Kartta ja 'For You'</value>
+  </data>
+  <data name="SiguiendoNoSeFiltrado" xml:space="preserve">
+    <value>⚠️ 'Seuraaminen/Alueellasi' EI ole suodatettu (kriittinen prioriteetti)</value>
+  </data>
+  <data name="TiposCaracteristicosSOSpect" xml:space="preserve">
+    <value>SOSpectin tyypilliset tyypit</value>
+  </data>
+  <data name="OtrosTiposOrdenadosPopularidad" xml:space="preserve">
+    <value>Muut tyypit (lajiteltuna suosion mukaan)</value>
+  </data>
+  <data name="Cancelar" xml:space="preserve">
+    <value>Perua</value>
+  </data>
+  <data name="Aplicar" xml:space="preserve">
+    <value>Hae</value>
+  </data>
+  <data name="ErrorCargandoTiposIntenteNuevamente" xml:space="preserve">
+    <value>Hälytystyyppejä ei voitu ladata. Ole hyvä ja yritä uudelleen.</value>
+  </data>
+  <data name="ErrorCargandoTiposVerifiqueConexion" xml:space="preserve">
+    <value>Virheilmoitus hälytyksen tyypeistä. Tarkista yhteytesi.</value>
+  </data>
+  <data name="InfoPorcentajesBasadosUltimos30Dias" xml:space="preserve">
+    <value>⚠️ Prosenttiosuudet ja määrät perustuvat viimeisen 30 päivän aikana raportoituihin hälytyksiin. Ne eivät edusta kartalla tällä hetkellä näkyviä hälytyksiä.</value>
+  </data>
+  <data name="PromoWarningImmutable" xml:space="preserve">
+    <value>Tarkista mainokseesi huolellisesti, et voi muokata sitä julkaisun jälkeen</value>
+  </data>
+  <data name="PromoWarningNoCancellation" xml:space="preserve">
+    <value>Oletko varma sen julkaisemisesta? Ei voi poistaa sen jälkeen</value>
+  </data>
+  <data name="PromoInsufficientBalance" xml:space="preserve">
+    <value>Puuttuu {0} voimat</value>
+  </data>
+  <data name="PromoSaldoActual" xml:space="preserve">
+    <value>NYKYINEN TASAPAINO: {0} VALTUUDET</value>
+  </data>
+  <data name="PromoCostoActual" xml:space="preserve">
+    <value>Nykyinen kustannus: {0} Powers</value>
+  </data>
+  <data name="PromoSaldoDespues" xml:space="preserve">
+    <value>Tasapaino jälkeen: {0} voimat</value>
+  </data>
+  <data name="PromoLanzarPromocion" xml:space="preserve">
+    <value>LAUKAISUN PROMOOTIO</value>
+  </data>
+  <data name="PromoComprarPoderes" xml:space="preserve">
+    <value>OSTOVOIMAT</value>
+  </data>
+  <data name="PromoContenidoPromocional" xml:space="preserve">
+    <value>MAINOSSISÄLTÖ</value>
+  </data>
+  <data name="PromoDescribePromocion" xml:space="preserve">
+    <value>Kuvaile ylennyksesi tai tarjouksesi...</value>
+  </data>
+  <data name="PromoMultimedia" xml:space="preserve">
+    <value>MULTIMEDIA (1 mukana, enintään 10 yhteensä)</value>
+  </data>
+  <data name="PromoItemIncluido" xml:space="preserve">
+    <value>✓ Mukana</value>
+  </data>
+  <data name="PromoItemCosto" xml:space="preserve">
+    <value>+{0} voimat</value>
+  </data>
+  <data name="PromoLogoOpcional" xml:space="preserve">
+    <value>LOGO (valinnainen)</value>
+  </data>
+  <data name="PromoAgregarLogo" xml:space="preserve">
+    <value>Lisää logo (+{0} voimat)</value>
+  </data>
+  <data name="PromoAlcanceGeografico" xml:space="preserve">
+    <value>MAANTIETEELLINEN LAAJUUS</value>
+  </data>
+  <data name="PromoRadioMetros" xml:space="preserve">
+    <value>Säde: {0} metriä</value>
+  </data>
+  <data name="PromoDuracion" xml:space="preserve">
+    <value>KESTO</value>
+  </data>
+  <data name="PromoDuracionDias" xml:space="preserve">
+    <value>Kesto: {0} päivää</value>
+  </data>
+  <data name="PromoOpcionesContacto" xml:space="preserve">
+    <value>YHTEYDENOTTOVAIHTOEHDOT</value>
+  </data>
+  <data name="PromoHabilitarChatPrivado" xml:space="preserve">
+    <value>Ota Private Chat käyttöön (+{0} Powers)</value>
+  </data>
+  <data name="PromoPermitirDomicilio" xml:space="preserve">
+    <value>Salli kotimääräykset (+{0} voimat)</value>
+  </data>
+  <data name="PromoNotificacionesPush" xml:space="preserve">
+    <value>PUSH-ILMOITUKSET (valinnainen)</value>
+  </data>
+  <data name="PromoEnviarPush" xml:space="preserve">
+    <value>Lähetä push-ilmoituksia</value>
+  </data>
+  <data name="PromoUsuariosDisponibles" xml:space="preserve">
+    <value>Käyttäjät saatavilla {0}m:ssa: {1}</value>
+  </data>
+  <data name="PromoNotificarA" xml:space="preserve">
+    <value>Ilmoita {0} käyttäjille</value>
+  </data>
+  <data name="PromoTextoPush" xml:space="preserve">
+    <value>Kirjoita push-ilmoituksen teksti:</value>
+  </data>
+  <data name="PromoCostoTotal" xml:space="preserve">
+    <value>KOKONAISKUSTANNUS: {0} VOIMAT</value>
+  </data>
+  <data name="PromoGuidance" xml:space="preserve">
+    <value>Lisää logo ja yhteystiedot, jotta kampanjastasi tulee vakavampi</value>
+  </data>
+  <data name="PromoErrorCreando" xml:space="preserve">
+    <value>Virhe promootion luomisessa</value>
+  </data>
+  <data name="PromoExitoCreada" xml:space="preserve">
+    <value>Onnistuneesti luotu promootio</value>
+  </data>
+  <data name="PromoNecesitasPoderes" xml:space="preserve">
+    <value>Tarvitset vähintään {0} voimaa tähän ylennykseen</value>
+  </data>
+  <data name="ChatPendingAcceptance" xml:space="preserve">
+    <value>Odotan molempien osapuolten hyväksyntää</value>
+  </data>
+  <data name="ChatAcceptTerms" xml:space="preserve">
+    <value>Hyväksy ehdot</value>
+  </data>
+  <data name="ChatProveedor" xml:space="preserve">
+    <value>Toimittaja:</value>
+  </data>
+  <data name="ChatUsted" xml:space="preserve">
+    <value>Sinä:</value>
+  </data>
+  <data name="ChatAceptado" xml:space="preserve">
+    <value>✅ Hyväksytty</value>
+  </data>
+  <data name="ChatPendiente" xml:space="preserve">
+    <value>⏳ Vireillä</value>
+  </data>
+  <data name="PromotionalAlarmHeader" xml:space="preserve">
+    <value>Paikallinen promootio</value>
+  </data>
+  <data name="DeliveryAvailable" xml:space="preserve">
+    <value>🚚 Kotiinkuljetus saatavilla</value>
+  </data>
+  <data name="ChatVerEnMapa" xml:space="preserve">
+    <value>Näkymä kartalla</value>
+  </data>
+  <data name="ChatEnviarMensaje" xml:space="preserve">
+    <value>Lähetä viesti</value>
+  </data>
+  <data name="ChatAdjuntarImagen" xml:space="preserve">
+    <value>Liitä kuva</value>
+  </data>
+  <data name="ChatEscribeMensaje" xml:space="preserve">
+    <value>Kirjoita viesti...</value>
+  </data>
+  <data name="ChatNoActivo" xml:space="preserve">
+    <value>Chat ei ole aktiivinen. Molempien osapuolten on ensin hyväksyttävä ehdot.</value>
+  </data>
+  <data name="ChatErrorEnviandoMensaje" xml:space="preserve">
+    <value>Virheviestin lähettäminen</value>
+  </data>
+  <data name="ChatMensajeEnviado" xml:space="preserve">
+    <value>Viesti lähetetty</value>
+  </data>
+  <data name="ChatTerminosAceptados" xml:space="preserve">
+    <value>Hyväksytyt ehdot. Chat on nyt aktiivinen.</value>
+  </data>
+  <data name="ChatErrorAceptandoTerminos" xml:space="preserve">
+    <value>Virhe ehtojen hyväksymisessä</value>
+  </data>
+  <data name="PromoPublicadoNoEditable" xml:space="preserve">
+    <value>Julkaistu - Muokkaamaton</value>
+  </data>
+  <data name="PromoInsuficiente" xml:space="preserve">
+    <value>Riittämätön</value>
+  </data>
+  <data name="PromoRecomendado" xml:space="preserve">
+    <value>Suositeltu ⭐</value>
+  </data>
+  <data name="PromoSinTerminosNoContacto" xml:space="preserve">
+    <value>Jos et hyväksy ehtoja, et voi ottaa käyttöön yhteydenotto- tai kotiinkuljetusvaihtoehtoja</value>
+  </data>
+  <data name="PromoTerminosRequeridos" xml:space="preserve">
+    <value>Sinun on hyväksyttävä ehdot, jotta yhteydenotto tai kotiinkuljetus mahdollistavat</value>
+  </data>
+  <data name="PromoTerminosCondiciones" xml:space="preserve">
+    <value>Chatin ehdot ja -säännöt</value>
+  </data>
+  <data name="PromoAceptoTerminos" xml:space="preserve">
+    <value>Suostun vastaanottamaan viestejä potentiaalisilta asiakkailta</value>
+  </data>
+  <data name="PromoTerminosObligatorios" xml:space="preserve">
+    <value>(vaaditaan yhteys/osoite)</value>
+  </data>
+  <data name="PromoTerminosExplicacion" xml:space="preserve">
+    <value>Hyväksymällä tarjouksen voit vastaanottaa yksityisviestejä niiltä, jotka ovat kiinnostuneita kampanjastasi sovelluksen integroidun chatin kautta.</value>
+  </data>
+  <data name="LabelAlarmas" xml:space="preserve">
+    <value>Hälytykset</value>
+  </data>
+  <data name="LabelAlarmasAgrupadas" xml:space="preserve">
+    <value>Ryhmitetyt hälyttimet</value>
+  </data>
+  <data name="Alarm_10" xml:space="preserve">
+    <value>Tapahtumat</value>
+  </data>
+  <data name="Alarm_11" xml:space="preserve">
+    <value>Äänien ostaminen</value>
+  </data>
+  <data name="Alarm_12" xml:space="preserve">
+    <value>Aseellisten ryhmien pakotettu äänestäminen</value>
+  </data>
+  <data name="Alarm_13" xml:space="preserve">
+    <value>Paikallinen promootio</value>
+  </data>
+  <data name="Promoción" xml:space="preserve">
+    <value>Markkinointi</value>
+  </data>
+  <data name="LblLimiteAlarmasFeed" xml:space="preserve">
+    <value>Hälytysten raja alkuperäisessä syötteessä</value>
+  </data>
+  <data name="LblDescripcionLimiteAlarmasFeed" xml:space="preserve">
+    <value>Valitse, kuinka monta hälytystä haluat ladata, kun avaat sovelluksen. Pienempi määrä parantaa suorituskykyä.</value>
+  </data>
+  <data name="OptConfNotif" xml:space="preserve">
+    <value>Parametrien ja ilmoitusten asettaminen</value>
+  </data>
+  <data name="PromoFormTitle" xml:space="preserve">
+    <value>Luo paikallinen promootio</value>
+  </data>
+  <data name="PromoAlcance" xml:space="preserve">
+    <value>3. LAAJUUS JA KESTO</value>
+  </data>
+  <data name="PromoCaracteristicasOpcionales" xml:space="preserve">
+    <value>4. VALINNAISET OMINAISUUDET</value>
+  </data>
+  <data name="PromoEnviarNotificaciones" xml:space="preserve">
+    <value>Lähetä {0} käyttäjille</value>
+  </data>
+  <data name="PromoCostoNotificaciones" xml:space="preserve">
+    <value>(+{0} tehoa per 50 käyttäjää)</value>
+  </data>
+  <data name="PromoConfirmacionFinal" xml:space="preserve">
+    <value>6. VAHVISTUS</value>
+  </data>
+  <data name="PromoConfirmarLanzamiento" xml:space="preserve">
+    <value>Oletko varma sen julkaisemisesta? Ei voi poistaa sen jälkeen</value>
+  </data>
+  <data name="PromoCreandoAlarma" xml:space="preserve">
+    <value>Edistäminen...</value>
+  </data>
+  <data name="PromoCreacionExitosa" xml:space="preserve">
+    <value>Promootio julkaistu menestyksekkäästi!</value>
+  </data>
+  <data name="PromoErrorCreacion" xml:space="preserve">
+    <value>Virhe promootion luomisessa</value>
+  </data>
+  <data name="PromoDescripcionVacia" xml:space="preserve">
+    <value>Sinun täytyy lisätä kuvaus ylennyksellesi</value>
+  </data>
+  <data name="PromoTerminoProveedor1" xml:space="preserve">
+    <value>Hyväksyn, että olen yksin vastuussa tarjotusta tuotteesta tai palvelusta, sen toimituksesta, laadusta, vaatimustenmukaisuudesta ja kaikista käyttäjän kanssa tehdyistä sopimuksista.</value>
+  </data>
+  <data name="PromoTerminoProveedor2" xml:space="preserve">
+    <value>Hyväksyn, että kaikki maksut, maksutavat tai perintä tehdään suoraan ostajan ja minun välillä, eikä SOSpect toimi välittäjänä eikä ole vastuussa näistä sopimuksista.</value>
+  </data>
+  <data name="PromoTerminoProveedor3" xml:space="preserve">
+    <value>Olen samaa mieltä siitä, että osoitteet, toimitukset tai kotipalvelut ovat yksin vastuullani, mukaan lukien turvallisuus, ajantasaisuus ja vaatimustenmukaisuus.</value>
+  </data>
+  <data name="PromoTerminoProveedor4" xml:space="preserve">
+    <value>Olen samaa mieltä siitä, että SOSpect toimii vain yhteydenottovälineenä ja on vapautettu vastuusta transaktiosta, tuotteesta tai palvelusta.</value>
+  </data>
+  <data name="PromoTerminoInteresado1" xml:space="preserve">
+    <value>Olen samaa mieltä siitä, että tuote tai palvelu tarjotaan suoraan toimittajan toimesta, eikä SOSpect takaa sen laatua, saatavuutta tai suorituskykyä.</value>
+  </data>
+  <data name="PromoTerminoInteresado2" xml:space="preserve">
+    <value>Olen samaa mieltä siitä, että kaikki maksut tehdään suoraan toimittajalle eikä SOSpect puutu asiaan tai vastaa rahansiirroista, siirroista tai taloudellisista sopimuksista.</value>
+  </data>
+  <data name="PromoTerminoInteresado3" xml:space="preserve">
+    <value>Hyväksyn normaalit riskit yksilöiden välisessä kaupassa, mukaan lukien henkilöllisyyden varmistamisen, tuotteen laadun ja kohtaamisen turvallisuuden.</value>
+  </data>
+  <data name="PromoTerminoInteresado4" xml:space="preserve">
+    <value>Olen samaa mieltä siitä, että SOSpect ei ole vastuussa tämän vuorovaikutuksen lopputuloksesta tai saavutetuista sopimuksista.</value>
+  </data>
+  <data name="PromoEjemplo" xml:space="preserve">
+    <value>Esimerkki: "🍕 2x1 pizza perhekoossa – Vain tänään klo 17–21 – Tule nauttimaan koko perheen kanssa"</value>
+  </data>
+  <data name="PromoUsuariosPotenciales" xml:space="preserve">
+    <value>Mahdolliset radion käyttäjät: {0}</value>
+  </data>
+  <data name="PromoAgregarMultimedia" xml:space="preserve">
+    <value>Lisää kuva/video</value>
+  </data>
+  <data name="PromoAgregarLogoImagen" xml:space="preserve">
+    <value>Lisää logo</value>
+  </data>
+  <data name="PromoLimiteMultimedia" xml:space="preserve">
+    <value>Voit lisätä enintään 10 valokuvaa/videota</value>
+  </data>
+  <data name="PromoAgregarFotoVideo" xml:space="preserve">
+    <value>Lisää kuva/video (10.{0})</value>
+  </data>
+  <data name="PromoPoderesInsuficientes" xml:space="preserve">
+    <value>Riittämättömät valtuudet</value>
+  </data>
+  <data name="PromoConfirmarLanzar" xml:space="preserve">
+    <value>Oletko varma tämän kampanjan käynnistämisestä?
+
+Kustannukset: {0} voimat
+Kesto: {1} päivää
+Säde: {2} metriä
+
+{3}</value>
+  </data>
+  <data name="PromoSiLanzar" xml:space="preserve">
+    <value>Kyllä, laukaisu</value>
+  </data>
+  <data name="LabelErrorDesconocido" xml:space="preserve">
+    <value>Tuntematon virhe</value>
+  </data>
+  <data name="LabelVideo" xml:space="preserve">
+    <value>Video</value>
+  </data>
+  <data name="LabelFoto" xml:space="preserve">
+    <value>Kuva</value>
+  </data>
+  <data name="LabelCargando" xml:space="preserve">
+    <value>Ladataan...</value>
+  </data>
+  <data name="PromocionLocal" xml:space="preserve">
+    <value>Paikallinen promootio</value>
+  </data>
+  <data name="PromoCaracteresRestantes" xml:space="preserve">
+    <value>{0} jäljellä olevat hahmot</value>
+  </data>
+  <data name="PromoPlaceholderTextoPush" xml:space="preserve">
+    <value>Esim. 🍕 2x1 pizza tänään! Vain klo 20 asti</value>
+  </data>
+  <data name="ChatTerminosCondiciones" xml:space="preserve">
+    <value>Chatin ehdot ja -säännöt</value>
+  </data>
+  <data name="ChatNoDisponible" xml:space="preserve">
+    <value>Chat ei ole saatavilla</value>
+  </data>
+  <data name="DebesAceptarTerminos" xml:space="preserve">
+    <value>Sinun on hyväksyttävä ehdot voidaksesi keskustella palveluntarjoajan kanssa.</value>
+  </data>
+  <data name="ChatAceptoTerminosInteresado" xml:space="preserve">
+    <value>Hyväksyn chatin ehdot ja säännöt</value>
+  </data>
+  <data name="ChatTerminoInteresado1" xml:space="preserve">
+    <value>Olen samaa mieltä siitä, että tuote tai palvelu tarjotaan suoraan toimittajan toimesta, eikä SOSpect takaa, vahvista tai takaa sitä.</value>
+  </data>
+  <data name="ChatTerminoInteresado2" xml:space="preserve">
+    <value>Olen samaa mieltä siitä, että kaikki maksut tehdään suoraan toimittajalle eikä SOSpect puutu asiaan tai vastaa rahansiirroista, siirroista tai taloudellisista sopimuksista.</value>
+  </data>
+  <data name="ChatTerminoInteresado3" xml:space="preserve">
+    <value>Suostun ottamaan vastuulleen normaalit riskit yksilöiden välisessä kaupassa, mukaan lukien mahdolliset maksuhäiriöt.</value>
+  </data>
+  <data name="ChatTerminoInteresado4" xml:space="preserve">
+    <value>Olen samaa mieltä siitä, että SOSpect ei ole vastuussa tämän vuorovaikutuksen lopputuloksesta tai saavutetuista sopimuksista.</value>
+  </data>
+  <data name="PromoPrioridadNotificaciones" xml:space="preserve">
+    <value>i️ Jos valitset vähemmän käyttäjiä kuin alueella saatavilla oleva kokonaismäärä, ajantasaiset ja aktiiviset sovellukset priorisoidaan, jotta kampanjasi tehokkuus maksimoidaan. Loput valitaan satunnaisesti.</value>
+  </data>
+  <data name="AppName" xml:space="preserve">
+    <value>SOSpect</value>
+  </data>
+  <data name="LblNuevaAlarmaCerca" xml:space="preserve">
+    <value>Uusi hälytys lähelläsi</value>
+  </data>
+  <data name="BtnVerAlarma" xml:space="preserve">
+    <value>Katso hälytys</value>
+  </data>
+  <data name="PromoEditarLogo" xml:space="preserve">
+    <value>Muuta logo</value>
+  </data>
+  <data name="PromoUsandoLogoGuardado" xml:space="preserve">
+    <value>Tallennetun käynnistyslogon käyttö</value>
+  </data>
+  <data name="PromoLogoSeGuardara" xml:space="preserve">
+    <value>Tämä logo tallennetaan ja käytetään tulevissa kampanjoissa</value>
+  </data>
+  <data name="ChatRecordatorioProveedorAcepto" xml:space="preserve">
+    <value>Olet jo hyväksynyt tämän kampanjan ehdot {0}</value>
+  </data>
+  <data name="ChatRecordatorioInteresadoAcepto" xml:space="preserve">
+    <value>Suostuit tämän keskustelun ehtoihin {0}</value>
+  </data>
+  <data name="ChatErrorIniciar" xml:space="preserve">
+    <value>Virhe chatin käynnistämisessä</value>
+  </data>
+  <data name="ChatErrorCargar" xml:space="preserve">
+    <value>Chatin latausvirhe</value>
+  </data>
+  <data name="ChatActivo" xml:space="preserve">
+    <value>Aktiivinen chat</value>
+  </data>
+  <data name="ChatAdjuntar" xml:space="preserve">
+    <value>Liitä</value>
+  </data>
+  <data name="ChatFuncionalidadProximamente" xml:space="preserve">
+    <value>Liitä kuva tulossa pian Toiminnallisuus</value>
+  </data>
+  <data name="ChatErrorAdjuntar" xml:space="preserve">
+    <value>Virhe kuvan liittämisessä</value>
+  </data>
+  <data name="ChatErrorNavegar" xml:space="preserve">
+    <value>Virhe karttaan navigoimisessa</value>
+  </data>
+  <data name="LabelRestriccion" xml:space="preserve">
+    <value>Jotkut hälytykset on tilapäisesti poistettu käytöstä Apple® iPhonessa® viranomaisten kanssa tekemättömyyden tai maan olosuhteiden, kuten vaalikausien tai muiden tapahtumien, vuoksi.</value>
+  </data>
+  <data name="LogoEditorTitle" xml:space="preserve">
+    <value>Crop Circular -logo</value>
+  </data>
+  <data name="LogoEditorZoom" xml:space="preserve">
+    <value>Säädä zoomia</value>
+  </data>
+  <data name="LogoEditorSave" xml:space="preserve">
+    <value>Tallenna</value>
+  </data>
+  <data name="LogoEditorNoImage" xml:space="preserve">
+    <value>Kuvaa ei ladattu</value>
+  </data>
+  <data name="LogoEditorSaveError" xml:space="preserve">
+    <value>Logon tallennusvirhe</value>
+  </data>
+  <data name="PromoVerificarNIT" xml:space="preserve">
+    <value>VARMISTA YRITTÄJYYS</value>
+  </data>
+  <data name="PromoPlaceholderNIT" xml:space="preserve">
+    <value>NIT tai omistajan tunnus</value>
+  </data>
+  <data name="PromoBotonVerificarNIT" xml:space="preserve">
+    <value>Vahvista henkilöllisyystodistus</value>
+  </data>
+  <data name="PromoDeclaroPropietario" xml:space="preserve">
+    <value>Julistan olevani tämän NIT/ID:n laillinen omistaja</value>
+  </data>
+  <data name="PromoDatosEmprendimiento" xml:space="preserve">
+    <value>YRITTÄJYYSDATA</value>
+  </data>
+  <data name="PromoPlaceholderNombreEmprendimiento" xml:space="preserve">
+    <value>Yrityksen nimi</value>
+  </data>
+  <data name="PromoPlaceholderNombrePropietario" xml:space="preserve">
+    <value>Omistajan nimi</value>
+  </data>
+  <data name="NITRequerido" xml:space="preserve">
+    <value>Sinun täytyy syöttää omistajan tai yrityksen tunnistenumero</value>
+  </data>
+  <data name="NITNoExisteSerPropietario" xml:space="preserve">
+    <value>Tätä tunnistenumeroa ei ole rekisteröity. Kun luot ensimmäisen kampanjan, sinut rekisteröidään omistajaksi. TÄRKEÄÄ: Varmista, että syötät oikean omistajan tai yrityksen tunnistenumeron alusta alkaen, sillä omistajan vaihtaminen vaatii jopa 15 päivän vahvistusprosessin teknisen tuen kautta.</value>
+  </data>
+  <data name="EresPropietario" xml:space="preserve">
+    <value>Sinä olet tämän hankkeen omistaja. Voit muokata nimeä ja logoa.</value>
+  </data>
+  <data name="EresSubalternoSoloPromocion" xml:space="preserve">
+    <value>Tämä hanke on jo olemassa. Voit luoda vain kampanjoita, et muuttaa nimeä tai logoa.</value>
+  </data>
+  <data name="DebeVerificarNITPrimero" xml:space="preserve">
+    <value>Sinun täytyy varmistaa henkilötunnus ennen kampanjan luomista</value>
+  </data>
+  <data name="DebeAceptarDeclaracionPropietario" xml:space="preserve">
+    <value>Sinun täytyy vahvistaa, että olet tämän yrityksen omistaja kyseisen tunnistenumeron alla</value>
+  </data>
+  <data name="NombreEmprendimientoYPropietarioRequeridos" xml:space="preserve">
+    <value>Sinun täytyy syöttää yrityksen nimi ja omistaja</value>
+  </data>
+  <data name="LabelAdvertencia" xml:space="preserve">
+    <value>Varoitus</value>
+  </data>
+  <data name="ErrorVerificandoNIT" xml:space="preserve">
+    <value>Henkilöllisyysnumeron vahvistaminen epäonnistui</value>
+  </data>
+  <data name="LblRefrescandoAlarmas" xml:space="preserve">
+    <value>Virkistävät hälytykset...</value>
+  </data>
+  <data name="LblCargandoAlarmas" xml:space="preserve">
+    <value>Hälytykset ladataan...</value>
+  </data>
+  <data name="LblActualizandoAlarmas" xml:space="preserve">
+    <value>Päivitetään hälytyksiä...</value>
+  </data>
+  <data name="LblAlarmaRecibida" xml:space="preserve">
+    <value>Hälytys vastaanotettu</value>
+  </data>
+  <data name="LblDetallePromocion" xml:space="preserve">
+    <value>Ylennystehtävät</value>
+  </data>
+  <data name="LblUsuariosNotificados" xml:space="preserve">
+    <value>Ilmoitetut käyttäjät</value>
+  </data>
+  <data name="LblPoderesUsados" xml:space="preserve">
+    <value>Käytetyt voimat</value>
+  </data>
+  <data name="LblRadioAlcance" xml:space="preserve">
+    <value>Kantaman säde</value>
+  </data>
+  <data name="LblDuracionDias" xml:space="preserve">
+    <value>Kesto (päivät)</value>
+  </data>
+  <data name="LblTextoPush" xml:space="preserve">
+    <value>Ilmoitusteksti</value>
+  </data>
+  <data name="LblEnvioAceptado" xml:space="preserve">
+    <value>Hyväksytty</value>
+  </data>
+  <data name="LblEnvioRechazado" xml:space="preserve">
+    <value>Hylätty</value>
+  </data>
+  <data name="LblTotalNotificados" xml:space="preserve">
+    <value>Yhteensä</value>
+  </data>
+  <data name="LblLogoHabilitado" xml:space="preserve">
+    <value>Logo päällä</value>
+  </data>
+  <data name="LblContactoHabilitado" xml:space="preserve">
+    <value>Yhteys sallittu</value>
+  </data>
+  <data name="LblDomicilioHabilitado" xml:space="preserve">
+    <value>Valtuutettu osoite</value>
+  </data>
+  <data name="LblConfiguracionPromocion" xml:space="preserve">
+    <value>Markkinointiasetukset</value>
+  </data>
+  <data name="LblCantidadMedia" xml:space="preserve">
+    <value>Valokuvat/Videot</value>
+  </data>
+  <data name="LblFechaInicio" xml:space="preserve">
+    <value>Aloituspäivä</value>
+  </data>
+  <data name="LblFechaFin" xml:space="preserve">
+    <value>Loppupäivä</value>
+  </data>
+  <data name="LblOpcionesHabilitadas" xml:space="preserve">
+    <value>Sallitut asetukset</value>
+  </data>
+  <data name="LblListadoUsuarios" xml:space="preserve">
+    <value>Käyttäjäluettelo</value>
+  </data>
+  <data name="LblPendiente" xml:space="preserve">
+    <value>Vireillä</value>
+  </data>
+  <data name="LblDescripcionPromocional" xml:space="preserve">
+    <value>Mainoskuvaus</value>
+  </data>
+  <data name="LblNitCedula" xml:space="preserve">
+    <value>NIT/Cédula</value>
+  </data>
+  <data name="Anunciopublicitariodeusuarios" xml:space="preserve">
+    <value>Käyttäjäbanneri</value>
+  </data>
+  <data name="LblNombreEmprendimiento" xml:space="preserve">
+    <value>Venturen nimi</value>
+  </data>
+  <data name="LblProcesandoVideo" xml:space="preserve">
+    <value>Videon käsittely...</value>
+  </data>
+  <data name="LblErrorGrabarVideo" xml:space="preserve">
+    <value>Virhe videonauhoituksen käynnistyessä</value>
+  </data>
+  <data name="LblErrorGuardarVideo" xml:space="preserve">
+    <value>Videon tallennusvirhe</value>
+  </data>
+  <data name="LblVideoVacio" xml:space="preserve">
+    <value>Videota ei tallennettu</value>
+  </data>
+  <data name="LblDescartarVideo" xml:space="preserve">
+    <value>Haluatko hylätä tallentamasi videon?</value>
+  </data>
+  <data name="LblTocaParaGrabar" xml:space="preserve">
+    <value>Napauta tallentaaksesi</value>
+  </data>
+  <data name="LblTocaParaDetener" xml:space="preserve">
+    <value>Napauta pysäyttääksesi</value>
+  </data>
+  <data name="LblContactarAnunciante" xml:space="preserve">
+    <value>Ota yhteyttä mainostajaan</value>
+  </data>
+  <data name="LblVerChatsPromocion" xml:space="preserve">
+    <value>Katso tämän kampanjan chatit</value>
+  </data>
+  <data name="LblChatsPromocion" xml:space="preserve">
+    <value>Promootiokeskustelut</value>
+  </data>
+  <data name="LblNoTienesChatsAun" xml:space="preserve">
+    <value>Teillä ei vielä ole keskusteluja</value>
+  </data>
+  <data name="LblDetallePromocion_Duplicate[1]" xml:space="preserve">
+    <value>Ylennystehtävät</value>
+  </data>
+  <data name="LblAceptarTerminosChat" xml:space="preserve">
+    <value>Ottaaksesi yhteyttä mainostajaan, sinun täytyy hyväksyä chatin ehdot</value>
+  </data>
+  <data name="LblAceptarYContactar" xml:space="preserve">
+    <value>Hyväksy ehdot ja ota yhteyttä</value>
+  </data>
+  <data name="LblTituloCierreEncuesta" xml:space="preserve">
+    <value>Päätös kartoituksella</value>
+  </data>
+  <data name="LblTituloProponerCierre" xml:space="preserve">
+    <value>Ehdota hälytyksen sulkemista</value>
+  </data>
+  <data name="LblDescripcionPropuestaCierre" xml:space="preserve">
+    <value>Miksi tämä hälytys pitäisi sulkea?</value>
+  </data>
+  <data name="LblPlaceholderPropuestaCierre" xml:space="preserve">
+    <value>Kuvaile lyhyesti syytä tämän hälytyksen sulkemiseen...</value>
+  </data>
+  <data name="LblEvidenciaFotografica" xml:space="preserve">
+    <value>Valokuvallinen todistusaineisto (valinnainen)</value>
+  </data>
+  <data name="LblBotonProponerCierre" xml:space="preserve">
+    <value>Ehdota sulkemista</value>
+  </data>
+  <data name="LblTituloVotacionCierre" xml:space="preserve">
+    <value>Loppuäänestys käynnissä</value>
+  </data>
+  <data name="LblDescripcionPropuesta" xml:space="preserve">
+    <value>Ehdotuksen kuvaus</value>
+  </data>
+  <data name="LblResultadosVotacion" xml:space="preserve">
+    <value>Äänestystulokset</value>
+  </data>
+  <data name="LblVotosAFavor" xml:space="preserve">
+    <value>Puolesta</value>
+  </data>
+  <data name="LblVotosEnContra" xml:space="preserve">
+    <value>Vastaan</value>
+  </data>
+  <data name="LblTiempoRestanteVotacion" xml:space="preserve">
+    <value>Jäljellä oleva aika:</value>
+  </data>
+  <data name="LblVotarAFavor" xml:space="preserve">
+    <value>Äänestä puolesta</value>
+  </data>
+  <data name="LblVotarEnContra" xml:space="preserve">
+    <value>Äänestä vastaan</value>
+  </data>
+  <data name="LblYaVotoAFavor" xml:space="preserve">
+    <value>Olet jo äänestänyt sulkemisen puolesta</value>
+  </data>
+  <data name="LblYaVotoEnContra" xml:space="preserve">
+    <value>Olet jo äänestänyt sulkemista vastaan</value>
+  </data>
+  <data name="LblVotacionFinalizada" xml:space="preserve">
+    <value>Äänestys päättyi</value>
+  </data>
+  <data name="LblDescripcionRequerida" xml:space="preserve">
+    <value>Sinun täytyy syöttää kuvaus</value>
+  </data>
+  <data name="LblPropuestaCierreEnviada" xml:space="preserve">
+    <value>Ehdotus lähetetty</value>
+  </data>
+  <data name="LblPropuestaCierreExito" xml:space="preserve">
+    <value>Loppuehdotuksesi on toimitettu. Yhteisö äänestää päätöksestä.</value>
+  </data>
+  <data name="LblVotoRegistrado" xml:space="preserve">
+    <value>Kirjattu äänestys</value>
+  </data>
+  <data name="LblVotoRegistradoExito" xml:space="preserve">
+    <value>Äänestyksesi on kirjattu onnistuneesti</value>
+  </data>
+  <data name="LblTituloCierreCaptura" xml:space="preserve">
+    <value>Sulje hälytys</value>
+  </data>
+  <data name="LblTituloCierrePersona" xml:space="preserve">
+    <value>Sulje kadonneen henkilön hälytys</value>
+  </data>
+  <data name="LblTituloCierreMascota" xml:space="preserve">
+    <value>Sulje kadonnut lemmikki -hälytys</value>
+  </data>
+  <data name="LblTituloCierreBasico" xml:space="preserve">
+    <value>Tarkka valmius</value>
+  </data>
+  <data name="LblPersonaEncontrada" xml:space="preserve">
+    <value>Löytyikö henkilö?</value>
+  </data>
+  <data name="LblMascotaRecuperada" xml:space="preserve">
+    <value>Toipuiko lemmikki?</value>
+  </data>
+  <data name="LblCierreExitoso" xml:space="preserve">
+    <value>Hälytys suljettu onnistuneesti</value>
+  </data>
+  <data name="LblProponendoCierre" xml:space="preserve">
+    <value>Lähetetään päätösehdotus...</value>
+  </data>
+  <data name="LblRegistrandoVoto" xml:space="preserve">
+    <value>Äänien rekisteröinti...</value>
+  </data>
+  <data name="LblNotifResultadoCierreAprobado" xml:space="preserve">
+    <value>{0} äänet saatiin. {1} % puolesta, {2} % vastaan. Kansalaishälytys suljettiin.</value>
+  </data>
+  <data name="LblNotifResultadoCierreDenegado" xml:space="preserve">
+    <value>{0} äänet saatiin. {1} % puolesta, {2} % vastaan. Sulkemispyyntö hylättiin.</value>
+  </data>
+  <data name="LblNotifResultadoSinVotos" xml:space="preserve">
+    <value>Yhtään ääntä ei saatu 24 tunnin aikana. Kansalaishälytys suljettiin.</value>
+  </data>
+  <data name="LblEvidenciaFotograficaCierre" xml:space="preserve">
+    <value>Valokuvallinen todistusaineisto (valinnainen)</value>
+  </data>
+  <data name="LblConsultandoSolicitud" xml:space="preserve">
+    <value>Konsultointipyyntö...</value>
+  </data>
+  <data name="LblNotifProponerCierreAlerta" xml:space="preserve">
+    <value>Lähelläsi oleva kansalaishälytys on ehdotettu suljettavaksi. Sinulla on 24 tuntia aikaa äänestää.</value>
+  </data>
+  <data name="Alertaciudadana" xml:space="preserve">
+    <value>Kansalaishälytys</value>
+  </data>
+  <data name="Alarm_14" xml:space="preserve">
+    <value>Kansalaishälytys</value>
+  </data>
+  <data name="LblVerAlertaCercana" xml:space="preserve">
+    <value>Nähdään {0} {1} kaukana luotasi</value>
+  </data>
+  <data name="LblVerAlerta" xml:space="preserve">
+    <value>Katso hälytystiedot</value>
+  </data>
+  <data name="LblMensajeDestinatario" xml:space="preserve">
+    <value>Viestin vastaanottaja</value>
+  </data>
+  <data name="LblMensajeRemitente" xml:space="preserve">
+    <value>Viestin lähettäjä</value>
+  </data>
+  <data name="LblDescripcionInicial_Duplicate[1]" xml:space="preserve">
+    <value>Tervetuloa SOSpectiin, yhteisöturvasovellukseesi. Näytämme sinulle, miten se toimii vaihe vaiheelta.</value>
+  </data>
+  <data name="SeguimientoUbicacionTitulo" xml:space="preserve">
+    <value>SOSpect Active</value>
+  </data>
+  <data name="SeguimientoUbicacionMensaje" xml:space="preserve">
+    <value>Lähistöllä olevien hälyttimien valvonta</value>
+  </data>
+  <data name="PermisoUbicacionFondoTitulo" xml:space="preserve">
+    <value>Sijainti taustalla</value>
+  </data>
+  <data name="PermisoUbicacionFondoMensaje" xml:space="preserve">
+    <value>SOSpect tarvitsee pääsyn sijaintiisi, vaikka sovellus olisi suljettu, varoittaakseen sinua lähistöllä olevista riskialueista. Haluatko sallia pääsyn?</value>
+  </data>
+  <data name="LblIntervaloMonitoreoBackground" xml:space="preserve">
+    <value>Turvallisuusvalvontaväli</value>
+  </data>
+  <data name="LblDescripcionIntervaloBackground" xml:space="preserve">
+    <value>Kuinka usein haluat, että SOSpect tarkistaa, oletko saapunut alueelle, jossa on kriittisiä riskejä turvallisuutesi kannalta, ja ilmoittavan sinulle?</value>
+  </data>
+  <data name="LblNoHayAlarmas" xml:space="preserve">
+    <value>Täällä ei ole hälytyksiä tällä hetkellä.</value>
+  </data>
+  <data name="NotificacionServicioTitulo" xml:space="preserve">
+    <value>SOSpect Active</value>
+  </data>
+  <data name="NotificacionServicioTexto" xml:space="preserve">
+    <value>Lähistöllä olevien hälyttimien valvonta</value>
+  </data>
+  <data name="NotificacionCanalNombre" xml:space="preserve">
+    <value>Sijainnin seuranta</value>
+  </data>
+  <data name="NotificacionCanalDescripcion" xml:space="preserve">
+    <value>SOSpect seuraa sijaintiasi varoittaakseen sinua riskialueista</value>
+  </data>
+  <data name="LabelPermitir" xml:space="preserve">
+    <value>Salli</value>
+  </data>
+  <data name="LabelAhoraNo" xml:space="preserve">
+    <value>Ei nyt</value>
+  </data>
+  <data name="OptimizacionBateriaTitulo" xml:space="preserve">
+    <value>Akun optimointi</value>
+  </data>
+  <data name="OptimizacionBateriaMensaje" xml:space="preserve">
+    <value>Jotta SOSpect voisi suojata sinua, vaikka sovellus olisi suljettu, sen täytyy poistaa akun optimointi käytöstä. Tämä mahdollistaa valvontapalvelun aktiivisena pysymisen. Haluatko sallia sen?</value>
+  </data>
+  <data name="LblUsuarioID" xml:space="preserve">
+    <value>Käyttäjätunnus:</value>
+  </data>
+  <data name="SeguirUsuario" xml:space="preserve">
+    <value>Seuraa tätä käyttäjää</value>
+  </data>
+  <data name="DejarDeSeguirUsuario" xml:space="preserve">
+    <value>Lopeta seuraaminen</value>
+  </data>
+  <data name="SeguirExplicacion" xml:space="preserve">
+    <value>Seuraaminen on ilmaista. Näet heidän hälytyksensä kohdassa 'Seuraa', ilman push-ilmoituksia.</value>
+  </data>
+  <data name="SiguiendoExplicacion" xml:space="preserve">
+    <value>'Seuraa' ei lähetä ilmoituksia. Kiireellisiin hälytyksiin käytä Protected-toimintoa.</value>
+  </data>
+  <data name="PersonalizarParaTi" xml:space="preserve">
+    <value>Räätälöi itsellesi</value>
+  </data>
+  <data name="PaisesInteres" xml:space="preserve">
+    <value>Kiinnostuksen kohteet</value>
+  </data>
+  <data name="TodosLosPaises" xml:space="preserve">
+    <value>Kaikki maat</value>
+  </data>
+  <data name="LikeAlarma" xml:space="preserve">
+    <value>Kuten</value>
+  </data>
+  <data name="QuitarLikeAlarma" xml:space="preserve">
+    <value>En pidä siitä enää</value>
+  </data>
+  <data name="ReenviarAlarma" xml:space="preserve">
+    <value>Eteenpäin</value>
+  </data>
+  <data name="QuitarReenvio" xml:space="preserve">
+    <value>Peruuta edelleenlähetys</value>
+  </data>
+  <data name="CompartirAlarma" xml:space="preserve">
+    <value>Jaa</value>
+  </data>
+  <data name="MarcarVerdadera" xml:space="preserve">
+    <value>Tämä pitää paikkansa.</value>
+  </data>
+  <data name="MarcarFalsa" xml:space="preserve">
+    <value>Tämä ei pidä paikkaansa.</value>
+  </data>
+  <data name="SeguirConfirmacion" xml:space="preserve">
+    <value>Haluatko seurata tätä käyttäjää? Näet heidän hälytyksensä 'Seuraat'-syötteessäsi.</value>
+  </data>
+  <data name="DejarDeSeguirConfirmacion" xml:space="preserve">
+    <value>Lopettaa tämän käyttäjän seuraaminen?</value>
+  </data>
+  <data name="LblAdvertenciaLimiteAlto" xml:space="preserve">
+    <value>Korkeampi raja voi vaikuttaa suorituskykyyn hitailla laitteilla.</value>
+  </data>
+  <data name="MensajeSeguirUsuario" xml:space="preserve">
+    <value>Nyt seuraa tätä käyttäjää. Hälytyksesi näkyvät 'Seuraa'-välilehdellä. Huomaa, että seuratut käyttäjät eivät tuota push-ilmoituksia; saadaksesi kiireellisiä hälytyksiä joltakulta, harkitse niiden lisäämistä Suojattuiksi.</value>
+  </data>
+  <data name="PublicarEnX" xml:space="preserve">
+    <value>Julkaise X:ään (Twitter)</value>
+  </data>
+  <data name="PublicarEnFacebook" xml:space="preserve">
+    <value>Julkaise Facebookissa</value>
+  </data>
+  <data name="TextoCompartirAlarmaIntro" xml:space="preserve">
+    <value>🚨 Alueellani on ilmestynyt uusi hälytys!
+Jaettu SOSpectissä, yhteisösovelluksessa, joka pitää meidät ajan tasalla ja yhtenäisinä rikollisuuden ja vaarojen edessä.
+👉 Katso tiedot:</value>
+  </data>
+  <data name="PromoConfirmaUbicacion" xml:space="preserve">
+    <value>Vahvista paikka, jossa haluat käynnistää kampanjan</value>
+  </data>
+  <data name="PromoConfirmaUbicacionModal" xml:space="preserve">
+    <value>Napauta karttaa säätääksesi tarkkaa kohtaa, jossa kampanja käynnistetään</value>
+  </data>
+  <data name="PromoBotonConfirmarUbicacion" xml:space="preserve">
+    <value>Vahvista sijainti</value>
+  </data>
+  <data name="LblUsuarios" xml:space="preserve">
+    <value>Käyttäjät</value>
+  </data>
+  <data name="TituloAutoridadesResponsables" xml:space="preserve">
+    <value>Vastuulliset viranomaiset</value>
+  </data>
+  <data name="AutoridadesResponsablesDescripcion" xml:space="preserve">
+    <value>Tämän alueen turvallisuudesta vastaavat julkiset virkamiehet</value>
+  </data>
+  <data name="LblVerAutoridadesResponsables" xml:space="preserve">
+    <value>Katso vastuulliset viranomaiset</value>
+  </data>
+  <data name="AlarmasPoliticasUltimos30d" xml:space="preserve">
+    <value>30 päivän turvahälytykset</value>
+  </data>
+  <data name="LblEmail" xml:space="preserve">
+    <value>Sähköposti</value>
+  </data>
+  <data name="LblTelefono" xml:space="preserve">
+    <value>Puhelin</value>
+  </data>
+  <data name="LblSitioWeb" xml:space="preserve">
+    <value>Verkkosivusto</value>
+  </data>
+  <data name="Cargo_1" xml:space="preserve">
+    <value>Presidentti</value>
+  </data>
+  <data name="Cargo_2" xml:space="preserve">
+    <value>Kuvernööri</value>
+  </data>
+  <data name="Cargo_3" xml:space="preserve">
+    <value>Pormestari</value>
+  </data>
+  <data name="Cargo_4" xml:space="preserve">
+    <value>Pormestari</value>
+  </data>
+  <data name="LblResolucion" xml:space="preserve">
+    <value>Ratkaisu</value>
+  </data>
+  <data name="LblVerReporte" xml:space="preserve">
+    <value>· Katso → raportti</value>
+  </data>
+  <data name="LblAlarmasAbiertas" xml:space="preserve">
+    <value>Avaa hälytykset</value>
+  </data>
+  <data name="LblAlarmasCerradas" xml:space="preserve">
+    <value>Hälyttimet suljettuina</value>
+  </data>
+  <data name="LblTiempoPromedioResolucion" xml:space="preserve">
+    <value>Keskimääräinen resoluutioaika</value>
+  </data>
+  <data name="LblDias" xml:space="preserve">
+    <value>Päivää</value>
+  </data>
+  <data name="LblTituloReporteAutoridad" xml:space="preserve">
+    <value>Suorituskykyraportti</value>
+  </data>
+  <data name="LblReporteAutoridadNota" xml:space="preserve">
+    <value>Data päivittyy päivittäin klo 0:00 UTC</value>
+  </data>
+  <data name="LblTiposDeAlarma" xml:space="preserve">
+    <value>Ilmoitettujen hälytysten tyypit</value>
+  </data>
+  <data name="LblLikes" xml:space="preserve">
+    <value>Tykkäykset</value>
+  </data>
+  <data name="LblReenvios" xml:space="preserve">
+    <value>Edelleenlähetys</value>
+  </data>
+  <data name="LblMarcarRutaEscapeOpcional" xml:space="preserve">
+    <value>Mark Fugitiven pakoreitti (valinnainen)</value>
+  </data>
+  <data name="LblCalificaGestionPolitico" xml:space="preserve">
+    <value>Arvioi tämän auktoriteetin toimintaa</value>
+  </data>
+  <data name="LblAprobacionCiudadana" xml:space="preserve">
+    <value>Kansalaisten hyväksyntä</value>
+  </data>
+  <data name="LblVotantesAprobacion" xml:space="preserve">
+    <value>Äänestäjät</value>
+  </data>
+  <data name="LblEstrella1" xml:space="preserve">
+    <value>Tosi paha</value>
+  </data>
+  <data name="LblEstrella5" xml:space="preserve">
+    <value>Erinomaista</value>
+  </data>
+  <data name="LblAprobacionSOSpect" xml:space="preserve">
+    <value>Kansalaisten hyväksyntä</value>
+  </data>
+  <data name="LblVerReporteCorto" xml:space="preserve">
+    <value>Katso → raportti</value>
+  </data>
+  <data name="LblNuevaDescripcion" xml:space="preserve">
+    <value>Uusi kuvaus</value>
+  </data>
+  <data name="LblVeracidadAlarma" xml:space="preserve">
+    <value>Totuudenmukaisuushälytys</value>
+  </data>
+  <data name="LblVotoPendienteEnCierre" xml:space="preserve">
+    <value>Äänestyksesi puuttuu, jotta voisiko hälytin sulkea</value>
+  </data>
+  <data name="MsgYaVotasteCierre" xml:space="preserve">
+    <value>Et voi äänestää uudestaan, olet jo äänestänyt tämän hälytyksen puolesta</value>
+  </data>
+  <data name="MsgEresProponenteCierre" xml:space="preserve">
+    <value>Sinä olet sulkemisen hakija, et voi äänestää</value>
+  </data>
+  <data name="LblAlarmaEnVotacionCierre" xml:space="preserve">
+    <value>Tämä hälytys on parhaillaan äänestyksessä</value>
+  </data>
+  <data name="LblVerHistorialAlarma" xml:space="preserve">
+    <value>Katso hälytyshistoria</value>
+  </data>
+  <data name="LblResultadosOcultos" xml:space="preserve">
+    <value>Tulokset näytetään äänestyksen jälkeen</value>
+  </data>
+  <data name="LabelNickname" xml:space="preserve">
+    <value>Alias/Lempinimi:</value>
+  </data>
+  <data name="LabelNicknameHint" xml:space="preserve">
+    <value>Anna käyttäjälle alias tai lempinimi, jotta tunnistat hänet myöhemmin</value>
+  </data>
+  <data name="LabelNicknameObligatorio" xml:space="preserve">
+    <value>Nimimerkki tai lempinimi on pakollinen</value>
+  </data>
+  <data name="MsgSolicitudProtegidoPendiente" xml:space="preserve">
+    <value>Tälle käyttäjälle on jo vireillä oleva hyväksyntäpyyntö. Odota, että se hyväksytään tai hylätään, ennen kuin lähetät uuden.</value>
+  </data>
+  <data name="LblSuspensionActiva" xml:space="preserve">
+    <value>Ilmoitukset keskeytetään väliaikaisesti käyttäjän pyynnöstä</value>
+  </data>
+  <data name="LabelAlertas" xml:space="preserve">
+    <value>Hälytykset</value>
+  </data>
+  <data name="LblRankingPoliticosLocales" xml:space="preserve">
+    <value>Paikallinen poliittinen sijoitus</value>
+  </data>
+  <data name="LblRankingDescripcion" xml:space="preserve">
+    <value>Vertaa paikallispoliitikkojen suoriutumista eri kansalaismittareiden mukaan</value>
+  </data>
+  <data name="LblSeleccionaMetrica" xml:space="preserve">
+    <value>Valitse metriikka</value>
+  </data>
+  <data name="LblTop5Mejores" xml:space="preserve">
+    <value>Top 5 Best</value>
+  </data>
+  <data name="LblTop5Peores" xml:space="preserve">
+    <value>Top 5 huonointa</value>
+  </data>
+  <data name="LblSinDatos" xml:space="preserve">
+    <value>Tietoja ei saatavilla</value>
+  </data>
+  <data name="LblMetricaPctResolucion" xml:space="preserve">
+    <value>Hälytysten resoluutio %</value>
+  </data>
+  <data name="LblMetricaCntAlarmas" xml:space="preserve">
+    <value>Kokonaishälytyksiä raportoitu</value>
+  </data>
+  <data name="LblMetricaCntLikes" xml:space="preserve">
+    <value>Tykkäykset</value>
+  </data>
+  <data name="LblMetricaCntReenvios" xml:space="preserve">
+    <value>Hälytyksen välitys</value>
+  </data>
+  <data name="LblMetricaAvgDias" xml:space="preserve">
+    <value>Keskimääräiset resoluutiopäivät</value>
+  </data>
+  <data name="LblMetricaAprobacion" xml:space="preserve">
+    <value>Kansalaisten hyväksyntä</value>
+  </data>
+  <data name="LblCargandoRanking" xml:space="preserve">
+    <value>Ladataan sijoitusta...</value>
+  </data>
+  <data name="OptRankingPoliticosLocales" xml:space="preserve">
+    <value>Paikallinen poliittinen sijoitus</value>
+  </data>
+  <data name="LblVerRankingPoliticos" xml:space="preserve">
+    <value>Katso paikallispoliitikkojen sijoitus</value>
+  </data>
+  <data name="LblMetricaScoreGestion" xml:space="preserve">
+    <value>Johtopisteet</value>
+  </data>
+  <data name="LblCriteriosGestionTitulo" xml:space="preserve">
+    <value>Miten hallintaa mitataan?</value>
+  </data>
+  <data name="LblCriterioAlarmasReales" xml:space="preserve">
+    <value>Vain todelliset hälytykset lasketaan (vahvistetut väärät hälytykset jätetään pois)</value>
+  </data>
+  <data name="LblCriterioPremioViralidad" xml:space="preserve">
+    <value>Hälyttimien sulkeminen palkitaan, erityisesti niiden, joissa on korkea diffuusio</value>
+  </data>
+  <data name="LblCriterioPenalizacionAbiertas" xml:space="preserve">
+    <value>Hälyttimet, jotka ovat olleet auki päiviä ilman sulkemista, rangaistaan, erityisesti virusperäiset</value>
+  </data>
+  <data name="LblCriterioScoreFinal" xml:space="preserve">
+    <value>Lopullinen pistemäärä vaihtelee 0:sta sataan yhdistäen resoluution, ajantasaisuuden ja kriittisen hälytyksen hallinnan</value>
+  </data>
+  <data name="LblCriterioBaseHistorial" xml:space="preserve">
+    <value>Pistemäärän perustana on sen alueella historiallisesti suljettujen hälyttimien prosenttiosuus</value>
+  </data>
+  <data name="LblExpiraEl" xml:space="preserve">
+    <value>Päättyy</value>
+  </data>
+  <data name="LblDashboardMiEmprendimiento" xml:space="preserve">
+    <value>Yrittäjyyteni</value>
+  </data>
+  <data name="LblPuestoEnPais" xml:space="preserve">
+    <value>Sijoitus #{0} {1}</value>
+  </data>
+  <data name="LblMejorEmprendedor" xml:space="preserve">
+    <value>Maan parhaat</value>
+  </data>
+  <data name="LblPeorEmprendedor" xml:space="preserve">
+    <value>Parantamismahdollisuuksia on enemmän</value>
+  </data>
+  <data name="LblVerMasEstadisticas" xml:space="preserve">
+    <value>Katso lisää tilastoja</value>
+  </data>
+  <data name="LblComparativoEnPais" xml:space="preserve">
+    <value>Vertailu omassa maassasi</value>
+  </data>
+  <data name="LblTiempoRespuesta" xml:space="preserve">
+    <value>Erikseen. keskiarvo</value>
+  </data>
+  <data name="LblSatisfaccion" xml:space="preserve">
+    <value>Tyytyväisyys</value>
+  </data>
+  <data name="LblChatsMes" xml:space="preserve">
+    <value>Keskustelut tässä kuussa</value>
+  </data>
+  <data name="LblTransacciones" xml:space="preserve">
+    <value>Onnistuneet kaupat</value>
+  </data>
+  <data name="LblTuPuntaje" xml:space="preserve">
+    <value>Sinä</value>
+  </data>
+  <data name="LabelContinuar" xml:space="preserve">
+    <value>Jatka</value>
+  </data>
+  <data name="LblDashboardEmprendedorTitulo" xml:space="preserve">
+    <value>Ilmoita yrittäjyydestäni</value>
+  </data>
+  <data name="OptDashboardMiEmprendimiento" xml:space="preserve">
+    <value>Ilmoita yrittäjyydestäni</value>
+  </data>
+  <data name="LblSeleccionaEmprendimiento" xml:space="preserve">
+    <value>Valitse startup</value>
+  </data>
+  <data name="MsgUsarDatosUltimaPromocion" xml:space="preserve">
+    <value>Haluatko täyttää lomakkeen viimeisimmän kampanjan tiedoilla?</value>
+  </data>
+  <data name="LblSi" xml:space="preserve">
+    <value>Kyllä</value>
+  </data>
+  <data name="LblNo" xml:space="preserve">
+    <value>Ei</value>
+  </data>
+  <data name="LblDashboardSinDatosTitulo" xml:space="preserve">
+    <value>Mittareita ei ole saatavilla</value>
+  </data>
+  <data name="LblDashboardSinDatosDescripcion" xml:space="preserve">
+    <value>Tällä hankkeella ei vielä ole laskettuja mittareita. Tämä tapahtuu, kun se on juuri luotu tai ensimmäinen promootio ei ole vielä päättynyt.</value>
   </data>
 </root>

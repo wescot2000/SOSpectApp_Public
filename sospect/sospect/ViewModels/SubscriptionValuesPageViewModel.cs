@@ -3,9 +3,12 @@ using System.Collections.ObjectModel;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
+using sospect.Helpers;
+using sospect.Interfaces;
 using sospect.Models;
 using sospect.Services;
 using sospect.Views;
+using Microsoft.Maui.Controls;
 
 namespace sospect.ViewModels
 {
@@ -41,11 +44,7 @@ namespace sospect.ViewModels
             }
             catch (System.Exception ex)
             {
-                var properties = new Dictionary<string, string> {
-                        { "Object", "SubscriptionValuesPageViewModel" },
-                        { "Method", "ObtenerValoresDeSubscripcion" }
-                    };
-                Microsoft.AppCenter.Crashes.Crashes.TrackError(ex, properties);
+                CrashlyticsHelper.LogError(ex, "SubscriptionValuesPageViewModel", "LoadSubscriptionValuesAsync");
             }
             finally
             {
