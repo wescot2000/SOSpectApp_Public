@@ -1,3 +1,9 @@
+// Codigo de William Gerardo Escobar Torres
+// Desarrollador: William Gerardo Escobar Torres
+// LinkedIn: https://www.linkedin.com/in/william-gerardo-escobar-torres-29458b66/
+// Correo: wescot2000@gmail.com
+// Registro DNDA: 13-91-449, 19-sept.-2022
+
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -83,7 +89,7 @@ namespace sospect.ViewModels
             }
         }
 
-        //  NUEVOS: Para títulos y subtítulos responsivos
+        //  NUEVOS: Para tï¿½tulos y subtï¿½tulos responsivos
         public double FontSizeHeadline
         {
             get
@@ -100,7 +106,7 @@ namespace sospect.ViewModels
             }
         }
 
-        //  Enum para tamaños base
+        //  Enum para tamaï¿½os base
         private enum BaseFontSize
         {
             Micro = 10,
@@ -111,7 +117,7 @@ namespace sospect.ViewModels
             Headline = 32      //  AGREGADO
         }
 
-        //  Método que calcula tamaños responsivos
+        //  Mï¿½todo que calcula tamaï¿½os responsivos
         private double GetResponsiveFontSize(BaseFontSize baseSize)
         {
             try
@@ -122,7 +128,7 @@ namespace sospect.ViewModels
                 // Factor de escala basado en la densidad de pantalla
                 var scaleFactor = 1.0;
 
-                // Ajustar según la densidad de la pantalla
+                // Ajustar segï¿½n la densidad de la pantalla
                 if (density <= 1.0) // Low DPI
                 {
                     scaleFactor = 0.9;
@@ -143,12 +149,12 @@ namespace sospect.ViewModels
                 // Ajustar por tipo de dispositivo
                 if (DeviceInfo.Idiom == DeviceIdiom.Tablet)
                 {
-                    scaleFactor *= 1.2; // Tablets necesitan texto más grande
+                    scaleFactor *= 1.2; // Tablets necesitan texto mï¿½s grande
                 }
 
                 var calculatedSize = baseValue * scaleFactor;
 
-                // Límites mínimos y máximos para accesibilidad
+                // Lï¿½mites mï¿½nimos y mï¿½ximos para accesibilidad
                 var minSize = baseValue * 0.8;
                 var maxSize = baseValue * 1.5;
 
@@ -156,9 +162,10 @@ namespace sospect.ViewModels
             }
             catch
             {
-                // Fallback a valores seguros si hay algún problema
+                // Fallback a valores seguros si hay algï¿½n problema
                 return (double)baseSize;
             }
         }
     }
 }
+

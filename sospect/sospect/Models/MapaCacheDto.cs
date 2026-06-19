@@ -1,3 +1,9 @@
+// Codigo de William Gerardo Escobar Torres
+// Desarrollador: William Gerardo Escobar Torres
+// LinkedIn: https://www.linkedin.com/in/william-gerardo-escobar-torres-29458b66/
+// Correo: wescot2000@gmail.com
+// Registro DNDA: 13-91-449, 19-sept.-2022
+
 // Models/MapaCacheDto.cs
 // Creado: 2026-03-01 — Rediseño Viewport-Driven del mapa
 // Wrapper del caché del mapa en disco. Incluye los pines y el bounding box del viewport
@@ -35,3 +41,5 @@ namespace sospect.Models
         }
     }
 }
+
+

@@ -1,3 +1,9 @@
+// Codigo de William Gerardo Escobar Torres
+// Desarrollador: William Gerardo Escobar Torres
+// LinkedIn: https://www.linkedin.com/in/william-gerardo-escobar-torres-29458b66/
+// Correo: wescot2000@gmail.com
+// Registro DNDA: 13-91-449, 19-sept.-2022
+
 // MinimapaPopUpLanzar.xaml.cs
 // Creado: 2026-03-21 — Minimapa de ruta de escape para el flujo de LANZAMIENTO de alarma.
 // Acepta LanzarAlarmaViewModel (o cualquier objeto con CancelarMinimapaCommand /
@@ -105,3 +111,5 @@ namespace sospect.Views.Popups
         }
     }
 }
+
+

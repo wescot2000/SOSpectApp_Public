@@ -1,3 +1,9 @@
+// Codigo de William Gerardo Escobar Torres
+// Desarrollador: William Gerardo Escobar Torres
+// LinkedIn: https://www.linkedin.com/in/william-gerardo-escobar-torres-29458b66/
+// Correo: wescot2000@gmail.com
+// Registro DNDA: 13-91-449, 19-sept.-2022
+
 // DTOs/ReportePoliticoDto.cs
 // Módulo político: DTO para el reporte de desempeño de un político.
 // Espejo de ReportePoliticoResponse de la API.
@@ -106,3 +112,5 @@ namespace sospect.DTOs
         public decimal? Pct { get; set; }
     }
 }
+
+

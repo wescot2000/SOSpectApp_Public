@@ -1,3 +1,9 @@
+// Codigo de William Gerardo Escobar Torres
+// Desarrollador: William Gerardo Escobar Torres
+// LinkedIn: https://www.linkedin.com/in/william-gerardo-escobar-torres-29458b66/
+// Correo: wescot2000@gmail.com
+// Registro DNDA: 13-91-449, 19-sept.-2022
+
 // ConfirmarUbicacionPromoPage.xaml.cs
 // Creado: 2026-02-28  |  Fix: 2026-03-01
 // Propósito: Página de confirmación de ubicación para PromocionLocalPage (flujo estilo Uber).
@@ -110,3 +116,5 @@ namespace sospect.Views
         }
     }
 }
+
+
